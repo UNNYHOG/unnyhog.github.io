@@ -1,0 +1,195 @@
+
+Slot1.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body
+  rotate: false
+  xy: 1, 290
+  size: 177, 220
+  orig: 177, 220
+  offset: 0, 0
+  index: -1
+Effects/drops/drops_0001
+  rotate: true
+  xy: 351, 184
+  size: 91, 40
+  orig: 91, 40
+  offset: 0, 0
+  index: -1
+Effects/drops/drops_0002
+  rotate: true
+  xy: 392, 184
+  size: 91, 40
+  orig: 91, 40
+  offset: 0, 0
+  index: -1
+Effects/drops/drops_0003
+  rotate: false
+  xy: 395, 391
+  size: 91, 40
+  orig: 91, 40
+  offset: 0, 0
+  index: -1
+Effects/drops/drops_0004
+  rotate: false
+  xy: 395, 350
+  size: 91, 40
+  orig: 91, 40
+  offset: 0, 0
+  index: -1
+Effects/drops/drops_0005
+  rotate: false
+  xy: 124, 125
+  size: 91, 40
+  orig: 91, 40
+  offset: 0, 0
+  index: -1
+Effects/splash/splash_0001
+  rotate: false
+  xy: 179, 330
+  size: 53, 123
+  orig: 53, 123
+  offset: 0, 0
+  index: -1
+Effects/splash/splash_0002
+  rotate: false
+  xy: 124, 166
+  size: 53, 123
+  orig: 53, 123
+  offset: 0, 0
+  index: -1
+Effects/splash/splash_0003
+  rotate: false
+  xy: 233, 330
+  size: 53, 123
+  orig: 53, 123
+  offset: 0, 0
+  index: -1
+Effects/splash/splash_0004
+  rotate: false
+  xy: 287, 330
+  size: 53, 123
+  orig: 53, 123
+  offset: 0, 0
+  index: -1
+Effects/splash/splash_0005
+  rotate: false
+  xy: 341, 330
+  size: 53, 123
+  orig: 53, 123
+  offset: 0, 0
+  index: -1
+Effects/splash/splash_0006
+  rotate: true
+  xy: 179, 276
+  size: 53, 123
+  orig: 53, 123
+  offset: 0, 0
+  index: -1
+Effects/splash/splash_0007
+  rotate: true
+  xy: 178, 222
+  size: 53, 123
+  orig: 53, 123
+  offset: 0, 0
+  index: -1
+Effects/splash/splash_0008
+  rotate: true
+  xy: 178, 168
+  size: 53, 123
+  orig: 53, 123
+  offset: 0, 0
+  index: -1
+Effects/splash/splash_0009
+  rotate: true
+  xy: 1, 39
+  size: 53, 123
+  orig: 53, 123
+  offset: 0, 0
+  index: -1
+Effects/splash/splash_0010
+  rotate: true
+  xy: 303, 276
+  size: 53, 123
+  orig: 53, 123
+  offset: 0, 0
+  index: -1
+Fish
+  rotate: false
+  xy: 302, 177
+  size: 48, 98
+  orig: 48, 98
+  offset: 0, 0
+  index: -1
+HandFront
+  rotate: true
+  xy: 1, 93
+  size: 196, 93
+  orig: 196, 93
+  offset: 0, 0
+  index: -1
+HandRear
+  rotate: false
+  xy: 216, 126
+  size: 45, 41
+  orig: 45, 41
+  offset: 0, 0
+  index: -1
+LineArt/Leska1
+  rotate: true
+  xy: 179, 454
+  size: 2, 243
+  orig: 2, 243
+  offset: 0, 0
+  index: -1
+LineArt/Leska8
+  rotate: true
+  xy: 179, 457
+  size: 19, 245
+  orig: 19, 245
+  offset: 0, 0
+  index: -1
+LineArt/Leska9
+  rotate: true
+  xy: 179, 477
+  size: 33, 245
+  orig: 33, 245
+  offset: 0, 0
+  index: -1
+Poplavok
+  rotate: false
+  xy: 262, 135
+  size: 25, 32
+  orig: 25, 32
+  offset: 0, 0
+  index: -1
+Poplavok2
+  rotate: true
+  xy: 124, 99
+  size: 25, 59
+  orig: 25, 59
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: true
+  xy: 95, 109
+  size: 180, 28
+  orig: 180, 28
+  offset: 0, 0
+  index: -1
+Shadowvedro
+  rotate: false
+  xy: 1, 20
+  size: 70, 18
+  orig: 70, 18
+  offset: 0, 0
+  index: -1
+Vedro
+  rotate: true
+  xy: 425, 432
+  size: 78, 86
+  orig: 78, 86
+  offset: 0, 0
+  index: -1
