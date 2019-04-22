@@ -17,11 +17,16 @@
     <script src="plugins/nineslice.min.js"></script>
     <script src="plugins/rexuiplugin.min.js"></script>
     <script src="plugins/SpineWebGLPlugin.js"></script>
+    <script src="plugins/GBasePlugin.js"></script>
 
     <style>
         body {
             margin: 0;
         }
+        .loading-img {
+            position: fixed;
+            width: 100%;
+        }
     </style>
 </head>
-<body><script src="index.js"></script></body>
+<body><div id="phaser-app"><img src="./games/fish/LoadingSplash.jpg" id="loading-img" class="loading-img"></div><script src="index.js"></script></body>
