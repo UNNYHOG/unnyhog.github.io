@@ -1,97 +1,97 @@
 
 Slot8w3.png
-size: 512,512
+size: 512,64
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 Body
   rotate: false
-  xy: 1, 402
-  size: 241, 109
-  orig: 241, 109
+  xy: 1, 13
+  size: 110, 50
+  orig: 110, 50
   offset: 0, 0
   index: -1
 Glass
-  rotate: false
-  xy: 1, 261
-  size: 132, 140
-  orig: 132, 140
+  rotate: true
+  xy: 183, 3
+  size: 60, 64
+  orig: 60, 64
   offset: 0, 0
   index: -1
 GlassBack
-  rotate: false
-  xy: 1, 120
-  size: 132, 140
-  orig: 132, 140
+  rotate: true
+  xy: 248, 3
+  size: 60, 63
+  orig: 60, 63
   offset: 0, 0
   index: -1
 Pile
-  rotate: true
-  xy: 134, 252
-  size: 149, 58
-  orig: 149, 58
+  rotate: false
+  xy: 373, 36
+  size: 68, 27
+  orig: 68, 27
   offset: 0, 0
   index: -1
 Shadow
-  rotate: true
-  xy: 134, 99
-  size: 152, 23
-  orig: 152, 23
+  rotate: false
+  xy: 1, 1
+  size: 69, 11
+  orig: 69, 11
   offset: 0, 0
   index: -1
 Stage1
   rotate: false
-  xy: 193, 281
-  size: 28, 30
-  orig: 28, 30
+  xy: 353, 10
+  size: 13, 14
+  orig: 13, 14
   offset: 0, 0
   index: -1
 Stage2
   rotate: false
-  xy: 1, 1
-  size: 32, 34
-  orig: 32, 34
+  xy: 483, 47
+  size: 15, 16
+  orig: 15, 16
   offset: 0, 0
   index: -1
 Stage3
   rotate: false
-  xy: 399, 443
-  size: 56, 24
-  orig: 56, 24
+  xy: 71, 1
+  size: 25, 11
+  orig: 25, 11
   offset: 0, 0
   index: -1
 Stage4
-  rotate: true
-  xy: 158, 184
-  size: 67, 26
-  orig: 67, 26
+  rotate: false
+  xy: 373, 23
+  size: 31, 12
+  orig: 31, 12
   offset: 0, 0
   index: -1
 Stage5
-  rotate: true
-  xy: 193, 312
-  size: 89, 42
-  orig: 89, 42
+  rotate: false
+  xy: 312, 5
+  size: 40, 19
+  orig: 40, 19
   offset: 0, 0
   index: -1
 Stage6
   rotate: false
-  xy: 399, 468
-  size: 89, 43
-  orig: 89, 43
+  xy: 442, 44
+  size: 40, 19
+  orig: 40, 19
   offset: 0, 0
   index: -1
 Water
   rotate: false
-  xy: 1, 36
-  size: 132, 83
-  orig: 132, 83
+  xy: 312, 25
+  size: 60, 38
+  orig: 60, 38
   offset: 0, 0
   index: -1
 top
   rotate: false
-  xy: 243, 398
-  size: 155, 113
-  orig: 155, 113
+  xy: 112, 12
+  size: 70, 51
+  orig: 70, 51
   offset: 0, 0
   index: -1

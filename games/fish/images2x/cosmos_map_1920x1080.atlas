@@ -1,327 +1,321 @@
 
 cosmos_map_1920x1080.png
-size: 2048,2048
+size: 2048,1024
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 Fish1
-  rotate: true
-  xy: 2001, 1371
-  size: 102, 33
-  orig: 102, 33
+  rotate: false
+  xy: 2, 2
+  size: 51, 17
+  orig: 51, 17
   offset: 0, 0
   index: -1
 Fish2
-  rotate: false
-  xy: 2, 2
-  size: 150, 52
-  orig: 150, 52
+  rotate: true
+  xy: 1639, 696
+  size: 75, 26
+  orig: 75, 26
   offset: 0, 0
   index: -1
 Fish4
   rotate: false
-  xy: 1646, 313
-  size: 159, 33
-  orig: 159, 33
+  xy: 295, 138
+  size: 80, 17
+  orig: 80, 17
   offset: 0, 0
   index: -1
 Smokes/smoke_1
   rotate: true
-  xy: 585, 78
-  size: 228, 581
-  orig: 228, 581
+  xy: 1672, 900
+  size: 114, 291
+  orig: 114, 291
   offset: 0, 0
   index: -1
-Smokes/smoke_2
-  rotate: true
-  xy: 1168, 78
-  size: 228, 581
-  orig: 228, 581
-  offset: 0, 0
-  index: -1
-bgr
-  rotate: false
-  xy: 2, 955
-  size: 1922, 1082
-  orig: 1922, 1082
-  offset: 0, 0
-  index: -1
-buble1
-  rotate: false
-  xy: 1926, 1037
-  size: 46, 91
-  orig: 46, 91
-  offset: 0, 0
-  index: -1
-buble2
-  rotate: true
-  xy: 154, 8
-  size: 46, 91
-  orig: 46, 91
-  offset: 0, 0
-  index: -1
-buble3
-  rotate: false
-  xy: 1926, 1130
-  size: 80, 147
-  orig: 80, 147
-  offset: 0, 0
-  index: -1
-crater
-  rotate: true
-  xy: 1926, 1279
-  size: 194, 73
-  orig: 194, 73
-  offset: 0, 0
-  index: -1
-glit1
-  rotate: false
-  xy: 1926, 996
-  size: 38, 39
-  orig: 38, 39
-  offset: 0, 0
-  index: -1
-glit2
-  rotate: false
-  xy: 247, 16
-  size: 37, 38
-  orig: 37, 38
-  offset: 0, 0
-  index: -1
-glit3
-  rotate: false
-  xy: 1751, 222
-  size: 36, 36
-  orig: 36, 36
-  offset: 0, 0
-  index: -1
-glit4
-  rotate: false
-  xy: 1751, 260
-  size: 51, 51
-  orig: 51, 51
-  offset: 0, 0
-  index: -1
-island2
-  rotate: false
-  xy: 2, 325
-  size: 883, 628
-  orig: 883, 628
-  offset: 0, 0
-  index: -1
-island4
-  rotate: true
-  xy: 1646, 348
-  size: 605, 365
-  orig: 605, 365
-  offset: 0, 0
-  index: -1
-island5
-  rotate: false
-  xy: 887, 308
-  size: 757, 645
-  orig: 757, 645
-  offset: 0, 0
-  index: -1
-wave1
-  rotate: true
-  xy: 1926, 1475
-  size: 562, 113
-  orig: 562, 113
-  offset: 0, 0
-  index: -1
-wave2
-  rotate: false
-  xy: 2, 56
-  size: 581, 267
-  orig: 581, 267
-  offset: 0, 0
-  index: -1
-
-cosmos_map_1920x10802.png
-size: 2048,2048
-format: RGBA8888
-filter: Linear,Linear
-repeat: none
 Smokes/smoke_10
-  rotate: true
-  xy: 716, 1353
-  size: 228, 581
-  orig: 228, 581
+  rotate: false
+  xy: 1319, 248
+  size: 114, 291
+  orig: 114, 291
   offset: 0, 0
   index: -1
 Smokes/smoke_11
-  rotate: true
-  xy: 716, 1123
-  size: 228, 581
-  orig: 228, 581
+  rotate: false
+  xy: 1435, 248
+  size: 114, 291
+  orig: 114, 291
   offset: 0, 0
   index: -1
 Smokes/smoke_12
   rotate: true
-  xy: 1299, 1353
-  size: 228, 581
-  orig: 228, 581
+  xy: 971, 97
+  size: 114, 291
+  orig: 114, 291
   offset: 0, 0
   index: -1
 Smokes/smoke_13
   rotate: true
-  xy: 1299, 1123
-  size: 228, 581
-  orig: 228, 581
+  xy: 1672, 668
+  size: 114, 291
+  orig: 114, 291
   offset: 0, 0
   index: -1
 Smokes/smoke_14
-  rotate: true
-  xy: 2, 137
-  size: 228, 581
-  orig: 228, 581
+  rotate: false
+  xy: 1551, 248
+  size: 114, 291
+  orig: 114, 291
   offset: 0, 0
   index: -1
 Smokes/smoke_15
-  rotate: false
-  xy: 462, 367
-  size: 228, 581
-  orig: 228, 581
+  rotate: true
+  xy: 1319, 132
+  size: 114, 291
+  orig: 114, 291
   offset: 0, 0
   index: -1
 Smokes/smoke_16
   rotate: true
-  xy: 716, 893
-  size: 228, 581
-  orig: 228, 581
+  xy: 1563, 541
+  size: 114, 291
+  orig: 114, 291
   offset: 0, 0
   index: -1
 Smokes/smoke_17
-  rotate: true
-  xy: 1299, 893
-  size: 228, 581
-  orig: 228, 581
+  rotate: false
+  xy: 1667, 248
+  size: 114, 291
+  orig: 114, 291
   offset: 0, 0
   index: -1
 Smokes/smoke_18
-  rotate: true
-  xy: 692, 663
-  size: 228, 581
-  orig: 228, 581
+  rotate: false
+  xy: 1783, 248
+  size: 114, 291
+  orig: 114, 291
   offset: 0, 0
   index: -1
 Smokes/smoke_19
   rotate: true
-  xy: 692, 433
-  size: 228, 581
-  orig: 228, 581
+  xy: 1612, 132
+  size: 114, 291
+  orig: 114, 291
+  offset: 0, 0
+  index: -1
+Smokes/smoke_2
+  rotate: true
+  xy: 1672, 784
+  size: 114, 291
+  orig: 114, 291
   offset: 0, 0
   index: -1
 Smokes/smoke_20
   rotate: true
-  xy: 1275, 663
-  size: 228, 581
-  orig: 228, 581
+  xy: 1264, 16
+  size: 114, 291
+  orig: 114, 291
   offset: 0, 0
   index: -1
 Smokes/smoke_21
   rotate: true
-  xy: 1275, 433
-  size: 228, 581
-  orig: 228, 581
+  xy: 1557, 16
+  size: 114, 291
+  orig: 114, 291
   offset: 0, 0
   index: -1
 Smokes/smoke_22
   rotate: true
-  xy: 692, 203
-  size: 228, 581
-  orig: 228, 581
+  xy: 295, 18
+  size: 114, 291
+  orig: 114, 291
   offset: 0, 0
   index: -1
 Smokes/smoke_23
   rotate: true
-  xy: 1275, 203
-  size: 228, 581
-  orig: 228, 581
+  xy: 588, 18
+  size: 114, 291
+  orig: 114, 291
   offset: 0, 0
   index: -1
 Smokes/smoke_3
   rotate: true
-  xy: 818, 1813
-  size: 228, 581
-  orig: 228, 581
+  xy: 446, 134
+  size: 114, 291
+  orig: 114, 291
   offset: 0, 0
   index: -1
 Smokes/smoke_4
-  rotate: false
-  xy: 2, 367
-  size: 228, 581
-  orig: 228, 581
+  rotate: true
+  xy: 1346, 657
+  size: 114, 291
+  orig: 114, 291
   offset: 0, 0
   index: -1
 Smokes/smoke_5
   rotate: false
-  xy: 486, 1016
-  size: 228, 581
-  orig: 228, 581
+  xy: 855, 180
+  size: 114, 291
+  orig: 114, 291
   offset: 0, 0
   index: -1
 Smokes/smoke_6
-  rotate: true
-  xy: 1401, 1813
-  size: 228, 581
-  orig: 228, 581
+  rotate: false
+  xy: 971, 213
+  size: 114, 291
+  orig: 114, 291
   offset: 0, 0
   index: -1
 Smokes/smoke_7
   rotate: false
-  xy: 232, 367
-  size: 228, 581
-  orig: 228, 581
+  xy: 1087, 213
+  size: 114, 291
+  orig: 114, 291
   offset: 0, 0
   index: -1
 Smokes/smoke_8
-  rotate: true
-  xy: 818, 1583
-  size: 228, 581
-  orig: 228, 581
+  rotate: false
+  xy: 1203, 213
+  size: 114, 291
+  orig: 114, 291
   offset: 0, 0
   index: -1
 Smokes/smoke_9
   rotate: true
-  xy: 1401, 1583
-  size: 228, 581
-  orig: 228, 581
+  xy: 1270, 541
+  size: 114, 291
+  orig: 114, 291
+  offset: 0, 0
+  index: -1
+bgr
+  rotate: false
+  xy: 2, 473
+  size: 961, 541
+  orig: 961, 541
+  offset: 0, 0
+  index: -1
+buble1
+  rotate: true
+  xy: 1270, 666
+  size: 23, 46
+  orig: 23, 46
+  offset: 0, 0
+  index: -1
+buble2
+  rotate: true
+  xy: 1270, 516
+  size: 23, 46
+  orig: 23, 46
+  offset: 0, 0
+  index: -1
+buble3
+  rotate: false
+  xy: 1264, 137
+  size: 40, 74
+  orig: 40, 74
+  offset: 0, 0
+  index: -1
+crater
+  rotate: true
+  xy: 1850, 33
+  size: 97, 37
+  orig: 97, 37
+  offset: 0, 0
+  index: -1
+glit1
+  rotate: false
+  xy: 739, 228
+  size: 19, 20
+  orig: 19, 20
+  offset: 0, 0
+  index: -1
+glit2
+  rotate: false
+  xy: 1164, 76
+  size: 19, 19
+  orig: 19, 19
+  offset: 0, 0
+  index: -1
+glit3
+  rotate: false
+  xy: 881, 18
+  size: 18, 18
+  orig: 18, 18
+  offset: 0, 0
+  index: -1
+glit4
+  rotate: false
+  xy: 1318, 663
+  size: 26, 26
+  orig: 26, 26
   offset: 0, 0
   index: -1
 island
+  rotate: true
+  xy: 1899, 418
+  size: 248, 95
+  orig: 248, 95
+  offset: 0, 0
+  index: -1
+island2
   rotate: false
-  xy: 585, 11
-  size: 495, 190
-  orig: 495, 190
+  xy: 2, 157
+  size: 442, 314
+  orig: 442, 314
   offset: 0, 0
   index: -1
 island3
+  rotate: true
+  xy: 1346, 773
+  size: 241, 324
+  orig: 241, 324
+  offset: 0, 0
+  index: -1
+island4
   rotate: false
-  xy: 2, 950
-  size: 482, 647
-  orig: 482, 647
+  xy: 965, 506
+  size: 303, 183
+  orig: 303, 183
+  offset: 0, 0
+  index: -1
+island5
+  rotate: false
+  xy: 965, 691
+  size: 379, 323
+  orig: 379, 323
+  offset: 0, 0
+  index: -1
+wave1
+  rotate: false
+  xy: 881, 38
+  size: 281, 57
+  orig: 281, 57
+  offset: 0, 0
+  index: -1
+wave2
+  rotate: false
+  xy: 2, 21
+  size: 291, 134
+  orig: 291, 134
   offset: 0, 0
   index: -1
 wave3
   rotate: true
-  xy: 1882, 1058
-  size: 523, 147
-  orig: 523, 147
+  xy: 1965, 752
+  size: 262, 74
+  orig: 262, 74
   offset: 0, 0
   index: -1
 wave4
-  rotate: false
-  xy: 2, 2
-  size: 474, 133
-  orig: 474, 133
+  rotate: true
+  xy: 1905, 179
+  size: 237, 67
+  orig: 237, 67
   offset: 0, 0
   index: -1
 wave5
   rotate: false
-  xy: 2, 1599
-  size: 814, 442
-  orig: 814, 442
+  xy: 446, 250
+  size: 407, 221
+  orig: 407, 221
   offset: 0, 0
   index: -1

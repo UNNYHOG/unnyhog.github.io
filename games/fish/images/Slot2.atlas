@@ -1,188 +1,188 @@
 
 Slot2.png
-size: 512,512
+size: 256,256
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 Effects/Splash/Splash_1
   rotate: false
-  xy: 1, 1
-  size: 50, 56
-  orig: 50, 56
+  xy: 136, 190
+  size: 28, 31
+  orig: 28, 31
   offset: 0, 0
   index: -1
 Effects/Splash/Splash_2
-  rotate: false
-  xy: 52, 1
-  size: 50, 56
-  orig: 50, 56
+  rotate: true
+  xy: 127, 161
+  size: 28, 31
+  orig: 28, 31
   offset: 0, 0
   index: -1
 Effects/Splash/Splash_3
-  rotate: false
-  xy: 87, 120
-  size: 50, 56
-  orig: 50, 56
+  rotate: true
+  xy: 165, 171
+  size: 28, 31
+  orig: 28, 31
   offset: 0, 0
   index: -1
 Effects/Splash/Splash_4
   rotate: false
-  xy: 54, 62
-  size: 50, 56
-  orig: 50, 56
+  xy: 65, 36
+  size: 28, 31
+  orig: 28, 31
   offset: 0, 0
   index: -1
 Effects/Splash/Splash_5
   rotate: false
-  xy: 105, 63
-  size: 50, 56
-  orig: 50, 56
+  xy: 65, 4
+  size: 28, 31
+  orig: 28, 31
   offset: 0, 0
   index: -1
 Effects/Splash/Splash_6
-  rotate: false
-  xy: 244, 396
-  size: 50, 56
-  orig: 50, 56
+  rotate: true
+  xy: 76, 139
+  size: 28, 31
+  orig: 28, 31
   offset: 0, 0
   index: -1
 Effects/Splash/Splash_7
   rotate: true
-  xy: 236, 345
-  size: 50, 56
-  orig: 50, 56
+  xy: 74, 110
+  size: 28, 31
+  orig: 28, 31
   offset: 0, 0
   index: -1
 Effects/Splash/Splash_8
   rotate: false
-  xy: 222, 288
-  size: 50, 56
-  orig: 50, 56
+  xy: 72, 78
+  size: 28, 31
+  orig: 28, 31
   offset: 0, 0
   index: -1
 Effects/Splash/Splash_9
   rotate: false
-  xy: 295, 414
-  size: 50, 56
-  orig: 50, 56
+  xy: 101, 78
+  size: 28, 31
+  orig: 28, 31
   offset: 0, 0
   index: -1
 Effects/drops/drops_1
   rotate: false
-  xy: 36, 218
-  size: 91, 40
-  orig: 91, 40
+  xy: 21, 91
+  size: 50, 22
+  orig: 50, 22
   offset: 0, 0
   index: -1
 Effects/drops/drops_2
   rotate: false
-  xy: 408, 471
-  size: 91, 40
-  orig: 91, 40
+  xy: 76, 168
+  size: 50, 22
+  orig: 50, 22
   offset: 0, 0
   index: -1
 Effects/drops/drops_3
   rotate: false
-  xy: 130, 305
-  size: 91, 40
-  orig: 91, 40
+  xy: 21, 68
+  size: 50, 22
+  orig: 50, 22
   offset: 0, 0
   index: -1
 Effects/drops/drops_4
   rotate: false
-  xy: 130, 264
-  size: 91, 40
-  orig: 91, 40
+  xy: 14, 45
+  size: 50, 22
+  orig: 50, 22
   offset: 0, 0
   index: -1
 Effects/drops/drops_5
   rotate: false
-  xy: 36, 177
-  size: 91, 40
-  orig: 91, 40
+  xy: 14, 22
+  size: 50, 22
+  orig: 50, 22
   offset: 0, 0
   index: -1
 Face1
   rotate: false
-  xy: 24, 119
-  size: 62, 57
-  orig: 62, 57
+  xy: 165, 200
+  size: 34, 31
+  orig: 34, 31
   offset: 0, 0
   index: -1
 Face2
-  rotate: false
-  xy: 346, 425
-  size: 49, 45
-  orig: 49, 45
+  rotate: true
+  xy: 200, 204
+  size: 27, 25
+  orig: 27, 25
   offset: 0, 0
   index: -1
 Fish
-  rotate: false
-  xy: 137, 346
-  size: 98, 50
-  orig: 98, 50
+  rotate: true
+  xy: 227, 200
+  size: 54, 28
+  orig: 54, 28
   offset: 0, 0
   index: -1
 FishFront
   rotate: false
-  xy: 269, 471
-  size: 138, 40
-  orig: 138, 40
+  xy: 150, 232
+  size: 76, 22
+  orig: 76, 22
   offset: 0, 0
   index: -1
 FishRear
   rotate: false
-  xy: 137, 453
-  size: 131, 58
-  orig: 131, 58
+  xy: 76, 222
+  size: 73, 32
+  orig: 73, 32
   offset: 0, 0
   index: -1
 HandFront
   rotate: false
-  xy: 36, 259
-  size: 93, 87
-  orig: 93, 87
+  xy: 21, 114
+  size: 52, 48
+  orig: 52, 48
   offset: 0, 0
   index: -1
 HandRear
   rotate: false
-  xy: 137, 397
-  size: 106, 55
-  orig: 106, 55
+  xy: 76, 191
+  size: 59, 30
+  orig: 59, 30
   offset: 0, 0
   index: -1
 Head
   rotate: false
-  xy: 1, 347
-  size: 135, 164
-  orig: 135, 164
+  xy: 1, 163
+  size: 74, 91
+  orig: 74, 91
   offset: 0, 0
   index: -1
 LegFront
-  rotate: true
-  xy: 24, 58
-  size: 60, 29
-  orig: 60, 29
+  rotate: false
+  xy: 14, 5
+  size: 33, 16
+  orig: 33, 16
   offset: 0, 0
   index: -1
 LegRear
-  rotate: true
-  xy: 396, 433
-  size: 37, 51
-  orig: 37, 51
+  rotate: false
+  xy: 106, 110
+  size: 20, 28
+  orig: 20, 28
   offset: 0, 0
   index: -1
 ShadowFish
   rotate: true
-  xy: 1, 189
-  size: 157, 34
-  orig: 157, 34
+  xy: 1, 75
+  size: 87, 19
+  orig: 87, 19
   offset: 0, 0
   index: -1
 ShadowMan
   rotate: true
-  xy: 1, 58
-  size: 130, 22
-  orig: 130, 22
+  xy: 1, 2
+  size: 72, 12
+  orig: 72, 12
   offset: 0, 0
   index: -1

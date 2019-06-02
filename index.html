@@ -8,7 +8,7 @@
     <script src="plugins/BigInteger.min.js"></script>
 
     <!--<script src="./plugins/phaser-list-view.js"></script>-->
-    <script src="136.js"></script>
+    <script src="136.min.js"></script>
     <!--<script src="./plugins/phaser-ui-tools.js"></script>-->
     <!--<script src="./plugins/phaser-ui-tools.min.js"></script>-->
     <!--<script src="plugins/phaser.min.js"></script>-->
@@ -19,14 +19,42 @@
     <script src="plugins/SpineWebGLPlugin.js"></script>
     <script src="plugins/GBasePlugin.js"></script>
 
+
+    <!--SOCIAL_VK_START-->
+    <script type="text/javascript" src="https://vk.com/js/api/xd_connection.js?2" charset="utf-8"></script>
+    <script type="text/javascript" src="https://ad.mail.ru/static/admanhtml/rbadman-html5.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://vk.com/js/api/adman_init.js" charset="utf-8"></script>
+    <!--SOCIAL_VK_END-->
+
     <style>
         body {
             margin: 0;
         }
-        .loading-img {
+        #loading-div {
             position: fixed;
-            width: 100%;
+            left: 0;
+            top: 0;
         }
+        .loading-img {
+            width: 100%;
+            height: 100%;
+        }
+        .progress-bar {
+            position: absolute;
+            left: 35%;
+            bottom: 5%;
+            width: 30%;
+            height: 4%;
+        }
+        /*.progress-fill {*/
+            /*!*width: 30%;*!*/
+        /*}*/
     </style>
+    <!--<script type="text/javascript" src="https://vk.com/js/api/adman_init.js" charset="utf-8"></script>-->
 </head>
-<body><div id="phaser-app"><img src="./games/fish/LoadingSplash.jpg" id="loading-img" class="loading-img"></div><script src="index.js"></script></body>
+<body><div id="phaser-app">
+    </div><div id="loading-div">
+        <img src="./games/fish/LoadingSplash.jpg" class="loading-img">
+        <img src="./games/fish/ProgressBar.png" class="progress-bar">
+        <img src="./games/fish/ProgressBarFill.png" id="progress-fill" class="progress-bar test">
+    </div><script src="index.js"></script></body>

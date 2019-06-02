@@ -1,111 +1,111 @@
 
 slot8w2.png
-size: 512,512
+size: 256,128
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 circle1
-  rotate: true
-  xy: 138, 125
-  size: 185, 33
-  orig: 185, 33
+  rotate: false
+  xy: 152, 38
+  size: 93, 17
+  orig: 93, 17
   offset: 0, 0
   index: -1
 circle2
   rotate: false
-  xy: 302, 394
-  size: 153, 24
-  orig: 153, 24
+  xy: 1, 1
+  size: 77, 12
+  orig: 77, 12
   offset: 0, 0
   index: -1
 effects/slot8_water1_1
-  rotate: false
-  xy: 302, 373
-  size: 64, 20
-  orig: 64, 20
+  rotate: true
+  xy: 244, 92
+  size: 32, 10
+  orig: 32, 10
   offset: 0, 0
   index: -1
 effects/slot8_water1_2
-  rotate: false
-  xy: 1, 65
-  size: 64, 20
-  orig: 64, 20
+  rotate: true
+  xy: 244, 59
+  size: 32, 10
+  orig: 32, 10
   offset: 0, 0
   index: -1
 effects/slot8_water1_3
-  rotate: false
-  xy: 172, 251
-  size: 64, 20
-  orig: 64, 20
+  rotate: true
+  xy: 131, 10
+  size: 32, 10
+  orig: 32, 10
   offset: 0, 0
   index: -1
 effects/slot8_water1_4
   rotate: false
-  xy: 302, 352
-  size: 64, 20
-  orig: 64, 20
+  xy: 148, 27
+  size: 32, 10
+  orig: 32, 10
   offset: 0, 0
   index: -1
 effects/slot8_water1_5
   rotate: false
-  xy: 367, 373
-  size: 64, 20
-  orig: 64, 20
+  xy: 148, 16
+  size: 32, 10
+  orig: 32, 10
   offset: 0, 0
   index: -1
 effects/slot8_water1_6
   rotate: false
-  xy: 1, 44
-  size: 64, 20
-  orig: 64, 20
+  xy: 181, 27
+  size: 32, 10
+  orig: 32, 10
   offset: 0, 0
   index: -1
 effects/slot8_water1_7
   rotate: false
-  xy: 172, 230
-  size: 64, 20
-  orig: 64, 20
+  xy: 181, 16
+  size: 32, 10
+  orig: 32, 10
   offset: 0, 0
   index: -1
 fish1
   rotate: false
-  xy: 1, 86
-  size: 84, 42
-  orig: 84, 42
+  xy: 88, 21
+  size: 42, 21
+  orig: 42, 21
   offset: 0, 0
   index: -1
 fish2
   rotate: false
-  xy: 172, 272
-  size: 74, 38
-  orig: 74, 38
+  xy: 88, 1
+  size: 37, 19
+  orig: 37, 19
   offset: 0, 0
   index: -1
 glow
-  rotate: false
-  xy: 302, 341
-  size: 62, 10
-  orig: 62, 10
+  rotate: true
+  xy: 142, 11
+  size: 31, 5
+  orig: 31, 5
   offset: 0, 0
   index: -1
 lightpillar
-  rotate: false
-  xy: 1, 129
-  size: 136, 181
-  orig: 136, 181
+  rotate: true
+  xy: 152, 56
+  size: 68, 91
+  orig: 68, 91
   offset: 0, 0
   index: -1
 lights
   rotate: false
-  xy: 302, 419
-  size: 173, 55
-  orig: 173, 55
+  xy: 1, 14
+  size: 86, 28
+  orig: 86, 28
   offset: 0, 0
   index: -1
 ufo
   rotate: false
-  xy: 1, 311
-  size: 300, 163
-  orig: 300, 163
+  xy: 1, 43
+  size: 150, 81
+  orig: 150, 81
   offset: 0, 0
   index: -1
