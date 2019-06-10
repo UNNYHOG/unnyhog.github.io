@@ -1,195 +1,195 @@
 
 slot3w2.png
-size: 128,256
+size: 512,512
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 beacon
   rotate: false
-  xy: 115, 89
-  size: 7, 7
-  orig: 7, 7
+  xy: 113, 339
+  size: 16, 15
+  orig: 16, 15
   offset: 0, 0
   index: -1
 effects/1/slot3_water_1
   rotate: true
-  xy: 63, 147
-  size: 56, 18
-  orig: 56, 18
+  xy: 1, 1
+  size: 121, 39
+  orig: 121, 39
   offset: 0, 0
   index: -1
 effects/1/slot3_water_2
   rotate: true
-  xy: 63, 90
-  size: 56, 18
-  orig: 56, 18
+  xy: 41, 1
+  size: 121, 39
+  orig: 121, 39
   offset: 0, 0
   index: -1
 effects/1/slot3_water_3
-  rotate: false
-  xy: 1, 95
-  size: 56, 18
-  orig: 56, 18
+  rotate: true
+  xy: 99, 209
+  size: 121, 39
+  orig: 121, 39
   offset: 0, 0
   index: -1
 effects/1/slot3_water_4
-  rotate: false
-  xy: 1, 76
-  size: 56, 18
-  orig: 56, 18
+  rotate: true
+  xy: 139, 233
+  size: 121, 39
+  orig: 121, 39
   offset: 0, 0
   index: -1
 effects/1/slot3_water_5
-  rotate: false
-  xy: 58, 71
-  size: 56, 18
-  orig: 56, 18
+  rotate: true
+  xy: 81, 1
+  size: 121, 39
+  orig: 121, 39
   offset: 0, 0
   index: -1
 effects/1/slot3_water_6
   rotate: false
-  xy: 1, 57
-  size: 56, 18
-  orig: 56, 18
+  xy: 181, 375
+  size: 121, 39
+  orig: 121, 39
   offset: 0, 0
   index: -1
 effects/2/slot3_water2_1
-  rotate: true
-  xy: 1, 5
-  size: 51, 17
-  orig: 51, 17
+  rotate: false
+  xy: 303, 377
+  size: 112, 37
+  orig: 112, 37
   offset: 0, 0
   index: -1
 effects/2/slot3_water2_2
-  rotate: true
-  xy: 19, 5
-  size: 51, 17
-  orig: 51, 17
+  rotate: false
+  xy: 181, 337
+  size: 112, 37
+  orig: 112, 37
   offset: 0, 0
   index: -1
 effects/2/slot3_water2_3
-  rotate: true
-  xy: 37, 5
-  size: 51, 17
-  orig: 51, 17
+  rotate: false
+  xy: 179, 299
+  size: 112, 37
+  orig: 112, 37
   offset: 0, 0
   index: -1
 effects/2/slot3_water2_4
-  rotate: true
-  xy: 55, 5
-  size: 51, 17
-  orig: 51, 17
+  rotate: false
+  xy: 179, 261
+  size: 112, 37
+  orig: 112, 37
   offset: 0, 0
   index: -1
 effects/2/slot3_water2_5
   rotate: false
-  xy: 73, 53
-  size: 51, 17
-  orig: 51, 17
+  xy: 179, 223
+  size: 112, 37
+  orig: 112, 37
   offset: 0, 0
   index: -1
 effects/2/slot3_water2_6
-  rotate: true
-  xy: 73, 1
-  size: 51, 17
-  orig: 51, 17
+  rotate: false
+  xy: 303, 339
+  size: 112, 37
+  orig: 112, 37
   offset: 0, 0
   index: -1
 effects/3/slot3_water3_1
   rotate: false
-  xy: 1, 189
-  size: 61, 14
-  orig: 61, 14
+  xy: 214, 479
+  size: 133, 31
+  orig: 133, 31
   offset: 0, 0
   index: -1
 effects/3/slot3_water3_2
   rotate: false
-  xy: 1, 174
-  size: 61, 14
-  orig: 61, 14
+  xy: 214, 447
+  size: 133, 31
+  orig: 133, 31
   offset: 0, 0
   index: -1
 effects/3/slot3_water3_3
   rotate: false
-  xy: 1, 159
-  size: 61, 14
-  orig: 61, 14
+  xy: 348, 479
+  size: 133, 31
+  orig: 133, 31
   offset: 0, 0
   index: -1
 effects/3/slot3_water3_4
   rotate: false
-  xy: 1, 144
-  size: 61, 14
-  orig: 61, 14
+  xy: 348, 447
+  size: 133, 31
+  orig: 133, 31
   offset: 0, 0
   index: -1
 effects/3/slot3_water3_5
   rotate: false
-  xy: 1, 129
-  size: 61, 14
-  orig: 61, 14
+  xy: 214, 415
+  size: 133, 31
+  orig: 133, 31
   offset: 0, 0
   index: -1
 effects/3/slot3_water3_6
   rotate: false
-  xy: 1, 114
-  size: 61, 14
-  orig: 61, 14
+  xy: 348, 415
+  size: 133, 31
+  orig: 133, 31
   offset: 0, 0
   index: -1
 fish
-  rotate: false
-  xy: 91, 5
-  size: 27, 16
-  orig: 27, 16
+  rotate: true
+  xy: 450, 355
+  size: 59, 35
+  orig: 59, 35
   offset: 0, 0
   index: -1
 fishbucket
   rotate: false
-  xy: 82, 97
-  size: 40, 39
-  orig: 40, 39
+  xy: 1, 123
+  size: 87, 86
+  orig: 87, 86
   offset: 0, 0
   index: -1
 man
-  rotate: true
-  xy: 1, 204
-  size: 51, 82
-  orig: 51, 82
+  rotate: false
+  xy: 1, 331
+  size: 111, 179
+  orig: 111, 179
   offset: 0, 0
   index: -1
 penghalf
   rotate: false
-  xy: 91, 22
-  size: 31, 30
-  orig: 31, 30
+  xy: 113, 355
+  size: 67, 66
+  orig: 67, 66
   offset: 0, 0
   index: -1
 penguin1
   rotate: false
-  xy: 82, 137
-  size: 44, 55
-  orig: 44, 55
+  xy: 1, 210
+  size: 97, 120
+  orig: 97, 120
   offset: 0, 0
   index: -1
 penguinsliding
-  rotate: true
-  xy: 84, 193
-  size: 46, 40
-  orig: 46, 40
+  rotate: false
+  xy: 113, 422
+  size: 100, 88
+  orig: 100, 88
   offset: 0, 0
   index: -1
 sh1
-  rotate: false
-  xy: 84, 240
-  size: 42, 15
-  orig: 42, 15
+  rotate: true
+  xy: 416, 322
+  size: 92, 33
+  orig: 92, 33
   offset: 0, 0
   index: -1
 shadow
-  rotate: false
-  xy: 84, 240
-  size: 42, 15
-  orig: 42, 15
+  rotate: true
+  xy: 416, 322
+  size: 92, 33
+  orig: 92, 33
   offset: 0, 0
   index: -1

@@ -1,321 +1,321 @@
 
 Slot3.png
-size: 256,256
+size: 512,512
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 Boat
   rotate: false
-  xy: 1, 209
-  size: 126, 46
-  orig: 126, 46
+  xy: 1, 414
+  size: 265, 97
+  orig: 265, 97
   offset: 0, 0
   index: -1
 BoatFront
   rotate: true
-  xy: 1, 78
-  size: 130, 42
-  orig: 130, 42
+  xy: 1, 140
+  size: 273, 87
+  orig: 273, 87
   offset: 0, 0
   index: -1
 Body
   rotate: false
-  xy: 75, 149
-  size: 50, 59
-  orig: 50, 59
+  xy: 152, 288
+  size: 105, 125
+  orig: 105, 125
   offset: 0, 0
   index: -1
 Box
   rotate: false
-  xy: 75, 104
-  size: 49, 44
-  orig: 49, 44
+  xy: 152, 194
+  size: 104, 93
+  orig: 104, 93
   offset: 0, 0
   index: -1
 Effects/WaterBlow/WaterBlow_1
   rotate: false
-  xy: 144, 15
-  size: 25, 21
-  orig: 25, 21
+  xy: 257, 145
+  size: 53, 44
+  orig: 53, 44
   offset: 0, 0
   index: -1
 Effects/WaterBlow/WaterBlow_2
-  rotate: false
-  xy: 172, 114
-  size: 25, 21
-  orig: 25, 21
+  rotate: true
+  xy: 311, 143
+  size: 53, 44
+  orig: 53, 44
   offset: 0, 0
   index: -1
 Effects/WaterBlow/WaterBlow_3
   rotate: true
-  xy: 158, 84
-  size: 25, 21
-  orig: 25, 21
+  xy: 356, 147
+  size: 53, 44
+  orig: 53, 44
   offset: 0, 0
   index: -1
 Effects/WaterBlow/WaterBlow_4
-  rotate: true
-  xy: 180, 88
-  size: 25, 21
-  orig: 25, 21
+  rotate: false
+  xy: 300, 98
+  size: 53, 44
+  orig: 53, 44
   offset: 0, 0
   index: -1
 Effects/WaterBlow/WaterBlow_5
-  rotate: true
-  xy: 168, 58
-  size: 25, 21
-  orig: 25, 21
+  rotate: false
+  xy: 401, 135
+  size: 53, 44
+  orig: 53, 44
   offset: 0, 0
   index: -1
 Effects/WaterBlow/WaterBlow_6
-  rotate: false
-  xy: 198, 114
-  size: 25, 21
-  orig: 25, 21
+  rotate: true
+  xy: 356, 93
+  size: 53, 44
+  orig: 53, 44
   offset: 0, 0
   index: -1
 Effects/WaterBlow/WaterBlow_7
-  rotate: true
-  xy: 202, 88
-  size: 25, 21
-  orig: 25, 21
+  rotate: false
+  xy: 401, 90
+  size: 53, 44
+  orig: 53, 44
   offset: 0, 0
   index: -1
 Effects/WaterBlow/WaterBlow_8
-  rotate: false
-  xy: 190, 66
-  size: 25, 21
-  orig: 25, 21
+  rotate: true
+  xy: 455, 126
+  size: 53, 44
+  orig: 53, 44
   offset: 0, 0
   index: -1
 Effects/WaterBlow/WaterBlow_9
-  rotate: true
-  xy: 224, 113
-  size: 25, 21
-  orig: 25, 21
+  rotate: false
+  xy: 455, 81
+  size: 53, 44
+  orig: 53, 44
   offset: 0, 0
   index: -1
 Effects/WaterExplosion/WaterExplosion_1
-  rotate: false
-  xy: 179, 204
-  size: 34, 33
-  orig: 34, 33
+  rotate: true
+  xy: 308, 340
+  size: 73, 69
+  orig: 73, 69
   offset: 0, 0
   index: -1
 Effects/WaterExplosion/WaterExplosion_10
-  rotate: false
-  xy: 125, 111
-  size: 34, 33
-  orig: 34, 33
+  rotate: true
+  xy: 382, 273
+  size: 73, 69
+  orig: 73, 69
   offset: 0, 0
   index: -1
 Effects/WaterExplosion/WaterExplosion_2
   rotate: false
-  xy: 40, 40
-  size: 34, 33
-  orig: 34, 33
+  xy: 378, 347
+  size: 73, 69
+  orig: 73, 69
   offset: 0, 0
   index: -1
 Effects/WaterExplosion/WaterExplosion_3
-  rotate: false
-  xy: 75, 46
-  size: 34, 33
-  orig: 34, 33
+  rotate: true
+  xy: 82, 57
+  size: 73, 69
+  orig: 73, 69
   offset: 0, 0
   index: -1
 Effects/WaterExplosion/WaterExplosion_4
   rotate: false
-  xy: 173, 170
-  size: 34, 33
-  orig: 34, 33
+  xy: 152, 75
+  size: 73, 69
+  orig: 73, 69
   offset: 0, 0
   index: -1
 Effects/WaterExplosion/WaterExplosion_5
-  rotate: false
-  xy: 40, 6
-  size: 34, 33
-  orig: 34, 33
+  rotate: true
+  xy: 152, 1
+  size: 73, 69
+  orig: 73, 69
   offset: 0, 0
   index: -1
 Effects/WaterExplosion/WaterExplosion_6
-  rotate: false
-  xy: 75, 12
-  size: 34, 33
-  orig: 34, 33
+  rotate: true
+  xy: 222, 1
+  size: 73, 69
+  orig: 73, 69
   offset: 0, 0
   index: -1
 Effects/WaterExplosion/WaterExplosion_7
-  rotate: true
-  xy: 110, 1
-  size: 34, 33
-  orig: 34, 33
+  rotate: false
+  xy: 226, 75
+  size: 73, 69
+  orig: 73, 69
   offset: 0, 0
   index: -1
 Effects/WaterExplosion/WaterExplosion_8
-  rotate: false
-  xy: 173, 136
-  size: 34, 33
-  orig: 34, 33
+  rotate: true
+  xy: 292, 1
+  size: 73, 69
+  orig: 73, 69
   offset: 0, 0
   index: -1
 Effects/WaterExplosion/WaterExplosion_9
-  rotate: true
-  xy: 208, 139
-  size: 34, 33
-  orig: 34, 33
+  rotate: false
+  xy: 308, 270
+  size: 73, 69
+  orig: 73, 69
   offset: 0, 0
   index: -1
 Face1
-  rotate: false
-  xy: 208, 174
-  size: 21, 28
-  orig: 21, 28
+  rotate: true
+  xy: 452, 373
+  size: 43, 59
+  orig: 43, 59
   offset: 0, 0
   index: -1
 Face2
   rotate: true
-  xy: 1, 1
-  size: 21, 33
-  orig: 21, 33
+  xy: 82, 12
+  size: 44, 69
+  orig: 44, 69
   offset: 0, 0
   index: -1
 Fish5
   rotate: false
-  xy: 179, 238
-  size: 61, 17
-  orig: 61, 17
+  xy: 373, 475
+  size: 128, 36
+  orig: 128, 36
   offset: 0, 0
   index: -1
 Flame
-  rotate: false
-  xy: 190, 47
-  size: 19, 18
-  orig: 19, 18
+  rotate: true
+  xy: 362, 53
+  size: 39, 38
+  orig: 39, 38
   offset: 0, 0
   index: -1
 HandFront
   rotate: false
-  xy: 136, 47
-  size: 31, 34
-  orig: 31, 34
+  xy: 273, 197
+  size: 66, 72
+  orig: 66, 72
   offset: 0, 0
   index: -1
 HandRear
-  rotate: false
-  xy: 125, 82
-  size: 32, 28
-  orig: 32, 28
+  rotate: true
+  xy: 340, 201
+  size: 68, 60
+  orig: 68, 60
   offset: 0, 0
   index: -1
 Head
   rotate: true
-  xy: 128, 209
-  size: 46, 50
-  orig: 46, 50
+  xy: 267, 414
+  size: 97, 105
+  orig: 97, 105
   offset: 0, 0
   index: -1
 PalmFree
   rotate: false
-  xy: 224, 92
-  size: 21, 20
-  orig: 21, 20
+  xy: 362, 9
+  size: 43, 43
+  orig: 43, 43
   offset: 0, 0
   index: -1
 PalmTNT
   rotate: true
-  xy: 75, 80
-  size: 23, 49
-  orig: 23, 49
+  xy: 152, 145
+  size: 48, 104
+  orig: 48, 104
   offset: 0, 0
   index: -1
 Shadow
   rotate: true
-  xy: 44, 74
-  size: 134, 30
-  orig: 134, 30
+  xy: 89, 131
+  size: 282, 62
+  orig: 282, 62
   offset: 0, 0
   index: -1
 Shadow1
-  rotate: false
-  xy: 136, 37
-  size: 37, 9
-  orig: 37, 9
+  rotate: true
+  xy: 465, 191
+  size: 79, 18
+  orig: 79, 18
   offset: 0, 0
   index: -1
 Shadow2
   rotate: true
-  xy: 164, 160
-  size: 48, 8
-  orig: 48, 8
+  xy: 452, 271
+  size: 101, 18
+  orig: 101, 18
   offset: 0, 0
   index: -1
 Shadow3
   rotate: true
-  xy: 233, 191
-  size: 46, 7
-  orig: 46, 7
+  xy: 257, 190
+  size: 97, 15
+  orig: 97, 15
   offset: 0, 0
   index: -1
 Shadow4
   rotate: true
-  xy: 30, 26
-  size: 51, 9
-  orig: 51, 9
+  xy: 62, 31
+  size: 108, 19
+  orig: 108, 19
   offset: 0, 0
   index: -1
 Shadow5
-  rotate: true
-  xy: 150, 145
-  size: 63, 13
-  orig: 63, 13
+  rotate: false
+  xy: 373, 448
+  size: 133, 26
+  orig: 133, 26
   offset: 0, 0
   index: -1
 TNTFree
   rotate: false
-  xy: 126, 154
-  size: 23, 54
-  orig: 23, 54
+  xy: 258, 300
+  size: 49, 113
+  orig: 49, 113
   offset: 0, 0
   index: -1
 TNTFront
   rotate: true
-  xy: 214, 203
-  size: 34, 18
-  orig: 34, 18
+  xy: 401, 200
+  size: 72, 37
+  orig: 72, 37
   offset: 0, 0
   index: -1
 Veslo
   rotate: true
-  xy: 1, 23
-  size: 54, 28
-  orig: 54, 28
+  xy: 1, 26
+  size: 113, 60
+  orig: 113, 60
   offset: 0, 0
   index: -1
 fish1
-  rotate: true
-  xy: 160, 110
-  size: 34, 11
-  orig: 34, 11
+  rotate: false
+  xy: 1, 2
+  size: 73, 23
+  orig: 73, 23
   offset: 0, 0
   index: -1
 fish2
   rotate: true
-  xy: 110, 36
-  size: 43, 12
-  orig: 43, 12
+  xy: 471, 281
+  size: 91, 26
+  orig: 91, 26
   offset: 0, 0
   index: -1
 fish3
   rotate: true
-  xy: 123, 36
-  size: 43, 12
-  orig: 43, 12
+  xy: 439, 180
+  size: 90, 25
+  orig: 90, 25
   offset: 0, 0
   index: -1
 fish4
-  rotate: true
-  xy: 241, 205
-  size: 50, 14
-  orig: 50, 14
+  rotate: false
+  xy: 373, 417
+  size: 106, 30
+  orig: 106, 30
   offset: 0, 0
   index: -1

@@ -1,237 +1,237 @@
 
 slot7.png
-size: 256,256
+size: 512,512
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 Shadow_man
   rotate: false
-  xy: 132, 121
-  size: 39, 8
-  orig: 39, 8
+  xy: 433, 495
+  size: 78, 16
+  orig: 78, 16
   offset: 0, 0
   index: -1
 boatshadow
   rotate: true
-  xy: 184, 164
-  size: 91, 23
-  orig: 91, 23
+  xy: 366, 328
+  size: 183, 47
+  orig: 183, 47
   offset: 0, 0
   index: -1
 box 1
   rotate: false
-  xy: 87, 49
-  size: 35, 31
-  orig: 35, 31
+  xy: 172, 102
+  size: 70, 62
+  orig: 70, 62
   offset: 0, 0
   index: -1
 box 2
   rotate: false
-  xy: 87, 81
-  size: 44, 48
-  orig: 44, 48
+  xy: 172, 165
+  size: 88, 95
+  orig: 88, 95
   offset: 0, 0
   index: -1
 effects/splash1/splash1_1
   rotate: false
-  xy: 132, 106
-  size: 30, 14
-  orig: 30, 14
+  xy: 261, 231
+  size: 61, 29
+  orig: 61, 29
   offset: 0, 0
   index: -1
 effects/splash1/splash1_2
-  rotate: true
-  xy: 228, 225
-  size: 30, 14
-  orig: 30, 14
+  rotate: false
+  xy: 433, 449
+  size: 61, 29
+  orig: 61, 29
   offset: 0, 0
   index: -1
 effects/splash1/splash1_3
   rotate: false
-  xy: 132, 91
-  size: 30, 14
-  orig: 30, 14
+  xy: 261, 201
+  size: 61, 29
+  orig: 61, 29
   offset: 0, 0
   index: -1
 effects/splash1/splash1_4
   rotate: false
-  xy: 87, 34
-  size: 30, 14
-  orig: 30, 14
+  xy: 433, 419
+  size: 61, 29
+  orig: 61, 29
   offset: 0, 0
   index: -1
 effects/splash1/splash1_5
   rotate: false
-  xy: 86, 19
-  size: 30, 14
-  orig: 30, 14
+  xy: 261, 171
+  size: 61, 29
+  orig: 61, 29
   offset: 0, 0
   index: -1
 effects/splash1/splash1_6
-  rotate: false
-  xy: 132, 76
-  size: 30, 14
-  orig: 30, 14
+  rotate: true
+  xy: 323, 199
+  size: 61, 29
+  orig: 61, 29
   offset: 0, 0
   index: -1
 effects/splash1/splash1_7
-  rotate: true
-  xy: 210, 170
-  size: 30, 14
-  orig: 30, 14
+  rotate: false
+  xy: 172, 72
+  size: 61, 29
+  orig: 61, 29
   offset: 0, 0
   index: -1
 effects/splash1/splash1_8
-  rotate: true
-  xy: 163, 90
-  size: 30, 14
-  orig: 30, 14
+  rotate: false
+  xy: 169, 42
+  size: 61, 29
+  orig: 61, 29
   offset: 0, 0
   index: -1
 effects/splash2/splash2_1
   rotate: false
-  xy: 86, 1
-  size: 22, 17
-  orig: 22, 17
+  xy: 169, 7
+  size: 44, 34
+  orig: 44, 34
   offset: 0, 0
   index: -1
 effects/splash2/splash2_10
   rotate: false
-  xy: 146, 22
-  size: 22, 17
-  orig: 22, 17
+  xy: 278, 66
+  size: 44, 34
+  orig: 44, 34
   offset: 0, 0
   index: -1
 effects/splash2/splash2_11
-  rotate: false
-  xy: 132, 4
-  size: 22, 17
-  orig: 22, 17
+  rotate: true
+  xy: 323, 64
+  size: 44, 34
+  orig: 44, 34
   offset: 0, 0
   index: -1
 effects/splash2/splash2_2
-  rotate: false
-  xy: 109, 1
-  size: 22, 17
-  orig: 22, 17
+  rotate: true
+  xy: 243, 120
+  size: 44, 34
+  orig: 44, 34
   offset: 0, 0
   index: -1
 effects/splash2/splash2_3
   rotate: false
-  xy: 123, 58
-  size: 22, 17
-  orig: 22, 17
+  xy: 278, 136
+  size: 44, 34
+  orig: 44, 34
   offset: 0, 0
   index: -1
 effects/splash2/splash2_4
-  rotate: false
-  xy: 146, 58
-  size: 22, 17
-  orig: 22, 17
+  rotate: true
+  xy: 323, 154
+  size: 44, 34
+  orig: 44, 34
   offset: 0, 0
   index: -1
 effects/splash2/splash2_5
-  rotate: false
-  xy: 123, 40
-  size: 22, 17
-  orig: 22, 17
+  rotate: true
+  xy: 417, 358
+  size: 44, 34
+  orig: 44, 34
   offset: 0, 0
   index: -1
 effects/splash2/splash2_6
-  rotate: false
-  xy: 146, 40
-  size: 22, 17
-  orig: 22, 17
+  rotate: true
+  xy: 452, 374
+  size: 44, 34
+  orig: 44, 34
   offset: 0, 0
   index: -1
 effects/splash2/splash2_7
-  rotate: true
-  xy: 169, 53
-  size: 22, 17
-  orig: 22, 17
+  rotate: false
+  xy: 278, 101
+  size: 44, 34
+  orig: 44, 34
   offset: 0, 0
   index: -1
 effects/splash2/splash2_8
-  rotate: false
-  xy: 169, 35
-  size: 22, 17
-  orig: 22, 17
+  rotate: true
+  xy: 323, 109
+  size: 44, 34
+  orig: 44, 34
   offset: 0, 0
   index: -1
 effects/splash2/splash2_9
-  rotate: false
-  xy: 123, 22
-  size: 22, 17
-  orig: 22, 17
+  rotate: true
+  xy: 243, 75
+  size: 44, 34
+  orig: 44, 34
   offset: 0, 0
   index: -1
 face
   rotate: false
-  xy: 163, 76
-  size: 16, 13
-  orig: 16, 13
+  xy: 417, 331
+  size: 33, 26
+  orig: 33, 26
   offset: 0, 0
   index: -1
 guy
   rotate: true
-  xy: 1, 2
-  size: 36, 73
-  orig: 36, 73
+  xy: 1, 9
+  size: 71, 146
+  orig: 71, 146
   offset: 0, 0
   index: -1
 mafia
   rotate: false
-  xy: 1, 39
-  size: 85, 90
-  orig: 85, 90
+  xy: 1, 81
+  size: 170, 179
+  orig: 170, 179
   offset: 0, 0
   index: -1
 shadow
-  rotate: true
-  xy: 219, 216
-  size: 39, 8
-  orig: 39, 8
+  rotate: false
+  xy: 433, 479
+  size: 78, 15
+  orig: 78, 15
   offset: 0, 0
   index: -1
 ship
   rotate: false
-  xy: 1, 130
-  size: 182, 125
-  orig: 182, 125
+  xy: 1, 261
+  size: 364, 250
+  orig: 364, 250
   offset: 0, 0
   index: -1
 string
   rotate: false
-  xy: 208, 168
-  size: 1, 87
-  orig: 1, 87
+  xy: 414, 337
+  size: 2, 174
+  orig: 2, 174
   offset: 0, 0
   index: -1
 string2
   rotate: false
-  xy: 210, 201
-  size: 8, 54
-  orig: 8, 54
+  xy: 417, 403
+  size: 15, 108
+  orig: 15, 108
   offset: 0, 0
   index: -1
 watershadow
   rotate: true
-  xy: 75, 4
-  size: 34, 10
-  orig: 34, 10
+  xy: 148, 12
+  size: 68, 20
+  orig: 68, 20
   offset: 0, 0
   index: -1
 watershadow2
-  rotate: true
-  xy: 118, 35
-  size: 13, 4
-  orig: 13, 4
+  rotate: false
+  xy: 1, 1
+  size: 26, 7
+  orig: 26, 7
   offset: 0, 0
   index: -1
 white
   rotate: true
-  xy: 184, 132
-  size: 31, 22
-  orig: 31, 22
+  xy: 366, 264
+  size: 63, 44
+  orig: 63, 44
   offset: 0, 0
   index: -1

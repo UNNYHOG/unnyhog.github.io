@@ -1,237 +1,237 @@
 
 Slot1w2.png
-size: 512,128
+size: 1024,1024
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 Effects/1/Slot1_water_1
   rotate: false
-  xy: 92, 62
-  size: 50, 65
-  orig: 50, 65
+  xy: 1, 655
+  size: 112, 147
+  orig: 112, 147
   offset: 0, 0
   index: -1
 Effects/1/Slot1_water_2
   rotate: false
-  xy: 143, 62
-  size: 50, 65
-  orig: 50, 65
+  xy: 205, 876
+  size: 112, 147
+  orig: 112, 147
   offset: 0, 0
   index: -1
 Effects/1/Slot1_water_3
   rotate: false
-  xy: 194, 62
-  size: 50, 65
-  orig: 50, 65
+  xy: 1, 507
+  size: 112, 147
+  orig: 112, 147
   offset: 0, 0
   index: -1
 Effects/1/Slot1_water_4
   rotate: false
-  xy: 245, 62
-  size: 50, 65
-  orig: 50, 65
+  xy: 318, 876
+  size: 112, 147
+  orig: 112, 147
   offset: 0, 0
   index: -1
 Effects/1/Slot1_water_5
   rotate: false
-  xy: 296, 62
-  size: 50, 65
-  orig: 50, 65
+  xy: 1, 359
+  size: 112, 147
+  orig: 112, 147
   offset: 0, 0
   index: -1
 Effects/1/Slot1_water_6
   rotate: false
-  xy: 347, 62
-  size: 50, 65
-  orig: 50, 65
+  xy: 431, 876
+  size: 112, 147
+  orig: 112, 147
   offset: 0, 0
   index: -1
 Effects/1/Slot1_water_7
   rotate: false
-  xy: 398, 62
-  size: 50, 65
-  orig: 50, 65
+  xy: 1, 211
+  size: 112, 147
+  orig: 112, 147
   offset: 0, 0
   index: -1
 Effects/1/Slot1_water_8
   rotate: false
-  xy: 449, 62
-  size: 50, 65
-  orig: 50, 65
+  xy: 544, 876
+  size: 112, 147
+  orig: 112, 147
   offset: 0, 0
   index: -1
 Face1
   rotate: false
-  xy: 187, 2
-  size: 37, 33
-  orig: 37, 33
+  xy: 657, 916
+  size: 84, 75
+  orig: 84, 75
   offset: 0, 0
   index: -1
 Face2
   rotate: false
-  xy: 450, 26
-  size: 38, 35
-  orig: 38, 35
+  xy: 1, 1
+  size: 86, 79
+  orig: 86, 79
   offset: 0, 0
   index: -1
 big fish
   rotate: false
-  xy: 1, 30
-  size: 90, 97
-  orig: 90, 97
+  xy: 1, 803
+  size: 203, 220
+  orig: 203, 220
   offset: 0, 0
   index: -1
 body
-  rotate: false
-  xy: 111, 1
-  size: 27, 24
-  orig: 27, 24
+  rotate: true
+  xy: 114, 434
+  size: 62, 55
+  orig: 62, 55
   offset: 0, 0
   index: -1
 body 2
-  rotate: true
-  xy: 139, 1
-  size: 24, 25
-  orig: 24, 25
+  rotate: false
+  xy: 114, 376
+  size: 55, 57
+  orig: 55, 57
   offset: 0, 0
   index: -1
 bonfire
   rotate: false
-  xy: 227, 34
-  size: 31, 9
-  orig: 31, 9
+  xy: 337, 823
+  size: 71, 21
+  orig: 71, 21
   offset: 0, 0
   index: -1
 fish 1
-  rotate: false
-  xy: 408, 45
-  size: 41, 16
-  orig: 41, 16
+  rotate: true
+  xy: 56, 117
+  size: 93, 37
+  orig: 93, 37
   offset: 0, 0
   index: -1
 fish 2
-  rotate: false
-  xy: 31, 5
-  size: 57, 24
-  orig: 57, 24
+  rotate: true
+  xy: 1, 81
+  size: 129, 54
+  orig: 129, 54
   offset: 0, 0
   index: -1
 fish 3
-  rotate: false
-  xy: 227, 44
-  size: 60, 17
-  orig: 60, 17
+  rotate: true
+  xy: 114, 497
+  size: 134, 37
+  orig: 134, 37
   offset: 0, 0
   index: -1
 flame
   rotate: false
-  xy: 500, 63
-  size: 11, 12
-  orig: 11, 12
+  xy: 56, 89
+  size: 24, 27
+  orig: 24, 27
   offset: 0, 0
   index: -1
 flame light
-  rotate: false
-  xy: 1, 1
-  size: 29, 28
-  orig: 29, 28
+  rotate: true
+  xy: 742, 926
+  size: 65, 63
+  orig: 65, 63
   offset: 0, 0
   index: -1
 hole
   rotate: false
-  xy: 352, 48
-  size: 55, 13
-  orig: 55, 13
+  xy: 337, 845
+  size: 123, 30
+  orig: 123, 30
   offset: 0, 0
   index: -1
 lanceMain
-  rotate: true
-  xy: 92, 32
-  size: 29, 75
-  orig: 29, 75
+  rotate: false
+  xy: 114, 632
+  size: 66, 170
+  orig: 66, 170
   offset: 0, 0
   index: -1
 lanceMain2
   rotate: false
-  xy: 500, 76
-  size: 8, 51
-  orig: 8, 51
+  xy: 181, 687
+  size: 19, 115
+  orig: 19, 115
   offset: 0, 0
   index: -1
 left mitten 2
   rotate: false
-  xy: 246, 23
-  size: 10, 10
-  orig: 10, 10
+  xy: 461, 852
+  size: 22, 23
+  orig: 22, 23
   offset: 0, 0
   index: -1
 lefthand
   rotate: false
-  xy: 489, 45
-  size: 22, 16
-  orig: 22, 16
+  xy: 114, 291
+  size: 49, 36
+  orig: 49, 36
   offset: 0, 0
   index: -1
 lefthand2
   rotate: false
-  xy: 225, 16
-  size: 20, 17
-  orig: 20, 17
+  xy: 114, 253
+  size: 45, 37
+  orig: 45, 37
   offset: 0, 0
   index: -1
 legs
-  rotate: true
-  xy: 89, 1
-  size: 28, 21
-  orig: 28, 21
+  rotate: false
+  xy: 657, 867
+  size: 64, 48
+  orig: 64, 48
   offset: 0, 0
   index: -1
 logs
-  rotate: true
-  xy: 165, 1
-  size: 24, 21
-  orig: 24, 21
+  rotate: false
+  xy: 114, 328
+  size: 55, 47
+  orig: 55, 47
   offset: 0, 0
   index: -1
 right hand
   rotate: true
-  xy: 225, 1
-  size: 14, 23
-  orig: 14, 23
+  xy: 800, 992
+  size: 31, 51
+  orig: 31, 51
   offset: 0, 0
   index: -1
 right hand 2
-  rotate: true
-  xy: 489, 26
-  size: 18, 20
-  orig: 18, 20
+  rotate: false
+  xy: 806, 946
+  size: 40, 45
+  orig: 40, 45
   offset: 0, 0
   index: -1
 right_mitten
   rotate: false
-  xy: 168, 26
-  size: 11, 9
-  orig: 11, 9
+  xy: 152, 610
+  size: 24, 21
+  orig: 24, 21
   offset: 0, 0
   index: -1
 right_mitten 2
   rotate: false
-  xy: 259, 34
-  size: 10, 9
-  orig: 10, 9
+  xy: 409, 824
+  size: 22, 20
+  orig: 22, 20
   offset: 0, 0
   index: -1
 shadow
   rotate: false
-  xy: 168, 36
-  size: 58, 25
-  orig: 58, 25
+  xy: 205, 818
+  size: 131, 57
+  orig: 131, 57
   offset: 0, 0
   index: -1
 shadow2
   rotate: false
-  xy: 288, 47
-  size: 63, 14
-  orig: 63, 14
+  xy: 657, 992
+  size: 142, 31
+  orig: 142, 31
   offset: 0, 0
   index: -1

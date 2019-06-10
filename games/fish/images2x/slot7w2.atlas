@@ -1,160 +1,160 @@
 
 slot7w2.png
-size: 1024,64
+size: 512,512
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 belt1
-  rotate: false
-  xy: 789, 39
-  size: 46, 24
-  orig: 46, 24
+  rotate: true
+  xy: 434, 330
+  size: 92, 49
+  orig: 92, 49
   offset: 0, 0
   index: -1
 belt2
   rotate: false
-  xy: 836, 40
-  size: 39, 23
-  orig: 39, 23
+  xy: 122, 5
+  size: 79, 46
+  orig: 79, 46
   offset: 0, 0
   index: -1
 body
-  rotate: true
-  xy: 640, 18
-  size: 45, 51
-  orig: 45, 51
+  rotate: false
+  xy: 224, 291
+  size: 90, 101
+  orig: 90, 101
   offset: 0, 0
   index: -1
 deerbody
   rotate: false
-  xy: 380, 19
-  size: 69, 44
-  orig: 69, 44
+  xy: 335, 423
+  size: 138, 88
+  orig: 138, 88
   offset: 0, 0
   index: -1
 effects/slot7_water1_1
-  rotate: false
-  xy: 281, 1
-  size: 26, 18
-  orig: 26, 18
+  rotate: true
+  xy: 474, 458
+  size: 53, 36
+  orig: 53, 36
   offset: 0, 0
   index: -1
 effects/slot7_water1_2
   rotate: false
-  xy: 308, 1
-  size: 26, 18
-  orig: 26, 18
+  xy: 235, 145
+  size: 53, 36
+  orig: 53, 36
   offset: 0, 0
   index: -1
 effects/slot7_water1_3
   rotate: false
-  xy: 335, 1
-  size: 26, 18
-  orig: 26, 18
+  xy: 235, 108
+  size: 53, 36
+  orig: 53, 36
   offset: 0, 0
   index: -1
 effects/slot7_water1_4
   rotate: false
-  xy: 876, 45
-  size: 26, 18
-  orig: 26, 18
+  xy: 196, 67
+  size: 53, 36
+  orig: 53, 36
   offset: 0, 0
   index: -1
 effects/slot7_water1_5
-  rotate: false
-  xy: 903, 45
-  size: 26, 18
-  orig: 26, 18
+  rotate: true
+  xy: 202, 13
+  size: 53, 36
+  orig: 53, 36
   offset: 0, 0
   index: -1
 effects/slot7_water1_6
-  rotate: false
-  xy: 930, 45
-  size: 26, 18
-  orig: 26, 18
+  rotate: true
+  xy: 250, 54
+  size: 53, 36
+  orig: 53, 36
   offset: 0, 0
   index: -1
 effects/slot7_water1_7
   rotate: false
-  xy: 957, 45
-  size: 26, 18
-  orig: 26, 18
+  xy: 239, 17
+  size: 53, 36
+  orig: 53, 36
   offset: 0, 0
   index: -1
 fish
-  rotate: true
-  xy: 789, 19
-  size: 19, 39
-  orig: 19, 39
+  rotate: false
+  xy: 196, 104
+  size: 38, 77
+  orig: 38, 77
   offset: 0, 0
   index: -1
 gifts
   rotate: false
-  xy: 692, 16
-  size: 49, 47
-  orig: 49, 47
+  xy: 335, 329
+  size: 98, 93
+  orig: 98, 93
   offset: 0, 0
   index: -1
 hands
-  rotate: false
-  xy: 511, 28
-  size: 67, 35
-  orig: 67, 35
+  rotate: true
+  xy: 122, 52
+  size: 135, 70
+  orig: 135, 70
   offset: 0, 0
   index: -1
 head
   rotate: false
-  xy: 742, 16
-  size: 46, 47
-  orig: 46, 47
+  xy: 198, 182
+  size: 92, 93
+  orig: 92, 93
   offset: 0, 0
   index: -1
 head1
   rotate: false
-  xy: 579, 21
-  size: 60, 42
-  orig: 60, 42
+  xy: 1, 1
+  size: 120, 84
+  orig: 120, 84
   offset: 0, 0
   index: -1
 head2
   rotate: false
-  xy: 450, 13
-  size: 60, 50
-  orig: 60, 50
+  xy: 1, 86
+  size: 120, 101
+  orig: 120, 101
   offset: 0, 0
   index: -1
 patch
   rotate: false
-  xy: 281, 20
-  size: 98, 43
-  orig: 98, 43
+  xy: 1, 188
+  size: 196, 87
+  orig: 196, 87
   offset: 0, 0
   index: -1
 shadowX
   rotate: false
-  xy: 1, 4
-  size: 167, 59
-  orig: 167, 59
+  xy: 1, 393
+  size: 333, 118
+  orig: 333, 118
   offset: 0, 0
   index: -1
 sled
   rotate: false
-  xy: 169, 5
-  size: 111, 58
-  orig: 111, 58
+  xy: 1, 276
+  size: 222, 116
+  orig: 222, 116
   offset: 0, 0
   index: -1
 star
   rotate: false
-  xy: 362, 6
-  size: 12, 13
-  orig: 12, 13
+  xy: 474, 432
+  size: 25, 25
+  orig: 25, 25
   offset: 0, 0
   index: -1
 string4
-  rotate: true
-  xy: 511, 26
-  size: 1, 62
-  orig: 1, 62
+  rotate: false
+  xy: 193, 62
+  size: 2, 125
+  orig: 2, 125
   offset: 0, 0
   index: -1

@@ -1,97 +1,97 @@
 
 Slot5w3.png
-size: 256,128
+size: 512,512
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 Effects/slot5_water_1
   rotate: false
-  xy: 46, 21
-  size: 8, 8
-  orig: 8, 8
+  xy: 251, 301
+  size: 20, 21
+  orig: 20, 21
   offset: 0, 0
   index: -1
 Effects/slot5_water_2
   rotate: false
-  xy: 104, 46
-  size: 8, 8
-  orig: 8, 8
+  xy: 322, 409
+  size: 20, 21
+  orig: 20, 21
   offset: 0, 0
   index: -1
 Effects/slot5_water_3
   rotate: false
-  xy: 168, 99
-  size: 8, 8
-  orig: 8, 8
+  xy: 1, 1
+  size: 20, 21
+  orig: 20, 21
   offset: 0, 0
   index: -1
 Effects/slot5_water_4
   rotate: false
-  xy: 213, 118
-  size: 8, 8
-  orig: 8, 8
+  xy: 157, 65
+  size: 20, 21
+  orig: 20, 21
   offset: 0, 0
   index: -1
 Effects/slot5_water_5
   rotate: false
-  xy: 46, 12
-  size: 8, 8
-  orig: 8, 8
+  xy: 202, 173
+  size: 20, 21
+  orig: 20, 21
   offset: 0, 0
   index: -1
 Effects/slot5_water_6
   rotate: false
-  xy: 55, 21
-  size: 8, 8
-  orig: 8, 8
+  xy: 251, 279
+  size: 20, 21
+  orig: 20, 21
   offset: 0, 0
   index: -1
 Effects/slot5_water_7
   rotate: false
-  xy: 104, 37
-  size: 8, 8
-  orig: 8, 8
+  xy: 272, 301
+  size: 20, 21
+  orig: 20, 21
   offset: 0, 0
   index: -1
 Effects/slot5_water_8
   rotate: false
-  xy: 113, 46
-  size: 8, 8
-  orig: 8, 8
+  xy: 322, 387
+  size: 20, 21
+  orig: 20, 21
   offset: 0, 0
   index: -1
 Fish
-  rotate: false
-  xy: 168, 108
-  size: 44, 18
-  orig: 44, 18
+  rotate: true
+  xy: 157, 87
+  size: 107, 44
+  orig: 107, 44
   offset: 0, 0
   index: -1
 FishCurvy
-  rotate: true
-  xy: 1, 1
-  size: 28, 44
-  orig: 28, 44
+  rotate: false
+  xy: 251, 323
+  size: 70, 107
+  orig: 70, 107
   offset: 0, 0
   index: -1
 Hall
   rotate: false
-  xy: 104, 66
-  size: 63, 60
-  orig: 63, 60
+  xy: 1, 48
+  size: 155, 146
+  orig: 155, 146
   offset: 0, 0
   index: -1
 HallRound
   rotate: false
-  xy: 1, 30
-  size: 102, 96
-  orig: 102, 96
+  xy: 1, 195
+  size: 249, 235
+  orig: 249, 235
   offset: 0, 0
   index: -1
 Shadow
   rotate: false
-  xy: 104, 55
-  size: 62, 10
-  orig: 62, 10
+  xy: 1, 23
+  size: 151, 24
+  orig: 151, 24
   offset: 0, 0
   index: -1

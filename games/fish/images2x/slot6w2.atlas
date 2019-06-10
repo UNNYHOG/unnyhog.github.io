@@ -1,181 +1,181 @@
 
 slot6w2.png
-size: 512,128
+size: 1024,1024
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 Effects/1/slot6_effect1_1
-  rotate: false
-  xy: 400, 98
-  size: 41, 29
-  orig: 41, 29
+  rotate: true
+  xy: 1, 275
+  size: 95, 68
+  orig: 95, 68
   offset: 0, 0
   index: -1
 Effects/1/slot6_effect1_2
   rotate: false
-  xy: 442, 98
-  size: 41, 29
-  orig: 41, 29
+  xy: 745, 955
+  size: 95, 68
+  orig: 95, 68
   offset: 0, 0
   index: -1
 Effects/1/slot6_effect1_3
   rotate: true
-  xy: 269, 14
-  size: 41, 29
-  orig: 41, 29
+  xy: 1, 179
+  size: 95, 68
+  orig: 95, 68
   offset: 0, 0
   index: -1
 Effects/1/slot6_effect1_4
-  rotate: true
-  xy: 299, 14
-  size: 41, 29
-  orig: 41, 29
+  rotate: false
+  xy: 841, 955
+  size: 95, 68
+  orig: 95, 68
   offset: 0, 0
   index: -1
 Effects/water/slot6_water1_1
-  rotate: true
-  xy: 240, 39
-  size: 16, 9
-  orig: 16, 9
+  rotate: false
+  xy: 161, 632
+  size: 38, 22
+  orig: 38, 22
   offset: 0, 0
   index: -1
 Effects/water/slot6_water1_2
-  rotate: true
-  xy: 250, 39
-  size: 16, 9
-  orig: 16, 9
+  rotate: false
+  xy: 296, 838
+  size: 38, 22
+  orig: 38, 22
   offset: 0, 0
   index: -1
 Effects/water/slot6_water1_3
   rotate: false
-  xy: 1, 6
-  size: 16, 9
-  orig: 16, 9
+  xy: 443, 888
+  size: 38, 22
+  orig: 38, 22
   offset: 0, 0
   index: -1
 Effects/water/slot6_water1_4
   rotate: false
-  xy: 118, 47
-  size: 16, 9
-  orig: 16, 9
+  xy: 536, 915
+  size: 38, 22
+  orig: 38, 22
   offset: 0, 0
   index: -1
 Effects/water/slot6_water1_5
   rotate: false
-  xy: 269, 4
-  size: 16, 9
-  orig: 16, 9
+  xy: 208, 657
+  size: 38, 22
+  orig: 38, 22
   offset: 0, 0
   index: -1
 Effects/water/slot6_water1_6
   rotate: false
-  xy: 374, 81
-  size: 16, 9
-  orig: 16, 9
+  xy: 161, 609
+  size: 38, 22
+  orig: 38, 22
   offset: 0, 0
   index: -1
 body
   rotate: false
-  xy: 221, 1
-  size: 47, 37
-  orig: 47, 37
+  xy: 536, 938
+  size: 109, 85
+  orig: 109, 85
   offset: 0, 0
   index: -1
 body2
   rotate: true
-  xy: 357, 91
-  size: 36, 42
-  orig: 36, 42
+  xy: 646, 939
+  size: 84, 98
+  orig: 84, 98
   offset: 0, 0
   index: -1
 fish
   rotate: true
-  xy: 278, 56
-  size: 45, 29
-  orig: 45, 29
+  xy: 89, 489
+  size: 105, 67
+  orig: 105, 67
   offset: 0, 0
   index: -1
 fish_small
-  rotate: true
-  xy: 309, 104
-  size: 23, 47
-  orig: 23, 47
+  rotate: false
+  xy: 1, 69
+  size: 53, 109
+  orig: 53, 109
   offset: 0, 0
   index: -1
 hand
-  rotate: true
-  xy: 69, 16
-  size: 40, 48
-  orig: 40, 48
+  rotate: false
+  xy: 443, 911
+  size: 92, 112
+  orig: 92, 112
   offset: 0, 0
   index: -1
 hand2
   rotate: true
-  xy: 338, 61
-  size: 29, 35
-  orig: 29, 35
+  xy: 1, 1
+  size: 67, 82
+  orig: 67, 82
   offset: 0, 0
   index: -1
 hand3
-  rotate: true
-  xy: 170, 1
-  size: 37, 50
-  orig: 37, 50
+  rotate: false
+  xy: 1, 477
+  size: 87, 117
+  orig: 87, 117
   offset: 0, 0
   index: -1
 hand4
-  rotate: true
-  xy: 1, 16
-  size: 40, 67
-  orig: 40, 67
+  rotate: false
+  xy: 349, 867
+  size: 93, 156
+  orig: 93, 156
   offset: 0, 0
   index: -1
 head
   rotate: false
-  xy: 240, 56
-  size: 37, 45
-  orig: 37, 45
+  xy: 1, 371
+  size: 86, 105
+  orig: 86, 105
   offset: 0, 0
   index: -1
 head2
-  rotate: true
-  xy: 118, 1
-  size: 37, 51
-  orig: 37, 51
+  rotate: false
+  xy: 208, 741
+  size: 87, 119
+  orig: 87, 119
   offset: 0, 0
   index: -1
 sail
   rotate: false
-  xy: 151, 39
-  size: 88, 88
-  orig: 88, 88
+  xy: 1, 655
+  size: 206, 205
+  orig: 206, 205
   offset: 0, 0
   index: -1
 shadow2
   rotate: false
-  xy: 240, 102
-  size: 68, 25
-  orig: 68, 25
+  xy: 1, 595
+  size: 159, 59
+  orig: 159, 59
   offset: 0, 0
   index: -1
 shield
-  rotate: true
-  xy: 484, 90
-  size: 37, 26
-  orig: 37, 26
+  rotate: false
+  xy: 208, 680
+  size: 87, 60
+  orig: 87, 60
   offset: 0, 0
   index: -1
 shipdeck
   rotate: false
-  xy: 1, 57
-  size: 149, 70
-  orig: 149, 70
+  xy: 1, 861
+  size: 347, 162
+  orig: 347, 162
   offset: 0, 0
   index: -1
 shippart
-  rotate: false
-  xy: 308, 56
-  size: 29, 34
-  orig: 29, 34
+  rotate: true
+  xy: 937, 955
+  size: 68, 79
+  orig: 68, 79
   offset: 0, 0
   index: -1

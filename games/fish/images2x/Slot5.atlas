@@ -1,272 +1,272 @@
 
 Slot5.png
-size: 256,256
+size: 512,512
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 1
   rotate: false
-  xy: 193, 223
-  size: 31, 32
-  orig: 31, 32
+  xy: 404, 441
+  size: 65, 69
+  orig: 65, 69
   offset: 0, 0
   index: -1
 2
   rotate: false
-  xy: 1, 39
-  size: 22, 46
-  orig: 22, 46
+  xy: 1, 57
+  size: 48, 97
+  orig: 48, 97
   offset: 0, 0
   index: -1
 Polotno
   rotate: false
-  xy: 159, 216
-  size: 33, 39
-  orig: 33, 39
+  xy: 333, 428
+  size: 70, 82
+  orig: 70, 82
   offset: 0, 0
   index: -1
 arm
   rotate: true
-  xy: 34, 96
-  size: 40, 18
-  orig: 40, 18
+  xy: 71, 175
+  size: 85, 38
+  orig: 85, 38
   offset: 0, 0
   index: -1
 body
   rotate: false
-  xy: 1, 137
-  size: 53, 59
-  orig: 53, 59
+  xy: 1, 261
+  size: 112, 125
+  orig: 112, 125
   offset: 0, 0
   index: -1
 effects/heart
-  rotate: true
-  xy: 153, 206
-  size: 7, 6
-  orig: 7, 6
+  rotate: false
+  xy: 71, 160
+  size: 15, 14
+  orig: 15, 14
   offset: 0, 0
   index: -1
 effects/splash1/splash1_1
   rotate: false
-  xy: 225, 241
-  size: 30, 14
-  orig: 30, 14
+  xy: 110, 219
+  size: 64, 31
+  orig: 64, 31
   offset: 0, 0
   index: -1
 effects/splash1/splash1_2
   rotate: false
-  xy: 225, 226
-  size: 30, 14
-  orig: 30, 14
+  xy: 110, 187
+  size: 64, 31
+  orig: 64, 31
   offset: 0, 0
   index: -1
 effects/splash1/splash1_3
-  rotate: false
-  xy: 225, 211
-  size: 30, 14
-  orig: 30, 14
+  rotate: true
+  xy: 50, 90
+  size: 64, 31
+  orig: 64, 31
   offset: 0, 0
   index: -1
 effects/splash1/splash1_4
-  rotate: false
-  xy: 55, 141
-  size: 30, 14
-  orig: 30, 14
+  rotate: true
+  xy: 175, 186
+  size: 64, 31
+  orig: 64, 31
   offset: 0, 0
   index: -1
 effects/splash1/splash1_5
-  rotate: true
-  xy: 25, 11
-  size: 30, 14
-  orig: 30, 14
+  rotate: false
+  xy: 192, 347
+  size: 64, 31
+  orig: 64, 31
   offset: 0, 0
   index: -1
 effects/splash1/splash1_6
   rotate: false
-  xy: 99, 191
-  size: 30, 14
-  orig: 30, 14
+  xy: 192, 315
+  size: 64, 31
+  orig: 64, 31
   offset: 0, 0
   index: -1
 effects/splash1/splash1_7
-  rotate: false
-  xy: 193, 208
-  size: 30, 14
-  orig: 30, 14
+  rotate: true
+  xy: 257, 314
+  size: 64, 31
+  orig: 64, 31
   offset: 0, 0
   index: -1
 effects/splash1/splash1_8
   rotate: false
-  xy: 130, 191
-  size: 30, 14
-  orig: 30, 14
+  xy: 404, 409
+  size: 64, 31
+  orig: 64, 31
   offset: 0, 0
   index: -1
 effects/splash2/splash2_1
   rotate: false
-  xy: 117, 173
-  size: 22, 17
-  orig: 22, 17
+  xy: 193, 278
+  size: 46, 36
+  orig: 46, 36
   offset: 0, 0
   index: -1
 effects/splash2/splash2_10
-  rotate: false
-  xy: 55, 123
-  size: 22, 17
-  orig: 22, 17
+  rotate: true
+  xy: 370, 297
+  size: 46, 36
+  orig: 46, 36
   offset: 0, 0
   index: -1
 effects/splash2/splash2_11
   rotate: false
-  xy: 53, 105
-  size: 22, 17
-  orig: 22, 17
+  xy: 407, 298
+  size: 46, 36
+  orig: 46, 36
   offset: 0, 0
   index: -1
 effects/splash2/splash2_2
   rotate: false
-  xy: 140, 173
-  size: 22, 17
-  orig: 22, 17
+  xy: 240, 277
+  size: 46, 36
+  orig: 46, 36
   offset: 0, 0
   index: -1
 effects/splash2/splash2_3
   rotate: false
-  xy: 161, 198
-  size: 22, 17
-  orig: 22, 17
+  xy: 51, 20
+  size: 46, 36
+  orig: 46, 36
   offset: 0, 0
   index: -1
 effects/splash2/splash2_4
-  rotate: true
-  xy: 163, 175
-  size: 22, 17
-  orig: 22, 17
+  rotate: false
+  xy: 333, 391
+  size: 46, 36
+  orig: 46, 36
   offset: 0, 0
   index: -1
 effects/splash2/splash2_5
   rotate: false
-  xy: 144, 155
-  size: 22, 17
-  orig: 22, 17
+  xy: 323, 354
+  size: 46, 36
+  orig: 46, 36
   offset: 0, 0
   index: -1
 effects/splash2/splash2_6
-  rotate: true
-  xy: 167, 152
-  size: 22, 17
-  orig: 22, 17
+  rotate: false
+  xy: 323, 317
+  size: 46, 36
+  orig: 46, 36
   offset: 0, 0
   index: -1
 effects/splash2/splash2_7
   rotate: true
-  xy: 181, 175
-  size: 22, 17
-  orig: 22, 17
+  xy: 370, 344
+  size: 46, 36
+  orig: 46, 36
   offset: 0, 0
   index: -1
 effects/splash2/splash2_8
-  rotate: true
-  xy: 185, 152
-  size: 22, 17
-  orig: 22, 17
+  rotate: false
+  xy: 407, 372
+  size: 46, 36
+  orig: 46, 36
   offset: 0, 0
   index: -1
 effects/splash2/splash2_9
   rotate: false
-  xy: 199, 190
-  size: 22, 17
-  orig: 22, 17
+  xy: 407, 335
+  size: 46, 36
+  orig: 46, 36
   offset: 0, 0
   index: -1
 face1
-  rotate: false
-  xy: 92, 167
-  size: 24, 23
-  orig: 24, 23
+  rotate: true
+  xy: 1, 6
+  size: 50, 49
+  orig: 50, 49
   offset: 0, 0
   index: -1
 face2
-  rotate: false
-  xy: 92, 150
-  size: 23, 16
-  orig: 23, 16
+  rotate: true
+  xy: 289, 329
+  size: 49, 33
+  orig: 49, 33
   offset: 0, 0
   index: -1
 face3
   rotate: false
-  xy: 116, 148
-  size: 23, 15
-  orig: 23, 15
+  xy: 50, 57
+  size: 49, 32
+  orig: 49, 32
   offset: 0, 0
   index: -1
 flag
   rotate: true
-  xy: 99, 206
-  size: 7, 53
-  orig: 7, 53
+  xy: 208, 409
+  size: 14, 112
+  orig: 14, 112
   offset: 0, 0
   index: -1
 girl_arm
-  rotate: false
-  xy: 1, 1
-  size: 23, 37
-  orig: 23, 37
+  rotate: true
+  xy: 114, 251
+  size: 50, 78
+  orig: 50, 78
   offset: 0, 0
   index: -1
 girl_body
   rotate: true
-  xy: 99, 214
-  size: 41, 59
-  orig: 41, 59
+  xy: 208, 424
+  size: 86, 124
+  orig: 86, 124
   offset: 0, 0
   index: -1
 girl_face1
   rotate: true
-  xy: 53, 88
-  size: 16, 19
-  orig: 16, 19
+  xy: 470, 476
+  size: 34, 41
+  orig: 34, 41
   offset: 0, 0
   index: -1
 girl_face2
-  rotate: false
-  xy: 78, 121
-  size: 15, 19
-  orig: 15, 19
+  rotate: true
+  xy: 470, 443
+  size: 32, 40
+  orig: 32, 40
   offset: 0, 0
   index: -1
 girl_head
   rotate: false
-  xy: 1, 86
-  size: 32, 50
-  orig: 32, 50
+  xy: 1, 155
+  size: 69, 105
+  orig: 69, 105
   offset: 0, 0
   index: -1
 girl_shadow
-  rotate: true
-  xy: 24, 42
-  size: 43, 14
-  orig: 43, 14
+  rotate: false
+  xy: 208, 379
+  size: 91, 29
+  orig: 91, 29
   offset: 0, 0
   index: -1
 head
   rotate: false
-  xy: 55, 156
-  size: 36, 40
-  orig: 36, 40
+  xy: 114, 302
+  size: 77, 84
+  orig: 77, 84
   offset: 0, 0
   index: -1
 plot
   rotate: false
-  xy: 1, 197
-  size: 97, 58
-  orig: 97, 58
+  xy: 1, 387
+  size: 206, 123
+  orig: 206, 123
   offset: 0, 0
   index: -1
 shadow
   rotate: false
-  xy: 117, 164
-  size: 26, 8
-  orig: 26, 8
+  xy: 110, 169
+  size: 56, 17
+  orig: 56, 17
   offset: 0, 0
   index: -1

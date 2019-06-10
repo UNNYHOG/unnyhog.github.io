@@ -1,223 +1,223 @@
 
 slot8.png
-size: 256,256
+size: 512,512
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 Body
   rotate: false
-  xy: 124, 124
-  size: 66, 66
-  orig: 66, 66
+  xy: 380, 395
+  size: 115, 115
+  orig: 115, 115
   offset: 0, 0
   index: -1
 Body2
-  rotate: false
-  xy: 25, 21
-  size: 55, 70
-  orig: 55, 70
+  rotate: true
+  xy: 1, 15
+  size: 96, 122
+  orig: 96, 122
   offset: 0, 0
   index: -1
 effects/lights
   rotate: false
-  xy: 74, 1
-  size: 19, 19
-  orig: 19, 19
+  xy: 305, 298
+  size: 32, 32
+  orig: 32, 32
   offset: 0, 0
   index: -1
 effects/splash2/splash2_1
   rotate: false
-  xy: 78, 97
-  size: 31, 10
-  orig: 31, 10
+  xy: 177, 134
+  size: 54, 17
+  orig: 54, 17
   offset: 0, 0
   index: -1
 effects/splash2/splash2_2
   rotate: false
-  xy: 124, 111
-  size: 31, 10
-  orig: 31, 10
+  xy: 230, 280
+  size: 54, 17
+  orig: 54, 17
   offset: 0, 0
   index: -1
 effects/splash2/splash2_3
   rotate: false
-  xy: 156, 111
-  size: 31, 10
-  orig: 31, 10
+  xy: 230, 262
+  size: 54, 17
+  orig: 54, 17
   offset: 0, 0
   index: -1
 effects/splash2/splash2_4
-  rotate: true
-  xy: 106, 65
-  size: 31, 10
-  orig: 31, 10
+  rotate: false
+  xy: 230, 244
+  size: 54, 17
+  orig: 54, 17
   offset: 0, 0
   index: -1
 effects/splash2/splash2_5
-  rotate: true
-  xy: 106, 33
-  size: 31, 10
-  orig: 31, 10
+  rotate: false
+  xy: 230, 226
+  size: 54, 17
+  orig: 54, 17
   offset: 0, 0
   index: -1
 effects/splash2/splash2_6
-  rotate: false
-  xy: 124, 100
-  size: 31, 10
-  orig: 31, 10
+  rotate: true
+  xy: 285, 243
+  size: 54, 17
+  orig: 54, 17
   offset: 0, 0
   index: -1
 effects/splash2/splash2_7
   rotate: false
-  xy: 156, 100
-  size: 31, 10
-  orig: 31, 10
+  xy: 230, 208
+  size: 54, 17
+  orig: 54, 17
   offset: 0, 0
   index: -1
 effects/splash2/splash2_8
   rotate: false
-  xy: 188, 100
-  size: 31, 10
-  orig: 31, 10
+  xy: 230, 190
+  size: 54, 17
+  orig: 54, 17
   offset: 0, 0
   index: -1
 effects/splashup/Splashup_1
   rotate: false
-  xy: 222, 172
-  size: 24, 18
-  orig: 24, 18
+  xy: 313, 397
+  size: 42, 32
+  orig: 42, 32
   offset: 0, 0
   index: -1
 effects/splashup/Splashup_2
   rotate: false
-  xy: 222, 153
-  size: 24, 18
-  orig: 24, 18
+  xy: 219, 364
+  size: 42, 32
+  orig: 42, 32
   offset: 0, 0
   index: -1
 effects/splashup/Splashup_3
   rotate: false
-  xy: 222, 134
-  size: 24, 18
-  orig: 24, 18
+  xy: 219, 331
+  size: 42, 32
+  orig: 42, 32
   offset: 0, 0
   index: -1
 effects/splashup/Splashup_4
   rotate: false
-  xy: 222, 115
-  size: 24, 18
-  orig: 24, 18
+  xy: 262, 364
+  size: 42, 32
+  orig: 42, 32
   offset: 0, 0
   index: -1
 effects/splashup/Splashup_5
   rotate: false
-  xy: 81, 78
-  size: 24, 18
-  orig: 24, 18
+  xy: 219, 298
+  size: 42, 32
+  orig: 42, 32
   offset: 0, 0
   index: -1
 effects/splashup/Splashup_6
   rotate: false
-  xy: 81, 59
-  size: 24, 18
-  orig: 24, 18
+  xy: 262, 331
+  size: 42, 32
+  orig: 42, 32
   offset: 0, 0
   index: -1
 effects/splashup/Splashup_7
   rotate: false
-  xy: 81, 40
-  size: 24, 18
-  orig: 24, 18
+  xy: 305, 364
+  size: 42, 32
+  orig: 42, 32
   offset: 0, 0
   index: -1
 effects/splashup/Splashup_8
   rotate: false
-  xy: 81, 21
-  size: 24, 18
-  orig: 24, 18
+  xy: 262, 298
+  size: 42, 32
+  orig: 42, 32
   offset: 0, 0
   index: -1
 effects/splashup/Splashup_9
   rotate: false
-  xy: 117, 81
-  size: 24, 18
-  orig: 24, 18
+  xy: 305, 331
+  size: 42, 32
+  orig: 42, 32
   offset: 0, 0
   index: -1
 monster
   rotate: false
-  xy: 1, 92
-  size: 76, 102
-  orig: 76, 102
+  xy: 1, 112
+  size: 133, 179
+  orig: 133, 179
   offset: 0, 0
   index: -1
 poplavok
   rotate: false
-  xy: 247, 179
-  size: 8, 11
-  orig: 8, 11
+  xy: 496, 490
+  size: 15, 20
+  orig: 15, 20
   offset: 0, 0
   index: -1
 sh
   rotate: false
-  xy: 1, 195
-  size: 129, 60
-  orig: 129, 60
+  xy: 1, 406
+  size: 226, 104
+  orig: 226, 104
   offset: 0, 0
   index: -1
 sh_2
-  rotate: true
-  xy: 78, 108
-  size: 86, 45
-  orig: 86, 45
+  rotate: false
+  xy: 228, 430
+  size: 151, 80
+  orig: 151, 80
   offset: 0, 0
   index: -1
 shadow
   rotate: true
-  xy: 94, 5
-  size: 15, 6
-  orig: 15, 6
+  xy: 124, 84
+  size: 27, 10
+  orig: 27, 10
   offset: 0, 0
   index: -1
 ship
   rotate: false
-  xy: 131, 191
-  size: 124, 64
-  orig: 124, 64
+  xy: 1, 292
+  size: 217, 113
+  orig: 217, 113
   offset: 0, 0
   index: -1
 string
   rotate: true
-  xy: 124, 122
-  size: 1, 57
-  orig: 1, 57
+  xy: 1, 12
+  size: 2, 100
+  orig: 2, 100
   offset: 0, 0
   index: -1
 string2
   rotate: false
-  xy: 117, 65
-  size: 4, 15
-  orig: 4, 15
+  xy: 135, 106
+  size: 8, 26
+  orig: 8, 26
   offset: 0, 0
   index: -1
 udochka
   rotate: false
-  xy: 25, 2
-  size: 48, 18
-  orig: 48, 18
+  xy: 228, 397
+  size: 84, 32
+  orig: 84, 32
   offset: 0, 0
   index: -1
 udochka2
   rotate: true
-  xy: 1, 1
-  size: 90, 23
-  orig: 90, 23
+  xy: 135, 133
+  size: 158, 41
+  orig: 158, 41
   offset: 0, 0
   index: -1
 veslo
   rotate: true
-  xy: 191, 111
-  size: 79, 30
-  orig: 79, 30
+  xy: 177, 152
+  size: 139, 52
+  orig: 139, 52
   offset: 0, 0
   index: -1

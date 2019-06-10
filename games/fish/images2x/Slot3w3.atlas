@@ -1,146 +1,146 @@
 
 Slot3w3.png
-size: 256,128
+size: 512,512
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 Body
   rotate: false
-  xy: 1, 43
-  size: 69, 80
-  orig: 69, 80
+  xy: 1, 349
+  size: 139, 161
+  orig: 139, 161
   offset: 0, 0
   index: -1
 Effects/slot3_water_1
   rotate: false
-  xy: 71, 48
-  size: 10, 8
-  orig: 10, 8
+  xy: 1, 1
+  size: 20, 15
+  orig: 20, 15
   offset: 0, 0
   index: -1
 Effects/slot3_water_10
   rotate: false
-  xy: 202, 78
-  size: 10, 8
-  orig: 10, 8
+  xy: 45, 80
+  size: 20, 15
+  orig: 20, 15
   offset: 0, 0
   index: -1
 Effects/slot3_water_11
   rotate: false
-  xy: 22, 1
-  size: 10, 8
-  orig: 10, 8
+  xy: 66, 96
+  size: 20, 15
+  orig: 20, 15
   offset: 0, 0
   index: -1
 Effects/slot3_water_12
   rotate: false
-  xy: 33, 10
-  size: 10, 8
-  orig: 10, 8
+  xy: 90, 151
+  size: 20, 15
+  orig: 20, 15
   offset: 0, 0
   index: -1
 Effects/slot3_water_13
   rotate: false
-  xy: 93, 48
-  size: 10, 8
-  orig: 10, 8
+  xy: 111, 167
+  size: 20, 15
+  orig: 20, 15
   offset: 0, 0
   index: -1
 Effects/slot3_water_2
   rotate: false
-  xy: 49, 34
-  size: 10, 8
-  orig: 10, 8
+  xy: 308, 495
+  size: 20, 15
+  orig: 20, 15
   offset: 0, 0
   index: -1
 Effects/slot3_water_3
   rotate: false
-  xy: 191, 78
-  size: 10, 8
-  orig: 10, 8
+  xy: 45, 96
+  size: 20, 15
+  orig: 20, 15
   offset: 0, 0
   index: -1
 Effects/slot3_water_4
   rotate: false
-  xy: 22, 10
-  size: 10, 8
-  orig: 10, 8
+  xy: 90, 167
+  size: 20, 15
+  orig: 20, 15
   offset: 0, 0
   index: -1
 Effects/slot3_water_5
   rotate: false
-  xy: 82, 48
-  size: 10, 8
-  orig: 10, 8
+  xy: 213, 413
+  size: 20, 15
+  orig: 20, 15
   offset: 0, 0
   index: -1
 Effects/slot3_water_6
   rotate: false
-  xy: 49, 25
-  size: 10, 8
-  orig: 10, 8
+  xy: 254, 447
+  size: 20, 15
+  orig: 20, 15
   offset: 0, 0
   index: -1
 Effects/slot3_water_7
   rotate: false
-  xy: 60, 34
-  size: 10, 8
-  orig: 10, 8
+  xy: 22, 1
+  size: 20, 15
+  orig: 20, 15
   offset: 0, 0
   index: -1
 Effects/slot3_water_8
   rotate: false
-  xy: 71, 39
-  size: 10, 8
-  orig: 10, 8
+  xy: 308, 479
+  size: 20, 15
+  orig: 20, 15
   offset: 0, 0
   index: -1
 Effects/slot3_water_9
   rotate: false
-  xy: 191, 69
-  size: 10, 8
-  orig: 10, 8
+  xy: 329, 495
+  size: 20, 15
+  orig: 20, 15
   offset: 0, 0
   index: -1
 Fish
   rotate: false
-  xy: 1, 19
-  size: 47, 23
-  orig: 47, 23
+  xy: 213, 463
+  size: 94, 47
+  orig: 94, 47
   offset: 0, 0
   index: -1
 Head
-  rotate: true
-  xy: 71, 57
-  size: 66, 83
-  orig: 66, 83
+  rotate: false
+  xy: 1, 183
+  size: 133, 165
+  orig: 133, 165
   offset: 0, 0
   index: -1
 Jaw
-  rotate: true
-  xy: 155, 64
-  size: 22, 35
-  orig: 22, 35
+  rotate: false
+  xy: 45, 112
+  size: 44, 70
+  orig: 44, 70
   offset: 0, 0
   index: -1
 Neck
   rotate: false
-  xy: 1, 1
-  size: 20, 17
-  orig: 20, 17
+  xy: 213, 429
+  size: 40, 33
+  orig: 40, 33
   offset: 0, 0
   index: -1
 Shadow
   rotate: true
-  xy: 234, 40
-  size: 83, 21
-  orig: 83, 21
+  xy: 1, 17
+  size: 165, 43
+  orig: 165, 43
   offset: 0, 0
   index: -1
 Tail
-  rotate: true
-  xy: 155, 87
-  size: 36, 78
-  orig: 36, 78
+  rotate: false
+  xy: 141, 353
+  size: 71, 157
+  orig: 71, 157
   offset: 0, 0
   index: -1
