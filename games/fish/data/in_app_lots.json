@@ -46,13 +46,5 @@
     "description": "GemsForVideoDesc",
     "gems": 5,
     "order": 1
-  },
-  {
-    "itemId": "hell_disable_interstitial",
-    "itemIdprod": "hell_disable_interstitial",
-    "title": "InAppIntDisablerName",
-    "description": "InAppIntDisablerDescMenu",
-    "gems": 0,
-    "order": 7
   }
 ]
