@@ -7,140 +7,140 @@ repeat: none
 Body
   rotate: false
   xy: 1, 43
-  size: 69, 80
-  orig: 69, 80
+  size: 71, 84
+  orig: 71, 84
   offset: 0, 0
   index: -1
 Effects/slot3_water_1
-  rotate: false
-  xy: 71, 48
+  rotate: true
+  xy: 73, 43
   size: 10, 8
   orig: 10, 8
   offset: 0, 0
   index: -1
 Effects/slot3_water_10
   rotate: false
-  xy: 202, 78
+  xy: 33, 12
   size: 10, 8
   orig: 10, 8
   offset: 0, 0
   index: -1
 Effects/slot3_water_11
-  rotate: false
-  xy: 22, 1
+  rotate: true
+  xy: 40, 1
   size: 10, 8
   orig: 10, 8
   offset: 0, 0
   index: -1
 Effects/slot3_water_12
   rotate: false
-  xy: 33, 10
+  xy: 44, 12
   size: 10, 8
   orig: 10, 8
   offset: 0, 0
   index: -1
 Effects/slot3_water_13
-  rotate: false
-  xy: 93, 48
+  rotate: true
+  xy: 49, 1
   size: 10, 8
   orig: 10, 8
   offset: 0, 0
   index: -1
 Effects/slot3_water_2
-  rotate: false
-  xy: 49, 34
+  rotate: true
+  xy: 82, 43
   size: 10, 8
   orig: 10, 8
   offset: 0, 0
   index: -1
 Effects/slot3_water_3
   rotate: false
-  xy: 191, 78
+  xy: 131, 55
   size: 10, 8
   orig: 10, 8
   offset: 0, 0
   index: -1
 Effects/slot3_water_4
   rotate: false
-  xy: 22, 10
+  xy: 234, 119
   size: 10, 8
   orig: 10, 8
   offset: 0, 0
   index: -1
 Effects/slot3_water_5
   rotate: false
-  xy: 82, 48
+  xy: 245, 119
   size: 10, 8
   orig: 10, 8
   offset: 0, 0
   index: -1
 Effects/slot3_water_6
   rotate: false
-  xy: 49, 25
+  xy: 215, 95
   size: 10, 8
   orig: 10, 8
   offset: 0, 0
   index: -1
 Effects/slot3_water_7
   rotate: false
-  xy: 60, 34
+  xy: 22, 12
   size: 10, 8
   orig: 10, 8
   offset: 0, 0
   index: -1
 Effects/slot3_water_8
-  rotate: false
-  xy: 71, 39
+  rotate: true
+  xy: 22, 1
   size: 10, 8
   orig: 10, 8
   offset: 0, 0
   index: -1
 Effects/slot3_water_9
-  rotate: false
-  xy: 191, 69
+  rotate: true
+  xy: 31, 1
   size: 10, 8
   orig: 10, 8
   offset: 0, 0
   index: -1
 Fish
   rotate: false
-  xy: 1, 19
+  xy: 186, 104
   size: 47, 23
   orig: 47, 23
   offset: 0, 0
   index: -1
 Head
-  rotate: true
-  xy: 71, 57
-  size: 66, 83
-  orig: 66, 83
+  rotate: false
+  xy: 73, 54
+  size: 57, 73
+  orig: 57, 73
   offset: 0, 0
   index: -1
 Jaw
-  rotate: true
-  xy: 155, 64
-  size: 22, 35
-  orig: 22, 35
+  rotate: false
+  xy: 186, 66
+  size: 28, 37
+  orig: 28, 37
   offset: 0, 0
   index: -1
 Neck
   rotate: false
-  xy: 1, 1
+  xy: 1, 3
   size: 20, 17
   orig: 20, 17
   offset: 0, 0
   index: -1
 Shadow
-  rotate: true
-  xy: 234, 40
+  rotate: false
+  xy: 1, 21
   size: 83, 21
   orig: 83, 21
   offset: 0, 0
   index: -1
 Tail
-  rotate: true
-  xy: 155, 87
-  size: 36, 78
-  orig: 36, 78
+  rotate: false
+  xy: 131, 64
+  size: 54, 63
+  orig: 54, 63
   offset: 0, 0
   index: -1

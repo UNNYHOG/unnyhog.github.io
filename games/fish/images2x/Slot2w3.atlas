@@ -6,120 +6,120 @@ filter: Linear,Linear
 repeat: none
 Arm
   rotate: false
-  xy: 354, 467
-  size: 56, 40
-  orig: 56, 40
+  xy: 348, 417
+  size: 48, 35
+  orig: 48, 35
   offset: 0, 0
   index: -1
 Body
   rotate: false
-  xy: 1, 312
-  size: 136, 195
-  orig: 136, 195
+  xy: 231, 333
+  size: 116, 167
+  orig: 116, 167
   offset: 0, 0
   index: -1
 Effects/slot2_water_1
   rotate: false
-  xy: 198, 327
-  size: 13, 20
-  orig: 13, 20
+  xy: 490, 483
+  size: 11, 17
+  orig: 11, 17
   offset: 0, 0
   index: -1
 Effects/slot2_water_2
-  rotate: true
-  xy: 290, 437
-  size: 13, 20
-  orig: 13, 20
+  rotate: false
+  xy: 217, 309
+  size: 11, 17
+  orig: 11, 17
   offset: 0, 0
   index: -1
 Effects/slot2_water_3
   rotate: false
-  xy: 57, 91
-  size: 13, 20
-  orig: 13, 20
+  xy: 64, 207
+  size: 11, 17
+  orig: 11, 17
   offset: 0, 0
   index: -1
 Effects/slot2_water_4
-  rotate: true
-  xy: 354, 453
-  size: 13, 20
-  orig: 13, 20
+  rotate: false
+  xy: 348, 399
+  size: 11, 17
+  orig: 11, 17
   offset: 0, 0
   index: -1
 Effects/slot2_water_5
   rotate: false
-  xy: 411, 487
-  size: 13, 20
-  orig: 13, 20
+  xy: 397, 435
+  size: 11, 17
+  orig: 11, 17
   offset: 0, 0
   index: -1
 Effects/slot2_water_6
   rotate: false
-  xy: 120, 291
-  size: 13, 20
-  orig: 13, 20
+  xy: 12, 70
+  size: 11, 17
+  orig: 11, 17
   offset: 0, 0
   index: -1
 Effects/slot2_water_7
   rotate: false
-  xy: 212, 327
-  size: 13, 20
-  orig: 13, 20
+  xy: 490, 465
+  size: 11, 17
+  orig: 11, 17
   offset: 0, 0
   index: -1
 Fish
-  rotate: false
-  xy: 138, 315
-  size: 59, 119
-  orig: 59, 119
+  rotate: true
+  xy: 114, 276
+  size: 50, 102
+  orig: 50, 102
   offset: 0, 0
   index: -1
 HandClosed
-  rotate: true
-  xy: 57, 112
-  size: 54, 50
-  orig: 54, 50
+  rotate: false
+  xy: 64, 225
+  size: 46, 42
+  orig: 46, 42
   offset: 0, 0
   index: -1
 HandOpen
   rotate: false
-  xy: 290, 451
-  size: 63, 56
-  orig: 63, 56
+  xy: 1, 88
+  size: 54, 48
+  orig: 54, 48
   offset: 0, 0
   index: -1
 Head
   rotate: false
-  xy: 198, 348
-  size: 89, 86
-  orig: 89, 86
+  xy: 114, 327
+  size: 116, 173
+  orig: 116, 173
   offset: 0, 0
   index: -1
 MainShadow
   rotate: true
-  xy: 108, 240
-  size: 71, 11
-  orig: 71, 11
+  xy: 1, 26
+  size: 61, 10
+  orig: 61, 10
   offset: 0, 0
   index: -1
 Pile
-  rotate: false
-  xy: 138, 435
-  size: 151, 72
-  orig: 151, 72
+  rotate: true
+  xy: 1, 137
+  size: 130, 62
+  orig: 130, 62
   offset: 0, 0
   index: -1
 PileShadow
-  rotate: true
-  xy: 1, 1
-  size: 165, 55
-  orig: 165, 55
+  rotate: false
+  xy: 348, 453
+  size: 141, 47
+  orig: 141, 47
   offset: 0, 0
   index: -1
 RearHand
   rotate: false
-  xy: 1, 167
-  size: 106, 144
-  orig: 106, 144
+  xy: 1, 268
+  size: 112, 232
+  orig: 112, 232
   offset: 0, 0
   index: -1

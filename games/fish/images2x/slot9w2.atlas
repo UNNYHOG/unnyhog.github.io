@@ -6,302 +6,295 @@ filter: Linear,Linear
 repeat: none
 door
   rotate: false
-  xy: 1, 841
-  size: 289, 177
-  orig: 289, 177
+  xy: 1, 836
+  size: 277, 170
+  orig: 277, 170
   offset: 0, 0
   index: -1
 effects/1/slot9_effect_1
-  rotate: false
-  xy: 423, 722
-  size: 52, 31
-  orig: 52, 31
+  rotate: true
+  xy: 126, 214
+  size: 50, 29
+  orig: 50, 29
   offset: 0, 0
   index: -1
 effects/1/slot9_effect_2
   rotate: false
-  xy: 476, 722
-  size: 52, 31
-  orig: 52, 31
+  xy: 414, 848
+  size: 50, 29
+  orig: 50, 29
   offset: 0, 0
   index: -1
 effects/1/slot9_effect_3
-  rotate: true
-  xy: 988, 966
-  size: 52, 31
-  orig: 52, 31
+  rotate: false
+  xy: 1, 3
+  size: 50, 29
+  orig: 50, 29
   offset: 0, 0
   index: -1
 effects/1/slot9_effect_4
-  rotate: false
-  xy: 302, 693
-  size: 52, 31
-  orig: 52, 31
+  rotate: true
+  xy: 186, 530
+  size: 50, 29
+  orig: 50, 29
   offset: 0, 0
   index: -1
 effects/1/slot9_effect_5
-  rotate: false
-  xy: 355, 693
-  size: 52, 31
-  orig: 52, 31
+  rotate: true
+  xy: 216, 532
+  size: 50, 29
+  orig: 50, 29
   offset: 0, 0
   index: -1
 effects/smoke/slot9_smoke2_1
-  rotate: true
-  xy: 302, 666
-  size: 26, 47
-  orig: 26, 47
+  rotate: false
+  xy: 165, 445
+  size: 25, 45
+  orig: 25, 45
   offset: 0, 0
   index: -1
 effects/smoke/slot9_smoke2_2
-  rotate: true
-  xy: 350, 666
-  size: 26, 47
-  orig: 26, 47
+  rotate: false
+  xy: 165, 399
+  size: 25, 45
+  orig: 25, 45
   offset: 0, 0
   index: -1
 effects/smoke/slot9_smoke2_3
   rotate: false
-  xy: 533, 790
-  size: 26, 47
-  orig: 26, 47
+  xy: 260, 790
+  size: 25, 45
+  orig: 25, 45
   offset: 0, 0
   index: -1
 effects/smoke/slot9_smoke2_4
   rotate: false
-  xy: 533, 742
-  size: 26, 47
-  orig: 26, 47
+  xy: 260, 744
+  size: 25, 45
+  orig: 25, 45
   offset: 0, 0
   index: -1
 effects/smoke/slot9_smoke2_5
-  rotate: true
-  xy: 760, 945
-  size: 26, 47
-  orig: 26, 47
+  rotate: false
+  xy: 260, 698
+  size: 25, 45
+  orig: 25, 45
   offset: 0, 0
   index: -1
 effects/smoke/slot9_smoke2_6
-  rotate: true
-  xy: 808, 945
-  size: 26, 47
-  orig: 26, 47
+  rotate: false
+  xy: 596, 888
+  size: 25, 45
+  orig: 25, 45
   offset: 0, 0
   index: -1
 effects/smoke/slot9_smoke2_7
-  rotate: true
-  xy: 856, 945
-  size: 26, 47
-  orig: 26, 47
+  rotate: false
+  xy: 243, 616
+  size: 25, 45
+  orig: 25, 45
   offset: 0, 0
   index: -1
 effects/wat1/slot9_water1_1
-  rotate: false
-  xy: 438, 838
-  size: 109, 41
-  orig: 109, 41
+  rotate: true
+  xy: 45, 373
+  size: 105, 39
+  orig: 105, 39
   offset: 0, 0
   index: -1
 effects/wat1/slot9_water1_2
-  rotate: false
-  xy: 635, 918
-  size: 109, 41
-  orig: 109, 41
+  rotate: true
+  xy: 85, 385
+  size: 105, 39
+  orig: 105, 39
   offset: 0, 0
   index: -1
 effects/wat1/slot9_water1_3
   rotate: true
-  xy: 271, 731
-  size: 109, 41
-  orig: 109, 41
+  xy: 125, 385
+  size: 105, 39
+  orig: 105, 39
   offset: 0, 0
   index: -1
 effects/wat1/slot9_water1_4
-  rotate: false
-  xy: 313, 809
-  size: 109, 41
-  orig: 109, 41
+  rotate: true
+  xy: 46, 267
+  size: 105, 39
+  orig: 105, 39
   offset: 0, 0
   index: -1
 effects/wat1/slot9_water1_5
-  rotate: false
-  xy: 313, 767
-  size: 109, 41
-  orig: 109, 41
+  rotate: true
+  xy: 46, 161
+  size: 105, 39
+  orig: 105, 39
   offset: 0, 0
   index: -1
 effects/wat1/slot9_water1_6
-  rotate: false
-  xy: 313, 725
-  size: 109, 41
-  orig: 109, 41
+  rotate: true
+  xy: 46, 55
+  size: 105, 39
+  orig: 105, 39
   offset: 0, 0
   index: -1
 effects/wat1/slot9_water1_7
-  rotate: false
-  xy: 423, 796
-  size: 109, 41
-  orig: 109, 41
+  rotate: true
+  xy: 86, 279
+  size: 105, 39
+  orig: 105, 39
   offset: 0, 0
   index: -1
 effects/wat1/slot9_water1_8
-  rotate: false
-  xy: 423, 754
-  size: 109, 41
-  orig: 109, 41
+  rotate: true
+  xy: 86, 173
+  size: 105, 39
+  orig: 105, 39
   offset: 0, 0
   index: -1
 effects/wat2/slot9_water2_1
   rotate: false
-  xy: 760, 972
-  size: 113, 46
-  orig: 113, 46
+  xy: 77, 536
+  size: 108, 44
+  orig: 108, 44
   offset: 0, 0
   index: -1
 effects/wat2/slot9_water2_2
   rotate: false
-  xy: 57, 503
-  size: 113, 46
-  orig: 113, 46
+  xy: 733, 962
+  size: 108, 44
+  orig: 108, 44
   offset: 0, 0
   index: -1
 effects/wat2/slot9_water2_3
   rotate: false
-  xy: 874, 972
-  size: 113, 46
-  orig: 113, 46
+  xy: 77, 491
+  size: 108, 44
+  orig: 108, 44
   offset: 0, 0
   index: -1
 effects/wat2/slot9_water2_4
   rotate: false
-  xy: 57, 456
-  size: 113, 46
-  orig: 113, 46
+  xy: 842, 962
+  size: 108, 44
+  orig: 108, 44
   offset: 0, 0
   index: -1
 effects/wat2/slot9_water2_5
   rotate: true
-  xy: 1, 207
-  size: 113, 46
-  orig: 113, 46
+  xy: 1, 251
+  size: 108, 44
+  orig: 108, 44
   offset: 0, 0
   index: -1
 effects/wat2/slot9_water2_6
   rotate: true
-  xy: 1, 93
-  size: 113, 46
-  orig: 113, 46
+  xy: 1, 142
+  size: 108, 44
+  orig: 108, 44
   offset: 0, 0
   index: -1
 effects/wat2/slot9_water2_7
-  rotate: false
-  xy: 438, 880
-  size: 113, 46
-  orig: 113, 46
+  rotate: true
+  xy: 1, 33
+  size: 108, 44
+  orig: 108, 44
   offset: 0, 0
   index: -1
 fish
   rotate: true
-  xy: 1, 11
-  size: 81, 37
-  orig: 81, 37
+  xy: 207, 583
+  size: 78, 35
+  orig: 78, 35
   offset: 0, 0
   index: -1
 fishpile
   rotate: false
-  xy: 635, 960
-  size: 124, 58
-  orig: 124, 58
+  xy: 613, 950
+  size: 119, 56
+  orig: 119, 56
   offset: 0, 0
   index: -1
 hand
-  rotate: false
-  xy: 1, 446
-  size: 55, 128
-  orig: 55, 128
+  rotate: true
+  xy: 472, 881
+  size: 52, 123
+  orig: 52, 123
   offset: 0, 0
   index: -1
 hand2
   rotate: false
-  xy: 552, 890
-  size: 58, 49
-  orig: 58, 49
+  xy: 951, 959
+  size: 56, 47
+  orig: 56, 47
   offset: 0, 0
   index: -1
 hand3
   rotate: true
-  xy: 271, 666
-  size: 64, 30
-  orig: 64, 30
+  xy: 126, 323
+  size: 61, 28
+  orig: 61, 28
   offset: 0, 0
   index: -1
 hand3_shadow
   rotate: true
-  xy: 171, 489
-  size: 60, 25
-  orig: 60, 25
+  xy: 126, 265
+  size: 57, 24
+  orig: 57, 24
   offset: 0, 0
   index: -1
 jack
-  rotate: true
-  xy: 528, 940
-  size: 78, 106
-  orig: 78, 106
-  offset: 0, 0
-  index: -1
-palm
-  rotate: true
-  xy: 197, 545
-  size: 29, 15
-  orig: 29, 15
+  rotate: false
+  xy: 1, 479
+  size: 75, 101
+  orig: 75, 101
   offset: 0, 0
   index: -1
 rose
   rotate: false
-  xy: 291, 927
-  size: 236, 91
-  orig: 236, 91
+  xy: 279, 878
+  size: 192, 128
+  orig: 192, 128
   offset: 0, 0
   index: -1
 shadow3
   rotate: true
-  xy: 1, 321
-  size: 124, 45
-  orig: 124, 45
+  xy: 1, 360
+  size: 118, 43
+  orig: 118, 43
   offset: 0, 0
   index: -1
 shadow4
   rotate: true
-  xy: 216, 554
-  size: 105, 45
-  orig: 105, 45
+  xy: 86, 71
+  size: 101, 43
+  orig: 101, 43
   offset: 0, 0
   index: -1
 shadow5
   rotate: false
-  xy: 291, 851
-  size: 146, 75
-  orig: 146, 75
+  xy: 472, 934
+  size: 140, 72
+  orig: 140, 72
   offset: 0, 0
   index: -1
 shadow6
   rotate: false
-  xy: 57, 550
-  size: 139, 24
-  orig: 139, 24
+  xy: 279, 854
+  size: 134, 23
+  orig: 134, 23
   offset: 0, 0
   index: -1
 shadowrose
   rotate: false
-  xy: 1, 575
-  size: 214, 84
-  orig: 214, 84
+  xy: 1, 581
+  size: 205, 80
+  orig: 205, 80
   offset: 0, 0
   index: -1
 ship
   rotate: false
-  xy: 1, 660
-  size: 269, 180
-  orig: 269, 180
+  xy: 1, 662
+  size: 258, 173
+  orig: 258, 173
   offset: 0, 0
   index: -1

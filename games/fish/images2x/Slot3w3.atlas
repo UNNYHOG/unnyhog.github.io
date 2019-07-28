@@ -6,105 +6,105 @@ filter: Linear,Linear
 repeat: none
 Body
   rotate: false
-  xy: 1, 349
-  size: 139, 161
-  orig: 139, 161
+  xy: 1, 329
+  size: 141, 168
+  orig: 141, 168
   offset: 0, 0
   index: -1
 Effects/slot3_water_1
   rotate: false
-  xy: 1, 1
+  xy: 117, 313
   size: 20, 15
   orig: 20, 15
   offset: 0, 0
   index: -1
 Effects/slot3_water_10
   rotate: false
-  xy: 45, 80
+  xy: 252, 418
   size: 20, 15
   orig: 20, 15
   offset: 0, 0
   index: -1
 Effects/slot3_water_11
   rotate: false
-  xy: 66, 96
+  xy: 273, 434
   size: 20, 15
   orig: 20, 15
   offset: 0, 0
   index: -1
 Effects/slot3_water_12
   rotate: false
-  xy: 90, 151
+  xy: 347, 466
   size: 20, 15
   orig: 20, 15
   offset: 0, 0
   index: -1
 Effects/slot3_water_13
   rotate: false
-  xy: 111, 167
+  xy: 368, 482
   size: 20, 15
   orig: 20, 15
   offset: 0, 0
   index: -1
 Effects/slot3_water_2
   rotate: false
-  xy: 308, 495
+  xy: 1, 1
   size: 20, 15
   orig: 20, 15
   offset: 0, 0
   index: -1
 Effects/slot3_water_3
   rotate: false
-  xy: 45, 96
+  xy: 252, 434
   size: 20, 15
   orig: 20, 15
   offset: 0, 0
   index: -1
 Effects/slot3_water_4
   rotate: false
-  xy: 90, 167
+  xy: 347, 482
   size: 20, 15
   orig: 20, 15
   offset: 0, 0
   index: -1
 Effects/slot3_water_5
   rotate: false
-  xy: 213, 413
+  xy: 45, 92
   size: 20, 15
   orig: 20, 15
   offset: 0, 0
   index: -1
 Effects/slot3_water_6
-  rotate: false
-  xy: 254, 447
+  rotate: true
+  xy: 101, 162
   size: 20, 15
   orig: 20, 15
   offset: 0, 0
   index: -1
 Effects/slot3_water_7
   rotate: false
-  xy: 22, 1
+  xy: 184, 355
   size: 20, 15
   orig: 20, 15
   offset: 0, 0
   index: -1
 Effects/slot3_water_8
   rotate: false
-  xy: 308, 479
+  xy: 117, 297
   size: 20, 15
   orig: 20, 15
   offset: 0, 0
   index: -1
 Effects/slot3_water_9
   rotate: false
-  xy: 329, 495
+  xy: 22, 1
   size: 20, 15
   orig: 20, 15
   offset: 0, 0
   index: -1
 Fish
   rotate: false
-  xy: 213, 463
+  xy: 252, 450
   size: 94, 47
   orig: 94, 47
   offset: 0, 0
@@ -112,20 +112,20 @@ Fish
 Head
   rotate: false
   xy: 1, 183
-  size: 133, 165
-  orig: 133, 165
+  size: 115, 145
+  orig: 115, 145
   offset: 0, 0
   index: -1
 Jaw
   rotate: false
-  xy: 45, 112
-  size: 44, 70
-  orig: 44, 70
+  xy: 45, 108
+  size: 55, 74
+  orig: 55, 74
   offset: 0, 0
   index: -1
 Neck
   rotate: false
-  xy: 213, 429
+  xy: 143, 337
   size: 40, 33
   orig: 40, 33
   offset: 0, 0
@@ -139,8 +139,8 @@ Shadow
   index: -1
 Tail
   rotate: false
-  xy: 141, 353
-  size: 71, 157
-  orig: 71, 157
+  xy: 143, 371
+  size: 108, 126
+  orig: 108, 126
   offset: 0, 0
   index: -1
