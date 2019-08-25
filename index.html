@@ -25,7 +25,7 @@
     <script src="plugins/9slice.min.js"></script>
     <!--<script type="text/javascript" src="plugins/rexuiplugin.min.js"></script>-->
     <script src="plugins/SpineWebGLPlugin.js"></script>
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans+Narrow:900">
+    <!--<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans+Narrow" />-->
     <!--<script src="plugins/GBasePlugin.js"></script>-->
 
 
@@ -36,7 +36,8 @@
     <!--SOCIAL_VK_END-->
 
     <script src="./plugins/analytics.js"></script>
-    <script src="https://gbase-public-static.ams3.cdn.digitaloceanspaces.com/gbase-html5-0.0.4-min.js"></script>
+    <!--<script src="https://gbase-public-static.ams3.cdn.digitaloceanspaces.com/gbase-html5-0.0.4-min.js"></script>-->
+    <script src="https://gbase-public-static.ams3.cdn.digitaloceanspaces.com/gbase-html5-latest-min.js"></script>
 
     <style>
         body {
@@ -58,10 +59,22 @@
             width: 30%;
             height: 4%;
         }
+
+        @font-face {
+            font-family: 'pt_sans_narrowbold';
+            src: url('fonts/2220-webfont.woff2') format('woff2'),
+            url('fonts/2220-webfont.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
         .myp {
             position: absolute;
             margin: 0;
             padding: 0;
+            font-weight: 600;
+            font-family: 'pt_sans_narrowbold', "Arial Rounded MT Bold", sans-serif;
+            /*font-family: 'pt_sans_narrowbold', "Helvetica Neue", sans-serif;*/
         }
 
         p {
