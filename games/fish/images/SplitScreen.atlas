@@ -1,139 +1,139 @@
 
 SplitScreen.png
-size: 4096,4096
+size: 2048,2048
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 bubble
   rotate: false
-  xy: 1247, 684
-  size: 533, 1534
-  orig: 533, 1534
+  xy: 626, 346
+  size: 267, 767
+  orig: 267, 767
   offset: 0, 0
   index: -1
 bubble2
   rotate: false
-  xy: 2737, 2872
-  size: 434, 1138
-  orig: 434, 1138
+  xy: 1371, 1441
+  size: 217, 569
+  orig: 217, 569
   offset: 0, 0
   index: -1
 bubble3
   rotate: false
-  xy: 1, 530
-  size: 833, 1682
-  orig: 833, 1682
+  xy: 1, 269
+  size: 417, 841
+  orig: 417, 841
   offset: 0, 0
   index: -1
 f1
   rotate: false
-  xy: 1776, 2296
-  size: 395, 211
-  orig: 395, 211
+  xy: 890, 1151
+  size: 198, 106
+  orig: 198, 106
   offset: 0, 0
   index: -1
 f2
   rotate: true
-  xy: 3710, 3077
-  size: 407, 166
-  orig: 407, 166
+  xy: 1859, 1542
+  size: 204, 83
+  orig: 204, 83
   offset: 0, 0
   index: -1
 f3
   rotate: false
-  xy: 2456, 2610
-  size: 258, 99
-  orig: 258, 99
+  xy: 1231, 1309
+  size: 129, 50
+  orig: 129, 50
   offset: 0, 0
   index: -1
 f4
   rotate: false
-  xy: 3172, 2925
-  size: 266, 99
-  orig: 266, 99
+  xy: 1589, 1466
+  size: 133, 50
+  orig: 133, 50
   offset: 0, 0
   index: -1
 f5
   rotate: false
-  xy: 1, 135
-  size: 437, 246
-  orig: 437, 246
+  xy: 1, 70
+  size: 219, 123
+  orig: 219, 123
   offset: 0, 0
   index: -1
 f6
   rotate: false
-  xy: 1, 24
-  size: 199, 110
-  orig: 199, 110
+  xy: 1, 14
+  size: 100, 55
+  orig: 100, 55
   offset: 0, 0
   index: -1
 f7
   rotate: true
-  xy: 3890, 3788
-  size: 222, 121
-  orig: 222, 121
+  xy: 1950, 1899
+  size: 111, 61
+  orig: 111, 61
   offset: 0, 0
   index: -1
 f8
   rotate: false
-  xy: 2737, 2732
-  size: 255, 139
-  orig: 255, 139
+  xy: 1371, 1370
+  size: 128, 70
+  orig: 128, 70
   offset: 0, 0
   index: -1
 f9
   rotate: false
-  xy: 1776, 2508
-  size: 679, 201
-  orig: 679, 201
+  xy: 890, 1258
+  size: 340, 101
+  orig: 340, 101
   offset: 0, 0
   index: -1
 sun1
   rotate: false
-  xy: 835, 626
-  size: 411, 1586
-  orig: 411, 1586
+  xy: 419, 317
+  size: 206, 793
+  orig: 206, 793
   offset: 0, 0
   index: -1
 sun2
   rotate: false
-  xy: 1155, 2219
-  size: 620, 1791
-  orig: 620, 1791
+  xy: 579, 1114
+  size: 310, 896
+  orig: 310, 896
   offset: 0, 0
   index: -1
 sun3
   rotate: false
-  xy: 3172, 3025
-  size: 537, 985
-  orig: 537, 985
+  xy: 1589, 1517
+  size: 269, 493
+  orig: 269, 493
   offset: 0, 0
   index: -1
 sun4
   rotate: false
-  xy: 1, 2213
-  size: 1153, 1797
-  orig: 1153, 1797
+  xy: 1, 1111
+  size: 577, 899
+  orig: 577, 899
   offset: 0, 0
   index: -1
 water_glade_1
   rotate: false
-  xy: 1776, 2710
-  size: 960, 1300
-  orig: 960, 1300
+  xy: 890, 1360
+  size: 480, 650
+  orig: 480, 650
   offset: 0, 0
   index: -1
 water_glade_2
   rotate: false
-  xy: 1, 382
-  size: 812, 147
-  orig: 812, 147
+  xy: 1, 194
+  size: 406, 74
+  orig: 406, 74
   offset: 0, 0
   index: -1
 water_glade_3
   rotate: true
-  xy: 3710, 3485
-  size: 525, 179
-  orig: 525, 179
+  xy: 1859, 1747
+  size: 263, 90
+  orig: 263, 90
   offset: 0, 0
   index: -1
