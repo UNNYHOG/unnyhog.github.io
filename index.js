@@ -1,1 +1,14706 @@
-var _0x3762=['spinsCounter','FortuneWheelWindowSpinCountText','spinsTimer','_startArrowAnimation','arrowImage','arrosPos','updateListener','updateWindow','arrowAnimation','_updateTexts','backX','backY','spinWheel','actionButtonFree','FortuneWheelBack','rotation','rotationX','rotationY','FortuneWheelArrow','arrowY','headerY','createLights','heroX','heroY','getWidth','lights','backSize','placePrizes','getFortuneData','getBonuses','allPrizesText','radius','FortuneItemTimeTravel','FortuneWheelWindowMinutes','jackpotImage','rotationLeft','stopWheel','rotationSpeed','listener','rotateWheel','lightIndex','Ad_Wheel','questGroups','_actionQuestProgress','_applyQuestInfo','noQuestsText','noMoreQuestsIcon','noQuestsTextIcon','noQuestsTextIconVisible','_getYPosForQuest','_collectQuest','refreshButton','_replaceQuest','loader','Quests_ProgressBar','prizes','xLabel','description','MM_Btn_Worlds','_testQuests','DailyQuestsTitle','DailyQuestsNoQuestsLabel','DailyQuestsRewardLabel','_applyQuestButtonLocalization','hasAction','_isQuestCompleted','DailyQuestsCollectBtn','canDisplayQuest','Quest_','getQuestIcons','iconsScale','_checkForNoQuests','_updateTimer','DailyQuestsTimer','collectCropSplash','CollectCropSplash','_hideUIForAnimation','_startAnimation','_sendCansToResoruces','timeout','cans','cansCount','_getDescription','CollectCropSplashText','setApplesAcount','ButtonChangeLanguage','soundsText','SettingsSound','musicText','SettingsMusic','initialized','Language_','settingsButtons','addText','loadAndCreateButton','Sounds_On','Sounds_Off','Music_On','Music_Off','resetProgress','setButtonVisible','BuySlotButtonText','constructBuilding','Normal','_clearTimer','label','guiMode','Likes','resetTimer','LikesInfoText','CollectCropTipText','GUI_WinWithPicture','no_exit','actionClicked','btn_min_width','descriptionY','smallFont','wordWrapWidth','imageX','imageY','descriptionX','description2','amplitudeImage','WinBanjoEnd','setTravelTime','minutes','setInAppData','SeedInfoProfitBonus','totalBonus','SeedInfoTotalProfit','label1','SeedInfoBiggerFarm','profitNumber','totalNumber','distanceX','startY','profitBonus','gameWasLoaded','worldbtn_Inverse','worldbtn','worldbtn2_Inverse','worldbtn2','createButtonsVertical','WinBossSummon','changeMode','UpgradeBuildings','WinDropPuzzle','storeButton','puzzlesButton','WinPuzzle','WinFortuneWheel','questsButton','Daily_HUDButton','WinDaily','FortuneHUDButton','WinFreeUpgrade','createButtonsHorizontal','superVisorButton','fortuneButton','upgradeButton','WinPhotosMainMenu','locations_window','WinStore','hideAllButtonsForTime','playFallingBread','WinBanjoPreEnd','hudResources','allNotifications','_createNotificationForButton','showUpgradeButton','showButtonFromTutorial','showStoreButton','showSuperVisorButton','getUpgradeButton','getStoreButton','getSuperVisorButton','getPuzzlesButton','getFortuneWheelButton','_updateAllNotifications','onModeChanged','modeChanged','worldsData','productionUpdate','buildingUpgrade','onReset','resetAll','_progressLoaded','puzzlePeaceReceived','setWorldVisible','_sendFlyingResources','ANIMATIONS','flyingResources','_setUpgradeShieledAvailable','available','loadedIcon','_updateAvailabilityForUpdrages','Boss','iconLoading','showNormal','createPurchaseLabel','isFast','getBuildingProducedResources','createUpgradeGroup','createLikesGroup','needPuzzle','position','getBuildingUpgradePrice','LockPuzzle','changeBuildingAvailability','jumpAnimation','loaderOffsetX','loaderOffsetY','loaderScale','getUpgradeProgress','counter','PHOTOS_MENU_SCROLL_CONFIG','WinPhotosQuest','getWindowByType','selectQuest','Girl\x20Name','resourcesModules','photoName','photoDesc','questDesc','questProgress','lastItem','_clearAnimatedObject','animatedGroup','Photo\x20description.\x20Photo\x20description.\x20Photo\x20description.\x20Photo\x20description.\x20Photo\x20description.\x20Photo\x20description.\x20Photo\x20description.\x20Photo\x20description.\x20Photo\x20description.\x20Photo\x20description.\x20Photo\x20description.\x20Photo\x20description.\x20Photo\x20description.\x20','item\x20','typePrice','activeResources','COMPLETE\x20THE\x20PUZZLE\x20TO\x20UNLOCK\x20THE\x20QUEST','buildingClicked','onCreate','allWindows','WinConstruct','WinBuildings','WinUpgrade','CollectCropTitle','CollectCropStartButton','WinHarvested','WinSupervisor','BanjoDesc','Banjo','BanjoButtonText','Ad_Banjo','playBreadAnimation','WinGuard','RainTitle','RainDescFreeProSpecial','Cloud','Ad_Rain','WinNoAdd','NoAdTitle','NoAdText','NoAdAndRatings','ButtonOk','WinAdBLock','AdBlock','LocationsNotOpenedWindowDesc','OtherWorldsLocked','NotEnoughGemsText','NotEnoughGems','GiftWindowGettingInfo','Wait','PurchaseForAdWindowTitle','PurchaseForAdWindowDesc','WinTimeTravel','TimeTravelWindowText','TimeTravel4h','WinApples','SeedInfoTitle','AppleInfo','BanjoEndTitle','BanjoEnd','MultiplyOnStart','activeWindows','WinMain','winType','onWindowsClosed','isNormalMode','popups','textLabel','popup','thumb','popupTimer','_checkForNewPopup','showPopup','createPopup','+100%','PopupMarketUpgrade','PopupSpeedUpMacro','PopupMultiprofitMacro','_checkForProduction','getActiveWindow','checkForTutorialPhrase','hideTutorialText','showTimeTravel','getWinTypeAtTheTop','createHarvestAnimation','harvestBuildings','FACTORY_WORKING','harvesting','stopHarvestingAnimation','tutorialLabel','setTutorialPhrase','tryToConstructBuilding','setInfo','tryToUpgradeBuilding','guardShown','supervisorShown','fortuneShown','TutorialEnd','newMethod','preparePhase','stopTutorial','finger','circle','scaleAlphaInfinite','_isWindow','_lockAtButton','pointAtPosition','originY','_hideFinger','_getFirstSlotPosition','phase','lastWindow','lastTab','getPhaseLocalization','BuildSlot1','Collect1','UpgradeBuilding5','Collect1k','BuyAutoCollect','moveToNextPhase','getBoss','WinBossProccess','WaitForSummonToEnd','Collect20','Collect10k','_getRequiredResourcesForUI','Step9','Step','FortuneWheelEnded','PuzzlesAvailable','setTutorialPhase','Tutorial','_getRequiredResources','UpgradeBuilding','fingerAnimation','Boost6s','no_tutorial','use\x20strict','innerWidth','innerHeight','phaser-app','Plugin','DefaultCfg','scenePlugin','SpineWebGLPlugin','SpineCanvasPlugin','plugins/SpineWebGLPlugin.js','plugins/SpineCanvasPlugin.js','rexuiplugin','https://raw.githubusercontent.com/rexrainbow/phaser3-rex-notes/master/plugins/dist/rexuiplugin.min.js','document','progress-fill','loading-div','zoom','getAtlasFullPath','overrideMimeType','application/json','open','GET','onreadystatechange','200','readyState','responseText','muteSounds','playRewardedAd','newText','left','clientWidth','originX','createElement','div','loading-img','appendChild','Text','inherit','innerText','className','myp','font2','color','fill','webkitTextStrokeColor','stroke','webkitTextStrokeWidth','strokeThickness','align','textAlign','renderFlags','setActive','Group','paddingX','paddingY','nineslice','scalePrepared','userInputBeenDone','addEventListener','preventDefault','deltaX','deltaY','Tut_Circle','Tut_Finger','Lock','LockIcon','Background1','PriceIcon','PriceGems','PriceSeeds','Production_Progress_Bar_Back','Production_Progress_Bar','Upgrade_Progress_Bar','LikePlus','TableLike','TableUpgrade','WinStandardBack','DefaultButton','ExitButton','BlackPixel','MM_Btn_Login','MM_Btn_Upgrade','MM_Btn_Likes','MM_Btn_Chests','MM_Btn_Store','Tab_Close','Tab_Open','TabIcon_Money','BoxTabIcon','PuzzleBonusBack','PuzzleItemFrame','PuzzleItemLockDL','PuzzleItemLockDR','PuzzleItemLockUL','PuzzleOpened','PuzzleBronze','PuzzleSilver','PuzzleGold','PuzzleDiamond','PuzzlesOpened','PuzzlesBronze','PuzzlesGold','PuzzlesDiamond','BoxCounter','GiftBox','GiftBoxOpen','GiftBoxSuper','GiftBoxSuperOpen','Quests_RefreshBtn','Quests_ProgressFill','QuestsHUDButton','QuestBack','Daily_Active','SeedsQuestIcon','Popup','PopupThumbsUp','SettingsBtn','FastProduction','Effect_Glow','AdCam','UI/HUD_and_common/adCamIcon.png','UI/Windows/Settings/musicOn.png','UI/Windows/Settings/musicOff.png','UI/Windows/Settings/soundsOn.png','UI/Windows/Settings/soundsOff.png','UI/Windows/ChangeLanguage/Arabic.png','UI/Windows/ChangeLanguage/Chinese\x20(Traditional).png','UI/Windows/ChangeLanguage/English.png','UI/Windows/ChangeLanguage/French.png','UI/Windows/ChangeLanguage/Italian.png','UI/Windows/ChangeLanguage/Japanese.png','UI/Windows/ChangeLanguage/Korean.png','UI/Windows/ChangeLanguage/Portuguese\x20(Brazil).png','UI/Windows/ChangeLanguage/Russian.png','../LoadingSplash.jpg','../ProgressBar.png','../ProgressBarFill.png','Tutorial/Circle.png','Slots/Lock.png','Slots/LockPuzzle.png','Slots/GroundBlocked.png','UI/HUD_and_common/ui_button_red.png','UI/HUD_and_common/HUD/HudGoldIcon.png','UI/HUD_and_common/HUD/HudGemIcon.png','UI/HUD_and_common/HUD/HudSeedIcon.png','UI/HUD_and_common/HUD/HudPlusButton.png','Spine','finger.json','finger.atlas','world1_fullhd.json','world1_fullhd.atlas','world1_fullhd2.png','winter_map_1920x1080.json','winter_map_1920x1080.atlas','cosmos_map_1920x1080.json','cosmos_map_1920x1080.atlas','Idle','cosmos_map_1920x1080.png','cosmos_map_1920x10802.png','Slot1.json','Slot1.atlas','Touch','Slot2.json','Slot2.atlas','Slot3.json','Slot3.atlas','Appear','Slot4.json','Slot4.atlas','Slot5.atlas','Slot6.json','slot7.json','slot7.atlas','slot8.json','slot8.atlas','slot9.json','slot9.atlas','Slot1w2.json','Slot1w2.atlas','slot2w2.atlas','slot3w2.json','slot3w2.atlas','slot5w2.json','slot6w2.json','slot6w2.atlas','slot7w2.json','slot7w2.atlas','slot8w2.json','slot8w2.atlas','slot9w2.json','slot9w2.atlas','Slot1w3.json','Slot1w3.atlas','Slot2w3.json','Slot2w3.atlas','Slot3w3.json','Slot3w3.atlas','Slot4w3.json','Slot4w3.atlas','Slot5w3.atlas','Slot6w3.json','Slot6w3.atlas','Slot7w3.json','Slot7w3.atlas','Slot8w3.json','Slot9w3.json','Slots/timeBar.png','Slots/timeprogress.png','Slots/macroProgress.png','Slots/likePlus.png','Slots/tableLike.png','Slots/tableUpgrade.png','SpriteSheet','Slots/timefast.jpg','UI/HUD_and_common/Buttons/Btn355x158.png','NineSlice','UI/HUD_and_common/Buttons/CloseBtn.png','Backs/BlackPixel.png','Backs/CollectionBack.png','UI/HUD_and_common/HUD/HudSlotUpgradeBtn.png','UI/HUD_and_common/HUD/HudPuzzlesBtn.png','UI/Windows/Upgrade/DeactiveTabBack.png','UI/Windows/Upgrade/ActiveTabBack.png','UI/Windows/Upgrade/ActualTabIcon.png','UI/Windows/Upgrade/InappTabIcon.png','UI/Windows/Upgrade/UpgradeItemBack.png','UI/Windows/Puzzles/BoxTabIcon.png','UI/Windows/Puzzles/PuzzleTabIcon.png','UI/Windows/Puzzles/PuzzleItem/PuzzleBonusBack.png','UI/Windows/Puzzles/PuzzleItem/PuzzleItemFrame.png','UI/Windows/Puzzles/PuzzleItem/Parts/blocked/PuzzleItemLockDR.png','UI/Windows/Puzzles/PuzzleItem/Parts/blocked/PuzzleItemLockUR.png','UI/Windows/Puzzles/PuzzleItem/Parts/opened/s.png','UI/Windows/Puzzles/PuzzleItem/Parts/bronze/s.png','UI/Windows/Puzzles/PuzzleItem/Parts/silver/s.png','UI/Windows/Puzzles/PuzzleItem/Parts/diamond/s.png','UI/Windows/Puzzles/PuzzlesSilver.png','UI/Windows/Puzzles/PuzzlesGold.png','UI/Windows/Puzzles/BoxCounter.png','UI/WindowsBigPictures/CollectCrop.png','UI/WindowsBigPictures/Banjo.png','UI/WindowsBigPictures/MultiplyOnStart.png','UI/WindowsBigPictures/Cloud.png','UI/HUD_and_common/PopupThumbsUp.png','UI/WindowsBigPictures/spaceman.png','UI/WindowsBigPictures/Scientist.png','UI/WindowsBigPictures/Wait.png','UI/WindowsBigPictures/AppleInfo.png','UI/Windows/Upgrade/Items/TimeTravel24h.png','UI/Windows/Upgrade/Items/TimeTravel7d.png','Backs/collectCropSplash.png','UI/Windows/FortuneWindow/WheelBack.png','UI/Windows/FortuneWindow/Wheel.png','UI/Windows/FortuneWindow/ItemTimeTravel.png','UI/Windows/FortuneWindow/HUDButton.png','UI/Windows/FortuneWindow/Devil.png','UI/Windows/Puzzles/OpenedBox.png','UI/Windows/Upgrade/Items/GiftBox.png','UI/Windows/Upgrade/Items/GiftBoxSuper.png','UI/Windows/DailyQuests/Back.png','UI/Windows/DailyQuests/ProgressFill.png','UI/Windows/DailyQuests/RefreshBtn.png','UI/Windows/LoginBonus/Closed.png','UI/Windows/LoginBonus/Active.png','UI/HUD_and_common/HUD/HudLoginBonusBtn.png','UI/Windows/GetPuzzlePart/Chest_open.png','UI/Windows/GetPuzzlePart/ChestNormalOpen.png','UI/HUD_and_common/SeetingBtn.png','undefined','exports','CommonData','UnnyObjectType','engine','group','add','points','create','setDepth','setScale','setOrigin','push','body','onmousedown','showTrail','clientY','height','onmouseup','onmousemove','moveTrail','clientX','width','update','bind','length','setPosition','visible','sqrt','angle','atan2','hideTrail','./games/fish/Audio/','./games/fish/images/','./games/fish/images2x/','UI/Windows/Upgrade/Items/','UI/Windows/Puzzles/','GoodsPuzzleIcons/','UI/Windows/LoginBonus/BonusTypes/','../../../CommonVisualData','Arabic','English','French','German','Italian','Japanese','Russian','Spanish','fabrika2.json','fabrika2.atlas','Active','SplitScreen.json','SplitScreen.atlas','Disappear','Idle_2','Conveer_fullhd.json','Conveer_fullhd.atlas','UI/Windows/Common/standartBack.png','UI/Windows/Common/back2.png','UI/HUD_and_common/HUD/HudBreadBtn.png','UI/HUD_and_common/HUD/locEarth.png','UI/HUD_and_common/HUD/locWinter.png','UI/HUD_and_common/HUD/HudTempBtn.png','UI/Windows/Upgrade/ui_headline.png','bread/bread_1.png','bread/bread_2.png','bread/bread_3.png','bread/bread_4.png','bread/bread_5.png','bread/bread_7.png','UI/HUD_and_common/HUD/RainTimerBack.png','Audio','../Audio/Fishclicker\x20-\x20Music/MUS_Sea_Theme_Loop.ogg','../Audio/Fishclicker\x20-\x20Music/MUS_Space_Theme_Loop.ogg','../Audio/Fishclicker\x20-\x20Music/MUS_Winter_Theme_Loop.ogg','../Audio/Fishclicker\x20-\x20Music/MUS_Gathering_Loop.ogg','../Audio/Fishclicker\x20-\x20Music/MUS_Bread_Theme.ogg','../Audio/Sounds/GetPuzzlePart/chest_1.wav','../Audio/Sounds/ObjectsClick/longtap3.wav','../Audio/Sounds/ObjectsClick/longtap4.wav','../Audio/Fishclicker\x20-\x20Sounds/SND_Tap_1.ogg','../Audio/Fishclicker\x20-\x20Sounds/SND_Tap_2.ogg','../Audio/Fishclicker\x20-\x20Sounds/SND_Tap_3.ogg','../Audio/Fishclicker\x20-\x20Sounds/SND_Click.ogg','../Audio/Fishclicker\x20-\x20Sounds/SND_Tap_Dif_Level_Up.ogg','../Audio/Fishclicker\x20-\x20Sounds/SND_Window_Show.ogg','SplitScreen','Fabrika','WinStandardBack2','MM_Btn_Bread','MM_Btn_Worlds_Inverse','MM_Btn_Worlds2','MM_Btn_Worlds2_Inverse','ui_headline','LockWater','store','small','long','puzzle','FortuneDevil','RainTimerBack','altas_spritesv1.json','altas_spritesv2.json','./games/fish/images2x/altas_spritesv1.json','./games/fish/images/altas_spritesv2.json','WinUpgradeBack','GoodsBuyWindowIcons','GoodsSmallIcons','GoodsDrops','GoodsPuzzleIcons','PRELOAD_OBJECTS','Background2','FactoryWorking','assign','ALL_OBJECTS','altas_spritesv2','altas_spritesv1','VISUAL_BUILDINGS','objects','name','Building_','start','scale','PLACED_BUILDINGS','levels','VisualData','onAdBlock','log','preloadAdFor\x20app\x20','rewarded','error','onNoAds','pop','onStarted','onCompleted','onSkipped','onClicked','preroll','auth_key','social','vkListPurchases','info','list\x20\x20err\x20','sendServerError','checkAuthStatus','details','isConsumed','warn','purchaseNum','vkConsumePurchase','response\x20','itemId','init','getElementById','callbacks','addCallback','onOrderSuccess','progress','publicConfirmedPayment','createGBase','authorize','getp','account','authWebVk','item','callMethod','vk_price','\x20Руб.','invokeUIMethod','prepareMidroll','showMidroll','okListPurchases','CONSUME\x20','okConsumePurchase','consume\x20err\x20','substring','Util','getRequestParameters','rParams','api_server','apiconnection','API_callback','method\x20','\x20>\x20','\x20data\x20=\x20','postMediatopic','showInvite','split','likedSuccessfull','showPayment','ready','in_use','Ошибка\x20инициализации','Поиграй\x20в\x20мою\x20игру!','Waiting\x20for\x20auth\x20data','authWebOk','logged_user_id','auth_sig','session_key','auth!!','Яблоко','Это\x20очень\x20вкусно!','true','getPaymentInfoById','ok_price','getPrice','Давай\x20играть\x20вместе!','GbaseApi','env','platform','version','not\x20implemented','fbAsyncInit','v3.3','AppEvents','logPageView','accessToken','authFb','status','connected','login','email','https://connect.facebook.net/en_US/sdk.js','insertBefore','script','facebook-jssdk','hmac','rmg-vkfish','production','bR2UBrFSHflMlXILNVENAoLR','webvk','dev','0.0.1','webok','uwe6KwuCvFLCU5WuwXXU4pMW','fb_instant','vk_production','location','search','startsWith','amp;','hasOwnProperty','platform\x20wasn\x27t\x20specified','game_platform','game_env','game_env\x20wasn\x27t\x20specified','test_mode','vk_app_id','initialize','initOK','initFB','fb_app_id','initializeAsync','then','LOAD','startGameAsync','context','getID','getType','player','getName','getPhoto','PLAYERID\x20','reconnect','isAuthorizing','Re-auth','GameObjects','Sprite','missing\x20scene','key','missing\x20key!','down','over','minWidth','_Slice','type','scene','getAtlasName','atlas_sprites','file','callback','existing','clickable','myNineSlice','nineActive','config','scale_parent','_defaultScale','setInteractive','pointerdown','onDown','pointerup','onUp','pointerover','onOver','onOut','setVisible','getParentObject','ignoreTutorial','locked','isLocked','playButtonClick','icon','sprite','caption','text','delay','duration','scaleX','scaleY','setInverse','inverse','getTime','time','_playAnimation','stopAnimation','stopped','playFrame','animationDone','alphaStart','alpha','alphaFinish','sinAngle','params','sin','setPositionY','period','trunc','asin','periods','scaleStart','scaleEnd','amplitude','distance','startScale','amplitudeX','amplitudeY','cos','part','endPoint','breads','destroyedCount','timer','textOld','getLocalizization','BanjoManTipStart','applyWinOpenAnimation','deltaTime','respawn','bread_','random','img','destroy','playAnimations','_canAddAnimation','allAnimations','_addAnimation','applyButtonShowAnimation','moveToPoint','moveToPointExtra','animationChangeAlpha','moveToPointSin','changeShape','rotationAnimation','scaleAnimation','randomJumpRotation','jumpShieldAnimation','jumpFishAnimation','fallFishAnimation','scaleSinInfinite','swipeInfinite','changeShapeOfSouls','splice','names','Banjoded','Audio_Chest_1','Audio_Chest_2','Audio_Chest_3','Audio_longtap1','Audio_longtap2','Audio_longtap3','Audio_longtap4','Audio_Pop-ani-1','Audio_Pop-ani-2','Audio_ClickUI','Audio_Info','Audio_Money','Audio_Window','BackgroundMusic2','Gathering','sounds','playFactoryMusic','playWorldMusic','_playBackMusic','activeMusic','musicOff','stopMusic','play','stop','_loadAndPlayMusicByKey','addMusic','_activeWorldMusic','BackgroundMusic','load','audio','complete','object','sound','onclick','playWindowOpen','soundsOff','Window','ButtonClick','playMoneyCollected','Money','playBuildingClick','Click','playUpgrade','LongTap','min','Chest','playInfo','Info','pause','unMuteSounds','resume','_seed','prototype','next','divide','compare','addListener','allListeners','removeListener','clear','callListeners','onBoxOpened','onBoxPurchased','onLongSpeedActivated','onShortSpeedActivated','onUpgradePurchased','onBuildingUpgraded','onHarvestCompleted','onMouseWheel','onAdStarted','onQuestClaimed','onFortuneWheelUsed','onActionQuestProgress','soulsCollected','boxOpened','BoxOpened','onBoxReceived','boxPurchased','longSpeedActivated','shortSpeedActivated','upgradePurchased','buildingUpgraded','harvestCompleted','onMacroUpgraded','mouseWheel','adStarted','dailyBonusCollected','onDailyBonusCollected','questClaimed','onQuestCompleted','likesReseted','fortuneWheelUsed','actionQuestProgress','onBuildingUpdated','onResourcesCollected','onUpgraded','onUnlockChanged','currentLoading','level','likes','slot','onLikesReseted','savedProgress','resources','toString','loading','_loadProgress','upgradePrice','construct','bonus_SpeedUp','speedUpMultiplier','multiProfitMultiplier','autoCollect','hasAutoClick','getLoadingTime','getProductionPerLoad','getGuardEndTime','anyResources','multiply','_calculateNextBigUpgradeLevel','onResourcesChanges','resourcesChanged','_checkBuildingForOpen','isUnlocked','unlocked','getLevel','isResourcesEnoughForConstruction','loadProgress','onPuzzleCompleted','puzzleCompleted','_updateFinalProductionRate','reseted','getTimeNow','onReseted','MultiProfit','getPuzzleResourceBonusPerLevel','getPuzzleResourceBonusDivPerLevel','_applyBonus','finalProduction','updateBuilding','isGuardActive','onResourcesUpdated','getProducedResources','getLoadingPercentage','likesWereReseted','getLikes','addLikes','onLiked','saveProgress','getUpgradePrice','prevBigUpgradeLevel','nextBigUpgradeLevel','buildingWasClicked','isSupervisorActive','addSupervisorResources','_saveState','getSlotsUpgrade','requiredLevel','_getBigUpgradeLevelBonus','_applyPuzzleBonusAfterConstruction','getPuzzleInfoById','upgrade','base','getTotalSeedsBonus','bonus_MultiProfit','upgradeType','SpeedUp','parameter','div_parameter','Upgrade','upgradeBuilding','SuperSeed','SeedProc','slotNumber','getDropIcon','visual','drop','GoodsDrops/','getSmallIcon','getSmallIconPath','GoodsSmallIcons/','getBigIcon','_big','getBigIconPath','GoodsBuyWindowIcons/','.png','getLocalizationKey','onUpdateWorld','onBuildingCreated','onBuildingPreUpgrade','onBuildingLiked','resetWorld','allBuildings','createBuilding','getBuildingInfoBySlot','getBuildingById','getBuildingsForWorld','isSelected','selectedWorld','world','resourcesCollected','onPreUpgrade','buildingPreUpgrade','resourcesUpdate','buildingUpdated','buildingLiked','MUSIC_STATE','CURRENT_LANGUAGE','0.9.14','userAgent','toLowerCase','safari','indexOf','chrome','getItem','language','setItem','removeItem','restoreMusic','allLanguages','initWithJson','localize','Localization_','getLocalizationsFolder','cache','json','get','Json','parse','{\x22profile\x22:{\x22version\x22:8,\x22gold\x22:\x22266171821978\x22,\x22gems\x22:\x220\x22,\x22seeds\x22:\x220\x22,\x22goldSpent\x22:\x224949388240722\x22,\x22seedsStrength\x22:2,\x22firstTimeInGame\x22:1565169308763,\x22tutorialPhase\x22:11,\x22maxGoldModifier\x22:3,\x22gameLanguage\x22:\x22English\x22,\x22sessionNumber\x22:2,\x22harvestsCount\x22:0,\x22gemsMultiProfit\x22:\x221\x22,\x22adsWatched\x22:{\x22count\x22:0,\x22update\x22:0},\x22savedVersion\x22:172},\x22purchases\x22:{\x2223\x22:1,\x2224\x22:1,\x2225\x22:1,\x2226\x22:1,\x2227\x22:1,\x2228\x22:1,\x2229\x22:1,\x2230\x22:1,\x2231\x22:1,\x2234\x22:1},\x22fortuneWheel\x22:{\x22freeSpins\x22:1,\x22windowOpened\x22:false,\x22jackpot\x22:500,\x22update\x22:0},\x22puzzle\x22:{\x22boxes\x22:{\x220\x22:3,\x221\x22:0,\x222\x22:0,\x223\x22:0,\x224\x22:0},\x22goods\x22:[{\x22id\x22:1,\x22level\x22:1,\x22pieces\x22:0},{\x22id\x22:2,\x22level\x22:1,\x22pieces\x22:0},{\x22id\x22:3,\x22level\x22:1,\x22pieces\x22:0},{\x22id\x22:4,\x22level\x22:1,\x22pieces\x22:0},{\x22id\x22:5,\x22level\x22:1,\x22pieces\x22:0},{\x22id\x22:6,\x22level\x22:1,\x22pieces\x22:0},{\x22id\x22:7,\x22level\x22:1,\x22pieces\x22:0},{\x22id\x22:8,\x22level\x22:1,\x22pieces\x22:0},{\x22id\x22:9,\x22level\x22:1,\x22pieces\x22:0},{\x22id\x22:10,\x22level\x22:0,\x22pieces\x22:0},{\x22id\x22:11,\x22level\x22:0,\x22pieces\x22:0},{\x22id\x22:12,\x22level\x22:0,\x22pieces\x22:0},{\x22id\x22:13,\x22level\x22:0,\x22pieces\x22:0},{\x22id\x22:14,\x22level\x22:0,\x22pieces\x22:0},{\x22id\x22:15,\x22level\x22:0,\x22pieces\x22:0},{\x22id\x22:16,\x22level\x22:0,\x22pieces\x22:0},{\x22id\x22:17,\x22level\x22:0,\x22pieces\x22:0},{\x22id\x22:18,\x22level\x22:0,\x22pieces\x22:0},{\x22id\x22:19,\x22level\x22:0,\x22pieces\x22:0},{\x22id\x22:20,\x22level\x22:0,\x22pieces\x22:0},{\x22id\x22:21,\x22level\x22:0,\x22pieces\x22:0},{\x22id\x22:22,\x22level\x22:0,\x22pieces\x22:0},{\x22id\x22:23,\x22level\x22:0,\x22pieces\x22:0},{\x22id\x22:24,\x22level\x22:0,\x22pieces\x22:0},{\x22id\x22:25,\x22level\x22:0,\x22pieces\x22:0},{\x22id\x22:26,\x22level\x22:0,\x22pieces\x22:0},{\x22id\x22:27,\x22level\x22:0,\x22pieces\x22:0}],\x22guards\x22:[],\x22openedBox\x22:0,\x22goldBoxPrice\x22:\x22100000000000000\x22},\x22worlds\x22:{\x221\x22:{\x22buildings\x22:{\x221\x22:{\x22slot\x22:1,\x22level\x22:100,\x22resources\x22:\x220\x22,\x22multiProfitMultiplier\x22:\x223\x22,\x22upgradePrice\x22:\x223708853\x22,\x22loading\x22:0.024249999999280902,\x22update\x22:1565174442352,\x22speedUpMultiplier\x22:16,\x22hasAutoClick\x22:true},\x222\x22:{\x22slot\x22:2,\x22level\x22:53,\x22resources\x22:\x220\x22,\x22multiProfitMultiplier\x22:\x229\x22,\x22upgradePrice\x22:\x2278608808\x22,\x22loading\x22:0.20100000000062224,\x22update\x22:1565174430226,\x22hasAutoClick\x22:true,\x22speedUpMultiplier\x22:8},\x223\x22:{\x22slot\x22:3,\x22level\x22:26,\x22resources\x22:\x220\x22,\x22multiProfitMultiplier\x22:\x229\x22,\x22upgradePrice\x22:\x2250805695\x22,\x22loading\x22:0.7410000000000956,\x22update\x22:1565174452038,\x22speedUpMultiplier\x22:4,\x22hasAutoClick\x22:true},\x224\x22:{\x22slot\x22:4,\x22level\x22:17,\x22resources\x22:\x220\x22,\x22multiProfitMultiplier\x22:\x229\x22,\x22upgradePrice\x22:\x22914740365\x22,\x22loading\x22:4.584999999999955,\x22update\x22:1565174442020,\x22speedUpMultiplier\x22:2,\x22hasAutoClick\x22:true},\x225\x22:{\x22slot\x22:5,\x22level\x22:23,\x22resources\x22:\x220\x22,\x22multiProfitMultiplier\x22:\x2227\x22,\x22upgradePrice\x22:\x221571183804763\x22,\x22loading\x22:28.036999999999885,\x22speedUpMultiplier\x22:2,\x22update\x22:1565174435270},\x226\x22:{\x22slot\x22:6,\x22level\x22:12,\x22resources\x22:\x220\x22,\x22multiProfitMultiplier\x22:\x223\x22,\x22upgradePrice\x22:\x22552394641792\x22,\x22loading\x22:17.944000000000017,\x22speedUpMultiplier\x22:2,\x22update\x22:1565174438829},\x227\x22:{\x22slot\x22:7,\x22level\x22:0,\x22resources\x22:\x220\x22,\x22multiProfitMultiplier\x22:\x223\x22,\x22upgradePrice\x22:\x220\x22,\x22loading\x22:0,\x22speedUpMultiplier\x22:2,\x22update\x22:1565170079333},\x228\x22:{\x22slot\x22:8,\x22level\x22:0,\x22resources\x22:\x220\x22,\x22multiProfitMultiplier\x22:\x223\x22,\x22upgradePrice\x22:\x220\x22,\x22loading\x22:0,\x22speedUpMultiplier\x22:2,\x22update\x22:1565170079333},\x229\x22:{\x22slot\x22:9,\x22level\x22:0,\x22resources\x22:\x220\x22,\x22multiProfitMultiplier\x22:\x223\x22,\x22upgradePrice\x22:\x220\x22,\x22loading\x22:0,\x22speedUpMultiplier\x22:2,\x22update\x22:1565170079333}}},\x222\x22:{\x22buildings\x22:{\x221\x22:{\x22slot\x22:10,\x22level\x22:0,\x22resources\x22:\x220\x22,\x22multiProfitMultiplier\x22:\x223\x22,\x22upgradePrice\x22:\x220\x22,\x22hasAutoClick\x22:true,\x22loading\x22:0,\x22update\x22:1565170079333,\x22speedUpMultiplier\x22:2},\x222\x22:{\x22slot\x22:11,\x22level\x22:0,\x22resources\x22:\x220\x22,\x22multiProfitMultiplier\x22:\x229\x22,\x22upgradePrice\x22:\x220\x22,\x22hasAutoClick\x22:true,\x22loading\x22:0,\x22update\x22:1565170329398,\x22speedUpMultiplier\x22:2},\x223\x22:{\x22slot\x22:12,\x22level\x22:0,\x22resources\x22:\x220\x22,\x22multiProfitMultiplier\x22:\x229\x22,\x22upgradePrice\x22:\x220\x22,\x22loading\x22:0,\x22speedUpMultiplier\x22:2,\x22update\x22:1565170329948,\x22hasAutoClick\x22:true},\x224\x22:{\x22slot\x22:13,\x22level\x22:0,\x22resources\x22:\x220\x22,\x22multiProfitMultiplier\x22:\x229\x22,\x22upgradePrice\x22:\x220\x22,\x22loading\x22:0,\x22speedUpMultiplier\x22:2,\x22update\x22:1565170426625,\x22hasAutoClick\x22:true},\x225\x22:{\x22slot\x22:14,\x22level\x22:0,\x22resources\x22:\x220\x22,\x22multiProfitMultiplier\x22:\x2227\x22,\x22upgradePrice\x22:\x220\x22,\x22loading\x22:0,\x22speedUpMultiplier\x22:2,\x22update\x22:1565174174974},\x226\x22:{\x22slot\x22:15,\x22level\x22:0,\x22resources\x22:\x220\x22,\x22multiProfitMultiplier\x22:\x223\x22,\x22upgradePrice\x22:\x220\x22,\x22loading\x22:0,\x22speedUpMultiplier\x22:2,\x22update\x22:1565170079334},\x227\x22:{\x22slot\x22:16,\x22level\x22:0,\x22resources\x22:\x220\x22,\x22multiProfitMultiplier\x22:\x223\x22,\x22upgradePrice\x22:\x220\x22,\x22loading\x22:0,\x22speedUpMultiplier\x22:2,\x22update\x22:1565170079334},\x228\x22:{\x22slot\x22:17,\x22level\x22:0,\x22resources\x22:\x220\x22,\x22multiProfitMultiplier\x22:\x223\x22,\x22upgradePrice\x22:\x220\x22,\x22loading\x22:0,\x22speedUpMultiplier\x22:2,\x22update\x22:1565170079334},\x229\x22:{\x22slot\x22:18,\x22level\x22:0,\x22resources\x22:\x220\x22,\x22multiProfitMultiplier\x22:\x223\x22,\x22upgradePrice\x22:\x220\x22,\x22loading\x22:0,\x22speedUpMultiplier\x22:2,\x22update\x22:1565170079334}}},\x223\x22:{\x22buildings\x22:{\x221\x22:{\x22slot\x22:19,\x22level\x22:0,\x22resources\x22:\x220\x22,\x22multiProfitMultiplier\x22:\x223\x22,\x22upgradePrice\x22:\x220\x22,\x22hasAutoClick\x22:true,\x22loading\x22:0,\x22update\x22:1565170079334,\x22speedUpMultiplier\x22:2},\x222\x22:{\x22slot\x22:20,\x22level\x22:0,\x22resources\x22:\x220\x22,\x22multiProfitMultiplier\x22:\x229\x22,\x22upgradePrice\x22:\x220\x22,\x22hasAutoClick\x22:true,\x22loading\x22:0,\x22update\x22:1565170329398,\x22speedUpMultiplier\x22:2},\x223\x22:{\x22slot\x22:21,\x22level\x22:0,\x22resources\x22:\x220\x22,\x22multiProfitMultiplier\x22:\x229\x22,\x22upgradePrice\x22:\x220\x22,\x22loading\x22:0,\x22speedUpMultiplier\x22:2,\x22update\x22:1565170329948,\x22hasAutoClick\x22:true},\x224\x22:{\x22slot\x22:22,\x22level\x22:0,\x22resources\x22:\x220\x22,\x22multiProfitMultiplier\x22:\x229\x22,\x22upgradePrice\x22:\x220\x22,\x22loading\x22:0,\x22speedUpMultiplier\x22:2,\x22update\x22:1565170426625,\x22hasAutoClick\x22:true},\x225\x22:{\x22slot\x22:23,\x22level\x22:0,\x22resources\x22:\x220\x22,\x22multiProfitMultiplier\x22:\x2227\x22,\x22upgradePrice\x22:\x220\x22,\x22loading\x22:0,\x22speedUpMultiplier\x22:2,\x22update\x22:1565174174975},\x226\x22:{\x22slot\x22:24,\x22level\x22:0,\x22resources\x22:\x220\x22,\x22multiProfitMultiplier\x22:\x223\x22,\x22upgradePrice\x22:\x220\x22,\x22loading\x22:0,\x22speedUpMultiplier\x22:2,\x22update\x22:1565170079334},\x227\x22:{\x22slot\x22:25,\x22level\x22:0,\x22resources\x22:\x220\x22,\x22multiProfitMultiplier\x22:\x223\x22,\x22upgradePrice\x22:\x220\x22,\x22loading\x22:0,\x22speedUpMultiplier\x22:2,\x22update\x22:1565170079334},\x228\x22:{\x22slot\x22:26,\x22level\x22:0,\x22resources\x22:\x220\x22,\x22multiProfitMultiplier\x22:\x223\x22,\x22upgradePrice\x22:\x220\x22,\x22loading\x22:0,\x22speedUpMultiplier\x22:2,\x22update\x22:1565170079334},\x229\x22:{\x22slot\x22:27,\x22level\x22:0,\x22resources\x22:\x220\x22,\x22multiProfitMultiplier\x22:\x223\x22,\x22upgradePrice\x22:\x220\x22,\x22loading\x22:0,\x22speedUpMultiplier\x22:2,\x22update\x22:1565170079334}}}},\x22quests\x22:{\x22activeQuests\x22:[{\x22id\x22:10,\x22isComplete\x22:false,\x22isRefreshed\x22:false,\x22level\x22:1,\x22progress\x22:771},{\x22id\x22:8,\x22isComplete\x22:false,\x22isRefreshed\x22:false,\x22level\x22:2,\x22progress\x22:7},{\x22id\x22:0,\x22isComplete\x22:false,\x22isRefreshed\x22:false,\x22level\x22:2,\x22progress\x22:0}],\x22update\x22:1565174169001},\x22dailyBonus\x22:{\x22seed\x22:0,\x22update\x22:0,\x22lastBonus\x22:0}}','no\x20server\x20progress\x20->\x20use\x20local','savedVersion','server\x20progress\x20version:\x20','\x20;\x20local\x20version\x20=\x20','Old\x20Version\x20(local:\x20','profile','_getDeltaSave','27500','GoldBox','GemsBox','GuardBox','100000000000000','_resetConstructions','currentUnicorn','setp','getWorldsCount','worlds','_resetWorld','general','_getResourceByName','gold','seeds','gems','goldBoxPrice','onPuzzlePeaceReceived','onSeedsBonusChanged','_updateTotalSeedsBonus','dailyBonusData','dailyBonus','seed','getLoginData','wheelOfFortune','_setResourceByName','buildings','gemsMultiProfit','seedsBonus','seedsStrength','getDayFromTime','getDailyBonusData','getMyDailyBonusInfo','guard','getGuardTimeLeft','supervisor','getPuzzlesCountForId','getPuzzleSizePerLevel','pieces','goods','getPuzzleInfo','getWorlds','getTotalResources','getTotalGems','getChestsCount','boxes','_isPurchaseRepeatable','repeatable','priceType','Gems','_isPurchasePriceIncreasing','canPurchaseUpgrade','purchases','isDailyBonusAvailable','getDayNow','bonusWasActivated','lastBonus','activateSupervisor','resourcesCollectedWithSupervisor','getSupervisorResourcesCollected','activateGuard','increaseBonusPerSeed','isResourcesWithTypeEnoughForPurchase','getPurchasePrice','isResourcesEnough','Seeds','isSeedsEnough','isGemsEnough','isResourcesWithTypeEnough','Gold','bigInt','tryToPurchaseUpgrade','getMarketPurchaseById','IN_APP','purchase','purchaseConfirmed','openNewWindow','WinInAppBought','resourcesSpent','seedsSpent','gotGems','sendEvent','PurchaseUpgrade','gemsSpent','getPriceForGoldBox','boxPrice','tryToPurchaseBoxForGold','giveChests','SuperBox','openSuperChest','getOpenedBoxes','openedBox','openChest','floor','getGemsForDublicate','areAllPuzzlesCollected','Nothing\x20to\x20collect','10000000000000000','isLikesTimerActive','likedTimer','resetLikesTimer','getLikesTimeleft','addResources','_resourcesWereUpdated','_gemsWereUpdated','maxGoldModifier','minus','goldSpent','seedsEarned','_seedsWereUpdated','getJackPotSize','fortuneWheel','jackpot','incJackPotSize','GemsSpent','saveBuilding','isWorldChangeAvailable','getHarvestsCount','harvestsCount','harvestStarted','getSeedsForSoulsCount','lastSave','_writeToStorage','authorizing\x20right\x20now,\x20won\x27t\x20save','localStorage','allProgress','stringify','_sendDataToServer','timerId','lastSaveTime','loadProgressFromServer','currentAccount','haveProfile','profileData','cheatResources','getTutorialPhase','tutorialPhase','isBuildingConstructed','getBuildingLevel','getBuildingInfo','canCheckStore','BuildSlots9','FortuneWheel','isTutorialCompleted','BuildSlots6','canShowBoss','SummonBoss','getConstructedBuildingsCount','canShowGuard','Boost4h','saveQuestsProgress','quests','activeQuests','isRefreshed','isComplete','savePhotoQuestsProgress','_checkPhotoQuests','freeSpins','getNextSpinTime','spendSpin','getFreeSpinsCount','getMaxFreeSpins','max','canOpenOtherWorld','checkForNewSpin','_checkForAdsField','adsWatched','count','adWasWatched','photo_quests','getPhotoQuestById','getTimeTillTheNextDay','price','order','PuzzlesSilver','PuzzleCounterOpened','PuzzleCounterBronze','PuzzleCounterSilver','PuzzleCounterGold','PuzzleCounterDiamond','slot_id','textures','frames','filename','AtlasJson','SlotsData','GoodsData','SlotsUpgrade','MarketData','BoxData','QuestsData','LoginData','InAppLots','createPrice','puzzleType','Basic','Middle','smallIcon','incomeBase','upgradePriceBase','upgradePriceStep','incomeTimerBase','priceGems','itemIdprod','originalGems','sort','PhotoData','getQuestById','quest_id','parent','Quest\x20wasn\x27t\x20found\x20','reward','originalReward','completeCallback','replaceCallback','progressChanged','getRewardForUI','increaseProgress','canReplaceQuest','replaceQuest','claimReward','claimCallback','clearCallback','isReadyToClaim','subscribe','onSoulsCollected','useAction','postMessage','quest_1000','_initQuest','activateRandomQuests','getGameSettings','share','SharePost','SharePostInfo','mainQuests','getQuestInfo','questCompleted','questReplaced','publicGetQuest','OpenBox','CollectCrop','MacroUpgrades','BuyBox','FirstSlotUpgrade','SeedsUpgrades','CollectGold','Gift','NewLevelGold','replace','getRandomQuest','isAnyCompleteQuest','activateBonus','bonusType','_getType','getIconPath','getDailyBonusIconsFolder','getText','isUpdatable','getCount','getKoeff','index','getTotalSeeds','bonuses','goldIndex','seedIndex','number','nextFloat','_generateBonus','Box','MiddlePuzzle','SuperPuzzle','TimeTravel','Seed','SeedStrength','Crystal','MegaCrystal','getChance','chance','getIconName','DailyBonus_','needToUpdate','_getBonusSize','getLocalizedNumber','round','giveJackPot','JackPot','newPuzzleCompleted','getPhotoData','_addPhotoQuest','getPhotoDataBySlotId','loaded','onBuildingResourcesUpdated','onWorldChanged','onWorldPreChanged','allWorlds','GamePreload','getDataFolder','farm_slot_data.json','slots_upgrade_data.json','market_upgrades.json','box_data.json','dailyquests_data.json','loginbonus_data.json','in_app_lots.json','photo_data.json','setPath','multiatlas','getAtlasPath','preload','LoadProgress','buildingResourcesUpdate','GameCreate','photos','prepareGameData','setAllGetParams','now','questsManager','getQuestsProgress','photoManager','buildingCreated','switchWorld','WinOtherWorlds','openLikes','likedBuilding','format','abcdefghijklmnopqrstuvwxyz','_getLocalizization','GoldString','charAt','toUpperCase','!!!','join','slice','getLocalizedNumberString','GemsTitle','AllTitle','Title','GemsDesc','DescMultiSlot','Desc','UpgradeDescMultiSlot','back','depth','progressBar','setPositionX','value','_makeFast','fastBar','obj','setForceInvisible','setTint','tint','setProgress','setFast','forceInvisible','frame','nextPlay','playAppear','getAnimationDuration','animations','playAnimation','idle','addAnimation','getObject','action','appear','playDisappear','disappear','_play','active','playIdleLoop','disableInteractive','{0}:{1}:{2}','{0}:{1}','constructor','call','setScale2','clicker','MAP_PARAMS','center','click','animation','anims','spine','objName','input','activePointer','isDown','lastTime','move','pointermove','invisible','children','entries','list','Error\x20Occured','trace','ERROR\x20','atlas','?v=9','image','onBuildingClicked','onFabrikaWasClicked','onPodkovaWasClicked','podkovaWasClicked','buildingInterface','resourcesUpdated','applyTexture','delayApplyTexture','changeVisibility','harvest','animatedObject','playAction','setProductionVisible','building','maxLevel','worldChanged','worldPreChanged','style','display','none','SPLIT_SCREEN','splitAnimation','visible_groups','setBuildingsVisible','showBackground','[ERROR]\x20No\x20such\x20object:\x20','frameHeight','spritesheet','generateFrameNumbers','backgrounds','groups','updatePodkova','podkova','podkovaActive','podkovaTimer','setGameObjectsVisible','podkovaTimerTime','setText','progressWasLoaded','FABRIKA','fabrika','updateBossState','fabrikaWasClicked','PODKOVA','container','showGuard','getGuard','setBuildingsProductionVisible','Container','Notification','cellWidth','cellHeight','table','GridTable','layout','setScrollerEnable','fakeMove','_mouseWheel','scrollerDisabled','abs','setT','wheel','gameLoaded','GUI_HUDResources','HudResBack1','hudBackScale','labelOffsetY','singleImage','99999','HudPlusButton','greenButtonOffsetX1','openGemsStore','HudResBack3','updateResources','#fff','#555','font','#333','activeOffset','button','selected','setSelected','winInfo','iconOffsetActive','iconOffset','unny_btn','setButtonLocked','priceText','priceIcon','GUI_WinStore','unny_back','headerImg','headerOffsetY','unny_text','btnOffsetY','unny_container','imageOffset','removeCodes','descOffsetY','unny_desc','setWordWrapWidth','priceText2','createGame','onClose','gui','disableClickables','gameInit','applyWinInfo','createButton','addButton','nineSlice','allButtons','playButtonsAnimation','centerX','centerY','createGroupNotCenter','createGroup','destroyImage','_createBlackBackground','closeWindow','playOpenAnimation','enableClickables','imageWasLoaded','loadImage','scaleImage','createHeader','header','createActionButton','getWinInfoValue','buttonOffset','actionButton','buttonLabel','getTutorialButton','hideAllButtonsForTutorial','showAllButtonsFromTutorial','setAllButtonsVisible','temp_mark','_showAllButtonsBack','createExitButton','IsVertical','exitButton','setWindowVisible','createBack','WINDOW_NINE_SLICE','showBackOrNineSlice','setBlackBackVisible','CollectionBack','createExitButton2','createMyExitButton','prepareWindow','days','getBonusForDay','setBonusInfo','_updateButtonState','img_closed','_applyVisibilityCheck','img_check','vis_check','_applyVisibilityActive','img_active','vis_active','activeIndex','vis_closed','_applyVisibilityClosed','prepared','columns','rows','Daily_Opened','Daily_Closed','Daily_Check','LoginBonusGetBtn','buttonClicked','No\x20bonus','LoginBonusTitle','puzzlePoint','puzzleUpPoint','collectedPoint','collectedPoint2','startPoxY','giftBox','giftBoxSuper','giftBoxOpen','dropPoint','giftBoxSuperOpen','bottomLabel','_tryToCloseWindow','itemsToDestroy','_destroyStuff','dropPuzzle','getPuzzleIcon','getPuzzleFolder','setCrop','GetPuzzlePartDupTitle','GetPuzzlePartDupText','GetPuzzlePartText','GetPuzzlePartTitle','playChestSound','getCell','images','partSize','getPuzzleBackNamePerLevel','selectedTab','allCells','puzzleNames','getPuzzlesTextPerLevel','addTab','tabWasSwitched','_prepareWindow','createStore','togglesY','togglesX','togglesDistance','tabs','PuzzleTabIcon','configs','PUZZLE_SCROLL_CONFIG','offsetX','offsetY','createSummary','updateNumbers','scroll','getItems','PUZZLE_SCROLL_CONFIG_STORE','getStoreItems','updateChestsNumber','myChestsBack','myChestsNumber','availableBoxes','puzzleNumbers','getPuzzlesIconNamePerLevel','setItems','_removeTimer','boxShakeTimer','shakeBox','unny_sprite','_checkPriceInGold','_checkPrice','getStoreCell','getBoxData','rexUI','getStoreFolder','GiftBox.png','BoxOpenTitle','OpenedBox','getPuzzleUIFolder','OpenedBox.png','BoxOpenDesc','BoxOpenButtonText','BoxGoldTitle','BoxGoldDesc','getIconByType','BoxGemTitle','BoxGemDesc','purchaseBox','WinNotEnoughGems','BoxGemSuperTitle','GiftBoxSuper.png','BoxGemSuperDesc','frontPartSize','PuzzleItemLockUR','centerBlock','showGrid','BonusOffsetX','getBoxesTab','getPuzzleOpenBox','gemsForVideoAd','createSettingsButton','settings','WinSettings','TabIcon_Actual','STORE_SCROLL_CONFIG','slots','getFirstUpgradeSlot','getAutoClickSlot1Id','_getOneItemFromList','isUpgradePurchased','_upgradeSelectedTabItems','getMarketListGold','getMarketListGems','getMarketListSeeds','isUnlimitedPurchaseIndex','maxSlots','getAdsWatchedToday','_getStoreCellButtonCaption','Unknown','getImageName','getStoreItemTitle','getStoreItemDescription','_checkPriceForButton','timerText','updateTimer','title','MultiProfitGems','MultiProfitAll','TimeTravel24h','TimeTravel7d','setGemsPage','forceGems','removeTimer','checkPurchases','lightAnimation','lightTime','timeToUpdate','FortuneWheelWindowTitle','buttonLabelFree','FortuneWheelWindowAdButton','_updateSpinsTimer','_updateButtonLocalization','buttonGems','_updateSpinsCount'];(function(_0x30826c,_0x2ff942){var _0x394521=function(_0x22e77a){while(--_0x22e77a){_0x30826c['push'](_0x30826c['shift']());}};_0x394521(++_0x2ff942);}(_0x3762,0x19f));var _0x205e=function(_0x4bd822,_0x2bd6f7){_0x4bd822=_0x4bd822-0x0;var _0xb4bdb3=_0x3762[_0x4bd822];return _0xb4bdb3;};const UnnyObjectType={'Image':0x0,'SpriteSheet':0x1,'Spine':0x2,'NineSlice':0x3,'Audio':0x4,'Json':0x5};const RESOURCES_SCALE=0x64;let localScale;let imageSizeLocalScale;let imagesDeltaScale;let use2ximages=!![];const CommonVisualData={'PRELOAD_OBJECTS':[_0x205e('0x0'),_0x205e('0x1'),_0x205e('0x2'),_0x205e('0x3'),'LockPuzzle',_0x205e('0x4'),_0x205e('0x5'),_0x205e('0x6'),_0x205e('0x7'),_0x205e('0x8'),_0x205e('0x9'),_0x205e('0xa'),_0x205e('0xb'),_0x205e('0xc'),_0x205e('0xd'),_0x205e('0xe'),'WinUpgradeBack',_0x205e('0xf'),_0x205e('0x10'),_0x205e('0x11'),'CollectionBack',_0x205e('0x12'),_0x205e('0x13'),_0x205e('0x14'),'MM_Btn_Worlds',_0x205e('0x15'),_0x205e('0x16'),_0x205e('0x17'),_0x205e('0x18'),'TabIcon_Actual',_0x205e('0x19'),'Store_Slot',_0x205e('0x1a'),'PuzzleTabIcon',_0x205e('0x1b'),_0x205e('0x1c'),_0x205e('0x1d'),_0x205e('0x1e'),_0x205e('0x1f'),'PuzzleItemLockUR',_0x205e('0x20'),_0x205e('0x21'),_0x205e('0x22'),_0x205e('0x23'),_0x205e('0x24'),_0x205e('0x25'),_0x205e('0x26'),'PuzzlesSilver',_0x205e('0x27'),_0x205e('0x28'),_0x205e('0x29'),'FortuneItemTimeTravel','FortuneHUDButton',_0x205e('0x2a'),_0x205e('0x2b'),_0x205e('0x2c'),_0x205e('0x2d'),_0x205e('0x2e'),_0x205e('0x2f'),'Quests_ProgressBar',_0x205e('0x30'),'Daily_HUDButton',_0x205e('0x31'),'Daily_Opened',_0x205e('0x32'),'HudPlusButton',_0x205e('0x33'),_0x205e('0x34'),_0x205e('0x35'),_0x205e('0x36'),_0x205e('0x37'),_0x205e('0x38'),_0x205e('0x39'),'Notification'],'ALL_OBJECTS':{'AdCam':{'file':_0x205e('0x3a')},'Music_On':{'file':_0x205e('0x3b')},'Music_Off':{'file':_0x205e('0x3c')},'Sounds_On':{'file':_0x205e('0x3d')},'Sounds_Off':{'file':_0x205e('0x3e')},'Language_Arabic':{'file':_0x205e('0x3f')},'Language_Chinese (Simplified)':{'file':'UI/Windows/ChangeLanguage/Chinese\x20(Simplified).png'},'Language_Chinese (Traditional)':{'file':_0x205e('0x40')},'Language_English':{'file':_0x205e('0x41')},'Language_French':{'file':_0x205e('0x42')},'Language_German':{'file':'UI/Windows/ChangeLanguage/German.png'},'Language_Italian':{'file':_0x205e('0x43')},'Language_Japanese':{'file':_0x205e('0x44')},'Language_Korean':{'file':_0x205e('0x45')},'Language_Portuguese (Brazil)':{'file':_0x205e('0x46')},'Language_Russian':{'file':_0x205e('0x47')},'Language_Spanish':{'file':'UI/Windows/ChangeLanguage/Spanish.png'},'LoadingSplash':{'file':_0x205e('0x48')},'LoadingSplash_ProgressBar':{'file':_0x205e('0x49')},'LoadingSplash_ProgressBarFill':{'file':_0x205e('0x4a')},'Tut_Circle':{'file':_0x205e('0x4b')},'LockIcon':{'file':_0x205e('0x4c')},'LockPuzzle':{'file':_0x205e('0x4d')},'Lock':{'file':_0x205e('0x4e')},'Notification':{'file':_0x205e('0x4f')},'PriceIcon':{'file':_0x205e('0x50')},'PriceGems':{'file':_0x205e('0x51')},'PriceSeeds':{'file':_0x205e('0x52')},'HudPlusButton':{'file':_0x205e('0x53')},'SeedsQuestIcon':{'file':'UI/HUD_and_common/HUD/SeedsQuestIcon.png'},'Tut_Finger':{'type':UnnyObjectType[_0x205e('0x54')],'json':_0x205e('0x55'),'atlas':_0x205e('0x56'),'animations':{'idle':'active'}},'Background1':{'type':UnnyObjectType[_0x205e('0x54')],'json':_0x205e('0x57'),'atlas':_0x205e('0x58'),'animations':{'idle':'idle'},'files':['world1_fullhd.png',_0x205e('0x59')]},'Background2':{'type':UnnyObjectType[_0x205e('0x54')],'json':_0x205e('0x5a'),'atlas':_0x205e('0x5b'),'animations':{'idle':'Idle'}},'Background3':{'type':UnnyObjectType['Spine'],'json':_0x205e('0x5c'),'atlas':_0x205e('0x5d'),'animations':{'idle':_0x205e('0x5e')},'files':[_0x205e('0x5f'),_0x205e('0x60')]},'Building_1w1':{'type':UnnyObjectType[_0x205e('0x54')],'json':_0x205e('0x61'),'atlas':_0x205e('0x62'),'animations':{'idle':_0x205e('0x5e'),'appear':'Appear','action':_0x205e('0x63')}},'Building_2w1':{'type':UnnyObjectType['Spine'],'json':_0x205e('0x64'),'atlas':_0x205e('0x65'),'animations':{'idle':_0x205e('0x5e'),'appear':'Appear','action':_0x205e('0x63')}},'Building_3w1':{'type':UnnyObjectType[_0x205e('0x54')],'json':_0x205e('0x66'),'atlas':_0x205e('0x67'),'animations':{'idle':'Idle','appear':_0x205e('0x68'),'action':_0x205e('0x63')}},'Building_4w1':{'type':UnnyObjectType[_0x205e('0x54')],'json':_0x205e('0x69'),'atlas':_0x205e('0x6a'),'animations':{'idle':_0x205e('0x5e'),'appear':_0x205e('0x68'),'action':_0x205e('0x63')}},'Building_5w1':{'type':UnnyObjectType[_0x205e('0x54')],'json':'Slot5.json','atlas':_0x205e('0x6b'),'animations':{'idle':_0x205e('0x5e'),'appear':'Appear','action':_0x205e('0x63')}},'Building_6w1':{'type':UnnyObjectType[_0x205e('0x54')],'json':_0x205e('0x6c'),'atlas':'Slot6.atlas','animations':{'idle':'Idle','appear':_0x205e('0x68'),'action':_0x205e('0x63')}},'Building_7w1':{'type':UnnyObjectType[_0x205e('0x54')],'json':_0x205e('0x6d'),'atlas':_0x205e('0x6e'),'animations':{'idle':_0x205e('0x5e'),'appear':_0x205e('0x68'),'action':_0x205e('0x63')}},'Building_8w1':{'type':UnnyObjectType[_0x205e('0x54')],'json':_0x205e('0x6f'),'atlas':_0x205e('0x70'),'animations':{'idle':_0x205e('0x5e'),'appear':_0x205e('0x68'),'action':_0x205e('0x63')}},'Building_9w1':{'type':UnnyObjectType[_0x205e('0x54')],'json':_0x205e('0x71'),'atlas':_0x205e('0x72'),'animations':{'idle':_0x205e('0x5e'),'appear':_0x205e('0x68'),'action':'Touch'}},'Building_1w2':{'type':UnnyObjectType[_0x205e('0x54')],'json':_0x205e('0x73'),'atlas':_0x205e('0x74'),'animations':{'idle':_0x205e('0x5e'),'appear':_0x205e('0x68'),'action':'Touch'}},'Building_2w2':{'type':UnnyObjectType[_0x205e('0x54')],'json':'slot2w2.json','atlas':_0x205e('0x75'),'animations':{'idle':_0x205e('0x5e'),'appear':_0x205e('0x68'),'action':_0x205e('0x63')}},'Building_3w2':{'type':UnnyObjectType[_0x205e('0x54')],'json':_0x205e('0x76'),'atlas':_0x205e('0x77'),'animations':{'idle':_0x205e('0x5e'),'appear':_0x205e('0x68'),'action':_0x205e('0x63')}},'Building_4w2':{'type':UnnyObjectType[_0x205e('0x54')],'json':'slot4w2.json','atlas':'slot4w2.atlas','animations':{'idle':_0x205e('0x5e'),'appear':'Appear','action':_0x205e('0x63')}},'Building_5w2':{'type':UnnyObjectType[_0x205e('0x54')],'json':_0x205e('0x78'),'atlas':'slot5w2.atlas','animations':{'idle':_0x205e('0x5e'),'appear':_0x205e('0x68'),'action':'Touch'}},'Building_6w2':{'type':UnnyObjectType[_0x205e('0x54')],'json':_0x205e('0x79'),'atlas':_0x205e('0x7a'),'animations':{'idle':'Idle','appear':_0x205e('0x68'),'action':_0x205e('0x63')}},'Building_7w2':{'type':UnnyObjectType[_0x205e('0x54')],'json':_0x205e('0x7b'),'atlas':_0x205e('0x7c'),'animations':{'idle':_0x205e('0x5e'),'appear':_0x205e('0x68'),'action':_0x205e('0x63')}},'Building_8w2':{'type':UnnyObjectType['Spine'],'json':_0x205e('0x7d'),'atlas':_0x205e('0x7e'),'animations':{'idle':_0x205e('0x5e'),'appear':_0x205e('0x68'),'action':_0x205e('0x63')}},'Building_9w2':{'type':UnnyObjectType[_0x205e('0x54')],'json':_0x205e('0x7f'),'atlas':_0x205e('0x80'),'animations':{'idle':'Idle','appear':'Appear','action':_0x205e('0x63')}},'Building_1w3':{'type':UnnyObjectType[_0x205e('0x54')],'json':_0x205e('0x81'),'atlas':_0x205e('0x82'),'animations':{'idle':_0x205e('0x5e'),'appear':_0x205e('0x68'),'action':_0x205e('0x63')}},'Building_2w3':{'type':UnnyObjectType[_0x205e('0x54')],'json':_0x205e('0x83'),'atlas':_0x205e('0x84'),'animations':{'idle':_0x205e('0x5e'),'appear':_0x205e('0x68'),'action':_0x205e('0x63')}},'Building_3w3':{'type':UnnyObjectType[_0x205e('0x54')],'json':_0x205e('0x85'),'atlas':_0x205e('0x86'),'animations':{'idle':'Idle','appear':_0x205e('0x68'),'action':_0x205e('0x63')}},'Building_4w3':{'type':UnnyObjectType[_0x205e('0x54')],'json':_0x205e('0x87'),'atlas':_0x205e('0x88'),'animations':{'idle':_0x205e('0x5e'),'appear':_0x205e('0x68'),'action':_0x205e('0x63')}},'Building_5w3':{'type':UnnyObjectType[_0x205e('0x54')],'json':'Slot5w3.json','atlas':_0x205e('0x89'),'animations':{'idle':_0x205e('0x5e'),'appear':'Appear','action':_0x205e('0x63')}},'Building_6w3':{'type':UnnyObjectType[_0x205e('0x54')],'json':_0x205e('0x8a'),'atlas':_0x205e('0x8b'),'animations':{'idle':'Idle','appear':_0x205e('0x68'),'action':_0x205e('0x63')}},'Building_7w3':{'type':UnnyObjectType[_0x205e('0x54')],'json':_0x205e('0x8c'),'atlas':_0x205e('0x8d'),'animations':{'idle':_0x205e('0x5e'),'appear':_0x205e('0x68'),'action':'Touch'}},'Building_8w3':{'type':UnnyObjectType[_0x205e('0x54')],'json':_0x205e('0x8e'),'atlas':'Slot8w3.atlas','animations':{'idle':'Idle','appear':_0x205e('0x68'),'action':'Touch'}},'Building_9w3':{'type':UnnyObjectType[_0x205e('0x54')],'json':_0x205e('0x8f'),'atlas':'Slot9w3.atlas','animations':{'idle':_0x205e('0x5e'),'appear':_0x205e('0x68'),'action':_0x205e('0x63')}},'Production_Progress_Bar_Back':{'file':_0x205e('0x90')},'Production_Progress_Bar':{'file':_0x205e('0x91')},'Upgrade_Progress_Bar':{'file':_0x205e('0x92')},'LikePlus':{'file':_0x205e('0x93')},'TableLike':{'file':_0x205e('0x94')},'TableUpgrade':{'file':_0x205e('0x95')},'FastProduction':{'type':UnnyObjectType[_0x205e('0x96')],'file':_0x205e('0x97'),'frameWidth':0x100,'frameHeight':0x1d,'frames':0x8,'period':0.033},'DefaultButton':{'file':_0x205e('0x98'),'type':UnnyObjectType[_0x205e('0x99')],'paddingX':0x50,'paddingY':0x4f},'ExitButton':{'file':_0x205e('0x9a')},'BlackPixel':{'file':_0x205e('0x9b')},'CollectionBack':{'file':_0x205e('0x9c')},'MM_Btn_Login':{'file':'UI/HUD_and_common/HUD/HudSocialBtn.png'},'MM_Btn_Upgrade':{'file':_0x205e('0x9d')},'MM_Btn_Likes':{'file':'UI/HUD_and_common/HUD/HudLikesBtn.png'},'MM_Btn_Worlds':{'file':'UI/HUD_and_common/HUD/HUDChangeLocation.png'},'MM_Btn_Chests':{'file':_0x205e('0x9e')},'MM_Btn_Store':{'file':'UI/HUD_and_common/HUD/HudShovelBtn.png'},'Tab_Close':{'file':_0x205e('0x9f')},'Tab_Open':{'file':_0x205e('0xa0')},'TabIcon_Actual':{'file':_0x205e('0xa1')},'TabIcon_Money':{'file':_0x205e('0xa2')},'Store_Slot':{'file':_0x205e('0xa3')},'BoxTabIcon':{'file':_0x205e('0xa4')},'PuzzleTabIcon':{'file':_0x205e('0xa5')},'PuzzleBonusBack':{'file':_0x205e('0xa6')},'PuzzleItemFrame':{'file':_0x205e('0xa7')},'PuzzleItemLockDL':{'file':'UI/Windows/Puzzles/PuzzleItem/Parts/blocked/PuzzleItemLockDL.png'},'PuzzleItemLockDR':{'file':_0x205e('0xa8')},'PuzzleItemLockUL':{'file':'UI/Windows/Puzzles/PuzzleItem/Parts/blocked/PuzzleItemLockUL.png'},'PuzzleItemLockUR':{'file':_0x205e('0xa9')},'PuzzleOpened':{'file':_0x205e('0xaa')},'PuzzleBronze':{'file':_0x205e('0xab')},'PuzzleSilver':{'file':_0x205e('0xac')},'PuzzleGold':{'file':'UI/Windows/Puzzles/PuzzleItem/Parts/gold/s.png'},'PuzzleDiamond':{'file':_0x205e('0xad')},'PuzzlesOpened':{'file':'UI/Windows/Puzzles/PuzzlesOpened.png'},'PuzzlesBronze':{'file':'UI/Windows/Puzzles/PuzzlesBronze.png'},'PuzzlesSilver':{'file':_0x205e('0xae')},'PuzzlesGold':{'file':_0x205e('0xaf')},'PuzzlesDiamond':{'file':'UI/Windows/Puzzles/PuzzlesDiamond.png'},'BoxCounter':{'file':_0x205e('0xb0')},'CollectCrop':{'file':_0x205e('0xb1')},'Banjo':{'file':_0x205e('0xb2')},'BanjoEnd':{'file':'UI/WindowsBigPictures/BanjoEnd.png'},'MultiplyOnStart':{'file':_0x205e('0xb3')},'Cloud':{'file':_0x205e('0xb4')},'Popup':{'file':'UI/HUD_and_common/Popup.png'},'PopupThumbsUp':{'file':_0x205e('0xb5')},'NotEnoughGems':{'file':'UI/WindowsBigPictures/NotEnoughGems.png'},'NoAdAndRatings':{'file':_0x205e('0xb6')},'OtherWorldsLocked':{'file':_0x205e('0xb7')},'Wait':{'file':_0x205e('0xb8')},'AppleInfo':{'file':_0x205e('0xb9')},'TimeTravel4h':{'file':'UI/Windows/Upgrade/Items/TimeTravel4h.png'},'TimeTravel24h':{'file':_0x205e('0xba')},'TimeTravel7d':{'file':_0x205e('0xbb')},'collectCropSplash':{'file':_0x205e('0xbc')},'FortuneWheelBack':{'file':_0x205e('0xbd')},'FortuneWheel':{'file':_0x205e('0xbe')},'FortuneItemTimeTravel':{'file':_0x205e('0xbf')},'FortuneHUDButton':{'file':_0x205e('0xc0')},'FortuneDevil':{'file':_0x205e('0xc1')},'FortuneWheelArrow':{'file':'UI/Windows/FortuneWindow/WheelArrow.png'},'OpenedBox':{'file':_0x205e('0xc2')},'GiftBox':{'file':_0x205e('0xc3')},'GiftBoxSuper':{'file':_0x205e('0xc4')},'QuestBack':{'file':_0x205e('0xc5')},'Quests_ProgressFill':{'file':_0x205e('0xc6')},'Quests_ProgressBar':{'file':'UI/Windows/DailyQuests/ProgressBar.png'},'Quests_RefreshBtn':{'file':_0x205e('0xc7')},'QuestsHUDButton':{'file':'UI/HUD_and_common/HUD/HudDailyQuestsBtn.png'},'Daily_Opened':{'file':'UI/Windows/LoginBonus/Opened.png'},'Daily_Closed':{'file':_0x205e('0xc8')},'Daily_Active':{'file':_0x205e('0xc9')},'Daily_Check':{'file':'UI/Windows/LoginBonus/04.png'},'Daily_HUDButton':{'file':_0x205e('0xca')},'GiftBoxSuperOpen':{'file':_0x205e('0xcb')},'GiftBoxOpen':{'file':_0x205e('0xcc')},'SettingsBtn':{'file':_0x205e('0xcd')},'Effect_Glow':{'file':'Effects/glow.png'}}};if(typeof exports!==_0x205e('0xce')){if(typeof module!==_0x205e('0xce')&&module['exports']){exports=module[_0x205e('0xcf')]=CommonVisualData;}exports[_0x205e('0xd0')]=CommonVisualData;exports[_0x205e('0xd1')]=UnnyObjectType;}class GameTrail{constructor(_0x534524){const _0x61b73f=_0x534524[_0x205e('0xd2')];this[_0x205e('0xd3')]=_0x61b73f[_0x205e('0xd4')]['group']();this[_0x205e('0xd5')]=[];for(let _0x4c3e46=0x0;_0x4c3e46<0xa;_0x4c3e46++){const _0x1f3f46=this[_0x205e('0xd3')][_0x205e('0xd6')](0x0,0x0,'Effect_Glow')[_0x205e('0xd7')](WinDefaultDepth)[_0x205e('0xd8')](0.5,0.5)[_0x205e('0xd9')](0.5,0x0);this[_0x205e('0xd5')][_0x205e('0xda')](_0x1f3f46);}const _0x4d8e80=this;document[_0x205e('0xdb')][_0x205e('0xdc')]=function(_0x74856e){_0x4d8e80[_0x205e('0xdd')]({'x':_0x74856e['clientX']/ScreenSize['width']*RealScreenWidth,'y':_0x74856e[_0x205e('0xde')]/ScreenSize[_0x205e('0xdf')]*RealScreenHeight});};document[_0x205e('0xdb')][_0x205e('0xe0')]=function(){_0x4d8e80['hideTrail']();};document[_0x205e('0xdb')][_0x205e('0xe1')]=function(_0x4aa660){_0x4d8e80[_0x205e('0xe2')]({'x':_0x4aa660[_0x205e('0xe3')]/ScreenSize[_0x205e('0xe4')]*RealScreenWidth,'y':_0x4aa660[_0x205e('0xde')]/ScreenSize[_0x205e('0xdf')]*RealScreenHeight});};_0x534524[_0x205e('0xe5')]['addListener'](this[_0x205e('0xe5')][_0x205e('0xe6')](this));SetGroupVisible(this[_0x205e('0xd3')],![]);}[_0x205e('0xdd')](_0x2acb1b){this['visible']=!![];for(let _0x4f1403=0x0;_0x4f1403<this[_0x205e('0xd5')][_0x205e('0xe7')];_0x4f1403++)this['points'][_0x4f1403][_0x205e('0xe8')](_0x2acb1b['x'],_0x2acb1b['y']);SetGroupVisible(this[_0x205e('0xd3')],!![]);}[_0x205e('0xe2')](_0x2c5fba){this[_0x205e('0xd5')][0x0][_0x205e('0xe8')](_0x2c5fba['x'],_0x2c5fba['y']);}[_0x205e('0xe5')](_0x576b7d){if(this[_0x205e('0xe9')]){for(let _0x280826=0x1;_0x280826<this['points'][_0x205e('0xe7')];_0x280826++){const _0x3ac69f=this[_0x205e('0xd5')][_0x280826];const _0xce93d6=this[_0x205e('0xd5')][_0x280826-0x1]['x']-_0x3ac69f['x'];const _0x1f6c8d=this[_0x205e('0xd5')][_0x280826-0x1]['y']-_0x3ac69f['y'];const _0x1eb088=Math[_0x205e('0xea')](_0xce93d6*_0xce93d6+_0x1f6c8d*_0x1f6c8d);if(_0x1eb088<0x1){_0x3ac69f[_0x205e('0xd8')](0.5,0x0);continue;}const _0x1db982=_0x1eb088*0.75;const _0x575f3d=_0x1db982/_0x1eb088;_0x3ac69f[_0x205e('0xeb')]=-Math[_0x205e('0xec')](_0xce93d6,_0x1f6c8d)/Math['PI']*0xb4;_0x3ac69f[_0x205e('0xd8')](0.5,_0x1eb088/0x26);_0x3ac69f['x']=_0x3ac69f['x']+_0xce93d6*_0x575f3d;_0x3ac69f['y']=_0x3ac69f['y']+_0x1f6c8d*_0x575f3d;}}}[_0x205e('0xed')](){this[_0x205e('0xe9')]=![];SetGroupVisible(this['group'],![]);}}let gameTrail;let CommonData=null;const totalScale=0x1;let RealScreenWidth=0x780*totalScale;let RealScreenHeight=0x438*totalScale;const GlobalScale=0.595;const NormalTint=0xffffff;const LockTint=0xaaaaaa;var VisualData=function(){let _0x1c301c='./games/fish/data/';let _0x54e89d='../localizations/';let _0x2019c0=_0x205e('0xee');let _0x404e6d=_0x205e('0xef');let _0x496c0f=_0x205e('0xf0');let _0x35e88b=_0x205e('0xf1');let _0x4200d5=_0x205e('0xf2');let _0x8adeee=_0x205e('0xf3');let _0x51957b='UI/Windows/DailyQuests/DailyQuests\x20Icons/';let _0x2975bd=_0x205e('0xf4');if(typeof exports!=='undefined'){CommonData=require(_0x205e('0xf5'));UnnyObjectType=CommonData['UnnyObjectType'];}else CommonData=CommonVisualData;const _0x47ab8a=[_0x205e('0xf6'),_0x205e('0xf7'),_0x205e('0xf8'),_0x205e('0xf9'),_0x205e('0xfa'),_0x205e('0xfb'),'Korean','Portuguese\x20(Brazil)',_0x205e('0xfc'),_0x205e('0xfd')];const _0x73f112={'hellprodgems100':{'vk_price':0x14,'ok_price':0x14},'hellprodgems200':{'vk_price':0x28,'ok_price':0x28*0x7},'hellprodgems300':{'vk_price':0x50,'ok_price':0x50*0x7},'hellprodgems400':{'vk_price':0xa0,'ok_price':0xa0*0x7},'hellprodgems500':{'vk_price':0x140,'ok_price':0x140*0x7}};const _0x4f0628={'Fabrika':{'type':UnnyObjectType[_0x205e('0x54')],'json':_0x205e('0xfe'),'atlas':_0x205e('0xff'),'animations':{'idle':_0x205e('0x100'),'appear':_0x205e('0x68')}},'Podkova':{'type':UnnyObjectType[_0x205e('0x54')],'json':'podkova.json','atlas':'podkova.atlas','animations':{'idle':'Idle','active':_0x205e('0x100')}},'SplitScreen':{'type':UnnyObjectType[_0x205e('0x54')],'json':_0x205e('0x101'),'atlas':_0x205e('0x102'),'animations':{'appear':_0x205e('0x68'),'disappear':_0x205e('0x103'),'idle':_0x205e('0x104')}},'FactoryWorking':{'type':UnnyObjectType[_0x205e('0x54')],'json':_0x205e('0x105'),'atlas':_0x205e('0x106'),'animations':{'idle':'idle'}},'WinStandardBack':{'file':_0x205e('0x107'),'type':UnnyObjectType[_0x205e('0x99')],'paddingX':0x64,'paddingY':0x46},'WinStandardBack2':{'file':_0x205e('0x108'),'type':UnnyObjectType[_0x205e('0x99')],'paddingX':0x64,'paddingY':0x46},'WinUpgradeBack':{'file':'UI/Windows/Upgrade/UpgradeWindowBack.png','type':UnnyObjectType['NineSlice'],'paddingX':0x64,'paddingY':0x46},'DefaultButton_Slice':{'file':_0x205e('0x98'),'type':UnnyObjectType[_0x205e('0x99')],'paddingX':0x50,'paddingY':0x4f},'MM_Btn_Bread':{'file':_0x205e('0x109')},'MM_Btn_Worlds_Inverse':{'file':_0x205e('0x10a')},'MM_Btn_Worlds2':{'file':_0x205e('0x10b')},'MM_Btn_Worlds2_Inverse':{'file':_0x205e('0x10c')},'ui_headline':{'file':_0x205e('0x10d')},'bread_1':{'file':_0x205e('0x10e')},'bread_2':{'file':_0x205e('0x10f')},'bread_3':{'file':_0x205e('0x110')},'bread_4':{'file':_0x205e('0x111')},'bread_5':{'file':_0x205e('0x112')},'bread_6':{'file':'bread/bread_6.png'},'bread_7':{'file':_0x205e('0x113')},'LockWater':{'file':'Slots/WaterBlocked.png'},'RainTimerBack':{'file':_0x205e('0x114')},'BackgroundMusic':{'type':UnnyObjectType[_0x205e('0x115')],'file':_0x205e('0x116')},'BackgroundMusic2':{'type':UnnyObjectType[_0x205e('0x115')],'file':_0x205e('0x117')},'BackgroundMusic3':{'type':UnnyObjectType[_0x205e('0x115')],'file':_0x205e('0x118')},'Gathering':{'type':UnnyObjectType[_0x205e('0x115')],'file':_0x205e('0x119')},'Banjoded':{'type':UnnyObjectType[_0x205e('0x115')],'file':_0x205e('0x11a')},'Audio_Chest_1':{'type':UnnyObjectType[_0x205e('0x115')],'file':_0x205e('0x11b')},'Audio_Chest_2':{'type':UnnyObjectType['Audio'],'file':'../Audio/Sounds/GetPuzzlePart/chest_2.wav'},'Audio_Chest_3':{'type':UnnyObjectType[_0x205e('0x115')],'file':'../Audio/Sounds/GetPuzzlePart/chest_3.wav'},'Audio_longtap1':{'type':UnnyObjectType[_0x205e('0x115')],'file':'../Audio/Sounds/ObjectsClick/longtap1.wav'},'Audio_longtap2':{'type':UnnyObjectType[_0x205e('0x115')],'file':'../Audio/Sounds/ObjectsClick/longtap2.wav'},'Audio_longtap3':{'type':UnnyObjectType[_0x205e('0x115')],'file':_0x205e('0x11c')},'Audio_longtap4':{'type':UnnyObjectType['Audio'],'file':_0x205e('0x11d')},'Audio_Pop-ani-1':{'type':UnnyObjectType[_0x205e('0x115')],'file':_0x205e('0x11e')},'Audio_Pop-ani-2':{'type':UnnyObjectType['Audio'],'file':_0x205e('0x11f')},'Audio_Pop-ani-3':{'type':UnnyObjectType[_0x205e('0x115')],'file':_0x205e('0x120')},'Audio_ClickUI':{'type':UnnyObjectType[_0x205e('0x115')],'file':_0x205e('0x121')},'Audio_Info':{'type':UnnyObjectType['Audio'],'file':_0x205e('0x122')},'Audio_Money':{'type':UnnyObjectType[_0x205e('0x115')],'file':'../Audio/Fishclicker\x20-\x20Sounds/SND_Fly_Fish_2.ogg'},'Audio_Window':{'type':UnnyObjectType[_0x205e('0x115')],'file':_0x205e('0x123')}};const _0x327a3e=[_0x205e('0x124'),_0x205e('0x125'),'Podkova',_0x205e('0x126'),'DefaultButton_Slice',_0x205e('0x127'),_0x205e('0x128'),_0x205e('0x129'),_0x205e('0x12a'),_0x205e('0x12b'),_0x205e('0x12c'),'RainTimerBack'];const _0x2993b1={'fb_app_id':0x76151ea5a3416,'vk_app_id':0x6cb31c,'photos':![],'likes':{'ok':!![],'vk':![]},'share':{'ok':!![],'vk':![]}};return{'getGameSettings'(){return _0x2993b1;},'getAllLanguages'(){return _0x47ab8a;},'getGlobalScale'(){return GlobalScale;},'IsVertical'(){return![];},'getWorldsCount'(){return 0x3;},'getPaymentInfoById'(_0x23b13f){return _0x73f112['hasOwnProperty'](_0x23b13f)?_0x73f112[_0x23b13f]:null;},'ANIMATIONS':{'flyingResources':1.5,'flyingResourcesScale':0x1},'GUI_WinStore':{'headerImg':_0x205e('0x12b'),'headerOffsetY':-0x10e,'btnOffsetY':0x14a,'descOffsetY':0xa0,'nineSlice':_0x205e('0x12d'),'togglesX':-0x2bc,'togglesY':-0x226,'togglesDistance':0xa0,'activeOffset':0x1e,'iconOffset':0x5a,'iconOffsetActive':0xa0,'imageOffset':0x50},'GUI_WinConstruct':{'nineSlice':_0x205e('0x12e'),'headerOffset':-0x1c2,'buttonOffset':0x190},'GUI_WinWithPicture':{'nineSlice':_0x205e('0x12f'),'imageX':-0x1f4,'imageY':0x0,'headerOffset':-0x172,'buttonOffset':0x12c,'buttonOffsetX':0x15e,'descriptionX':0x15e,'descriptionY':0x0},'GUI_WinAppleDescription':{'nineSlice':'long','centerX':0x15e,'distanceX':0x1ae,'startY':-0x96,'distanceY':0x4b,'imageX':-0x1f4,'imageY':-0xc8,'headerOffset':-0x172},'GUI_WinPuzzle':{'nineSlice':_0x205e('0x130'),'storeDistanceX':0x10e,'storeDistanceY':0x172,'togglesX':0x2bc,'togglesY':-0x1e0,'togglesDistance':0xa0,'activeOffset':0x1e,'iconOffset':0x5a,'iconOffsetActive':0xa0,'imageOffset':0x50,'centerBlock':![],'showGrid':![],'partSize':0x136,'frontPartSize':0x14a,'BonusOffsetX':0xa0},'GUI_BuildingsGUI':{'loaderOffsetX':0x0,'loaderOffsetY':-0x69,'loaderScale':0x1,'purchaseIconScale':0x1},'GUI_WinDailyBonus':{'columns':0x8,'rows':0x4,'distance':0x12c,'addDistance':0x32},'GUI_WinFortuneWheel':{'backX':0x0,'backY':-0x32,'rotationX':0x0,'rotationY':0x46,'buttonY':0x320,'heroX':0x1f4,'heroY':0x12c,'arrowX':0x0,'arrowY':-0x1f4,'headerY':0x64,'initRotation':0xb4,'radius':0xfa,'backSize':{'width':0x52f,'height':0x499},'lights':[{'x':0xb4,'y':0x3e8},{'x':0xa0,'y':0x33e},{'x':0x7d,'y':0x280},{'x':0x96,'y':0x208},{'x':0x82,'y':0x12c},{'x':0xc8,'y':0x82},{'x':0x177,'y':0x7d},{'x':0x20d,'y':0x96},{'x':0x35c,'y':0x96},{'x':0x3f2,'y':0x7d},{'x':0x465,'y':0x7d},{'x':0x4b0,'y':0x104},{'x':0x4ba,'y':0x1ae},{'x':0x497,'y':0x20d},{'x':0x49c,'y':0x2cb},{'x':0x4b0,'y':0x34d},{'x':0x492,'y':0x3f2}]},'GUI_WinQuests':{'distance':0x1f4,'centerY':0x32,'iconsScale':0.75,'noMoreQuestsIcon':_0x205e('0x131')},'GUI_HUDResources':{'labelOffsetY':-0x6,'greenButtonOffsetX1':0x1a4,'singleImage':_0x205e('0x132'),'hudBackScale':1.5},'getFolderPath':function(){return use2ximages?_0x496c0f:_0x404e6d;},'getAtlasPath':function(){return use2ximages?_0x205e('0x133'):_0x205e('0x134');},'getAtlasFullPath':function(){return use2ximages?_0x205e('0x135'):_0x205e('0x136');},'getQuestIcons':function(){return _0x51957b;},'getDataFolder'(){return _0x1c301c;},'getDailyBonusIconsFolder'(){return _0x2975bd;},'getLocalizationsFolder'(){return _0x54e89d;},'getAudioFolder'(){return _0x2019c0;},'getStoreFolder'(){return _0x35e88b;},'getPuzzleFolder'(){return _0x8adeee;},'getPuzzleUIFolder'(){return _0x4200d5;},'getGullPath':function(_0x2e3310){return _0x2e3310?_0x404e6d+_0x2e3310:_0x404e6d;},'getAutoClickSlot1Id'(){return 0x17;},'WINDOW_NINE_SLICE':{'store':{'name':_0x205e('0x137'),'width':0x708,'height':0x578,'y':0x82},'small':{'name':_0x205e('0xe'),'width':0x4b0,'height':0x4b0,'y':0x0},'long':{'name':'WinStandardBack','width':0x708,'height':0x3e8,'y':0x0},'puzzle':{'name':'WinStandardBack2','width':0x708,'height':0x3e8}},'STORE_SCROLL_CONFIG':{'maxSlots':0x9,'columns':0x3,'cellWidth':0x1f4,'cellHeight':0x352,'offsetX':0x0,'offsetY':0xaa,'width':0x640,'height':0x4b0},'PUZZLE_SCROLL_CONFIG':{'columns':0x4,'cellWidth':0x15e,'cellHeight':0x15e,'offsetX':0x0,'offsetY':0x0,'width':0x640,'height':0x384},'PUZZLE_SCROLL_CONFIG_STORE':{'columns':0x3,'cellWidth':0x1f4,'cellHeight':0x352,'offsetX':0x0,'offsetY':0x0,'width':0x640,'height':0x384},'BUNDLE_FOLDERS':[_0x205e('0x138'),_0x205e('0x139'),_0x205e('0x13a'),_0x205e('0x13b'),_0x35e88b,_0x51957b,_0x2975bd],'PRELOAD_OBJECTS':CommonData[_0x205e('0x13c')]['concat'](_0x327a3e),'MAP_PARAMS':{'width':0x600,'height':0x990},'BACKGROUNDS':{1:{'objects':[{'name':_0x205e('0x4')}]},2:{'objects':[{'name':_0x205e('0x13d')}]},3:{'objects':[{'name':'Background3'}]}},'SPLIT_SCREEN':{'objects':[{'name':'SplitScreen'}]},'FACTORY_WORKING':{'objects':[{'name':_0x205e('0x13e')}]},'FABRIKA':{'objects':[{'click':!![],'name':_0x205e('0x125'),'scale':0.2*totalScale,'x':0x2ee,'y':-0x140}]},'PODKOVA':{'objects':[{'click':!![],'name':'Podkova','scale':0.2*totalScale,'x':-0x320,'y':-0x32}]},'ALL_OBJECTS':Object[_0x205e('0x13f')]({},CommonData[_0x205e('0x140')],_0x4f0628),'ATLASES':[_0x205e('0x141')],'ATLASES_2x':[_0x205e('0x142')],'VISUAL_BUILDINGS':{'start1w1':{'objects':[{'name':_0x205e('0x2'),'x':-0x6a,'y':-0x34}]},'start2w1':{'objects':[{'name':_0x205e('0x2'),'x':0x20,'y':-0x10}]},'start3w1':{'objects':[{'name':_0x205e('0x12c'),'x':0x46,'y':-0x1a}]},'start4w1':{'objects':[{'name':'Lock','x':0x14,'y':-0x46}]},'start5w1':{'objects':[{'name':'LockWater','x':0x4c,'y':-0x32}]},'start6w1':{'objects':[{'name':_0x205e('0x12c'),'x':0x8,'y':-0x38}]},'start7w1':{'objects':[{'name':'LockWater','x':-0x1e,'y':-0x40}]},'start8w1':{'objects':[{'name':_0x205e('0x12c'),'x':-0x16,'y':-0x54}]},'start9w1':{'objects':[{'name':_0x205e('0x12c'),'x':-0x5a,'y':-0x42}]},'start1w2':{'objects':[{'name':_0x205e('0x2'),'x':-0x2e,'y':-0x46}]},'start2w2':{'objects':[{'name':_0x205e('0x2'),'x':0x1a,'y':-0x50}]},'start3w2':{'objects':[{'name':_0x205e('0x2'),'x':-0x28,'y':-0x64}]},'start4w2':{'objects':[{'name':_0x205e('0x2'),'x':-0xa,'y':-0x4a}]},'start5w2':{'objects':[{'name':_0x205e('0x12c'),'x':-0xa,'y':-0x2e}]},'start6w2':{'objects':[{'name':_0x205e('0x12c'),'x':-0xc,'y':-0x48}]},'start7w2':{'objects':[{'name':_0x205e('0x12c'),'x':-0x1e,'y':-0x50}]},'start8w2':{'objects':[{'name':_0x205e('0x12c'),'x':-0x54,'y':-0x64}]},'start9w2':{'objects':[{'name':_0x205e('0x12c'),'x':-0xbe,'y':-0x6a}]},'start1w3':{'objects':[{'name':_0x205e('0x2'),'x':0x5a,'y':-0x3c}]},'start2w3':{'objects':[{'name':_0x205e('0x2'),'x':-0xa0,'y':-0x28}]},'start3w3':{'objects':[{'name':'Lock','x':-0x14,'y':-0x1a}]},'start4w3':{'objects':[{'name':_0x205e('0x2'),'x':0x24,'y':-0x28}]},'start5w3':{'objects':[{'name':'LockWater','x':-0x3c,'y':0x0}]},'start6w3':{'objects':[{'name':_0x205e('0x2'),'x':-0xa,'y':-0x3c}]},'start7w3':{'objects':[{'name':_0x205e('0x2'),'x':-0x78,'y':-0x14}]},'start8w3':{'objects':[{'name':_0x205e('0x2'),'x':-0x5a,'y':-0x14}]},'start9w3':{'objects':[{'name':_0x205e('0x12c'),'x':-0xa0,'y':-0x2e}]},'building1w1':{'objects':[{'scale':0.2*totalScale,'x':-0x46,'y':0x6}]},'building2w1':{'objects':[{'scale':0.21*totalScale,'x':0x2c,'y':0x0}]},'building3w1':{'objects':[{'scale':0.19*totalScale,'x':0x18,'y':0xa}]},'building4w1':{'objects':[{'scale':0.24*totalScale,'x':0x32,'y':-0x1e}]},'building5w1':{'objects':[{'scale':0.17*totalScale,'x':0x38,'y':0x14}]},'building6w1':{'objects':[{'scale':0.16*totalScale,'x':0x1e,'y':0x0}]},'building7w1':{'objects':[{'scale':0.17*totalScale,'x':0x0,'y':0x0}]},'building8w1':{'objects':[{'scale':0.16*totalScale,'x':-0xa,'y':-0x2e}]},'building9w1':{'objects':[{'scale':0.17*totalScale,'x':-0x1e,'y':-0x4}]},'building1w2':{'objects':[{'scale':0.31*totalScale,'x':-0x28,'y':-0x18}]},'building2w2':{'objects':[{'scale':0.17*totalScale,'x':0x28,'y':-0x16}]},'building3w2':{'objects':[{'scale':0.32*totalScale,'x':-0x2c,'y':-0x28}]},'building4w2':{'objects':[{'scale':0.14*totalScale,'x':-0x14,'y':-0x32}]},'building5w2':{'objects':[{'scale':0.16*totalScale,'x':-0xa,'y':-0x32}]},'building6w2':{'objects':[{'scale':0.18*totalScale,'x':-0x24,'y':-0x46}]},'building7w2':{'objects':[{'scale':0.21*totalScale,'x':-0x1e,'y':0xa}]},'building8w2':{'objects':[{'scale':0.17*totalScale,'x':-0x64,'y':0xa}]},'building9w2':{'objects':[{'scale':0.23*totalScale,'x':-0x8c,'y':-0x6e}]},'building1w3':{'objects':[{'scale':0.1*totalScale,'x':0x68,'y':-0xa}]},'building2w3':{'objects':[{'scale':0.12*totalScale,'x':-0x90,'y':-0x4}]},'building3w3':{'objects':[{'scale':0.1*totalScale,'x':0xe,'y':0x0}]},'building4w3':{'objects':[{'scale':0.13*totalScale,'x':0x14,'y':-0xa}]},'building5w3':{'objects':[{'scale':0.09*totalScale,'x':-0x28,'y':-0x14}]},'building6w3':{'objects':[{'scale':0.16*totalScale,'x':-0xa,'y':0xa}]},'building7w3':{'objects':[{'scale':0.11*totalScale,'x':-0x6,'y':0x14}]},'building8w3':{'objects':[{'scale':0.1*totalScale,'x':-0x56,'y':-0x14}]},'building9w3':{'objects':[{'scale':0.13*totalScale,'x':-0xa4,'y':-0x4}]}},'PLACED_BUILDINGS':{1:{'position':{'x':0x294*totalScale,'y':0x164*totalScale}},2:{'position':{'x':-0x1f4*totalScale,'y':0x180*totalScale}},3:{'position':{'x':-0x230*totalScale,'y':0x68*totalScale}},4:{'position':{'x':-0x14*totalScale,'y':0x186*totalScale}},5:{'position':{'x':-0x64*totalScale,'y':0x40*totalScale}},6:{'position':{'x':-0x190*totalScale,'y':-0xa0*totalScale}},7:{'position':{'x':0x82*totalScale,'y':-0xa2*totalScale}},8:{'position':{'x':0x15e*totalScale,'y':0xe6*totalScale}},9:{'position':{'x':0x208*totalScale,'y':0xa*totalScale}},10:{'position':{'x':0x28a*totalScale,'y':0x1c8*totalScale}},11:{'position':{'x':-0x1e0*totalScale,'y':0x1c8*totalScale}},12:{'position':{'x':0x0*totalScale,'y':0x1c8*totalScale}},13:{'position':{'x':0x164*totalScale,'y':0x120*totalScale}},14:{'position':{'x':-0x32*totalScale,'y':0x86*totalScale}},15:{'position':{'x':-0x1a4*totalScale,'y':0x8c*totalScale}},16:{'position':{'x':0x50*totalScale,'y':-0xac*totalScale}},17:{'position':{'x':-0xfa*totalScale,'y':-0x96*totalScale}},18:{'position':{'x':0x272*totalScale,'y':0x0*totalScale}},19:{'position':{'x':0x244*totalScale,'y':0x1be*totalScale}},20:{'position':{'x':-0x172*totalScale,'y':0x1be*totalScale}},21:{'position':{'x':-0x14*totalScale,'y':0x1aa*totalScale}},22:{'position':{'x':0x154*totalScale,'y':0x122*totalScale}},23:{'position':{'x':0x82*totalScale,'y':-0xb4*totalScale}},24:{'position':{'x':-0x32*totalScale,'y':0xaa*totalScale}},25:{'position':{'x':-0x1a4*totalScale,'y':0x5a*totalScale}},26:{'position':{'x':-0x14a*totalScale,'y':-0xb4*totalScale}},27:{'position':{'x':0x26c*totalScale,'y':-0x32*totalScale}}}};}();for(let w=0x1;w<=0x3;w++){const add='w'+w;for(let i=0x1;i<=0x9;i++){const bName='building'+i+add;const building2=VisualData[_0x205e('0x143')][bName][_0x205e('0x144')];const b=building2[0x0];b['x']*=totalScale;b['y']*=totalScale;b[_0x205e('0x145')]=_0x205e('0x146')+i+add;b['click']=!![];const sName=_0x205e('0x147')+i+add;const obj=VisualData['VISUAL_BUILDINGS'][sName][_0x205e('0x144')];const s=obj[0x0];s['x']*=totalScale;s['y']*=totalScale;s['click']=!![];obj[0x0][_0x205e('0x148')]=totalScale;const slot=VisualData[_0x205e('0x149')][(w-0x1)*0x9+i];slot['depth']=0xbb8-(i-0x1)*0x64;slot[_0x205e('0x14a')]=[{'maxLevel':0x0,'building':sName},{'building':bName}];}}if(typeof exports!==_0x205e('0xce')){if(typeof module!==_0x205e('0xce')&&module[_0x205e('0xcf')]){exports=module[_0x205e('0xcf')]=VisualData;}exports[_0x205e('0x14b')]=VisualData;}function SocialVK(){let _0x11ce99;let _0x17af77=[];let _0x49a497=null;const _0x599147='.vk';let _0x47dc65=![];function _0x1614bf(_0x47878f,_0x3c278c){if(typeof admanInit===_0x205e('0xce')){if(_0x47878f&&_0x47878f[_0x205e('0x14c')])_0x47878f[_0x205e('0x14c')]();return;}console[_0x205e('0x14d')](_0x205e('0x14e')+_0x11ce99);admanInit({'user_id':null,'app_id':_0x11ce99,'type':_0x205e('0x14f')},_0x303f60,_0x1b32dc);function _0x303f60(_0xa1f940){_0x17af77[_0x205e('0xda')](_0xa1f940);if(_0x3c278c)_0x3c278c(_0x47878f);}function _0x1b32dc(){console[_0x205e('0x150')](_0x205e('0x151'));if(_0x47878f&&_0x47878f[_0x205e('0x151')])_0x47878f[_0x205e('0x151')]();}}function _0x44882e(_0x37355c){if(_0x17af77[_0x205e('0xe7')]>0x0){adman=_0x17af77[_0x205e('0x152')]();if(_0x37355c[_0x205e('0x153')]){adman[_0x205e('0x153')](function(){_0x37355c[_0x205e('0x153')]();});}if(_0x37355c[_0x205e('0x154')]){adman[_0x205e('0x154')](function(){_0x37355c[_0x205e('0x154')]();});}if(_0x37355c[_0x205e('0x155')]){adman[_0x205e('0x155')](function(){_0x37355c[_0x205e('0x155')]();});}if(_0x37355c[_0x205e('0x156')]){adman[_0x205e('0x156')](function(){_0x37355c['onClicked']();});}adman[_0x205e('0x147')](_0x205e('0x157'));_0x1614bf();}else _0x1614bf(_0x37355c,_0x44882e);}function _0x4cb379(){return _0x49a497[_0x205e('0x158')];}function _0xacc301(){return _0x49a497['viewer_id'];}function _0x372a64(_0x2082b2,_0x117a01){const _0x266505=0x14;_0x117a01=_0x117a01||0x0;gBase[_0x205e('0x159')][_0x205e('0x15a')](_0x117a01,_0x266505,(_0x39ff56,_0xc71db)=>{console[_0x205e('0x15b')](_0x205e('0x15c'),_0x39ff56);console[_0x205e('0x15b')]('response\x20',_0xc71db);if(_0x39ff56){gameAnalytics[_0x205e('0x15d')](_0x39ff56,_0x205e('0x15a'));socialManager[_0x205e('0x15e')](_0x39ff56,()=>_0x372a64(_0x2082b2,0x0));}else{if(_0xc71db){let _0x483871=![];const _0x547232=_0xc71db[_0x205e('0x15f')]['originalResponse'];for(let _0x86cacf=0x0;_0x86cacf<_0x547232[_0x205e('0xe7')];_0x86cacf++){const _0x37dd56=_0x547232[_0x86cacf];if(!_0x37dd56[_0x205e('0x160')]){console[_0x205e('0x161')]('CONSUME\x20'+_0x37dd56[_0x205e('0x162')]);gBase[_0x205e('0x159')][_0x205e('0x163')](_0x37dd56[_0x205e('0x162')],(_0x39ff56,_0xc71db)=>{console[_0x205e('0x15b')]('consume\x20err\x20',_0x39ff56);console['info'](_0x205e('0x164'),_0xc71db);if(_0x39ff56){gameAnalytics['sendServerError'](_0x39ff56,_0x205e('0x163'));socialManager[_0x205e('0x15e')](_0x39ff56,()=>_0x372a64(_0x2082b2,0x0));_0x483871=!![];}else{_0x2082b2(_0x37dd56['itemId']['substring'](0x0,_0x37dd56[_0x205e('0x165')][_0x205e('0xe7')]-_0x599147['length']));}});}if(_0x483871)return;}if(_0x547232[_0x205e('0xe7')]===_0x266505)_0x372a64(_0x2082b2,_0x117a01+_0x266505);}}});}return{'initVK':function(_0x1b7d28){_0x11ce99=_0x1b7d28;this['createGBase']();if(typeof VK!==_0x205e('0xce'))VK[_0x205e('0x166')](function(){var _0x198c25=document[_0x205e('0x167')](_0x205e('0x168'));VK[_0x205e('0x169')](_0x205e('0x16a'),_0x3a7819=>{_0x372a64(_0x48ba9d=>{gameInit[_0x205e('0x16b')][_0x205e('0x16c')](_0x48ba9d);});});});_0x1614bf();},'setAllGetParams'(_0x2d2db8){_0x49a497=_0x2d2db8;},'playRewardedAd':function(_0x341a62){_0x44882e(_0x341a62);},'isAuthorizing'(){return _0x47dc65;},'reconnect'(_0x8ec55d){this[_0x205e('0x16d')]();this[_0x205e('0x16e')](()=>{gBase['profile'][_0x205e('0x16f')](_0x336a4b=>{if(_0x336a4b)gameAnalytics[_0x205e('0x15d')](_0x336a4b,_0x205e('0x16f'));else _0x8ec55d();});});},'authorize'(_0x5863c7){if(!_0xacc301()||!_0x4cb379())_0x5863c7();else{_0x47dc65=!![];console[_0x205e('0x14d')]('Authorize:\x20'+_0xacc301());gBase[_0x205e('0x170')][_0x205e('0x171')](_0xacc301(),_0x4cb379(),_0x4d1096=>{_0x47dc65=![];if(_0x4d1096)gameAnalytics['sendServerError'](_0x4d1096,'authWebVk');_0x5863c7();});}},'checkPurchases'(_0x3b19f0){_0x372a64(_0x3b19f0);},'purchase'(_0x362abf){var _0x5b4888={'type':_0x205e('0x172'),'item':_0x362abf+_0x599147};VK[_0x205e('0x173')]('showOrderBox',_0x5b4888);},'getPriceLabel'(_0x3dc421){const _0x27a40c=VisualData['getPaymentInfoById'](_0x3dc421);return _0x27a40c?_0x27a40c[_0x205e('0x174')]*0x7+_0x205e('0x175'):null;}};}function SocialOK(){let _0x475695;let _0x232eed=[];let _0x3e9646=null;const _0x323544='.ok';let _0x44f017=![];let _0xbb535d=null;let _0x30ba1d=null;let _0xe9984c=null;let _0x2ad810=null;let _0x4f52d4=null;let _0x4fef4f;let _0x56dfa4;function _0x108c69(){}function _0x197602(_0x187dec,_0x401055){_0x30ba1d=function onAdsReady(){_0x232eed[_0x205e('0xda')](0x1);if(_0x401055)_0x401055(_0x187dec);_0x30ba1d=null;};_0xbb535d=function onNoAds(){console[_0x205e('0x150')](_0x205e('0x151'));if(_0x187dec&&_0x187dec[_0x205e('0x151')])_0x187dec[_0x205e('0x151')]();_0xbb535d=null;};FAPI[_0x205e('0x176')](_0x205e('0x177'));}function _0x50d37c(_0x2e0a2a){if(_0x2e0a2a['onStarted']){_0xe9984c=function(){_0x2e0a2a[_0x205e('0x153')]();_0xe9984c=null;};}if(_0x2e0a2a[_0x205e('0x154')]){_0x2ad810=function(){_0x2e0a2a[_0x205e('0x154')]();_0x2ad810=null;};}if(_0x232eed['length']>0x0){_0x232eed['pop']();FAPI[_0x205e('0x176')](_0x205e('0x178'));_0x197602();}else _0x197602(_0x2e0a2a,_0x50d37c);}function _0x4e79b3(_0x2eea16,_0x14caef){const _0x2c37fa=0x14;_0x14caef=_0x14caef||0x0;gBase[_0x205e('0x159')][_0x205e('0x179')](_0x14caef,_0x2c37fa,(_0x578db6,_0x3cdfbb)=>{console[_0x205e('0x15b')](_0x205e('0x15c'),_0x578db6);console[_0x205e('0x15b')]('response\x20',_0x3cdfbb);if(_0x578db6){gameAnalytics[_0x205e('0x15d')](_0x578db6,_0x205e('0x179'));socialManager[_0x205e('0x15e')](_0x578db6,()=>_0x4e79b3(_0x2eea16,0x0));}else{if(_0x3cdfbb){let _0x22014a=![];const _0x4b78a8=_0x3cdfbb[_0x205e('0x15f')]['originalResponse'];for(let _0x183b1d=0x0;_0x183b1d<_0x4b78a8['length'];_0x183b1d++){const _0xaef756=_0x4b78a8[_0x183b1d];if(!_0xaef756[_0x205e('0x160')]){console[_0x205e('0x161')](_0x205e('0x17a')+_0xaef756[_0x205e('0x162')]);gBase[_0x205e('0x159')][_0x205e('0x17b')](_0xaef756[_0x205e('0x162')],(_0x578db6,_0x3cdfbb)=>{console[_0x205e('0x15b')](_0x205e('0x17c'),_0x578db6);console['info'](_0x205e('0x164'),_0x3cdfbb);if(_0x578db6){gameAnalytics[_0x205e('0x15d')](_0x578db6,'okConsumePurchase');socialManager['checkAuthStatus'](_0x578db6,()=>_0x4e79b3(_0x2eea16,0x0));_0x22014a=!![];}else{_0x2eea16(_0xaef756['itemId'][_0x205e('0x17d')](0x0,_0xaef756[_0x205e('0x165')][_0x205e('0xe7')]-_0x323544['length']));}});}if(_0x22014a)return;}if(_0x4b78a8['length']===_0x2c37fa)_0x4e79b3(_0x2eea16,_0x14caef+_0x2c37fa);}}});}return{'initOK':function(_0x3ada1b){_0x475695=_0x3ada1b;this[_0x205e('0x16d')]();if(typeof FAPI!==_0x205e('0xce')){var _0x2f4011=FAPI[_0x205e('0x17e')][_0x205e('0x17f')]();console[_0x205e('0x15b')](_0x205e('0x180'),_0x2f4011);_0x4fef4f=_0x2f4011;FAPI[_0x205e('0x166')](_0x2f4011[_0x205e('0x181')],_0x2f4011[_0x205e('0x182')],function(){window[_0x205e('0x183')]=function(_0x30d3bb,_0x25be9c,_0xf369b8){console[_0x205e('0x161')](_0x205e('0x184')+_0x30d3bb+_0x205e('0x185')+_0x25be9c+_0x205e('0x186'),_0xf369b8);switch(_0x30d3bb){case _0x205e('0x187'):if(_0x25be9c==='ok'){if(_0x4f52d4){_0x4f52d4();_0x4f52d4=null;}}break;case _0x205e('0x188'):if(_0x25be9c==='ok'&&_0xf369b8){const _0x3cc621=_0xf369b8[_0x205e('0x189')](',');if(_0x3cc621&&_0x3cc621[_0x205e('0xe7')]>0x0)gameInit[_0x205e('0x18a')](_0x3cc621);}break;case _0x205e('0x18b'):if(_0x25be9c==='ok'){_0x4e79b3(_0x1f9774=>{gameInit[_0x205e('0x16b')][_0x205e('0x16c')](_0x1f9774);});}break;case _0x205e('0x177'):switch(_0xf369b8){case _0x205e('0x18c'):if(_0x30ba1d)_0x30ba1d();break;case _0x205e('0x18d'):if(_0xe9984c)_0xe9984c();break;default:if(_0xbb535d)_0xbb535d();break;}break;case _0x205e('0x178'):if(_0x25be9c==='ok'){switch(_0xf369b8){case'complete':if(_0x2ad810)_0x2ad810();break;}}else{if(_0xbb535d)_0xbb535d();}break;}};},function(_0x119509){alert(_0x205e('0x18e'));});}_0x197602();},'openLikes'(){FAPI['UI']['showInvite'](_0x205e('0x18f'));},'setAllGetParams'(_0x4da8e7){_0x3e9646=_0x4da8e7;},'playRewardedAd':function(_0x2258ed){_0x50d37c(_0x2258ed);},'isAuthorizing'(){return _0x44f017;},'authorize'(_0x4a151b){if(!_0x4fef4f){console['log'](_0x205e('0x190'));_0x56dfa4=_0x4a151b;}else{_0x44f017=!![];gBase[_0x205e('0x170')][_0x205e('0x191')](_0x4fef4f[_0x205e('0x192')],_0x4fef4f[_0x205e('0x193')],_0x4fef4f[_0x205e('0x194')],_0x3c7228=>{_0x44f017=![];console['info'](_0x205e('0x195'),_0x3c7228);if(_0x3c7228)gameAnalytics[_0x205e('0x15d')](_0x3c7228,_0x205e('0x191'));_0x4a151b();});}},'checkPurchases'(_0x2980f9){_0x4e79b3(_0x2980f9);},'purchase'(_0x52f5a0){FAPI['UI'][_0x205e('0x18b')](_0x205e('0x196'),_0x205e('0x197'),_0x52f5a0+_0x323544,this['getPrice'](_0x52f5a0),null,null,'ok',_0x205e('0x198'));},'getPrice'(_0x52a80b){const _0x1ad8e8=VisualData[_0x205e('0x199')](_0x52a80b);return _0x1ad8e8?_0x1ad8e8[_0x205e('0x19a')]:null;},'getPriceLabel'(_0x14b157){const _0x5bb728=this[_0x205e('0x19b')](_0x14b157);return _0x5bb728?_0x5bb728+_0x205e('0x175'):0x0;},'postMessage'(_0x4adede){_0x4f52d4=_0x4adede;FAPI['UI']['postMediatopic']({'media':[{'type':'text','text':_0x205e('0x19c')}]},![]);}};}function SocialFB(){let _0x25eed1;let _0x4ccea9=[];let _0xf2fc2d=null;function _0x3ee759(_0x407e75,_0x356a1e){if(typeof admanInit===_0x205e('0xce')){if(_0x407e75&&_0x407e75['onAdBlock'])_0x407e75[_0x205e('0x14c')]();return;}admanInit({'user_id':null,'app_id':_0x25eed1,'type':_0x205e('0x14f')},_0x1460cb,_0x65ddae);function _0x1460cb(_0x313603){_0x4ccea9['push'](_0x313603);if(_0x356a1e)_0x356a1e(_0x407e75);}function _0x65ddae(){console[_0x205e('0x150')](_0x205e('0x151'));if(_0x407e75&&_0x407e75[_0x205e('0x151')])_0x407e75['onNoAds']();}}function _0x556b48(_0x258a52){if(_0x4ccea9[_0x205e('0xe7')]>0x0){adman=_0x4ccea9[_0x205e('0x152')]();if(_0x258a52[_0x205e('0x153')]){adman[_0x205e('0x153')](function(){_0x258a52[_0x205e('0x153')]();});}if(_0x258a52['onCompleted']){adman[_0x205e('0x154')](function(){_0x258a52['onCompleted']();});}if(_0x258a52[_0x205e('0x155')]){adman[_0x205e('0x155')](function(){_0x258a52[_0x205e('0x155')]();});}if(_0x258a52[_0x205e('0x156')]){adman['onClicked'](function(){_0x258a52[_0x205e('0x156')]();});}adman[_0x205e('0x147')](_0x205e('0x157'));_0x3ee759();}else _0x3ee759(_0x258a52,_0x556b48);}return{'initFB':function(_0x13f842){_0x25eed1=_0x13f842;gBase=new Gbase[(_0x205e('0x19d'))](CURRENT_ENVIRONMENT[_0x205e('0x145')],CURRENT_ENVIRONMENT[_0x205e('0x19e')],CURRENT_ENVIRONMENT['hmac'],CURRENT_ENVIRONMENT[_0x205e('0x19f')],CURRENT_ENVIRONMENT[_0x205e('0x1a0')]);},'setAllGetParams'(_0x233943){_0xf2fc2d=_0x233943;},'playRewardedAd':function(_0x29a35f){console['error'](_0x205e('0x1a1'));},'authorize'(_0x28d88a){if(window['fbAsyncInit']){_0x28d88a();return;}window[_0x205e('0x1a2')]=function(){FB[_0x205e('0x166')]({'appId':_0x25eed1,'cookie':!![],'xfbml':!![],'version':_0x205e('0x1a3')});FB[_0x205e('0x1a4')][_0x205e('0x1a5')]();function _0x48eb3(_0x1f5c20){var _0x448515=_0x1f5c20['authResponse'][_0x205e('0x1a6')];gBase['account'][_0x205e('0x1a7')](_0x448515,_0x5f50f5=>{if(_0x5f50f5)gameAnalytics[_0x205e('0x15d')](_0x5f50f5,'authFb');_0x28d88a();});}FB['getLoginStatus'](function(_0x1c5d78){if(_0x1c5d78[_0x205e('0x1a8')]===_0x205e('0x1a9')){_0x48eb3(_0x1c5d78);}else{FB[_0x205e('0x1aa')](function(_0x1c5d78){_0x48eb3(_0x1c5d78);},{'scope':_0x205e('0x1ab')});}});};(function(_0x2eb225,_0x240c38,_0x329b96){var _0x49e8d9,_0x293ab5=_0x2eb225['getElementsByTagName'](_0x240c38)[0x0];if(_0x2eb225[_0x205e('0x167')](_0x329b96)){return;}_0x49e8d9=_0x2eb225['createElement'](_0x240c38);_0x49e8d9['id']=_0x329b96;_0x49e8d9['src']=_0x205e('0x1ac');_0x293ab5['parentNode'][_0x205e('0x1ad')](_0x49e8d9,_0x293ab5);}(document,_0x205e('0x1ae'),_0x205e('0x1af')));}};};function SocialFB_Instant(){let _0x558fbd;let _0x398d6a=[];let _0x15fbe8=null;function _0x11b598(_0x330acb,_0x5b4674){if(typeof admanInit===_0x205e('0xce')){if(_0x330acb&&_0x330acb[_0x205e('0x14c')])_0x330acb[_0x205e('0x14c')]();return;}admanInit({'user_id':null,'app_id':_0x558fbd,'type':'rewarded'},_0x1a4c2b,_0x5d9a0c);function _0x1a4c2b(_0x32449a){_0x398d6a['push'](_0x32449a);if(_0x5b4674)_0x5b4674(_0x330acb);}function _0x5d9a0c(){console[_0x205e('0x150')](_0x205e('0x151'));if(_0x330acb&&_0x330acb[_0x205e('0x151')])_0x330acb[_0x205e('0x151')]();}}function _0x1cb4aa(_0x3f58ca){if(_0x398d6a['length']>0x0){adman=_0x398d6a[_0x205e('0x152')]();if(_0x3f58ca[_0x205e('0x153')]){adman[_0x205e('0x153')](function(){_0x3f58ca[_0x205e('0x153')]();});}if(_0x3f58ca['onCompleted']){adman[_0x205e('0x154')](function(){_0x3f58ca['onCompleted']();});}if(_0x3f58ca[_0x205e('0x155')]){adman[_0x205e('0x155')](function(){_0x3f58ca[_0x205e('0x155')]();});}if(_0x3f58ca['onClicked']){adman['onClicked'](function(){_0x3f58ca[_0x205e('0x156')]();});}adman[_0x205e('0x147')]('preroll');_0x11b598();}else _0x11b598(_0x3f58ca,_0x1cb4aa);}return{'initFB':function(_0x58bc99){_0x558fbd=_0x58bc99;gBase=new Gbase[(_0x205e('0x19d'))](CURRENT_ENVIRONMENT['name'],CURRENT_ENVIRONMENT[_0x205e('0x19e')],CURRENT_ENVIRONMENT[_0x205e('0x1b0')],CURRENT_ENVIRONMENT[_0x205e('0x19f')],CURRENT_ENVIRONMENT[_0x205e('0x1a0')]);},'setAllGetParams'(_0x2e1d6c){_0x15fbe8=_0x2e1d6c;},'playRewardedAd':function(_0x3c3645){console[_0x205e('0x150')](_0x205e('0x1a1'));},'authorize'(_0x45b546){_0x45b546();}};};const GAME_ENVIRONMENTS={'vk_production':{'name':_0x205e('0x1b1'),'env':_0x205e('0x1b2'),'hmac':_0x205e('0x1b3'),'platform':_0x205e('0x1b4'),'version':'0.0.1'},'vk_dev':{'name':'rmg-vkfish','env':_0x205e('0x1b5'),'hmac':'mE2ibFZ1tPCDOcdc6n0XB7I4','platform':'webvk','version':_0x205e('0x1b6')},'ok_production':{'name':_0x205e('0x1b1'),'env':_0x205e('0x1b2'),'hmac':_0x205e('0x1b3'),'platform':_0x205e('0x1b7'),'version':_0x205e('0x1b6')},'ok_dev':{'name':_0x205e('0x1b1'),'env':_0x205e('0x1b5'),'hmac':_0x205e('0x1b8'),'platform':_0x205e('0x1b7'),'version':_0x205e('0x1b6')}};const DEFAULT_PLATFORM=_0x205e('0x1b9');const DEFAULT_ENVIRONMENT=_0x205e('0x1ba');let AllGetParams=null;function parseGetParams(){if(!AllGetParams){const _0x3e4d85={};var _0x314626=window[_0x205e('0x1bb')][_0x205e('0x1bc')];if(_0x314626&&_0x314626[_0x205e('0xe7')]>0x0){_0x314626=_0x314626[_0x205e('0x17d')](0x1);const _0x3dace6=_0x314626['split']('&');for(let _0x195b37=0x0;_0x195b37<_0x3dace6['length'];_0x195b37++){const _0x5bb235=_0x3dace6[_0x195b37][_0x205e('0x189')]('=');if(_0x5bb235[0x0][_0x205e('0x1bd')](_0x205e('0x1be')))_0x3e4d85[_0x5bb235[0x0][_0x205e('0x17d')](0x4)]=_0x5bb235[0x1];else _0x3e4d85[_0x5bb235[0x0]]=_0x5bb235[0x1];}}AllGetParams=_0x3e4d85;}return AllGetParams;}var socialManager;parseGetParams();if(!AllGetParams[_0x205e('0x1bf')]('game_platform')){console[_0x205e('0x150')](_0x205e('0x1c0'));AllGetParams[_0x205e('0x1c1')]=DEFAULT_PLATFORM;}if(!AllGetParams[_0x205e('0x1bf')](_0x205e('0x1c2'))){console[_0x205e('0x150')](_0x205e('0x1c3'));AllGetParams[_0x205e('0x1c2')]=DEFAULT_ENVIRONMENT;}const CURRENT_ENVIRONMENT=GAME_ENVIRONMENTS[AllGetParams[_0x205e('0x1c2')]];const TEST_MODE=AllGetParams[_0x205e('0x1c4')];{switch(AllGetParams[_0x205e('0x1c1')]){case'vk':socialManager=new SocialVK();socialManager['initialize']=function(_0x1f36f5){socialManager['initVK'](_0x1f36f5[_0x205e('0x1c5')]);};break;case'ok':socialManager=new SocialOK();socialManager[_0x205e('0x1c6')]=function(_0x314dad){socialManager[_0x205e('0x1c7')](_0x314dad['ok_app_id']);};break;case'fb':socialManager=new SocialFB();socialManager[_0x205e('0x1c6')]=function(_0x5ea682){socialManager[_0x205e('0x1c8')](_0x5ea682[_0x205e('0x1c9')]);};break;case _0x205e('0x1b9'):socialManager=new SocialFB_Instant();socialManager[_0x205e('0x1c6')]=function(_0x4a69eb){socialManager[_0x205e('0x1c8')](_0x4a69eb[_0x205e('0x1c9')]);};FBInstant[_0x205e('0x1ca')]()[_0x205e('0x1cb')](function(){console[_0x205e('0x14d')](_0x205e('0x1cc'));FBInstant[_0x205e('0x1cd')]()['then'](function(){var _0x195bc2=FBInstant[_0x205e('0x1ce')][_0x205e('0x1cf')]();var _0x4bf46a=FBInstant[_0x205e('0x1ce')][_0x205e('0x1d0')]();var _0x125c1f=FBInstant[_0x205e('0x1d1')][_0x205e('0x1d2')]();var _0x268c70=FBInstant[_0x205e('0x1d1')][_0x205e('0x1d3')]();var _0x451806=FBInstant[_0x205e('0x1d1')][_0x205e('0x1cf')]();console[_0x205e('0x14d')](_0x205e('0x1d4')+_0x451806);game[_0x205e('0x147')]();});});break;}}socialManager[_0x205e('0x16d')]=function(){gBase=new Gbase[(_0x205e('0x19d'))](CURRENT_ENVIRONMENT['name'],CURRENT_ENVIRONMENT[_0x205e('0x19e')],CURRENT_ENVIRONMENT[_0x205e('0x1b0')],CURRENT_ENVIRONMENT[_0x205e('0x19f')],CURRENT_ENVIRONMENT[_0x205e('0x1a0')]);};socialManager[_0x205e('0x1d5')]=function(_0x1ef00b){this[_0x205e('0x16d')]();this[_0x205e('0x16e')](()=>{gBase['profile']['getp'](_0x5742d2=>{if(_0x5742d2)gameAnalytics[_0x205e('0x15d')](_0x5742d2,_0x205e('0x16f'));else _0x1ef00b();});});},socialManager[_0x205e('0x15e')]=function(_0x213f78,_0x40737b){if(_0x213f78['code']==0x136&&!socialManager[_0x205e('0x1d6')]()){console['log'](_0x205e('0x1d7'));socialManager[_0x205e('0x1d5')](_0x40737b);}};let activeButtonForTutorial=null;const invisibleButton={};function lockGuiAtButton(_0x47eb45){activeButtonForTutorial=_0x47eb45;}function lockGuiEverything(){activeButtonForTutorial=invisibleButton;}function unlockGUI(){activeButtonForTutorial=null;}class BasicButton extends Phaser[_0x205e('0x1d8')][_0x205e('0x1d9')]{constructor(_0x4a50b4,_0xbf793c,_0xc841f0){_0xbf793c['x']=_0xbf793c['x']||0x0;_0xbf793c['y']=_0xbf793c['y']||0x0;if(!_0xbf793c['scene']){console['log'](_0x205e('0x1da'));return;}if(!_0xbf793c[_0x205e('0x1db')]){console[_0x205e('0x14d')](_0x205e('0x1dc'));return;}if(!_0xbf793c['up']){_0xbf793c['up']=0x0;}if(!_0xbf793c['down']){_0xbf793c[_0x205e('0x1dd')]=_0xbf793c['up'];}if(!_0xbf793c[_0x205e('0x1de')]){_0xbf793c[_0x205e('0x1de')]=_0xbf793c['up'];}const _0x476ceb=VisualData[_0x205e('0x140')][_0xbf793c[_0x205e('0x1db')]];var _0x448346,_0x1595d5;if(_0xbf793c[_0x205e('0x1df')]){_0x448346=_0xbf793c[_0x205e('0x1db')]+_0x205e('0x1e0');_0x1595d5=VisualData[_0x205e('0x140')][_0x448346];}if(_0x1595d5&&_0x1595d5[_0x205e('0x1e1')]===UnnyObjectType[_0x205e('0x99')]){super(_0xbf793c[_0x205e('0x1e2')],_0xbf793c['x'],_0xbf793c['y'],null);}else{if(_0x476ceb&&GameData[_0x205e('0x1e3')](_0x476ceb)){super(_0xbf793c[_0x205e('0x1e2')],_0xbf793c['x'],_0xbf793c['y'],_0x205e('0x1e4'),_0x476ceb[_0x205e('0x1e5')]);}else{super(_0xbf793c[_0x205e('0x1e2')],_0xbf793c['x'],_0xbf793c['y'],_0xbf793c[_0x205e('0x1db')],_0xbf793c['up']);}}this['config']=_0xbf793c;this[_0x205e('0x1e6')]=_0xc841f0;_0xbf793c[_0x205e('0x1e2')]['add'][_0x205e('0x1e7')](this);this[_0x205e('0xd3')]=_0x4a50b4;if(_0x4a50b4)_0x4a50b4[_0x205e('0xd4')](this);this[_0x205e('0x1e8')]=this;if(_0xbf793c[_0x205e('0x1df')]){if(_0x1595d5[_0x205e('0x1e1')]===UnnyObjectType[_0x205e('0x99')]){this[_0x205e('0x1e8')]=_0xbf793c[_0x205e('0x1e2')][_0x205e('0xd4')][_0x205e('0x1e9')](_0xbf793c['x'],_0xbf793c['y'],{'name':_0x448346,'width':_0xbf793c[_0x205e('0x1df')],'height':this[_0x205e('0xdf')]})[_0x205e('0xd9')](0.5);this['visible']=![];this[_0x205e('0x1ea')]=!![];if(_0x4a50b4)_0x4a50b4[_0x205e('0xd4')](this[_0x205e('0x1e8')]);}}if(!_0xbf793c['scale'])_0xbf793c[_0x205e('0x148')]=0x1;if(this[_0x205e('0x1eb')][_0x205e('0x1ec')])this[_0x205e('0x1ed')](0x1);this['setScale'](_0xbf793c[_0x205e('0x148')]);this[_0x205e('0x1e8')][_0x205e('0x1ee')]();this['clickable']['on'](_0x205e('0x1ef'),this[_0x205e('0x1f0')],this);this[_0x205e('0x1e8')]['on'](_0x205e('0x1f1'),this[_0x205e('0x1f2')],this);this[_0x205e('0x1e8')]['on'](_0x205e('0x1f3'),this[_0x205e('0x1f4')],this);this[_0x205e('0x1e8')]['on']('pointerout',this[_0x205e('0x1f5')],this);}[_0x205e('0x1f6')](_0xa5f56c){if(!this[_0x205e('0x1ea')])super['setVisible'](_0xa5f56c);else this[_0x205e('0x1e8')][_0x205e('0x1f6')](_0xa5f56c);}[_0x205e('0x1f7')](){return this[_0x205e('0x1eb')][_0x205e('0x1ec')]?this[_0x205e('0xd3')]:this[_0x205e('0x1e8')];}['isLocked'](){return activeButtonForTutorial&&activeButtonForTutorial!==this&&!this[_0x205e('0x1f8')]||this[_0x205e('0x1f9')];}['setButtonLocked'](_0x53316b){this[_0x205e('0x1f9')]=_0x53316b;setLockedColor(this[_0x205e('0x1e8')],_0x53316b);}[_0x205e('0x1f0')](){if(this[_0x205e('0x1fa')]())return;this[_0x205e('0x1dd')]=!![];if(this[_0x205e('0x1e6')]){this['setScale'](0.95*this[_0x205e('0x1eb')]['scale']);audioManager[_0x205e('0x1fb')]();}}[_0x205e('0x1f4')](){if(this[_0x205e('0x1fa')]())return;}['onOut'](){if(this[_0x205e('0x1fa')]())return;this[_0x205e('0x1dd')]=![];if(this[_0x205e('0x1e6')])this[_0x205e('0xd8')](this[_0x205e('0x1eb')][_0x205e('0x148')]);}['_defaultScale'](_0x542604,_0x52ad68){if(this['nineActive'])this[_0x205e('0x1e8')][_0x205e('0xd8')](_0x542604,_0x52ad68);else super[_0x205e('0xd8')](_0x542604,_0x52ad68);}[_0x205e('0xd8')](_0x49d9f3,_0x2bec0d){if(this['config']['scale_parent']){this['group'][_0x205e('0xd8')](_0x49d9f3,_0x2bec0d);}else this[_0x205e('0x1ed')](_0x49d9f3,_0x2bec0d);}[_0x205e('0x1f2')](){if(this[_0x205e('0x1fa')]())return;if(this[_0x205e('0x1dd')]&&this[_0x205e('0x1e6')]){this[_0x205e('0x1dd')]=![];this['setScale'](this[_0x205e('0x1eb')][_0x205e('0x148')]);this[_0x205e('0x1e6')]();}}}class ButtonWithText extends BasicButton{constructor(_0x4c6bc5,_0x4f3554,_0x4c6563){super(_0x4c6bc5,_0x4f3554,_0x4c6563);const _0x347701=0x64*GlobalScale;if(_0x4f3554[_0x205e('0x1fc')]){const _0x2ebc3f=_0x4f3554[_0x205e('0x1e2')]['add'][_0x205e('0x1fd')](this['x']/localScale-_0x4f3554['minWidth']/0x2*GlobalScale+_0x347701,this['y']/localScale,_0x4f3554[_0x205e('0x1fc')]);_0x4c6bc5[_0x205e('0xd4')](_0x2ebc3f);this[_0x205e('0x1fe')]=_0x4f3554[_0x205e('0x1e2')][_0x205e('0xd4')][_0x205e('0x1ff')](_0x2ebc3f['x']/localScale+_0x347701,this['y']/localScale,_0x4f3554[_0x205e('0x1fe')],DefaultFont)['setOrigin'](0x0,0.5)[_0x205e('0xd7')](WinDefaultDepth+0x6e);}else{this[_0x205e('0x1fe')]=_0x4f3554[_0x205e('0x1e2')][_0x205e('0xd4')][_0x205e('0x1ff')](this['x']/localScale,this['y']/localScale,_0x4f3554[_0x205e('0x1fe')],DefaultFont)['setOrigin'](0.5,0.5)['setDepth'](WinDefaultDepth+0x6e);}_0x4c6bc5[_0x205e('0xd4')](this[_0x205e('0x1fe')]);}[_0x205e('0xd8')](_0x2e82b7,_0x42aa37){super[_0x205e('0xd8')](_0x2e82b7,_0x42aa37);if(this[_0x205e('0x1fe')])this['caption'][_0x205e('0xd8')](_0x2e82b7,_0x42aa37);}}class AnimationBase{constructor(_0x59488b,_0x2a3a4a,_0x6d6bca,_0x191db3){this[_0x205e('0xd3')]=_0x59488b;this[_0x205e('0x1e6')]=_0x6d6bca;this['time']=0x0;this[_0x205e('0x200')]=_0x191db3||0x0;this[_0x205e('0x201')]=_0x2a3a4a;if(_0x59488b){this['x']=_0x59488b['x']/localScale;this['y']=_0x59488b['y']/localScale;this[_0x205e('0x202')]=_0x59488b[_0x205e('0x202')]/ imageSizeLocalScale;this[_0x205e('0x203')]=_0x59488b[_0x205e('0x203')]/ imageSizeLocalScale;}}[_0x205e('0x204')](){this[_0x205e('0x205')]=!![];this['playFrame'](0x0);}[_0x205e('0x206')](){return this[_0x205e('0x205')]?0x1-this[_0x205e('0x207')]/this[_0x205e('0x201')]:this['time']/this[_0x205e('0x201')];}[_0x205e('0x208')](){}[_0x205e('0x209')](){this[_0x205e('0x20a')]=!![];}[_0x205e('0x20b')](_0x52ab34){if(this[_0x205e('0x20a')])return!![];this['deltaTime']=_0x52ab34;this[_0x205e('0x207')]+=_0x52ab34;let _0x4fd6cb=![];if(this[_0x205e('0x207')]>=this[_0x205e('0x201')]){this[_0x205e('0x207')]=this[_0x205e('0x201')];_0x4fd6cb=!![];}this[_0x205e('0x208')]();if(_0x4fd6cb){this[_0x205e('0x20c')]();return!![];}else return![];}[_0x205e('0x20c')](){if(this[_0x205e('0x1e6')])this['callback']();}}class AnimationChangeAlpha extends AnimationBase{constructor(_0x323c8f,_0x4cacab,_0x2f2ec6,_0x4a09bc){super(_0x323c8f,_0x2f2ec6,_0x4a09bc);this[_0x205e('0x20d')]=_0x323c8f[_0x205e('0x20e')];this[_0x205e('0x20f')]=_0x4cacab;}[_0x205e('0x208')](){const _0x46fd53=this['getTime']();this['group'][_0x205e('0x20e')]=this['alphaStart']*(0x1-_0x46fd53)+this[_0x205e('0x20f')]*_0x46fd53;}}class AnimationWinOpen extends AnimationBase{constructor(_0x1a77cd,_0x5141e2){super(_0x1a77cd,0.2,_0x5141e2);this[_0x205e('0xeb')]=Math['PI']*0.65;this[_0x205e('0x210')]=Math['sin'](this[_0x205e('0xeb')]);this[_0x205e('0x148')]=0x1;this[_0x205e('0x20b')](0x0);}['_playAnimation'](){this[_0x205e('0xd3')][_0x205e('0x20e')]=this[_0x205e('0x206')]();this[_0x205e('0xd3')][_0x205e('0xd8')](Math['sin'](this[_0x205e('0xd3')]['alpha']*this['angle'])/this[_0x205e('0x210')]*this[_0x205e('0x148')]);}}class AnimationButtonShow extends AnimationWinOpen{constructor(_0x5bc71b,_0x515c5c){super(_0x5bc71b,_0x515c5c);this[_0x205e('0x148')]=_0x5bc71b[_0x205e('0x1eb')][_0x205e('0x148')];this[_0x205e('0x201')]=0.5;}}class MoveToPoint extends AnimationBase{constructor(_0x6e02f1,_0xbdc346,_0x4d57e5,_0xc02921){super(_0x6e02f1,_0x4d57e5,_0xc02921);this['dx']=_0xbdc346['x']-this['x'];this['dy']=_0xbdc346['y']-this['y'];}['_playAnimation'](){const _0x427227=this[_0x205e('0x206')]();this['group'][_0x205e('0xe8')](this['x']+this['dx']*_0x427227,this['y']+this['dy']*_0x427227);}}class JumpShieldAnimation extends AnimationBase{constructor(_0x3c11fe,_0x2c55b8,_0x152dd5,_0x28d891){super(_0x3c11fe,_0x152dd5,_0x28d891);this[_0x205e('0x211')]=_0x2c55b8;}[_0x205e('0x208')](){const _0x2dda25=this[_0x205e('0x206')]();const _0x51c72b=Math[_0x205e('0x212')](Math['PI']*_0x2dda25);this[_0x205e('0xd3')][_0x205e('0x213')](this['y']-this[_0x205e('0x211')][_0x205e('0xdf')]*_0x51c72b);this[_0x205e('0xd3')][_0x205e('0xd8')](0x1+_0x51c72b*this[_0x205e('0x211')][_0x205e('0x148')]);}}class AnimationInfinite extends AnimationBase{constructor(_0x440ba0,_0x3a7705,_0x12df3b){super(_0x440ba0,Number['MAX_VALUE'],_0x12df3b);this[_0x205e('0x214')]=_0x3a7705;}[_0x205e('0x206')](){return this[_0x205e('0x207')]/this[_0x205e('0x214')]-Math[_0x205e('0x215')](this['time']/this[_0x205e('0x214')]);}}class JumpFishAnimation extends AnimationInfinite{constructor(_0x1612ef,_0x559aba,_0x1c4535,_0x219ad9){super(_0x1612ef,_0x1c4535,_0x219ad9);this[_0x205e('0x211')]=_0x559aba;}[_0x205e('0x208')](){const _0x431852=this[_0x205e('0x206')]();const _0x4a3232=Math[_0x205e('0x212')](Math['PI']*_0x431852);this[_0x205e('0xd3')][_0x205e('0x213')](this['y']-this[_0x205e('0x211')][_0x205e('0xdf')]*_0x4a3232);this[_0x205e('0xd3')]['setScale']((0x1+_0x4a3232*this[_0x205e('0x211')][_0x205e('0x148')])*this[_0x205e('0x202')]);}}class FallFishAnimation extends AnimationInfinite{constructor(_0x1f190b,_0x110ea2,_0x3438b3,_0x408b92){super(_0x1f190b,_0x3438b3,_0x408b92);this[_0x205e('0x211')]=_0x110ea2;}['_playAnimation'](){const _0x3b61a0=this[_0x205e('0x206')]();const _0x501830=Math['sin'](Math['PI']*_0x3b61a0);this[_0x205e('0xd3')][_0x205e('0x213')](this['y']-this[_0x205e('0x211')][_0x205e('0xdf')]*(0x1-_0x501830));this[_0x205e('0xd3')][_0x205e('0xd8')]((0x1+_0x501830*this['params']['scale'])*this['scaleX'],(0x1-this[_0x205e('0x211')][_0x205e('0x148')]+this[_0x205e('0x211')][_0x205e('0x148')]*(0x1-_0x501830))*this[_0x205e('0x203')]);}[_0x205e('0x209')](){super[_0x205e('0x209')]();this[_0x205e('0xd3')][_0x205e('0x213')](this['y']);this[_0x205e('0xd3')]['setScale'](this[_0x205e('0x202')],this['scaleY']);}}class RandomJumpRotation extends AnimationBase{constructor(_0x5ca958,_0x3dfc75,_0x4f7aad,_0x11d8ea){super(_0x5ca958,_0x4f7aad,_0x11d8ea);this[_0x205e('0x211')]=_0x3dfc75;}[_0x205e('0x208')](){const _0x18a5d8=this['getTime']();this[_0x205e('0xd3')][_0x205e('0xe8')](this[_0x205e('0xd3')]['x']/localScale+this[_0x205e('0x211')]['vx']*_0x18a5d8,this[_0x205e('0xd3')]['y']/localScale+this[_0x205e('0x211')]['vy']*_0x18a5d8);this[_0x205e('0xd3')][_0x205e('0xeb')]+=this[_0x205e('0x211')][_0x205e('0xeb')]*_0x18a5d8;this[_0x205e('0x211')]['vy']+=this[_0x205e('0x211')]['g']*_0x18a5d8;}}class MoveToPointExtra extends MoveToPoint{constructor(_0x3d7ce3,_0x525d31,_0x57c056,_0x281edf,_0x9ad62a){super(_0x3d7ce3,_0x525d31,_0x281edf,_0x9ad62a);this[_0x205e('0x210')]=0x1-_0x57c056;this[_0x205e('0xeb')]=Math['PI']-Math[_0x205e('0x216')](this[_0x205e('0x210')]);}['_playAnimation'](){const _0x308f08=Math['sin'](this['getTime']()*this[_0x205e('0xeb')])/this[_0x205e('0x210')];this[_0x205e('0xd3')][_0x205e('0xe8')](this['x']+this['dx']*_0x308f08,this['y']+this['dy']*_0x308f08);}}class MoveToPointSin extends MoveToPoint{constructor(_0x560927,_0x130fcd,_0x505cc3,_0x1329a1){super(_0x560927,_0x130fcd,_0x505cc3,_0x1329a1);const _0x1a7dda=Math[_0x205e('0xea')](this['dx']*this['dx']+this['dy']*this['dy']);this['d']=_0x1a7dda;this['nx']=this['dy']/_0x1a7dda;this['ny']=-this['dx']/_0x1a7dda;}[_0x205e('0x208')](){const _0x51faa8=this[_0x205e('0x206')]();const _0x517de6=Math[_0x205e('0x212')](_0x51faa8*Math['PI']*0x2)*this['d']/0xa;this[_0x205e('0xd3')][_0x205e('0xe8')](this['x']+this['dx']*_0x51faa8+_0x517de6*this['nx'],this['y']+this['dy']*_0x51faa8+_0x517de6*this['ny']);}}class ChangeShape extends AnimationBase{constructor(_0x20caf1,_0x39c67c,_0xd08b88,_0x57d1de,_0x112237){super(_0x20caf1,_0xd08b88,_0x112237);this[_0x205e('0x148')]=_0x39c67c;this[_0x205e('0x217')]=_0x57d1de;}[_0x205e('0x208')](){const _0x23d76d=this['getTime']();const _0x2222fb=Math[_0x205e('0x212')](_0x23d76d*Math['PI']*0x2*this[_0x205e('0x217')])*this[_0x205e('0x148')];this[_0x205e('0xd3')]['setScale2'](this[_0x205e('0x202')]*(0x1+_0x2222fb),this[_0x205e('0x203')]*(0x1-_0x2222fb));}}class ScaleAnimation extends AnimationBase{constructor(_0x465117,_0x2b7baa,_0x202b8b,_0x599347){super(_0x465117,_0x202b8b,_0x599347);this[_0x205e('0x218')]=_0x465117[_0x205e('0x202')];this['scaleEnd']=_0x2b7baa;}[_0x205e('0x208')](){const _0x13b463=this[_0x205e('0x206')]();this[_0x205e('0xd3')][_0x205e('0xd8')](this[_0x205e('0x218')]*(0x1-_0x13b463)+this[_0x205e('0x219')]*_0x13b463);}}class RotationAnimation extends AnimationBase{constructor(_0x5c0a82,_0x283010,_0xc3d185,_0x154452,_0x3d7157){super(_0x5c0a82,_0xc3d185,_0x3d7157);this[_0x205e('0x21a')]=_0x283010;this[_0x205e('0x217')]=_0x154452;this[_0x205e('0xeb')]=this['group'][_0x205e('0xeb')];}[_0x205e('0x208')](){const _0x44d738=this['getTime']();this[_0x205e('0xd3')][_0x205e('0xeb')]=this[_0x205e('0xeb')]+Math['sin'](_0x44d738*Math['PI']*0x2*this[_0x205e('0x217')])*this[_0x205e('0x21a')];}}class ShakeBox extends RotationAnimation{constructor(_0xcce0d1,_0x50280a,_0x2ff6af,_0x1744d3,_0x464950,_0xdc7a69){super(_0xcce0d1,_0x50280a,_0x1744d3,_0x464950,_0xdc7a69);this[_0x205e('0x21b')]=_0x2ff6af;}[_0x205e('0x208')](){const _0x5c7945=this[_0x205e('0x206')]();const _0x823b05=Math['PI']/0x2;this[_0x205e('0xd3')][_0x205e('0xeb')]=-Math['sin'](_0x5c7945*(Math['PI']*0x2*this['periods']-_0x823b05)+_0x823b05)*this[_0x205e('0x21a')];const _0x4b4f37=Math[_0x205e('0x212')](_0x5c7945*Math['PI']*0x2*this['periods']);this['group']['setPositionX'](this['x']+_0x4b4f37*this[_0x205e('0x21b')]);}}class ScaleSinInfinite extends AnimationInfinite{constructor(_0xd0be,_0x26f3a1,_0x489b7a,_0x33f575,_0x1f913d){super(_0xd0be,_0x26f3a1,_0x1f913d);this[_0x205e('0x21c')]=_0x489b7a;this[_0x205e('0x21a')]=_0x33f575;}[_0x205e('0x208')](){const _0x3ab809=this['getTime']();this[_0x205e('0xd3')][_0x205e('0xd8')](this[_0x205e('0x21c')]+this[_0x205e('0x21a')]*Math['sin'](_0x3ab809*Math['PI']*0x2));}}class MoveSinInfinite extends AnimationInfinite{constructor(_0x158385,_0x9e1da7,_0x4803b8,_0x127866,_0x2abaaf){super(_0x158385,_0x9e1da7,_0x2abaaf);this[_0x205e('0x21d')]=_0x4803b8;this[_0x205e('0x21e')]=_0x127866;}['_playAnimation'](){const _0x264918=this[_0x205e('0x206')]();this[_0x205e('0xd3')][_0x205e('0xe8')](this['x']+this[_0x205e('0x21d')]*Math['sin'](_0x264918*Math['PI']*0x2),this['y']+this[_0x205e('0x21e')]*Math[_0x205e('0x212')](_0x264918*Math['PI']*0x2));}}class ScaleAlphaInfinite extends AnimationInfinite{[_0x205e('0x208')](){const _0x3cfb8c=this[_0x205e('0x206')]();this[_0x205e('0xd3')][_0x205e('0xd8')](_0x3cfb8c);this[_0x205e('0xd3')]['alpha']=Math[_0x205e('0x21f')](_0x3cfb8c*Math['PI']/0x2)*0x2;}}class SwipeInfinite extends AnimationInfinite{constructor(_0xe1d2ec,_0x50435d,_0x1e0e56){super(_0xe1d2ec,_0x50435d,_0x1e0e56);this[_0x205e('0x220')]=0.3;this[_0x205e('0x221')]={'x':this['x']+0xc8*GlobalScale,'y':this['y']-0x64*GlobalScale};}[_0x205e('0x208')](){let _0x2c28d4=this[_0x205e('0x206')]();if(_0x2c28d4<=this[_0x205e('0x220')]){_0x2c28d4/=this[_0x205e('0x220')];this['group'][_0x205e('0xe8')](this['x']*(0x1-_0x2c28d4)+this[_0x205e('0x221')]['x']*_0x2c28d4,this['y']*(0x1-_0x2c28d4)+this['endPoint']['y']*_0x2c28d4);}else{_0x2c28d4=0x1-_0x2c28d4;_0x2c28d4/=0x1-this[_0x205e('0x220')];this['group'][_0x205e('0xe8')](this['x']*(0x1-_0x2c28d4)+this['endPoint']['x']*_0x2c28d4,this['y']*(0x1-_0x2c28d4)+this[_0x205e('0x221')]['y']*_0x2c28d4);}}}class AnimationFallingBread extends AnimationBase{constructor(_0x1799b1,_0x452dbb,_0x484d51,_0x2645e3){super(_0x452dbb,_0x484d51,_0x2645e3);this[_0x205e('0xd2')]=_0x1799b1;this[_0x205e('0x222')]=[];this[_0x205e('0x214')]=0.15;this['respawn']=!![];this[_0x205e('0x223')]=0x0;this[_0x205e('0x224')]=Math[_0x205e('0x215')](_0x484d51-0.5);const _0x410906=this[_0x205e('0xd2')][_0x205e('0xd4')][_0x205e('0x225')](RealScreenWidth/0x2,RealScreenHeight*0.1,LocalizationManager[_0x205e('0x226')](_0x205e('0x227')),DefaultFontBig)[_0x205e('0xd7')](WinDefaultDepth)[_0x205e('0xd9')](0.5);animManager[_0x205e('0x228')](_0x410906,()=>{setTimeout(()=>_0x410906['destroy'](!![]),0x1f4);});audioManager['playBanjoded']();}['playFrame'](_0x5ced49){if(this['stopped'])return!![];this[_0x205e('0x229')]=_0x5ced49;if(this[_0x205e('0x22a')]){this[_0x205e('0x207')]+=_0x5ced49;if(this[_0x205e('0x207')]>=this[_0x205e('0x201')]-0x1){this['time']=this[_0x205e('0x201')];this[_0x205e('0x22a')]=![];}}else{if(this[_0x205e('0x223')]>=this[_0x205e('0x222')][_0x205e('0xe7')]){this['animationDone']();return!![];}}this[_0x205e('0x208')]();}['_playAnimation'](){const _0x18424c=Math[_0x205e('0x215')](this[_0x205e('0x201')]-this['time']);if(_0x18424c<this[_0x205e('0x224')]){this[_0x205e('0x224')]=_0x18424c;const _0xaf41af=this[_0x205e('0xd2')][_0x205e('0xd4')][_0x205e('0x225')](RealScreenWidth/0x2,RealScreenHeight*0.1,_0x18424c,DefaultFontVeryBig)[_0x205e('0xd7')](WinDefaultDepth)['setOrigin'](0.5);animManager[_0x205e('0x228')](_0xaf41af,()=>{setTimeout(()=>_0xaf41af['destroy'](!![]),0x1f4);});}const _0x24d081=Math[_0x205e('0x215')](this[_0x205e('0x207')]/this[_0x205e('0x214')]);if(_0x24d081>this[_0x205e('0x222')][_0x205e('0xe7')]){let _0x2ea3bb=_0x24d081-this[_0x205e('0x222')][_0x205e('0xe7')];const _0x44d16b=0.2;for(let _0x208598=0x0;_0x208598<_0x2ea3bb;_0x208598++){const _0x3f0983={};this[_0x205e('0x222')][_0x205e('0xda')](_0x3f0983);CreateImageInGroup(this[_0x205e('0xd2')],this[_0x205e('0xd3')],_0x205e('0x22b')+(Math[_0x205e('0x215')](Math['random']()*0x7)+0x1),_0x521d47=>{_0x3f0983['img']=_0x521d47;_0x3f0983['v']=(0x3+Math['random']())*0x190;_0x3f0983['y']=0x0;let _0x4f32a7;if(Math[_0x205e('0x22c')]()>0.5)_0x4f32a7=(0x1-_0x44d16b*0.25-Math[_0x205e('0x22c')]()*_0x44d16b)*RealScreenWidth;else _0x4f32a7=_0x44d16b*0.25+Math[_0x205e('0x22c')]()*_0x44d16b*RealScreenWidth;_0x521d47[_0x205e('0xe8')](_0x4f32a7,_0x3f0983['y'])[_0x205e('0xd8')](0.7+Math['random']()*0.5);_0x521d47[_0x205e('0xeb')]=Math[_0x205e('0x22c')]()*0x168;});}}for(let _0x21b602=0x0;_0x21b602<this[_0x205e('0x222')][_0x205e('0xe7')];_0x21b602++){const _0x3f0983=this['breads'][_0x21b602];const _0x9fe3c1=_0x3f0983[_0x205e('0x22d')];if(_0x9fe3c1){_0x3f0983['y']+=_0x3f0983['v']*this[_0x205e('0x229')];if(_0x3f0983['y']>=RealScreenHeight){this[_0x205e('0x223')]++;_0x3f0983['img'][_0x205e('0x22e')](!![]);_0x3f0983[_0x205e('0x22d')]=null;}else _0x9fe3c1[_0x205e('0x213')](_0x3f0983['y']);}}}}class AnimationsManager{constructor(){this['allAnimations']=[];this[_0x205e('0x229')]=0x1/0x1e;setInterval(()=>this[_0x205e('0x22f')](),this[_0x205e('0x229')]*0x3e8);}[_0x205e('0x230')](_0x3142a8){for(let _0x380c9f in this['allAnimations']){if(this[_0x205e('0x231')][_0x380c9f][_0x205e('0xd3')]===_0x3142a8)return![];}return!![];}[_0x205e('0x232')](_0x318a12){this[_0x205e('0x231')][_0x205e('0xda')](_0x318a12);return _0x318a12;}[_0x205e('0x228')](_0x26a045,_0x292d3e){return this[_0x205e('0x232')](new AnimationWinOpen(_0x26a045,_0x292d3e));}[_0x205e('0x233')](_0x368c6e){return this[_0x205e('0x232')](new AnimationButtonShow(_0x368c6e));}[_0x205e('0x234')](_0x162231,_0x431740,_0x38dbb6,_0x2f9bb4){return this[_0x205e('0x232')](new MoveToPoint(_0x162231,_0x431740,_0x38dbb6,_0x2f9bb4));}[_0x205e('0x235')](_0x330d5c,_0x543874,_0x5f54a1,_0x409170,_0x3e6699){return this['_addAnimation'](new MoveToPointExtra(_0x330d5c,_0x543874,_0x5f54a1,_0x409170,_0x3e6699));}[_0x205e('0x236')](_0x3159c0,_0x5e4bb3,_0x1ca85e,_0x58eb9f){return this[_0x205e('0x232')](new AnimationChangeAlpha(_0x3159c0,_0x5e4bb3,_0x1ca85e,_0x58eb9f));}[_0x205e('0x237')](_0x53d391,_0x2dc700,_0x508cfb,_0x560872){return this[_0x205e('0x232')](new MoveToPointSin(_0x53d391,_0x2dc700,_0x508cfb,_0x560872));}[_0x205e('0x238')](_0x20d9cd,_0x3dc63b,_0xb6b756,_0x21c7db,_0x32879c){return this[_0x205e('0x232')](new ChangeShape(_0x20d9cd,_0x3dc63b,_0xb6b756,_0x21c7db,_0x32879c));}[_0x205e('0x239')](_0x160a46,_0x558a8d,_0x1c4e4d,_0x197537,_0x487b63){return this[_0x205e('0x232')](new RotationAnimation(_0x160a46,_0x558a8d,_0x1c4e4d,_0x197537,_0x487b63));}['shakeBox'](_0x182810,_0x55aee6,_0x682b7c,_0x1d5add,_0x4f8e0c,_0xf4d9f7){return this[_0x205e('0x232')](new ShakeBox(_0x182810,_0x55aee6,_0x682b7c,_0x1d5add,_0x4f8e0c,_0xf4d9f7));}[_0x205e('0x23a')](_0x9275eb,_0x52be2c,_0x5139a9,_0x1e7984){return this[_0x205e('0x232')](new ScaleAnimation(_0x9275eb,_0x52be2c,_0x5139a9,_0x1e7984));}[_0x205e('0x23b')](_0x2197f9,_0x5d75bb,_0x4944cc,_0x4be0a2){return this[_0x205e('0x232')](new RandomJumpRotation(_0x2197f9,_0x5d75bb,_0x4944cc,_0x4be0a2));}[_0x205e('0x23c')](_0x4452a4,_0x7ff4df,_0x51b783,_0x2a6361){if(this['_canAddAnimation'](_0x4452a4))return this[_0x205e('0x232')](new JumpShieldAnimation(_0x4452a4,_0x7ff4df,_0x51b783,_0x2a6361));return null;}[_0x205e('0x23d')](_0x2956e5,_0x268b55,_0x90c762,_0x32c92a){if(this[_0x205e('0x230')](_0x2956e5))return this[_0x205e('0x232')](new JumpFishAnimation(_0x2956e5,_0x268b55,_0x90c762,_0x32c92a));return null;}[_0x205e('0x23e')](_0x1ba09f,_0xc37161,_0x5df08,_0x4314cf){if(this[_0x205e('0x230')](_0x1ba09f))return this['_addAnimation'](new FallFishAnimation(_0x1ba09f,_0xc37161,_0x5df08,_0x4314cf));return null;}['waitAnimation'](_0x1dfe39,_0x501fea){return this[_0x205e('0x232')](new AnimationBase(null,_0x1dfe39,_0x501fea));}['scaleAlphaInfinite'](_0x25c0d7,_0x6392c0,_0x144a02){return this[_0x205e('0x232')](new ScaleAlphaInfinite(_0x25c0d7,_0x6392c0,_0x144a02));}['moveSinInfinite'](_0x2bfd8c,_0x5c25d9,_0x1cffca,_0x27dcfb,_0x43eeb9){return this[_0x205e('0x232')](new MoveSinInfinite(_0x2bfd8c,_0x5c25d9,_0x1cffca,_0x27dcfb,_0x43eeb9));}[_0x205e('0x23f')](_0x5c957f,_0x29dd51,_0x2156cf,_0x12a03e,_0x5a5b2b){return this[_0x205e('0x232')](new ScaleSinInfinite(_0x5c957f,_0x29dd51,_0x2156cf,_0x12a03e,_0x5a5b2b));}[_0x205e('0x240')](_0x18c74d,_0x1eb22c,_0x421cb9){return this[_0x205e('0x232')](new SwipeInfinite(_0x18c74d,_0x1eb22c,_0x421cb9));}['playFallingBread'](_0x272460,_0x21331e,_0x130a38,_0x326f74){return this[_0x205e('0x232')](new AnimationFallingBread(_0x272460,_0x21331e,_0x130a38,_0x326f74));}[_0x205e('0x241')](_0xbe6071,_0x744b45){if(this[_0x205e('0x230')](_0xbe6071)){audioManager['playMoneyCollected']();return this[_0x205e('0x232')](new ChangeShape(_0xbe6071,0.2,0.5,0x1,_0x744b45));}return null;}[_0x205e('0x22f')](){for(let _0x4762ee=this[_0x205e('0x231')][_0x205e('0xe7')]-0x1;_0x4762ee>=0x0;_0x4762ee--){if(this[_0x205e('0x231')][_0x4762ee][_0x205e('0x20b')](this[_0x205e('0x229')])){this['allAnimations'][_0x205e('0x242')](_0x4762ee,0x1);}}}}let animManager=new AnimationsManager();class AudioManager{constructor(){this[_0x205e('0x243')]={'BackgroundMusic':'BackgroundMusic','Banjoded':_0x205e('0x244'),'Chest':[_0x205e('0x245'),_0x205e('0x246'),_0x205e('0x247')],'LongTap':[_0x205e('0x248'),_0x205e('0x249'),_0x205e('0x24a'),_0x205e('0x24b')],'Click':[_0x205e('0x24c'),_0x205e('0x24d'),'Audio_Pop-ani-3'],'ButtonClick':_0x205e('0x24e'),'Info':_0x205e('0x24f'),'Money':_0x205e('0x250'),'Window':_0x205e('0x251')};this['addMusic']={'BackgroundMusic2':_0x205e('0x252'),'BackgroundMusic3':'BackgroundMusic3','Gathering':_0x205e('0x253')};this[_0x205e('0x254')]={};this['_activeWorldMusic']=0x0;}[_0x205e('0x255')](){this[_0x205e('0x256')](0x0);}[_0x205e('0x257')](_0x31fc34,_0x11d049){if(this[_0x205e('0x258')]===_0x31fc34||GameSettings[_0x205e('0x259')])return;_0x11d049=_0x11d049||0x1;this[_0x205e('0x25a')]();if(_0x31fc34)_0x31fc34[_0x205e('0x25b')]({'loop':!![],'volume':_0x11d049});this[_0x205e('0x258')]=_0x31fc34;}[_0x205e('0x25a')](){if(this[_0x205e('0x258')]){this[_0x205e('0x258')][_0x205e('0x25c')]();this[_0x205e('0x258')]=null;}}['restoreMusic'](){this[_0x205e('0x256')](this['_activeWorldMusic']);}[_0x205e('0x25d')](_0x3359cf,_0x4d8416){if(this[_0x205e('0x254')][_0x205e('0x1bf')](_0x4d8416)){this[_0x205e('0x257')](this[_0x205e('0x254')][_0x4d8416]);}else{const _0x68898=this[_0x205e('0x25e')][_0x4d8416];LoadPreparedFile(this[_0x205e('0xd2')],_0x68898,()=>{this[_0x205e('0x254')][_0x4d8416]=this[_0x205e('0xd2')]['sound'][_0x205e('0xd4')](_0x68898);if(this[_0x205e('0x25f')]===_0x3359cf)this[_0x205e('0x257')](this['sounds'][_0x4d8416]);});}}[_0x205e('0x256')](_0x434ccd){_0x434ccd=parseInt(_0x434ccd);this[_0x205e('0x25f')]=_0x434ccd;switch(_0x434ccd){case 0x0:this[_0x205e('0x25d')](_0x434ccd,_0x205e('0x253'));break;case 0x1:this[_0x205e('0x257')](this['sounds'][_0x205e('0x260')],0.4);break;default:this[_0x205e('0x25d')](_0x434ccd,'BackgroundMusic'+_0x434ccd);break;}}[_0x205e('0x261')](_0xd1274f){this[_0x205e('0xd2')]=_0xd1274f;const _0x4ac43a=_0xd1274f[_0x205e('0x261')];for(let _0x4db5fa in this['names']){if(typeof this[_0x205e('0x243')][_0x4db5fa]==='object'){for(let _0x36956c of this[_0x205e('0x243')][_0x4db5fa])_0x4ac43a[_0x205e('0x262')](_0x36956c,VisualData['ALL_OBJECTS'][_0x36956c][_0x205e('0x1e5')]);}else{const _0x397c58=this['names'][_0x4db5fa];_0x4ac43a['audio'](_0x397c58,VisualData[_0x205e('0x140')][_0x397c58][_0x205e('0x1e5')]);}}_0xd1274f[_0x205e('0x261')]['once'](_0x205e('0x263'),()=>{for(let _0x2a5a08 in this[_0x205e('0x243')]){if(typeof this[_0x205e('0x243')][_0x2a5a08]===_0x205e('0x264')){const _0x52d808=this[_0x205e('0x254')][_0x2a5a08]=[];for(let _0x496406 of this['names'][_0x2a5a08])_0x52d808[_0x205e('0xda')](_0xd1274f[_0x205e('0x265')][_0x205e('0xd4')](_0x496406));}else{const _0x491276=this[_0x205e('0x243')][_0x2a5a08];this[_0x205e('0x254')][_0x2a5a08]=_0xd1274f[_0x205e('0x265')][_0x205e('0xd4')](_0x491276);}}window[_0x205e('0x266')]=()=>{if(this[_0x205e('0x25f')]===0x0)this['playWorldMusic'](0x1);window[_0x205e('0x266')]=null;};});_0x4ac43a[_0x205e('0x147')]();}[_0x205e('0x267')](){if(GameSettings[_0x205e('0x268')])return;if(this[_0x205e('0x254')]['Window'])this[_0x205e('0x254')][_0x205e('0x269')][_0x205e('0x25b')]();}['playButtonClick'](){if(GameSettings[_0x205e('0x268')])return;if(this['sounds']['ButtonClick'])this[_0x205e('0x254')][_0x205e('0x26a')][_0x205e('0x25b')]();}[_0x205e('0x26b')](){if(GameSettings[_0x205e('0x268')])return;if(this[_0x205e('0x254')][_0x205e('0x26c')])this[_0x205e('0x254')]['Money']['play']();}[_0x205e('0x26d')](){if(GameSettings[_0x205e('0x268')])return;if(this[_0x205e('0x254')][_0x205e('0x26e')])this['sounds'][_0x205e('0x26e')][Math[_0x205e('0x215')](Math[_0x205e('0x22c')]()*this[_0x205e('0x254')][_0x205e('0x26e')]['length'])][_0x205e('0x25b')]();}[_0x205e('0x26f')](_0x3c6a4f){if(GameSettings[_0x205e('0x268')])return;if(this[_0x205e('0x254')][_0x205e('0x270')]){const _0x12d0e3=Math[_0x205e('0x271')](this[_0x205e('0x254')]['LongTap'][_0x205e('0xe7')]-0x1,Math[_0x205e('0x215')](_0x3c6a4f/0x4));const _0x19451c=this[_0x205e('0x254')][_0x205e('0x270')][_0x12d0e3];_0x19451c['play']();}}['playChestSound'](_0x207155){if(GameSettings[_0x205e('0x268')])return;if(this[_0x205e('0x254')][_0x205e('0x272')])this['sounds'][_0x205e('0x272')][_0x207155][_0x205e('0x25b')]();}['playBanjoded'](){if(GameSettings[_0x205e('0x268')])return;if(this[_0x205e('0x254')]['Banjoded'])this[_0x205e('0x254')][_0x205e('0x244')][_0x205e('0x25b')]();}[_0x205e('0x273')](){if(GameSettings[_0x205e('0x268')])return;if(this[_0x205e('0x254')][_0x205e('0x274')])this[_0x205e('0x254')][_0x205e('0x274')][_0x205e('0x25b')]();}['muteSounds'](){if(!GameSettings[_0x205e('0x259')]&&this['activeMusic']){this[_0x205e('0x258')][_0x205e('0x275')]();}}[_0x205e('0x276')](){if(!GameSettings['musicOff']&&this[_0x205e('0x258')]){this[_0x205e('0x258')][_0x205e('0x277')]();}}}var audioManager=new AudioManager();function Random(_0x5a8c14){this[_0x205e('0x278')]=_0x5a8c14%0x7fffffff;if(this[_0x205e('0x278')]<=0x0)this['_seed']+=0x7ffffffe;}Random['prototype']['next']=function(){return this['_seed']=this['_seed']*0x41a7%0x7fffffff;};Random[_0x205e('0x279')]['nextFloat']=function(){return(this[_0x205e('0x27a')]()-0x1)/0x7ffffffe;};function BigIntSqrRoot(_0x1e8ea3){function _0x56db1a(_0x21ac60){const _0x4a95b9=_0x1e8ea3[_0x205e('0x27b')](_0x21ac60)[_0x205e('0xd4')](_0x21ac60)[_0x205e('0x27b')](0x2);if(_0x4a95b9[_0x205e('0x27c')](_0x21ac60)>=0x0)return _0x4a95b9;return _0x56db1a(_0x4a95b9);}return _0x56db1a(_0x1e8ea3);}class UnnyAction{constructor(){this['allListeners']=[];}[_0x205e('0x27d')](_0x5b0a59){this[_0x205e('0x27e')][_0x205e('0xda')](_0x5b0a59);}[_0x205e('0x27f')](_0x4b7e64){for(let _0x416a8c=0x0;_0x416a8c<this[_0x205e('0x27e')][_0x205e('0xe7')];_0x416a8c++){if(this[_0x205e('0x27e')][_0x416a8c]===_0x4b7e64){this[_0x205e('0x27e')]['splice'](_0x416a8c,0x1);break;}}}[_0x205e('0x280')](){this[_0x205e('0x27e')]=[];}[_0x205e('0x281')](..._0x5e148a){for(let _0x4c975e=0x0;_0x4c975e<this[_0x205e('0x27e')][_0x205e('0xe7')];_0x4c975e++)this[_0x205e('0x27e')][_0x4c975e](..._0x5e148a);}['callAndClearListeners'](..._0x43867d){const _0x314f3d=this[_0x205e('0x27e')];this[_0x205e('0x280')]();for(let _0x11323a=0x0;_0x11323a<_0x314f3d['length'];_0x11323a++)_0x314f3d[_0x11323a](..._0x43867d);}}class EventManager{constructor(){this['onSoulsCollected']=new UnnyAction();this[_0x205e('0x282')]=new UnnyAction();this[_0x205e('0x283')]=new UnnyAction();this['onBoxReceived']=new UnnyAction();this[_0x205e('0x284')]=new UnnyAction();this[_0x205e('0x285')]=new UnnyAction();this[_0x205e('0x286')]=new UnnyAction();this[_0x205e('0x287')]=new UnnyAction();this[_0x205e('0x288')]=new UnnyAction();this['onMacroUpgraded']=new UnnyAction();this[_0x205e('0x289')]=new UnnyAction();this[_0x205e('0x28a')]=new UnnyAction();this['onDailyBonusCollected']=new UnnyAction();this['onQuestCompleted']=new UnnyAction();this[_0x205e('0x28b')]=new UnnyAction();this['onLikesReseted']=new UnnyAction();this[_0x205e('0x28c')]=new UnnyAction();this[_0x205e('0x28d')]=new UnnyAction();}[_0x205e('0x28e')](_0x1ad155,_0x506735){this['onSoulsCollected'][_0x205e('0x281')](_0x1ad155,_0x506735);}[_0x205e('0x28f')](){this['onBoxOpened'][_0x205e('0x281')]();gameAnalytics['sendEvent'](_0x205e('0x290'));}['boxReceived'](_0x202eca){this[_0x205e('0x291')][_0x205e('0x281')](_0x202eca);}[_0x205e('0x292')](_0x886dbe){this['onBoxPurchased']['callListeners'](_0x886dbe);}[_0x205e('0x293')](){this[_0x205e('0x284')][_0x205e('0x281')]();}[_0x205e('0x294')](){this[_0x205e('0x285')][_0x205e('0x281')]();}[_0x205e('0x295')](_0x180385){this['onUpgradePurchased'][_0x205e('0x281')](_0x180385);}[_0x205e('0x296')](_0x59a34b,_0x28796e){this[_0x205e('0x287')][_0x205e('0x281')](_0x59a34b,_0x28796e);}[_0x205e('0x297')](_0x70401e){this[_0x205e('0x288')][_0x205e('0x281')](_0x70401e);}['macroUpgraded'](_0x55463a,_0x329d68){this[_0x205e('0x298')][_0x205e('0x281')](_0x55463a,_0x329d68);}[_0x205e('0x299')](_0x2b77d0,_0x1544ab){this['onMouseWheel'][_0x205e('0x281')](_0x2b77d0,_0x1544ab);}[_0x205e('0x29a')](){this[_0x205e('0x28a')][_0x205e('0x281')]();}[_0x205e('0x29b')](){this[_0x205e('0x29c')][_0x205e('0x281')]();}[_0x205e('0x29d')](){this[_0x205e('0x28b')]['callListeners']();}['questCompleted'](){this[_0x205e('0x29e')][_0x205e('0x281')]();}[_0x205e('0x29f')](){this['onLikesReseted']['callListeners']();}[_0x205e('0x2a0')](){this[_0x205e('0x28c')][_0x205e('0x281')]();}[_0x205e('0x2a1')](_0x1f6eb6){this[_0x205e('0x28d')]['callListeners'](_0x1f6eb6);}}let eventManager=new EventManager();const BONUS_PER_LIKE=0x1;const MAX_LIKES_COUNT=0x64;const AllBuildings={};class Building{constructor(_0x37f0a1,_0x2416a2,_0x5abc20){this['onResourcesUpdated']=new UnnyAction();this[_0x205e('0x2a2')]=new UnnyAction();this[_0x205e('0x2a3')]=new UnnyAction();this['onPreUpgrade']=new UnnyAction();this[_0x205e('0x2a4')]=new UnnyAction();this['onLiked']=new UnnyAction();this['onReseted']=new UnnyAction();this[_0x205e('0x2a5')]=new UnnyAction();this[_0x205e('0x2a6')]=0x0;this[_0x205e('0x15b')]=_0x37f0a1;this['resources']=0x0;this[_0x205e('0x2a7')]=0x0;this[_0x205e('0x2a8')]=[];this[_0x205e('0x2a9')]=_0x2416a2;this['id']=parseInt(_0x5abc20);AllBuildings[this['slot']]=this;this[_0x205e('0x2aa')]=new UnnyAction();eventManager[_0x205e('0x2aa')][_0x205e('0x27d')](this['likesWereReseted']['bind'](this));}['_saveState'](){this[_0x205e('0x2ab')][_0x205e('0x2ac')]=this['resources'][_0x205e('0x2ad')]();this[_0x205e('0x2ab')][_0x205e('0x2ae')]=this[_0x205e('0x2a6')];this[_0x205e('0x2ab')][_0x205e('0xe5')]=this[_0x205e('0xe5')]=Progress['getTimeNow']();}[_0x205e('0x2af')](_0x4b920f,_0x37467c,_0x116840){this[_0x205e('0x2ab')]=_0x4b920f;this['level']=_0x4b920f[_0x205e('0x2a7')];this[_0x205e('0x2a8')]=_0x4b920f[_0x205e('0x2a8')]?_0x4b920f[_0x205e('0x2a8')]:[];this[_0x205e('0x2ac')]=bigInt(_0x4b920f[_0x205e('0x2ac')]);if(!_0x4b920f[_0x205e('0x1bf')](_0x205e('0x2b0'))){_0x4b920f[_0x205e('0x2b0')]='0';}this[_0x205e('0x2b0')]=bigInt(this[_0x205e('0x2a7')]>0x0?_0x4b920f[_0x205e('0x2b0')]:this[_0x205e('0x15b')][_0x205e('0x2b1')]['price']);this['currentLoading']=_0x4b920f[_0x205e('0x2ae')]||0x0;this[_0x205e('0xe5')]=_0x4b920f[_0x205e('0xe5')]||0x0;this[_0x205e('0x2b2')]=_0x4b920f[_0x205e('0x2b3')]?_0x4b920f[_0x205e('0x2b3')]:0x1;if(!_0x4b920f[_0x205e('0x1bf')](_0x205e('0x2b4')))_0x4b920f['multiProfitMultiplier']='1';this['bonus_MultiProfit']=new bigInt(_0x4b920f['multiProfitMultiplier']);this[_0x205e('0x2b5')]=_0x4b920f[_0x205e('0x2b6')];this['_updateFinalProductionRate']();if(this['level']>0x0){const _0x3b2cf0=this[_0x205e('0x2b7')]();const _0x2abdd8=this[_0x205e('0x2b8')]();let _0xf5a2b4=_0x116840-this['update'];const _0x48c381=_0x37467c[_0x205e('0x2b9')]();let _0x4fa2fd=0x1;if(_0x48c381>this[_0x205e('0xe5')]){if(_0x48c381>=_0x116840)_0x4fa2fd=0x2;else _0x4fa2fd=(_0x116840-_0x48c381+0x2*(_0x48c381-this[_0x205e('0xe5')]))/_0xf5a2b4;}if(this[_0x205e('0x2ac')][_0x205e('0x27c')](0x0)!==0x0&&!this[_0x205e('0x2b5')]){this[_0x205e('0x2a6')]=0x0;this[_0x205e('0x2ba')]=!![];}else{_0xf5a2b4/=0x3e8;let _0x47c39c=Math[_0x205e('0x215')](_0xf5a2b4/_0x3b2cf0);if(!this[_0x205e('0x2b5')])_0x47c39c=Math['min'](0x1,_0x47c39c);this[_0x205e('0x2ac')]=this[_0x205e('0x2ac')]['add'](_0x2abdd8[_0x205e('0x2bb')](Math[_0x205e('0x215')](_0x47c39c*_0x4fa2fd)));this[_0x205e('0x2ba')]=this[_0x205e('0x2ac')]['compare'](0x0)!==0x0;if(this[_0x205e('0x2ba')]&&!this[_0x205e('0x2b5')])this[_0x205e('0x2a6')]=0x0;else this['currentLoading']+=_0xf5a2b4-_0x47c39c*_0x3b2cf0;}this[_0x205e('0x2bc')]();}else this[_0x205e('0x2ba')]=![];_0x37467c[_0x205e('0x2bd')][_0x205e('0x27d')](this[_0x205e('0x2be')]['bind'](this));this[_0x205e('0x2bf')](_0x37467c);}[_0x205e('0x2c0')](){return this[_0x205e('0x2c1')];}['_checkBuildingForOpen'](_0x4ae6e9){if(this[_0x205e('0x2c2')]()>0x0){this[_0x205e('0x2c1')]=![];}else{const _0xdea6cf=_0x4ae6e9[_0x205e('0x2c3')](this);if(this[_0x205e('0x2c1')]!==_0xdea6cf){this[_0x205e('0x2c1')]=_0xdea6cf;this[_0x205e('0x2a5')][_0x205e('0x281')](this);}}}[_0x205e('0x2be')](_0x28ed3d,_0x2b221f){if(this[_0x205e('0x2c1')]===!_0x2b221f&&_0x2b221f!==undefined){this[_0x205e('0x2bf')](_0x28ed3d);}}[_0x205e('0x2c4')](_0x58f243,_0x45e05f,_0x296001){this[_0x205e('0x2af')](_0x58f243,_0x45e05f,_0x296001);_0x45e05f[_0x205e('0x2c5')][_0x205e('0x27d')](this[_0x205e('0x2c6')]['bind'](this));_0x45e05f['onSeedsBonusChanged'][_0x205e('0x27d')](this[_0x205e('0x2c7')]['bind'](this));}[_0x205e('0x2c8')](_0x39114a,_0x1ccf05){const _0x12bc43=Math['trunc'](Progress[_0x205e('0x2c9')]());const _0x155ff3=_0x1ccf05[this['id']];this['_loadProgress'](_0x155ff3,_0x39114a,_0x12bc43);this[_0x205e('0x2ca')][_0x205e('0x281')]();}['puzzleCompleted'](_0x31e6e0){if(_0x31e6e0['id']!==this[_0x205e('0x2a9')])return;const _0x5dbe16={'upgradeType':_0x205e('0x2cb'),'parameter':GameData[_0x205e('0x2cc')](_0x31e6e0[_0x205e('0x2a7')]),'div_parameter':GameData[_0x205e('0x2cd')](_0x31e6e0['level'])};if(_0x31e6e0['level']===0x1)this['_checkBuildingForOpen'](gameInit['progress']);this[_0x205e('0x2ce')](_0x5dbe16);}[_0x205e('0x2b7')](){return this['info'][_0x205e('0x2ae')][_0x205e('0x201')]/this[_0x205e('0x2b2')];}[_0x205e('0x2b8')](){return this[_0x205e('0x2cf')];}[_0x205e('0x2d0')](_0x4df915){if(this[_0x205e('0x2a7')]<=0x0)return;if(this[_0x205e('0x2ba')]&&!this['autoCollect'])return;this[_0x205e('0x2a6')]+=_0x4df915;const _0x1f1e26=this[_0x205e('0x2b7')]();if(this['currentLoading']>=_0x1f1e26){let _0x44dd72=Math[_0x205e('0x215')](this[_0x205e('0x2a6')]/_0x1f1e26);if(this[_0x205e('0x2b5')])this[_0x205e('0x2a6')]-=_0x44dd72*_0x1f1e26;else{this[_0x205e('0x2a6')]=0x0;_0x44dd72=0x1;}const _0x1536c7=gameInit[_0x205e('0x16b')][_0x205e('0x2d1')]()?0x2:0x1;this[_0x205e('0x2ac')]=this[_0x205e('0x2ac')]['add'](this[_0x205e('0x2b8')]()[_0x205e('0x2bb')](_0x44dd72*_0x1536c7));this[_0x205e('0x2d2')][_0x205e('0x281')](this);this[_0x205e('0x2ba')]=!![];}this[_0x205e('0x2a2')][_0x205e('0x281')](this);}[_0x205e('0x2d3')](){return this[_0x205e('0x2ac')];}[_0x205e('0x2d4')](){if(this[_0x205e('0x2ba')]&&!this[_0x205e('0x2b5')])return 0x1;return Math[_0x205e('0x271')](this[_0x205e('0x2a6')]/this['getLoadingTime'](),0x1);}[_0x205e('0x2c2')](){return this[_0x205e('0x2a7')];}[_0x205e('0x2d5')](){if(this[_0x205e('0x2d6')]()>0x0){this[_0x205e('0x2a8')]=[];this[_0x205e('0x2c7')]();this[_0x205e('0x2aa')]['callListeners'](this);}}[_0x205e('0x2d6')](){return this[_0x205e('0x2a8')]['length']>MAX_LIKES_COUNT?MAX_LIKES_COUNT:this[_0x205e('0x2a8')]['length'];}[_0x205e('0x2d7')](_0x3b7492){for(let _0x560217 in _0x3b7492){const _0x262264=_0x3b7492[_0x560217];if(!this[_0x205e('0x2a8')]['includes'](_0x262264))this['likes'][_0x205e('0xda')](_0x262264);}this[_0x205e('0x2ab')][_0x205e('0x2a8')]=this[_0x205e('0x2a8')];this[_0x205e('0x2d8')]['callListeners'](this);this[_0x205e('0x2c7')]();gameInit[_0x205e('0x16b')][_0x205e('0x2d9')]();}[_0x205e('0x2da')](){return this[_0x205e('0x2b0')];}['getUpgradeProgress'](){return(this[_0x205e('0x2a7')]-this[_0x205e('0x2db')])/(this[_0x205e('0x2dc')]-this[_0x205e('0x2db')]);}[_0x205e('0x2dd')](){if(this['anyResources']){if(gameInit[_0x205e('0x16b')][_0x205e('0x2de')]()){const _0x1d1117=this[_0x205e('0x2ac')][_0x205e('0x2bb')](0x2);this[_0x205e('0x2a3')]['callListeners'](this,_0x1d1117);gameInit['progress'][_0x205e('0x2df')](_0x1d1117);}else this[_0x205e('0x2a3')]['callListeners'](this,this[_0x205e('0x2ac')]);this[_0x205e('0x2ac')]=bigInt(0x0);this[_0x205e('0x2ba')]=![];this[_0x205e('0x2d2')][_0x205e('0x281')](this);this[_0x205e('0x2e0')]();}}['_calculateNextBigUpgradeLevel'](){const _0x2ebf2c=GameData[_0x205e('0x2e1')]();for(let _0x598ae3=0x0;_0x598ae3<_0x2ebf2c[_0x205e('0xe7')];_0x598ae3++){const _0xa82b0a=_0x2ebf2c[_0x598ae3];if(this[_0x205e('0x2a7')]<_0xa82b0a[_0x205e('0x2e2')]){this[_0x205e('0x2dc')]=_0xa82b0a[_0x205e('0x2e2')];this['prevBigUpgradeLevel']=_0x598ae3===0x0?0x0:_0x2ebf2c[_0x598ae3-0x1]['requiredLevel'];return;}}this['nextBigUpgradeLevel']=Math[_0x205e('0x215')](this[_0x205e('0x2a7')]/0x64+0x1)*0x64;this[_0x205e('0x2db')]=this[_0x205e('0x2dc')]-0x64;}[_0x205e('0x2e3')](){const _0x563d28=GameData[_0x205e('0x2e1')]();for(let _0x3be0c6 in _0x563d28){const _0x4e1fef=_0x563d28[_0x3be0c6];if(_0x4e1fef[_0x205e('0x2e2')]===this[_0x205e('0x2a7')])return _0x4e1fef;}return _0x563d28[_0x563d28[_0x205e('0xe7')]-0x1];}[_0x205e('0x2e4')](){const _0x5c0ae6=gameInit[_0x205e('0x16b')][_0x205e('0x2e5')](this[_0x205e('0x2a9')]-0x1);if(_0x5c0ae6['level']>=0x2){const _0xdfb4bc={'upgradeType':_0x205e('0x2cb'),'parameter':GameData[_0x205e('0x2cc')](_0x5c0ae6[_0x205e('0x2a7')])};this['_applyBonus'](_0xdfb4bc);}}['upgradeBuilding'](_0x39a182){if(!_0x39a182)this['onPreUpgrade'][_0x205e('0x281')](this);this[_0x205e('0x2a7')]++;this[_0x205e('0x2c7')]();const _0x2af2d3=this[_0x205e('0x15b')][_0x205e('0x2e6')];if(this[_0x205e('0x2a7')]===0x1){this[_0x205e('0x2b0')]=bigInt(_0x2af2d3[_0x205e('0x2e7')]);this[_0x205e('0x2bc')]();this[_0x205e('0x2e4')]();}else{if(this[_0x205e('0x2b0')][_0x205e('0x27c')](0xa)<=0x0){const _0x810cd=this['upgradePrice'];this[_0x205e('0x2b0')]=this['upgradePrice'][_0x205e('0x2bb')](Math['trunc'](_0x2af2d3[_0x205e('0x148')]*0x64))['divide'](0x64);if(this['upgradePrice'][_0x205e('0x27c')](_0x810cd)===0x0)this[_0x205e('0x2b0')]=this[_0x205e('0x2b0')][_0x205e('0xd4')](0x1);}else this[_0x205e('0x2b0')]=this['upgradePrice'][_0x205e('0x2bb')](Math[_0x205e('0x215')](_0x2af2d3['scale']*0x64))[_0x205e('0x27b')](0x64);if(this[_0x205e('0x2a7')]===this[_0x205e('0x2dc')]){const _0x10ed36=this[_0x205e('0x2e3')]();this[_0x205e('0x2ce')](_0x10ed36);this['_calculateNextBigUpgradeLevel']();eventManager['macroUpgraded'](this,_0x10ed36);}eventManager['buildingUpgraded'](this,this['id']);}this[_0x205e('0xe5')]=Progress[_0x205e('0x2c9')]();this['savedProgress'][_0x205e('0x2a7')]=this[_0x205e('0x2a7')];this[_0x205e('0x2ab')][_0x205e('0x2b0')]=this['upgradePrice'][_0x205e('0x2ad')]();this[_0x205e('0x2e0')]();this[_0x205e('0x2a4')][_0x205e('0x281')](this);if(this[_0x205e('0x2c1')]){this[_0x205e('0x2c1')]=![];this[_0x205e('0x2a5')][_0x205e('0x281')](this);}}[_0x205e('0x2c7')](){const _0x279d25=gameInit['progress'][_0x205e('0x2e8')]();this['finalProduction']=this[_0x205e('0x15b')]['production'][_0x205e('0x2e7')][_0x205e('0x2bb')](this[_0x205e('0x2c2')]())[_0x205e('0x2bb')](_0x279d25)[_0x205e('0x2bb')](this[_0x205e('0x2e9')]);if(this['getLikes']()>0x0)this[_0x205e('0x2cf')]=this[_0x205e('0x2cf')]['multiply'](0x64+this['getLikes']()*BONUS_PER_LIKE)[_0x205e('0x27b')](0x64);}['getProductionForLevel'](_0x4c59bf){const _0x30bdb4=gameInit['progress'][_0x205e('0x2e8')]();return this[_0x205e('0x15b')][_0x205e('0x1b2')][_0x205e('0x2e7')][_0x205e('0x2bb')](_0x4c59bf)[_0x205e('0x2bb')](_0x30bdb4)[_0x205e('0x2bb')](this[_0x205e('0x2e9')]);}['_applyBonus'](_0x725dd0){switch(_0x725dd0[_0x205e('0x2ea')]){case _0x205e('0x2eb'):this[_0x205e('0x2b2')]*=_0x725dd0[_0x205e('0x2ec')];this[_0x205e('0x2ab')][_0x205e('0x2b3')]=this[_0x205e('0x2b2')];break;case _0x205e('0x2cb'):this['bonus_MultiProfit']=this[_0x205e('0x2e9')][_0x205e('0x2bb')](_0x725dd0[_0x205e('0x2ec')]);if(_0x725dd0[_0x205e('0x2ed')])this[_0x205e('0x2e9')]=this[_0x205e('0x2e9')][_0x205e('0x27b')](_0x725dd0[_0x205e('0x2ed')]);this[_0x205e('0x2ab')][_0x205e('0x2b4')]=this[_0x205e('0x2e9')][_0x205e('0x2ad')]();this[_0x205e('0x2c7')]();break;case'AutoClick':this[_0x205e('0x2ab')][_0x205e('0x2b6')]=this[_0x205e('0x2b5')]=!![];break;case'TimeTravel':this[_0x205e('0x2d0')](_0x725dd0[_0x205e('0x2ec')]);break;case _0x205e('0x2ee'):if(this[_0x205e('0x2c2')]()>0x0){for(let _0x3e13f3=0x0;_0x3e13f3<_0x725dd0[_0x205e('0x2ec')];_0x3e13f3++){this[_0x205e('0x2ef')](!![]);}}break;case _0x205e('0x2f0'):case _0x205e('0x2f1'):}this[_0x205e('0x2e0')]();}['upgradePurchased'](_0x16ed98){if(_0x16ed98['slotNumber']>=0x0&&_0x16ed98[_0x205e('0x2f2')]+0x1!==this['id'])return;this['_applyBonus'](_0x16ed98);}[_0x205e('0x2f3')](){return this['info'][_0x205e('0x2f4')][_0x205e('0x2f5')];}['getDropIconPath'](){return _0x205e('0x2f6')+this[_0x205e('0x15b')][_0x205e('0x2f4')][_0x205e('0x2f5')]+'.png';}[_0x205e('0x2f7')](){return this[_0x205e('0x15b')]['visual'][_0x205e('0x1fc')]+'_small';}[_0x205e('0x2f8')](){return _0x205e('0x2f9')+this['info'][_0x205e('0x2f4')][_0x205e('0x1fc')]+'.png';}[_0x205e('0x2fa')](){return this[_0x205e('0x15b')][_0x205e('0x2f4')][_0x205e('0x1fc')]+_0x205e('0x2fb');}[_0x205e('0x2fc')](){return _0x205e('0x2fd')+this[_0x205e('0x15b')][_0x205e('0x2f4')][_0x205e('0x1fc')]+_0x205e('0x2fe');}[_0x205e('0x2ff')](){return this[_0x205e('0x15b')][_0x205e('0x2f4')][_0x205e('0x1fc')][_0x205e('0x17d')](0x0,this[_0x205e('0x15b')][_0x205e('0x2f4')][_0x205e('0x1fc')]['length']-0x5);}}class World{constructor(_0x2fb8dc,_0x11e227){this[_0x205e('0x300')]=new UnnyAction();this[_0x205e('0x301')]=new UnnyAction();this[_0x205e('0x287')]=new UnnyAction();this[_0x205e('0x302')]=new UnnyAction();this[_0x205e('0x2d2')]=new UnnyAction();this[_0x205e('0x2a2')]=new UnnyAction();this[_0x205e('0x303')]=new UnnyAction();this[_0x205e('0x2a3')]=new UnnyAction();this[_0x205e('0x286')]=new UnnyAction();this[_0x205e('0x2ca')]=new UnnyAction();this['id']=_0x11e227;_0x2fb8dc[_0x205e('0xe5')][_0x205e('0x27d')](this['update'][_0x205e('0xe6')](this));_0x2fb8dc[_0x205e('0x2c8')]['addListener'](this[_0x205e('0x304')][_0x205e('0xe6')](this));}[_0x205e('0x295')](_0x238905){this[_0x205e('0x286')][_0x205e('0x281')](_0x238905);}[_0x205e('0x2c4')](_0x39a1f4){const _0x422efb=_0x39a1f4['getBuildingsForWorld'](this['id']);const _0x426c17=Math[_0x205e('0x215')](Progress[_0x205e('0x2c9')]());this[_0x205e('0x305')]={};for(let _0x2f6242 in _0x422efb){const _0x7f467f=_0x422efb[_0x2f6242];const _0x5e3c2d=this[_0x205e('0x306')](GameData[_0x205e('0x307')](_0x7f467f[_0x205e('0x2a9')]),_0x7f467f[_0x205e('0x2a9')],_0x2f6242);_0x5e3c2d['loadProgress'](_0x7f467f,_0x39a1f4,_0x426c17);this[_0x205e('0x301')][_0x205e('0x281')](this,_0x5e3c2d);this[_0x205e('0x305')][_0x2f6242]=_0x5e3c2d;}}[_0x205e('0x308')](_0x583687){return this[_0x205e('0x305')][_0x583687];}[_0x205e('0x304')](_0x102785){const _0x204b5d=_0x102785[_0x205e('0x309')](this['id']);this[_0x205e('0x2ca')][_0x205e('0x281')](_0x102785,_0x204b5d);}[_0x205e('0x30a')](){return this['id']==gameInit[_0x205e('0x30b')];}[_0x205e('0x306')](_0x2c6a66,_0x4596e3,_0x2644d6){const _0x1fdaba=new Building(_0x2c6a66,_0x4596e3,_0x2644d6);this[_0x205e('0x300')][_0x205e('0x27d')](_0x1fdaba[_0x205e('0x2d0')][_0x205e('0xe6')](_0x1fdaba));this[_0x205e('0x286')][_0x205e('0x27d')](_0x1fdaba[_0x205e('0x295')]['bind'](_0x1fdaba));this[_0x205e('0x2ca')][_0x205e('0x27d')](_0x1fdaba[_0x205e('0x2c8')][_0x205e('0xe6')](_0x1fdaba));_0x1fdaba[_0x205e('0x30c')]=this;_0x1fdaba[_0x205e('0x2a3')]['addListener'](this[_0x205e('0x30d')][_0x205e('0xe6')](this));_0x1fdaba[_0x205e('0x2a4')][_0x205e('0x27d')](this[_0x205e('0x296')][_0x205e('0xe6')](this));_0x1fdaba[_0x205e('0x30e')][_0x205e('0x27d')](this[_0x205e('0x30f')][_0x205e('0xe6')](this));_0x1fdaba[_0x205e('0x2d2')][_0x205e('0x27d')](this[_0x205e('0x310')][_0x205e('0xe6')](this));_0x1fdaba['onBuildingUpdated'][_0x205e('0x27d')](this[_0x205e('0x311')][_0x205e('0xe6')](this));_0x1fdaba['onLiked'][_0x205e('0x27d')](this[_0x205e('0x312')][_0x205e('0xe6')](this));return _0x1fdaba;}[_0x205e('0x30f')](_0x31bab1){this['onBuildingPreUpgrade'][_0x205e('0x281')](this,_0x31bab1);}[_0x205e('0x296')](_0xaa506f){this['onBuildingUpgraded']['callListeners'](this,_0xaa506f);}[_0x205e('0x310')](_0x408fb1){this[_0x205e('0x2d2')][_0x205e('0x281')](this,_0x408fb1);}[_0x205e('0x311')](_0x375511){this['onBuildingUpdated'][_0x205e('0x281')](this,_0x375511);}[_0x205e('0x312')](_0x3779a9){this[_0x205e('0x303')][_0x205e('0x281')](this,_0x3779a9);}[_0x205e('0x30d')](_0x3da7a4,_0x1ac693){this[_0x205e('0x2a3')]['callListeners'](_0x3da7a4,_0x1ac693);}[_0x205e('0xe5')](_0x5d08f6){this[_0x205e('0x300')]['callListeners'](_0x5d08f6);}}const TutPhases={'BuildSlot1':0x0,'Collect1':0x1,'Collect20':0x2,'UpgradeBuilding':0x3,'UpgradeBuilding5':0x4,'Collect1k':0x5,'BuyAutoCollect':0x6,'Boost4h':0x7,'Collect10k':0x8,'Boost6s':0x9,'BuildSlots6':0xa,'SummonBoss':0xb,'WaitForSummonToEnd':0xc,'PuzzlesAvailable':0xd,'BuildSlots9':0xe,'TutorialEnd':0xf,'FortuneWheel':0x64,'FortuneWheelEnded':0x65};const BanjoDuration=0x7;const GuardDurationHours=0x4;const SpinsResporeTime=0x8*0xe10*0x3e8;const AdsAvailableToWatchADay=0x5;const MAX_PUZZLE_LEVEL=0x5;const JACKPOT_SIZE=0x5;const JACKPOT_INCREASE=0x2;const GEMS_PRICE_FOR_WHEEL_SPIN=0x5;const LIKES_RESET_TIMER=0x3*0x18*0xe10*0x3e8;const BoxType={'GoldBox':'0','GemsBox':'1','SuperBox':'2','GuardBox':'3','GuardSuperBox':'4'};const MUSIC_STATE=_0x205e('0x313');const SOUNDS_STATE='SOUNDS_STATE';const CURRENT_LANGUAGE=_0x205e('0x314');const GAME_VERSION=_0x205e('0x315');let LockAllSounds=![];var ua=navigator[_0x205e('0x316')][_0x205e('0x317')]();if(ua['indexOf'](_0x205e('0x318'))!=-0x1){if(ua[_0x205e('0x319')](_0x205e('0x31a'))>-0x1){}else{LockAllSounds=!![];}}const GameSettings={'musicOff':localStorage[_0x205e('0x31b')](MUSIC_STATE)||LockAllSounds,'soundsOff':localStorage[_0x205e('0x31b')](SOUNDS_STATE)||LockAllSounds,'language':localStorage[_0x205e('0x31b')](CURRENT_LANGUAGE),'allLanguages':{}};if(!GameSettings[_0x205e('0x31c')])GameSettings[_0x205e('0x31c')]=_0x205e('0xfc');function SetMusicState(_0x28e25c){GameSettings[_0x205e('0x259')]=!_0x28e25c||LockAllSounds;if(GameSettings[_0x205e('0x259')]){localStorage[_0x205e('0x31d')](MUSIC_STATE,_0x205e('0x198'));audioManager[_0x205e('0x25a')]();}else{localStorage[_0x205e('0x31e')](MUSIC_STATE);audioManager[_0x205e('0x31f')]();}}function SetSoundsState(_0x3dac21){GameSettings[_0x205e('0x268')]=!_0x3dac21||LockAllSounds;if(GameSettings['soundsOff'])localStorage[_0x205e('0x31d')](SOUNDS_STATE,_0x205e('0x198'));else localStorage[_0x205e('0x31e')](SOUNDS_STATE);}function SetCurrentLanguage(_0x180c5){GameSettings[_0x205e('0x31c')]=_0x180c5;localStorage['setItem'](CURRENT_LANGUAGE,_0x180c5);if(GameSettings[_0x205e('0x320')][_0x205e('0x1bf')](GameSettings[_0x205e('0x31c')])){LocalizationManager[_0x205e('0x321')](GameSettings[_0x205e('0x320')][GameSettings[_0x205e('0x31c')]]);guiManager[_0x205e('0x322')]();}else{const _0x3e64a9=_0x205e('0x323')+GameSettings[_0x205e('0x31c')];LoadFile(gameInit[_0x205e('0xd2')],_0x3e64a9,VisualData[_0x205e('0x324')]()+_0x3e64a9+'.json',()=>{const _0x3c9fea=gameInit[_0x205e('0xd2')][_0x205e('0x325')][_0x205e('0x326')][_0x205e('0x327')](_0x3e64a9);GameSettings['allLanguages'][GameSettings['language']]=_0x3c9fea;SetCurrentLanguage(GameSettings[_0x205e('0x31c')]);},UnnyObjectType[_0x205e('0x328')]);}}function getCheatSave(){return JSON[_0x205e('0x329')](_0x205e('0x32a'));}class Progress{constructor(_0x11fb24,_0x423c4b){_0x11fb24[_0x205e('0x2a3')]['addListener'](this[_0x205e('0x30d')][_0x205e('0xe6')](this));_0x11fb24[_0x205e('0x303')][_0x205e('0x27d')](this[_0x205e('0x312')][_0x205e('0xe6')](this));_0x11fb24[_0x205e('0xe5')][_0x205e('0x27d')](this[_0x205e('0xe5')]['bind'](this));this[_0x205e('0x2bd')]=new UnnyAction();this[_0x205e('0x286')]=new UnnyAction();const _0x4396d3=this[_0x205e('0x2c4')]();let _0xaed5b1=_0x423c4b;let _0x226ea2=![];if(!_0x423c4b){_0xaed5b1=_0x4396d3;_0x226ea2=!![];console[_0x205e('0x14d')](_0x205e('0x32b'));}else{if(_0x4396d3){const _0x1dcc20=_0x4396d3['profile'][_0x205e('0x32c')];const _0x95f6b7=_0x423c4b['profile'][_0x205e('0x32c')];console[_0x205e('0x14d')](_0x205e('0x32d')+_0x95f6b7+_0x205e('0x32e')+_0x1dcc20);if(_0x1dcc20&&(!_0x95f6b7||_0x1dcc20>_0x95f6b7)){_0xaed5b1=_0x4396d3;_0x226ea2=!![];gameAnalytics[_0x205e('0x15d')]({'code':-0x1,'message':_0x205e('0x32f')+_0x1dcc20+';\x20server:\x20'+_0x95f6b7+'\x20)'},'load_progress');}}}if(_0xaed5b1&&_0xaed5b1[_0x205e('0x330')]&&_0xaed5b1[_0x205e('0x330')][_0x205e('0x1a0')]>=0x8){this[_0x205e('0x2ab')]=_0xaed5b1;this[_0x205e('0x2ab')][_0x205e('0x330')]['sessionNumber']++;if(!_0x226ea2)this[_0x205e('0x331')]();}else{this[_0x205e('0x2ab')]={'profile':{'version':0x8,'gold':'0','gems':_0x205e('0x332'),'seeds':'0','goldSpent':'0','seedsStrength':0x2,'firstTimeInGame':Progress[_0x205e('0x2c9')](),'tutorialPhase':0x0,'maxGoldModifier':0x0,'gameLanguage':_0x205e('0xf7'),'sessionNumber':0x1,'harvestsCount':0x0,'gemsMultiProfit':'1','adsWatched':{'count':0x0,'update':0x0}},'purchases':{},'fortuneWheel':{'freeSpins':0x1,'windowOpened':![],'jackpot':JACKPOT_SIZE*RESOURCES_SCALE,'update':0x0},'puzzle':{'boxes':{[BoxType[_0x205e('0x333')]]:0x3,[BoxType[_0x205e('0x334')]]:0x0,[BoxType['SuperBox']]:0x0,[BoxType[_0x205e('0x335')]]:0x0,[BoxType['GuardSuperBox']]:0x0},'goods':[],'guards':[],'openedBox':0x0,'goldBoxPrice':_0x205e('0x336')},'worlds':{1:{}},'quests':{'activeQuests':[],'update':0x0},'dailyBonus':{'seed':0x0,'update':0x0,'lastBonus':0x0}};this[_0x205e('0x337')]();const _0x640da2=this[_0x205e('0x2ab')][_0x205e('0x130')]['goods'];for(let _0x3d3712=0x1;_0x3d3712<=0x9;_0x3d3712++){_0x640da2[_0x205e('0xda')]({'id':_0x3d3712,'level':0x1,'pieces':0x0});}for(let _0x2ad3fa=0xa;_0x2ad3fa<=0x1b;_0x2ad3fa++){_0x640da2['push']({'id':_0x2ad3fa,'level':0x0,'pieces':0x0});}if(gBase[_0x205e('0x338')])gBase[_0x205e('0x330')][_0x205e('0x339')](this[_0x205e('0x2ab')],null,null,null,null,null,_0x16d9d7=>{if(_0x16d9d7)gameAnalytics['sendServerError'](_0x16d9d7,'setp');});this[_0x205e('0x331')]();}for(let _0x5ddf92=0x1;_0x5ddf92<=VisualData[_0x205e('0x33a')]();_0x5ddf92++){if(!this[_0x205e('0x2ab')][_0x205e('0x33b')][_0x205e('0x1bf')](_0x5ddf92))this[_0x205e('0x33c')](_0x5ddf92);}this['supervisor']={};this[_0x205e('0x33d')]={'resources':bigInt(this[_0x205e('0x33e')](_0x205e('0x33f'))),'seeds':bigInt(this['_getResourceByName'](_0x205e('0x340'))),'resourcesSpent':bigInt(this[_0x205e('0x33e')]('goldSpent')),'gems':bigInt(this[_0x205e('0x33e')](_0x205e('0x341'))),'boxPrice':bigInt(this[_0x205e('0x2ab')][_0x205e('0x130')][_0x205e('0x342')])};this[_0x205e('0x343')]=new UnnyAction();this[_0x205e('0x2c5')]=new UnnyAction();this[_0x205e('0x344')]=new UnnyAction();this[_0x205e('0x345')]();this[_0x205e('0x346')]=new DailyBonus(this[_0x205e('0x2ab')][_0x205e('0x347')][_0x205e('0x348')],GameData[_0x205e('0x349')]());this[_0x205e('0x34a')]=new WheelOfFortune();this['lastSaveTime']=Progress[_0x205e('0x2c9')]();this[_0x205e('0x2bd')]['addListener'](this['saveProgress'][_0x205e('0xe6')](this));this[_0x205e('0x343')][_0x205e('0x27d')](this['saveProgress'][_0x205e('0xe6')](this));this[_0x205e('0x286')]['addListener'](this[_0x205e('0x2d9')][_0x205e('0xe6')](this));}[_0x205e('0x33e')](_0x54c63b){return this[_0x205e('0x2ab')][_0x205e('0x330')][_0x54c63b];}[_0x205e('0x34b')](_0x52674e,_0x43a0a4){return this['savedProgress'][_0x205e('0x330')][_0x52674e]=_0x43a0a4;}['_resetWorld'](_0x4b61e8){const _0x30dead=this[_0x205e('0x2ab')]['worlds'][_0x4b61e8]={};const _0x446363=_0x30dead[_0x205e('0x34c')]={};for(let _0x130527=0x1;_0x130527<=0x9;_0x130527++){_0x446363[_0x130527]={'slot':_0x130527+(_0x4b61e8-0x1)*0x9,'level':0x0,'resources':'0','multiProfitMultiplier':this[_0x205e('0x2ab')][_0x205e('0x330')][_0x205e('0x34d')]};}}[_0x205e('0x337')](){for(let _0x2a6d21=0x1;_0x2a6d21<=VisualData[_0x205e('0x33a')]();_0x2a6d21++)this[_0x205e('0x33c')](_0x2a6d21);}['_updateTotalSeedsBonus'](){if(this['general']['seeds'][_0x205e('0x27c')](0x0)<=0x0)this['general'][_0x205e('0x34e')]=bigInt(0x1);else this[_0x205e('0x33d')][_0x205e('0x34e')]=this['general']['seeds']['multiply'](this[_0x205e('0x2ab')]['profile'][_0x205e('0x34f')])[_0x205e('0x27b')](0x64*RESOURCES_SCALE)[_0x205e('0xd4')](0x1);this[_0x205e('0x344')][_0x205e('0x281')](this[_0x205e('0x2e8')]());}static[_0x205e('0x2c9')](){return Math[_0x205e('0x215')](new Date()[_0x205e('0x206')]());}static['getDayNow'](){return Math[_0x205e('0x215')](this[_0x205e('0x2c9')]()/(0x18*0xe10*0x3e8));}static[_0x205e('0x350')](_0x1226df){return Math[_0x205e('0x215')](_0x1226df/(0x18*0xe10*0x3e8));}['getFortuneData'](){return this[_0x205e('0x34a')];}[_0x205e('0x351')](){return this[_0x205e('0x346')];}[_0x205e('0x352')](){return this[_0x205e('0x2ab')][_0x205e('0x347')];}[_0x205e('0x2b9')](){return this[_0x205e('0x2ab')][_0x205e('0x353')];}[_0x205e('0x354')](){return this[_0x205e('0x2b9')]()-Progress[_0x205e('0x2c9')]();}[_0x205e('0x2de')](){return Progress[_0x205e('0x2c9')]()<this[_0x205e('0x355')];}[_0x205e('0x2d1')](){return Progress[_0x205e('0x2c9')]()<this[_0x205e('0x2ab')][_0x205e('0x353')];}['getTotalSeedsBonus'](){return this[_0x205e('0x33d')][_0x205e('0x34e')];}['getBonusPerSeed'](){return this[_0x205e('0x2ab')][_0x205e('0x330')][_0x205e('0x34f')];}[_0x205e('0x356')](_0x45792d){const _0x5cdc76=this[_0x205e('0x2e5')](_0x45792d);const _0x3a82db=GameData[_0x205e('0x357')](_0x5cdc76[_0x205e('0x2a7')]);let _0x5ebb9e=0x0;for(let _0x111336=0x0;_0x111336<_0x3a82db*_0x3a82db;_0x111336++){if((_0x5cdc76[_0x205e('0x358')]&0x1<<_0x111336)!==0x0)_0x5ebb9e++;}return _0x5ebb9e;}['getPuzzleInfoById'](_0x385d1e){return this['savedProgress'][_0x205e('0x130')][_0x205e('0x359')][_0x385d1e];}[_0x205e('0x35a')](){return this[_0x205e('0x2ab')][_0x205e('0x130')]['goods'];}[_0x205e('0x35b')](){return this[_0x205e('0x2ab')][_0x205e('0x33b')];}[_0x205e('0x309')](_0x4b5c58){return this[_0x205e('0x2ab')][_0x205e('0x33b')][_0x4b5c58][_0x205e('0x34c')];}[_0x205e('0x35c')](){return this[_0x205e('0x33d')][_0x205e('0x2ac')];}[_0x205e('0x35d')](){return this[_0x205e('0x33d')]['gems'];}['getTotalSeeds'](){return this[_0x205e('0x33d')][_0x205e('0x340')];}[_0x205e('0x35e')](){return this[_0x205e('0x2ab')]['puzzle'][_0x205e('0x35f')][BoxType['GoldBox']]+this['savedProgress'][_0x205e('0x130')][_0x205e('0x35f')][BoxType['GemsBox']];}[_0x205e('0x360')](_0x31a640){return _0x31a640[_0x205e('0x361')]||_0x31a640[_0x205e('0x362')]===_0x205e('0x363');}[_0x205e('0x364')](_0x471db4){return _0x471db4[_0x205e('0x361')]||_0x471db4[_0x205e('0x362')]===_0x205e('0x363')&&_0x471db4[_0x205e('0x2ea')]===_0x205e('0x2cb');}[_0x205e('0x365')](_0xad42a3){if(_0xad42a3[_0x205e('0x1bf')](_0x205e('0x2f2'))){if(_0xad42a3[_0x205e('0x2f2')]>=0x0&&!this['isBuildingConstructed'](0x1,_0xad42a3[_0x205e('0x2f2')]+0x1))return![];}if(this[_0x205e('0x360')](_0xad42a3))return!![];return!this['isUpgradePurchased'](_0xad42a3['id']);}['isUpgradePurchased'](_0x25a27e){return this['savedProgress'][_0x205e('0x366')][_0x205e('0x1bf')](_0x25a27e);}[_0x205e('0x367')](){const _0x219fba=Progress[_0x205e('0x368')]();const _0x128e4f=Progress[_0x205e('0x350')](this['getMyDailyBonusInfo']()['update']);return _0x219fba>_0x128e4f;}[_0x205e('0x369')](){const _0x3d57d8=this[_0x205e('0x352')]();_0x3d57d8[_0x205e('0xe5')]=Progress[_0x205e('0x2c9')]();_0x3d57d8[_0x205e('0x36a')]++;eventManager[_0x205e('0x29b')]();this['saveProgress']();}[_0x205e('0x36b')](){this[_0x205e('0x355')]=Progress[_0x205e('0x2c9')]()+BanjoDuration*0x3e8;this[_0x205e('0x36c')]=bigInt('0');eventManager['shortSpeedActivated']();}['addSupervisorResources'](_0x38421b){this[_0x205e('0x36c')]=this[_0x205e('0x36c')][_0x205e('0xd4')](_0x38421b);}[_0x205e('0x36d')](){return this[_0x205e('0x36c')];}[_0x205e('0x36e')](){if(this[_0x205e('0x2d1')]())this[_0x205e('0x2ab')]['guard']+=0xe10*GuardDurationHours*0x3e8;else this[_0x205e('0x2ab')][_0x205e('0x353')]=Progress['getTimeNow']()+0xe10*GuardDurationHours*0x3e8;eventManager[_0x205e('0x293')]();this[_0x205e('0x2d9')]();}[_0x205e('0x36f')](_0x182d97){this[_0x205e('0x2ab')][_0x205e('0x330')][_0x205e('0x34f')]+=_0x182d97;this[_0x205e('0x345')]();this[_0x205e('0x2d9')]();}[_0x205e('0x370')](_0x2d8800){const _0x36c4d4=this[_0x205e('0x371')](_0x2d8800);switch(_0x2d8800['priceType']){case'Gold':return this[_0x205e('0x372')](_0x36c4d4);case _0x205e('0x373'):return this[_0x205e('0x374')](_0x36c4d4);case _0x205e('0x363'):return this[_0x205e('0x375')](_0x36c4d4);}return!![];}[_0x205e('0x376')](_0x4e2a05){switch(_0x4e2a05[_0x205e('0x362')]){case _0x205e('0x377'):return this['isResourcesEnough'](_0x4e2a05[_0x205e('0x378')]);case _0x205e('0x373'):return this[_0x205e('0x374')](_0x4e2a05['bigInt']);case _0x205e('0x363'):return this['isGemsEnough'](_0x4e2a05[_0x205e('0x378')]);}return!![];}[_0x205e('0x371')](_0xf1151d){if(this[_0x205e('0x2ab')][_0x205e('0x366')][_0x205e('0x1bf')](_0xf1151d['id'])&&this[_0x205e('0x364')](_0xf1151d))return new bigInt(this[_0x205e('0x2ab')][_0x205e('0x366')][_0xf1151d['id']]);return _0xf1151d['bigInt'];}[_0x205e('0x379')](_0xe6bef9){const _0x408b3c=GameData[_0x205e('0x37a')](_0xe6bef9);if(!_0x408b3c||!this[_0x205e('0x365')](_0x408b3c))return![];if(_0x408b3c[_0x205e('0x362')]===_0x205e('0x37b')){socialManager[_0x205e('0x37c')](_0xe6bef9);return!![];}else{return this[_0x205e('0x37d')](_0xe6bef9,_0x408b3c);}return![];}[_0x205e('0x16c')](_0x389f56){const _0x7a90b8=GameData[_0x205e('0x37a')](_0x389f56);const _0x1ea9d2=guiManager[_0x205e('0x37e')](WindowType[_0x205e('0x37f')]);if(_0x1ea9d2)_0x1ea9d2['setInAppData'](_0x7a90b8);this[_0x205e('0x37d')](_0x389f56,_0x7a90b8);}['purchaseConfirmed'](_0x420fec,_0x7906f0){let _0x440d30=this[_0x205e('0x371')](_0x7906f0);let _0xab8cb;switch(_0x7906f0[_0x205e('0x362')]){case _0x205e('0x377'):if(!this[_0x205e('0x372')](_0x440d30))return![];_0xab8cb=0x3e8;this[_0x205e('0x380')](_0x440d30);break;case _0x205e('0x373'):if(!this[_0x205e('0x374')](_0x440d30))return![];_0xab8cb=0x64;this[_0x205e('0x381')](_0x440d30);break;case'IN_APP':this[_0x205e('0x382')](_0x7906f0[_0x205e('0x341')]);break;case _0x205e('0x363'):if(!this[_0x205e('0x375')](_0x440d30))return![];gameAnalytics[_0x205e('0x383')](_0x205e('0x384'),{'gems':this[_0x205e('0x35d')](),'spent':_0x440d30[_0x205e('0x2ad')](),'session':this[_0x205e('0x2ab')][_0x205e('0x330')]['sessionNumber'],'id':_0x420fec});_0xab8cb=0x2;this[_0x205e('0x385')](_0x440d30);switch(_0x7906f0[_0x205e('0x2ea')]){case _0x205e('0x2cb'):const _0x26fe1e=new bigInt(this[_0x205e('0x2ab')][_0x205e('0x330')][_0x205e('0x34d')]);this[_0x205e('0x2ab')]['profile'][_0x205e('0x34d')]=_0x26fe1e[_0x205e('0x2bb')](_0x7906f0[_0x205e('0x2ec')])[_0x205e('0x2ad')]();break;case _0x205e('0x2f0'):gameInit[_0x205e('0x297')](!![]);break;}break;}if(_0x440d30){if(!this[_0x205e('0x364')](_0x7906f0))this[_0x205e('0x2ab')]['purchases'][_0x420fec]=0x1;else{this[_0x205e('0x2ab')][_0x205e('0x366')][_0x420fec]=_0x440d30[_0x205e('0x2bb')](_0xab8cb)[_0x205e('0x2ad')]();}}this[_0x205e('0x286')][_0x205e('0x281')](_0x7906f0);eventManager[_0x205e('0x295')](_0x7906f0);return!![];}[_0x205e('0x386')](){return this[_0x205e('0x33d')][_0x205e('0x387')];}[_0x205e('0x388')](_0x5aadde){if(this[_0x205e('0x372')](this['general'][_0x205e('0x387')])){this['purchaseBox'](BoxType['GoldBox'],_0x5aadde);this['resourcesSpent'](this[_0x205e('0x33d')][_0x205e('0x387')]);this['general'][_0x205e('0x387')]=this['general'][_0x205e('0x387')][_0x205e('0x2bb')](0x3);this[_0x205e('0x2ab')][_0x205e('0x130')][_0x205e('0x342')]=this[_0x205e('0x33d')][_0x205e('0x387')][_0x205e('0x2ad')]();return this[_0x205e('0x386')]();}return![];}['purchaseBox'](_0x45f8f6,_0x1ac923){this['giveChests'](_0x45f8f6,_0x1ac923);eventManager[_0x205e('0x292')](_0x1ac923);}[_0x205e('0x389')](_0x34dbd8,_0x4708a0){this[_0x205e('0x2ab')]['puzzle'][_0x205e('0x35f')][_0x34dbd8]+=_0x4708a0;this['saveProgress']();eventManager['boxReceived'](_0x4708a0);if(_0x34dbd8===BoxType[_0x205e('0x38a')])this[_0x205e('0x38b')]();}[_0x205e('0x38c')](){return this[_0x205e('0x2ab')][_0x205e('0x130')][_0x205e('0x38d')];}[_0x205e('0x38e')](){if(this[_0x205e('0x2ab')]['puzzle'][_0x205e('0x35f')][BoxType[_0x205e('0x333')]]>0x0)this['savedProgress'][_0x205e('0x130')][_0x205e('0x35f')][BoxType[_0x205e('0x333')]]--;else this[_0x205e('0x2ab')][_0x205e('0x130')][_0x205e('0x35f')][BoxType['GemsBox']]--;this['savedProgress'][_0x205e('0x130')]['openedBox']+=0x1;const _0x4b5c56=this[_0x205e('0x35a')]();const _0x4948b7=Math['floor'](Math[_0x205e('0x22c')]()*_0x4b5c56[_0x205e('0xe7')]);const _0x26822b=_0x4b5c56[_0x4948b7];const _0x43af6a=GameData['getPuzzleSizePerLevel'](_0x26822b[_0x205e('0x2a7')]);const _0x5e59d2=Math[_0x205e('0x38f')](Math[_0x205e('0x22c')]()*_0x43af6a*_0x43af6a);const _0x1a90ef=(0x1<<_0x5e59d2&_0x26822b[_0x205e('0x358')])!==0x0||_0x26822b[_0x205e('0x2a7')]>=MAX_PUZZLE_LEVEL;const _0x3fbe10=Object['assign']({},_0x26822b);if(_0x1a90ef)this[_0x205e('0x382')](bigInt(GameData[_0x205e('0x390')]()*RESOURCES_SCALE));else{_0x26822b[_0x205e('0x358')]|=0x1<<_0x5e59d2;}if(_0x26822b[_0x205e('0x2a7')]<MAX_PUZZLE_LEVEL){let _0x422fae=!![];for(let _0x50bbc0=0x0;_0x50bbc0<_0x43af6a*_0x43af6a;_0x50bbc0++){if((0x1<<_0x50bbc0&_0x26822b[_0x205e('0x358')])===0x0){_0x422fae=![];break;}}if(_0x422fae){_0x26822b[_0x205e('0x2a7')]++;_0x26822b['pieces']=0x0;this[_0x205e('0x2c5')][_0x205e('0x281')](_0x26822b);}}this[_0x205e('0x343')][_0x205e('0x281')](_0x3fbe10,_0x4948b7,_0x5e59d2,_0x1a90ef,!![]);eventManager[_0x205e('0x28f')]();}[_0x205e('0x391')](){const _0xfde869=this[_0x205e('0x35a')]();for(let _0x9abb70=0x0;_0x9abb70<_0xfde869['length'];_0x9abb70++){if(_0xfde869[_0x9abb70][_0x205e('0x2a7')]<MAX_PUZZLE_LEVEL)return![];}return!![];}[_0x205e('0x38b')](){if(this[_0x205e('0x2ab')][_0x205e('0x130')][_0x205e('0x35f')][BoxType[_0x205e('0x38a')]]<=0x0||this[_0x205e('0x391')]())return![];const _0x30bcdb=MAX_PUZZLE_LEVEL;this['savedProgress'][_0x205e('0x130')][_0x205e('0x35f')][BoxType[_0x205e('0x38a')]]-=0x1;const _0x3d5e9d=this['getPuzzleInfo']();let _0x2a9d55=0x0;for(let _0x2508df=0x0;_0x2508df<_0x3d5e9d[_0x205e('0xe7')];_0x2508df++){if(_0x3d5e9d[_0x2508df][_0x205e('0x2a7')]>=_0x30bcdb)_0x2a9d55++;}if(_0x2a9d55===_0x3d5e9d[_0x205e('0xe7')]){console[_0x205e('0x14d')](_0x205e('0x392'));return;}let _0x898689=Math[_0x205e('0x38f')](Math[_0x205e('0x22c')]()*(_0x3d5e9d['length']-_0x2a9d55));let _0x23c28a=_0x898689;for(let _0x1533a3=0x0;_0x1533a3<=_0x898689;_0x1533a3++){if(_0x3d5e9d[_0x1533a3][_0x205e('0x2a7')]>=_0x30bcdb){_0x23c28a++;_0x898689++;}}const _0x480094=_0x3d5e9d[_0x23c28a];const _0x1b60d8=GameData[_0x205e('0x357')](_0x480094[_0x205e('0x2a7')]);let _0x597a7e=0x0;for(let _0x4d7b28=0x0;_0x4d7b28<_0x1b60d8*_0x1b60d8;_0x4d7b28++){if((0x1<<_0x4d7b28&_0x480094[_0x205e('0x358')])===0x0){_0x597a7e=_0x4d7b28;break;}}const _0x486aea=Object[_0x205e('0x13f')]({},_0x480094);const _0x2aafb2=![];_0x480094[_0x205e('0x358')]|=0x1<<_0x597a7e;if(_0x480094['level']<_0x30bcdb){let _0x27e43b=!![];for(let _0x4d7b28=0x0;_0x4d7b28<_0x1b60d8*_0x1b60d8;_0x4d7b28++){if((0x1<<_0x4d7b28&_0x480094['pieces'])===0x0){_0x27e43b=![];break;}}if(_0x27e43b){_0x480094[_0x205e('0x2a7')]++;_0x480094['pieces']=0x0;this[_0x205e('0x2c5')][_0x205e('0x281')](_0x480094);}}this[_0x205e('0x343')][_0x205e('0x281')](_0x486aea,_0x23c28a,_0x597a7e,_0x2aafb2,![]);eventManager['boxOpened']();return!![];}['getSeedsForSoulsCount'](){const _0x489e47=bigInt(_0x205e('0x393'));const _0x385d98=this[_0x205e('0x33d')]['resources'][_0x205e('0xd4')](this[_0x205e('0x33d')][_0x205e('0x380')])['divide'](RESOURCES_SCALE);if(_0x385d98[_0x205e('0x27c')](0x0)<=0x0)return new bigInt(0x0);if(_0x385d98[_0x205e('0x27c')](_0x489e47)<0x0){let _0x433bb2=BigIntSqrRoot(_0x385d98);return BigIntSqrRoot(_0x433bb2)[_0x205e('0x2bb')](RESOURCES_SCALE);}else{let _0xf674d0=_0x385d98[_0x205e('0x2bb')](_0x385d98)['multiply'](_0x385d98);_0xf674d0=BigIntSqrRoot(_0xf674d0);_0xf674d0=BigIntSqrRoot(_0xf674d0);_0xf674d0=BigIntSqrRoot(_0xf674d0);return _0xf674d0;}}[_0x205e('0x394')](){return this[_0x205e('0x2ab')][_0x205e('0x330')][_0x205e('0x395')];}[_0x205e('0x396')](){this[_0x205e('0x2ab')][_0x205e('0x330')][_0x205e('0x395')]=0x0;for(let _0x56c2b8 in this['savedProgress'][_0x205e('0x33b')]){const _0x34e005=this['savedProgress'][_0x205e('0x33b')][_0x56c2b8];const _0x54b37d=_0x34e005[_0x205e('0x34c')];for(let _0x4d613d in _0x54b37d)_0x54b37d[_0x4d613d][_0x205e('0x2a8')]=[];}eventManager['likesReseted']();this[_0x205e('0x2d9')]();}['getLikesTimeleft'](){return LIKES_RESET_TIMER-(Progress[_0x205e('0x2c9')]()-this[_0x205e('0x2ab')][_0x205e('0x330')]['likedTimer']);}['buildingLiked'](_0x2a977c,_0x27c576){if(!this[_0x205e('0x2ab')][_0x205e('0x330')]['likedTimer'])this[_0x205e('0x2ab')][_0x205e('0x330')]['likedTimer']=Progress[_0x205e('0x2c9')]();}['update'](){if(this[_0x205e('0x394')]()){if(this[_0x205e('0x397')]()<=0x0)this[_0x205e('0x396')]();}}[_0x205e('0x30d')](_0x1b3513,_0x497758){eventManager[_0x205e('0x28e')](_0x1b3513['id'],_0x497758);this[_0x205e('0x398')](_0x497758);}[_0x205e('0x399')](){this[_0x205e('0x34b')](_0x205e('0x33f'),this['general']['resources'][_0x205e('0x2ad')]());}['_seedsWereUpdated'](){this[_0x205e('0x34b')](_0x205e('0x340'),this[_0x205e('0x33d')][_0x205e('0x340')][_0x205e('0x2ad')]());this[_0x205e('0x2bd')][_0x205e('0x281')](this);this[_0x205e('0x345')]();}[_0x205e('0x39a')](){this[_0x205e('0x34b')]('gems',this[_0x205e('0x33d')][_0x205e('0x341')][_0x205e('0x2ad')]());this[_0x205e('0x2bd')][_0x205e('0x281')](this);}[_0x205e('0x398')](_0x278b70){this[_0x205e('0x33d')][_0x205e('0x2ac')]=this[_0x205e('0x33d')][_0x205e('0x2ac')][_0x205e('0xd4')](_0x278b70);this[_0x205e('0x399')]();this[_0x205e('0x2bd')][_0x205e('0x281')](this,!![]);const _0x265c6c=Math['round'](this[_0x205e('0x33e')](_0x205e('0x33f'))[_0x205e('0xe7')]/0x3);if(_0x265c6c>this['savedProgress'][_0x205e('0x330')][_0x205e('0x39b')]){this[_0x205e('0x2ab')][_0x205e('0x330')][_0x205e('0x39b')]=_0x265c6c;gameAnalytics[_0x205e('0x383')]('NewGoldNumber',{'gems':this[_0x205e('0x35d')](),'gold':_0x265c6c,'session':this['savedProgress']['profile']['sessionNumber']});}}[_0x205e('0x372')](_0x25f680){return this[_0x205e('0x33d')][_0x205e('0x2ac')]['compare'](_0x25f680)>=0x0;}[_0x205e('0x374')](_0x3e27c5){return this[_0x205e('0x33d')][_0x205e('0x340')][_0x205e('0x27c')](_0x3e27c5)>=0x0;}['isGemsEnough'](_0x26610d){return this[_0x205e('0x33d')][_0x205e('0x341')][_0x205e('0x27c')](_0x26610d)>=0x0;}[_0x205e('0x380')](_0x59cae4){this[_0x205e('0x33d')]['resources']=this[_0x205e('0x33d')][_0x205e('0x2ac')][_0x205e('0x39c')](_0x59cae4);this[_0x205e('0x33d')][_0x205e('0x380')]=this[_0x205e('0x33d')][_0x205e('0x380')][_0x205e('0xd4')](_0x59cae4);this['_setResourceByName'](_0x205e('0x39d'),this[_0x205e('0x33d')][_0x205e('0x380')][_0x205e('0x2ad')]());this[_0x205e('0x399')]();this[_0x205e('0x2bd')][_0x205e('0x281')](this,![]);}[_0x205e('0x39e')](_0x2edf8f){this[_0x205e('0x33d')][_0x205e('0x340')]=this[_0x205e('0x33d')]['seeds'][_0x205e('0xd4')](_0x2edf8f);this[_0x205e('0x39f')]();}[_0x205e('0x381')](_0xaff65c){this['general']['seeds']=this[_0x205e('0x33d')][_0x205e('0x340')][_0x205e('0x39c')](_0xaff65c);this['_seedsWereUpdated']();}[_0x205e('0x3a0')](){return this[_0x205e('0x2ab')][_0x205e('0x3a1')][_0x205e('0x3a2')];}[_0x205e('0x3a3')](){this[_0x205e('0x2ab')][_0x205e('0x3a1')][_0x205e('0x3a2')]+=JACKPOT_INCREASE*RESOURCES_SCALE;}['giveJackPot'](){this[_0x205e('0x382')](this[_0x205e('0x2ab')][_0x205e('0x3a1')][_0x205e('0x3a2')]);this[_0x205e('0x2ab')][_0x205e('0x3a1')][_0x205e('0x3a2')]=JACKPOT_SIZE*RESOURCES_SCALE;}['gotGems'](_0x599f07){this[_0x205e('0x33d')][_0x205e('0x341')]=this[_0x205e('0x33d')][_0x205e('0x341')]['add'](_0x599f07);this['_gemsWereUpdated']();}['gemsSpent'](_0x439005){gameAnalytics[_0x205e('0x383')](_0x205e('0x3a4'),{'gems':this[_0x205e('0x33d')][_0x205e('0x341')][_0x205e('0x2ad')](),'spent':_0x439005[_0x205e('0x2ad')](),'session':this[_0x205e('0x2ab')][_0x205e('0x330')]['sessionNumber']});this[_0x205e('0x33d')][_0x205e('0x341')]=this['general']['gems']['minus'](_0x439005);this[_0x205e('0x39a')]();}[_0x205e('0x3a5')](_0x365cbe,_0x11c86d){const _0x141b37={'worlds':{}};const _0x1ac905=_0x141b37[_0x205e('0x33b')][_0x365cbe['id']]={};_0x1ac905[_0x11c86d['id']]=this[_0x205e('0x2ab')][_0x205e('0x33b')][_0x365cbe['id']][_0x205e('0x34c')][_0x11c86d['id']];this['saveProgress']();}['buildingCreated'](_0x41ae66,_0xf4f027){const _0x457329=this[_0x205e('0x2ab')][_0x205e('0x33b')][_0x41ae66['id']][_0x205e('0x34c')];if(!_0x457329['hasOwnProperty'](_0xf4f027['id'])){this[_0x205e('0x3a5')](_0x41ae66,_0xf4f027);}}[_0x205e('0x3a6')](){return this[_0x205e('0x3a7')]()>=0x1;}[_0x205e('0x3a7')](){return this[_0x205e('0x2ab')][_0x205e('0x330')][_0x205e('0x3a8')]||0x0;}[_0x205e('0x3a9')](){}[_0x205e('0x297')](_0x1f345d){const _0x10ab75=this[_0x205e('0x2ab')][_0x205e('0x330')][_0x205e('0x3a8')]||0x0;this[_0x205e('0x2ab')]['profile'][_0x205e('0x3a8')]=_0x10ab75+0x1;const _0x586dc5=this[_0x205e('0x3aa')]();this[_0x205e('0x34b')](_0x205e('0x33f'),'0');this[_0x205e('0x34b')](_0x205e('0x39d'),'0');this[_0x205e('0x33d')][_0x205e('0x2ac')]=bigInt('0');this['general'][_0x205e('0x380')]=bigInt('0');const _0x41f72e={};for(let _0x4874ea in this[_0x205e('0x2ab')][_0x205e('0x366')]){if(GameData[_0x205e('0x37a')](_0x4874ea)[_0x205e('0x362')]===_0x205e('0x363'))_0x41f72e[_0x4874ea]=this['savedProgress'][_0x205e('0x366')][_0x4874ea];}this[_0x205e('0x2ab')][_0x205e('0x366')]=_0x41f72e;this[_0x205e('0x39e')](_0x586dc5);if(!_0x1f345d)this[_0x205e('0x337')]();eventManager[_0x205e('0x297')](_0x586dc5);this[_0x205e('0x2d9')]();}[_0x205e('0x331')](){const _0x1d28ec={};if(!this['lastSave'])this[_0x205e('0x3ab')]={};const _0x2e7a13=this['lastSave'];function _0x592727(_0x4266d3,_0x5dd5b4){for(let _0x3bf49a in _0x4266d3){const _0x56b5b2=_0x5dd5b4+_0x3bf49a;if(typeof _0x4266d3[_0x3bf49a]==_0x205e('0x264')){_0x592727(_0x4266d3[_0x3bf49a],_0x56b5b2+'.');}else{const _0x31b61f=_0x4266d3[_0x3bf49a];if(_0x2e7a13[_0x56b5b2]!==_0x31b61f){_0x1d28ec[_0x56b5b2]=_0x4266d3[_0x3bf49a];_0x2e7a13[_0x56b5b2]=_0x31b61f;}}}}_0x592727(this['savedProgress'],'');return _0x1d28ec;}[_0x205e('0x3ac')](){if(socialManager[_0x205e('0x1d6')]()){console[_0x205e('0x14d')](_0x205e('0x3ad'));return;}const _0x54214a=this[_0x205e('0x2ab')][_0x205e('0x330')][_0x205e('0x32c')]||0x0;this[_0x205e('0x2ab')]['profile'][_0x205e('0x32c')]=_0x54214a+0x1;window[_0x205e('0x3ae')][_0x205e('0x31d')](_0x205e('0x3af'),JSON[_0x205e('0x3b0')](this['savedProgress']));this['timerId']=null;this['lastSaveTime']=Progress['getTimeNow']();const _0x507a0b=this['_getDeltaSave']();this['_sendDataToServer'](_0x507a0b);}[_0x205e('0x3b1')](_0x27fce9){if(gBase[_0x205e('0x338')])gBase[_0x205e('0x330')]['update'](_0x27fce9,null,null,null,null,null,_0x56f1b6=>{if(_0x56f1b6){gameAnalytics['sendServerError'](_0x56f1b6,_0x205e('0xe5'));socialManager[_0x205e('0x15e')](_0x56f1b6,()=>this[_0x205e('0x3b1')](_0x27fce9));}});}['saveProgress'](){if(this['timerId']==null)this[_0x205e('0x3b2')]=setTimeout(this[_0x205e('0x3ac')][_0x205e('0xe6')](this),0x7d0);else{if(Progress[_0x205e('0x2c9')]()-this[_0x205e('0x3b3')]<=0x2710){clearTimeout(this[_0x205e('0x3b2')]);this[_0x205e('0x3b2')]=setTimeout(this[_0x205e('0x3ac')][_0x205e('0xe6')](this),0x7d0);}}}static[_0x205e('0x3b4')](_0x4bb9f7){if(!gBase[_0x205e('0x3b5')])_0x4bb9f7(null);else{if(!gBase[_0x205e('0x3b5')][_0x205e('0x3b6')]){gBase[_0x205e('0x330')][_0x205e('0xd6')](_0x229a36=>{if(_0x229a36)gameAnalytics[_0x205e('0x15d')](_0x229a36,_0x205e('0xd6'));});_0x4bb9f7(null);}else{gBase[_0x205e('0x330')][_0x205e('0x16f')](_0x271f3d=>{if(_0x271f3d)gameAnalytics[_0x205e('0x15d')](_0x271f3d,_0x205e('0x16f'));_0x4bb9f7(gBase['currentProfile'][_0x205e('0x3b7')]);});}}}[_0x205e('0x2c4')](){const _0x8d8792=window[_0x205e('0x3ae')]['getItem']('allProgress');return _0x8d8792?JSON['parse'](_0x8d8792):null;}[_0x205e('0x3b8')](){this[_0x205e('0x398')](this[_0x205e('0x35c')]()['add'](0x3e8)[_0x205e('0x2bb')](0xa));}[_0x205e('0x3b9')](){return this[_0x205e('0x2ab')][_0x205e('0x330')][_0x205e('0x3ba')]||0x0;}['setTutorialPhase'](_0x47d69d){this[_0x205e('0x2ab')][_0x205e('0x330')][_0x205e('0x3ba')]=_0x47d69d;this[_0x205e('0x2d9')]();}['getBuildingLevel'](_0x526ece,_0x1f4427){return this[_0x205e('0x2ab')][_0x205e('0x33b')][_0x526ece]['buildings'][_0x1f4427][_0x205e('0x2a7')];}[_0x205e('0x3bb')](_0x1513ac,_0x295d25){return this[_0x205e('0x3bc')](_0x1513ac,_0x295d25)>=0x1;}[_0x205e('0x3bd')](_0x4c7d88,_0x507f0f){return this[_0x205e('0x2ab')]['worlds'][_0x4c7d88][_0x205e('0x34c')][_0x507f0f];}[_0x205e('0x3be')](){return this['getTutorialPhase']()>=TutPhases[_0x205e('0x3bf')]&&this[_0x205e('0x3b9')]()<TutPhases[_0x205e('0x3c0')];}[_0x205e('0x3c1')](){return this[_0x205e('0x3b9')]()>=TutPhases[_0x205e('0x3c2')]&&this[_0x205e('0x3b9')]()<TutPhases['FortuneWheel'];}[_0x205e('0x3c3')](_0x197c32){return this[_0x205e('0x3b9')]()>=TutPhases[_0x205e('0x3c4')]&&this[_0x205e('0x3c5')](_0x197c32)>=0x6;}[_0x205e('0x3c6')](){return this[_0x205e('0x3b9')]()>=TutPhases[_0x205e('0x3c7')];}[_0x205e('0x3c5')](_0x1d7c4c){_0x1d7c4c=_0x1d7c4c||0x1;const _0x4b643e=this[_0x205e('0x2ab')][_0x205e('0x33b')][_0x1d7c4c][_0x205e('0x34c')];let _0x3fb3ff=0x0;for(let _0x82f69d=0x1;_0x82f69d<=0x9;_0x82f69d++){if(_0x4b643e[_0x82f69d]['level']!==0x0)_0x3fb3ff++;}return _0x3fb3ff;}[_0x205e('0x2c3')](_0x50634a){return this[_0x205e('0x372')](_0x50634a[_0x205e('0x2da')]())&&this['getPuzzleInfoById'](_0x50634a[_0x205e('0x2a9')]-0x1)[_0x205e('0x2a7')]>=0x1;}[_0x205e('0x3c8')](_0x2275e8){this[_0x205e('0x2ab')][_0x205e('0x3c9')][_0x205e('0xe5')]=_0x2275e8[_0x205e('0xe5')];const _0x539631=this[_0x205e('0x2ab')][_0x205e('0x3c9')]['activeQuests'];const _0x485b4f=_0x2275e8[_0x205e('0x3ca')];for(let _0x256849=0x0;_0x256849<_0x485b4f[_0x205e('0xe7')];_0x256849++){const _0x35f9f0=_0x485b4f[_0x256849];_0x539631[_0x256849]={'id':_0x35f9f0[_0x205e('0x15b')]['id'],'level':_0x35f9f0[_0x205e('0x2a7')],'progress':_0x35f9f0[_0x205e('0x16b')],'isRefreshed':_0x35f9f0[_0x205e('0x3cb')],'isComplete':_0x35f9f0[_0x205e('0x3cc')]};}this[_0x205e('0x2d9')]();}[_0x205e('0x3cd')](_0x3877d4){this[_0x205e('0x3ce')]();const _0x5b38ff=this[_0x205e('0x2ab')]['photo_quests'][_0x3877d4[_0x205e('0x15b')]['parent']['id']];_0x5b38ff['level']=_0x3877d4[_0x205e('0x2a7')];_0x5b38ff[_0x205e('0x16b')]=_0x3877d4[_0x205e('0x16b')];_0x5b38ff[_0x205e('0x3cc')]=_0x3877d4[_0x205e('0x3cc')];this[_0x205e('0x2d9')]();}['getQuestsProgress'](){return this[_0x205e('0x2ab')][_0x205e('0x3c9')];}['resetProgress'](){this[_0x205e('0x2ab')][_0x205e('0x330')][_0x205e('0x1a0')]=0x1;this[_0x205e('0x2d9')]();}['getFreeSpinsCount'](){return this[_0x205e('0x2ab')][_0x205e('0x3a1')][_0x205e('0x3cf')];}[_0x205e('0x3d0')](){return this[_0x205e('0x2ab')][_0x205e('0x3a1')][_0x205e('0xe5')]+SpinsResporeTime-Progress[_0x205e('0x2c9')]();}[_0x205e('0x3d1')](){if(this[_0x205e('0x3d2')]()>=Progress[_0x205e('0x3d3')]())this[_0x205e('0x2ab')][_0x205e('0x3a1')][_0x205e('0xe5')]=Progress['getTimeNow']();this[_0x205e('0x2ab')][_0x205e('0x3a1')][_0x205e('0x3cf')]=Math[_0x205e('0x3d4')](0x0,this[_0x205e('0x2ab')][_0x205e('0x3a1')][_0x205e('0x3cf')]-0x1);}[_0x205e('0x3d5')](){const _0x48b94a=this['getPuzzleInfo']();for(let _0x4f69cc=0x9;_0x4f69cc<_0x48b94a[_0x205e('0xe7')];_0x4f69cc++){if(_0x48b94a[_0x4f69cc]['level']>0x0)return!![];}return this[_0x205e('0x3c5')]()>=0x9;}[_0x205e('0x3d6')](){if(this[_0x205e('0x3d2')]()<Progress[_0x205e('0x3d3')]()){if(this[_0x205e('0x3d0')]()<=0x0){console[_0x205e('0x14d')]('add\x20new\x20spin');this[_0x205e('0x2ab')]['fortuneWheel'][_0x205e('0x3cf')]++;this['savedProgress']['fortuneWheel']['update']+=SpinsResporeTime;return!![];}}return![];}[_0x205e('0x3d7')](){if(!this[_0x205e('0x2ab')][_0x205e('0x3d8')]){this['savedProgress'][_0x205e('0x3d8')]={'count':0x0,'update':0x0};}const _0x2366ab=Progress[_0x205e('0x2c9')]();const _0x8a4c98=Progress[_0x205e('0x350')](_0x2366ab);const _0x250563=Progress[_0x205e('0x350')](this['savedProgress'][_0x205e('0x3d8')][_0x205e('0xe5')]);if(_0x8a4c98!=_0x250563)this['savedProgress'][_0x205e('0x3d8')][_0x205e('0x3d9')]=0x0;}['getAdsWatchedToday'](){this[_0x205e('0x3d7')]();return this[_0x205e('0x2ab')][_0x205e('0x3d8')][_0x205e('0x3d9')];}[_0x205e('0x3da')](){this[_0x205e('0x3d7')]();this[_0x205e('0x2ab')]['adsWatched'][_0x205e('0x3d9')]++;this[_0x205e('0x2ab')]['adsWatched'][_0x205e('0xe5')]=Progress[_0x205e('0x2c9')]();this[_0x205e('0x2d9')]();}static[_0x205e('0x3d3')](){return 0x3;}[_0x205e('0x3ce')](){if(!this[_0x205e('0x2ab')][_0x205e('0x3db')]){this[_0x205e('0x2ab')]['photo_quests']={};}}[_0x205e('0x3dc')](_0x57f778){this[_0x205e('0x3ce')]();if(this[_0x205e('0x2ab')][_0x205e('0x3db')][_0x205e('0x1bf')](_0x57f778))return this['savedProgress'][_0x205e('0x3db')][_0x57f778];const _0x50ff89=this['savedProgress'][_0x205e('0x3db')][_0x57f778]={'level':0x0,'progress':0x0,'isComplete':![]};return _0x50ff89;}static[_0x205e('0x3dd')](){const _0x9fb228=Progress[_0x205e('0x368')]()+0x1;const _0x231db7=Progress[_0x205e('0x2c9')]();return _0x9fb228*0x18*0xe10-_0x231db7/0x3e8;}}let GameData=function(){BUILDINGS_INFO={};SLOTS_UPGRADE=null;MARKET_GOLD=[];MARKET_SEEDS=[];MARKET_GEMS=[];MARKET_DATA={};ATLAS_SPRITES={};IN_APP_DATA={};PHOTO_DATA=null;_compareFunction=function(_0x5c67dd,_0x5a2a8f){const _0x33f2d7=new bigInt(_0x5c67dd[_0x205e('0x3de')]);const _0x2e6c0b=new bigInt(_0x5a2a8f[_0x205e('0x3de')]);return _0x33f2d7['compare'](_0x2e6c0b);};_compareFunctionOrder=function(_0x929d1,_0x3f2d1b){return _0x929d1[_0x205e('0x3df')]-_0x3f2d1b[_0x205e('0x3df')];};return{'getGemsForDublicate'(){return 0x5;},'getMarketListGold'(){return MARKET_GOLD;},'getMarketListSeeds'(){return MARKET_SEEDS;},'getMarketListGems'(){return MARKET_GEMS;},'getInAppData'(){return IN_APP_DATA;},'getMarketPurchaseById'(_0x41eeda){return MARKET_DATA[_0x41eeda];},'getBuildingInfoBySlot'(_0x468ade){return BUILDINGS_INFO[_0x468ade];},'getSlotsUpgrade'(){return SLOTS_UPGRADE;},'getPuzzleSizePerLevel'(_0x456618){switch(_0x456618){case 0x0:case 0x1:return 0x2;case 0x2:case 0x3:return 0x3;case 0x4:case 0x5:return 0x4;}},'getPuzzleResourceBonusDivPerLevel'(_0x1f71ec){switch(_0x1f71ec){case 0x0:case 0x1:case 0x2:return 0x1;case 0x3:return 0x2;case 0x4:return 0x6;default:return 0x1a;}},'getPuzzleResourceBonusPerLevel'(_0x287cdf){switch(_0x287cdf){case 0x0:case 0x1:return 0x1;case 0x2:return 0x2;case 0x3:return 0x6;case 0x4:return 0x1a;default:return 0x7e;}},'getPuzzleBackNamePerLevel'(_0x32c130){switch(_0x32c130){case 0x1:return _0x205e('0x20');case 0x2:return _0x205e('0x21');case 0x3:return _0x205e('0x22');case 0x4:return'PuzzleGold';case 0x5:return _0x205e('0x24');}return null;},'getPuzzlesIconNamePerLevel'(_0x51bc78){switch(_0x51bc78){case 0x1:return _0x205e('0x25');case 0x2:return _0x205e('0x26');case 0x3:return _0x205e('0x3e0');case 0x4:return _0x205e('0x27');case 0x5:return _0x205e('0x28');}return null;},'getPuzzlesTextPerLevel'(_0x406eb2){switch(_0x406eb2){case 0x1:return _0x205e('0x3e1');case 0x2:return _0x205e('0x3e2');case 0x3:return _0x205e('0x3e3');case 0x4:return _0x205e('0x3e4');case 0x5:return _0x205e('0x3e5');}return null;},'getIconByType'(_0x4e9a88){switch(_0x4e9a88){case _0x205e('0x377'):return _0x205e('0x5');case _0x205e('0x373'):return _0x205e('0x7');case _0x205e('0x363'):return _0x205e('0x6');}return null;},'getPuzzleIcon'(_0xa18302){return BUILDINGS_INFO[_0xa18302][_0x205e('0x2f4')][_0x205e('0x130')];},'getBoxData'(){return BOX_DATA;},'getLoginData'(){return LOGIN_DATA;},'getRandomQuest'(){return QUESTS_DATA[Math[_0x205e('0x38f')](Math[_0x205e('0x22c')]()*QUESTS_DATA[_0x205e('0xe7')])];},'getQuestById'(_0x5effb8){for(let _0x44bbbd in QUESTS_DATA){if(QUESTS_DATA[_0x44bbbd]['id']===_0x5effb8)return QUESTS_DATA[_0x44bbbd];}return null;},'getPhotoData'(){return PHOTO_DATA;},'getPhotoDataBySlotId'(_0xf848dd){for(let _0x17edb6 in PHOTO_DATA){if(PHOTO_DATA[_0x17edb6][_0x205e('0x3e6')]==_0xf848dd)return PHOTO_DATA[_0x17edb6];}return null;},'prepareAtlases'(_0x19feb6){if(_0x19feb6){for(let _0x29d5f8 in _0x19feb6[_0x205e('0x3e7')]){const _0x888293=_0x19feb6[_0x205e('0x3e7')][_0x29d5f8][_0x205e('0x3e8')];for(let _0x3b1831 in _0x888293){ATLAS_SPRITES[_0x888293[_0x3b1831][_0x205e('0x3e9')]]=0x1;}}}},'getAtlasName'(_0x132484){return ATLAS_SPRITES[_0x205e('0x1bf')](_0x132484[_0x205e('0x1e5')])?_0x205e('0x3ea'):null;},'prepareGameData'(_0x36baa7){const _0x530057=_0x36baa7[_0x205e('0x3eb')];const _0x23189e=_0x36baa7[_0x205e('0x3ec')];const _0x41f7f6=_0x36baa7[_0x205e('0x3ed')];const _0x460fc1=_0x36baa7[_0x205e('0x3ee')];const _0x4b786c=_0x36baa7[_0x205e('0x3ef')];const _0x402071=_0x36baa7[_0x205e('0x3f0')];const _0x33915a=_0x36baa7[_0x205e('0x3f1')];const _0x4dbbc5=_0x36baa7[_0x205e('0x3f2')];QUESTS_DATA=_0x402071;_0x4dbbc5['sort'](_compareFunctionOrder);for(let _0x479d53=0x0;_0x479d53<_0x530057[_0x205e('0xe7')];_0x479d53++){let _0x320934=bigInt(_0x530057[_0x479d53][_0x205e('0x3f3')])['multiply'](RESOURCES_SCALE);for(let _0x186228=0x0;_0x186228<0x3;_0x186228++){const _0x49dd13=BUILDINGS_INFO[_0x479d53+0x1+_0x186228*0x9]={};_0x49dd13['construct']={'price':_0x320934};}}for(let _0x5eb40e=0x0;_0x5eb40e<_0x23189e[_0x205e('0xe7')];_0x5eb40e++){const _0x44f270=_0x23189e[_0x5eb40e];let _0x43b2b7=0x0;switch(_0x44f270[_0x205e('0x3f4')]){case _0x205e('0x3f5'):_0x43b2b7=0x0;break;case _0x205e('0x3f6'):_0x43b2b7=0x9;break;default:_0x43b2b7=0x12;break;}const _0x49dd13=BUILDINGS_INFO[_0x44f270['slotNumber']+0x1+_0x43b2b7];_0x49dd13[_0x205e('0x2f4')]={'icon':_0x44f270[_0x205e('0x3f7')],'drop':_0x44f270['drop'],'puzzle':_0x44f270[_0x205e('0x1fc')]};_0x49dd13['production']={'base':bigInt(_0x44f270[_0x205e('0x3f8')])[_0x205e('0x2bb')](RESOURCES_SCALE),'perLevel':0x0};_0x49dd13[_0x205e('0x2e6')]={'base':bigInt(_0x44f270[_0x205e('0x3f9')])[_0x205e('0x2bb')](RESOURCES_SCALE),'scale':_0x44f270[_0x205e('0x3fa')]};_0x49dd13[_0x205e('0x2ae')]={'duration':_0x44f270[_0x205e('0x3fb')]};}SLOTS_UPGRADE=_0x41f7f6;for(let _0x3a1b53 in _0x460fc1){const _0x44f270=_0x460fc1[_0x3a1b53];switch(_0x44f270[_0x205e('0x362')]){case'Gold':MARKET_GOLD['push'](_0x44f270);break;case _0x205e('0x373'):MARKET_SEEDS[_0x205e('0xda')](_0x44f270);break;case _0x205e('0x363'):_0x44f270[_0x205e('0x3de')]=_0x44f270[_0x205e('0x3fc')][_0x205e('0x2ad')]();MARKET_GEMS[_0x205e('0xda')](_0x44f270);break;}_0x44f270[_0x205e('0x378')]=bigInt(_0x44f270[_0x205e('0x3de')])[_0x205e('0x2bb')](RESOURCES_SCALE);MARKET_DATA[_0x44f270['id']]=_0x44f270;}IN_APP_DATA=_0x4dbbc5;for(let _0x2a8c2b in _0x4dbbc5){const _0x44f270=_0x4dbbc5[_0x2a8c2b];_0x44f270['id']=_0x44f270[_0x205e('0x3fd')];_0x44f270[_0x205e('0x362')]=_0x205e('0x37b');_0x44f270[_0x205e('0x361')]=!![];_0x44f270[_0x205e('0x3fe')]=_0x44f270[_0x205e('0x341')];_0x44f270[_0x205e('0x341')]*=RESOURCES_SCALE;MARKET_DATA[_0x44f270[_0x205e('0x3fd')]]=_0x44f270;}MARKET_GOLD['sort'](_compareFunction);MARKET_SEEDS[_0x205e('0x3ff')](_compareFunction);BOX_DATA=_0x4b786c;for(let _0x19bbfc=0x0;_0x19bbfc<BOX_DATA['length'];_0x19bbfc++){const _0x2a128f=BOX_DATA[_0x19bbfc];if(_0x2a128f[_0x205e('0x3fc')])_0x2a128f[_0x205e('0x378')]=bigInt(_0x2a128f[_0x205e('0x3fc')])[_0x205e('0x2bb')](RESOURCES_SCALE);}LOGIN_DATA=_0x33915a;PHOTO_DATA=_0x36baa7[_0x205e('0x400')];for(let _0x4744b7 in PHOTO_DATA){const _0x36cf30=PHOTO_DATA[_0x4744b7];const _0x546003=_0x36cf30[_0x205e('0x14a')];for(let _0x1eeeb0 in _0x546003){const _0x13058a=_0x546003[_0x1eeeb0];const _0x5e7e76=this[_0x205e('0x401')](_0x13058a[_0x205e('0x402')]);if(_0x5e7e76){_0x13058a[_0x205e('0x1e1')]=_0x5e7e76[_0x205e('0x1e1')];_0x13058a[_0x205e('0x15b')]=_0x5e7e76['info'];_0x13058a[_0x205e('0x403')]=_0x36cf30;}else console[_0x205e('0x150')](_0x205e('0x404')+_0x13058a['quest_id']);}}}};}();class QuestBase{constructor(_0x1b2b7d,_0x1c6648){this[_0x205e('0x15b')]=_0x1b2b7d;if(_0x1c6648){this[_0x205e('0x2a7')]=_0x1c6648[_0x205e('0x2a7')];this[_0x205e('0x16b')]=_0x1c6648[_0x205e('0x16b')];this[_0x205e('0x3cb')]=_0x1c6648['isRefreshed'];this[_0x205e('0x3cc')]=_0x1c6648[_0x205e('0x3cc')];}else{this[_0x205e('0x2a7')]=Math[_0x205e('0x38f')](Math[_0x205e('0x22c')]()*_0x1b2b7d[_0x205e('0x405')][_0x205e('0xe7')]);this[_0x205e('0x16b')]=0x0;this[_0x205e('0x3cb')]=![];this[_0x205e('0x3cc')]=![];}if(_0x1b2b7d[_0x205e('0x1bf')](_0x205e('0x405'))){this[_0x205e('0x406')]=_0x1b2b7d[_0x205e('0x405')][this[_0x205e('0x2a7')]];this[_0x205e('0x405')]=this['originalReward']*RESOURCES_SCALE;this[_0x205e('0x3d9')]=_0x1b2b7d[_0x205e('0x14a')][this['level']];}else{this[_0x205e('0x3d9')]=_0x1b2b7d['count'];}this[_0x205e('0x407')]=_0x1b2b7d[_0x205e('0x407')];this['claimCallback']=_0x1b2b7d['claimCallback'];this[_0x205e('0x408')]=_0x1b2b7d[_0x205e('0x408')];this[_0x205e('0x409')]=_0x1b2b7d[_0x205e('0x409')];if(this[_0x205e('0x16b')]>=this['count'])this[_0x205e('0x407')](this);}['hasAction'](){return this[_0x205e('0x15b')]['hasAction'];}['useAction'](){}[_0x205e('0x40a')](){return this['originalReward'];}[_0x205e('0x40b')](_0x1f538d){this['progress']+=_0x1f538d;if(this[_0x205e('0x16b')]>=this[_0x205e('0x3d9')])this[_0x205e('0x407')](this);this[_0x205e('0x409')](this);eventManager[_0x205e('0x2a1')](this);}[_0x205e('0x40c')](){return!this[_0x205e('0x3cb')];}['canDisplayQuest'](){return!this[_0x205e('0x3cc')];}[_0x205e('0x40d')](){this[_0x205e('0x3cb')]=!![];this[_0x205e('0x408')]();}[_0x205e('0x40e')](){this[_0x205e('0x3cc')]=!![];this[_0x205e('0x40f')](this);}[_0x205e('0x410')](){}[_0x205e('0x411')](){return this[_0x205e('0x16b')]>=this[_0x205e('0x3d9')];}}class QuestBoxOpen extends QuestBase{constructor(_0x1560a1,_0x481bd3){super(_0x1560a1,_0x481bd3);this[_0x205e('0x412')]=()=>this[_0x205e('0x40b')](0x1);eventManager[_0x205e('0x282')][_0x205e('0x27d')](this[_0x205e('0x412')]);}[_0x205e('0x410')](){eventManager[_0x205e('0x282')]['removeListener'](this[_0x205e('0x412')]);}}class QuestBoxPurchased extends QuestBase{constructor(_0x42d914,_0x4c8583){super(_0x42d914,_0x4c8583);this['subscribe']=_0x3b83d7=>this[_0x205e('0x40b')](_0x3b83d7);eventManager['onBoxPurchased'][_0x205e('0x27d')](this[_0x205e('0x412')]);}[_0x205e('0x410')](){eventManager[_0x205e('0x283')]['removeListener'](this['subscribe']);}}class QuestCollectSoulsTimes extends QuestBase{constructor(_0xed58de,_0xa9070d){super(_0xed58de,_0xa9070d);this[_0x205e('0x412')]=_0x25579d=>{if(_0x25579d===_0xed58de[_0x205e('0x2a9')]||!_0xed58de[_0x205e('0x2a9')])this['increaseProgress'](0x1);};eventManager[_0x205e('0x413')][_0x205e('0x27d')](this[_0x205e('0x412')]);}[_0x205e('0x410')](){eventManager[_0x205e('0x413')][_0x205e('0x27f')](this[_0x205e('0x412')]);}}class QuestCollectSoulsAmount extends QuestBase{constructor(_0x5eb4a0,_0x4e89a6){super(_0x5eb4a0,_0x4e89a6);this[_0x205e('0x16b')]=bigInt(this['progress']);this[_0x205e('0x412')]=(_0x35b0b7,_0x1a74af)=>{if(_0x35b0b7===_0x5eb4a0[_0x205e('0x2a9')]||!_0x5eb4a0[_0x205e('0x2a9')])this[_0x205e('0x16b')]=this[_0x205e('0x16b')][_0x205e('0xd4')](_0x1a74af);};eventManager[_0x205e('0x413')][_0x205e('0x27d')](this['subscribe']);}[_0x205e('0x410')](){eventManager[_0x205e('0x413')][_0x205e('0x27f')](this['subscribe']);}}class QuestLongSpeedActivate extends QuestBase{constructor(_0x314ba5,_0x99565a){super(_0x314ba5,_0x99565a);this[_0x205e('0x412')]=()=>{this[_0x205e('0x40b')](0x1);};eventManager['onLongSpeedActivated'][_0x205e('0x27d')](this[_0x205e('0x412')]);}[_0x205e('0x410')](){eventManager['onLongSpeedActivated']['removeListener'](this[_0x205e('0x412')]);}}class QuestShortSpeedActivate extends QuestBase{constructor(_0x29d9a1,_0x50fc2b){super(_0x29d9a1,_0x50fc2b);this[_0x205e('0x412')]=()=>{this[_0x205e('0x40b')](0x1);};eventManager[_0x205e('0x285')][_0x205e('0x27d')](this[_0x205e('0x412')]);}[_0x205e('0x410')](){eventManager[_0x205e('0x285')][_0x205e('0x27f')](this['subscribe']);}}class QuestPurchaseUpgrade extends QuestBase{constructor(_0x354d3d,_0x13a8ca){super(_0x354d3d,_0x13a8ca);this[_0x205e('0x412')]=_0x54fe15=>{if(!_0x354d3d[_0x205e('0x362')]||_0x354d3d['priceType']===_0x54fe15['priceType'])this[_0x205e('0x40b')](0x1);};eventManager['onUpgradePurchased']['addListener'](this[_0x205e('0x412')]);}[_0x205e('0x410')](){eventManager['onUpgradePurchased'][_0x205e('0x27f')](this[_0x205e('0x412')]);}}class QuestBuildingUpgraded extends QuestBase{constructor(_0x34c7c3,_0x53bdbc){super(_0x34c7c3,_0x53bdbc);this[_0x205e('0x412')]=(_0x3f7821,_0x3cf8a7)=>{if(_0x3cf8a7===_0x34c7c3[_0x205e('0x2a9')]||!_0x34c7c3[_0x205e('0x2a9')])this[_0x205e('0x40b')](0x1);};eventManager['onBuildingUpgraded']['addListener'](this[_0x205e('0x412')]);}[_0x205e('0x410')](){eventManager[_0x205e('0x287')][_0x205e('0x27f')](this['subscribe']);}}class QuestBuildingUpgraded25 extends QuestBase{constructor(_0xde0512,_0x137837){super(_0xde0512,_0x137837);this['subscribe']=(_0x11866e,_0x5e4660)=>{if((_0x5e4660===_0xde0512[_0x205e('0x2a9')]||!_0xde0512[_0x205e('0x2a9')])&&_0x11866e[_0x205e('0x2c2')]()%0x19===0x0)this[_0x205e('0x40b')](0x1);};eventManager['onBuildingUpgraded'][_0x205e('0x27d')](this[_0x205e('0x412')]);}[_0x205e('0x410')](){eventManager['onBuildingUpgraded'][_0x205e('0x27f')](this[_0x205e('0x412')]);}}class QuestShare extends QuestBase{constructor(_0x92aba1,_0x41abfc){super(_0x92aba1,_0x41abfc);}[_0x205e('0x414')](){socialManager[_0x205e('0x415')](()=>{this['increaseProgress'](0x1);});}['claimReward'](){super[_0x205e('0x40e')]();localStorage[_0x205e('0x31d')](_0x205e('0x416'),Progress[_0x205e('0x368')]());}}class QuestHarvest extends QuestBase{constructor(_0x4ae5fa,_0x578668){super(_0x4ae5fa,_0x578668);this['subscribe']=()=>{this[_0x205e('0x40b')](0x1);};eventManager[_0x205e('0x288')][_0x205e('0x27d')](this[_0x205e('0x412')]);}['clearCallback'](){eventManager[_0x205e('0x288')][_0x205e('0x27f')](this['subscribe']);}}class QuestsManager{constructor(_0xf2a34c){this[_0x205e('0x3ca')]=[];this['mainQuests']=[];const _0x759ca0=Progress[_0x205e('0x2c9')]();const _0x3b1e19=Progress[_0x205e('0x350')](_0x759ca0);const _0x87b9eb=Progress['getDayFromTime'](_0xf2a34c[_0x205e('0xe5')]);this[_0x205e('0xe5')]=_0x759ca0;if(_0x3b1e19===_0x87b9eb){const _0x325d74=_0xf2a34c[_0x205e('0x3ca')];for(let _0x4e3a31=0x0;_0x4e3a31<_0x325d74[_0x205e('0xe7')];_0x4e3a31++){const _0x59ea03=_0x325d74[_0x4e3a31];const _0x174ab1=GameData[_0x205e('0x401')](_0x59ea03['id']);const _0x11784c=this[_0x205e('0x417')](_0x174ab1,_0x59ea03);this[_0x205e('0x3ca')][_0x205e('0xda')](_0x11784c);}}this[_0x205e('0x418')](this[_0x205e('0x3ca')][_0x205e('0xe7')]);const _0x17b290=VisualData[_0x205e('0x419')]();if(_0x17b290[_0x205e('0x41a')]&&_0x17b290[_0x205e('0x41a')][_0x205e('0x1bf')](AllGetParams['game_platform'])&&_0x17b290[_0x205e('0x41a')][AllGetParams[_0x205e('0x1c1')]]){const _0x1152cc=localStorage['getItem'](_0x205e('0x416'));if(Progress[_0x205e('0x368')]()>_0x1152cc){const _0x11784c=this[_0x205e('0x417')]({'id':0x3e8,'type':_0x205e('0x41b'),'levels':[0x1],'reward':[0x5],'info':_0x205e('0x41c'),'hasAction':!![]},null);this[_0x205e('0x41d')]['push'](_0x11784c);}}}[_0x205e('0x41e')](_0x450175){if(this['mainQuests'][_0x205e('0xe7')]>_0x450175)return this[_0x205e('0x41d')][_0x450175];return this[_0x205e('0x3ca')][_0x450175-this['mainQuests'][_0x205e('0xe7')]];}['replaceQuest'](_0x575519){const _0x53c669=GameData['getRandomQuest']();let _0x3710d5=this[_0x205e('0x417')](_0x53c669);this[_0x205e('0x3ca')][_0x575519]=_0x3710d5;_0x3710d5[_0x205e('0x40d')]();}[_0x205e('0x41f')](_0x1a4a71){eventManager[_0x205e('0x41f')](_0x1a4a71);}[_0x205e('0x29d')](_0x4bb117){gameInit['progress'][_0x205e('0x382')](_0x4bb117[_0x205e('0x405')]);this[_0x205e('0x409')]();eventManager[_0x205e('0x29d')](_0x4bb117);}[_0x205e('0x420')](){this[_0x205e('0x409')]();}[_0x205e('0x409')](){gameInit[_0x205e('0x16b')][_0x205e('0x3c8')](this);}static[_0x205e('0x421')](_0x5213cc,_0x3f92ac){switch(_0x5213cc[_0x205e('0x1e1')]){case _0x205e('0x422'):return new QuestBoxOpen(_0x5213cc,_0x3f92ac);case _0x205e('0x423'):return new QuestHarvest(_0x5213cc,_0x3f92ac);case'CollectLastSlot':_0x5213cc['slot']=0x9;return new QuestCollectSoulsTimes(_0x5213cc,_0x3f92ac);case'Banjo':return new QuestShortSpeedActivate(_0x5213cc,_0x3f92ac);case'Rain':return new QuestLongSpeedActivate(_0x5213cc,_0x3f92ac);case _0x205e('0x424'):return new QuestPurchaseUpgrade(_0x5213cc,_0x3f92ac);case _0x205e('0x425'):return new QuestBoxPurchased(_0x5213cc,_0x3f92ac);case _0x205e('0x426'):return new QuestBuildingUpgraded25(_0x5213cc,_0x3f92ac);case _0x205e('0x427'):_0x5213cc[_0x205e('0x362')]=_0x205e('0x373');return new QuestPurchaseUpgrade(_0x5213cc,_0x3f92ac);case _0x205e('0x428'):return new QuestCollectSoulsTimes(_0x5213cc,_0x3f92ac);case _0x205e('0x429'):case _0x205e('0x42a'):return new QuestCollectSoulsTimes(_0x5213cc,_0x3f92ac);case _0x205e('0x41b'):return new QuestShare(_0x5213cc,_0x3f92ac);}return null;}[_0x205e('0x417')](_0xb1f37d,_0x30a30d){if(!_0xb1f37d)return null;switch(_0xb1f37d[_0x205e('0x1e1')]){case _0x205e('0x429'):case _0x205e('0x42a'):console[_0x205e('0x150')](_0x205e('0x42b'),GameData[_0x205e('0x401')](_0xb1f37d['id']-0x1));_0xb1f37d=GameData[_0x205e('0x401')](_0xb1f37d['id']-0x1);break;}_0xb1f37d[_0x205e('0x407')]=this['questCompleted'][_0x205e('0xe6')](this);_0xb1f37d['claimCallback']=this[_0x205e('0x29d')][_0x205e('0xe6')](this);_0xb1f37d[_0x205e('0x408')]=this[_0x205e('0x420')][_0x205e('0xe6')](this);_0xb1f37d[_0x205e('0x409')]=this[_0x205e('0x409')][_0x205e('0xe6')](this);return QuestsManager[_0x205e('0x421')](_0xb1f37d,_0x30a30d);}['activateRandomQuestForSlot'](_0x13a724){const _0x195d6b=GameData[_0x205e('0x42c')]();let _0x1f5fd2=this[_0x205e('0x417')](_0x195d6b);this[_0x205e('0x3ca')][_0x13a724]=_0x1f5fd2;}[_0x205e('0x418')](_0x46caa6){for(let _0x36ff06=_0x46caa6;_0x36ff06<0x3;_0x36ff06++){this['activateRandomQuestForSlot'](_0x36ff06);}if(_0x46caa6<0x3)this[_0x205e('0x409')]();}[_0x205e('0x42d')](){for(let _0x5ec7cc in this[_0x205e('0x3ca')]){const _0x3ddd21=this[_0x205e('0x3ca')][_0x5ec7cc];if(_0x3ddd21&&_0x3ddd21['isReadyToClaim']()&&!_0x3ddd21[_0x205e('0x3cc')])return!![];}return![];}}const ResourceIncreaseGold=0x14;const ResourceIncreaseSeed=0xa;class BonusBase{constructor(_0x273cab){this[_0x205e('0x15b')]=_0x273cab;}[_0x205e('0x42e')](){}['_getType'](){return this['info'][_0x205e('0x42f')];}['getIconName'](){return'DailyBonus_'+this[_0x205e('0x430')]();}[_0x205e('0x431')](){return VisualData[_0x205e('0x432')]()+this[_0x205e('0x430')]()+_0x205e('0x2fe');}[_0x205e('0x433')](){return this[_0x205e('0x15b')][_0x205e('0x2ec')][_0x205e('0x2ad')]();}[_0x205e('0x434')](){return![];}}class BonusWithIndex extends BonusBase{constructor(_0x31088e,_0x44cdd4){super(_0x31088e);this['index']=_0x44cdd4;}}class BonusResources extends BonusWithIndex{[_0x205e('0x42e')](){super[_0x205e('0x42e')]();gameInit[_0x205e('0x16b')][_0x205e('0x398')](this[_0x205e('0x435')]());}[_0x205e('0x435')](){return Math[_0x205e('0x3d4')](gameInit[_0x205e('0x16b')][_0x205e('0x35c')]()['multiply'](Math['trunc'](this[_0x205e('0x436')]()*RESOURCES_SCALE))[_0x205e('0x27b')](RESOURCES_SCALE),0x3e8*RESOURCES_SCALE);}[_0x205e('0x434')](){return!![];}[_0x205e('0x436')](){return(this['info'][_0x205e('0x2ec')]+this[_0x205e('0x437')]*ResourceIncreaseGold)/0x64;}[_0x205e('0x433')](){return'x'+(this[_0x205e('0x436')]()+0x1);}}class BonusGems extends BonusBase{[_0x205e('0x42e')](){super[_0x205e('0x42e')]();gameInit[_0x205e('0x16b')][_0x205e('0x382')](this[_0x205e('0x15b')][_0x205e('0x2ec')]*RESOURCES_SCALE);}}class BonusSeeds extends BonusWithIndex{[_0x205e('0x42e')](){super[_0x205e('0x42e')]();gameInit['progress'][_0x205e('0x39e')](this[_0x205e('0x435')]());}[_0x205e('0x436')](){return(this['info'][_0x205e('0x2ec')]+this['index']*ResourceIncreaseSeed)/0x64;}[_0x205e('0x433')](){return'x'+(this[_0x205e('0x436')]()+0x1);}[_0x205e('0x435')](){return Math[_0x205e('0x3d4')](gameInit[_0x205e('0x16b')][_0x205e('0x438')]()['multiply'](Math[_0x205e('0x215')](this['getKoeff']()*RESOURCES_SCALE))['divide'](RESOURCES_SCALE),0x3e8*RESOURCES_SCALE);}[_0x205e('0x434')](){return!![];}}class BonusSeedsStrength extends BonusBase{[_0x205e('0x42e')](){super[_0x205e('0x42e')]();gameInit[_0x205e('0x16b')][_0x205e('0x36f')](this[_0x205e('0x15b')][_0x205e('0x2ec')]);}[_0x205e('0x433')](){return'+'+super[_0x205e('0x433')]()+'%';}}class BonusBox extends BonusBase{[_0x205e('0x42e')](){super[_0x205e('0x42e')]();gameInit[_0x205e('0x16b')][_0x205e('0x389')](BoxType[_0x205e('0x333')],this[_0x205e('0x15b')][_0x205e('0x2ec')]);}}class BonusSuperBox extends BonusBase{[_0x205e('0x42e')](){super[_0x205e('0x42e')]();gameInit[_0x205e('0x16b')][_0x205e('0x389')](BoxType[_0x205e('0x38a')],this[_0x205e('0x15b')][_0x205e('0x2ec')]);}[_0x205e('0x430')](){return _0x205e('0x38a');}}class BonusTimeTravel extends BonusBase{[_0x205e('0x42e')](){super[_0x205e('0x42e')]();gameInit[_0x205e('0x295')]({'upgradeType':this[_0x205e('0x15b')][_0x205e('0x42f')],'parameter':this[_0x205e('0x15b')]['parameter']*0xe10});}}class DailyBonus{constructor(_0x102c31,_0x5dc9a5){this[_0x205e('0x439')]={};this[_0x205e('0x43a')]=0x0;this[_0x205e('0x43b')]=0x0;const _0x2e739c=0x1e;const _0x49ebf5=[];let _0x51518a=0x0;for(let _0x539dfe in _0x5dc9a5){const _0x3cf20e=_0x5dc9a5[_0x539dfe];const _0x364b74=_0x3cf20e[_0x205e('0x43c')];if(_0x364b74>0x0){const _0x5201b4=this['_generateBonus'](_0x3cf20e);this[_0x205e('0x439')][_0x364b74]=_0x5201b4;_0x51518a++;}else _0x49ebf5[_0x205e('0xda')](_0x3cf20e);}for(let _0x5c1850=0x0;_0x5c1850<_0x49ebf5[_0x205e('0xe7')]&&_0x49ebf5[_0x205e('0xe7')]<_0x2e739c-_0x51518a;_0x5c1850++){_0x49ebf5[_0x205e('0xda')](_0x49ebf5[_0x5c1850]);}const _0x13942d=new Random(_0x102c31);for(let _0x2e94b6=0x1;_0x2e94b6<=0x1e;_0x2e94b6++){if(!this[_0x205e('0x439')][_0x205e('0x1bf')](_0x2e94b6)){const _0x51ff6d=Math[_0x205e('0x215')](_0x13942d[_0x205e('0x43d')]()*_0x49ebf5[_0x205e('0xe7')]);const _0x5201b4=this[_0x205e('0x43e')](_0x49ebf5[_0x51ff6d]);if(_0x5201b4)this[_0x205e('0x439')][_0x2e94b6]=_0x5201b4;_0x49ebf5[_0x205e('0x242')](_0x51ff6d,0x1);}}}[_0x205e('0x43e')](_0xa2db13){switch(_0xa2db13[_0x205e('0x42f')]){case'Gold':return new BonusResources(_0xa2db13,this[_0x205e('0x43a')]++);case _0x205e('0x43f'):return new BonusBox(_0xa2db13);case _0x205e('0x38a'):case _0x205e('0x440'):case _0x205e('0x441'):return new BonusSuperBox(_0xa2db13);case _0x205e('0x442'):return new BonusTimeTravel(_0xa2db13);case _0x205e('0x443'):return new BonusSeeds(_0xa2db13,this['seedIndex']++);case _0x205e('0x444'):return new BonusSeedsStrength(_0xa2db13);case _0x205e('0x445'):case _0x205e('0x446'):return new BonusGems(_0xa2db13);}return null;}['getBonusForDay'](_0x59bfb9){return this[_0x205e('0x439')][_0x59bfb9];}}class WheelPrizeBase{constructor(_0x544f65){this[_0x205e('0x15b')]=_0x544f65;}[_0x205e('0x447')](){return this[_0x205e('0x15b')][_0x205e('0x448')];}[_0x205e('0x42e')](){gameInit[_0x205e('0x16b')][_0x205e('0x3a3')]();}[_0x205e('0x1d0')](){return this[_0x205e('0x15b')][_0x205e('0x42f')];}[_0x205e('0x449')](){return _0x205e('0x44a')+this[_0x205e('0x15b')][_0x205e('0x42f')];}[_0x205e('0x431')](){return VisualData[_0x205e('0x432')]()+this[_0x205e('0x15b')]['bonusType']+_0x205e('0x2fe');}[_0x205e('0x433')](){return this[_0x205e('0x15b')][_0x205e('0x2ec')];}[_0x205e('0x44b')](){return![];}}class WheelResources extends WheelPrizeBase{[_0x205e('0x42e')](){super['activateBonus']();gameInit[_0x205e('0x16b')]['addResources'](this[_0x205e('0x44c')]());}[_0x205e('0x44c')](){return Math['max'](gameInit[_0x205e('0x16b')][_0x205e('0x438')]()*0x3e8,0x3e8*RESOURCES_SCALE,AllBuildings[0x3][_0x205e('0x2d3')]());}[_0x205e('0x433')](){return LocalizationManager[_0x205e('0x44d')](this[_0x205e('0x44c')]());}[_0x205e('0x44b')](){return!![];}}class WheelGems extends WheelPrizeBase{[_0x205e('0x42e')](){super[_0x205e('0x42e')]();gameInit[_0x205e('0x16b')][_0x205e('0x382')](this[_0x205e('0x15b')][_0x205e('0x2ec')]);}[_0x205e('0x433')](){return Math[_0x205e('0x44e')](this[_0x205e('0x15b')][_0x205e('0x2ec')]/RESOURCES_SCALE);}}class WheelJackPot extends WheelPrizeBase{[_0x205e('0x42e')](){gameInit[_0x205e('0x16b')][_0x205e('0x44f')]();}[_0x205e('0x433')](){return Math[_0x205e('0x44e')](gameInit['progress']['getJackPotSize']()/RESOURCES_SCALE);}[_0x205e('0x44b')](){return!![];}}class WheelBox extends WheelPrizeBase{[_0x205e('0x42e')](){super[_0x205e('0x42e')]();gameInit[_0x205e('0x16b')][_0x205e('0x389')](BoxType[_0x205e('0x333')],this[_0x205e('0x15b')]['parameter']);}}class WheelTimeTravel extends WheelPrizeBase{[_0x205e('0x42e')](){super[_0x205e('0x42e')]();gameInit[_0x205e('0x295')]({'upgradeType':this[_0x205e('0x15b')][_0x205e('0x42f')],'parameter':this[_0x205e('0x15b')][_0x205e('0x2ec')]*0x3c});}}class WheelOfFortune{constructor(){this[_0x205e('0x439')]=[new WheelTimeTravel({'chance':0xa,'parameter':0x1e,'bonusType':_0x205e('0x442')}),new WheelBox({'chance':0x5,'parameter':0x1,'bonusType':_0x205e('0x43f')}),new WheelJackPot({'chance':0x3,'bonusType':_0x205e('0x450')}),new WheelTimeTravel({'chance':0x23,'parameter':0xf,'bonusType':'TimeTravel'}),new WheelGems({'chance':0xc,'parameter':0x5*RESOURCES_SCALE,'bonusType':_0x205e('0x363')}),new WheelResources({'chance':0x23,'bonusType':_0x205e('0x377')})];}['getBonuses'](){return this[_0x205e('0x439')];}}class PhotoManager{constructor(_0x10c6fc){this['activeQuests']={};_0x10c6fc[_0x205e('0x2c5')][_0x205e('0x27d')](this[_0x205e('0x451')][_0x205e('0xe6')](this));const _0xef85fa=GameData[_0x205e('0x452')]();for(let _0x11a10e=0x0;_0x11a10e<_0xef85fa['length'];_0x11a10e++){const _0x5b7fdf=_0xef85fa[_0x11a10e];this['_addPhotoQuest'](_0x5b7fdf);}}[_0x205e('0x453')](_0x1da309){const _0x37aee1=gameInit[_0x205e('0x16b')][_0x205e('0x2e5')](_0x1da309[_0x205e('0x3e6')]-0x1);const _0x326b95=gameInit[_0x205e('0x16b')][_0x205e('0x3dc')](_0x1da309['id']);if(_0x37aee1['level']>_0x326b95[_0x205e('0x2a7')]){const _0x278934=_0x1da309[_0x205e('0x14a')][_0x326b95[_0x205e('0x2a7')]];const _0x1ff9fd=this[_0x205e('0x417')](_0x278934,_0x326b95);this[_0x205e('0x3ca')][_0x1da309['id']]=_0x1ff9fd;}}[_0x205e('0x451')](_0x1b4fa0){const _0x21d721=GameData[_0x205e('0x454')](_0x1b4fa0['id']);this['_addPhotoQuest'](_0x21d721);}[_0x205e('0x41f')](_0xc72b99){}[_0x205e('0x29d')](_0x13cd39){_0x13cd39['level']++;_0x13cd39[_0x205e('0x410')]();this[_0x205e('0x409')](_0x13cd39);delete this[_0x205e('0x3ca')][_0x13cd39[_0x205e('0x15b')][_0x205e('0x403')]['id']];this['_addPhotoQuest'](_0x13cd39[_0x205e('0x15b')][_0x205e('0x403')]);}[_0x205e('0x409')](_0x53b728){gameInit['progress']['savePhotoQuestsProgress'](_0x53b728);}[_0x205e('0x417')](_0x3d42a0,_0x55a3de){if(!_0x3d42a0)return null;_0x3d42a0[_0x205e('0x407')]=this[_0x205e('0x41f')][_0x205e('0xe6')](this);_0x3d42a0[_0x205e('0x40f')]=this[_0x205e('0x29d')]['bind'](this);_0x3d42a0[_0x205e('0x409')]=this[_0x205e('0x409')]['bind'](this);return QuestsManager['publicGetQuest'](_0x3d42a0,_0x55a3de);}[_0x205e('0x401')](_0x1048f0){return this['activeQuests'][_0x205e('0x1bf')](_0x1048f0)?this[_0x205e('0x3ca')][_0x1048f0]:null;}}class GameInit{constructor(){this['preload']=new UnnyAction();this[_0x205e('0xd6')]=new UnnyAction();this[_0x205e('0xe5')]=new UnnyAction();this[_0x205e('0x455')]=new UnnyAction();this[_0x205e('0x2c8')]=new UnnyAction();this[_0x205e('0x301')]=new UnnyAction();this['onBuildingUpgraded']=new UnnyAction();this['onResourcesCollected']=new UnnyAction();this[_0x205e('0x2d2')]=new UnnyAction();this[_0x205e('0x456')]=new UnnyAction();this[_0x205e('0x2a2')]=new UnnyAction();this[_0x205e('0x303')]=new UnnyAction();this[_0x205e('0x457')]=new UnnyAction();this[_0x205e('0x458')]=new UnnyAction();this[_0x205e('0x459')]=[];this[_0x205e('0x30b')]='1';}[_0x205e('0x45a')](_0xc5cf31){this[_0x205e('0xd2')]=_0xc5cf31;const _0x32ff2e=_0xc5cf31[_0x205e('0x261')];_0x32ff2e['setPath'](VisualData[_0x205e('0x45b')]());_0x32ff2e[_0x205e('0x326')](_0x205e('0x3ec'),'goods_data.json');_0x32ff2e[_0x205e('0x326')]('SlotsData',_0x205e('0x45c'));_0x32ff2e[_0x205e('0x326')](_0x205e('0x3ed'),_0x205e('0x45d'));_0x32ff2e[_0x205e('0x326')](_0x205e('0x3ee'),_0x205e('0x45e'));_0x32ff2e[_0x205e('0x326')]('BoxData',_0x205e('0x45f'));_0x32ff2e['json'](_0x205e('0x3f0'),_0x205e('0x460'));_0x32ff2e[_0x205e('0x326')](_0x205e('0x3f1'),_0x205e('0x461'));_0x32ff2e[_0x205e('0x326')](_0x205e('0x3f2'),_0x205e('0x462'));if(VisualData[_0x205e('0x419')]()['photos'])_0x32ff2e['json'](_0x205e('0x400'),_0x205e('0x463'));_0x32ff2e[_0x205e('0x464')](VisualData['getFolderPath']());const _0x5183b1=_0x205e('0x323')+GameSettings[_0x205e('0x31c')];_0x32ff2e[_0x205e('0x326')](_0x5183b1,VisualData[_0x205e('0x324')]()+_0x5183b1+'.json');_0x32ff2e[_0x205e('0x465')](_0x205e('0x1e4'),VisualData[_0x205e('0x466')]());this[_0x205e('0x467')][_0x205e('0x281')](_0xc5cf31);}[_0x205e('0x295')](_0xc70b52){for(let _0x52c42b in this[_0x205e('0x459')]){const _0x331518=this['allWorlds'][_0x52c42b];_0x331518[_0x205e('0x295')](_0xc70b52);}switch(_0xc70b52[_0x205e('0x2ea')]){case _0x205e('0x2f1'):this[_0x205e('0x16b')][_0x205e('0x36f')](_0xc70b52[_0x205e('0x2ec')]);break;case _0x205e('0x2f0'):case _0x205e('0x2ee'):break;}}[_0x205e('0x468')](){const _0x20d05e=this[_0x205e('0x16b')][_0x205e('0x35b')]();for(let _0x4cab4e in _0x20d05e){const _0x5576d0=new World(this,_0x4cab4e);this['allWorlds']['push'](_0x5576d0);_0x5576d0[_0x205e('0x301')][_0x205e('0x27d')](this['buildingCreated'][_0x205e('0xe6')](this));_0x5576d0[_0x205e('0x287')]['addListener'](this['buildingUpgraded'][_0x205e('0xe6')](this));_0x5576d0[_0x205e('0x2a3')][_0x205e('0x27d')](this[_0x205e('0x30d')][_0x205e('0xe6')](this));_0x5576d0[_0x205e('0x302')][_0x205e('0x27d')](this[_0x205e('0x30f')]['bind'](this));_0x5576d0[_0x205e('0x2a2')]['addListener'](this[_0x205e('0x311')][_0x205e('0xe6')](this));_0x5576d0[_0x205e('0x2d2')][_0x205e('0x27d')](this[_0x205e('0x469')][_0x205e('0xe6')](this));_0x5576d0[_0x205e('0x303')][_0x205e('0x27d')](this[_0x205e('0x312')][_0x205e('0xe6')](this));_0x5576d0[_0x205e('0x2c4')](this[_0x205e('0x16b')]);}this['loaded'][_0x205e('0x281')](this['progress']);}[_0x205e('0x46a')](_0x23d0eb,_0x1db831){const _0xa488a7=_0x23d0eb[_0x205e('0x325')];const _0x4b164f={'SlotsData':_0xa488a7[_0x205e('0x326')]['get'](_0x205e('0x3eb')),'GoodsData':_0xa488a7['json'][_0x205e('0x327')](_0x205e('0x3ec')),'SlotsUpgrade':_0xa488a7['json'][_0x205e('0x327')](_0x205e('0x3ed')),'MarketData':_0xa488a7[_0x205e('0x326')][_0x205e('0x327')](_0x205e('0x3ee')),'BoxData':_0xa488a7['json']['get'](_0x205e('0x3ef')),'QuestsData':_0xa488a7[_0x205e('0x326')]['get'](_0x205e('0x3f0')),'LoginData':_0xa488a7[_0x205e('0x326')][_0x205e('0x327')](_0x205e('0x3f1')),'InAppLots':_0xa488a7[_0x205e('0x326')]['get'](_0x205e('0x3f2'))};if(VisualData[_0x205e('0x419')]()[_0x205e('0x46b')])_0x4b164f[_0x205e('0x400')]=_0xa488a7[_0x205e('0x326')]['get'](_0x205e('0x400'));GameData[_0x205e('0x46c')](_0x4b164f);const _0x41e981=_0x205e('0x323')+GameSettings[_0x205e('0x31c')];const _0x121ec2=_0xa488a7['json'][_0x205e('0x327')](_0x41e981);GameSettings[_0x205e('0x320')][GameSettings[_0x205e('0x31c')]]=_0x121ec2;LocalizationManager[_0x205e('0x321')](_0x121ec2);socialManager[_0x205e('0x46d')](parseGetParams());try{socialManager[_0x205e('0x1c6')](VisualData['getGameSettings']());}catch(_0x3c7301){console[_0x205e('0x150')](_0x3c7301);}socialManager[_0x205e('0x16e')](()=>{Progress[_0x205e('0x3b4')](_0x269e88=>{this['progress']=new Progress(this,_0x269e88);this[_0x205e('0x16b')][_0x205e('0x286')][_0x205e('0x27d')](this[_0x205e('0x295')][_0x205e('0xe6')](this));this[_0x205e('0xd6')][_0x205e('0x281')](_0x23d0eb);this[_0x205e('0x207')]=_0x23d0eb[_0x205e('0x207')][_0x205e('0x46e')]/0x3e8;this[_0x205e('0x468')]();this[_0x205e('0x46f')]=new QuestsManager(this[_0x205e('0x16b')][_0x205e('0x470')]());if(VisualData[_0x205e('0x419')]()[_0x205e('0x46b')])this[_0x205e('0x471')]=new PhotoManager(this[_0x205e('0x16b')]);audioManager[_0x205e('0x261')](_0x23d0eb);_0x1db831();});});}['GameUpdate'](_0x326ec7){if(!this['progress'])return;const _0x5273a0=_0x326ec7[_0x205e('0x207')][_0x205e('0x46e')]/0x3e8;this[_0x205e('0x229')]=_0x5273a0-this['time'];this[_0x205e('0x207')]=_0x5273a0;this[_0x205e('0xe5')][_0x205e('0x281')](this['deltaTime']);}[_0x205e('0x30f')](_0x1208dc,_0x101f36){const _0x5267bc=_0x101f36[_0x205e('0x2da')]();this[_0x205e('0x16b')][_0x205e('0x380')](_0x5267bc);this['onResourcesUpdated'][_0x205e('0x281')](this[_0x205e('0x16b')]);}['resourcesCollected'](_0x5cc952,_0x12e3c3){this[_0x205e('0x2a3')][_0x205e('0x281')](_0x5cc952,_0x12e3c3);this[_0x205e('0x2d2')][_0x205e('0x281')](this[_0x205e('0x16b')]);}[_0x205e('0x469')](_0x30d7f7,_0x2429c7){this[_0x205e('0x456')][_0x205e('0x281')](_0x30d7f7,_0x2429c7);}[_0x205e('0x472')](_0x17dc11,_0xc1125d){this[_0x205e('0x301')]['callListeners'](_0x17dc11,_0xc1125d);}[_0x205e('0x296')](_0x30f901,_0x5948ad){this[_0x205e('0x287')]['callListeners'](_0x30f901,_0x5948ad);}[_0x205e('0x311')](_0x5425c0,_0x4b7018){this[_0x205e('0x2a2')][_0x205e('0x281')](_0x5425c0,_0x4b7018);}['buildingLiked'](_0x431464,_0x9674a6){this[_0x205e('0x303')][_0x205e('0x281')](_0x431464,_0x9674a6);}[_0x205e('0x297')](_0x78e33f){this[_0x205e('0x16b')]['harvestCompleted'](_0x78e33f);this[_0x205e('0x2c8')]['callListeners'](this[_0x205e('0x16b')]);}[_0x205e('0x308')](_0x24ca98,_0x1904ac){return this[_0x205e('0x459')][_0x24ca98-0x1][_0x205e('0x308')](_0x1904ac);}[_0x205e('0x473')](_0x2bcc46){if(!this[_0x205e('0x16b')][_0x205e('0x3d5')]()){guiManager[_0x205e('0x37e')](WindowType[_0x205e('0x474')]);}else{this[_0x205e('0x458')][_0x205e('0x281')](()=>{this['selectedWorld']=_0x2bcc46;this[_0x205e('0x457')]['callListeners'](this[_0x205e('0x30b')]);});}}['openLikesForBuilding'](_0x456ff8){this['likedBuilding']=_0x456ff8;if(socialManager[_0x205e('0x475')])socialManager[_0x205e('0x475')]();}[_0x205e('0x18a')](_0xe41d1a){if(this[_0x205e('0x476')])this[_0x205e('0x476')][_0x205e('0x2d7')](_0xe41d1a);}}let gameInit=new GameInit();if(!String[_0x205e('0x279')][_0x205e('0x477')]){String[_0x205e('0x279')][_0x205e('0x477')]=function(){var _0x1a9d26=arguments;return this['replace'](/{(\d+)}/g,function(_0x2258f3,_0x5f48fc){return typeof _0x1a9d26[_0x5f48fc]!==_0x205e('0xce')?_0x1a9d26[_0x5f48fc]:_0x2258f3;});};}let LocalizationManager=function(){const _0x5bea3e=_0x205e('0x478');let _0x15e6c9=null;_getLocalizization=function(_0xd25ac){if(_0x15e6c9['hasOwnProperty'](_0xd25ac))return _0x15e6c9[_0xd25ac];return'!!!'+_0xd25ac;};_getNumberText=function(_0x315e21){if(_0x315e21>=0x1&&_0x315e21<=0x4)return this[_0x205e('0x479')](_0x205e('0x47a')+_0x315e21);if(_0x315e21>=0x5){_0x315e21-=0x5;const _0x23b86f=_0x5bea3e['length'];if(_0x315e21<_0x5bea3e['length']){const _0x29f2f4=_0x5bea3e[_0x205e('0x47b')](_0x315e21);return _0x29f2f4+_0x29f2f4;}else{_0x315e21-=_0x23b86f;if(_0x315e21<_0x5bea3e['length']){const _0x31bdd5=_0x5bea3e['charAt'](_0x315e21)['toUpperCase']();return _0x31bdd5+_0x31bdd5+_0x31bdd5;}else{_0x315e21-=_0x23b86f;if(_0x315e21<_0x5bea3e[_0x205e('0xe7')]){const _0x43b4fd=_0x5bea3e[_0x205e('0x47b')](_0x315e21)[_0x205e('0x47c')]();return _0x43b4fd+'x4';}else{_0x315e21-=_0x23b86f;if(_0x315e21<_0x5bea3e[_0x205e('0xe7')]){const _0x4cae4b=_0x5bea3e[_0x205e('0x47b')](_0x315e21)[_0x205e('0x47c')]();return _0x4cae4b+'x5';}else{_0x315e21-=_0x23b86f;if(_0x315e21<_0x5bea3e[_0x205e('0xe7')]){const _0x5b075e=_0x5bea3e[_0x205e('0x47b')](_0x315e21)[_0x205e('0x47c')]();return _0x5b075e+'x6';}else return _0x205e('0x47d');}}}}}return null;};return{'initWithJson'(_0x4e9e7a){_0x15e6c9=_0x4e9e7a;},'getLocalizization'(_0x50e9e0){if(_0x15e6c9[_0x205e('0x1bf')](_0x50e9e0))return _0x15e6c9[_0x50e9e0];return'!!!'+_0x50e9e0;},'removeCodes'(_0x4ae576){_0x4ae576=_0x4ae576[_0x205e('0x189')]('\x5cn')[_0x205e('0x47e')]('');while(!![]){const _0x30d830=_0x4ae576[_0x205e('0x319')]('<');if(_0x30d830<0x0)break;const _0x257984=_0x4ae576[_0x205e('0x319')]('>');if(_0x30d830>=_0x257984)break;_0x4ae576=_0x4ae576[_0x205e('0x47f')](0x0,_0x30d830)+_0x4ae576['slice'](_0x257984+0x1);}return _0x4ae576;},'getLocalizedNumberString'(_0x4f0591){if(_0x4f0591[_0x205e('0xe7')]<=0x2)return'0';_0x4f0591=_0x4f0591['substring'](0x0,_0x4f0591[_0x205e('0xe7')]-0x2);const _0x564b6b=_0x4f0591[_0x205e('0xe7')];let _0x1bbeb4=Math[_0x205e('0x215')](_0x564b6b/0x3);let _0x5519cb=_0x564b6b-_0x1bbeb4*0x3;if(_0x5519cb===0x0){_0x5519cb=0x3;_0x1bbeb4--;}const _0x43a0cc=_getNumberText(_0x1bbeb4);let _0x4f1a3d=_0x4f0591[_0x205e('0x17d')](0x0,_0x5519cb);if(_0x564b6b>=0x4){const _0x2fedfe=_0x4f0591[_0x205e('0x17d')](_0x5519cb,_0x5519cb+0x1);if(_0x2fedfe!=='0')_0x4f1a3d+=','+_0x2fedfe;}return _0x43a0cc?_0x4f1a3d+'\x20'+_0x43a0cc:_0x4f0591;},'getLocalizedNumber'(_0x3e1ab0){return this[_0x205e('0x480')](_0x3e1ab0[_0x205e('0x2ad')]());},'getStoreItemTitle'(_0x2d5d80){if(!_0x2d5d80[_0x205e('0x2ea')])return this[_0x205e('0x226')](_0x2d5d80['title']);let _0x3c8c60='Title';switch(_0x2d5d80['upgradeType']){case'MultiProfit':{if(_0x2d5d80[_0x205e('0x362')]===_0x205e('0x363'))_0x3c8c60=_0x205e('0x481');else{if(_0x2d5d80[_0x205e('0x2f2')]<0x0)_0x3c8c60=_0x205e('0x482');}break;}case _0x205e('0x442'):{_0x3c8c60=_0x205e('0x483')+_0x2d5d80[_0x205e('0x2ec')];break;}}return this[_0x205e('0x226')](_0x2d5d80[_0x205e('0x2ea')]+_0x3c8c60);},'getStoreItemDescription'(_0xf45f6b){if(!_0xf45f6b[_0x205e('0x2ea')])return this[_0x205e('0x226')](_0xf45f6b['description'])['format'](_0xf45f6b[_0x205e('0x3fe')]);let _0x4d8efe='Desc';switch(_0xf45f6b[_0x205e('0x2ea')]){case'MultiProfit':{switch(_0xf45f6b[_0x205e('0x362')]){case _0x205e('0x363'):return this[_0x205e('0x226')](_0xf45f6b['upgradeType']+_0x205e('0x484'));case _0x205e('0x377'):case _0x205e('0x373'):if(_0xf45f6b['slotNumber']>=0x0)return this[_0x205e('0x226')](_0xf45f6b['upgradeType']+_0x205e('0x485'))[_0x205e('0x477')](_0xf45f6b[_0x205e('0x2f2')]+0x1,_0xf45f6b[_0x205e('0x2ec')]);else return this[_0x205e('0x226')](_0xf45f6b[_0x205e('0x2ea')]+'AllDesc')[_0x205e('0x477')](_0xf45f6b[_0x205e('0x2ec')]);}break;}case _0x205e('0x2f1'):{return this[_0x205e('0x226')](_0xf45f6b['upgradeType']+_0x205e('0x486'))[_0x205e('0x477')](_0xf45f6b[_0x205e('0x2ec')]);}case _0x205e('0x442'):{return this[_0x205e('0x226')](_0xf45f6b[_0x205e('0x2ea')]+_0x205e('0x486')+_0xf45f6b['parameter']);}case _0x205e('0x2ee'):{return this[_0x205e('0x226')](_0x205e('0x487'))[_0x205e('0x477')](_0xf45f6b[_0x205e('0x2ec')],_0xf45f6b[_0x205e('0x2f2')]+0x1);}case'AutoClick':{if(_0xf45f6b[_0x205e('0x2f2')]>=0x0)return this[_0x205e('0x226')](_0xf45f6b['upgradeType']+_0x205e('0x485'))[_0x205e('0x477')](_0xf45f6b[_0x205e('0x2f2')]+0x1);else return this['getLocalizization'](_0xf45f6b[_0x205e('0x2ea')]+_0x205e('0x486'));}}return this['getLocalizization'](_0xf45f6b[_0x205e('0x2ea')]+_0x4d8efe);}};}();class Loader{constructor(_0xa711b3,_0x38b9b8,_0x44ab2f,_0xf84cc1,_0x4619c5,_0x45ef32,_0x4b7081){_0x45ef32=_0x45ef32||0x1;if(_0x38b9b8){this[_0x205e('0x488')]=_0xa711b3[_0x205e('0x1e2')]['add'][_0x205e('0x1fd')](_0xf84cc1,_0x4619c5,_0x38b9b8)[_0x205e('0xd8')](_0x45ef32)[_0x205e('0xd7')](_0xa711b3[_0x205e('0x489')]+0x1);_0xa711b3[_0x205e('0xd4')](this[_0x205e('0x488')]);}this[_0x205e('0x403')]=_0xa711b3;this['x']=_0xf84cc1;this['y']=_0x4619c5;this[_0x205e('0x48a')]=_0xa711b3[_0x205e('0x1e2')][_0x205e('0xd4')]['sprite'](_0xf84cc1,_0x4619c5,_0x44ab2f)[_0x205e('0xd8')](_0x45ef32)[_0x205e('0xd9')](0x0,0.5)[_0x205e('0xd7')](_0xa711b3[_0x205e('0x489')]+0x2);this[_0x205e('0x48a')][_0x205e('0x48b')](this['progressBar']['x']/localScale-this['progressBar'][_0x205e('0xe4')]/0x2*_0x45ef32*imageSizeLocalScale/localScale);this[_0x205e('0x148')]=_0x45ef32;this[_0x205e('0x48c')]=-0x1;_0xa711b3[_0x205e('0xd4')](this[_0x205e('0x48a')]);if(_0x4b7081){this[_0x205e('0x48d')]();this[_0x205e('0x48e')][_0x205e('0x48f')][_0x205e('0x490')](!![]);}}[_0x205e('0x491')](_0x5a52fa){this[_0x205e('0x48a')][_0x205e('0x492')]=_0x5a52fa;}[_0x205e('0x1f6')](_0xb3a99d){if(this[_0x205e('0x488')])this['back'][_0x205e('0x1f6')](_0xb3a99d);this[_0x205e('0x48a')][_0x205e('0x1f6')](_0xb3a99d);}[_0x205e('0x493')](_0x477c45){if(Math['abs'](_0x477c45-this[_0x205e('0x48c')])>0.005){this['value']=_0x477c45;this[_0x205e('0x48a')][_0x205e('0xd8')](_0x477c45*this[_0x205e('0x148')],this[_0x205e('0x148')]);}}[_0x205e('0x48d')](){this[_0x205e('0x48e')]=PrepareSpriteSheetObject(this['parent'][_0x205e('0x1e2')],'FastProduction',this['x'],this['y']);this[_0x205e('0x48e')][_0x205e('0x48f')][_0x205e('0xd7')](this[_0x205e('0x403')][_0x205e('0x489')]+0x2);this['fastBar'][_0x205e('0x48f')][_0x205e('0xd8')](1.1);this[_0x205e('0x403')][_0x205e('0xd4')](this[_0x205e('0x48e')][_0x205e('0x48f')]);}[_0x205e('0x494')](_0xa5d5b7){this[_0x205e('0x48e')][_0x205e('0x48f')][_0x205e('0x495')]=this[_0x205e('0x48a')]['visible']=!_0xa5d5b7;this[_0x205e('0x48a')][_0x205e('0x495')]=_0xa5d5b7;if(this[_0x205e('0x403')]['visible']!==![]||!_0xa5d5b7)this[_0x205e('0x48e')][_0x205e('0x48f')][_0x205e('0x1f6')](_0xa5d5b7);}}class SpriteSheetObject{constructor(_0x543063,_0x4ab824){this[_0x205e('0x48f')]=_0x543063;this[_0x205e('0x496')]=0x0;this[_0x205e('0x207')]=0x0;this[_0x205e('0x15b')]=_0x4ab824;gameInit[_0x205e('0xe5')][_0x205e('0x27d')](this[_0x205e('0xe5')][_0x205e('0xe6')](this));}[_0x205e('0x1f6')](_0x178a19){this[_0x205e('0x48f')][_0x205e('0x1f6')](_0x178a19);}[_0x205e('0xe5')](_0x3e46c7){if(this[_0x205e('0x48f')][_0x205e('0xe9')]){this[_0x205e('0x207')]+=_0x3e46c7;if(this[_0x205e('0x207')]>=this[_0x205e('0x15b')][_0x205e('0x214')]){this[_0x205e('0x207')]-=this[_0x205e('0x15b')][_0x205e('0x214')];this[_0x205e('0x496')]=(this[_0x205e('0x496')]+0x1)%this[_0x205e('0x15b')][_0x205e('0x3e8')];this['obj']['setFrame'](this[_0x205e('0x496')]);}}}}class AnimatedObject{constructor(_0x24203e,_0x58eb04){this[_0x205e('0x48f')]=_0x24203e;this['animations']=_0x58eb04;this[_0x205e('0x497')]=0x0;this[_0x205e('0x498')]();}[_0x205e('0x499')](_0x2c96c1){const _0x5b7dff=this['obj']['skeletonData'][_0x205e('0x49a')];for(let _0x2683c7 in _0x5b7dff){if(_0x5b7dff[_0x2683c7][_0x205e('0x145')]===_0x2c96c1)return _0x5b7dff[_0x2683c7][_0x205e('0x201')];}return 0x0;}[_0x205e('0x49b')](_0x34478d,_0x5d2ae7){const _0x560015=this[_0x205e('0x499')](_0x34478d);const _0x2a79f4=Progress[_0x205e('0x2c9')]()/0x3e8;if(_0x2a79f4>=this[_0x205e('0x497')]||_0x5d2ae7){this[_0x205e('0x497')]=_0x2a79f4+_0x560015;this['obj']['play'](_0x34478d);if(this[_0x205e('0x49a')][_0x205e('0x49c')])this['obj'][_0x205e('0x49d')](0x0,this[_0x205e('0x49a')][_0x205e('0x49c')],!![],_0x560015);}}[_0x205e('0x49e')](){return this['obj'];}[_0x205e('0x1f6')](_0xff2d37){this[_0x205e('0x48f')][_0x205e('0x1f6')](_0xff2d37);}[_0x205e('0x22e')](_0x42dd83){this['obj'][_0x205e('0x22e')](_0x42dd83);}['playAction'](_0x5a25ca){if(this[_0x205e('0x49a')][_0x205e('0x49f')])this[_0x205e('0x49b')](this[_0x205e('0x49a')][_0x205e('0x49f')],_0x5a25ca);}[_0x205e('0x498')](_0x41eeec){if(this[_0x205e('0x49a')][_0x205e('0x4a0')])this[_0x205e('0x49b')](this[_0x205e('0x49a')][_0x205e('0x4a0')],_0x41eeec);}[_0x205e('0x4a1')](_0x3df46e){if(this[_0x205e('0x49a')][_0x205e('0x4a2')])this['playAnimation'](this[_0x205e('0x49a')][_0x205e('0x4a2')],_0x3df46e);}[_0x205e('0x4a3')](_0x2d3da1){this['obj'][_0x205e('0x25b')](_0x2d3da1,!![]);}['playActiveLoop'](){if(this[_0x205e('0x49a')][_0x205e('0x4a4')])this[_0x205e('0x4a3')](this[_0x205e('0x49a')][_0x205e('0x4a4')]);}[_0x205e('0x4a5')](){if(this[_0x205e('0x49a')][_0x205e('0x49c')])this[_0x205e('0x4a3')](this[_0x205e('0x49a')][_0x205e('0x49c')]);}}let GlobalInputLocked=![];const GlobalClickables=[];let LockedAnimatedObject=null;function lockAtOneAnimatedObject(_0x375e55){LockedAnimatedObject=_0x375e55;GlobalInputLocked=![];}function unlockAnimatedObject(){LockedAnimatedObject=null;GlobalInputLocked=![];}function SetClickablesActive(_0x360fa6){if(_0x360fa6){for(let _0x3a62d9=GlobalClickables[_0x205e('0xe7')]-0x1;_0x3a62d9>=0x0;_0x3a62d9--){const _0x5b3b60=GlobalClickables[_0x3a62d9];if(_0x5b3b60&&_0x5b3b60[_0x205e('0x4a4')])_0x5b3b60[_0x205e('0x1ee')]();else GlobalClickables['splice'](_0x3a62d9,0x1);}}else{for(let _0x13ad3e=GlobalClickables['length']-0x1;_0x13ad3e>=0x0;_0x13ad3e--){const _0x5b3b60=GlobalClickables[_0x13ad3e];if(_0x5b3b60&&_0x5b3b60[_0x205e('0x4a4')])_0x5b3b60[_0x205e('0x4a6')]();else GlobalClickables[_0x205e('0x242')](_0x13ad3e,0x1);}}}function timeToStringClock(_0x40c6df){function _0x278d44(_0xce20c){if(_0xce20c>=0xa)return _0xce20c;return'0'+_0xce20c;}const _0x14245c=Math[_0x205e('0x215')](_0x40c6df/0xe10);const _0x58c8e2=Math['trunc'](_0x40c6df%0xe10/0x3c);const _0x5c0aa2=Math['trunc'](_0x40c6df%0x3c);if(_0x14245c>0x0)return _0x205e('0x4a7')[_0x205e('0x477')](_0x278d44(_0x14245c),_0x278d44(_0x58c8e2),_0x278d44(_0x5c0aa2));else return _0x205e('0x4a8')[_0x205e('0x477')](_0x278d44(_0x58c8e2),_0x278d44(_0x5c0aa2));}let spineMethodsReady=![];function PrepareSpineMethods(_0x593e9a){if(!spineMethodsReady){spineMethodsReady=!![];const _0x4be4f6=localScale;const _0x375c1e=_0x593e9a[_0x205e('0x4a9')][_0x205e('0x279')];const _0x3c94d2=_0x375c1e[_0x205e('0xe8')];function _0x233421(_0x3fa07e,_0x2c97a6){return _0x3c94d2[_0x205e('0x4aa')](this,_0x3fa07e*_0x4be4f6,_0x2c97a6*_0x4be4f6);}const _0x4fbc69=_0x375c1e[_0x205e('0xd8')];function _0x2b0ab4(_0x59ebe9,_0x327552){return _0x4fbc69[_0x205e('0x4aa')](this,_0x59ebe9*_0x4be4f6,_0x327552?_0x327552*_0x4be4f6:_0x327552);}_0x375c1e[_0x205e('0xe8')]=_0x233421;_0x375c1e['setScale']=_0x2b0ab4;_0x375c1e[_0x205e('0x4ab')]=function(_0x397191,_0x29522f){return _0x4fbc69[_0x205e('0x4aa')](this,_0x397191*imageSizeLocalScale,_0x29522f?_0x29522f*imageSizeLocalScale:_0x29522f);};_0x593e9a[_0x205e('0xe8')](_0x593e9a['x'],_0x593e9a['y']);overloadSetVisible(_0x375c1e);}}function PrepareSpriteSheetObject(_0x39a04d,_0x1695b7,_0x291f8a,_0x394cbd){const _0x1ff7f8=VisualData['ALL_OBJECTS'][_0x1695b7];const _0x4c9006=_0x39a04d[_0x205e('0xd4')]['sprite'](_0x291f8a,_0x394cbd,_0x1695b7);return new SpriteSheetObject(_0x4c9006,_0x1ff7f8);}function addInvisibleClickable(_0x2ce8cd,_0x3946c1,_0x980d09,_0x43da9a,_0x1b55a1){const _0x3a5532=_0x2ce8cd['add'][_0x205e('0x1fd')](0x0,0x0)['setInteractive']();_0x3a5532[_0x205e('0x1e8')]=!![];if(_0x3946c1){_0x3a5532[_0x205e('0x1f6')](_0x3946c1['visible']);_0x3946c1[_0x205e('0xd4')](_0x3a5532);}_0x3a5532[_0x205e('0xe8')](_0x43da9a/localScale,_0x1b55a1/localScale);_0x3a5532[_0x205e('0xd8')](0xa*GlobalScale/ imagesDeltaScale,0x14*GlobalScale/ imagesDeltaScale);_0x3a5532['setDepth'](_0x980d09);_0x3a5532[_0x205e('0x4ac')]=!![];return _0x3a5532;}function PrepareObject(_0xd95d13,_0x362d01,_0x5511c9,_0x53c7ff,_0x38bbc4,_0x259853){let _0x48b69e=null;for(let _0x3e860e=0x0;_0x3e860e<_0xd95d13[_0x205e('0xe7')];_0x3e860e++){const _0x23f6ef=_0xd95d13[_0x3e860e];let _0x1beda9=(_0x38bbc4?_0x38bbc4['x']:0x0)+VisualData[_0x205e('0x4ad')][_0x205e('0x4ae')]['x'];let _0x21904f=(_0x38bbc4?_0x38bbc4['y']:0x0)+VisualData['MAP_PARAMS']['center']['y'];if(_0x23f6ef[_0x205e('0x1bf')]('x'))_0x1beda9+=_0x23f6ef['x'];if(_0x23f6ef['hasOwnProperty']('y'))_0x21904f+=_0x23f6ef['y'];const _0x84e7c2=VisualData['ALL_OBJECTS'][_0x23f6ef['name']];let _0x38c830;const _0x3c8bff=_0x23f6ef[_0x205e('0x4af')]&&_0x259853;switch(_0x84e7c2['type']){case UnnyObjectType[_0x205e('0x96')]:{const _0x2ee7a0=_0x362d01['create'](_0x1beda9,_0x21904f,_0x23f6ef[_0x205e('0x145')]);if(_0x3c8bff)_0x2ee7a0[_0x205e('0x1ee')]();if(_0x84e7c2[_0x205e('0x1bf')](_0x205e('0x4b0'))){const _0x476541=_0x84e7c2[_0x205e('0x4b0')][_0x205e('0x1db')];_0x2ee7a0[_0x205e('0x4b1')][_0x205e('0x261')](_0x476541);_0x2ee7a0['anims'][_0x205e('0x25b')](_0x476541);}_0x38c830=_0x2ee7a0;_0x48b69e=new SpriteSheetObject(_0x38c830,_0x84e7c2);break;}case UnnyObjectType[_0x205e('0x54')]:{_0x38c830=_0x5511c9[_0x205e('0xd4')][_0x205e('0x4b2')](_0x1beda9,_0x21904f,_0x23f6ef[_0x205e('0x145')],_0x84e7c2[_0x205e('0x49a')][_0x205e('0x49c')],!![]);PrepareSpineMethods(_0x38c830);_0x38c830[_0x205e('0xd8')](_0x84e7c2[_0x205e('0x148')]||0x1);_0x48b69e=new AnimatedObject(_0x38c830,_0x84e7c2['animations'],_0x84e7c2);if(_0x23f6ef[_0x205e('0x1bf')](_0x205e('0x148')))_0x48b69e[_0x205e('0x48f')][_0x205e('0xd8')](_0x23f6ef[_0x205e('0x148')]);_0x38c830[_0x205e('0x4b3')]=_0x23f6ef[_0x205e('0x145')]+'_spine';if(_0x3c8bff){_0x38c830['setDepth'](_0x53c7ff);_0x38c830=addInvisibleClickable(_0x5511c9,_0x362d01,_0x53c7ff,_0x48b69e[_0x205e('0x48f')]['x'],_0x48b69e['obj']['y']);}if(_0x362d01)_0x362d01[_0x205e('0xd4')](_0x48b69e[_0x205e('0x48f')]);break;}default:_0x38c830=_0x362d01[_0x205e('0xd6')](_0x1beda9,_0x21904f,_0x23f6ef[_0x205e('0x145')]);_0x38c830[_0x205e('0x1f6')](_0x362d01[_0x205e('0xe9')]);if(_0x23f6ef[_0x205e('0x1bf')](_0x205e('0x148')))_0x38c830[_0x205e('0xd8')](_0x23f6ef[_0x205e('0x148')]);_0x38c830['objName']=_0x23f6ef[_0x205e('0x145')]+'_default';if(_0x3c8bff){_0x38c830[_0x205e('0xd7')](_0x53c7ff);_0x38c830=addInvisibleClickable(_0x5511c9,_0x362d01,_0x53c7ff,_0x38c830['x'],_0x38c830['y']);}break;}_0x38c830[_0x205e('0x4b3')]=_0x23f6ef[_0x205e('0x145')];if(_0x3c8bff){GlobalClickables[_0x205e('0xda')](_0x38c830);_0x38c830[_0x205e('0x1e8')]=!![];const _0x129e0f=0xc8;function _0x202b60(){if(_0x48b69e&&!_0x48b69e[_0x205e('0x48f')][_0x205e('0xe9')])return![];return!LockedAnimatedObject||LockedAnimatedObject===_0x48b69e;}const _0x368832=()=>{if(!_0x202b60())return;_0x38c830['lastTime']=_0x5511c9[_0x205e('0x207')][_0x205e('0x46e')];if(_0x5511c9[_0x205e('0x4b4')][_0x205e('0x4b5')][_0x205e('0x4b6')]&&!GlobalInputLocked)_0x259853(_0x205e('0x1dd'));};const _0x12c5af=()=>{if(!_0x202b60())return;if(_0x5511c9[_0x205e('0x4b4')][_0x205e('0x4b5')][_0x205e('0x4b6')]&&!GlobalInputLocked){const _0x10c096=_0x5511c9[_0x205e('0x207')][_0x205e('0x46e')];if(_0x10c096-_0x38c830[_0x205e('0x4b7')]>=_0x129e0f||!_0x38c830[_0x205e('0x4b7')]){_0x38c830[_0x205e('0x4b7')]=_0x10c096;_0x259853(_0x205e('0x4b8'));}}};_0x38c830['on']('pointerdown',_0x368832);_0x38c830['on'](_0x205e('0x4b9'),_0x12c5af);}_0x38c830['setDepth'](_0x53c7ff);}return _0x48b69e;}function SetGroupVisible(_0x34a4a5,_0x40b2f3,_0x2f599a){_0x34a4a5[_0x205e('0x4ba')]=!_0x40b2f3;_0x34a4a5[_0x205e('0x1f6')](_0x40b2f3);if(_0x34a4a5[_0x205e('0x4bb')]){const _0x102108=_0x34a4a5['children'][_0x205e('0x4bc')];if(_0x102108){_0x2f599a=_0x2f599a||0x0;for(let _0x3a5c3b=_0x2f599a;_0x3a5c3b<_0x102108[_0x205e('0xe7')];_0x3a5c3b++){if(!_0x102108[_0x3a5c3b][_0x205e('0x495')])_0x102108[_0x3a5c3b][_0x205e('0x1f6')](_0x40b2f3);}}}else{if(_0x34a4a5[_0x205e('0x4bd')]){for(let _0x26733f=0x0;_0x26733f<_0x34a4a5['list']['length'];_0x26733f++){if(!_0x34a4a5[_0x205e('0x4bd')][_0x26733f][_0x205e('0x495')])_0x34a4a5['list'][_0x26733f][_0x205e('0x1f6')](_0x40b2f3);}}}}function SetBuildingVisible(_0x3be68a,_0x2885aa,_0x1e9636){_0x3be68a['setVisible'](_0x1e9636);if(_0x3be68a[_0x205e('0x4bb')]){const _0x5721cb=_0x3be68a[_0x205e('0x4bb')][_0x205e('0x4bc')];if(_0x5721cb){for(let _0x4b9727=0x0;_0x4b9727<_0x5721cb[_0x205e('0xe7')];_0x4b9727++)_0x5721cb[_0x4b9727][_0x205e('0x1f6')](_0x5721cb[_0x4b9727][_0x205e('0x4ac')]?_0x1e9636:_0x2885aa);}}}let loadCallbackHelper;let loadingImages={};let loadedImages={};for(let i in VisualData[_0x205e('0x13c')]){loadedImages[VisualData[_0x205e('0x13c')][i]]=0x1;}function LoadingComplete(){loadedImages=Object[_0x205e('0x13f')](loadedImages,loadingImages);loadingImages={};loadCallbackHelper['callAndClearListeners']();}function LoadingError(){console[_0x205e('0x14d')](_0x205e('0x4be'));}function CreateImageInGroup(_0x342e0c,_0x3ec6d0,_0x2e5224,_0x12cddf){LoadPreparedFile(_0x342e0c,_0x2e5224,()=>{const _0x5685ae=_0x342e0c[_0x205e('0xd4')][_0x205e('0x1fd')](0x0,0x0,_0x2e5224);_0x3ec6d0['add'](_0x5685ae);_0x12cddf(_0x5685ae);});}function CreateImage(_0x492e7c,_0x350a98,_0x19a784,_0x38e298,_0x495d66){LoadPreparedFile(_0x492e7c,_0x38e298,()=>{_0x495d66(_0x492e7c[_0x205e('0xd4')][_0x205e('0x1fd')](_0x350a98,_0x19a784,_0x38e298));});}function PreloadObjects(_0x2b52aa,_0x1298cf,_0x3a373a){let _0x48941c=0x0;for(let _0x2fa7c8=0x0;_0x2fa7c8<_0x1298cf['length'];_0x2fa7c8++){const _0x409f85=_0x1298cf[_0x2fa7c8]['name'];if(!loadedImages[_0x205e('0x1bf')](_0x409f85)){LoadPreparedFile(_0x2b52aa,_0x409f85,_0x48941c===0x0?_0x3a373a:null);_0x48941c++;}}if(_0x48941c===0x0&&_0x3a373a)_0x3a373a();}function LoadPreparedFile(_0xf28364,_0xab92ce,_0x22d199){const _0x2f5d9c=VisualData[_0x205e('0x140')][_0xab92ce];if(!_0x2f5d9c)console[_0x205e('0x4bf')](_0x205e('0x4c0')+_0xab92ce);else{switch(_0x2f5d9c[_0x205e('0x1e1')]){case UnnyObjectType[_0x205e('0x54')]:LoadFile(_0xf28364,_0xab92ce,_0x2f5d9c[_0x205e('0x326')],_0x22d199,_0x2f5d9c[_0x205e('0x1e1')],_0x2f5d9c[_0x205e('0x4c1')]);break;default:LoadFile(_0xf28364,_0xab92ce,_0x2f5d9c[_0x205e('0x1e5')],_0x22d199,_0x2f5d9c[_0x205e('0x1e1')]);break;}}}function LoadFile(_0x196523,_0x41f32d,_0x57d887,_0x2bbdc1,_0x2ac635,_0x592616){if(loadedImages[_0x205e('0x1bf')](_0x41f32d)){_0x2bbdc1();return;}_0x57d887+=_0x205e('0x4c2');_0x592616+=_0x205e('0x4c2');if(!loadingImages[_0x205e('0x1bf')](_0x41f32d)){switch(_0x2ac635){case UnnyObjectType[_0x205e('0x115')]:_0x196523[_0x205e('0x261')][_0x205e('0x262')](_0x41f32d,_0x57d887);break;case UnnyObjectType[_0x205e('0x54')]:_0x196523['load'][_0x205e('0x4b2')](_0x41f32d,_0x57d887,_0x592616);break;case UnnyObjectType[_0x205e('0x328')]:_0x196523['load'][_0x205e('0x326')](_0x41f32d,_0x57d887);break;default:const _0x34150a=VisualData['ALL_OBJECTS'][_0x41f32d];if(!_0x34150a||!GameData[_0x205e('0x1e3')](_0x34150a))_0x196523['load'][_0x205e('0x4c3')](_0x41f32d,_0x57d887);break;}loadingImages[_0x41f32d]=0x1;}if(!loadCallbackHelper){loadCallbackHelper=new UnnyAction();_0x196523[_0x205e('0x261')]['on'](_0x205e('0x263'),LoadingComplete,this);_0x196523[_0x205e('0x261')]['on']('loadError',LoadingError,this);}loadCallbackHelper['addListener'](_0x2bbdc1);if(!_0x196523[_0x205e('0x261')]['isLoading']())_0x196523[_0x205e('0x261')][_0x205e('0x147')]();}function WaitForEverythingToLoad(_0x25466b){if(!gameInit[_0x205e('0xd2')][_0x205e('0x261')]['isLoading']())_0x25466b();else loadCallbackHelper[_0x205e('0x27d')](_0x25466b);}function PrepareAndCreateObject(_0x4362f7,_0x14741d,_0x5e9406,_0x50fca4,_0x5a9bc4,_0x236549){const _0x18d493=_0x4362f7[_0x205e('0x144')];const _0x477e5b=_0x18d493[0x0][_0x205e('0x145')];LoadPreparedFile(_0x5e9406,_0x477e5b,()=>{const _0x2b2d81=PrepareObject(_0x18d493,_0x14741d,_0x5e9406,_0x50fca4,null,_0x236549);if(_0x5a9bc4)_0x5a9bc4(_0x2b2d81);});}class ClickController{constructor(){this[_0x205e('0x4c4')]=new UnnyAction();this[_0x205e('0x4c5')]=new UnnyAction();this[_0x205e('0x4c6')]=new UnnyAction();}[_0x205e('0x2dd')](_0xa9df79){this[_0x205e('0x4c4')][_0x205e('0x281')](_0xa9df79);}['fabrikaWasClicked'](_0x45233f){this[_0x205e('0x4c5')][_0x205e('0x281')](_0x45233f);}[_0x205e('0x4c7')](_0x1f9ff0){this['onPodkovaWasClicked'][_0x205e('0x281')](_0x1f9ff0);}}let clickController=new ClickController();class VisualBuilding{constructor(_0x2f6199,_0x4aebae,_0x18ad6d){this['buildingInterface']=_0x4aebae;this[_0x205e('0x4c8')][_0x205e('0x2a4')][_0x205e('0x27d')](this[_0x205e('0x296')][_0x205e('0xe6')](this));this[_0x205e('0x4c8')][_0x205e('0x2d2')][_0x205e('0x27d')](this[_0x205e('0x4c9')][_0x205e('0xe6')](this));this[_0x205e('0xd3')]=_0x2f6199[_0x205e('0xd4')][_0x205e('0xd3')]();this['engine']=_0x2f6199;if(_0x18ad6d)this[_0x205e('0x4ca')](this['buildingInterface']['getLevel']());else this[_0x205e('0x4cb')]=!![];this[_0x205e('0x1f6')](_0x18ad6d);_0x4aebae[_0x205e('0x2ca')]['addListener'](this[_0x205e('0x2c8')]['bind'](this));_0x4aebae[_0x205e('0x2a5')]['addListener'](this[_0x205e('0x4cc')][_0x205e('0xe6')](this));}[_0x205e('0x3a9')](){if(this[_0x205e('0x4c8')][_0x205e('0x2c2')]()>0x0){this[_0x205e('0x4c8')][_0x205e('0x4cd')]=0x5;return!![];}else this[_0x205e('0x1f6')](![]);return![];}['reseted'](){this['applyTexture'](this[_0x205e('0x4c8')][_0x205e('0x2c2')]());this[_0x205e('0x1f6')](this['buildingInterface'][_0x205e('0x30c')][_0x205e('0x30a')]());}[_0x205e('0x4c9')](_0x299fec){if(_0x299fec[_0x205e('0x2b5')]){if(this[_0x205e('0x4ce')])this['animatedObject'][_0x205e('0x4cf')]();}}[_0x205e('0x2dd')](_0x52ebfb){if(_0x52ebfb==='move'&&this['buildingInterface'][_0x205e('0x2c2')]()===0x0)return;let _0x5823c2=![];if(this['buildingInterface'][_0x205e('0x4cd')]){this[_0x205e('0x4c8')][_0x205e('0x4cd')]--;if(!this['buildingInterface'][_0x205e('0x4cd')])this[_0x205e('0x1f6')](![]);_0x5823c2=!![];}else _0x5823c2=this[_0x205e('0x4c8')][_0x205e('0x2ba')]||this[_0x205e('0x4c8')][_0x205e('0x2c2')]()===0x0;if(_0x5823c2){clickController[_0x205e('0x2dd')](this[_0x205e('0x4c8')]);if(this[_0x205e('0x4ce')])this[_0x205e('0x4ce')][_0x205e('0x4cf')](!![]);}}[_0x205e('0x4d0')](_0xa48b77){SetGroupVisible(this[_0x205e('0xd3')],_0xa48b77,this['buildingInterface'][_0x205e('0x2c2')]()?0x0:0x1);}[_0x205e('0x1f6')](_0x166049){if(this[_0x205e('0x4cb')]){this[_0x205e('0x4cb')]=![];this['applyTexture'](this[_0x205e('0x4c8')][_0x205e('0x2c2')]());}this[_0x205e('0xe9')]=_0x166049;SetBuildingVisible(this[_0x205e('0xd3')],_0x166049&&!this[_0x205e('0x4c8')][_0x205e('0x2c0')](),_0x166049);}[_0x205e('0x296')](_0x36f2d3){if(_0x36f2d3[_0x205e('0x2c2')]()===0x1)this['applyTexture'](_0x36f2d3[_0x205e('0x2c2')]());}['changeVisibility'](){this[_0x205e('0x1f6')](this[_0x205e('0xe9')]);}['isVisible'](){return!this[_0x205e('0x4c8')]['isUnlocked']()&&this[_0x205e('0xd3')]['visible'];}[_0x205e('0x4ca')](_0x2226e3){const _0x54b4b2=this[_0x205e('0xd2')];this[_0x205e('0xd3')][_0x205e('0x280')](!![],!![]);const _0x36f724=VisualData[_0x205e('0x149')][this[_0x205e('0x4c8')][_0x205e('0x2a9')]];const _0x46e522=_0x36f724['position'];const _0x513a78=_0x36f724['levels'];let _0x158517=null;for(let _0x540f99=0x0;_0x540f99<_0x513a78[_0x205e('0xe7')];_0x540f99++){_0x158517=_0x513a78[_0x540f99][_0x205e('0x4d1')];if(!_0x513a78[_0x540f99][_0x205e('0x1bf')](_0x205e('0x4d2'))||_0x2226e3<=_0x513a78[_0x540f99]['maxLevel'])break;}if(_0x158517){const _0xb5da93=VisualData[_0x205e('0x143')][_0x158517];const _0x2e0a2c=_0xb5da93[_0x205e('0x144')];PreloadObjects(_0x54b4b2,_0x2e0a2c,()=>{this['animatedObject']=PrepareObject(_0x2e0a2c,this['group'],_0x54b4b2,_0x36f724[_0x205e('0x489')],_0x46e522,this['buildingWasClicked'][_0x205e('0xe6')](this));if(this['animatedObject'])this[_0x205e('0x4ce')][_0x205e('0x1f6')](this['isVisible']());});}}}class VisualInit{constructor(){gameInit[_0x205e('0x467')][_0x205e('0x27d')](this[_0x205e('0x467')]['bind'](this));gameInit[_0x205e('0xd6')]['addListener'](this['create'][_0x205e('0xe6')](this));gameInit[_0x205e('0x301')][_0x205e('0x27d')](this['buildingCreated']['bind'](this));gameInit[_0x205e('0x287')]['addListener'](this[_0x205e('0x296')][_0x205e('0xe6')](this));gameInit[_0x205e('0x457')][_0x205e('0x27d')](this[_0x205e('0x4d3')]['bind'](this));gameInit[_0x205e('0x458')]['addListener'](this[_0x205e('0x4d4')][_0x205e('0xe6')](this));gameInit[_0x205e('0x455')][_0x205e('0x27d')](this['progressWasLoaded'][_0x205e('0xe6')](this));gameInit[_0x205e('0xe5')][_0x205e('0x27d')](this['update'][_0x205e('0xe6')](this));gameInit['reseted'][_0x205e('0x27d')](this[_0x205e('0x2c8')][_0x205e('0xe6')](this));}[_0x205e('0x4d4')](_0x50d706){const _0x18e8fc=this;function _0x37eee2(_0x2deedd,_0x50d706){_0x2deedd['playAppear'](!![]);divElementForLabels[_0x205e('0x4d5')][_0x205e('0x4d6')]=_0x205e('0x4d7');if(_0x18e8fc['timer'])clearTimeout(_0x18e8fc[_0x205e('0x224')]);_0x18e8fc[_0x205e('0x224')]=setTimeout(()=>{if(_0x50d706)_0x50d706();WaitForEverythingToLoad(()=>{_0x2deedd[_0x205e('0x4a1')](!![]);_0x18e8fc[_0x205e('0x224')]=setTimeout(()=>{GlobalInputLocked=![];unlockGUI();divElementForLabels[_0x205e('0x4d5')][_0x205e('0x4d6')]='inherit';_0x18e8fc[_0x205e('0x224')]=null;_0x2deedd[_0x205e('0x1f6')](![]);},0x3e8);});},0x3e8);}if(!VisualData[_0x205e('0x4d8')]){_0x50d706();}else{GlobalInputLocked=!![];lockGuiEverything();if(this['splitAnimation']){this[_0x205e('0x4d9')][_0x205e('0x1f6')](!![]);_0x37eee2(this[_0x205e('0x4d9')],_0x50d706);}else{PrepareAndCreateObject(VisualData[_0x205e('0x4d8')],null,this[_0x205e('0xd2')],OverlayDepth+WinDefaultDepth,_0x573fa9=>{this[_0x205e('0x4d9')]=_0x573fa9;_0x37eee2(this[_0x205e('0x4d9')],_0x50d706);});}}}[_0x205e('0x4d3')](_0x582108){for(let _0x331819 in this['visible_groups']){if(this[_0x205e('0x4da')][_0x331819]){if(_0x331819!==_0x582108)this[_0x205e('0x4db')](_0x331819,![]);}else{if(_0x331819===_0x582108)this['setBuildingsVisible'](_0x331819,!![]);}}this[_0x205e('0x4dc')](_0x582108);audioManager['playWorldMusic'](_0x582108);this['updateBossState']();}['preload'](_0x49ffa0){this[_0x205e('0xd2')]=_0x49ffa0;const _0x4f9334=_0x49ffa0[_0x205e('0x261')];for(let _0x3c95f6 in VisualData[_0x205e('0x13c')]){const _0x505a23=VisualData['PRELOAD_OBJECTS'][_0x3c95f6];const _0x527d88=VisualData[_0x205e('0x140')][_0x505a23];if(!_0x527d88)console[_0x205e('0x14d')](_0x205e('0x4dd')+_0x505a23);switch(_0x527d88[_0x205e('0x1e1')]){case UnnyObjectType[_0x205e('0x96')]:const _0x296ca2={'frameWidth':Math[_0x205e('0x215')](_0x527d88['frameWidth']*GlobalScale/ imagesDeltaScale),'frameHeight':_0x527d88[_0x205e('0x4de')]*GlobalScale/ imagesDeltaScale};_0x4f9334[_0x205e('0x4df')](_0x505a23,_0x527d88[_0x205e('0x1e5')],_0x296ca2);break;case UnnyObjectType[_0x205e('0x54')]:_0x4f9334[_0x205e('0x4b2')](_0x505a23,_0x527d88[_0x205e('0x326')],_0x527d88[_0x205e('0x4c1')]);break;default:if(!GameData[_0x205e('0x1e3')](_0x527d88))_0x4f9334[_0x205e('0x4c3')](_0x505a23,_0x527d88['file']);break;}}}[_0x205e('0xd6')](_0x1dd3c6){for(let _0x688110 in VisualData[_0x205e('0x13c')]){const _0x407bfe=VisualData[_0x205e('0x13c')][_0x688110];const _0x32e73b=VisualData[_0x205e('0x140')][_0x407bfe];switch(_0x32e73b[_0x205e('0x1e1')]){case UnnyObjectType[_0x205e('0x96')]:{if(_0x32e73b[_0x205e('0x1bf')](_0x205e('0x4b0'))){const _0x504fc3=Object[_0x205e('0x13f')]({'frames':_0x1dd3c6[_0x205e('0x4b1')][_0x205e('0x4e0')](_0x407bfe)},_0x32e73b[_0x205e('0x4b0')]);_0x1dd3c6[_0x205e('0x4b1')][_0x205e('0xd6')](_0x504fc3);}break;}}}this[_0x205e('0x4e1')]={};this[_0x205e('0x4dc')](gameInit[_0x205e('0x30b')]);this[_0x205e('0x4e2')]={};this[_0x205e('0x4da')]={};}[_0x205e('0x4e3')](_0x530418){if(this[_0x205e('0x4e4')]){this[_0x205e('0x4e5')]=_0x530418[_0x205e('0x2d1')]();if(this[_0x205e('0x4e5')]){this['podkova']['playActiveLoop']();this[_0x205e('0x4e6')][_0x205e('0x1f6')](!![]);}else{this[_0x205e('0x4e4')][_0x205e('0x4a5')]();this[_0x205e('0x4e6')]['setVisible'](![]);}}}[_0x205e('0x4e7')](_0x1764d1){if(this['podkovaTimer']&&this[_0x205e('0x4e5')])this[_0x205e('0x4e6')][_0x205e('0x1f6')](_0x1764d1);}[_0x205e('0xe5')](){if(this['podkovaActive']!==gameInit[_0x205e('0x16b')][_0x205e('0x2d1')]())this[_0x205e('0x4e3')](gameInit[_0x205e('0x16b')]);if(this[_0x205e('0x4e5')]){const _0x5e624d=Math[_0x205e('0x215')](gameInit[_0x205e('0x16b')][_0x205e('0x354')]()/0x3e8);if(this[_0x205e('0x4e8')]!==_0x5e624d){this[_0x205e('0x4e8')]=_0x5e624d;this[_0x205e('0x4e6')]['time'][_0x205e('0x4e9')](timeToStringClock(_0x5e624d));}}}[_0x205e('0x4ea')](_0x467040){this[_0x205e('0x4e3')](_0x467040);}[_0x205e('0x4dc')](_0x55fd6c,_0x15977c){if(!this[_0x205e('0x4e1')][_0x205e('0x1bf')](_0x55fd6c)){this[_0x205e('0x4e1')][_0x55fd6c]=this[_0x205e('0xd2')][_0x205e('0xd4')][_0x205e('0xd3')]();PrepareAndCreateObject(VisualData['BACKGROUNDS'][_0x55fd6c],this[_0x205e('0x4e1')][_0x55fd6c],this['engine'],0x0,_0x15977c);}for(let _0x6c7461 in this['backgrounds'])SetGroupVisible(this[_0x205e('0x4e1')][_0x6c7461],_0x6c7461==_0x55fd6c);if(!this['fabrika']&&VisualData[_0x205e('0x4eb')]){PrepareAndCreateObject(VisualData[_0x205e('0x4eb')],null,this[_0x205e('0xd2')],0x1,_0x2771ce=>{this[_0x205e('0x4ec')]=_0x2771ce;this[_0x205e('0x4ed')]();},_0x19bac8=>clickController[_0x205e('0x4ee')](_0x19bac8));}if(!this[_0x205e('0x4e4')]&&VisualData[_0x205e('0x4ef')]){PrepareAndCreateObject(VisualData[_0x205e('0x4ef')],null,this[_0x205e('0xd2')],0x1,_0x4b6e89=>{this[_0x205e('0x4e4')]=_0x4b6e89;this['podkova'][_0x205e('0x1f6')](gameInit['progress'][_0x205e('0x3c6')]());this['podkovaTimer']=this['engine']['add'][_0x205e('0x4f0')]();const _0x3a9ce5=this[_0x205e('0xd2')][_0x205e('0xd4')][_0x205e('0x1fd')](0x0,0x0,_0x205e('0x132'));this[_0x205e('0x4e6')][_0x205e('0xd4')](_0x3a9ce5);this[_0x205e('0x4e6')]['time']=this[_0x205e('0xd2')]['add'][_0x205e('0x1ff')](0x0,-0x4*GlobalScale,null,DefaultFontSmall)['setOrigin'](0.5);this[_0x205e('0x4e6')][_0x205e('0xd4')](this[_0x205e('0x4e6')][_0x205e('0x207')]);this[_0x205e('0x4e6')][_0x205e('0xe8')](this[_0x205e('0x4e4')][_0x205e('0x48f')]['x']/localScale,this['podkova'][_0x205e('0x48f')]['y']/localScale+0x64*GlobalScale);this[_0x205e('0x4e6')][_0x205e('0xd7')](WinDefaultDepth-0x3e8);},_0x479690=>clickController[_0x205e('0x4c7')](_0x479690));}}['updateBossState'](){this['fabrika'][_0x205e('0x1f6')](gameInit[_0x205e('0x16b')][_0x205e('0x3c3')](gameInit[_0x205e('0x30b')]));}['getBoss'](){return this[_0x205e('0x4ec')];}[_0x205e('0x4f1')](){if(this[_0x205e('0x4e4')])this['podkova']['setVisible'](!![]);}[_0x205e('0x4f2')](){return this[_0x205e('0x4e4')];}[_0x205e('0x2c8')](){this['updateBossState']();}[_0x205e('0x296')](_0x659926,_0x2ebc74){if(_0x2ebc74[_0x205e('0x2c2')]()===0x1){this[_0x205e('0x4ed')]();}}[_0x205e('0x472')](_0x4f411a,_0x3ccba3){let _0x5e7b27;if(!this['groups'][_0x205e('0x1bf')](_0x4f411a['id'])){_0x5e7b27=this[_0x205e('0x4e2')][_0x4f411a['id']]={};this[_0x205e('0x4da')][_0x4f411a['id']]=_0x4f411a[_0x205e('0x30a')]();}else _0x5e7b27=this[_0x205e('0x4e2')][_0x4f411a['id']];_0x5e7b27[_0x3ccba3['id']]=new VisualBuilding(this[_0x205e('0xd2')],_0x3ccba3,this[_0x205e('0x4da')][_0x4f411a['id']]);}[_0x205e('0x4f3')](_0x81ba46,_0x4503da){const _0x57023a=this['groups'][_0x81ba46];if(_0x57023a){for(let _0x7a897f in _0x57023a)_0x57023a[_0x7a897f][_0x205e('0x4d0')](_0x4503da);}}[_0x205e('0x4db')](_0x33037a,_0x2bcf47){const _0x47711f=this[_0x205e('0x4e2')][_0x33037a];if(_0x47711f){for(let _0x3e0046 in _0x47711f)_0x47711f[_0x3e0046][_0x205e('0x1f6')](_0x2bcf47);}this[_0x205e('0x4da')][_0x33037a]=_0x2bcf47;}['prepareForHarvest'](){const _0x35adc1=gameInit[_0x205e('0x30b')];const _0x12a94f=this[_0x205e('0x4e2')][_0x35adc1];let _0x1eb79c=0x0;if(_0x12a94f){for(let _0x367cf8 in _0x12a94f){if(_0x12a94f[_0x367cf8][_0x205e('0x3a9')]())_0x1eb79c++;}}return _0x1eb79c;}}let visualGame=new VisualInit();class GUINotification extends Phaser['GameObjects'][_0x205e('0x4f4')]{constructor(_0xadc39a){super(_0xadc39a[_0x205e('0x1e2')],_0xadc39a['x'],_0xadc39a['y']);this[_0x205e('0x1eb')]=_0xadc39a;_0xadc39a[_0x205e('0x1e2')][_0x205e('0xd4')]['existing'](this);this[_0x205e('0x4c3')]=_0xadc39a[_0x205e('0x1e2')][_0x205e('0xd4')][_0x205e('0x1fd')](0x0,0x0,_0x205e('0x4f5'))[_0x205e('0xd8')](0.4);this[_0x205e('0x1ff')]=_0xadc39a[_0x205e('0x1e2')]['add'][_0x205e('0x225')](0x0,0x0,_0xadc39a[_0x205e('0x433')](),DefaultFont)[_0x205e('0xd9')](0.5);this[_0x205e('0xd4')](this[_0x205e('0x4c3')]);this[_0x205e('0xd4')](this[_0x205e('0x1ff')]);animManager[_0x205e('0x23d')](this,{'height':0x14*GlobalScale,'scale':0.2},0.6);if(_0xadc39a[_0x205e('0xd3')])_0xadc39a[_0x205e('0xd3')][_0x205e('0xd4')](this);this[_0x205e('0x1eb')][_0x205e('0x412')](this[_0x205e('0xe5')][_0x205e('0xe6')](this));}[_0x205e('0x1f6')](_0x33c408){super[_0x205e('0x1f6')](this[_0x205e('0x1eb')][_0x205e('0x403')][_0x205e('0xe9')]&&_0x33c408&&this[_0x205e('0x1eb')]['isVisible']());}[_0x205e('0xe5')](){this[_0x205e('0x1f6')](!![]);this[_0x205e('0x1ff')][_0x205e('0x4e9')](this[_0x205e('0x1eb')][_0x205e('0x433')]());}}class GUIScroll{constructor(_0x32651e,_0x3aeca2,_0x5a9dfb,_0x26bebb){const _0xd8783b=_0x3aeca2[_0x205e('0xe4')]-_0x3aeca2[_0x205e('0x4f6')]*_0x3aeca2['columns'];const _0x1d1ae5={'x':_0x3aeca2['x']*localScale,'y':_0x3aeca2['y']*localScale,'table':{'width':_0x3aeca2['width']*GlobalScale*localScale,'height':_0x3aeca2[_0x205e('0xdf')]*GlobalScale*localScale,'cellWidth':_0x3aeca2['cellWidth']*GlobalScale*localScale,'cellHeight':_0x3aeca2[_0x205e('0x4f7')]*GlobalScale*localScale,'columns':_0x3aeca2['columns'],'interactive':![]},'scroller':{'slidingDeceleration':0x1388,'backDeceleration':0x7d0},'space':{'left':_0xd8783b*GlobalScale*localScale,'right':0x0,'top':0x0,'bottom':0x0,'table':0x0},'createCellContainerCallback':_0x5a9dfb,'items':_0x26bebb(),'name':''};this[_0x205e('0x4f8')]=new RexPlugins['UI'][(_0x205e('0x4f9'))](_0x32651e,_0x1d1ae5)[_0x205e('0x1ee')]()[_0x205e('0xd7')](WinDefaultDepth)[_0x205e('0x4fa')]();}[_0x205e('0x4fb')](_0x35b5ea){this[_0x205e('0x4f8')][_0x205e('0x4fb')](_0x35b5ea);this['scrollerDisabled']=!_0x35b5ea;}[_0x205e('0x4fc')](){this[_0x205e('0x4fd')](0x0,-0x1);}['_mouseWheel'](_0x15551a,_0x2e5622){if(this[_0x205e('0x4fe')])return;let _0x125880=this[_0x205e('0x4f8')]['t']+Math['sign'](_0x2e5622)*Math['min'](Math[_0x205e('0x4ff')](_0x2e5622),0x14)*0.005;if(_0x125880){if(_0x125880<0x0)_0x125880=0x0;if(_0x125880>0x1)_0x125880=0x1;this[_0x205e('0x4f8')][_0x205e('0x500')](_0x125880);}}[_0x205e('0x1f6')](_0x3c0d28){this['table'][_0x205e('0xe9')]=_0x3c0d28;if(this[_0x205e('0x4f8')][_0x205e('0xe9')]){if(!this['wheel']){this[_0x205e('0x501')]=this[_0x205e('0x4fd')][_0x205e('0xe6')](this);eventManager['onMouseWheel'][_0x205e('0x27d')](this[_0x205e('0x501')]);}}else{if(this[_0x205e('0x501')]){eventManager[_0x205e('0x289')][_0x205e('0x27f')](this[_0x205e('0x501')]);this[_0x205e('0x501')]=null;}}}}let mainResourceIcon=null;let cansResourceIcon=null;let hudResources;class HUDResources{constructor(_0x5a445a){_0x5a445a['loaded'][_0x205e('0x27d')](this[_0x205e('0x502')][_0x205e('0xe6')](this));hudResources=this;}[_0x205e('0x1f6')](_0x3e7102){SetGroupVisible(this[_0x205e('0xd3')],_0x3e7102);}['createGame'](_0x2dc008){this[_0x205e('0xd3')]=_0x2dc008[_0x205e('0xd4')][_0x205e('0xd3')]();const _0x250b04=VisualData[_0x205e('0x4ad')][_0x205e('0x4ae')]['x'];const _0x1d0a1=VisualData[_0x205e('0x4ad')][_0x205e('0x4ae')]['y'];const _0x53151d=0x78*GlobalScale;const _0x60c0fc=0x1e*GlobalScale;const _0x1f2182=0x50*GlobalScale;let _0x34e6b3=_0x250b04-RealScreenWidth/0x2+0x32*GlobalScale;let _0x3f9cb9=_0x1d0a1-RealScreenHeight/0x2+0x50*GlobalScale;const _0x4afaaa=DefaultFontSmall;const _0x2c9156=VisualData[_0x205e('0x503')];let _0x5828b7;_0x5828b7=_0x2dc008['add'][_0x205e('0x1fd')](_0x34e6b3,_0x3f9cb9,_0x2c9156['singleImage']?_0x2c9156['singleImage']:_0x205e('0x504'))[_0x205e('0xd9')](0x0,0.5);if(_0x2c9156[_0x205e('0x505')])_0x5828b7[_0x205e('0xd8')](_0x2c9156['hudBackScale'],0x1);this[_0x205e('0xd3')][_0x205e('0xd4')](_0x5828b7);mainResourceIcon=this[_0x205e('0xd3')][_0x205e('0xd6')](_0x34e6b3+_0x60c0fc,_0x3f9cb9,_0x205e('0x5'))[_0x205e('0xd8')](0.85,0.9);this['resources']=_0x2dc008[_0x205e('0xd4')][_0x205e('0x1ff')](_0x34e6b3+_0x1f2182,_0x3f9cb9+_0x2c9156[_0x205e('0x506')]*GlobalScale,'99999',_0x4afaaa)[_0x205e('0xd9')](0x0,0.5);this[_0x205e('0xd3')][_0x205e('0xd4')](this['resources']);_0x3f9cb9+=_0x53151d;_0x5828b7=_0x2dc008[_0x205e('0xd4')][_0x205e('0x1fd')](_0x34e6b3,_0x3f9cb9,_0x2c9156[_0x205e('0x507')]?_0x2c9156[_0x205e('0x507')]:'HudResBack2')[_0x205e('0xd9')](0x0,0.5);if(_0x2c9156[_0x205e('0x505')])_0x5828b7[_0x205e('0xd8')](_0x2c9156[_0x205e('0x505')],0x1);this[_0x205e('0xd3')][_0x205e('0xd4')](_0x5828b7);this[_0x205e('0xd3')][_0x205e('0xd6')](_0x34e6b3+_0x60c0fc,_0x3f9cb9,_0x205e('0x6'));this[_0x205e('0x341')]=_0x2dc008[_0x205e('0xd4')][_0x205e('0x1ff')](_0x34e6b3+_0x1f2182,_0x3f9cb9+_0x2c9156[_0x205e('0x506')]*GlobalScale,_0x205e('0x508'),_0x4afaaa)[_0x205e('0xd9')](0x0,0.5);this[_0x205e('0xd3')]['add'](this[_0x205e('0x341')]);new BasicButton(this[_0x205e('0xd3')],{'scene':_0x2dc008,'key':_0x205e('0x509'),'x':_0x34e6b3+_0x2c9156[_0x205e('0x50a')]*GlobalScale,'y':_0x3f9cb9},()=>guiManager[_0x205e('0x50b')]());_0x3f9cb9+=_0x53151d;_0x5828b7=_0x2dc008[_0x205e('0xd4')][_0x205e('0x1fd')](_0x34e6b3,_0x3f9cb9,_0x2c9156[_0x205e('0x507')]?_0x2c9156[_0x205e('0x507')]:_0x205e('0x50c'))[_0x205e('0xd9')](0x0,0.5);if(_0x2c9156[_0x205e('0x505')])_0x5828b7['setScale'](_0x2c9156[_0x205e('0x505')],0x1);this['group'][_0x205e('0xd4')](_0x5828b7);cansResourceIcon=this[_0x205e('0xd3')][_0x205e('0xd6')](_0x34e6b3+_0x60c0fc,_0x3f9cb9,'PriceSeeds')[_0x205e('0xd8')](0.9);this[_0x205e('0x340')]=_0x2dc008[_0x205e('0xd4')][_0x205e('0x1ff')](_0x34e6b3+_0x1f2182,_0x3f9cb9+_0x2c9156[_0x205e('0x506')]*GlobalScale,_0x205e('0x508'),_0x4afaaa)[_0x205e('0xd9')](0x0,0.5);this['group'][_0x205e('0xd4')](this['seeds']);new BasicButton(this['group'],{'scene':_0x2dc008,'key':_0x205e('0x33'),'x':_0x34e6b3+_0x2c9156[_0x205e('0x50a')]*GlobalScale,'y':_0x3f9cb9},()=>guiManager['openNewWindow'](WindowType['WinApples']));this[_0x205e('0xd3')][_0x205e('0xd7')](WinDefaultDepth+0x64);}['gameLoaded'](_0x3cac0a){_0x3cac0a[_0x205e('0x2bd')][_0x205e('0x27d')](this['updateResources']['bind'](this));this[_0x205e('0x50d')](_0x3cac0a);}[_0x205e('0x50d')](_0x882bf3){this[_0x205e('0x2ac')][_0x205e('0x4e9')](LocalizationManager[_0x205e('0x44d')](_0x882bf3['getTotalResources']()));this[_0x205e('0x341')][_0x205e('0x4e9')](LocalizationManager[_0x205e('0x44d')](_0x882bf3[_0x205e('0x35d')]()));this[_0x205e('0x340')][_0x205e('0x4e9')](LocalizationManager[_0x205e('0x44d')](_0x882bf3[_0x205e('0x438')]()));}}const OverlayDepth=0x7530;const WinDefaultDepth=0x2710;const TextScale=0x1;function getFont(_0x406bff){return Math[_0x205e('0x215')](_0x406bff*GlobalScale*localScale*TextScale*1.2)+'px';}function getFont2(_0x41d493){return Math[_0x205e('0x215')](_0x41d493*GlobalScale*localScale*TextScale/dpi*1.4)+'px';}function getStroke(_0x35f7c6){return Math[_0x205e('0x3d4')](0x1,Math[_0x205e('0x215')](_0x35f7c6*localScale/dpi))*TextScale;}let DefaultFontVeryBig,DefaultFontBig,DefaultFont,DefaultFontSmall,DefaultFontSmall2,DefaultFontBlack,DefaultFontSmallBlack,DefaultFontVerySmall,DefaultFontVerySmall2;const DefaultFontColor=_0x205e('0x50e');const DefaultStrokeColor=_0x205e('0x50f');function createFont(_0x366b4a){_0x366b4a['fontFamily']='PT\x20Sans\x20Narrow';_0x366b4a['fontSize']=_0x366b4a[_0x205e('0x510')];delete _0x366b4a[_0x205e('0x510')];return _0x366b4a;}function CalculateFonts(){DefaultFontVeryBig=createFont({'font':getFont(0x96),'font2':getFont2(0x96),'fill':DefaultFontColor,'align':_0x205e('0x4ae'),'stroke':DefaultStrokeColor,'strokeThickness':getStroke(0x6)});DefaultFontBig=createFont({'font':getFont(0x50),'font2':getFont2(0x50),'fill':DefaultFontColor,'align':'center','stroke':DefaultStrokeColor,'strokeThickness':getStroke(0x8)});DefaultFont=createFont({'font':getFont(0x3c),'font2':getFont2(0x3c),'fill':DefaultFontColor,'align':'center','stroke':DefaultStrokeColor,'strokeThickness':getStroke(0x7)});DefaultFontSmall=createFont({'font':getFont(0x32),'font2':getFont2(0x32),'fill':DefaultFontColor,'align':_0x205e('0x4ae'),'stroke':DefaultStrokeColor,'strokeThickness':getStroke(0x7)});DefaultFontSmall2=createFont({'font':getFont(0x28),'font2':getFont2(0x28),'fill':DefaultFontColor,'align':_0x205e('0x4ae'),'stroke':DefaultStrokeColor,'strokeThickness':getStroke(0x5)});DefaultFontBlack=createFont({'font':getFont(0x2d),'font2':getFont2(0x2d),'fill':_0x205e('0x511'),'align':_0x205e('0x4ae')});DefaultFontSmallBlack=createFont({'font':getFont(0x28),'font2':getFont2(0x28),'fill':_0x205e('0x511'),'align':_0x205e('0x4ae')});DefaultFontVerySmall=createFont({'font':getFont(0x28),'font2':getFont2(0x28),'fill':_0x205e('0x511'),'align':_0x205e('0x4ae')});DefaultFontVerySmall2=createFont({'font':getFont(0x37),'font2':getFont2(0x37),'fill':_0x205e('0x511'),'align':_0x205e('0x4ae')});}class ToogleButton{constructor(_0x4b2d65,_0x591d51,_0x53093c,_0x2d9252,_0x3fc45c,_0x2db599,_0x1a915e){this['winInfo']=_0x1a915e;const _0x4ce140=_0x1a915e&&_0x1a915e[_0x205e('0x512')]||0x0;this[_0x205e('0x513')]=new BasicButton(_0x591d51,{'scene':_0x4b2d65,'key':_0x205e('0x17'),'x':_0x2d9252,'y':_0x3fc45c},_0x2db599)[_0x205e('0xd9')](0.5,0x1)[_0x205e('0xd7')](WinDefaultDepth-0xfa);this['y']=_0x3fc45c;this[_0x205e('0x514')]=new BasicButton(_0x591d51,{'scene':_0x4b2d65,'key':_0x205e('0x18'),'x':_0x2d9252,'y':_0x3fc45c+_0x4ce140},_0x2db599)[_0x205e('0xd9')](0.5,0x1)[_0x205e('0xd7')](WinDefaultDepth-0x78);this['icon']=_0x591d51[_0x205e('0xd6')](_0x2d9252,_0x3fc45c-0x46,_0x53093c)[_0x205e('0xd7')](WinDefaultDepth-0x32);this[_0x205e('0x1fc')][_0x205e('0xd8')](0x64*GlobalScale/this[_0x205e('0x1fc')][_0x205e('0xe4')]/ imagesDeltaScale);}[_0x205e('0x515')](_0x439709){this[_0x205e('0x514')][_0x205e('0x1f6')](_0x439709);this[_0x205e('0x513')][_0x205e('0x1f6')](!_0x439709);this[_0x205e('0x1fc')][_0x205e('0x213')](this['y']-(_0x439709?(this[_0x205e('0x516')]&&this[_0x205e('0x516')][_0x205e('0x517')]||0x64)*GlobalScale:(this[_0x205e('0x516')]&&this[_0x205e('0x516')][_0x205e('0x518')]||0x46)*GlobalScale));}}function setStoreCellLocked(_0x303ade,_0x37287c){const _0x3a25f8=_0x37287c?LockTint:NormalTint;_0x303ade[_0x205e('0x519')][_0x205e('0x51a')](_0x37287c);_0x303ade[_0x205e('0x51b')][_0x205e('0x492')]=_0x3a25f8;if(_0x303ade['priceIcon'])_0x303ade[_0x205e('0x51c')][_0x205e('0x492')]=_0x3a25f8;}function setLockedColor(_0x49f311,_0x4e9519){_0x49f311[_0x205e('0x492')]=_0x4e9519?LockTint:NormalTint;}function createStoreCell(_0x111358,_0x264f04,_0x128745,_0xac7ca0,_0x4d1833,_0x4fc9f2,_0x2f9d7f,_0x4d6a95,_0x14ab75,_0x399e3f,_0x5392b6,_0x5eb186,_0x1e414b,_0x4317ef){const _0x256d66=WinDefaultDepth+0x64;const _0x47be82=VisualData[_0x205e('0x51d')];_0x264f04[_0x205e('0x51e')]=_0x111358[_0x205e('0xd4')][_0x205e('0x1fd')](_0x128745,_0xac7ca0,'Store_Slot')[_0x205e('0xd7')](_0x256d66);_0x264f04[_0x205e('0xd4')](_0x264f04[_0x205e('0x51e')]);if(_0x47be82[_0x205e('0x51f')]){const _0x249c77=_0x111358[_0x205e('0xd4')]['sprite'](_0x128745,_0xac7ca0+_0x47be82[_0x205e('0x520')]*GlobalScale,_0x47be82['headerImg'])[_0x205e('0xd7')](_0x256d66);_0x264f04[_0x205e('0xd4')](_0x249c77);}_0x264f04[_0x205e('0x521')]=_0x111358[_0x205e('0xd4')][_0x205e('0x225')](_0x128745,_0xac7ca0+_0x47be82[_0x205e('0x520')]*GlobalScale,_0x4d1833,DefaultFontVerySmall)[_0x205e('0xd9')](0.5,0.5)[_0x205e('0xd7')](_0x256d66);_0x264f04['add'](_0x264f04[_0x205e('0x521')]);_0x264f04['unny_text']['setWordWrapWidth'](0x190*GlobalScale);const _0x16962d=_0xac7ca0+_0x47be82[_0x205e('0x522')]*GlobalScale;_0x264f04[_0x205e('0x523')]=_0x111358[_0x205e('0xd4')]['container'](_0x128745,_0x16962d);_0x264f04[_0x205e('0x519')]=new BasicButton(_0x264f04[_0x205e('0x523')],{'scene':_0x111358,'key':'DefaultButton','x':0x0,'y':0x0,'scale_parent':!![]},_0x5392b6);_0x264f04['add'](_0x264f04[_0x205e('0x523')]['setDepth'](_0x256d66));let _0xbde7f0=!![];if(_0x4fc9f2){LoadFile(_0x111358,_0x4fc9f2,_0x2f9d7f,()=>{if(_0x264f04&&_0x264f04[_0x205e('0x4a4')]){const _0x22e4e9=_0x111358[_0x205e('0xd4')]['sprite']((_0x264f04['x']/localScale||0x0)+_0x128745,(_0x264f04['y']/localScale||0x0)+_0xac7ca0-(_0x47be82[_0x205e('0x524')]||0x6e)*GlobalScale,_0x4fc9f2)[_0x205e('0xd7')](_0x256d66);_0x264f04[_0x205e('0xd4')](_0x22e4e9);_0x264f04['unny_sprite']=_0x22e4e9;if(!_0x5eb186&&!_0x264f04[_0x205e('0xe9')]&&_0x264f04[_0x205e('0x4bb')])_0x22e4e9[_0x205e('0x1f6')](![]);else{if(_0x1e414b&&!_0xbde7f0)_0x1e414b['fakeMove']();}}});}_0xbde7f0=![];_0x4d6a95=LocalizationManager[_0x205e('0x525')](_0x4d6a95);_0x264f04['unny_desc']=_0x111358[_0x205e('0xd4')]['textOld'](_0x128745,_0xac7ca0+_0x47be82[_0x205e('0x526')]*GlobalScale,_0x4d6a95,DefaultFontVerySmall)[_0x205e('0xd9')](0.5,0.5)[_0x205e('0xd7')](_0x256d66);_0x264f04[_0x205e('0xd4')](_0x264f04[_0x205e('0x527')]);_0x264f04[_0x205e('0x527')][_0x205e('0x528')](0x190*GlobalScale);let _0x5b5c47;if(_0x14ab75){const _0xc7dabe=_0x111358[_0x205e('0xd4')][_0x205e('0x1fd')](-0x78*GlobalScale,0x0,_0x14ab75);_0xc7dabe[_0x205e('0xd8')](0x46/_0xc7dabe[_0x205e('0xe4')]*GlobalScale/ imagesDeltaScale)['setDepth'](_0x256d66);_0x264f04['unny_container'][_0x205e('0xd4')](_0xc7dabe);_0x264f04[_0x205e('0x51c')]=_0xc7dabe;_0x5b5c47=_0x111358[_0x205e('0xd4')][_0x205e('0x225')](-0x46*GlobalScale,0x0,_0x399e3f,DefaultFontVerySmall2)[_0x205e('0xd9')](0x0,0.5)[_0x205e('0xd7')](_0x256d66);}else{_0x5b5c47=_0x111358['add'][_0x205e('0x225')](0x0,0x0,_0x399e3f,DefaultFontVerySmall2)[_0x205e('0xd9')](0.5,0.5)[_0x205e('0xd7')](_0x256d66);}_0x264f04[_0x205e('0x51b')]=_0x5b5c47;_0x264f04[_0x205e('0x523')]['add'](_0x5b5c47);if(_0x4317ef){_0x264f04[_0x205e('0x529')]=_0x111358['add'][_0x205e('0x225')](0x0,0x32*GlobalScale,'Hdhsadsa',DefaultFontVerySmall)['setOrigin'](0.5,0.5)[_0x205e('0xd7')](_0x256d66);_0x264f04['unny_container'][_0x205e('0xd4')](_0x264f04[_0x205e('0x529')]);}return _0x5b5c47;}class WinBase{constructor(_0x57c3df,_0x231c10){_0x57c3df['onCreate']['addListener'](this[_0x205e('0x52a')][_0x205e('0xe6')](this));this[_0x205e('0x52b')]=new UnnyAction();this[_0x205e('0x52c')]=_0x57c3df;this[_0x205e('0x52d')]=![];this[_0x205e('0x52e')]=_0x231c10;this[_0x205e('0x52f')]('GUI_'+this[_0x205e('0x4a9')][_0x205e('0x145')]);}[_0x205e('0x530')](_0xa45dfb,_0x464a7b,_0x18f5b4,_0x147dd9){const _0x1fd0f8=new BasicButton(this[_0x205e('0xd3')],{'scene':this[_0x205e('0xd2')],'key':_0xa45dfb,'x':_0x464a7b,'y':_0x18f5b4},_0x147dd9);this[_0x205e('0x531')](_0x1fd0f8);return _0x1fd0f8;}[_0x205e('0x52f')](_0x4e759d){this[_0x205e('0x516')]=VisualData[_0x4e759d];if(this[_0x205e('0x516')]&&this[_0x205e('0x516')][_0x205e('0x532')])this[_0x205e('0x532')]=this[_0x205e('0x516')][_0x205e('0x532')];}[_0x205e('0x531')](_0x34c285){if(!this[_0x205e('0x533')])this[_0x205e('0x533')]=[];this[_0x205e('0x533')][_0x205e('0xda')](_0x34c285);}[_0x205e('0x534')](){if(this['allButtons']){for(let _0x342a2f in this[_0x205e('0x533')]){animManager[_0x205e('0x233')](this[_0x205e('0x533')][_0x342a2f]);}}}['createGroup'](){this[_0x205e('0xd3')]=this[_0x205e('0xd2')][_0x205e('0xd4')][_0x205e('0x4f0')](this[_0x205e('0x535')],this[_0x205e('0x536')])[_0x205e('0xd7')](WinDefaultDepth);}[_0x205e('0x537')](){this[_0x205e('0xd3')]=this['engine']['add']['container'](0x0,0x0)[_0x205e('0xd7')](WinDefaultDepth);}[_0x205e('0x52a')](_0x2236af){this[_0x205e('0x535')]=VisualData['MAP_PARAMS'][_0x205e('0x4ae')]['x'];this[_0x205e('0x536')]=VisualData[_0x205e('0x4ad')][_0x205e('0x4ae')]['y'];this[_0x205e('0xd2')]=_0x2236af;this[_0x205e('0x538')]();this[_0x205e('0xd3')][_0x205e('0x1f6')](![]);}[_0x205e('0x539')](){if(this[_0x205e('0x4c3')]){this[_0x205e('0x4c3')][_0x205e('0x22e')](!![]);this[_0x205e('0x4c3')]=null;}}[_0x205e('0x53a')](){const _0x4e40ab=0x20*GlobalScale;this['group'][_0x205e('0xd6')](_0x4e40ab*0x5,_0x4e40ab*0x3,_0x205e('0x11'))[_0x205e('0xd8')](RealScreenWidth/_0x4e40ab+0xa,RealScreenHeight/_0x4e40ab+0xa)[_0x205e('0xd7')](WinDefaultDepth-0x2)[_0x205e('0x1ee')]();}[_0x205e('0x53b')](){this['setWindowVisible'](![]);this[_0x205e('0x539')]();this[_0x205e('0x52b')][_0x205e('0x281')](this);}[_0x205e('0x53c')](){animManager[_0x205e('0x228')](this['group']);}['setWindowVisible'](_0x30ed1c){this[_0x205e('0xe9')]=_0x30ed1c;SetGroupVisible(this[_0x205e('0xd3')],_0x30ed1c);if(!this[_0x205e('0x53d')])SetClickablesActive(!_0x30ed1c);if(_0x30ed1c){this['playOpenAnimation']();this[_0x205e('0x534')]();}}[_0x205e('0x322')](){}[_0x205e('0x53e')](){}[_0x205e('0x53f')](_0x4ad544,_0x315131,_0x5d83ec){LoadPreparedFile(this[_0x205e('0xd2')],_0x4ad544,()=>{this[_0x205e('0x539')]();if(this[_0x205e('0xe9')]){this['image']=this[_0x205e('0xd3')][_0x205e('0xd6')](_0x315131,_0x5d83ec,_0x4ad544)[_0x205e('0xd7')](WinDefaultDepth+0x1);if(this[_0x205e('0x15b')]['scaleImage'])this[_0x205e('0x4c3')][_0x205e('0xd8')](this[_0x205e('0x15b')][_0x205e('0x540')]);this[_0x205e('0x53e')]();}});}['getWinInfoValue'](_0x2e4331,_0x105e97){const _0x3898ae=this['winInfo']&&this[_0x205e('0x516')][_0x2e4331];return(_0x3898ae||_0x3898ae===0x0||_0x105e97)*GlobalScale;}[_0x205e('0x541')](_0x1d0c19){this[_0x205e('0x542')]=_0x1d0c19[_0x205e('0xd4')]['text'](0x0,this['getWinInfoValue']('headerOffset',-0x258),null,DefaultFontBig)[_0x205e('0xd9')](0.5,0.5)[_0x205e('0xd7')](WinDefaultDepth);this[_0x205e('0xd3')][_0x205e('0xd4')](this[_0x205e('0x542')]);}[_0x205e('0x543')](_0xbf33da,_0x58d9c9,_0x45185e,_0x5d7f22,_0x2f8721,_0x1b93fe,_0x56ceb8,_0x527699){_0x45185e=_0x45185e||this[_0x205e('0x544')](_0x205e('0x545'),0x1f4*GlobalScale);_0x1b93fe=_0x1b93fe||this[_0x205e('0x544')]('buttonOffsetX',0x0);this[_0x205e('0x546')]=new ButtonWithText(this[_0x205e('0xd3')],{'scene':_0xbf33da,'key':_0x205e('0xf'),'x':_0x1b93fe,'y':_0x45185e,'scale':_0x2f8721,'minWidth':_0x56ceb8,'icon':_0x527699},_0x58d9c9)[_0x205e('0xd7')](WinDefaultDepth+0x64);this[_0x205e('0x547')]=this[_0x205e('0x546')][_0x205e('0x1fe')];return this[_0x205e('0x547')];}[_0x205e('0x548')](){return this[_0x205e('0x546')];}[_0x205e('0x549')](){for(let _0x336637 in this[_0x205e('0x533')])this[_0x205e('0x533')][_0x336637]['setForceInvisible'](!![]);}[_0x205e('0x54a')](){for(let _0x5b4203 in this[_0x205e('0x533')])this[_0x205e('0x533')][_0x5b4203][_0x205e('0x495')]=![];this[_0x205e('0x54b')](!![]);}['showButtonFromTutorial'](_0xe66d36){_0xe66d36[_0x205e('0x1f6')](!![]);_0xe66d36[_0x205e('0x495')]=![];}[_0x205e('0x54b')](_0x365873){for(let _0x24515e in this[_0x205e('0x533')]){if(!_0x365873||!this[_0x205e('0x533')][_0x24515e][_0x205e('0x495')])this[_0x205e('0x533')][_0x24515e]['setVisible'](_0x365873);}}['_showAllButtonsBack'](){for(let _0x58f68c in this[_0x205e('0x533')]){const _0x4a78e1=this[_0x205e('0x533')][_0x58f68c];if(_0x4a78e1[_0x205e('0x54c')]){delete _0x4a78e1[_0x205e('0x54c')];_0x4a78e1[_0x205e('0x1f6')](!![]);animManager[_0x205e('0x233')](_0x4a78e1);}}}['hideAllButtonsForTime'](_0x493a7a){for(let _0x16a0d8 in this['allButtons']){const _0x3f9545=this[_0x205e('0x533')][_0x16a0d8];if(_0x3f9545[_0x205e('0xe9')]){_0x3f9545[_0x205e('0x1f6')](![]);_0x3f9545[_0x205e('0x54c')]=!![];}}setTimeout(()=>{this[_0x205e('0x54d')]();},_0x493a7a*0x3e8);}}class WinWithExit extends WinBase{[_0x205e('0x52a')](_0x573c04){super[_0x205e('0x52a')](_0x573c04);this[_0x205e('0x54e')]();}[_0x205e('0x54e')](){let _0x1961a7,_0x426b4c;if(VisualData[_0x205e('0x54f')]()){_0x1961a7=0x96*GlobalScale;_0x426b4c=RealScreenHeight-0x96*GlobalScale;}else{_0x1961a7=RealScreenWidth-0xb4*GlobalScale;_0x426b4c=0x96*GlobalScale;}this['exitButton']=new BasicButton(null,{'scene':this[_0x205e('0xd2')],'key':_0x205e('0x10'),'x':_0x1961a7,'y':_0x426b4c},this[_0x205e('0x53b')][_0x205e('0xe6')](this))[_0x205e('0xd7')](WinDefaultDepth);this[_0x205e('0x550')][_0x205e('0xe9')]=![];this[_0x205e('0x531')](this[_0x205e('0x550')]);}[_0x205e('0x551')](_0x74ed29){super[_0x205e('0x551')](_0x74ed29);if(this['exitButton'])this[_0x205e('0x550')]['visible']=_0x74ed29;}}let staticWinBack=null;let staticWinBlackBack=null;let staticBackgrounds={};class WinWithBack extends WinWithExit{constructor(_0x5131db,_0x55f3fc){super(_0x5131db,_0x55f3fc);}[_0x205e('0x552')](){if(!staticWinBack){staticWinBack=this[_0x205e('0xd2')][_0x205e('0xd4')][_0x205e('0x4f0')](this[_0x205e('0x535')],this[_0x205e('0x536')])[_0x205e('0xd7')](WinDefaultDepth-0x1);staticWinBack['add'](this[_0x205e('0xd2')][_0x205e('0xd4')][_0x205e('0x1fd')](0x0,0x0,_0x205e('0xe'))[_0x205e('0xd7')](WinDefaultDepth-0x1));staticWinBack[_0x205e('0x1f6')](![]);}}[_0x205e('0x52a')](_0x29f292){super['createGame'](_0x29f292);if(!staticWinBlackBack){const _0x5b5030=0x20*GlobalScale;staticWinBlackBack=_0x29f292[_0x205e('0xd4')][_0x205e('0x1fd')](this[_0x205e('0x535')]+_0x5b5030*0x5,this[_0x205e('0x536')]+_0x5b5030*0x3,_0x205e('0x11'))[_0x205e('0xd8')](RealScreenWidth/_0x5b5030+0xa,RealScreenHeight/_0x5b5030+0xa)[_0x205e('0xd7')](WinDefaultDepth-0xc8);staticWinBlackBack[_0x205e('0x1f6')](![]);}if(!this[_0x205e('0x532')]){this[_0x205e('0x552')]();}else{if(!staticBackgrounds[_0x205e('0x1bf')](this[_0x205e('0x532')])){const _0xae84e=this[_0x205e('0xd2')][_0x205e('0xd4')][_0x205e('0x4f0')](this['centerX'],this[_0x205e('0x536')])['setDepth'](WinDefaultDepth-0x1);const _0x215edf=_0x29f292[_0x205e('0xd4')]['myNineSlice'](0x0,0x0,VisualData[_0x205e('0x553')][this['nineSlice']])[_0x205e('0xd9')](0.5);_0xae84e['add'](_0x215edf);_0xae84e[_0x205e('0x1f6')](![]);staticBackgrounds[this[_0x205e('0x532')]]=_0xae84e;}}}[_0x205e('0x4dc')](_0x52b47e){let _0x5eaa20=staticWinBack;if(_0x5eaa20){_0x5eaa20[_0x205e('0x1f6')](_0x52b47e);if(_0x52b47e)animManager[_0x205e('0x228')](_0x5eaa20);}}[_0x205e('0x554')](_0x204a5b){let _0x3a18d5=null;if(this[_0x205e('0x532')])_0x3a18d5=staticBackgrounds[this['nineSlice']];if(_0x3a18d5){_0x3a18d5[_0x205e('0x1f6')](_0x204a5b);if(_0x204a5b)animManager['applyWinOpenAnimation'](_0x3a18d5);}else this['showBackground'](_0x204a5b);}['setBlackBackVisible'](_0x3b3fd8){if(staticWinBlackBack)staticWinBlackBack[_0x205e('0x1f6')](_0x3b3fd8);}['setWindowVisible'](_0x572a65){super['setWindowVisible'](_0x572a65);this['showBackOrNineSlice'](_0x572a65);this[_0x205e('0x555')](_0x572a65);if(_0x572a65)audioManager[_0x205e('0x267')]();}}let staticWinBrownBack=null;class WinWithBrownBack extends WinWithBack{['createGame'](_0x1c0e6c){super[_0x205e('0x52a')](_0x1c0e6c);if(!staticWinBrownBack){const _0x50ecc6=0x20*GlobalScale;staticWinBrownBack=_0x1c0e6c[_0x205e('0xd4')][_0x205e('0x1fd')](this[_0x205e('0x535')]+_0x50ecc6*0x5,this['centerY']+_0x50ecc6*0x3,_0x205e('0x556'))[_0x205e('0xd8')](RealScreenWidth/_0x50ecc6+0xa,RealScreenHeight/_0x50ecc6+0xa)[_0x205e('0xd7')](WinDefaultDepth-0x3e8);staticWinBrownBack[_0x205e('0x1f6')](![]);}}[_0x205e('0x557')](){}[_0x205e('0x53c')](){}[_0x205e('0x4dc')](){}[_0x205e('0x555')](_0x141705){if(this[_0x205e('0x532')])super['setBlackBackVisible'](_0x141705);else{if(staticWinBrownBack)staticWinBrownBack['setVisible'](_0x141705);}}[_0x205e('0x558')](){this[_0x205e('0x550')]=new BasicButton(this[_0x205e('0xd3')],{'scene':this[_0x205e('0xd2')],'key':_0x205e('0x10'),'x':this[_0x205e('0x535')]-RealScreenWidth/0x2+0x96*GlobalScale,'y':this[_0x205e('0x536')]+RealScreenHeight/0x2-0x96*GlobalScale},this[_0x205e('0x53b')][_0x205e('0xe6')](this))[_0x205e('0xd7')](WinDefaultDepth);this[_0x205e('0x531')](this[_0x205e('0x550')]);}[_0x205e('0x538')](){this[_0x205e('0x537')]();}}class WinDailyBonus extends WinWithBrownBack{constructor(_0x35f876,_0x3566ec){super(_0x35f876,_0x3566ec);}[_0x205e('0x551')](_0x467e10){super[_0x205e('0x551')](_0x467e10);if(_0x467e10){if(!this['prepared'])this[_0x205e('0x559')]();else{const _0x501f94=this['gameInit'][_0x205e('0x16b')][_0x205e('0x351')]();for(let _0x10285b=0x0;_0x10285b<this[_0x205e('0x55a')]['length'];_0x10285b++){const _0x573a04=_0x501f94[_0x205e('0x55b')](_0x10285b+0x1);if(_0x573a04&&_0x573a04[_0x205e('0x434')]()){const _0x5cf80e=this[_0x205e('0x55a')][_0x10285b];_0x5cf80e[_0x205e('0x2ec')][_0x205e('0x4e9')](_0x573a04[_0x205e('0x433')]());}}}const _0x4e1eb0=this[_0x205e('0x52e')][_0x205e('0x16b')]['getMyDailyBonusInfo']();const _0x2208a0=Progress['getDayNow']();const _0x545624=Progress[_0x205e('0x350')](_0x4e1eb0[_0x205e('0xe5')]);this[_0x205e('0x55c')](_0x4e1eb0[_0x205e('0x36a')],_0x2208a0>_0x545624);this[_0x205e('0x55d')]();}}['_applyVisibilityClosed'](_0x1ae5ee){if(_0x1ae5ee[_0x205e('0x55e')])_0x1ae5ee[_0x205e('0x55e')][_0x205e('0xe9')]=_0x1ae5ee['vis_closed']===!![];}[_0x205e('0x55f')](_0x33aec8){if(_0x33aec8[_0x205e('0x560')])_0x33aec8[_0x205e('0x560')][_0x205e('0xe9')]=_0x33aec8[_0x205e('0x561')]===!![];}[_0x205e('0x562')](_0x35ac9f){if(_0x35ac9f[_0x205e('0x563')])_0x35ac9f[_0x205e('0x563')][_0x205e('0xe9')]=_0x35ac9f[_0x205e('0x564')]===!![];}['setBonusInfo'](_0x441478,_0x1e0050){this[_0x205e('0x565')]=-0x1;for(let _0x42cf9a=0x0;_0x42cf9a<this[_0x205e('0x55a')]['length'];_0x42cf9a++){const _0x5137a8=this[_0x205e('0x55a')][_0x42cf9a];if(_0x42cf9a<_0x441478){_0x5137a8[_0x205e('0x566')]=_0x5137a8[_0x205e('0x561')]=!![];_0x5137a8[_0x205e('0x564')]=![];}else{_0x5137a8[_0x205e('0x566')]=_0x5137a8[_0x205e('0x561')]=![];_0x5137a8[_0x205e('0x564')]=_0x42cf9a==_0x441478&&_0x1e0050;if(_0x5137a8[_0x205e('0x564')])this[_0x205e('0x565')]=_0x42cf9a;}this[_0x205e('0x567')](_0x5137a8);this[_0x205e('0x55f')](_0x5137a8);this[_0x205e('0x562')](_0x5137a8);}}['prepareWindow'](){this[_0x205e('0x568')]=!![];const _0x1f97c4=this[_0x205e('0xd2')];this[_0x205e('0x55a')]=[];const _0x535b38=this['winInfo'][_0x205e('0x569')];const _0x511f07=this[_0x205e('0x516')][_0x205e('0x56a')];const _0x29597d=this[_0x205e('0x516')]['distance']*GlobalScale;const _0x6ade26=this[_0x205e('0x52e')][_0x205e('0x16b')][_0x205e('0x351')]();let _0x534108=0x0;for(let _0x27919b=0x0;_0x27919b<_0x511f07;_0x27919b++){for(let _0x16bd3d=0x0;_0x16bd3d<_0x535b38;_0x16bd3d++){_0x534108++;const _0x1de661=_0x6ade26[_0x205e('0x55b')](_0x534108);if(!_0x1de661)break;const _0x56efca=_0x1f97c4[_0x205e('0xd4')][_0x205e('0x4f0')]();_0x56efca[_0x205e('0xe8')](this[_0x205e('0x535')]+(_0x16bd3d-_0x535b38/0x2+0.5)*_0x29597d,this[_0x205e('0x536')]+(_0x27919b-_0x511f07/0x2+0.5)*_0x29597d-this[_0x205e('0x516')]['addDistance']*GlobalScale);_0x56efca[_0x205e('0x489')]=WinDefaultDepth;CreateImageInGroup(_0x1f97c4,_0x56efca,_0x205e('0x56b'),_0x4fc460=>{_0x4fc460[_0x205e('0xd7')](WinDefaultDepth);});CreateImageInGroup(_0x1f97c4,_0x56efca,_0x205e('0x32'),_0x12aa52=>{_0x56efca[_0x205e('0x563')]=_0x12aa52[_0x205e('0xd7')](WinDefaultDepth+0xa);this[_0x205e('0x562')](_0x56efca);});if(_0x1de661){LoadFile(_0x1f97c4,_0x1de661[_0x205e('0x449')](),_0x1de661[_0x205e('0x431')](),()=>{const _0x54e3ef=_0x1f97c4[_0x205e('0xd4')][_0x205e('0x1fd')](0x0,0x0,_0x1de661[_0x205e('0x449')]());_0x56efca[_0x205e('0xd4')](_0x54e3ef);_0x54e3ef[_0x205e('0xd7')](WinDefaultDepth+0xf);_0x56efca['parameter']=_0x1f97c4[_0x205e('0xd4')]['text'](0x6e*GlobalScale,0x1e*GlobalScale,_0x1de661['getText'](),DefaultFont)['setOrigin'](0x1,0x0)['setDepth'](WinDefaultDepth+0x12);_0x56efca[_0x205e('0xd4')](_0x56efca[_0x205e('0x2ec')]);CreateImageInGroup(_0x1f97c4,_0x56efca,_0x205e('0x56c'),_0x3f7948=>{_0x56efca[_0x205e('0x55e')]=_0x3f7948[_0x205e('0xd7')](WinDefaultDepth+0x14);this['_applyVisibilityClosed'](_0x56efca);CreateImageInGroup(_0x1f97c4,_0x56efca,_0x205e('0x56d'),_0x3f7948=>{_0x3f7948['x']+=0x5a*GlobalScale*localScale;_0x3f7948['y']-=0x5a*GlobalScale*localScale;_0x56efca[_0x205e('0x560')]=_0x3f7948[_0x205e('0xd7')](WinDefaultDepth+0x1e);this['_applyVisibilityCheck'](_0x56efca);});});});}this[_0x205e('0xd3')][_0x205e('0xd4')](_0x56efca);this[_0x205e('0x55a')][_0x205e('0xda')](_0x56efca);}}this['createActionButton'](_0x1f97c4,this['buttonClicked'][_0x205e('0xe6')](this),RealScreenHeight-0xc8*GlobalScale,!![],0x1,RealScreenWidth/0x2,0x578*GlobalScale);}[_0x205e('0x55d')](){if(this[_0x205e('0x565')]>=0x0){this[_0x205e('0x547')]['setText'](LocalizationManager[_0x205e('0x226')](_0x205e('0x56e')));this[_0x205e('0x546')][_0x205e('0x51a')](![]);}else{this[_0x205e('0x547')][_0x205e('0x4e9')](LocalizationManager[_0x205e('0x226')]('LoginBonusBlockedBtn'));this[_0x205e('0x546')]['setButtonLocked'](!![]);}}[_0x205e('0x56f')](){if(this[_0x205e('0x565')]>=0x0){const _0xcef7ae=this[_0x205e('0x52e')][_0x205e('0x16b')][_0x205e('0x351')]();const _0x1d4d9b=_0xcef7ae[_0x205e('0x55b')](this[_0x205e('0x565')]+0x1);if(_0x1d4d9b)_0x1d4d9b[_0x205e('0x42e')]();else console[_0x205e('0x14d')](_0x205e('0x570'));this[_0x205e('0x52e')][_0x205e('0x16b')][_0x205e('0x369')]();const _0xb1f6fc=this[_0x205e('0x55a')][this[_0x205e('0x565')]];_0xb1f6fc[_0x205e('0x566')]=_0xb1f6fc[_0x205e('0x561')]=!![];_0xb1f6fc[_0x205e('0x564')]=![];this['_applyVisibilityClosed'](_0xb1f6fc);this[_0x205e('0x55f')](_0xb1f6fc);this['_applyVisibilityActive'](_0xb1f6fc);this[_0x205e('0x565')]=-0x1;this[_0x205e('0x55d')]();}}[_0x205e('0x322')](){super[_0x205e('0x322')]();this[_0x205e('0x542')]['setText'](LocalizationManager[_0x205e('0x226')](_0x205e('0x571')));}[_0x205e('0x52a')](_0x38cd02){super[_0x205e('0x52a')](_0x38cd02);this[_0x205e('0x542')]=this[_0x205e('0xd2')][_0x205e('0xd4')][_0x205e('0x1ff')](this['centerX'],0x64*GlobalScale,null,DefaultFont)[_0x205e('0xd9')](0.5,0x0)[_0x205e('0xd7')](WinDefaultDepth+0x1);this[_0x205e('0xd3')][_0x205e('0xd4')](this[_0x205e('0x542')]);SetGroupVisible(this['group'],![]);}}let staticWinLargeBack=null;class WinWithLargeBack extends WinWithBack{constructor(_0x5e0489,_0x4b5e9d){super(_0x5e0489,_0x4b5e9d);}[_0x205e('0x552')](){if(!staticWinLargeBack){staticWinLargeBack=this[_0x205e('0xd2')][_0x205e('0xd4')]['container'](this[_0x205e('0x535')],this[_0x205e('0x536')])[_0x205e('0xd7')](WinDefaultDepth-0x1);staticWinLargeBack['add'](this[_0x205e('0xd2')][_0x205e('0xd4')]['sprite'](0x0,0x64*GlobalScale,_0x205e('0x137'))[_0x205e('0xd7')](WinDefaultDepth-0x64));staticWinLargeBack[_0x205e('0xe9')]=![];staticWinLargeBack[_0x205e('0xd7')](WinDefaultDepth-0x64);}}[_0x205e('0x4dc')](_0x54ba0c){if(staticWinLargeBack){staticWinLargeBack[_0x205e('0xe9')]=_0x54ba0c;if(_0x54ba0c)animManager[_0x205e('0x228')](staticWinLargeBack);}}}class WinDropPuzzle extends WinWithBrownBack{constructor(_0x2895ca,_0x5b0b11){super(_0x2895ca,_0x5b0b11);this[_0x205e('0x52d')]=!![];this['itemsToDestroy']=[];}[_0x205e('0x54e')](){}[_0x205e('0x52a')](_0x2aa073){super[_0x205e('0x52a')](_0x2aa073);function _0x5d8b8b(_0x33d2fc){_0x33d2fc['x']*=localScale;_0x33d2fc['y']*=localScale;return _0x33d2fc;}const _0x135b09=1.5;this['dropPoint']={'x':this['centerX'],'y':this['centerY']+0x190*GlobalScale};this[_0x205e('0x572')]={'x':this[_0x205e('0x535')],'y':this[_0x205e('0x536')]-0x64*GlobalScale};this[_0x205e('0x573')]={'x':this['centerX'],'y':this['centerY']-0x12c*GlobalScale};this[_0x205e('0x574')]={'x':this[_0x205e('0x535')],'y':this[_0x205e('0x536')]};this[_0x205e('0x575')]=_0x5d8b8b({'x':this[_0x205e('0x535')],'y':this[_0x205e('0x536')]});this[_0x205e('0x576')]=-RealScreenHeight*0.1;this[_0x205e('0x577')]=this[_0x205e('0xd2')][_0x205e('0xd4')]['sprite'](0x0,0x0,_0x205e('0x2a'))[_0x205e('0xd8')](_0x135b09)[_0x205e('0xd9')](0.5,0x1);this[_0x205e('0xd3')]['add'](this[_0x205e('0x577')]);this['giftBoxSuper']=this[_0x205e('0xd2')][_0x205e('0xd4')][_0x205e('0x1fd')](0x0,0x0,'GiftBoxSuper')['setScale'](_0x135b09)[_0x205e('0xd9')](0.5,0x1);this['group'][_0x205e('0xd4')](this[_0x205e('0x578')]);this[_0x205e('0x579')]=this[_0x205e('0xd2')]['add'][_0x205e('0x1fd')](0x0,0x0,_0x205e('0x2b'))[_0x205e('0xd8')](_0x135b09)[_0x205e('0xe8')](this[_0x205e('0x57a')]['x']-0x3c*GlobalScale,this[_0x205e('0x57a')]['y']-0x28*GlobalScale)[_0x205e('0xd9')](0.5,0x1);this[_0x205e('0xd3')][_0x205e('0xd4')](this[_0x205e('0x579')]);this[_0x205e('0x57b')]=this['engine'][_0x205e('0xd4')][_0x205e('0x1fd')](0x0,0x0,_0x205e('0x2d'))[_0x205e('0xd8')](_0x135b09*1.2)['setPosition'](this[_0x205e('0x57a')]['x']-0x46*GlobalScale,this[_0x205e('0x57a')]['y']+0xa*GlobalScale)[_0x205e('0xd9')](0.5,0x1);this[_0x205e('0xd3')][_0x205e('0xd4')](this[_0x205e('0x57b')]);this[_0x205e('0x542')]=this[_0x205e('0xd2')][_0x205e('0xd4')][_0x205e('0x1ff')](this['centerX'],0x12c*GlobalScale,'',DefaultFont)[_0x205e('0xd9')](0.5);this[_0x205e('0xd3')][_0x205e('0xd4')](this[_0x205e('0x542')]);this[_0x205e('0x57c')]=this[_0x205e('0xd2')][_0x205e('0xd4')][_0x205e('0x1ff')](this[_0x205e('0x535')],RealScreenHeight-0x1f4*GlobalScale,'',DefaultFont)[_0x205e('0xd9')](0.5);this[_0x205e('0xd3')][_0x205e('0xd4')](this['bottomLabel']);this[_0x205e('0x543')](this['engine'],this[_0x205e('0x57d')][_0x205e('0xe6')](this),RealScreenHeight-0xfa*GlobalScale,!![],0x1,this[_0x205e('0x535')]);}[_0x205e('0x57d')](){this['_destroyStuff']();if(!gameInit[_0x205e('0x16b')]['openSuperChest']())this[_0x205e('0x53b')]();}[_0x205e('0x322')](){this[_0x205e('0x547')][_0x205e('0x4e9')](LocalizationManager[_0x205e('0x226')]('ButtonOk'));}[_0x205e('0x558')](){}['_destroyStuff'](){if(this[_0x205e('0x57e')]&&this[_0x205e('0x57e')][_0x205e('0xe7')]){for(let _0x1ac75c in this[_0x205e('0x57e')])this[_0x205e('0x57e')][_0x1ac75c]['destroy']();this['itemsToDestroy']=[];}}[_0x205e('0x551')](_0x3c2846){super[_0x205e('0x551')](_0x3c2846);if(!_0x3c2846)this[_0x205e('0x57f')]();}[_0x205e('0x580')](_0x464b3f,_0x5f1e8c,_0x311622,_0x48ce4f,_0x1bacbc){const _0x484164=_0x464b3f;const _0x27bf5e=gameInit[_0x205e('0x16b')][_0x205e('0x2e5')](_0x5f1e8c);const _0xd82a9f=GameData[_0x205e('0x357')](_0x484164[_0x205e('0x2a7')]);const _0x5a66e3=this[_0x205e('0xd2')];const _0x372559=Math[_0x205e('0x215')](_0x311622/_0xd82a9f);const _0x155f3f=_0x311622%_0xd82a9f;this[_0x205e('0x542')]['setVisible'](![]);this[_0x205e('0x57c')][_0x205e('0x1f6')](![]);this[_0x205e('0x546')][_0x205e('0x1f6')](![]);this['buttonLabel'][_0x205e('0x1f6')](![]);this[_0x205e('0x577')][_0x205e('0x1f6')](_0x1bacbc);this[_0x205e('0x578')][_0x205e('0x1f6')](!_0x1bacbc);this[_0x205e('0x579')][_0x205e('0x1f6')](![]);this[_0x205e('0x57b')][_0x205e('0x1f6')](![]);const _0x464261=_0x1bacbc?this[_0x205e('0x577')]:this['giftBoxSuper'];const _0x15e946=_0x1bacbc?this['giftBoxOpen']:this[_0x205e('0x57b')];_0x464261[_0x205e('0xe8')](this[_0x205e('0x57a')]['x'],this[_0x205e('0x576')]);const _0x122a3d=GameData[_0x205e('0x581')](_0x5f1e8c+0x1);LoadFile(_0x5a66e3,_0x122a3d,VisualData[_0x205e('0x582')]()+_0x122a3d+_0x205e('0x2fe'),()=>{animManager[_0x205e('0x235')](_0x464261,this[_0x205e('0x57a')],0.05,0.3,()=>{audioManager['playChestSound'](0x0);animManager[_0x205e('0x238')](_0x464261,0.4,0.5,0x1,()=>{animManager['rotationAnimation'](_0x464261,0xa,0.7,0x3,()=>{_0x464261[_0x205e('0x1f6')](![]);_0x15e946[_0x205e('0x1f6')](!![]);const _0x3ba9e8=0.5;const _0xc0e47f=_0x5a66e3[_0x205e('0xd4')][_0x205e('0x4f0')](this[_0x205e('0x572')]['x'],this[_0x205e('0x572')]['y']);const _0x80be1f=_0x5a66e3['add'][_0x205e('0x1fd')](0x0,0x0,_0x122a3d);const _0x136ebe=_0x80be1f['width']/_0xd82a9f;_0x80be1f[_0x205e('0x583')](_0x372559*_0x136ebe,_0x155f3f*_0x136ebe,_0x136ebe,_0x136ebe)[_0x205e('0xd8')](_0x3ba9e8*_0xd82a9f)[_0x205e('0xd9')]((_0x372559+0.5)/_0xd82a9f,(_0x155f3f+0.5)/_0xd82a9f);let _0x9b6b87=_0x27bf5e[_0x205e('0x2a7')];if(_0x27bf5e['pieces']&0x1<<_0x311622)_0x9b6b87++;const _0x1e07b0=_0x5a66e3[_0x205e('0xd4')][_0x205e('0x1fd')](0x0,0x0,GameData['getPuzzleBackNamePerLevel'](_0x9b6b87));_0x1e07b0[_0x205e('0xd8')](_0x80be1f['width']/_0x1e07b0['width']*_0x3ba9e8);_0xc0e47f['add'](_0x1e07b0);_0xc0e47f[_0x205e('0xd4')](_0x80be1f);_0xc0e47f[_0x205e('0xd7')](WinDefaultDepth+0x64);_0xc0e47f[_0x205e('0xeb')]=0xb4;if(_0x48ce4f){this['header'][_0x205e('0x1ff')]=LocalizationManager[_0x205e('0x226')](_0x205e('0x584'));this[_0x205e('0x57c')][_0x205e('0x1ff')]=LocalizationManager[_0x205e('0x226')](_0x205e('0x585'))[_0x205e('0x477')](GameData[_0x205e('0x390')]());}else{this[_0x205e('0x542')][_0x205e('0x1ff')]=LocalizationManager[_0x205e('0x226')](_0x205e('0x586'));this[_0x205e('0x57c')]['text']=LocalizationManager[_0x205e('0x226')](_0x205e('0x587'));}this[_0x205e('0x542')][_0x205e('0x1f6')](!![]);this[_0x205e('0x57c')][_0x205e('0x1f6')](!![]);animManager[_0x205e('0x228')](this[_0x205e('0x542')]);animManager[_0x205e('0x228')](this[_0x205e('0x57c')]);audioManager[_0x205e('0x588')](0x1);const _0x4a0b52=0.3;animManager[_0x205e('0x235')](_0xc0e47f,this[_0x205e('0x573')],0.1,_0x4a0b52);animManager[_0x205e('0x23a')](_0xc0e47f,0x2,_0x4a0b52);animManager[_0x205e('0x239')](_0xc0e47f,0xb4,_0x4a0b52,0.25,()=>{animManager[_0x205e('0x236')](_0x15e946,0x0,0.3,()=>{_0x15e946[_0x205e('0x1f6')](![]);_0x15e946['alpha']=0x1;const _0x27702b=winPuzzleInstance[_0x205e('0x589')]({'item':_0x484164,'index':_0x5f1e8c},!![]);this['itemsToDestroy'][_0x205e('0xda')](_0x27702b);_0x27702b[_0x205e('0xe8')](this[_0x205e('0x575')]['x']*localScale,RealScreenHeight*1.1*localScale);const _0x6d664f=0.5;animManager[_0x205e('0x235')](_0x27702b,this[_0x205e('0x575')],0.05,_0x6d664f);animManager['waitAnimation'](0.7*_0x6d664f,()=>{const _0x4b8bbc=0.5;animManager[_0x205e('0x23a')](_0xc0e47f,0x1,_0x4b8bbc);animManager[_0x205e('0x239')](_0xc0e47f,0x5a,_0x4b8bbc,0.25);_0xc0e47f['setPosition'](this[_0x205e('0x574')]['x'],this[_0x205e('0x574')]['y']);const _0x12bed9=animManager['moveToPointExtra'](_0xc0e47f,this[_0x205e('0x573')],0.5,_0x4b8bbc,()=>{audioManager[_0x205e('0x588')](0x2);_0xc0e47f['destroy'](!![]);if(!_0x48ce4f){const _0x43e55a=_0x27702b[_0x205e('0x58a')][_0x372559*_0xd82a9f+_0x155f3f];_0x43e55a[_0x205e('0x22e')](!![]);const _0x186aaa=_0xd82a9f;const _0x311702=winPuzzleInstance[_0x205e('0x516')][_0x205e('0x58b')]*GlobalScale;const _0x1373db=_0x311702/_0x186aaa;const _0xe87cbf=_0x27702b['x']/localScale+(_0x372559-_0x186aaa*0.5)*_0x1373db;const _0x2d4fe4=_0x27702b['y']/localScale+(_0x155f3f-_0x186aaa*0.5)*_0x1373db;const _0x1352fa=_0x5a66e3[_0x205e('0xd4')][_0x205e('0x1fd')](_0xe87cbf,_0x2d4fe4,GameData[_0x205e('0x58c')](_0x9b6b87))[_0x205e('0xd9')](0x0,0x0)['setDepth'](WinDefaultDepth+0x64-0xa);_0x1352fa[_0x205e('0xd8')](_0x1373db/_0x1352fa[_0x205e('0xe4')]/ imagesDeltaScale);_0x27702b[_0x205e('0xd4')](_0x1352fa);}this[_0x205e('0x546')][_0x205e('0x1f6')](!![]);this[_0x205e('0x547')]['setVisible'](!![]);animManager[_0x205e('0x233')](this[_0x205e('0x546')]);});_0x12bed9[_0x205e('0x204')]();});});});});});});});}}let winPuzzleInstance;class WinPuzzle extends WinWithBrownBack{constructor(_0x5db882,_0x31ae1b){super(_0x5db882,_0x31ae1b);this[_0x205e('0x52d')]=!![];this[_0x205e('0x58d')]=0x0;winPuzzleInstance=this;this[_0x205e('0x58e')]=[];}['localize'](){super['localize']();this[_0x205e('0x542')][_0x205e('0x1ff')]=LocalizationManager[_0x205e('0x226')]('PuzzlesWindowTitle');for(let _0x8b1c88=0x0;_0x8b1c88<0x5;_0x8b1c88++)this[_0x205e('0x58f')][_0x8b1c88][_0x205e('0x1ff')]=LocalizationManager[_0x205e('0x226')](GameData[_0x205e('0x590')](_0x8b1c88+0x1));}[_0x205e('0x591')](_0x25d5f9,_0x2877a4,_0x149cff){const _0x4383fb=new ToogleButton(this[_0x205e('0xd2')],this[_0x205e('0xd3')],_0x25d5f9,_0x2877a4,_0x149cff,()=>this[_0x205e('0x592')](_0x4383fb),this[_0x205e('0x516')]);this['tabs'][_0x205e('0xda')](_0x4383fb);}[_0x205e('0x593')](){if(this['prepared'])return;this[_0x205e('0x568')]=!![];this[_0x205e('0x594')](this[_0x205e('0xd2')]);}[_0x205e('0x52a')](_0x4e27ed){super['createGame'](_0x4e27ed);const _0x173064=this[_0x205e('0x536')]+this[_0x205e('0x516')][_0x205e('0x595')]*GlobalScale;this[_0x205e('0x542')]=_0x4e27ed[_0x205e('0xd4')][_0x205e('0x1ff')](this[_0x205e('0x535')]-this['winInfo'][_0x205e('0x596')]*GlobalScale,_0x173064-0x1e*GlobalScale,null,DefaultFont)[_0x205e('0xd9')](0x0,0x1)[_0x205e('0xd7')](WinDefaultDepth+0x1);this['group'][_0x205e('0xd4')](this[_0x205e('0x542')]);const _0x2841b7=this[_0x205e('0x516')][_0x205e('0x597')]*GlobalScale;let _0x160e18=this[_0x205e('0x535')]+this['winInfo'][_0x205e('0x596')]*GlobalScale-_0x2841b7;this[_0x205e('0x598')]=[];this[_0x205e('0x591')](_0x205e('0x599'),_0x160e18,_0x173064);_0x160e18+=_0x2841b7;this[_0x205e('0x591')](_0x205e('0x1a'),_0x160e18,_0x173064);this[_0x205e('0x59a')]=[];this[_0x205e('0x59a')][0x0]=VisualData[_0x205e('0x59b')];this[_0x205e('0x59a')][0x0]['x']=this[_0x205e('0x535')]+this['configs'][0x0][_0x205e('0x59c')]*GlobalScale;this[_0x205e('0x59a')][0x0]['y']=this[_0x205e('0x536')]+this[_0x205e('0x59a')][0x0][_0x205e('0x59d')]*GlobalScale;this[_0x205e('0x4e2')]=[];this[_0x205e('0x4e2')][_0x205e('0xda')](_0x4e27ed[_0x205e('0xd4')][_0x205e('0xd3')]());this[_0x205e('0x4e2')][_0x205e('0xda')](_0x4e27ed[_0x205e('0xd4')][_0x205e('0xd3')]());this[_0x205e('0x59e')](_0x4e27ed);this[_0x205e('0x59f')]();for(let _0x441444 in this[_0x205e('0x4e2')])SetGroupVisible(this[_0x205e('0x4e2')][_0x441444],![]);SetGroupVisible(this[_0x205e('0xd3')],![]);}[_0x205e('0x594')](_0x2eb339){this[_0x205e('0x5a0')]=[];this['scroll'][_0x205e('0xda')](new GUIScroll(_0x2eb339,this['configs'][0x0],this[_0x205e('0x589')][_0x205e('0xe6')](this),this[_0x205e('0x5a1')][_0x205e('0xe6')](this)));this[_0x205e('0x5a0')][0x0][_0x205e('0x1f6')](![]);this[_0x205e('0x59a')][0x1]=VisualData[_0x205e('0x5a2')];this[_0x205e('0x59a')][0x1]['x']=this[_0x205e('0x535')]+this['configs'][0x1][_0x205e('0x59c')]*GlobalScale;this[_0x205e('0x59a')][0x1]['y']=this['centerY']+this[_0x205e('0x59a')][0x1][_0x205e('0x59d')]*GlobalScale;this[_0x205e('0x5a0')][_0x205e('0xda')](new GUIScroll(_0x2eb339,this['configs'][0x1],this['getStoreCell'][_0x205e('0xe6')](this),this[_0x205e('0x5a3')][_0x205e('0xe6')](this)));this['scroll'][0x1][_0x205e('0x1f6')](![]);}[_0x205e('0x5a4')](){const _0x33caf4=this['allCells'][0x0];if(!_0x33caf4||!_0x33caf4[_0x205e('0x4a4')])return;const _0x1343ec=gameInit[_0x205e('0x16b')][_0x205e('0x35e')]();const _0x1944ad=_0x1343ec>0x0&&this[_0x205e('0x58d')]===0x1&&this[_0x205e('0xe9')];if(_0x1944ad){if(!this[_0x205e('0x5a5')]||!this['myChestsBack']['active']){const _0x1f7b28=this[_0x205e('0x59a')][this['selectedTab']];const _0x5c4774=WinDefaultDepth+0xc8;const _0x31df5f=![];const _0x1f63f1=_0x31df5f?0x0:_0x1f7b28['cellWidth']/0x2*GlobalScale;const _0x256671=_0x31df5f?0x0:_0x1f7b28[_0x205e('0x4f7')]/0x2*GlobalScale;const _0x57cc4c=0x50*GlobalScale;const _0x379613=-0xb4*GlobalScale;const _0xb4a3f0=_0x33caf4['x']/localScale+_0x1f63f1+_0x57cc4c;const _0x36f324=_0x33caf4['y']/localScale+_0x256671+_0x379613;this[_0x205e('0x5a5')]=this[_0x205e('0xd2')]['add'][_0x205e('0x1fd')](_0xb4a3f0,_0x36f324,_0x205e('0x29'))[_0x205e('0xd7')](_0x5c4774);this['myChestsNumber']=this[_0x205e('0xd2')][_0x205e('0xd4')][_0x205e('0x225')](_0xb4a3f0,_0x36f324,'H',DefaultFont)[_0x205e('0xd7')](_0x5c4774+0x1)[_0x205e('0xd9')](0.5);_0x33caf4[_0x205e('0xd4')](this[_0x205e('0x5a5')]);_0x33caf4['add'](this[_0x205e('0x5a6')]);}}else{if(this[_0x205e('0x5a5')]&&this['myChestsBack'][_0x205e('0x4a4')]){this[_0x205e('0x5a5')][_0x205e('0x22e')]();this[_0x205e('0x5a6')][_0x205e('0x22e')]();this[_0x205e('0x5a5')]=null;this[_0x205e('0x5a6')]=null;}}if(_0x1343ec>0x0&&this[_0x205e('0x58d')]===0x1){if(this['myChestsNumber']&&this[_0x205e('0x5a6')][_0x205e('0x4a4')])this[_0x205e('0x5a6')][_0x205e('0x1ff')]=_0x1343ec;setStoreCellLocked(this[_0x205e('0x5a7')],![]);if(this[_0x205e('0xe9')])this[_0x205e('0x5a0')][0x1][_0x205e('0x4fc')]();}else{setStoreCellLocked(this[_0x205e('0x5a7')],!![]);}}['createSummary'](_0x2d5bf5){const _0x406ab1=this[_0x205e('0x4e2')][0x0];const _0x1c4a85=0x320*GlobalScale;const _0x3ea7c7=0x78*GlobalScale;const _0xd8a8a=this[_0x205e('0x535')]+_0x1c4a85/0x4;const _0x28ab2f=RealScreenHeight-_0x3ea7c7*0x3-0x32*GlobalScale;this[_0x205e('0x5a8')]=[];this[_0x205e('0x58f')]=[];for(let _0x3af3f4=0x1;_0x3af3f4<=0x5;_0x3af3f4++){const _0x195ab1=_0xd8a8a-_0x3af3f4%0x2*_0x1c4a85;const _0x2779ce=_0x28ab2f+Math[_0x205e('0x215')]((_0x3af3f4-0x1)/0x2)*_0x3ea7c7;_0x406ab1[_0x205e('0xd6')](_0x195ab1,_0x2779ce,GameData[_0x205e('0x5a9')](_0x3af3f4))[_0x205e('0xd9')](0x0,0x0)[_0x205e('0xd7')](WinDefaultDepth);const _0x5af048=_0x2d5bf5[_0x205e('0xd4')][_0x205e('0x1ff')](_0x195ab1+0x82*GlobalScale,_0x2779ce+0xa*GlobalScale,null,DefaultFontSmall)['setDepth'](WinDefaultDepth);const _0x32e789=_0x2d5bf5[_0x205e('0xd4')][_0x205e('0x1ff')](_0x195ab1+0x82*GlobalScale,_0x2779ce+0x3c*GlobalScale,null,DefaultFontSmall)[_0x205e('0xd7')](WinDefaultDepth);this['puzzleNumbers'][_0x205e('0xda')](_0x5af048);this[_0x205e('0x58f')]['push'](_0x32e789);_0x406ab1['add'](_0x5af048);_0x406ab1[_0x205e('0xd4')](_0x32e789);}}[_0x205e('0x592')](_0x4f4421){for(let _0x22b292=0x0;_0x22b292<this[_0x205e('0x598')][_0x205e('0xe7')];_0x22b292++){if(this[_0x205e('0x598')][_0x22b292]===_0x4f4421){this[_0x205e('0x598')][_0x22b292]['setSelected'](!![]);this[_0x205e('0x58d')]=_0x22b292;SetGroupVisible(this[_0x205e('0x4e2')][_0x22b292],!![]);}else{this['tabs'][_0x22b292][_0x205e('0x515')](![]);SetGroupVisible(this[_0x205e('0x4e2')][_0x22b292],![]);}}this['scroll'][this[_0x205e('0x58d')]][_0x205e('0x1f6')](!![]);this[_0x205e('0x5a0')][0x1-this[_0x205e('0x58d')]][_0x205e('0x1f6')](![]);if(this[_0x205e('0x58d')]===0x0){this[_0x205e('0x5a0')][0x0][_0x205e('0x4f8')][_0x205e('0x5aa')](this[_0x205e('0x5a1')]());}else{this[_0x205e('0x5a0')][0x1][_0x205e('0x4f8')]['setItems'](this[_0x205e('0x5a3')]());this[_0x205e('0x5a4')]();}}[_0x205e('0x59f')](){const _0x259b05=this[_0x205e('0x5a1')]();const _0x2c0c05=[];for(let _0x249567=0x0;_0x249567<0x5;_0x249567++)_0x2c0c05[_0x205e('0xda')](0x0);for(let _0x4a26af=0x0;_0x4a26af<_0x259b05[_0x205e('0xe7')];_0x4a26af++){if(_0x259b05[_0x4a26af][_0x205e('0x2a7')]>0x0)_0x2c0c05[_0x259b05[_0x4a26af][_0x205e('0x2a7')]-0x1]++;}const _0x8afa60='/'+_0x259b05['length'];for(let _0x217819=0x0;_0x217819<0x5;_0x217819++)this[_0x205e('0x5a8')][_0x217819][_0x205e('0x1ff')]=_0x2c0c05[_0x217819]+_0x8afa60;}[_0x205e('0x5ab')](){if(this[_0x205e('0x5ac')]){clearInterval(this[_0x205e('0x5ac')]);this[_0x205e('0x5ac')]=null;}}[_0x205e('0x551')](_0x3c5e23){super['setWindowVisible'](_0x3c5e23);this[_0x205e('0x5ab')]();if(_0x3c5e23){this[_0x205e('0x593')]();this[_0x205e('0x592')](this[_0x205e('0x598')][this[_0x205e('0x58d')]]);this[_0x205e('0x59f')]();this[_0x205e('0x5a4')]();this[_0x205e('0x5ac')]=setInterval(()=>{if(gameInit[_0x205e('0x16b')][_0x205e('0x35e')]()>0x0&&this[_0x205e('0x5a7')]&&this[_0x205e('0x5a7')]['active'])animManager[_0x205e('0x5ad')](this[_0x205e('0x5a7')][_0x205e('0x5ae')],0x7,0x14*GlobalScale,0.6,0x2);},0x7d0);}else{for(let _0x5a0497 in this[_0x205e('0x5a0')])this[_0x205e('0x5a0')][_0x5a0497][_0x205e('0x4f8')][_0x205e('0x1f6')](![]);for(let _0x319c8d in this[_0x205e('0x4e2')])SetGroupVisible(this[_0x205e('0x4e2')][_0x319c8d],_0x3c5e23);}hudResources['setVisible'](_0x3c5e23);}[_0x205e('0x5af')](_0x163e88,_0x318a37){setStoreCellLocked(_0x163e88,!gameInit[_0x205e('0x16b')][_0x205e('0x372')](_0x318a37));}[_0x205e('0x5b0')](_0x5484d6,_0x1e65e3){setStoreCellLocked(_0x5484d6,!gameInit['progress']['isResourcesWithTypeEnough'](_0x1e65e3));}[_0x205e('0x5b1')](_0x5a5b1a,_0x5350d3){const _0x4672c8=gameInit['progress'];const _0x5a7c83=this[_0x205e('0xd2')];const _0x1fc61f=this[_0x205e('0x59a')][this[_0x205e('0x58d')]];const _0x9e286a=_0x5350d3?0x0:_0x1fc61f[_0x205e('0x4f6')]/0x2*GlobalScale;const _0x47055c=_0x5350d3?0x0:_0x1fc61f[_0x205e('0x4f7')]/0x2*GlobalScale;const _0x3a6fdb=GameData[_0x205e('0x5b2')]();const _0xcdb122=0x50*GlobalScale;const _0x337dc7=-0xb4*GlobalScale;let _0x29fdf2=_0x5a7c83[_0x205e('0x5b3')][_0x205e('0xd4')][_0x205e('0x4f0')](0x0,0x0);const _0x2c5007=WinDefaultDepth+0xc8;const _0x334873='GiftBox';const _0x34ca03=VisualData[_0x205e('0x5b4')]()+_0x205e('0x5b5');this[_0x205e('0x58e')][_0x5a5b1a[_0x205e('0x437')]]=_0x29fdf2;switch(_0x5a5b1a[_0x205e('0x437')]){case 0x0:this[_0x205e('0x5a7')]=_0x29fdf2;createStoreCell(_0x5a7c83,_0x29fdf2,_0x9e286a,_0x47055c,LocalizationManager['getLocalizization'](_0x205e('0x5b6')),_0x205e('0x5b7'),VisualData[_0x205e('0x5b8')]()+_0x205e('0x5b9'),LocalizationManager[_0x205e('0x226')](_0x205e('0x5ba')),null,LocalizationManager[_0x205e('0x226')](_0x205e('0x5bb')),()=>{if(_0x4672c8[_0x205e('0x35e')]()>0x0){_0x4672c8[_0x205e('0x38e')]();this[_0x205e('0x5a4')]();}});this['updateChestsNumber']();break;case 0x1:let _0x5db3d3=_0x4672c8[_0x205e('0x386')]();const _0xdee417=createStoreCell(_0x5a7c83,_0x29fdf2,_0x9e286a,_0x47055c,LocalizationManager[_0x205e('0x226')](_0x205e('0x5bc')),_0x334873,_0x34ca03,LocalizationManager[_0x205e('0x226')](_0x205e('0x5bd')),GameData[_0x205e('0x5be')](_0x3a6fdb[0x0][_0x205e('0x362')]),LocalizationManager[_0x205e('0x44d')](_0x5db3d3),()=>{_0x5db3d3=_0x4672c8[_0x205e('0x388')](_0x3a6fdb[0x0][_0x205e('0x3d9')]);if(_0x5db3d3){this['updateChestsNumber']();_0xdee417[_0x205e('0x1ff')]=LocalizationManager[_0x205e('0x44d')](_0x5db3d3);this['_checkPriceInGold'](_0x29fdf2,_0x5db3d3);}});this[_0x205e('0x5af')](_0x29fdf2,_0x5db3d3);_0x29fdf2[_0x205e('0xd4')](_0x5a7c83[_0x205e('0xd4')][_0x205e('0x1fd')](_0x9e286a+_0xcdb122,_0x47055c+_0x337dc7,'BoxCounter')[_0x205e('0xd7')](_0x2c5007));_0x29fdf2[_0x205e('0xd4')](_0x5a7c83[_0x205e('0xd4')][_0x205e('0x225')](_0x9e286a+_0xcdb122,_0x47055c+_0x337dc7,'x1',DefaultFont)[_0x205e('0xd7')](_0x2c5007)['setOrigin'](0.5));break;case 0x2:createStoreCell(_0x5a7c83,_0x29fdf2,_0x9e286a,_0x47055c,LocalizationManager[_0x205e('0x226')](_0x205e('0x5bf')),_0x334873,_0x34ca03,LocalizationManager[_0x205e('0x226')](_0x205e('0x5c0')),GameData['getIconByType'](_0x3a6fdb[0x1][_0x205e('0x362')]),_0x3a6fdb[0x1][_0x205e('0x3fc')],()=>{const _0x40720a=_0x3a6fdb[0x1]['bigInt'];if(_0x4672c8[_0x205e('0x375')](_0x40720a)){if(!_0x4672c8[_0x205e('0x391')]()){_0x4672c8['gemsSpent'](_0x40720a);_0x4672c8[_0x205e('0x5c1')](BoxType[_0x205e('0x334')],_0x3a6fdb[0x1]['count']);this[_0x205e('0x5a4')]();}}else guiManager[_0x205e('0x37e')](WindowType[_0x205e('0x5c2')]);});_0x29fdf2[_0x205e('0xd4')](_0x5a7c83[_0x205e('0xd4')][_0x205e('0x1fd')](_0x9e286a+_0xcdb122,_0x47055c+_0x337dc7,_0x205e('0x29'))[_0x205e('0xd7')](_0x2c5007));_0x29fdf2[_0x205e('0xd4')](_0x5a7c83[_0x205e('0xd4')][_0x205e('0x225')](_0x9e286a+_0xcdb122,_0x47055c+_0x337dc7,'x3',DefaultFont)[_0x205e('0xd7')](_0x2c5007)[_0x205e('0xd9')](0.5));break;case 0x3:createStoreCell(_0x5a7c83,_0x29fdf2,_0x9e286a,_0x47055c,LocalizationManager[_0x205e('0x226')](_0x205e('0x5c3')),_0x205e('0x2c'),VisualData['getStoreFolder']()+_0x205e('0x5c4'),LocalizationManager[_0x205e('0x226')](_0x205e('0x5c5')),GameData[_0x205e('0x5be')](_0x3a6fdb[0x2][_0x205e('0x362')]),_0x3a6fdb[0x2][_0x205e('0x3fc')],()=>{const _0xc975f7=_0x3a6fdb[0x2][_0x205e('0x378')];if(_0x4672c8[_0x205e('0x375')](_0xc975f7)){if(!_0x4672c8['areAllPuzzlesCollected']()){_0x4672c8[_0x205e('0x385')](_0xc975f7);_0x4672c8[_0x205e('0x389')](BoxType[_0x205e('0x38a')],_0x3a6fdb[0x2][_0x205e('0x3d9')]);}}else guiManager['openNewWindow'](WindowType[_0x205e('0x5c2')]);});break;}return _0x29fdf2[_0x205e('0xd9')](0x0)[_0x205e('0xd7')](_0x2c5007);}['getCell'](_0x11619c,_0x5d6886){const _0x47f573=this[_0x205e('0x59a')][0x0];const _0x5b4fab=_0x11619c[_0x205e('0x172')];const _0x2568a5=this[_0x205e('0xd2')];const _0xa00b3e=_0x5d6886?0x0:_0x47f573[_0x205e('0x4f6')]/0x2*GlobalScale;const _0x38fcd3=_0x5d6886?0x0:_0x47f573[_0x205e('0x4f7')]/0x2*GlobalScale;let _0x4ac216=_0x2568a5[_0x205e('0x5b3')][_0x205e('0xd4')][_0x205e('0x4f0')](0x0,0x0);_0x4ac216[_0x205e('0x58a')]=[];const _0x20c28c=WinDefaultDepth+0x64;const _0x1fc4de=GameData['getPuzzleIcon'](_0x11619c[_0x205e('0x437')]+0x1);let _0x2d99aa=!![];if(_0x1fc4de){LoadFile(_0x2568a5,_0x1fc4de,VisualData[_0x205e('0x582')]()+_0x1fc4de+_0x205e('0x2fe'),()=>{if(_0x4ac216&&_0x4ac216[_0x205e('0x4a4')]){_0x4ac216[_0x205e('0xd4')](_0x2568a5[_0x205e('0xd4')][_0x205e('0x1fd')](_0x4ac216['x']/localScale+_0xa00b3e,_0x4ac216['y']/localScale+_0x38fcd3,_0x1fc4de)[_0x205e('0xd7')](_0x20c28c-0x7));if(!_0x2d99aa)this['scroll'][0x0][_0x205e('0x4fc')]();}});}_0x2d99aa=![];const _0x39e912=GameData[_0x205e('0x357')](_0x5b4fab[_0x205e('0x2a7')]);const _0x3468d0=this[_0x205e('0x516')][_0x205e('0x58b')]*GlobalScale;const _0x1a6fee=this[_0x205e('0x516')][_0x205e('0x5c6')]*GlobalScale/_0x39e912;const _0x3e757d=_0x3468d0/_0x39e912;const _0x3b710b=_0x20c28c-0xa;let _0x7847ac=0x0;for(let _0x3cf39c=0x0;_0x3cf39c<_0x39e912;_0x3cf39c++){for(let _0x130c25=0x0;_0x130c25<_0x39e912;_0x130c25++){let _0x539805=_0x5b4fab['level'];if((_0x5b4fab['pieces']&0x1<<_0x7847ac++)!==0x0)_0x539805++;let _0x576388;if(_0x539805===0x0){let _0x588b2b=null;switch(_0x7847ac){case 0x1:_0x588b2b='PuzzleItemLockUL';break;case 0x2:_0x588b2b=_0x205e('0x1d');break;case 0x3:_0x588b2b=_0x205e('0x5c7');break;case 0x4:_0x588b2b='PuzzleItemLockDR';break;}if(this[_0x205e('0x516')][_0x205e('0x5c8')]){_0x576388=_0x2568a5[_0x205e('0xd4')][_0x205e('0x1fd')](_0xa00b3e,_0x38fcd3,_0x588b2b)[_0x205e('0xd7')](_0x20c28c-0x2);}else{const _0x51b6c8=_0xa00b3e+(_0x3cf39c-_0x39e912*0.5)*_0x1a6fee;const _0x5da2fc=_0x38fcd3+(_0x130c25-_0x39e912*0.5)*_0x1a6fee;_0x576388=_0x2568a5[_0x205e('0xd4')]['sprite'](_0x51b6c8,_0x5da2fc,_0x588b2b)[_0x205e('0xd7')](_0x20c28c-0x2)[_0x205e('0xd9')](0x0,0x0);}}else{const _0x2d0d86=_0xa00b3e+(_0x3cf39c-_0x39e912*0.5)*_0x3e757d;const _0x5da2fc=_0x38fcd3+(_0x130c25-_0x39e912*0.5)*_0x3e757d;_0x576388=_0x2568a5[_0x205e('0xd4')][_0x205e('0x1fd')](_0x2d0d86,_0x5da2fc,GameData[_0x205e('0x58c')](_0x539805))['setOrigin'](0x0,0x0)[_0x205e('0xd7')](_0x3b710b);_0x576388[_0x205e('0xd8')](_0x3e757d/_0x576388['width']/ imagesDeltaScale);}_0x4ac216[_0x205e('0xd4')](_0x576388);_0x4ac216['images'][_0x205e('0xda')](_0x576388);}}const _0x12a596=_0x2568a5[_0x205e('0xd4')][_0x205e('0x1fd')](_0xa00b3e,_0x38fcd3,_0x205e('0x1c'))[_0x205e('0xd7')](_0x20c28c-0x5);_0x4ac216['add'](_0x12a596);if(_0x5b4fab['level']>0x0&&_0x5b4fab[_0x205e('0x2a7')]<0x5&&this[_0x205e('0x516')][_0x205e('0x5c9')]){const _0x16b65f=_0x2568a5['add'][_0x205e('0x1fd')](_0xa00b3e,_0x38fcd3,'Grid'+_0x39e912)['setDepth'](_0x20c28c-0x6);_0x4ac216[_0x205e('0xd4')](_0x16b65f);}if(_0x5b4fab[_0x205e('0x2a7')]>=0x2){const _0x2f8f74=_0x2568a5[_0x205e('0xd4')][_0x205e('0x1fd')](_0xa00b3e+this['winInfo'][_0x205e('0x5ca')]*GlobalScale,_0x38fcd3-0x8c*GlobalScale,_0x205e('0x1b'))['setOrigin'](0x1,0.5)[_0x205e('0xd7')](_0x20c28c);_0x4ac216[_0x205e('0xd4')](_0x2f8f74);const _0x2227c5=_0x2568a5[_0x205e('0xd4')][_0x205e('0x1fd')](_0xa00b3e-0x37*GlobalScale,_0x38fcd3-0x8c*GlobalScale,_0x205e('0x5'))[_0x205e('0xd8')](0.7)[_0x205e('0xd7')](_0x20c28c);_0x4ac216['add'](_0x2227c5);const _0x3d45b3=_0x2568a5[_0x205e('0xd4')][_0x205e('0x225')](_0xa00b3e-0xa*GlobalScale,_0x38fcd3-0x8c*GlobalScale,'+'+(GameData['getPuzzleResourceBonusPerLevel'](_0x5b4fab[_0x205e('0x2a7')])-0x1)*0x64+'%',DefaultFontSmall)[_0x205e('0xd9')](0x0,0.5)[_0x205e('0xd7')](_0x20c28c);_0x4ac216[_0x205e('0xd4')](_0x3d45b3);}return _0x4ac216[_0x205e('0xd9')](0x0);}[_0x205e('0x5a1')](){return gameInit[_0x205e('0x16b')]['getPuzzleInfo']();}['getStoreItems'](){return[0x0,0x1,0x2,0x3];}['getSelectedTab'](){return this[_0x205e('0x58d')];}[_0x205e('0x5cb')](){return this[_0x205e('0x598')][0x1][_0x205e('0x513')];}[_0x205e('0x5cc')](){return this[_0x205e('0x58e')][0x0][_0x205e('0x519')];}}const GEMS_VIDEO_REWARD_ID=_0x205e('0x5cd');class WinStore extends WinWithLargeBack{constructor(_0x3a2707,_0x35dbd8){super(_0x3a2707,_0x35dbd8);this['selectedTab']=0x0;this[_0x205e('0x58e')]={};this[_0x205e('0x52d')]=!![];}[_0x205e('0x5ce')](){let _0x3b0e80,_0x5b3dde;_0x3b0e80=RealScreenWidth-0xb4*GlobalScale;_0x5b3dde=RealScreenHeight-0x96*GlobalScale;this[_0x205e('0x5cf')]=new BasicButton(null,{'scene':this['engine'],'key':_0x205e('0x36'),'x':_0x3b0e80,'y':_0x5b3dde},()=>{this[_0x205e('0x52c')][_0x205e('0x37e')](WindowType[_0x205e('0x5d0')]);})[_0x205e('0xd7')](WinDefaultDepth);this[_0x205e('0x531')](this[_0x205e('0x5cf')]);this[_0x205e('0x5cf')][_0x205e('0x1f6')](![]);}['createGame'](_0x58cd65){super[_0x205e('0x52a')](_0x58cd65);this['engine']=_0x58cd65;const _0x45b904=this[_0x205e('0x516')][_0x205e('0x595')]*GlobalScale;let _0x292346=this[_0x205e('0x516')][_0x205e('0x596')]*GlobalScale;const _0x10716a=this[_0x205e('0x516')]['togglesDistance']*GlobalScale;this[_0x205e('0x598')]=[];this[_0x205e('0x591')](_0x205e('0x5d1'),_0x292346,_0x45b904);_0x292346+=_0x10716a;this['addTab'](_0x205e('0x5'),_0x292346,_0x45b904);_0x292346+=_0x10716a;this['addTab'](_0x205e('0x7'),_0x292346,_0x45b904);_0x292346+=_0x10716a;this['addTab'](_0x205e('0x6'),_0x292346,_0x45b904);_0x292346=-this['winInfo'][_0x205e('0x596')]*GlobalScale;this['addTab'](_0x205e('0x19'),_0x292346,_0x45b904);this['config']=VisualData[_0x205e('0x5d2')];this[_0x205e('0x1eb')]['x']=this['centerX']+this[_0x205e('0x1eb')][_0x205e('0x59c')]*GlobalScale;this[_0x205e('0x1eb')]['y']=this[_0x205e('0x536')]+this[_0x205e('0x1eb')][_0x205e('0x59d')]*GlobalScale;this[_0x205e('0x5d3')]=[];this['scroll']=new GUIScroll(_0x58cd65,this['config'],this[_0x205e('0x589')][_0x205e('0xe6')](this),this[_0x205e('0x5a1')][_0x205e('0xe6')](this));this['scroll'][_0x205e('0x1f6')](![]);SetGroupVisible(this[_0x205e('0xd3')],![]);this[_0x205e('0x5ce')]();}[_0x205e('0x5d4')](){return this[_0x205e('0x58e')][VisualData[_0x205e('0x5d5')]()][_0x205e('0x519')];}[_0x205e('0x591')](_0x1e7a64,_0x3263a7,_0x145914){const _0x6c8915=new ToogleButton(this[_0x205e('0xd2')],this['group'],_0x1e7a64,_0x3263a7,_0x145914,()=>this[_0x205e('0x592')](_0x6c8915),this[_0x205e('0x516')]);this[_0x205e('0x598')][_0x205e('0xda')](_0x6c8915);}[_0x205e('0x5d6')](_0x40fd04){for(let _0x308cfc=0x0;_0x308cfc<_0x40fd04[_0x205e('0xe7')];_0x308cfc++){if(this['gameInit'][_0x205e('0x16b')][_0x205e('0x365')](_0x40fd04[_0x308cfc]))return _0x40fd04[_0x308cfc];}for(let _0x3e4c62=0x0;_0x3e4c62<_0x40fd04['length'];_0x3e4c62++){if(!this[_0x205e('0x52e')][_0x205e('0x16b')][_0x205e('0x5d7')](_0x40fd04[_0x3e4c62]['id']))return _0x40fd04[_0x3e4c62];}return null;}[_0x205e('0x5d8')](){this[_0x205e('0x5d3')]=[];let _0x53186c=null;switch(this[_0x205e('0x58d')]){case 0x0:{let _0xf0d0cd=null;_0xf0d0cd=this[_0x205e('0x5d6')](GameData[_0x205e('0x5d9')]());if(_0xf0d0cd)this[_0x205e('0x5d3')][_0x205e('0xda')](_0xf0d0cd);_0xf0d0cd=this[_0x205e('0x5d6')](GameData['getMarketListSeeds']());if(_0xf0d0cd)this[_0x205e('0x5d3')][_0x205e('0xda')](_0xf0d0cd);_0xf0d0cd=this[_0x205e('0x5d6')](GameData[_0x205e('0x5da')]());if(_0xf0d0cd)this[_0x205e('0x5d3')][_0x205e('0xda')](_0xf0d0cd);this[_0x205e('0x5a0')][_0x205e('0x4f8')]['setItems'](this[_0x205e('0x5d3')]);return;}case 0x1:_0x53186c=GameData[_0x205e('0x5d9')]();break;case 0x2:_0x53186c=GameData[_0x205e('0x5db')]();break;case 0x3:_0x53186c=GameData[_0x205e('0x5da')]();break;case 0x4:_0x53186c=GameData['getInAppData']();break;}if(_0x53186c){for(let _0x586670=0x0;_0x586670<_0x53186c['length'];_0x586670++){if(this[_0x205e('0x52e')][_0x205e('0x16b')][_0x205e('0x365')](_0x53186c[_0x586670])||WinStore[_0x205e('0x5dc')](this[_0x205e('0x58d')])){this['slots'][_0x205e('0xda')](_0x53186c[_0x586670]);if(this[_0x205e('0x5d3')][_0x205e('0xe7')]>=this[_0x205e('0x1eb')][_0x205e('0x5dd')])break;}}this[_0x205e('0x5a0')]['table'][_0x205e('0x5aa')](this[_0x205e('0x5d3')]);}}static[_0x205e('0x5dc')](_0x2727b2){return _0x2727b2>0x3;}[_0x205e('0x592')](_0x8cc11f){for(let _0x447884=0x0;_0x447884<this[_0x205e('0x598')][_0x205e('0xe7')];_0x447884++){if(this[_0x205e('0x598')][_0x447884]===_0x8cc11f){this[_0x205e('0x598')][_0x447884][_0x205e('0x515')](!![]);this[_0x205e('0x58d')]=_0x447884;this[_0x205e('0x5d8')]();}else{this[_0x205e('0x598')][_0x447884]['setSelected'](![]);}}this[_0x205e('0x5a0')][_0x205e('0x4f8')][_0x205e('0x500')](0x0);}['tryToPurchaseUpgrade'](_0x1b4991){switch(_0x1b4991){case GEMS_VIDEO_REWARD_ID:{const _0x1a1d13=gameInit[_0x205e('0x16b')];if(_0x1a1d13[_0x205e('0x5de')]()<AdsAvailableToWatchADay){PlayRewardedAd(()=>{gameAnalytics['sendEvent']('Ads_For_Gems');_0x1a1d13[_0x205e('0x3da')]();const _0x22600e=GameData[_0x205e('0x37a')](_0x1b4991);_0x1a1d13[_0x205e('0x382')](_0x22600e[_0x205e('0x341')]);this[_0x205e('0x5d8')]();});}return;}}if(this[_0x205e('0x52e')]['progress'][_0x205e('0x379')](_0x1b4991)){if(!WinStore[_0x205e('0x5dc')](this['selectedTab']))this[_0x205e('0x5d8')]();}else{this[_0x205e('0x53b')]();guiManager[_0x205e('0x37e')](WindowType[_0x205e('0x5c2')]);}}[_0x205e('0x5df')](_0x3478ef){if(_0x3478ef[_0x205e('0x3de')])return LocalizationManager[_0x205e('0x44d')](gameInit[_0x205e('0x16b')][_0x205e('0x371')](_0x3478ef));const _0x1df478=socialManager['getPriceLabel'](_0x3478ef['id']);if(_0x1df478)return _0x1df478;switch(_0x3478ef['id']){case GEMS_VIDEO_REWARD_ID:{return gameInit[_0x205e('0x16b')][_0x205e('0x5de')]()+'/'+AdsAvailableToWatchADay;}}return _0x205e('0x5e0');}[_0x205e('0x589')](_0x4ee0a3){const _0x42da94=this[_0x205e('0xd2')];const _0x13d65a=_0x4ee0a3[_0x205e('0x172')];const _0xf23067=_0x42da94[_0x205e('0x5b3')][_0x205e('0xd4')][_0x205e('0x4f0')](0x0,0x0);if(!_0x13d65a)return _0xf23067;const _0x1ad65d=this[_0x205e('0x1eb')];const _0x19e752=_0x1ad65d[_0x205e('0x4f6')]/0x2*GlobalScale;const _0x180dfc=_0x1ad65d[_0x205e('0x4f7')]/0x2*GlobalScale;const _0x1b3d2e=WinStore[_0x205e('0x5e1')](_0x13d65a);createStoreCell(_0x42da94,_0xf23067,_0x19e752,_0x180dfc,LocalizationManager[_0x205e('0x5e2')](_0x13d65a),_0x1b3d2e,VisualData['getStoreFolder']()+_0x1b3d2e+_0x205e('0x2fe'),LocalizationManager[_0x205e('0x5e3')](_0x13d65a),GameData[_0x205e('0x5be')](_0x13d65a['priceType']),this['_getStoreCellButtonCaption'](_0x13d65a),()=>this['tryToPurchaseUpgrade'](_0x13d65a['id']),!![],this[_0x205e('0x5a0')],_0x13d65a['id']===GEMS_VIDEO_REWARD_ID&&gameInit[_0x205e('0x16b')][_0x205e('0x5de')]()>=AdsAvailableToWatchADay);_0xf23067['item']=_0x13d65a;this[_0x205e('0x58e')][_0x13d65a['id']]=_0xf23067;this[_0x205e('0x5e4')](_0xf23067);if(_0xf23067[_0x205e('0x529')]){this[_0x205e('0x5e5')]=_0xf23067[_0x205e('0x529')];this[_0x205e('0x5e6')]();}return _0xf23067[_0x205e('0xd9')](0x0)[_0x205e('0xd7')](WinDefaultDepth+0x64);}['_checkPriceForButton'](_0xb407ed){let _0x1030c4;switch(_0xb407ed[_0x205e('0x172')]['id']){case GEMS_VIDEO_REWARD_ID:{_0x1030c4=gameInit['progress']['getAdsWatchedToday']()>=AdsAvailableToWatchADay;break;}default:_0x1030c4=_0xb407ed[_0x205e('0x172')][_0x205e('0x362')]!==_0x205e('0x363')&&!gameInit['progress']['isResourcesWithTypeEnoughForPurchase'](_0xb407ed[_0x205e('0x172')]);break;}setStoreCellLocked(_0xb407ed,_0x1030c4);}static[_0x205e('0x5e1')](_0x2936d1){if(_0x2936d1[_0x205e('0x5e7')]){return _0x2936d1[_0x205e('0x5e7')][_0x205e('0x42b')]('Name','');}switch(_0x2936d1[_0x205e('0x2ea')]){case'MultiProfit':{if(_0x2936d1[_0x205e('0x362')]==='Gems')return _0x205e('0x5e8');return _0x2936d1[_0x205e('0x2f2')]>=0x0?'MultiProfitOneSlot':_0x205e('0x5e9');}case _0x205e('0x442'):{switch(_0x2936d1[_0x205e('0x2ec')]){case 0xe10*0x4:return'TimeTravel4h';case 0xe10*0x18:return _0x205e('0x5ea');case 0xe10*0x18*0x7:return _0x205e('0x5eb');}break;}default:return _0x2936d1[_0x205e('0x2ea')];}return null;}[_0x205e('0x5a1')](){return this[_0x205e('0x5d3')];}[_0x205e('0x5ec')](){this[_0x205e('0x5ed')]=!![];}[_0x205e('0x5ee')](){if(this[_0x205e('0x224')]){clearInterval(this[_0x205e('0x224')]);this[_0x205e('0x224')]=null;}}['updateTimer'](){if(this[_0x205e('0x5e5')]&&this[_0x205e('0x5e5')][_0x205e('0x4a4')]){this[_0x205e('0x5e5')][_0x205e('0x4e9')](timeToStringClock(Progress[_0x205e('0x3dd')]()));}}[_0x205e('0x551')](_0x51b599){super[_0x205e('0x551')](_0x51b599);this[_0x205e('0x5a0')][_0x205e('0x1f6')](_0x51b599);this[_0x205e('0x5ee')]();if(_0x51b599){if(this[_0x205e('0x5ed')]){this[_0x205e('0x58d')]=0x4;this[_0x205e('0x5ed')]=![];}else this[_0x205e('0x58d')]=0x0;this['tabWasSwitched'](this[_0x205e('0x598')][this[_0x205e('0x58d')]]);if(gameInit[_0x205e('0x16b')][_0x205e('0x3be')]()){socialManager[_0x205e('0x5ef')](_0x1ad517=>{gameInit[_0x205e('0x16b')][_0x205e('0x16c')](_0x1ad517);});}this[_0x205e('0x224')]=setInterval(()=>{this[_0x205e('0x5e6')]();},0x3e8);}this[_0x205e('0x5cf')]['setVisible'](_0x51b599);hudResources[_0x205e('0x1f6')](_0x51b599);}}class WinFortuneWheel extends WinWithExit{constructor(_0xf7bd2a,_0x5b9a72){super(_0xf7bd2a,_0x5b9a72);this[_0x205e('0x5f0')]=0x1;this['lightIndex']=0x0;this[_0x205e('0x5f1')]=0x0;this[_0x205e('0x5f2')]=0x0;}[_0x205e('0x52a')](_0x410f7f){super[_0x205e('0x52a')](_0x410f7f);this[_0x205e('0x53a')]();this[_0x205e('0x550')][_0x205e('0x1f8')]=!![];}['localize'](){super['localize']();if(this[_0x205e('0x542')])this[_0x205e('0x542')][_0x205e('0x4e9')](LocalizationManager[_0x205e('0x226')](_0x205e('0x5f3')));if(this['buttonLabel'])this[_0x205e('0x547')][_0x205e('0x4e9')](LocalizationManager[_0x205e('0x226')]('FortuneWheelWindowGemsButton')[_0x205e('0x477')](GEMS_PRICE_FOR_WHEEL_SPIN));if(this[_0x205e('0x5f4')])this[_0x205e('0x5f4')][_0x205e('0x4e9')](LocalizationManager[_0x205e('0x226')](_0x205e('0x5f5')));this[_0x205e('0x5f6')]();this['_updateSpinsCount']();}[_0x205e('0x5f7')](){if(!this[_0x205e('0xe9')])return;const _0x59f059=gameInit['progress'][_0x205e('0x3d2')]()>0x0;this['actionButtonFree'][_0x205e('0x1f6')](_0x59f059);this[_0x205e('0x5f4')]['setVisible'](_0x59f059);this[_0x205e('0x546')][_0x205e('0x1f6')](!_0x59f059);this[_0x205e('0x547')][_0x205e('0x1f6')](!_0x59f059);this[_0x205e('0x5f8')][_0x205e('0x1f6')](!_0x59f059);}[_0x205e('0x5f9')](){if(this[_0x205e('0x5fa')]){const _0x2fa433=gameInit[_0x205e('0x16b')]['getFreeSpinsCount']();this[_0x205e('0x5fa')][_0x205e('0x4e9')](LocalizationManager['getLocalizization'](_0x205e('0x5fb'))[_0x205e('0x477')](_0x2fa433,Progress[_0x205e('0x3d3')]()));if(this[_0x205e('0xe9')])this[_0x205e('0x5fc')][_0x205e('0x1f6')](_0x2fa433<Progress[_0x205e('0x3d3')]());this[_0x205e('0x5f7')]();}}['_updateSpinsTimer'](){if(this['spinsTimer']){const _0x567cb7=gameInit['progress']['getNextSpinTime']()/0x3e8;if(_0x567cb7<=0x0){if(gameInit[_0x205e('0x16b')][_0x205e('0x3d6')]())this[_0x205e('0x5f9')]();}else this['spinsTimer'][_0x205e('0x4e9')](LocalizationManager[_0x205e('0x226')]('FortuneWheelWindowCooldownText')[_0x205e('0x477')](timeToStringClock(_0x567cb7)));}}[_0x205e('0x5fd')](){if(this[_0x205e('0x5fe')]&&!this['arrowAnimation']){this[_0x205e('0x5fe')][_0x205e('0x213')](this[_0x205e('0x5ff')]['y']);this['arrowAnimation']=animManager['moveSinInfinite'](this[_0x205e('0x5fe')],0x1,0x0,0x32*GlobalScale);}}[_0x205e('0x551')](_0x45fccb){super[_0x205e('0x551')](_0x45fccb);if(_0x45fccb){if(!this[_0x205e('0x600')]){this[_0x205e('0x600')]=this[_0x205e('0x601')]['bind'](this);gameInit[_0x205e('0xe5')][_0x205e('0x27d')](this[_0x205e('0x600')]);}this['_startArrowAnimation']();}else{if(this[_0x205e('0x600')]){gameInit['update'][_0x205e('0x27f')](this[_0x205e('0x600')]);this[_0x205e('0x600')]=null;}if(this['arrowAnimation']){this[_0x205e('0x602')][_0x205e('0x209')]();this['arrowAnimation']=null;}}if(_0x45fccb){if(this[_0x205e('0x455')]){this[_0x205e('0x603')]();}else{this[_0x205e('0x455')]=!![];const _0x4ebd99=this[_0x205e('0xd2')];const _0x2f273e=this[_0x205e('0x516')][_0x205e('0x604')]*GlobalScale;const _0x2a2761=this[_0x205e('0x516')][_0x205e('0x605')]*GlobalScale;const _0x52627f=_0x2a2761+this[_0x205e('0x516')]['buttonY']*GlobalScale;this[_0x205e('0x543')](_0x4ebd99,this[_0x205e('0x606')]['bind'](this),_0x52627f,!![],0x1,0x0,0x640*GlobalScale,_0x205e('0x39'));this[_0x205e('0x607')]=this[_0x205e('0x546')];this[_0x205e('0x5f4')]=this[_0x205e('0x547')];this['createActionButton'](_0x4ebd99,this['spinWheel'][_0x205e('0xe6')](this),_0x52627f,!![],0x1,0x0,0x640*GlobalScale);this[_0x205e('0x5f8')]=this['group'][_0x205e('0xd6')](0x0,_0x52627f,_0x205e('0x6'))[_0x205e('0xd9')](0x0,0.5);const _0x4e1490=_0x205e('0x608');CreateImage(_0x4ebd99,_0x2f273e,_0x2a2761,_0x4e1490,_0x2b3cff=>{this[_0x205e('0xd3')][_0x205e('0xd4')](_0x2b3cff);_0x2b3cff[_0x205e('0xd7')](WinDefaultDepth)[_0x205e('0x1f6')](this[_0x205e('0xe9')]);this[_0x205e('0x609')]=_0x4ebd99[_0x205e('0xd4')][_0x205e('0x4f0')](_0x2f273e+this[_0x205e('0x516')][_0x205e('0x60a')]*GlobalScale,_0x2a2761+this[_0x205e('0x516')][_0x205e('0x60b')]*GlobalScale)['setDepth'](WinDefaultDepth+0xa);this[_0x205e('0x609')][_0x205e('0xeb')]=this[_0x205e('0x516')]['initRotation'];this[_0x205e('0xd3')][_0x205e('0xd4')](this['rotation']);const _0x35f026='FortuneWheel';LoadPreparedFile(_0x4ebd99,_0x35f026,()=>{this['wheel']=this['rotation'][_0x205e('0xd6')](0x0,0x0,_0x35f026)['setDepth'](WinDefaultDepth+0x64);this['wheel']['angle']=0xb4;const _0x3aafbc=_0x205e('0x60c');LoadPreparedFile(_0x4ebd99,_0x3aafbc,()=>{this[_0x205e('0x5ff')]={'x':_0x2f273e+this[_0x205e('0x516')]['arrowX']*GlobalScale,'y':_0x2a2761+this[_0x205e('0x516')][_0x205e('0x60d')]*GlobalScale};this['arrowImage']=this[_0x205e('0xd3')][_0x205e('0xd6')](this['arrosPos']['x'],this[_0x205e('0x5ff')]['y'],_0x3aafbc)[_0x205e('0xd7')](WinDefaultDepth+0x82);this['_startArrowAnimation']();});this[_0x205e('0x542')]=_0x4ebd99[_0x205e('0xd4')][_0x205e('0x1ff')](0x0,this[_0x205e('0x516')][_0x205e('0x60e')]*GlobalScale-RealScreenHeight/0x2,null,DefaultFontBig)[_0x205e('0xd9')](0.5,0.5)[_0x205e('0xd7')](WinDefaultDepth+0x28);this['group'][_0x205e('0xd4')](this[_0x205e('0x542')]);this['placePrizes']();this[_0x205e('0x60f')](_0x2f273e,_0x2a2761);const _0x31069a='FortuneDevil';LoadPreparedFile(_0x4ebd99,_0x31069a,()=>{this['group'][_0x205e('0xd6')](_0x2f273e+this[_0x205e('0x516')][_0x205e('0x610')]*GlobalScale,_0x2a2761+this[_0x205e('0x516')][_0x205e('0x611')]*GlobalScale,_0x31069a)[_0x205e('0xd7')](WinDefaultDepth+0x78);});this[_0x205e('0x5fa')]=_0x4ebd99['add'][_0x205e('0x1ff')](0x0,_0x52627f-0x7d*GlobalScale,null,DefaultFont)['setOrigin'](0.5,0.5)['setDepth'](WinDefaultDepth+0xc8);this[_0x205e('0xd3')][_0x205e('0xd4')](this['spinsCounter']);this[_0x205e('0x5fc')]=_0x4ebd99[_0x205e('0xd4')][_0x205e('0x1ff')](0x0,_0x52627f-0xc8*GlobalScale,null,DefaultFont)[_0x205e('0xd9')](0.5,0.5)['setDepth'](WinDefaultDepth+0xc8);this['group']['add'](this['spinsTimer']);this[_0x205e('0x322')]();});});}this['_updateButtonLocalization']();const _0x5babbb=setInterval(()=>{let _0x93995a=!this[_0x205e('0xe9')];if(this[_0x205e('0x547')]['isVisible']()){this[_0x205e('0x5f8')][_0x205e('0x48b')](this[_0x205e('0x547')]['x']+this[_0x205e('0x547')][_0x205e('0x612')]());_0x93995a=!![];}if(_0x93995a)clearInterval(_0x5babbb);},0xd2);}}[_0x205e('0x548')](){return this[_0x205e('0x607')];}[_0x205e('0x60f')](_0x21b58e,_0xc1438f){this['lights']=[];const _0x111077=this['winInfo'][_0x205e('0x613')];const _0x5140c5=this['winInfo'][_0x205e('0x614')];for(let _0x2fd3b5 in _0x111077){const _0x5a1ee4=_0x111077[_0x2fd3b5];const _0x41cd75=_0x21b58e+(_0x5a1ee4['x']-_0x5140c5['width']/0x2)*GlobalScale;const _0x25adf1=_0xc1438f+(_0x5a1ee4['y']-_0x5140c5[_0x205e('0xdf')]/0x2)*GlobalScale;const _0x52d027=this[_0x205e('0xd3')]['create'](_0x41cd75,_0x25adf1,_0x205e('0x38'))[_0x205e('0xd7')](WinDefaultDepth+0x64)[_0x205e('0xd8')](0x2);_0x52d027[_0x205e('0x20e')]=0.3;this[_0x205e('0x613')][_0x205e('0xda')](_0x52d027);_0x52d027[_0x205e('0x1f6')](![]);}}[_0x205e('0x615')](){const _0x155a22=gameInit[_0x205e('0x16b')][_0x205e('0x616')]()[_0x205e('0x617')]();const _0x1869bf=this[_0x205e('0xd2')];const _0x17ce94=WinDefaultDepth+0x64;this[_0x205e('0x618')]=[];for(let _0x1e50ef=0x0;_0x1e50ef<_0x155a22[_0x205e('0xe7')];_0x1e50ef++){const _0x4883e5=_0x155a22[_0x1e50ef][_0x205e('0x1d0')]();let _0x58c0e1=null;let _0xc1e05c=null;let _0x3d7917;let _0x54b2b2;let _0x4d1502=this[_0x205e('0x516')][_0x205e('0x619')]*GlobalScale;const _0x970518=0x1e+0x3c*_0x1e50ef;let _0x45f85c=0x1;let _0x2d5735=0x0;let _0x22ad5a=0x0;switch(_0x4883e5){case'Gold':{_0xc1e05c=_0x205e('0x5');_0x3d7917=_0x970518-0xf;_0x58c0e1=_0x155a22[_0x1e50ef][_0x205e('0x433')]();_0x54b2b2=_0x970518;break;}case _0x205e('0x363'):{_0xc1e05c=_0x205e('0x6');_0x3d7917=_0x970518-0x5;_0x58c0e1=_0x155a22[_0x1e50ef][_0x205e('0x433')]();_0x54b2b2=_0x970518+0xa;break;}case _0x205e('0x442'):{_0xc1e05c=_0x205e('0x61a');_0x3d7917=_0x970518-0xa;_0x58c0e1=LocalizationManager[_0x205e('0x226')](_0x205e('0x61b'))[_0x205e('0x477')](_0x155a22[_0x1e50ef][_0x205e('0x433')]());_0x54b2b2=_0x970518+0x5;break;}case _0x205e('0x43f'):{_0xc1e05c=_0x205e('0x2a');_0x3d7917=_0x970518;_0x4d1502-=0xa;_0x45f85c=0.8;break;}case'JackPot':{_0xc1e05c='PriceGems';_0x3d7917=_0x970518-0x5;_0x58c0e1=_0x155a22[_0x1e50ef]['getText']();_0x54b2b2=_0x970518+0xa;_0x4d1502-=0x32*GlobalScale;if(this[_0x205e('0x516')][_0x205e('0x61c')]){const _0x485453=_0x1869bf[_0x205e('0xd4')][_0x205e('0x1fd')](_0x2d5735,_0x22ad5a,'FortuneJackpot')[_0x205e('0xd9')](0x0,0x0)[_0x205e('0xd7')](_0x17ce94);this[_0x205e('0x609')][_0x205e('0xd4')](_0x485453);}break;}}_0x3d7917*=Math['PI']/0xb4;_0x54b2b2*=Math['PI']/0xb4;if(_0xc1e05c){const _0x216d94=_0x1869bf[_0x205e('0xd4')][_0x205e('0x1fd')](_0x2d5735+_0x4d1502*Math[_0x205e('0x212')](_0x3d7917),_0x22ad5a-_0x4d1502*Math[_0x205e('0x21f')](_0x3d7917),_0xc1e05c)[_0x205e('0xd8')](_0x45f85c)[_0x205e('0xd7')](_0x17ce94);_0x216d94['angle']=_0x970518;this[_0x205e('0x609')][_0x205e('0xd4')](_0x216d94);}if(_0x58c0e1){const _0xf0dc76=_0x1869bf[_0x205e('0xd4')][_0x205e('0x225')](_0x2d5735+_0x4d1502*Math[_0x205e('0x212')](_0x54b2b2),_0x22ad5a-_0x4d1502*Math[_0x205e('0x21f')](_0x54b2b2),_0x58c0e1,DefaultFont)['setOrigin'](0x0,0.5)[_0x205e('0x528')](0x96*GlobalScale)[_0x205e('0xd7')](_0x17ce94);_0xf0dc76['angle']=_0x970518;this[_0x205e('0x618')][_0x1e50ef]=_0xf0dc76;this[_0x205e('0x609')][_0x205e('0xd4')](_0xf0dc76);}}}['_updateTexts'](){const _0x2d2240=gameInit[_0x205e('0x16b')][_0x205e('0x616')]()[_0x205e('0x617')]();for(let _0xfdfe16=0x0;_0xfdfe16<_0x2d2240[_0x205e('0xe7')];_0xfdfe16++){if(_0x2d2240[_0xfdfe16][_0x205e('0x44b')]()&&this[_0x205e('0x618')][_0xfdfe16]){this[_0x205e('0x618')][_0xfdfe16][_0x205e('0x4e9')](_0x2d2240[_0xfdfe16][_0x205e('0x433')]());}}}['rotateWheel'](_0x2c2bf6){if(this[_0x205e('0x61d')]<=0x0){this[_0x205e('0x61e')]();gameInit['progress'][_0x205e('0x3d1')]();this[_0x205e('0x5f9')]();this[_0x205e('0x5f6')]();this[_0x205e('0x405')][_0x205e('0x42e')]();setTimeout(()=>{if(this[_0x205e('0xe9')])this['_updateTexts']();},0x3e8);}else{if(this[_0x205e('0x61f')]>=0x32)this[_0x205e('0x61f')]*=0.996;const _0x5ab9c7=this[_0x205e('0x61f')];const _0x374fcb=_0x5ab9c7*_0x2c2bf6;this[_0x205e('0x609')][_0x205e('0xeb')]+=_0x374fcb;this[_0x205e('0x61d')]-=_0x374fcb;}}[_0x205e('0x601')](_0x11af67){if(this[_0x205e('0x620')]){this[_0x205e('0x621')](_0x11af67);}if(this[_0x205e('0x5f2')]<=0x0&&this[_0x205e('0x5fc')]&&this[_0x205e('0x5fc')][_0x205e('0xe9')]){this[_0x205e('0x5f2')]=0x1;this[_0x205e('0x5f6')]();}else this[_0x205e('0x5f2')]-=_0x11af67;if(this[_0x205e('0x613')]){this[_0x205e('0x5f1')]+=_0x11af67;switch(this[_0x205e('0x5f0')]){case 0x1:{if(this['lightTime']>0.05){this[_0x205e('0x5f1')]=0x0;this[_0x205e('0x613')][this[_0x205e('0x622')]]['setVisible'](![]);this['lightIndex']=this[_0x205e('0x622')]-0x1;if(this[_0x205e('0x622')]<0x0)this[_0x205e('0x622')]=this[_0x205e('0x613')][_0x205e('0xe7')]-0x1;this['lights'][this['lightIndex']]['setVisible'](!![]);}break;}case 0x2:{if(this[_0x205e('0x5f1')]>0.2){this[_0x205e('0x5f1')]=0x0;this[_0x205e('0x622')]=(this[_0x205e('0x622')]+0x1)%0x2;for(let _0x11d05a in this[_0x205e('0x613')])this['lights'][_0x11d05a][_0x205e('0x1f6')](_0x11d05a%0x2===this[_0x205e('0x622')]);}break;}}}}[_0x205e('0x61e')](){this[_0x205e('0x620')]=![];this[_0x205e('0x5f0')]=0x2;if(this[_0x205e('0x602')]){this['arrowAnimation'][_0x205e('0x209')]();this[_0x205e('0x602')]=null;}this[_0x205e('0x5fe')]['setPositionY'](this[_0x205e('0x5ff')]['y']+0x32);unlockGUI();}[_0x205e('0x606')](){if(!this[_0x205e('0x620')]){const _0x4dee22=()=>{eventManager[_0x205e('0x2a0')]();gameAnalytics[_0x205e('0x383')](_0x205e('0x623'));this[_0x205e('0x5fd')]();this[_0x205e('0x5f0')]=0x1;const _0x105029=gameInit[_0x205e('0x16b')][_0x205e('0x616')]()[_0x205e('0x617')]();this[_0x205e('0x61f')]=0x320;let _0x102078=Math[_0x205e('0x22c')]()*0x64;let _0x4d7f47=0x0;for(let _0x5ace97=0x0;_0x5ace97<_0x105029[_0x205e('0xe7')];_0x5ace97++){const _0x2e5841=_0x105029[_0x5ace97][_0x205e('0x447')]();if(_0x102078<=_0x2e5841){_0x4d7f47=_0x5ace97;break;}else _0x102078-=_0x2e5841;}const _0x18fcef=0x3c*(0x5-_0x4d7f47)+0x168*0x8+0x1e;this['rotation'][_0x205e('0xeb')]=this[_0x205e('0x609')][_0x205e('0xeb')]%0x168;this[_0x205e('0x405')]=_0x105029[_0x4d7f47];this['rotationLeft']=_0x18fcef-this[_0x205e('0x609')][_0x205e('0xeb')];this['listener']=!![];lockGuiEverything();this[_0x205e('0x550')][_0x205e('0x1f8')]=![];};if(gameInit['progress'][_0x205e('0x3d2')]()<=0x0){if(!gameInit[_0x205e('0x16b')][_0x205e('0x375')](GEMS_PRICE_FOR_WHEEL_SPIN*RESOURCES_SCALE)){guiManager[_0x205e('0x37e')](WindowType[_0x205e('0x5c2')]);}else{gameInit[_0x205e('0x16b')]['gemsSpent'](GEMS_PRICE_FOR_WHEEL_SPIN*RESOURCES_SCALE);_0x4dee22();}}else{this[_0x205e('0x550')][_0x205e('0x1f8')]=![];PlayRewardedAd(_0x4dee22);}}}}class WinQuests extends WinWithBrownBack{constructor(_0x2de10e,_0x24b582){super(_0x2de10e,_0x24b582);}['createGame'](_0x2d4895){super['createGame'](_0x2d4895);this[_0x205e('0x624')]=[];this[_0x205e('0x559')](_0x2d4895);eventManager[_0x205e('0x28d')][_0x205e('0x27d')](this['_actionQuestProgress'][_0x205e('0xe6')](this));}[_0x205e('0x625')](){if(this[_0x205e('0xe9')]){const _0x193b91=gameInit[_0x205e('0x46f')];for(let _0x447954=0x0;_0x447954<this[_0x205e('0x624')][_0x205e('0xe7')];_0x447954++)this[_0x205e('0x626')](this['questGroups'][_0x447954],_0x193b91[_0x205e('0x41e')](_0x447954));}}['_getYPosForQuest'](_0x2b02f3){return this[_0x205e('0x536')]+(_0x2b02f3-0x1)*this[_0x205e('0x516')][_0x205e('0x21b')]*GlobalScale+this[_0x205e('0x516')][_0x205e('0x536')]*GlobalScale;}[_0x205e('0x559')](_0x3e9696){this[_0x205e('0x542')]=_0x3e9696[_0x205e('0xd4')]['text'](this[_0x205e('0x535')],0x46*GlobalScale,null,DefaultFont)[_0x205e('0xd9')](0.5,0x0)[_0x205e('0xd7')](WinDefaultDepth+0x1);this[_0x205e('0xd3')][_0x205e('0xd4')](this[_0x205e('0x542')]);this['timerText']=_0x3e9696[_0x205e('0xd4')][_0x205e('0x1ff')](RealScreenWidth-0x32,RealScreenHeight-0x64*GlobalScale,null,DefaultFont)[_0x205e('0xd9')](0x1,0.5)[_0x205e('0xd7')](WinDefaultDepth+0x1);this[_0x205e('0xd3')][_0x205e('0xd4')](this[_0x205e('0x5e5')]);this[_0x205e('0x627')]=_0x3e9696[_0x205e('0xd4')][_0x205e('0x1ff')](this['centerX'],this[_0x205e('0x536')]+0x1f4*GlobalScale,null,DefaultFont)['setOrigin'](0.5,0.5)[_0x205e('0xd7')](WinDefaultDepth+0x1);this[_0x205e('0xd3')][_0x205e('0xd4')](this[_0x205e('0x627')]);LoadPreparedFile(this[_0x205e('0xd2')],this[_0x205e('0x516')][_0x205e('0x628')],()=>{this[_0x205e('0x629')]=this[_0x205e('0xd3')][_0x205e('0xd6')](this[_0x205e('0x535')],this[_0x205e('0x536')]-0x64*GlobalScale,this[_0x205e('0x516')]['noMoreQuestsIcon'])[_0x205e('0xd7')](WinDefaultDepth+0x1);this[_0x205e('0xd3')][_0x205e('0xd4')](this[_0x205e('0x629')]);this[_0x205e('0x629')][_0x205e('0x1f6')](this[_0x205e('0xd3')][_0x205e('0xe9')]&&this[_0x205e('0x62a')]||![]);});for(let _0x4ff27a=0x0;_0x4ff27a<0x3;_0x4ff27a++){const _0x12d472=_0x3e9696[_0x205e('0xd4')][_0x205e('0x4f0')]();const _0x551d76=_0x12d472;_0x551d76[_0x205e('0x437')]=_0x4ff27a;_0x12d472['setPosition'](this[_0x205e('0x535')],this[_0x205e('0x62b')](_0x4ff27a));_0x12d472['depth']=WinDefaultDepth;_0x12d472[_0x205e('0xd6')](0x0,0x0,_0x205e('0x31'))[_0x205e('0xd7')](WinDefaultDepth);_0x551d76[_0x205e('0x513')]=new ButtonWithText(_0x12d472,{'scene':_0x3e9696,'key':_0x205e('0xf'),'x':0x0*GlobalScale,'y':0xaa*GlobalScale,'minWidth':0x320*GlobalScale},()=>this[_0x205e('0x62c')](_0x4ff27a))[_0x205e('0xd7')](WinDefaultDepth+0x1);_0x551d76[_0x205e('0x62d')]=new BasicButton(_0x12d472,{'scene':_0x3e9696,'key':'Quests_RefreshBtn','x':-0x1cc*GlobalScale,'y':-0xaa*GlobalScale},()=>this[_0x205e('0x62e')](_0x4ff27a))[_0x205e('0xd7')](WinDefaultDepth+0x1);_0x551d76[_0x205e('0x62f')]=new Loader(_0x12d472,_0x205e('0x630'),_0x205e('0x2f'),-0x3c*GlobalScale,0x32*GlobalScale);_0x551d76[_0x205e('0x16b')]=_0x3e9696[_0x205e('0xd4')]['text'](0x78*GlobalScale,0x32*GlobalScale,null,DefaultFontSmall)[_0x205e('0xd9')](0x0,0.5)[_0x205e('0xd7')](WinDefaultDepth+0x1);_0x12d472['add'](_0x551d76[_0x205e('0x16b')]);const _0x3e8fb7=0x172*GlobalScale;_0x551d76[_0x205e('0x631')]=_0x3e9696[_0x205e('0xd4')]['text'](_0x3e8fb7,-0x46*GlobalScale,null,DefaultFontSmall)[_0x205e('0xd9')](0.5,0.5)[_0x205e('0xd7')](WinDefaultDepth+0x1);_0x12d472['add'](_0x551d76[_0x205e('0x631')]);CreateImageInGroup(_0x3e9696,_0x12d472,_0x205e('0x6'),_0x525371=>{_0x525371[_0x205e('0xe8')](_0x3e8fb7,0xa*GlobalScale);_0x525371[_0x205e('0xd7')](WinDefaultDepth);});_0x551d76[_0x205e('0x632')]=_0x3e9696[_0x205e('0xd4')][_0x205e('0x1ff')](_0x3e8fb7+0x14*GlobalScale,0x1e*GlobalScale,null,DefaultFontSmall)[_0x205e('0xd9')](0x0,0.5)[_0x205e('0xd7')](WinDefaultDepth+0x1);_0x12d472['add'](_0x551d76['xLabel']);_0x551d76[_0x205e('0x633')]=_0x3e9696[_0x205e('0xd4')][_0x205e('0x1ff')](0x0,-0x32*GlobalScale,null,DefaultFontSmallBlack)['setOrigin'](0.5,0.5)[_0x205e('0x528')](0x1f4*GlobalScale)[_0x205e('0xd7')](WinDefaultDepth+0x1);_0x12d472[_0x205e('0xd4')](_0x551d76[_0x205e('0x633')]);this[_0x205e('0x624')][_0x205e('0xda')](_0x551d76);this[_0x205e('0xd3')][_0x205e('0xd4')](_0x12d472);}if(TEST_MODE)this[_0x205e('0x530')](_0x205e('0x634'),0x64,0x64,()=>this[_0x205e('0x635')]());SetGroupVisible(this[_0x205e('0xd3')],![]);}[_0x205e('0x635')](){gameInit[_0x205e('0x46f')]['activateRandomQuests'](0x0);this['setWindowVisible'](!![]);}[_0x205e('0x322')](){super[_0x205e('0x322')]();this[_0x205e('0x542')][_0x205e('0x4e9')](LocalizationManager[_0x205e('0x226')](_0x205e('0x636')));this[_0x205e('0x627')][_0x205e('0x4e9')](LocalizationManager['getLocalizization'](_0x205e('0x637')));const _0x3bb2ae=LocalizationManager[_0x205e('0x226')](_0x205e('0x638'));for(let _0x237197 in this[_0x205e('0x624')]){const _0x1cb7f5=this[_0x205e('0x624')][_0x237197];this[_0x205e('0x639')](_0x1cb7f5,gameInit[_0x205e('0x46f')]&&gameInit['questsManager']['getQuestInfo'](_0x237197));_0x1cb7f5['prizes'][_0x205e('0x4e9')](_0x3bb2ae);}}[_0x205e('0x639')](_0x724665,_0x3351ce){_0x724665[_0x205e('0x513')][_0x205e('0x1fe')]['setText'](_0x3351ce&&_0x3351ce[_0x205e('0x63a')]()&&!this[_0x205e('0x63b')](_0x724665['index'])?LocalizationManager[_0x205e('0x226')](_0x205e('0x227')):LocalizationManager[_0x205e('0x226')](_0x205e('0x63c')));}[_0x205e('0x626')](_0x1b5caf,_0x35f279){if(!_0x35f279[_0x205e('0x63d')]()){_0x1b5caf[_0x205e('0x1f6')](![]);return![];}_0x1b5caf['setVisible'](!![]);const _0x58e77b=_0x35f279[_0x205e('0x15b')];const _0x49d7b2=Math['min'](_0x35f279[_0x205e('0x16b')],_0x35f279[_0x205e('0x3d9')]);_0x1b5caf[_0x205e('0x632')][_0x205e('0x4e9')]('x'+_0x35f279[_0x205e('0x40a')]());_0x1b5caf[_0x205e('0x633')]['setText'](LocalizationManager['getLocalizization'](_0x58e77b[_0x205e('0x15b')])['format'](_0x35f279['count']));_0x1b5caf['progress'][_0x205e('0x4e9')](_0x49d7b2+'/'+_0x35f279['count']);_0x1b5caf[_0x205e('0x62f')][_0x205e('0x493')](_0x49d7b2/_0x35f279[_0x205e('0x3d9')]);this[_0x205e('0x639')](_0x1b5caf,_0x35f279);const _0x39d012=this[_0x205e('0x63b')](_0x1b5caf[_0x205e('0x437')]);_0x1b5caf['button'][_0x205e('0x51a')](!_0x39d012&&!_0x35f279[_0x205e('0x63a')]());_0x1b5caf[_0x205e('0x62d')][_0x205e('0x1f6')](_0x35f279[_0x205e('0x40c')]()&&!_0x39d012);const _0x1238e6=_0x205e('0x63e')+_0x58e77b[_0x205e('0x1e1')];const _0xea8fe1=VisualData[_0x205e('0x63f')]()+_0x58e77b[_0x205e('0x1e1')]+_0x205e('0x2fe');LoadFile(this[_0x205e('0xd2')],_0x1238e6,_0xea8fe1,()=>{if(this[_0x205e('0xe9')]){if(_0x1b5caf['icon'])_0x1b5caf[_0x205e('0x1fc')][_0x205e('0x22e')](!![]);_0x1b5caf['icon']=this[_0x205e('0xd2')][_0x205e('0xd4')][_0x205e('0x1fd')](-0x172*GlobalScale,0x0,_0x1238e6)[_0x205e('0xd7')](WinDefaultDepth+0x1);_0x1b5caf[_0x205e('0xd4')](_0x1b5caf['icon']);if(this[_0x205e('0x516')][_0x205e('0x640')])_0x1b5caf[_0x205e('0x1fc')]['setScale'](this[_0x205e('0x516')][_0x205e('0x640')]);}});return!![];}[_0x205e('0x62e')](_0x353c22){const _0x15e22b=gameInit[_0x205e('0x46f')];_0x15e22b[_0x205e('0x40d')](_0x353c22);this[_0x205e('0x626')](this['questGroups'][_0x353c22],_0x15e22b[_0x205e('0x41e')](_0x353c22));}[_0x205e('0x63b')](_0x54da35){const _0x42e96f=gameInit[_0x205e('0x46f')];const _0x43af4c=_0x42e96f[_0x205e('0x41e')](_0x54da35);return _0x43af4c[_0x205e('0x16b')]>=_0x43af4c[_0x205e('0x3d9')];}[_0x205e('0x62c')](_0x27fa54){const _0x32862e=gameInit['questsManager'];const _0x1316f0=_0x32862e[_0x205e('0x41e')](_0x27fa54);if(_0x1316f0[_0x205e('0x16b')]>=_0x1316f0[_0x205e('0x3d9')]){this[_0x205e('0x624')][_0x27fa54][_0x205e('0x1f6')](![]);_0x1316f0[_0x205e('0x40e')]();let _0x382afc=0x1;for(let _0x55178b=0x0;_0x55178b<_0x27fa54;_0x55178b++)if(!this[_0x205e('0x624')][_0x55178b][_0x205e('0xe9')])_0x382afc++;for(let _0x26ce63=_0x27fa54+0x1;_0x26ce63<this[_0x205e('0x624')][_0x205e('0xe7')];_0x26ce63++){if(this[_0x205e('0x624')][_0x26ce63][_0x205e('0xe9')]){const _0x2c0ff5={'x':this[_0x205e('0x535')],'y':this[_0x205e('0x62b')](_0x26ce63-_0x382afc)};animManager['moveToPointExtra'](this[_0x205e('0x624')][_0x26ce63],_0x2c0ff5,0.1,0.4);}else _0x382afc++;}}else{if(_0x1316f0[_0x205e('0x63a')]())_0x1316f0['useAction']();}this[_0x205e('0x641')]();}[_0x205e('0x642')](){this[_0x205e('0x5e5')]['setText'](LocalizationManager['getLocalizization'](_0x205e('0x643'))[_0x205e('0x477')](timeToStringClock(Progress['getTimeTillTheNextDay']())));}[_0x205e('0x641')](){let _0x275907=!![];for(let _0x2bc8cd=0x0;_0x2bc8cd<this[_0x205e('0x624')][_0x205e('0xe7')];_0x2bc8cd++){if(this['questGroups'][_0x2bc8cd][_0x205e('0xe9')]){_0x275907=![];break;}}this['noQuestsTextIconVisible']=_0x275907;this[_0x205e('0x629')][_0x205e('0x1f6')](_0x275907);this[_0x205e('0x627')][_0x205e('0x1f6')](_0x275907);}[_0x205e('0x551')](_0x130988){super['setWindowVisible'](_0x130988);if(_0x130988){const _0x4156f6=gameInit[_0x205e('0x46f')];let _0x2b3011=0x0;for(let _0x458c5c=0x0;_0x458c5c<this[_0x205e('0x624')][_0x205e('0xe7')];_0x458c5c++){if(!this[_0x205e('0x626')](this[_0x205e('0x624')][_0x458c5c],_0x4156f6[_0x205e('0x41e')](_0x458c5c)))_0x2b3011++;this[_0x205e('0x624')][_0x458c5c][_0x205e('0x213')](this[_0x205e('0x62b')](_0x458c5c-_0x2b3011));}if(!this['timer']){this['timer']=setInterval(()=>this[_0x205e('0x642')](),0x3e8);this[_0x205e('0x642')]();}this[_0x205e('0x641')]();}else{if(this['timer']){clearInterval(this['timer']);this[_0x205e('0x224')]=null;}}}}class WinHarvested extends WinBase{constructor(_0x227262,_0x2d6922){super(_0x227262,_0x2d6922);this['cansCount']=0x14;}['createGame'](_0xb007af){super[_0x205e('0x52a')](_0xb007af);this[_0x205e('0x53a')]();}[_0x205e('0x551')](_0x467165){super[_0x205e('0x551')](_0x467165);if(_0x467165){if(!this[_0x205e('0x542')]){const _0x2e9111=_0x205e('0x644');LoadPreparedFile(this[_0x205e('0xd2')],_0x2e9111,()=>{this[_0x205e('0x539')]();if(this['visible']){this[_0x205e('0xd3')][_0x205e('0xd6')](0x0,0x0,_0x2e9111)[_0x205e('0xd7')](WinDefaultDepth-0xa);if(!this['header']){this[_0x205e('0x542')]=this[_0x205e('0xd2')][_0x205e('0xd4')]['text'](0x0,-0x258*GlobalScale,null,DefaultFontBig)[_0x205e('0xd9')](0.5,0.5)[_0x205e('0x528')](0x4b0*GlobalScale)[_0x205e('0xd7')](WinDefaultDepth);this[_0x205e('0xd3')][_0x205e('0xd4')](this[_0x205e('0x542')]);this[_0x205e('0x633')]=this[_0x205e('0xd2')][_0x205e('0xd4')][_0x205e('0x1ff')](0x0,RealScreenHeight/0x2-0x190*GlobalScale,this['seeds']?this['_getDescription']():null,DefaultFontBig)[_0x205e('0xd9')](0.5,0.5)[_0x205e('0x528')](0x4b0*GlobalScale)[_0x205e('0xd7')](WinDefaultDepth);this[_0x205e('0xd3')][_0x205e('0xd4')](this[_0x205e('0x633')]);this[_0x205e('0x543')](this[_0x205e('0xd2')],this[_0x205e('0x53b')][_0x205e('0xe6')](this),RealScreenHeight/0x2-0x96*GlobalScale,!![])[_0x205e('0x4e9')](LocalizationManager[_0x205e('0x226')]('ButtonOk'));this[_0x205e('0x531')](this[_0x205e('0x546')]);}this[_0x205e('0x542')][_0x205e('0x4e9')](LocalizationManager['getLocalizization'](_0x205e('0x645')));this[_0x205e('0x646')]();}});}else this[_0x205e('0x646')]();this[_0x205e('0x647')]()[_0x205e('0x1cb')](()=>{this[_0x205e('0x542')][_0x205e('0x1f6')](!![]);animManager['applyWinOpenAnimation'](this[_0x205e('0x542')],()=>{this[_0x205e('0x633')][_0x205e('0x1f6')](!![]);animManager[_0x205e('0x228')](this[_0x205e('0x633')],()=>{this[_0x205e('0x546')][_0x205e('0x1f6')](!![]);this[_0x205e('0x547')][_0x205e('0x1f6')](!![]);animManager[_0x205e('0x233')](this[_0x205e('0x546')]);});});});}else{this[_0x205e('0x648')]();}}[_0x205e('0x646')](){this[_0x205e('0x542')][_0x205e('0x1f6')](![]);this[_0x205e('0x633')][_0x205e('0x1f6')](![]);this[_0x205e('0x546')][_0x205e('0x1f6')](![]);this[_0x205e('0x547')][_0x205e('0x1f6')](![]);}[_0x205e('0x649')](_0x109be9){return new Promise(_0x30e3b2=>setTimeout(_0x30e3b2,_0x109be9));}async[_0x205e('0x648')](){if(this[_0x205e('0x64a')]){for(let _0x4deadf in this[_0x205e('0x64a')]){const _0x22039d=this['cans'][_0x4deadf];animManager[_0x205e('0x234')](_0x22039d,cansResourceIcon,0.5,()=>{_0x22039d['destroy'](!![]);animManager['changeShapeOfSouls'](cansResourceIcon);});await this[_0x205e('0x649')](0x64);}}this['cans']=null;}async['_startAnimation'](){this[_0x205e('0x64a')]=[];const _0xb6d8f=0x190*GlobalScale;for(let _0x1c1088=0x0;_0x1c1088<this[_0x205e('0x64b')];_0x1c1088++){const _0xc0acd5=Math['PI']*0x2*Math[_0x205e('0x22c')]();const _0x326f6a=_0xb6d8f*(Math[_0x205e('0x22c')]()*0.7+0.3);const _0x435a01=this[_0x205e('0xd2')]['add'][_0x205e('0x1fd')](this[_0x205e('0x535')]+_0x326f6a*Math['sin'](_0xc0acd5),this[_0x205e('0x536')]+_0x326f6a*Math[_0x205e('0x21f')](_0xc0acd5),_0x205e('0x7'))[_0x205e('0xd7')](WinDefaultDepth+0x64);this[_0x205e('0x64a')]['push'](_0x435a01);await this[_0x205e('0x649')](0x64);}return Promise['resolve'](!![]);}[_0x205e('0x64c')](){return LocalizationManager[_0x205e('0x226')](_0x205e('0x64d'))['format'](LocalizationManager['getLocalizedNumber'](this[_0x205e('0x340')]));}[_0x205e('0x64e')](_0x3e0b88){this['seeds']=_0x3e0b88;if(this['description'])this[_0x205e('0x633')][_0x205e('0x1ff')]=this['_getDescription']();}}class WinSettings extends WinWithExit{constructor(_0x238cb9,_0x7a1d15){super(_0x238cb9,_0x7a1d15);}['createGame'](_0xb49f4c){super[_0x205e('0x52a')](_0xb49f4c);this[_0x205e('0x53a')]();}[_0x205e('0x52a')](_0x3e5ca2){super[_0x205e('0x52a')](_0x3e5ca2);this[_0x205e('0x53a')]();}['localize'](){super[_0x205e('0x322')]();if(this[_0x205e('0x542')])this[_0x205e('0x542')][_0x205e('0x4e9')](LocalizationManager[_0x205e('0x226')](_0x205e('0x64f')));if(this[_0x205e('0x650')])this[_0x205e('0x650')][_0x205e('0x4e9')](LocalizationManager[_0x205e('0x226')](_0x205e('0x651')));if(this[_0x205e('0x652')])this[_0x205e('0x652')][_0x205e('0x4e9')](LocalizationManager[_0x205e('0x226')](_0x205e('0x653')));}[_0x205e('0x551')](_0x5432cb){super[_0x205e('0x551')](_0x5432cb);if(_0x5432cb&&!this[_0x205e('0x654')]){this[_0x205e('0x654')]=!![];const _0x44cca7=0x12c*GlobalScale;const _0x4f49b9=0xfa*GlobalScale;const _0x491d29=0x5;this['header']=this['addText'](0x0,-0x64*GlobalScale);const _0x3c58d9=VisualData['getAllLanguages']();let _0x498ef2=0x0;for(let _0x1e4f7f in _0x3c58d9){const _0x35d6c6=_0x3c58d9[_0x1e4f7f];const _0x12d299=_0x205e('0x655')+_0x35d6c6;const _0x5e921c=(_0x1e4f7f%_0x491d29-(_0x491d29-0x1)/0x2)*_0x44cca7;const _0x1902af=0x64*GlobalScale+Math[_0x205e('0x215')](_0x1e4f7f/_0x491d29)*_0x4f49b9;LoadPreparedFile(this[_0x205e('0xd2')],_0x12d299,()=>{this[_0x205e('0x530')](_0x12d299,_0x5e921c,_0x1902af,()=>{SetCurrentLanguage(_0x35d6c6);});});_0x498ef2++;}this[_0x205e('0x656')]={};const _0x4b6faf=0x12c*GlobalScale;const _0x31246e=-0x226*GlobalScale;const _0x23a02b=0xc8*GlobalScale;this[_0x205e('0x650')]=this[_0x205e('0x657')](-_0x4b6faf,_0x31246e+_0x23a02b);this['musicText']=this[_0x205e('0x657')](_0x4b6faf,_0x31246e+_0x23a02b);this[_0x205e('0x658')](_0x205e('0x659'),-_0x4b6faf,_0x31246e,()=>{this[_0x205e('0x656')][_0x205e('0x65a')][_0x205e('0x1f6')](!![]);this[_0x205e('0x656')][_0x205e('0x659')][_0x205e('0x1f6')](![]);SetSoundsState(![]);},()=>{return!GameSettings['soundsOff'];});this[_0x205e('0x658')](_0x205e('0x65a'),-_0x4b6faf,_0x31246e,()=>{this['settingsButtons'][_0x205e('0x659')]['setVisible'](!![]);this[_0x205e('0x656')][_0x205e('0x65a')]['setVisible'](![]);SetSoundsState(!![]);},()=>{return!!GameSettings[_0x205e('0x268')];});this['loadAndCreateButton'](_0x205e('0x65b'),_0x4b6faf,_0x31246e,()=>{this[_0x205e('0x656')]['Music_Off'][_0x205e('0x1f6')](!![]);this[_0x205e('0x656')][_0x205e('0x65b')][_0x205e('0x1f6')](![]);SetMusicState(![]);},()=>{return!GameSettings[_0x205e('0x259')];});this['loadAndCreateButton'](_0x205e('0x65c'),_0x4b6faf,_0x31246e,()=>{this[_0x205e('0x656')]['Music_On']['setVisible'](!![]);this['settingsButtons'][_0x205e('0x65c')][_0x205e('0x1f6')](![]);SetMusicState(!![]);},()=>{return!!GameSettings[_0x205e('0x259')];});this[_0x205e('0x322')]();const _0x93bf90=this[_0x205e('0xd2')][_0x205e('0xd4')][_0x205e('0x1ff')](RealScreenWidth/0x2-0x32,RealScreenHeight/0x2-0x32,'v'+GAME_VERSION,DefaultFontSmall)[_0x205e('0xd9')](0x1,0.5)[_0x205e('0xd7')](WinDefaultDepth+0x28);this[_0x205e('0xd3')][_0x205e('0xd4')](_0x93bf90);if(TEST_MODE)this[_0x205e('0x530')]('MM_Btn_Worlds',RealScreenWidth/0x2-0x64,0x0,()=>gameInit['progress'][_0x205e('0x65d')]());}else{this[_0x205e('0x65e')]('Sounds_On',!GameSettings['soundsOff']);this[_0x205e('0x65e')](_0x205e('0x65a'),!!GameSettings[_0x205e('0x268')]);this[_0x205e('0x65e')](_0x205e('0x65b'),!GameSettings[_0x205e('0x259')]);this[_0x205e('0x65e')](_0x205e('0x65c'),!!GameSettings[_0x205e('0x259')]);}}[_0x205e('0x657')](_0x2196a4,_0x2d6708){const _0x5d4372=this[_0x205e('0xd2')][_0x205e('0xd4')][_0x205e('0x1ff')](_0x2196a4,_0x2d6708,null,DefaultFontBig)[_0x205e('0xd9')](0.5,0.5)[_0x205e('0xd7')](WinDefaultDepth+0x28);this[_0x205e('0xd3')][_0x205e('0xd4')](_0x5d4372);return _0x5d4372;}[_0x205e('0x658')](_0x4ce541,_0x1b7b3b,_0x462fc3,_0x55d4cc,_0xfdc472){LoadPreparedFile(this[_0x205e('0xd2')],_0x4ce541,()=>{const _0x27f2a9=this[_0x205e('0x530')](_0x4ce541,_0x1b7b3b,_0x462fc3,_0x55d4cc);this[_0x205e('0x656')][_0x4ce541]=_0x27f2a9;_0x27f2a9[_0x205e('0x1f6')](_0xfdc472());});}[_0x205e('0x65e')](_0x227757,_0x168f9b){const _0x25ac8a=this['settingsButtons'][_0x227757];if(_0x25ac8a)_0x25ac8a['setVisible'](_0x168f9b);}}class WinConstruct extends WinWithBack{constructor(_0x1dda34,_0x52dd8b){super(_0x1dda34,_0x52dd8b);}[_0x205e('0x551')](_0x15fc10){super[_0x205e('0x551')](_0x15fc10);}[_0x205e('0x322')](){super[_0x205e('0x322')]();this[_0x205e('0x547')][_0x205e('0x4e9')](LocalizationManager[_0x205e('0x226')](_0x205e('0x65f')));}[_0x205e('0x52a')](_0x36d671){super[_0x205e('0x52a')](_0x36d671);this[_0x205e('0x543')](_0x36d671,this[_0x205e('0x660')][_0x205e('0xe6')](this),null,![],null,null,0x1f4);this[_0x205e('0x541')](_0x36d671);}[_0x205e('0x660')](){this['building'][_0x205e('0x2ef')]();this[_0x205e('0x53b')]();}['setInfo'](_0x4c323c){const _0x826fd2=_0x4c323c[_0x205e('0x2fa')]();this[_0x205e('0x4d1')]=_0x4c323c;LoadFile(this[_0x205e('0xd2')],_0x826fd2,_0x4c323c[_0x205e('0x2fc')](),()=>{this[_0x205e('0x539')]();if(this['visible'])this['image']=this[_0x205e('0xd3')][_0x205e('0xd6')](0x0,-0x1e*GlobalScale,_0x826fd2)['setDepth'](WinDefaultDepth+0x1);});this[_0x205e('0x542')]['setText'](LocalizationManager[_0x205e('0x226')](_0x4c323c[_0x205e('0x2ff')]()));}}class WinUpgrade extends WinWithExit{[_0x205e('0x53b')](){super[_0x205e('0x53b')]();this[_0x205e('0x52c')]['changeMode'](GUIMode[_0x205e('0x661')]);}[_0x205e('0x551')](_0x20243f){super['setWindowVisible'](_0x20243f);hudResources[_0x205e('0x1f6')](_0x20243f);this[_0x205e('0x662')]();if(_0x20243f){this[_0x205e('0x663')]['setVisible'](guiManager[_0x205e('0x664')]===GUIMode[_0x205e('0x665')]);this[_0x205e('0x666')][_0x205e('0x1f6')](guiManager['guiMode']===GUIMode[_0x205e('0x665')]);if(guiManager[_0x205e('0x664')]===GUIMode[_0x205e('0x665')]){this[_0x205e('0x224')]=setInterval(()=>{this[_0x205e('0x642')]();},0x3e8);this['_updateTimer']();}}}[_0x205e('0x642')](){if(gameInit[_0x205e('0x16b')][_0x205e('0x394')]()){this['resetTimer'][_0x205e('0x1f6')](!![]);this[_0x205e('0x666')][_0x205e('0x4e9')](timeToStringClock(Math[_0x205e('0x215')](gameInit[_0x205e('0x16b')][_0x205e('0x397')]()/0x3e8)));}else this[_0x205e('0x666')][_0x205e('0x1f6')](![]);}[_0x205e('0x662')](){if(this['timer']){clearInterval(this[_0x205e('0x224')]);this[_0x205e('0x224')]=null;}}[_0x205e('0x322')](){super[_0x205e('0x322')]();this[_0x205e('0x663')]['setText'](LocalizationManager[_0x205e('0x226')](_0x205e('0x667')));}[_0x205e('0x52a')](_0x18cf16){super[_0x205e('0x52a')](_0x18cf16);this[_0x205e('0x663')]=_0x18cf16[_0x205e('0xd4')][_0x205e('0x1ff')](0x0,RealScreenHeight/0x2-0xc8*GlobalScale,null,DefaultFontBig)['setOrigin'](0.5,0.5)[_0x205e('0xd7')](WinDefaultDepth);this[_0x205e('0xd3')][_0x205e('0xd4')](this[_0x205e('0x663')]);this[_0x205e('0x666')]=_0x18cf16['add'][_0x205e('0x1ff')](0x0,RealScreenHeight/0x2-0x64*GlobalScale,null,DefaultFont)[_0x205e('0xd9')](0.5,0.5)[_0x205e('0xd7')](WinDefaultDepth);this['group']['add'](this['resetTimer']);}}class WinBossProccess extends WinBase{constructor(_0x1ac9aa,_0x16f7f2){super(_0x1ac9aa,_0x16f7f2);this['enableClickables']=!![];}[_0x205e('0x322')](){super[_0x205e('0x322')]();this[_0x205e('0x633')][_0x205e('0x4e9')](LocalizationManager[_0x205e('0x226')](_0x205e('0x668')));}[_0x205e('0x52a')](_0x9d443a){super['createGame'](_0x9d443a);this[_0x205e('0x633')]=_0x9d443a[_0x205e('0xd4')]['text'](0x0,-RealScreenHeight/0x2+0x64*GlobalScale,null,DefaultFont)[_0x205e('0xd9')](0.5,0.5)[_0x205e('0xd7')](WinDefaultDepth);this[_0x205e('0x633')][_0x205e('0xe9')]=![];this['group'][_0x205e('0xd4')](this[_0x205e('0x633')]);}}class WinWithPicture extends WinWithBack{constructor(_0x3f12e4,_0x14c61a,_0x5d8a8b){super(_0x3f12e4,_0x14c61a);this[_0x205e('0x15b')]=_0x5d8a8b;}[_0x205e('0x52f')](_0x396cef){super[_0x205e('0x52f')](_0x396cef);if(!this[_0x205e('0x516')])super[_0x205e('0x52f')](_0x205e('0x669'));}[_0x205e('0x322')](){super[_0x205e('0x322')]();if(this['header'])this[_0x205e('0x542')][_0x205e('0x4e9')](LocalizationManager[_0x205e('0x226')](this[_0x205e('0x15b')]['header']));if(this[_0x205e('0x633')])this['description'][_0x205e('0x4e9')](LocalizationManager['getLocalizization'](this['info'][_0x205e('0x633')]));if(this[_0x205e('0x547')])this[_0x205e('0x547')][_0x205e('0x4e9')](LocalizationManager[_0x205e('0x226')](this[_0x205e('0x15b')][_0x205e('0x513')]));}[_0x205e('0x54e')](){if(!this['info'][_0x205e('0x66a')])super[_0x205e('0x54e')]();}[_0x205e('0x52a')](_0x3803d5){super[_0x205e('0x52a')](_0x3803d5);if(this[_0x205e('0x15b')][_0x205e('0x513')])this[_0x205e('0x543')](_0x3803d5,this[_0x205e('0x66b')]['bind'](this),null,!![],null,null,this['info'][_0x205e('0x66c')],this[_0x205e('0x15b')][_0x205e('0x1fc')]);if(this['info'][_0x205e('0x542')])this[_0x205e('0x541')](_0x3803d5);if(this['info'][_0x205e('0x633')]){this['description']=_0x3803d5[_0x205e('0xd4')][_0x205e('0x1ff')](this[_0x205e('0x544')]('descriptionX',0x0),this[_0x205e('0x544')](_0x205e('0x66d'),-0x12c),null,this['info'][_0x205e('0x66e')]?DefaultFontSmallBlack:DefaultFontBlack)[_0x205e('0x528')]((this[_0x205e('0x15b')][_0x205e('0x66f')]||0x384)*GlobalScale)[_0x205e('0xd9')](0.5,0.5)[_0x205e('0xd7')](WinDefaultDepth);this[_0x205e('0xd3')][_0x205e('0xd4')](this[_0x205e('0x633')]);}}[_0x205e('0x66b')](){this['closeWindow']();if(this[_0x205e('0x15b')]['action'])this['info'][_0x205e('0x49f')]();}[_0x205e('0x551')](_0x28ef85){super[_0x205e('0x551')](_0x28ef85);if(_0x28ef85){let _0x1924c2=this['info'][_0x205e('0x670')]||0x0;let _0x277660=this[_0x205e('0x15b')][_0x205e('0x671')]||0x64;if(this[_0x205e('0x516')]){if(this[_0x205e('0x516')][_0x205e('0x670')])_0x1924c2+=this[_0x205e('0x516')][_0x205e('0x670')];if(this[_0x205e('0x516')][_0x205e('0x671')])_0x277660+=this[_0x205e('0x516')][_0x205e('0x671')];}this['loadImage'](this[_0x205e('0x15b')][_0x205e('0x4c3')],_0x1924c2*GlobalScale,_0x277660*GlobalScale);}else this[_0x205e('0x539')]();}}class WinBossSummon extends WinWithPicture{[_0x205e('0x551')](_0x6bc749){super[_0x205e('0x551')](_0x6bc749);if(_0x6bc749){const _0x18d8b6=LocalizationManager[_0x205e('0x44d')](this[_0x205e('0x52e')][_0x205e('0x16b')]['getSeedsForSoulsCount']());this[_0x205e('0x633')][_0x205e('0x4e9')](LocalizationManager[_0x205e('0x525')](LocalizationManager[_0x205e('0x226')](this[_0x205e('0x15b')]['description'])[_0x205e('0x477')](_0x18d8b6)));}}}class WinWithUnlockedExitButton extends WinWithPicture{[_0x205e('0x52a')](_0x4ccc21){super[_0x205e('0x52a')](_0x4ccc21);this[_0x205e('0x550')][_0x205e('0x1f8')]=!![];}}class WinGuard extends WinWithUnlockedExitButton{[_0x205e('0x551')](_0x4c050b){super[_0x205e('0x551')](_0x4c050b);if(_0x4c050b){this[_0x205e('0x633')][_0x205e('0x4e9')](LocalizationManager[_0x205e('0x226')](this['info'][_0x205e('0x633')])['format'](GuardDurationHours));}}}class WinBanjoEnd extends WinWithPicture{[_0x205e('0x551')](_0x1f6d93){super[_0x205e('0x551')](_0x1f6d93);if(_0x1f6d93){this[_0x205e('0x633')][_0x205e('0x4e9')](LocalizationManager[_0x205e('0x226')](this[_0x205e('0x15b')][_0x205e('0x633')])['format'](LocalizationManager[_0x205e('0x44d')](gameInit['progress'][_0x205e('0x36d')]())));}}}class WinBanjoPreEnd extends WinWithPicture{[_0x205e('0x52a')](_0x1d6910){super[_0x205e('0x52a')](_0x1d6910);this['description2']=_0x1d6910[_0x205e('0xd4')][_0x205e('0x1ff')](this[_0x205e('0x15b')][_0x205e('0x672')]*GlobalScale,this['info'][_0x205e('0x66d')]*GlobalScale,null,DefaultFontVeryBig)[_0x205e('0xd9')](0.5,0.5)[_0x205e('0xd7')](WinDefaultDepth);this[_0x205e('0xd3')][_0x205e('0xd4')](this[_0x205e('0x673')]);}[_0x205e('0x53e')](){super[_0x205e('0x53e')]();if(!this['amplitudeImage']){this[_0x205e('0x674')]=animManager[_0x205e('0x23f')](this[_0x205e('0x4c3')],0.6,0.9,0.1);}}[_0x205e('0x551')](_0x89be68){super[_0x205e('0x551')](_0x89be68);if(_0x89be68){const _0x5d7fba=gameInit[_0x205e('0x16b')][_0x205e('0x36d')]();const _0x490e51=0x28;const _0x4f5993=_0x5d7fba[_0x205e('0x27b')](_0x490e51);let _0xc2f476=0x1;let _0x543572=_0x4f5993;let _0x2b8ae6=animManager['scaleSinInfinite'](this[_0x205e('0x673')],0.6,0.8,0.2);let _0x2e7ddf=setInterval(()=>{_0xc2f476++;if(_0xc2f476===_0x490e51){this[_0x205e('0x673')][_0x205e('0x4e9')](LocalizationManager[_0x205e('0x44d')](_0x5d7fba));clearInterval(_0x2e7ddf);_0x2b8ae6[_0x205e('0x209')]();if(this[_0x205e('0x674')]){this[_0x205e('0x674')][_0x205e('0x209')]();this[_0x205e('0x674')]=null;}setTimeout(()=>{guiManager[_0x205e('0x37e')](WindowType[_0x205e('0x675')],!![]);},0x7d0);}else{_0x543572=_0x543572['add'](_0x4f5993);this[_0x205e('0x673')][_0x205e('0x4e9')](LocalizationManager[_0x205e('0x44d')](_0x543572));}},0x64);}}}class WinTimeTravel extends WinWithPicture{[_0x205e('0x676')](_0x3b0a51,_0x58fe64){this[_0x205e('0x677')]=_0x3b0a51;this[_0x205e('0x15b')][_0x205e('0x4c3')]=_0x58fe64;}[_0x205e('0x551')](_0x207080){super[_0x205e('0x551')](_0x207080);if(_0x207080){this[_0x205e('0x633')][_0x205e('0x4e9')](LocalizationManager[_0x205e('0x226')](this[_0x205e('0x15b')][_0x205e('0x633')])[_0x205e('0x477')](this[_0x205e('0x677')]));}}}class WinInAppBought extends WinWithPicture{[_0x205e('0x678')](_0x3185bf){this[_0x205e('0x633')]['setText'](LocalizationManager[_0x205e('0x226')](this[_0x205e('0x15b')][_0x205e('0x633')])+'\x0a'+_0x3185bf['originalGems']);}}class WinAppleDescription extends WinWithPicture{[_0x205e('0x322')](){super[_0x205e('0x322')]();this['profitBonus'][_0x205e('0x4e9')](LocalizationManager[_0x205e('0x226')](_0x205e('0x679')));this[_0x205e('0x67a')][_0x205e('0x4e9')](LocalizationManager[_0x205e('0x226')](_0x205e('0x67b')));this[_0x205e('0x67c')][_0x205e('0x4e9')](LocalizationManager[_0x205e('0x226')](_0x205e('0x67d'))+'\x20'+LocalizationManager[_0x205e('0x226')]('SeedInfoGetSeeds'));}['setWindowVisible'](_0x4394d2){super[_0x205e('0x551')](_0x4394d2);if(_0x4394d2){this[_0x205e('0x67e')][_0x205e('0x4e9')](this[_0x205e('0x52e')]['progress']['getBonusPerSeed']()+'%');this[_0x205e('0x67f')][_0x205e('0x4e9')](LocalizationManager[_0x205e('0x44d')](this['gameInit']['progress']['getTotalSeedsBonus']()['minus'](0x1)[_0x205e('0x2bb')](0x64*RESOURCES_SCALE))+'%');}}[_0x205e('0x52a')](_0x1c4d39){super[_0x205e('0x52a')](_0x1c4d39);const _0x34e35e=this[_0x205e('0x516')];const _0x4eabd8=(_0x34e35e?_0x34e35e[_0x205e('0x680')]:0x1ae)*GlobalScale;const _0x174365=(_0x34e35e?_0x34e35e[_0x205e('0x681')]:-0x12c)*GlobalScale;const _0x51ccc2=(_0x34e35e?_0x34e35e[_0x205e('0x535')]:0x0)*GlobalScale;const _0x24aecd=(_0x34e35e?_0x34e35e['distanceY']:0x4b)*GlobalScale;let _0xaca0f0=_0x174365;this[_0x205e('0x682')]=_0x1c4d39[_0x205e('0xd4')][_0x205e('0x1ff')](_0x51ccc2-_0x4eabd8,_0xaca0f0,null,DefaultFontBlack)['setOrigin'](0x0,0.5)[_0x205e('0xd7')](WinDefaultDepth);this[_0x205e('0xd3')][_0x205e('0xd4')](this[_0x205e('0x682')]);this[_0x205e('0x67e')]=_0x1c4d39[_0x205e('0xd4')][_0x205e('0x1ff')](_0x51ccc2+_0x4eabd8,_0xaca0f0,null,DefaultFontBlack)[_0x205e('0xd9')](0x1,0.5)[_0x205e('0xd7')](WinDefaultDepth);this[_0x205e('0xd3')][_0x205e('0xd4')](this[_0x205e('0x67e')]);_0xaca0f0+=_0x24aecd;this[_0x205e('0x67a')]=_0x1c4d39[_0x205e('0xd4')][_0x205e('0x1ff')](_0x51ccc2-_0x4eabd8,_0xaca0f0,null,DefaultFontBlack)[_0x205e('0xd9')](0x0,0.5)['setDepth'](WinDefaultDepth);this[_0x205e('0xd3')][_0x205e('0xd4')](this[_0x205e('0x67a')]);this[_0x205e('0x67f')]=_0x1c4d39['add'][_0x205e('0x1ff')](_0x51ccc2+_0x4eabd8,_0xaca0f0,null,DefaultFontBlack)[_0x205e('0xd9')](0x1,0.5)[_0x205e('0xd7')](WinDefaultDepth);this[_0x205e('0xd3')][_0x205e('0xd4')](this[_0x205e('0x67f')]);_0xaca0f0+=0x1*_0x24aecd;this[_0x205e('0x67c')]=_0x1c4d39[_0x205e('0xd4')][_0x205e('0x1ff')](_0x51ccc2,_0xaca0f0,null,DefaultFontSmallBlack)[_0x205e('0xd9')](0.5,0x0)[_0x205e('0x528')](0x384*GlobalScale)[_0x205e('0xd7')](WinDefaultDepth);this[_0x205e('0xd3')][_0x205e('0xd4')](this[_0x205e('0x67c')]);}}class MyResources{constructor(_0x48e22f,_0x59a507){this[_0x205e('0x52c')]=_0x48e22f;_0x59a507[_0x205e('0xd6')][_0x205e('0x27d')](this[_0x205e('0x52a')][_0x205e('0xe6')](this));_0x59a507[_0x205e('0x455')][_0x205e('0x27d')](this[_0x205e('0x683')][_0x205e('0xe6')](this));_0x59a507[_0x205e('0x2d2')][_0x205e('0x27d')](this['resourcesUpdate'][_0x205e('0xe6')](this));}}class WinMain extends WinBase{constructor(_0x14ffde,_0x396361){super(_0x14ffde,_0x396361);this[_0x205e('0x53d')]=!![];this['hudResources']=new HUDResources(_0x396361);_0x396361[_0x205e('0x457')][_0x205e('0x27d')](this[_0x205e('0x4d3')][_0x205e('0xe6')](this));}[_0x205e('0x54b')](_0x4b036f){super[_0x205e('0x54b')](_0x4b036f);if(_0x4b036f)this[_0x205e('0x4d3')](gameInit['selectedWorld']);}[_0x205e('0x551')](_0x57361a){super[_0x205e('0x551')](_0x57361a);hudResources[_0x205e('0x1f6')](_0x57361a);this[_0x205e('0x4d3')](gameInit[_0x205e('0x30b')]);}[_0x205e('0x4d3')](_0x5c39c6){if(!this['worldbtn2_Inverse'])return;if(!gameInit[_0x205e('0x16b')][_0x205e('0x3a6')]()){this[_0x205e('0x684')][_0x205e('0x490')](!![]);this[_0x205e('0x685')][_0x205e('0x490')](!![]);this[_0x205e('0x686')]['setForceInvisible'](!![]);this['worldbtn2']['setForceInvisible'](!![]);return;}switch(parseInt(_0x5c39c6)){case 0x1:this[_0x205e('0x684')][_0x205e('0x490')](!![]);this[_0x205e('0x685')][_0x205e('0x490')](![]);this['worldbtn2_Inverse'][_0x205e('0x490')](!![]);this[_0x205e('0x687')]['setForceInvisible'](![]);break;case 0x3:this['worldbtn_Inverse']['setForceInvisible'](![]);this[_0x205e('0x685')][_0x205e('0x490')](!![]);this[_0x205e('0x686')][_0x205e('0x490')](!![]);this['worldbtn2'][_0x205e('0x490')](![]);break;case 0x2:this[_0x205e('0x684')][_0x205e('0x490')](!![]);this[_0x205e('0x685')][_0x205e('0x490')](![]);this[_0x205e('0x686')][_0x205e('0x490')](![]);this['worldbtn2'][_0x205e('0x490')](!![]);break;}}[_0x205e('0x53c')](){}[_0x205e('0x688')](){const _0x17721a=RealScreenWidth;const _0x5cca67=this[_0x205e('0x535')];const _0x17a7d7=this[_0x205e('0x536')];let _0x45cfa9=_0x17a7d7+RealScreenHeight/0x2-0x96*GlobalScale;const _0x67cd80=_0x17721a/0x4;this[_0x205e('0x530')](_0x205e('0x12'),_0x5cca67-_0x67cd80*1.5,_0x45cfa9,()=>this[_0x205e('0x52c')][_0x205e('0x37e')](WindowType[_0x205e('0x689')]));this['upgradeButton']=this[_0x205e('0x530')](_0x205e('0x13'),_0x5cca67-_0x67cd80*0.5,_0x45cfa9,()=>this[_0x205e('0x52c')][_0x205e('0x68a')](GUIMode[_0x205e('0x68b')]));this[_0x205e('0x530')](_0x205e('0x14'),_0x5cca67+_0x67cd80*0.5,_0x45cfa9,()=>this[_0x205e('0x52c')][_0x205e('0x37e')](WindowType[_0x205e('0x68c')]));this[_0x205e('0x530')](_0x205e('0x634'),_0x5cca67+_0x67cd80*1.5,_0x45cfa9);_0x45cfa9=_0x17a7d7-RealScreenHeight/0x2+0x96*GlobalScale;let _0x1aa619=_0x5cca67+RealScreenWidth/0x2-0x96*GlobalScale;this[_0x205e('0x68d')]=this[_0x205e('0x530')](_0x205e('0x16'),_0x1aa619,_0x45cfa9,()=>this[_0x205e('0x52c')][_0x205e('0x37e')](WindowType['WinStore']));_0x1aa619-=0xfa*GlobalScale;this[_0x205e('0x68e')]=this[_0x205e('0x530')](_0x205e('0x15'),_0x1aa619,_0x45cfa9,()=>this[_0x205e('0x52c')]['openNewWindow'](WindowType[_0x205e('0x68f')]));_0x1aa619=RealScreenWidth-0x64*GlobalScale;_0x45cfa9=RealScreenHeight-0x320*GlobalScale;this[_0x205e('0x530')]('FortuneHUDButton',_0x1aa619,_0x45cfa9,()=>this[_0x205e('0x52c')][_0x205e('0x37e')](WindowType[_0x205e('0x690')]));_0x45cfa9+=0xb4*GlobalScale;this[_0x205e('0x691')]=this[_0x205e('0x530')]('QuestsHUDButton',_0x1aa619,_0x45cfa9,()=>this[_0x205e('0x52c')][_0x205e('0x37e')](WindowType['WinQuests']));_0x45cfa9+=0xb4*GlobalScale;this['dailyBonus']=this[_0x205e('0x530')](_0x205e('0x692'),_0x1aa619,_0x45cfa9,()=>this[_0x205e('0x52c')][_0x205e('0x37e')](WindowType[_0x205e('0x693')]));_0x1aa619=0x64*GlobalScale;_0x45cfa9=RealScreenHeight-0x258*GlobalScale;this[_0x205e('0x530')](_0x205e('0x694'),_0x1aa619,_0x45cfa9,()=>this[_0x205e('0x52c')][_0x205e('0x37e')](WindowType[_0x205e('0x695')]));_0x45cfa9+=0xb4*GlobalScale;this[_0x205e('0x530')](_0x205e('0x30'),_0x1aa619,_0x45cfa9,()=>this[_0x205e('0x52c')][_0x205e('0x37e')](WindowType[_0x205e('0x5c2')]));}[_0x205e('0x696')](){const _0xb31652=VisualData[_0x205e('0x419')]();const _0x2b4796=0xfa*GlobalScale;const _0x53b22f=0xaa*GlobalScale;const _0x59bbbd=_0x53b22f+0x1e*GlobalScale;const _0x3f1790=this[_0x205e('0x535')];if(VisualData[_0x205e('0x140')][_0x205e('0x127')])this[_0x205e('0x697')]=this['createButton'](_0x205e('0x127'),0x4*_0x53b22f,_0x53b22f,()=>this[_0x205e('0x52c')][_0x205e('0x37e')](WindowType['WinSupervisor']));this[_0x205e('0x698')]=this[_0x205e('0x530')]('FortuneHUDButton',_0x53b22f,RealScreenHeight-_0x53b22f,()=>this[_0x205e('0x52c')][_0x205e('0x37e')](WindowType['WinFortuneWheel']));this[_0x205e('0x347')]=this[_0x205e('0x530')](_0x205e('0x692'),_0x53b22f,RealScreenHeight-_0x53b22f-_0x2b4796,()=>this['gui'][_0x205e('0x37e')](WindowType[_0x205e('0x693')]));this[_0x205e('0x699')]=this[_0x205e('0x530')](_0x205e('0x13'),RealScreenWidth-_0x59bbbd,RealScreenHeight-_0x53b22f,()=>this[_0x205e('0x52c')][_0x205e('0x68a')](GUIMode['UpgradeBuildings']));this[_0x205e('0x691')]=this[_0x205e('0x530')](_0x205e('0x30'),RealScreenWidth-_0x59bbbd,RealScreenHeight-_0x53b22f-_0x2b4796,()=>this[_0x205e('0x52c')][_0x205e('0x37e')](WindowType['WinQuests']));if(_0xb31652['photos']){this['createButton'](_0x205e('0x14'),RealScreenWidth-_0x59bbbd,RealScreenHeight-_0x53b22f-_0x2b4796*0x2,()=>{guiManager[_0x205e('0x37e')](WindowType[_0x205e('0x69a')]);});}if(_0xb31652['likes']&&_0xb31652[_0x205e('0x2a8')][_0x205e('0x1bf')](AllGetParams[_0x205e('0x1c1')])&&_0xb31652[_0x205e('0x2a8')][AllGetParams[_0x205e('0x1c1')]]){this[_0x205e('0x530')](_0x205e('0x14'),_0x53b22f,RealScreenHeight-_0x53b22f-_0x2b4796*0x2,()=>this[_0x205e('0x52c')][_0x205e('0x68a')](GUIMode[_0x205e('0x665')]));}if(!_0xb31652[_0x205e('0x69b')]){this[_0x205e('0x687')]=this[_0x205e('0x530')](_0x205e('0x129'),RealScreenWidth-_0x59bbbd,RealScreenHeight-_0x53b22f-_0x2b4796*0x2,()=>{gameInit[_0x205e('0x473')]('2');});this['worldbtn2_Inverse']=this[_0x205e('0x530')](_0x205e('0x12a'),RealScreenWidth-_0x59bbbd,RealScreenHeight-_0x53b22f-_0x2b4796*0x2,()=>{gameInit[_0x205e('0x473')]('1');});this[_0x205e('0x686')][_0x205e('0x490')](!![]);}const _0x504a3c=_0x53b22f/1.5;this[_0x205e('0x68d')]=this[_0x205e('0x530')](_0x205e('0x16'),_0x3f1790-_0x2b4796,_0x504a3c,()=>this[_0x205e('0x52c')][_0x205e('0x37e')](WindowType[_0x205e('0x69c')]));this['puzzlesButton']=this[_0x205e('0x530')](_0x205e('0x15'),_0x3f1790,_0x504a3c,()=>this['gui'][_0x205e('0x37e')](WindowType[_0x205e('0x68f')]));if(!_0xb31652[_0x205e('0x69b')]){this[_0x205e('0x685')]=this['createButton'](_0x205e('0x634'),_0x3f1790+_0x2b4796,_0x504a3c,()=>{gameInit[_0x205e('0x473')]('3');});this[_0x205e('0x684')]=this['createButton'](_0x205e('0x128'),_0x3f1790+_0x2b4796,_0x504a3c,()=>{gameInit['switchWorld']('1');});this[_0x205e('0x684')][_0x205e('0x490')](!![]);}if(TEST_MODE)this[_0x205e('0x530')](_0x205e('0x634'),RealScreenWidth-_0x53b22f,_0x53b22f,()=>gameInit['progress'][_0x205e('0x3b8')]());this[_0x205e('0x533')][_0x205e('0x152')]();}['playBreadAnimation'](){this[_0x205e('0x69d')](BanjoDuration);lockGuiEverything();animManager[_0x205e('0x69e')](this[_0x205e('0xd2')],this[_0x205e('0xd3')],BanjoDuration,()=>{unlockGUI();this['gui'][_0x205e('0x37e')](WindowType[_0x205e('0x69f')]);});}[_0x205e('0x538')](){this[_0x205e('0x537')]();}[_0x205e('0x52a')](_0xa02b48){super[_0x205e('0x52a')](_0xa02b48);if(VisualData[_0x205e('0x54f')]())this[_0x205e('0x688')]();else this[_0x205e('0x696')]();this[_0x205e('0x6a0')][_0x205e('0x52a')](_0xa02b48);const _0x42c51a=gameInit[_0x205e('0x16b')];this[_0x205e('0x6a1')]=[];this[_0x205e('0x6a2')](_0xa02b48,this['storeButton'],function(_0x4366f4){_0x42c51a[_0x205e('0x2bd')][_0x205e('0x27d')](_0x4366f4);},function(){const _0x9bc8ec=GameData['getMarketListGold']();for(let _0x3d618a=0x0;_0x3d618a<_0x9bc8ec[_0x205e('0xe7')];_0x3d618a++){if(_0x42c51a[_0x205e('0x365')](_0x9bc8ec[_0x3d618a])){const _0x8b4afb=_0x42c51a[_0x205e('0x371')](_0x9bc8ec[_0x3d618a]);return _0x42c51a[_0x205e('0x372')](_0x8b4afb);}}return![];},function(){return'!';});this[_0x205e('0x6a2')](_0xa02b48,this[_0x205e('0x68e')],function(_0xff1daf){eventManager['onBoxPurchased']['addListener'](_0xff1daf);eventManager[_0x205e('0x291')]['addListener'](_0xff1daf);eventManager[_0x205e('0x282')][_0x205e('0x27d')](_0xff1daf);},function(){return _0x42c51a[_0x205e('0x35e')]()>0x0;},function(){return _0x42c51a[_0x205e('0x35e')]()[_0x205e('0x2ad')]();});this[_0x205e('0x6a2')](_0xa02b48,this['dailyBonus'],function(_0x4e65b5){eventManager['onDailyBonusCollected'][_0x205e('0x27d')](_0x4e65b5);},function(){return _0x42c51a[_0x205e('0x367')]();},function(){return'!';});this[_0x205e('0x6a2')](_0xa02b48,this[_0x205e('0x691')],function(_0x59ae02){eventManager[_0x205e('0x29e')][_0x205e('0x27d')](_0x59ae02);eventManager[_0x205e('0x28b')][_0x205e('0x27d')](_0x59ae02);},function(){return gameInit[_0x205e('0x46f')]&&gameInit['questsManager'][_0x205e('0x42d')]();},function(){return'!';});}[_0x205e('0x6a2')](_0x444a36,_0x29b28c,_0x31b232,_0x4eadb2,_0x304119){this[_0x205e('0x6a1')][_0x205e('0xda')](new GUINotification({'scene':_0x444a36,'parent':_0x29b28c,'group':this[_0x205e('0xd3')],'x':(_0x29b28c['x']-_0x29b28c['width']*0.4)/localScale,'y':(_0x29b28c['y']+_0x29b28c['height']*0.4)/localScale,'subscribe':_0x31b232,'isVisible':_0x4eadb2,'getText':_0x304119}));}[_0x205e('0x6a3')](){this[_0x205e('0x6a4')](this[_0x205e('0x699')]);}[_0x205e('0x6a5')](){this[_0x205e('0x6a4')](this['storeButton']);}[_0x205e('0x6a6')](){this['showButtonFromTutorial'](this[_0x205e('0x697')]);}[_0x205e('0x6a7')](){return this[_0x205e('0x699')];}[_0x205e('0x6a8')](){return this['storeButton'];}[_0x205e('0x6a9')](){return this[_0x205e('0x697')];}[_0x205e('0x6aa')](){return this[_0x205e('0x68e')];}[_0x205e('0x6ab')](){return this[_0x205e('0x698')];}[_0x205e('0x6ac')](){for(let _0x27ce6e in this[_0x205e('0x6a1')])this[_0x205e('0x6a1')][_0x27ce6e][_0x205e('0xe5')]();}['hideAllButtonsForTutorial'](){super['hideAllButtonsForTutorial']();this[_0x205e('0x6ac')]();}['showAllButtonsFromTutorial'](){super[_0x205e('0x54a')]();this['_updateAllNotifications']();this[_0x205e('0x4d3')](gameInit[_0x205e('0x30b')]);}[_0x205e('0x6a4')](_0xa4a7c7){super['showButtonFromTutorial'](_0xa4a7c7);this[_0x205e('0x6ac')]();}[_0x205e('0x54b')](_0x2f544b){super[_0x205e('0x54b')](_0x2f544b);this[_0x205e('0x6ac')]();}[_0x205e('0x69d')](_0x40e8a1){super[_0x205e('0x69d')](_0x40e8a1);this[_0x205e('0x6ac')]();}[_0x205e('0x54d')](){super[_0x205e('0x54d')]();this[_0x205e('0x6ac')]();}}class BuildingsGUI extends WinBase{constructor(_0x4a30d9,_0x41d362){super(_0x4a30d9,_0x41d362);_0x4a30d9[_0x205e('0x301')][_0x205e('0x27d')](this[_0x205e('0x472')][_0x205e('0xe6')](this));_0x4a30d9[_0x205e('0x6ad')]['addListener'](this[_0x205e('0x6ae')][_0x205e('0xe6')](this));this[_0x205e('0x6af')]={};_0x4a30d9[_0x205e('0x456')][_0x205e('0x27d')](this[_0x205e('0x310')]['bind'](this));_0x4a30d9[_0x205e('0x2a2')][_0x205e('0x27d')](this[_0x205e('0x6b0')]['bind'](this));_0x4a30d9[_0x205e('0x303')][_0x205e('0x27d')](this['buildingLiked']['bind'](this));_0x4a30d9[_0x205e('0x287')]['addListener'](this[_0x205e('0x6b1')]['bind'](this));_0x4a30d9[_0x205e('0x6b2')][_0x205e('0x27d')](this[_0x205e('0x6b3')][_0x205e('0xe6')](this));_0x41d362[_0x205e('0x457')][_0x205e('0x27d')](this[_0x205e('0x4d3')][_0x205e('0xe6')](this));this[_0x205e('0x53d')]=!![];clickController['onBuildingClicked']['addListener'](this[_0x205e('0x2dd')][_0x205e('0xe6')](this));_0x41d362[_0x205e('0x455')][_0x205e('0x27d')](this[_0x205e('0x6b4')][_0x205e('0xe6')](this));eventManager['onBuildingUpgraded'][_0x205e('0x27d')](this['_updateAvailabilityForUpdrages'][_0x205e('0xe6')](this));}['_progressLoaded'](_0x15390e){_0x15390e[_0x205e('0x2c5')][_0x205e('0x27d')](this[_0x205e('0x2c6')][_0x205e('0xe6')](this));_0x15390e[_0x205e('0x343')]['addListener'](this[_0x205e('0x6b5')][_0x205e('0xe6')](this));}[_0x205e('0x6b6')](_0x5b1695,_0x1c9398){const _0x2b36be=this['worldsData'][_0x5b1695];const _0x13cf24=_0x2b36be['production'];const _0x19f528=_0x2b36be[_0x205e('0x37c')];for(let _0x4c1803 in _0x13cf24){if(_0x19f528['hasOwnProperty'](_0x4c1803)){SetGroupVisible(_0x19f528[_0x4c1803][_0x205e('0xd3')],_0x1c9398);}else SetGroupVisible(_0x13cf24[_0x4c1803]['group'],_0x1c9398);}_0x2b36be[_0x205e('0xe9')]=_0x1c9398;}['worldChanged'](_0x29a160){for(let _0x2b66f9 in this[_0x205e('0x6af')]){if(this[_0x205e('0x6af')][_0x2b66f9][_0x205e('0xe9')]){if(_0x2b66f9!==_0x29a160){this[_0x205e('0x6b6')](_0x2b66f9,![]);}}else{if(_0x2b66f9===_0x29a160)this[_0x205e('0x6b6')](_0x2b66f9,!![]);}}}[_0x205e('0x6b7')](_0x54edc6,_0x4f0436,_0x2594d2){const _0x271d90=_0x54edc6[_0x205e('0x1b2')];if(_0x271d90[_0x205e('0x1bf')](_0x4f0436)){const _0x4ab0f5=_0x271d90[_0x4f0436];const _0x44255e=this[_0x205e('0xd2')][_0x205e('0xd4')][_0x205e('0x1fd')](_0x4ab0f5[_0x205e('0x1fc')]['x']/localScale,_0x4ab0f5[_0x205e('0x1fc')]['y']/localScale,_0x205e('0x5'))[_0x205e('0xd8')](VisualData[_0x205e('0x6b8')]['flyingResourcesScale'])[_0x205e('0xd7')](OverlayDepth);const _0x149aca={'x':_0x2594d2['x']/localScale,'y':_0x2594d2['y']/localScale};animManager[_0x205e('0x237')](_0x44255e,_0x149aca,VisualData[_0x205e('0x6b8')][_0x205e('0x6b9')],()=>{_0x44255e[_0x205e('0x22e')](!![]);animManager[_0x205e('0x241')](_0x2594d2);});audioManager[_0x205e('0x26d')]();}}[_0x205e('0x6ba')](_0x4813d9,_0x4bb9b7){if(_0x4813d9[_0x205e('0x6bb')]!==_0x4bb9b7){_0x4813d9[_0x205e('0x6bb')]=_0x4bb9b7;const _0x4e076c=_0x4bb9b7?NormalTint:LockTint;_0x4813d9['table'][_0x205e('0x492')]=_0x4e076c;_0x4813d9['level'][_0x205e('0x492')]=_0x4e076c;_0x4813d9['price'][_0x205e('0x492')]=_0x4e076c;_0x4813d9[_0x205e('0x51c')][_0x205e('0x492')]=_0x4e076c;if(_0x4813d9[_0x205e('0x6bc')])_0x4813d9[_0x205e('0x6bc')][_0x205e('0x492')]=_0x4e076c;_0x4813d9[_0x205e('0x62f')][_0x205e('0x491')](_0x4e076c);}}[_0x205e('0x6bd')](){if(guiManager[_0x205e('0x664')]===GUIMode[_0x205e('0x68b')]){for(let _0x557ab8 in this['worldsData']){const _0x1c3a10=this[_0x205e('0x6af')][_0x557ab8];if(!_0x1c3a10['visible'])continue;const _0x2d8c72=_0x1c3a10[_0x205e('0x2e6')];const _0x5a3290=parseInt(_0x557ab8);for(let _0x3a9ce9 in _0x2d8c72){const _0x2bdf2d=gameInit[_0x205e('0x308')](_0x5a3290,_0x3a9ce9);this[_0x205e('0x6ba')](_0x2d8c72[_0x3a9ce9],gameInit['progress']['isResourcesEnough'](_0x2bdf2d[_0x205e('0x2da')]()));}}}}[_0x205e('0x2dd')](_0x2983be){if(_0x2983be[_0x205e('0x2c2')]()===0x0)return;for(let _0x226f7b in this[_0x205e('0x6af')]){const _0x3f31bb=this['worldsData'][_0x226f7b];if(!_0x3f31bb[_0x205e('0xe9')])continue;switch(guiManager['guiMode']){case GUIMode[_0x205e('0x68b')]:const _0x1f4ad4=_0x3f31bb[_0x205e('0x2e6')];if(_0x1f4ad4['hasOwnProperty'](_0x2983be['id'])){const _0x20bf77=_0x1f4ad4[_0x2983be['id']];if(!_0x20bf77['available'])continue;const _0x5bcb06=_0x2983be[_0x205e('0x2f3')]();LoadFile(this[_0x205e('0xd2')],_0x5bcb06,_0x2983be['getDropIconPath'](),()=>{const _0x48a76f=Math[_0x205e('0x22c')]()-0.5;const _0x1ce474=_0x20bf77['x']+_0x48a76f*0xa0*GlobalScale;const _0x54df9f=-_0x48a76f*0x32*GlobalScale;const _0x4c936a=this['engine'][_0x205e('0xd4')][_0x205e('0x1fd')](_0x1ce474,_0x20bf77['y']-0x4b*GlobalScale,_0x5bcb06)[_0x205e('0xd7')](_0x20bf77[_0x205e('0x489')]-0x64);animManager[_0x205e('0x23b')](_0x4c936a,{'vx':_0x54df9f,'vy':-0xc8*GlobalScale,'g':0x46*GlobalScale,'angle':(Math[_0x205e('0x22c')]()-0.5)*0x3c},0.4,()=>{_0x4c936a['destroy'](!![]);});});animManager[_0x205e('0x23c')](_0x20bf77[_0x205e('0xd3')],{'height':0x28*GlobalScale,'scale':0.1},0.3);}break;case GUIMode[_0x205e('0x665')]:gameInit['openLikesForBuilding'](_0x2983be);break;case GUIMode['Normal']:this[_0x205e('0x6b7')](_0x3f31bb,_0x2983be['id'],mainResourceIcon);break;case GUIMode[_0x205e('0x6be')]:this['_sendFlyingResources'](_0x3f31bb,_0x2983be['id'],visualGame['getBoss']()[_0x205e('0x49e')]());break;}break;}}['showNormal'](_0x38a201,_0x4c67d8,_0x27b04e,_0x3d3fe4){if(_0x4c67d8)this[_0x205e('0x6bd')]();const _0x574e0f=this[_0x205e('0x6af')][_0x3d3fe4];const _0x1ab130=_0x574e0f['production'];const _0x52e6c6=_0x574e0f['upgrade'];const _0x13cc01=_0x574e0f[_0x205e('0x2a8')];const _0x2edad3=_0x574e0f[_0x205e('0x37c')];for(let _0x543f63 in _0x1ab130){if(_0x2edad3[_0x205e('0x1bf')](_0x543f63)){SetGroupVisible(_0x2edad3[_0x543f63][_0x205e('0xd3')],_0x38a201);}else SetGroupVisible(_0x1ab130[_0x543f63][_0x205e('0xd3')],_0x38a201);const _0x445c0a=_0x52e6c6[_0x543f63];if(_0x445c0a){SetGroupVisible(_0x445c0a[_0x205e('0xd3')],_0x4c67d8);if(_0x4c67d8&&!_0x445c0a['iconLoading']){_0x445c0a[_0x205e('0x6bf')]=!![];const _0x457d04=_0x445c0a[_0x205e('0x4d1')][_0x205e('0x2f7')]();LoadFile(this[_0x205e('0xd2')],_0x457d04,_0x445c0a[_0x205e('0x4d1')][_0x205e('0x2f8')](),()=>{_0x445c0a[_0x205e('0x6bc')]=_0x445c0a[_0x205e('0xd3')][_0x205e('0xd6')](-0x5a*GlobalScale,-0x87*GlobalScale,_0x457d04)[_0x205e('0xd7')](_0x445c0a[_0x205e('0x489')]+0x1)['setScale'](0.6);setLockedColor(_0x445c0a['loadedIcon'],!_0x445c0a[_0x205e('0x6bb')]);});}}const _0x51d90e=_0x13cc01[_0x543f63];if(_0x51d90e){SetGroupVisible(_0x51d90e[_0x205e('0xd3')],_0x27b04e);if(_0x27b04e&&!_0x51d90e[_0x205e('0x6bf')]){_0x51d90e[_0x205e('0x6bf')]=!![];const _0x69d0d8=_0x51d90e[_0x205e('0x4d1')][_0x205e('0x2f7')]();LoadFile(this[_0x205e('0xd2')],_0x69d0d8,_0x51d90e[_0x205e('0x4d1')][_0x205e('0x2f8')](),()=>{_0x51d90e[_0x205e('0x6bc')]=_0x51d90e[_0x205e('0xd3')][_0x205e('0xd6')](-0x5a*GlobalScale,-0x87*GlobalScale,_0x69d0d8)[_0x205e('0xd7')](_0x51d90e[_0x205e('0x489')]+0x1)[_0x205e('0xd8')](0.6);setLockedColor(_0x51d90e[_0x205e('0x6bc')],!_0x51d90e['available']);});}}}}[_0x205e('0x6ae')](_0x2b2944,_0x4d32b1){this[_0x205e('0x6c0')](_0x2b2944===GUIMode[_0x205e('0x661')],_0x2b2944===GUIMode[_0x205e('0x68b')],_0x2b2944===GUIMode[_0x205e('0x665')],_0x4d32b1);}[_0x205e('0x6b3')](){for(let _0x37395f in this['worldsData']){const _0x59313c=this['worldsData'][_0x37395f];const _0x2b1463=_0x59313c[_0x205e('0x2e6')];for(let _0x505a6c in _0x2b1463){const _0x16b5b4=_0x2b1463[_0x505a6c];this[_0x205e('0x6c1')](_0x16b5b4[_0x205e('0x4d1')],_0x59313c,!![]);_0x16b5b4['group'][_0x205e('0x22e')](!![]);}const _0x452f20=_0x59313c['likes'];for(let _0xdd6c9e in _0x452f20){_0x452f20[_0xdd6c9e][_0x205e('0xd3')][_0x205e('0x22e')](!![]);}const _0xa71cf=_0x59313c[_0x205e('0x1b2')];for(let _0x54f47f in _0xa71cf){const _0x30a958=_0x59313c['production'][_0x54f47f];_0x30a958[_0x205e('0x6c2')]=![];_0x30a958[_0x205e('0x62f')][_0x205e('0x494')](![]);_0x30a958['resources'][_0x205e('0x4e9')]('0');SetGroupVisible(_0x30a958[_0x205e('0xd3')],![]);}_0x59313c['upgrade']={};_0x59313c[_0x205e('0x2a8')]={};}}[_0x205e('0x472')](_0xfa9a97,_0x229704,_0x3e4f68){let _0x497435;if(!this[_0x205e('0x6af')][_0x205e('0x1bf')](_0xfa9a97['id'])){_0x497435=this[_0x205e('0x6af')][_0xfa9a97['id']]={'production':{},'upgrade':{},'purchase':{},'likes':{},'visible':_0xfa9a97[_0x205e('0x30a')]()};}else _0x497435=this[_0x205e('0x6af')][_0xfa9a97['id']];const _0x480bc6=_0x497435[_0x205e('0x1b2')];const _0x245a72=VisualData[_0x205e('0x149')][_0x229704[_0x205e('0x2a9')]];const _0x3b0d1f=_0x245a72[_0x205e('0x489')]+0x64;const _0x2ad36a=_0x245a72['position'];let _0x1b59ad=_0x2ad36a['x']+this[_0x205e('0x535')];let _0x206ded=_0x2ad36a['y']+this[_0x205e('0x536')];const _0x5168e4=_0x229704[_0x205e('0x2c2')]();const _0x597bd1=_0x3e4f68['add']['group']();const _0x216b95=_0x1b59ad;const _0x9be57=_0x206ded+0x3c*GlobalScale;const _0x2a7e7a=_0x5168e4===0x0?'':this[_0x205e('0x6c3')](_0x229704);let _0x1a52f8=_0x3e4f68[_0x205e('0xd4')][_0x205e('0x1ff')](_0x216b95,_0x9be57+0xa*GlobalScale,_0x2a7e7a,DefaultFontSmall)[_0x205e('0xd9')](0.5,0x0);const _0x223b51=new Loader(_0x597bd1,_0x205e('0x8'),_0x205e('0x9'),_0x216b95,_0x9be57,0x1,!![]);const _0x3a4cf6={'resources':_0x1a52f8,'loader':_0x223b51,'group':_0x597bd1};_0x480bc6[_0x229704['id']]=_0x3a4cf6;_0x597bd1[_0x205e('0xd4')](_0x1a52f8);_0x3a4cf6['icon']=_0x597bd1[_0x205e('0xd6')](_0x216b95-0x37*GlobalScale,_0x9be57-0x1e*GlobalScale,_0x205e('0x5'))[_0x205e('0xd8')](0.6);animManager[_0x205e('0x23d')](_0x3a4cf6['icon'],{'height':0x28*GlobalScale,'scale':0.2},0.6);if(_0x5168e4===0x0||!_0x497435[_0x205e('0xe9')])SetGroupVisible(_0x597bd1,![]);_0x597bd1[_0x205e('0xd7')](_0x3b0d1f);_0x3a4cf6[_0x205e('0x1fc')]['setDepth'](_0x3b0d1f+0x5);if(_0x5168e4>0x0){this[_0x205e('0x6c4')](_0xfa9a97,_0x229704);this[_0x205e('0x6c5')](_0xfa9a97,_0x229704);}if(_0x5168e4===0x0)this[_0x205e('0x6c1')](_0x229704,_0x497435);}[_0x205e('0x6b5')](_0x5a5e46){if(_0x5a5e46[_0x205e('0x2a7')]===0x0){const _0x2047a6=Math['trunc']((_0x5a5e46['id']-0x1)/0x9+0x1);const _0x409489=this[_0x205e('0x6af')][_0x2047a6];const _0x2e64b3=_0x5a5e46['id']-(_0x2047a6-0x1)*0x9;const _0x27c238=_0x409489[_0x205e('0x37c')][_0x2e64b3];if(_0x27c238&&_0x27c238[_0x205e('0x6c6')]){_0x27c238[_0x205e('0x3de')]['setText'](gameInit[_0x205e('0x16b')][_0x205e('0x356')](_0x5a5e46['id']-0x1)+'/4');}}}['puzzleCompleted'](_0xe7ee78){if(_0xe7ee78[_0x205e('0x2a7')]>0x0){const _0x1e0e88=Math[_0x205e('0x215')]((_0xe7ee78['id']-0x1)/0x9+0x1);const _0x44ca0a=this[_0x205e('0x6af')][_0x1e0e88];const _0x395d7d=_0xe7ee78['id']-(_0x1e0e88-0x1)*0x9;const _0x1a8d80=_0x44ca0a[_0x205e('0x37c')][_0x395d7d];if(_0x1a8d80){if(_0x1a8d80['needPuzzle']){_0x1a8d80[_0x205e('0xd3')][_0x205e('0x22e')](!![]);const _0xf1f97=gameInit['getBuildingById'](_0x1e0e88,_0x395d7d);this[_0x205e('0x6c1')](_0xf1f97,_0x44ca0a);}}}}[_0x205e('0x6c1')](_0x5a27a6,_0xc6e506,_0x29c8c7){const _0x1271d3=this[_0x205e('0xd2')];const _0x1f994f=VisualData[_0x205e('0x149')][_0x5a27a6['slot']];const _0x163a39=VisualData[_0x205e('0x143')][_0x1f994f[_0x205e('0x14a')][0x0][_0x205e('0x4d1')]][_0x205e('0x144')][0x0];const _0x28bded=_0x1f994f[_0x205e('0x489')]+0x64;const _0xe1a9a3=_0x1f994f[_0x205e('0x6c7')];const _0x4d258e=_0xc6e506[_0x205e('0x37c')];let _0x3861c1=_0xe1a9a3['x']+this['centerX']+(_0x163a39['x']||0x0);let _0x197185=_0xe1a9a3['y']+this['centerY']+(_0x163a39['y']||0x0);const _0x51ac8b=_0x5a27a6['slot']-0x1;const _0x311527=gameInit[_0x205e('0x16b')][_0x205e('0x2e5')](_0x51ac8b);const _0x1e8f14=_0x311527[_0x205e('0x2a7')]<0x1;const _0x4de5c0=_0x1271d3[_0x205e('0xd4')][_0x205e('0xd3')]();let _0x48120e;let _0x30b9d6;if(!_0x1e8f14){const _0x50c682=VisualData['GUI_BuildingsGUI'];_0x48120e=_0x1271d3['add'][_0x205e('0x1fd')](_0x3861c1,_0x197185-0x24*GlobalScale,_0x205e('0x5'))[_0x205e('0xd8')](_0x50c682['purchaseIconScale']);_0x30b9d6=_0x1271d3[_0x205e('0xd4')][_0x205e('0x1ff')](_0x3861c1,_0x197185+0x1e*GlobalScale,this[_0x205e('0x6c8')](_0x5a27a6),DefaultFontSmall)[_0x205e('0xd9')](0.5,0.5);}else{_0x48120e=_0x1271d3[_0x205e('0xd4')][_0x205e('0x1fd')](_0x3861c1-0xa,_0x197185+0xa*GlobalScale,_0x205e('0x6c9'))[_0x205e('0xd9')](0x1,0.5);_0x30b9d6=_0x1271d3['add'][_0x205e('0x1ff')](_0x3861c1,_0x197185+0xa*GlobalScale,gameInit[_0x205e('0x16b')][_0x205e('0x356')](_0x51ac8b)+'/4',DefaultFontSmall)[_0x205e('0xd9')](0x0,0.5);const _0x1a7295=_0x1271d3[_0x205e('0xd4')][_0x205e('0x1fd')](_0x3861c1,_0x197185-0x50*GlobalScale,_0x205e('0x3'));_0x4de5c0[_0x205e('0xd4')](_0x1a7295);}const _0x37f37f={'price':_0x30b9d6,'icon':_0x48120e,'group':_0x4de5c0,'needPuzzle':_0x1e8f14};_0x4d258e[_0x5a27a6['id']]=_0x37f37f;_0x4de5c0['add'](_0x48120e);_0x4de5c0[_0x205e('0xd4')](_0x30b9d6);_0x4de5c0[_0x205e('0xd7')](_0x28bded);if(!_0xc6e506['visible']||_0x29c8c7)SetGroupVisible(_0x4de5c0,![]);_0x5a27a6[_0x205e('0x2a5')][_0x205e('0x27d')](this[_0x205e('0x6ca')]['bind'](this));this[_0x205e('0x6ca')](_0x5a27a6);}[_0x205e('0x6ca')](_0x3fe7c7){const _0x234df3=Math['trunc']((_0x3fe7c7[_0x205e('0x2a9')]-0x1)/0x9+0x1);const _0x1eab6b=this[_0x205e('0x6af')][_0x234df3];const _0x587fc2=_0x1eab6b[_0x205e('0x37c')];if(_0x587fc2[_0x205e('0x1bf')](_0x3fe7c7['id'])){const _0x348eb5=_0x587fc2[_0x3fe7c7['id']];if(_0x3fe7c7[_0x205e('0x2c1')]){if(!_0x348eb5[_0x205e('0x6cb')])_0x348eb5[_0x205e('0x6cb')]=animManager[_0x205e('0x23e')](_0x348eb5[_0x205e('0x1fc')],{'height':0x3c*GlobalScale,'scale':0.2},0.6);}else{if(_0x348eb5['jumpAnimation']){_0x348eb5[_0x205e('0x6cb')][_0x205e('0x209')]();_0x348eb5[_0x205e('0x6cb')]=null;}}}}[_0x205e('0x6c4')](_0x1438e3,_0x3ae0f1){const _0x8cc2ce=this[_0x205e('0xd2')];const _0x160dac=this[_0x205e('0x6af')][_0x1438e3['id']];const _0x3f73a2=_0x160dac['upgrade']?_0x160dac[_0x205e('0x2e6')]:_0x160dac['upgrade']={};const _0x5166f6=VisualData[_0x205e('0x149')][_0x3ae0f1[_0x205e('0x2a9')]];const _0x3bcdb6=VisualData['VISUAL_BUILDINGS'][_0x5166f6[_0x205e('0x14a')][0x0][_0x205e('0x4d1')]][_0x205e('0x144')][0x0];const _0x34c52a=_0x5166f6[_0x205e('0x489')]+0x64;const _0x2940e5=_0x5166f6[_0x205e('0x6c7')];const _0x4950ae=_0x3ae0f1[_0x205e('0x2c2')]();let _0x5356fe=_0x2940e5['x']+this[_0x205e('0x535')]+(_0x3bcdb6['x']||0x0);let _0x18c02c=_0x2940e5['y']+this[_0x205e('0x536')]+(_0x3bcdb6['y']||0x0);const _0x4a0d03=_0x8cc2ce[_0x205e('0xd4')][_0x205e('0x4f0')]();_0x4a0d03['setPosition'](_0x5356fe,_0x18c02c);const _0x2dadc1=0x0;const _0x5c538c=0x0-0x3c*GlobalScale;const _0x5eeaee=_0x4a0d03[_0x205e('0xd6')](_0x2dadc1,_0x5c538c,_0x205e('0xd'))[_0x205e('0x1ee')]();const _0x1aeb97=function(){if(_0x5eeaee[_0x205e('0x224')]){clearInterval(_0x5eeaee[_0x205e('0x224')]);_0x5eeaee[_0x205e('0x224')]=null;}};const _0x456344=_0x4a0d03[_0x205e('0xd6')](_0x2dadc1-0x50*GlobalScale,_0x5c538c+0x14*GlobalScale,_0x205e('0x5'))[_0x205e('0xd8')](0.55);let _0x31e4a2=_0x8cc2ce[_0x205e('0xd4')][_0x205e('0x1ff')](_0x2dadc1-0x0*GlobalScale,_0x5c538c-0x28*GlobalScale,_0x4950ae,DefaultFont)[_0x205e('0xd9')](0.5);let _0x3cbdde=_0x8cc2ce[_0x205e('0xd4')][_0x205e('0x1ff')](_0x2dadc1-0x28*GlobalScale,_0x5c538c+0x19*GlobalScale,this[_0x205e('0x6c8')](_0x3ae0f1),DefaultFontSmall2)['setOrigin'](0x0,0.5);const _0x2cf24c=VisualData['GUI_BuildingsGUI'];const _0x2fef56=new Loader(_0x4a0d03,null,_0x205e('0xa'),_0x2dadc1+_0x2cf24c[_0x205e('0x6cc')]*GlobalScale,_0x5c538c+_0x2cf24c[_0x205e('0x6cd')]*GlobalScale,_0x2cf24c[_0x205e('0x6ce')]);_0x2fef56[_0x205e('0x493')](_0x3ae0f1[_0x205e('0x6cf')]());const _0x418c08={'priceIcon':_0x456344,'level':_0x31e4a2,'price':_0x3cbdde,'group':_0x4a0d03,'table':_0x5eeaee,'iconLoading':![],'x':_0x5356fe,'y':_0x18c02c,'depth':_0x34c52a,'building':_0x3ae0f1,'loader':_0x2fef56,'available':!![]};_0x5eeaee['on'](_0x205e('0x1ef'),()=>{if(!_0x418c08[_0x205e('0x6bb')])return;_0x5eeaee[_0x205e('0x1dd')]=!![];_0x1aeb97();setTimeout(()=>{if(_0x5eeaee['down']){_0x1aeb97();_0x5eeaee['counter']=0x0;_0x5eeaee[_0x205e('0x224')]=setInterval(()=>{if(!_0x418c08[_0x205e('0x6bb')]){_0x1aeb97();return;}clickController[_0x205e('0x2dd')](_0x3ae0f1);_0x5eeaee[_0x205e('0x6d0')]++;audioManager[_0x205e('0x26f')](_0x5eeaee['counter']);},0x64);}},0x1f4);clickController[_0x205e('0x2dd')](_0x3ae0f1);audioManager[_0x205e('0x26f')](0x0);});_0x5eeaee['on']('pointerout',()=>{_0x5eeaee[_0x205e('0x1dd')]=![];_0x1aeb97();});_0x5eeaee['on'](_0x205e('0x1f1'),()=>{_0x5eeaee[_0x205e('0x1dd')]=![];_0x1aeb97();});_0x3f73a2[_0x3ae0f1['id']]=_0x418c08;_0x4a0d03[_0x205e('0xd4')](_0x31e4a2);_0x4a0d03[_0x205e('0xd4')](_0x3cbdde);SetGroupVisible(_0x4a0d03,![]);_0x4a0d03[_0x205e('0xd7')](_0x34c52a);}[_0x205e('0x6c5')](_0x446fa9,_0x393a47){const _0x4d47c1=this[_0x205e('0xd2')];const _0x4f68ae=this[_0x205e('0x6af')][_0x446fa9['id']];const _0x24160f=_0x4f68ae[_0x205e('0x2a8')]?_0x4f68ae[_0x205e('0x2a8')]:_0x4f68ae[_0x205e('0x2a8')]={};const _0x22df05=VisualData[_0x205e('0x149')][_0x393a47['slot']];const _0x20b9d5=VisualData[_0x205e('0x143')][_0x22df05['levels'][0x0][_0x205e('0x4d1')]][_0x205e('0x144')][0x0];const _0x4d4be2=_0x22df05[_0x205e('0x489')]+0x64;const _0x48ebad=_0x22df05['position'];let _0x3fe22d=_0x48ebad['x']+this[_0x205e('0x535')]+(_0x20b9d5['x']||0x0);let _0x2f257e=_0x48ebad['y']+this[_0x205e('0x536')]+(_0x20b9d5['y']||0x0);const _0x1b59f4=_0x4d47c1[_0x205e('0xd4')][_0x205e('0x4f0')]();_0x1b59f4['setPosition'](_0x3fe22d,_0x2f257e);const _0x156f7b=0x0;const _0x39f848=0x0-0x3c*GlobalScale;const _0x31c08a=_0x1b59f4['create'](_0x156f7b,_0x39f848,_0x205e('0xc'))['setInteractive']();const _0x48d23e=_0x1b59f4[_0x205e('0xd6')](_0x156f7b+0x5a*GlobalScale,_0x39f848-0x46*GlobalScale,_0x205e('0xb'));let _0xca80f9=_0x4d47c1[_0x205e('0xd4')][_0x205e('0x1ff')](_0x156f7b-0x0*GlobalScale,_0x39f848-0x14*GlobalScale,_0x393a47['getLikes'](),DefaultFont)[_0x205e('0xd9')](0.5);const _0x1f4341={'priceIcon':_0x48d23e,'level':_0xca80f9,'group':_0x1b59f4,'table':_0x31c08a,'iconLoading':![],'x':_0x3fe22d,'y':_0x2f257e,'depth':_0x4d4be2,'building':_0x393a47,'available':!![]};_0x31c08a['on'](_0x205e('0x1f1'),()=>{clickController[_0x205e('0x2dd')](_0x393a47);});_0x24160f[_0x393a47['id']]=_0x1f4341;_0x1b59f4[_0x205e('0xd4')](_0xca80f9);SetGroupVisible(_0x1b59f4,![]);_0x1b59f4['setDepth'](_0x4d4be2);_0x393a47[_0x205e('0x2aa')]['addListener'](_0x4c6143=>{if(_0xca80f9){_0xca80f9[_0x205e('0x4e9')](_0x4c6143[_0x205e('0x2d6')]());}});}['localize'](){super[_0x205e('0x322')]();}[_0x205e('0x6c3')](_0x270b68){return LocalizationManager[_0x205e('0x44d')](_0x270b68[_0x205e('0x2d3')]());}[_0x205e('0x6c8')](_0x14534a){return LocalizationManager['getLocalizedNumber'](_0x14534a['getUpgradePrice']());}[_0x205e('0x6b1')](_0x41ac06,_0x10068c){const _0x589f49=this[_0x205e('0x6af')][_0x41ac06['id']];const _0x243ea1=_0x589f49[_0x205e('0x37c')];if(_0x243ea1['hasOwnProperty'](_0x10068c['id'])){const _0x2b31da=_0x243ea1[_0x10068c['id']];_0x2b31da[_0x205e('0xd3')]['destroy'](!![]);if(_0x2b31da['jumpAnimation'])_0x2b31da[_0x205e('0x6cb')][_0x205e('0x209')]();delete _0x243ea1[_0x10068c['id']];SetGroupVisible(_0x589f49[_0x205e('0x1b2')][_0x10068c['id']][_0x205e('0xd3')],!![]);}if(!_0x589f49[_0x205e('0x2e6')][_0x205e('0x1bf')](_0x10068c['id']))this['createUpgradeGroup'](_0x41ac06,_0x10068c);if(!_0x589f49[_0x205e('0x2a8')][_0x205e('0x1bf')](_0x10068c['id']))this['createLikesGroup'](_0x41ac06,_0x10068c);const _0x20cdbf=_0x589f49[_0x205e('0x2e6')][_0x10068c['id']];_0x20cdbf[_0x205e('0x2a7')][_0x205e('0x4e9')](_0x10068c['getLevel']());_0x20cdbf[_0x205e('0x3de')][_0x205e('0x4e9')](this[_0x205e('0x6c8')](_0x10068c));_0x20cdbf[_0x205e('0x62f')][_0x205e('0x493')](_0x10068c[_0x205e('0x6cf')]());}['resourcesUpdate'](_0x1588d6,_0x34a770){const _0x2e2a53=this[_0x205e('0x6af')][_0x1588d6['id']][_0x205e('0x1b2')][_0x34a770['id']];_0x2e2a53[_0x205e('0x2ac')][_0x205e('0x4e9')](this[_0x205e('0x6c3')](_0x34a770));}[_0x205e('0x312')](_0x452ca4,_0x2b4be1){const _0x11287f=this[_0x205e('0x6af')][_0x452ca4['id']][_0x205e('0x2a8')][_0x2b4be1['id']];if(_0x11287f)_0x11287f['level']['setText'](_0x2b4be1[_0x205e('0x2d6')]());}[_0x205e('0x6b0')](_0xe34f72,_0x3dfcb0){if(_0x3dfcb0[_0x205e('0x2c2')]()>0x0){const _0x499883=this[_0x205e('0x6af')][_0xe34f72['id']][_0x205e('0x1b2')][_0x3dfcb0['id']];if(!_0x499883[_0x205e('0x6c2')]){if(_0x3dfcb0[_0x205e('0x2b7')]()<0x1&&_0x3dfcb0[_0x205e('0x2b5')]){_0x499883[_0x205e('0x6c2')]=!![];_0x499883['loader']['setFast'](!![]);}else _0x499883[_0x205e('0x62f')][_0x205e('0x493')](_0x3dfcb0[_0x205e('0x2d4')]());}if(_0x3dfcb0[_0x205e('0x2ba')]!==_0x499883['icon'][_0x205e('0xe9')]){_0x499883[_0x205e('0x1fc')][_0x205e('0x1f6')](_0x3dfcb0[_0x205e('0x2ba')]&&!_0x499883[_0x205e('0xd3')]['invisible']);}}}}class WinPhotosMainMenu extends WinWithBrownBack{constructor(_0x12aff5,_0xf1639){super(_0x12aff5,_0xf1639);}['localize'](){super[_0x205e('0x322')]();}[_0x205e('0x52a')](_0xcd1321){super[_0x205e('0x52a')](_0xcd1321);}[_0x205e('0x551')](_0x27fb23){super[_0x205e('0x551')](_0x27fb23);if(_0x27fb23){if(!this['prepared']){this['prepared']=!![];this[_0x205e('0x1eb')]=VisualData[_0x205e('0x6d1')];this[_0x205e('0x1eb')]['x']=this[_0x205e('0x535')]+this[_0x205e('0x1eb')][_0x205e('0x59c')]*GlobalScale;this[_0x205e('0x1eb')]['y']=this[_0x205e('0x536')]+this[_0x205e('0x1eb')][_0x205e('0x59d')]*GlobalScale;this[_0x205e('0x5a0')]=new GUIScroll(this['engine'],this[_0x205e('0x1eb')],this[_0x205e('0x589')][_0x205e('0xe6')](this),this[_0x205e('0x5a1')][_0x205e('0xe6')](this));}}this[_0x205e('0x5a0')][_0x205e('0x1f6')](_0x27fb23);}[_0x205e('0x5a1')](){return GameData[_0x205e('0x452')]();}[_0x205e('0x589')](_0x1901e8){const _0x2a2e9e=this['engine'];const _0x3d6fbd=this[_0x205e('0x1eb')];const _0x3e5f8e=_0x3d6fbd[_0x205e('0x4f6')]/0x2*GlobalScale;const _0x55a2ab=_0x3d6fbd['cellHeight']/0x2*GlobalScale;const _0x515cd0=_0x1901e8[_0x205e('0x172')];const _0xa404af=gameInit[_0x205e('0x16b')]['getPhotoQuestById'](_0x515cd0['id']);let _0x2e08cd=_0x2a2e9e['rexUI'][_0x205e('0xd4')][_0x205e('0x4f0')](0x0,0x0);_0x2e08cd[_0x205e('0x523')]=_0x2a2e9e[_0x205e('0xd4')]['container'](_0x3e5f8e,_0x55a2ab);_0x2e08cd[_0x205e('0xd4')](_0x2e08cd['unny_container']);new BasicButton(_0x2e08cd[_0x205e('0x523')],{'scene':_0x2a2e9e,'key':_0x205e('0x31'),'x':0x0,'y':0x0},()=>{guiManager[_0x205e('0x37e')](WindowType[_0x205e('0x6d2')]);guiManager[_0x205e('0x6d3')](WindowType[_0x205e('0x6d2')])[_0x205e('0x6d4')](_0x515cd0);});const _0x561320=GameData[_0x205e('0x581')](_0x515cd0['slot_id']);const _0x2ef3b5=VisualData[_0x205e('0x582')]()+_0x561320+_0x205e('0x2fe');LoadFile(_0x2a2e9e,_0x561320,_0x2ef3b5,()=>{if(this['visible']&&_0x2e08cd[_0x205e('0x4a4')]){_0x2e08cd[_0x205e('0x1fc')]=_0x2a2e9e[_0x205e('0xd4')][_0x205e('0x1fd')](_0x2e08cd['x']/localScale+_0x3e5f8e-0x172*GlobalScale,_0x2e08cd['y']/localScale+_0x55a2ab,_0x561320)[_0x205e('0xd7')](WinDefaultDepth+0x64);_0x2e08cd['add'](_0x2e08cd[_0x205e('0x1fc')][_0x205e('0xd8')](0.7));}});const _0x411752=_0x2a2e9e[_0x205e('0xd4')][_0x205e('0x225')](_0x3e5f8e+0x50*GlobalScale,_0x55a2ab-0x78*GlobalScale,_0x205e('0x6d5'),DefaultFont)[_0x205e('0xd9')](0.5);_0x2e08cd['add'](_0x411752);const _0x1e759c=_0x2a2e9e[_0x205e('0xd4')][_0x205e('0x225')](_0x3e5f8e+0x50*GlobalScale,_0x55a2ab+0x28*GlobalScale,'some\x20description\x20of\x20the\x20photo.\x20short\x20and\x20concise!',DefaultFontBlack)['setOrigin'](0.5)[_0x205e('0x528')](0x258*GlobalScale);_0x2e08cd[_0x205e('0xd4')](_0x1e759c);const _0x3a4871=_0x2a2e9e[_0x205e('0xd4')]['textOld'](_0x3e5f8e+0x190*GlobalScale,_0x55a2ab-0x78*GlobalScale,_0xa404af[_0x205e('0x2a7')]+'/'+MAX_PUZZLE_LEVEL,DefaultFontBlack)[_0x205e('0xd9')](0.5);_0x2e08cd[_0x205e('0xd4')](_0x3a4871);return _0x2e08cd[_0x205e('0xd9')](0x0)[_0x205e('0xd7')](WinDefaultDepth+0x64);}}class WinPhotosQuest extends WinWithBrownBack{constructor(_0x4f0b14,_0xa22410){super(_0x4f0b14,_0xa22410);this[_0x205e('0x6d6')]={};}[_0x205e('0x322')](){super[_0x205e('0x322')]();if(this[_0x205e('0x547')])this[_0x205e('0x547')][_0x205e('0x4e9')](LocalizationManager[_0x205e('0x226')]('UNLOCK'));}['createGame'](_0x2e66a1){super[_0x205e('0x52a')](_0x2e66a1);}[_0x205e('0x551')](_0x2994a7){super[_0x205e('0x551')](_0x2994a7);if(_0x2994a7){if(!this[_0x205e('0x568')]){this[_0x205e('0x568')]=!![];const _0x1c6135=this[_0x205e('0xd2')];const _0x452a98=this[_0x205e('0x535')]=0x7d0*GlobalScale;this[_0x205e('0x6d7')]=_0x1c6135['add']['text'](_0x452a98,0x190*GlobalScale,null,DefaultFont)[_0x205e('0xd9')](0.5);this['group'][_0x205e('0xd4')](this[_0x205e('0x6d7')]);this[_0x205e('0x6d8')]=_0x1c6135[_0x205e('0xd4')][_0x205e('0x1ff')](_0x452a98,0x1f4*GlobalScale,null,DefaultFontBlack)[_0x205e('0xd9')](0.5,0x0)[_0x205e('0x528')](0x4b0*GlobalScale);this[_0x205e('0xd3')]['add'](this[_0x205e('0x6d8')]);this[_0x205e('0x6d9')]=_0x1c6135[_0x205e('0xd4')][_0x205e('0x1ff')](_0x452a98,0x4e2*GlobalScale,null,DefaultFontBlack)[_0x205e('0xd9')](0.5,0x0)['setWordWrapWidth'](0x4b0*GlobalScale);this[_0x205e('0xd3')][_0x205e('0xd4')](this[_0x205e('0x6d9')]);const _0x58590b=0x578*GlobalScale;this[_0x205e('0x62f')]=new Loader(this['group'],_0x205e('0x630'),_0x205e('0x2f'),_0x452a98-0x3c*GlobalScale,_0x58590b);this[_0x205e('0x6da')]=_0x1c6135[_0x205e('0xd4')]['text'](_0x452a98+0x96*GlobalScale,_0x58590b,null,DefaultFontBlack)['setOrigin'](0x0,0.5);this[_0x205e('0xd3')][_0x205e('0xd4')](this['questProgress']);this[_0x205e('0x543')](this[_0x205e('0xd2')],()=>{const _0xfa608c=gameInit[_0x205e('0x471')][_0x205e('0x401')](this[_0x205e('0x6db')]['id']);if(_0xfa608c){_0xfa608c[_0x205e('0x40e')]();this[_0x205e('0x6d4')](this[_0x205e('0x6db')]);}},_0x58590b+0xc8*GlobalScale,!![],0x1,_0x452a98,0x320*GlobalScale);this[_0x205e('0x322')]();}}else{this[_0x205e('0x6dc')]();}hudResources[_0x205e('0x1f6')](_0x2994a7);}['_clearAnimatedObject'](){if(this[_0x205e('0x6dd')]){this['animatedGroup'][_0x205e('0x22e')](!![]);this[_0x205e('0x4ce')]=null;this['animatedGroup']=null;}}[_0x205e('0x6d4')](_0x2b86b9){this[_0x205e('0x6db')]=_0x2b86b9;const _0x2734a9=_0x2b86b9['slot_id'];const _0x41b8d7=0x1;const _0x2cb0b4=VisualData[_0x205e('0x149')][_0x2734a9];const _0x1fdf25={'x':-0x258*GlobalScale,'y':0xc8*GlobalScale};const _0x378e62=_0x2cb0b4[_0x205e('0x14a')];let _0x58a827=null;for(let _0x203941=0x0;_0x203941<_0x378e62['length'];_0x203941++){_0x58a827=_0x378e62[_0x203941]['building'];if(!_0x378e62[_0x203941][_0x205e('0x1bf')](_0x205e('0x4d2'))||_0x41b8d7<=_0x378e62[_0x203941][_0x205e('0x4d2')])break;}if(_0x58a827){const _0x23bc18=VisualData[_0x205e('0x143')][_0x58a827];const _0x4963f6=_0x23bc18[_0x205e('0x144')];PreloadObjects(this[_0x205e('0xd2')],_0x4963f6,()=>{if(this['visible']){this[_0x205e('0x6dc')]();this[_0x205e('0x6dd')]=this['engine']['add'][_0x205e('0x4f0')](0x0,0x0);this[_0x205e('0xd3')][_0x205e('0xd4')](this[_0x205e('0x6dd')]);this[_0x205e('0x4ce')]=PrepareObject(_0x4963f6,this['animatedGroup'],this[_0x205e('0xd2')],_0x2cb0b4[_0x205e('0x489')],_0x1fdf25,this['buildingWasClicked']['bind'](this));}});}this[_0x205e('0x6d7')][_0x205e('0x4e9')]('Photo\x20name');this[_0x205e('0x6d8')][_0x205e('0x4e9')](_0x205e('0x6de'));const _0x46d661=gameInit[_0x205e('0x16b')][_0x205e('0x3dc')](_0x2b86b9['id']);console['info'](_0x205e('0x6df')+_0x46d661[_0x205e('0x2a7')],_0x2b86b9);if(_0x46d661[_0x205e('0x2a7')]<_0x2b86b9[_0x205e('0x14a')][_0x205e('0xe7')]){const _0x27979d=_0x2b86b9[_0x205e('0x14a')][_0x46d661[_0x205e('0x2a7')]];const _0x49708e=_0x27979d[_0x205e('0x3de')];for(let _0x203941 in this[_0x205e('0x6d6')])this['resourcesModules'][_0x203941][_0x205e('0x1f6')](![]);const _0x993471=gameInit[_0x205e('0x471')][_0x205e('0x401')](_0x2b86b9['id']);if(_0x993471){this['activeResources']=[];for(let _0x203941 in _0x49708e){const _0x4f3ba7=_0x49708e[_0x203941];let _0x55473f;if(this[_0x205e('0x6d6')][_0x205e('0x1bf')](_0x4f3ba7[_0x205e('0x6e0')])){_0x55473f=this[_0x205e('0x6d6')][_0x4f3ba7['typePrice']];_0x55473f[_0x205e('0x1f6')](!![]);}else{_0x55473f=this[_0x205e('0x6d6')][_0x4f3ba7[_0x205e('0x6e0')]]=this[_0x205e('0xd2')][_0x205e('0xd4')]['container'](0x0,0x0)[_0x205e('0xd7')](WinDefaultDepth+0x3e8);this['group'][_0x205e('0xd4')](_0x55473f);const _0x5a7c37=this[_0x205e('0xd2')][_0x205e('0xd4')][_0x205e('0x1fd')](0x0,-0x3c*GlobalScale,GameData[_0x205e('0x5be')](_0x4f3ba7['typePrice']));_0x55473f[_0x205e('0x521')]=this['engine'][_0x205e('0xd4')][_0x205e('0x1ff')](0x0,0x3c*GlobalScale,null,DefaultFontBlack)[_0x205e('0xd9')](0.5);_0x55473f[_0x205e('0xd4')](_0x5a7c37);_0x55473f[_0x205e('0xd4')](_0x55473f[_0x205e('0x521')]);}_0x55473f['unny_text'][_0x205e('0x4e9')](LocalizationManager[_0x205e('0x480')](_0x4f3ba7[_0x205e('0x3de')][_0x205e('0x2ad')]()));this[_0x205e('0x6e1')][_0x205e('0xda')](_0x55473f);}const _0x3aadee=0xfa*GlobalScale;let _0x371ede=this['centerX']-_0x3aadee*(this[_0x205e('0x6e1')][_0x205e('0xe7')]-0x1)/0x2;for(let _0x203941 in this[_0x205e('0x6e1')]){this['activeResources'][_0x203941]['setPosition'](_0x371ede,0x44c*GlobalScale);_0x371ede+=_0x3aadee;}const _0x4f720e=LocalizationManager[_0x205e('0x226')](_0x27979d['info'])['format'](_0x993471['count']);this[_0x205e('0x6d9')]['setText'](_0x4f720e);this[_0x205e('0x62f')][_0x205e('0x493')](Math[_0x205e('0x271')](0x1,_0x993471[_0x205e('0x16b')]/_0x993471[_0x205e('0x3d9')]));this[_0x205e('0x6da')]['setText'](_0x993471['progress']+'/'+_0x993471[_0x205e('0x3d9')]);const _0x29cc16=_0x993471[_0x205e('0x16b')]>=_0x993471[_0x205e('0x3d9')];this[_0x205e('0x546')][_0x205e('0x1f6')](_0x29cc16);this[_0x205e('0x547')][_0x205e('0x1f6')](_0x29cc16);return;}}this[_0x205e('0x546')][_0x205e('0x1f6')](![]);this[_0x205e('0x547')][_0x205e('0x1f6')](![]);this[_0x205e('0x62f')][_0x205e('0x1f6')](![]);this[_0x205e('0x6da')][_0x205e('0x1f6')](![]);this[_0x205e('0x6d9')][_0x205e('0x4e9')](_0x205e('0x6e2'));}[_0x205e('0x2dd')](){if(this[_0x205e('0x4ce')])this[_0x205e('0x4ce')][_0x205e('0x4cf')](!![]);}}const GUIMode={'Normal':0x1,'UpgradeBuildings':0x2,'Boss':0x3,'Likes':0x4};const WindowType={'WinMain':0x0,'WinConstruct':0x1,'WinBuildings':0x2,'WinUpgrade':0x3,'WinStore':0x4,'WinPuzzle':0x5,'WinBossSummon':0x6,'WinBossProccess':0x7,'WinHarvested':0x8,'WinFortuneWheel':0x9,'WinQuests':0xa,'WinSupervisor':0xb,'WinGuard':0xc,'WinDaily':0xd,'WinDropPuzzle':0xe,'WinNoAdd':0xf,'WinNotEnoughGems':0x10,'WinWaiting':0x11,'WinFreeUpgrade':0x12,'WinTimeTravel':0x13,'WinApples':0x14,'WinBanjoEnd':0x15,'WinBanjoPreEnd':0x16,'WinSettings':0x17,'WinAdBLock':0x18,'WinOtherWorlds':0x19,'WinPhotosMainMenu':0x1a,'WinPhotosQuest':0x1b,'WinPhotosAll':0x1c,'WinInAppBought':0x1d};class GUIManager{constructor(_0x170bc9){_0x170bc9['create']['addListener'](this[_0x205e('0xd6')][_0x205e('0xe6')](this));_0x170bc9[_0x205e('0x467')][_0x205e('0x27d')](this[_0x205e('0x467')][_0x205e('0xe6')](this));_0x170bc9[_0x205e('0x301')][_0x205e('0x27d')](this[_0x205e('0x472')][_0x205e('0xe6')](this));_0x170bc9['onBuildingUpdated']['addListener'](this[_0x205e('0x311')][_0x205e('0xe6')](this));_0x170bc9['onBuildingLiked'][_0x205e('0x27d')](this[_0x205e('0x312')][_0x205e('0xe6')](this));_0x170bc9[_0x205e('0x456')][_0x205e('0x27d')](this['buildingResourcesUpdated'][_0x205e('0xe6')](this));_0x170bc9[_0x205e('0x287')]['addListener'](this['buildingUpgraded'][_0x205e('0xe6')](this));clickController[_0x205e('0x4c4')][_0x205e('0x27d')](this[_0x205e('0x6e3')][_0x205e('0xe6')](this));this[_0x205e('0x301')]=new UnnyAction();this[_0x205e('0x287')]=new UnnyAction();this[_0x205e('0x2a2')]=new UnnyAction();this[_0x205e('0x303')]=new UnnyAction();this[_0x205e('0x2d2')]=new UnnyAction();this['onBuildingResourcesUpdated']=new UnnyAction();this[_0x205e('0x6b2')]=new UnnyAction();this[_0x205e('0x6ad')]=new UnnyAction();this[_0x205e('0x6e4')]=new UnnyAction();this[_0x205e('0x664')]=GUIMode[_0x205e('0x661')];this['allWindows']=[];this[_0x205e('0x6e5')][WindowType['WinMain']]=new WinMain(this,_0x170bc9);this[_0x205e('0x6e5')][WindowType[_0x205e('0x6e6')]]=new WinConstruct(this,_0x170bc9);this[_0x205e('0x6e5')][WindowType[_0x205e('0x6e7')]]=new BuildingsGUI(this,_0x170bc9);this[_0x205e('0x6e5')][WindowType[_0x205e('0x6e8')]]=new WinUpgrade(this,_0x170bc9);this['allWindows'][WindowType[_0x205e('0x69c')]]=new WinStore(this,_0x170bc9);this[_0x205e('0x6e5')][WindowType[_0x205e('0x68f')]]=new WinPuzzle(this,_0x170bc9);this[_0x205e('0x6e5')][WindowType[_0x205e('0x689')]]=new WinBossSummon(this,_0x170bc9,{'header':_0x205e('0x6e9'),'description':'CollectCropText','image':_0x205e('0x423'),'button':_0x205e('0x6ea'),'action':()=>this[_0x205e('0x68a')](GUIMode[_0x205e('0x6be')])});this[_0x205e('0x6e5')][WindowType['WinBossProccess']]=new WinBossProccess(this,_0x170bc9);this[_0x205e('0x6e5')][WindowType[_0x205e('0x6eb')]]=new WinHarvested(this,_0x170bc9);this[_0x205e('0x6e5')][WindowType[_0x205e('0x690')]]=new WinFortuneWheel(this,_0x170bc9);this[_0x205e('0x6e5')][WindowType['WinQuests']]=new WinQuests(this,_0x170bc9);this[_0x205e('0x6e5')][WindowType[_0x205e('0x6ec')]]=new WinWithUnlockedExitButton(this,_0x170bc9,{'header':'BanjoTitle','description':_0x205e('0x6ed'),'image':_0x205e('0x6ee'),'button':_0x205e('0x6ef'),'btn_min_width':0x6a4*GlobalScale,'icon':_0x205e('0x39'),'action':()=>{PlayRewardedAd(()=>{gameAnalytics[_0x205e('0x383')](_0x205e('0x6f0'));_0x170bc9[_0x205e('0x16b')][_0x205e('0x36b')]();this[_0x205e('0x6d3')](WindowType['WinMain'])[_0x205e('0x6f1')]();});}});this[_0x205e('0x6e5')][WindowType[_0x205e('0x6f2')]]=new WinGuard(this,_0x170bc9,{'header':_0x205e('0x6f3'),'description':_0x205e('0x6f4'),'image':_0x205e('0x6f5'),'button':'RainButtonText','btn_min_width':0x3e8*GlobalScale,'icon':_0x205e('0x39'),'action':()=>{PlayRewardedAd(()=>{gameAnalytics[_0x205e('0x383')](_0x205e('0x6f6'));_0x170bc9['progress'][_0x205e('0x36e')]();});}});this[_0x205e('0x6e5')][WindowType['WinDaily']]=new WinDailyBonus(this,_0x170bc9);this[_0x205e('0x6e5')][WindowType[_0x205e('0x68c')]]=new WinDropPuzzle(this,_0x170bc9);this[_0x205e('0x6e5')][WindowType[_0x205e('0x6f7')]]=new WinWithPicture(this,_0x170bc9,{'header':_0x205e('0x6f8'),'description':_0x205e('0x6f9'),'image':_0x205e('0x6fa'),'button':_0x205e('0x6fb'),'no_exit':!![]});this[_0x205e('0x6e5')][WindowType[_0x205e('0x6fc')]]=new WinWithPicture(this,_0x170bc9,{'header':_0x205e('0x6f8'),'description':_0x205e('0x6fd'),'image':_0x205e('0x6fa'),'button':'ButtonOk','no_exit':!![]});this['allWindows'][WindowType[_0x205e('0x474')]]=new WinWithPicture(this,_0x170bc9,{'header':'LocationsNotOpenedWindowTitle','description':_0x205e('0x6fe'),'image':_0x205e('0x6ff'),'button':_0x205e('0x6fb'),'no_exit':!![],'smallFont':!![],'wordWrapWidth':0x3e8});this[_0x205e('0x6e5')][WindowType['WinInAppBought']]=new WinInAppBought(this,_0x170bc9,{'header':_0x205e('0x587'),'description':'PopupInApp','image':_0x205e('0x131'),'button':'ButtonOk','no_exit':!![],'imageX':0x64,'imageY':0x46,'scaleImage':0.9});this[_0x205e('0x6e5')][WindowType['WinNotEnoughGems']]=new WinWithPicture(this,_0x170bc9,{'description':_0x205e('0x700'),'image':_0x205e('0x701'),'button':'ButtonOk','imageX':0x64,'action':()=>this[_0x205e('0x50b')]()});this[_0x205e('0x6e5')][WindowType['WinWaiting']]=new WinWithPicture(this,_0x170bc9,{'description':_0x205e('0x702'),'image':_0x205e('0x703'),'no_exit':!![]});this[_0x205e('0x6e5')][WindowType[_0x205e('0x695')]]=new WinWithPicture(this,_0x170bc9,{'header':_0x205e('0x704'),'description':_0x205e('0x705'),'image':'Clockwork_icon_big','button':_0x205e('0x6fb')});this[_0x205e('0x6e5')][WindowType[_0x205e('0x706')]]=new WinTimeTravel(this,_0x170bc9,{'description':_0x205e('0x707'),'image':_0x205e('0x708'),'button':_0x205e('0x6fb')});this[_0x205e('0x6e5')][WindowType[_0x205e('0x709')]]=new WinAppleDescription(this,_0x170bc9,{'header':_0x205e('0x70a'),'image':_0x205e('0x70b'),'imageY':0x12c});this[_0x205e('0x6e5')][WindowType[_0x205e('0x675')]]=new WinBanjoEnd(this,_0x170bc9,{'header':_0x205e('0x70c'),'description':'BanjoEndDesc','image':_0x205e('0x70d'),'button':'ButtonOk','no_exit':!![]});this[_0x205e('0x6e5')][WindowType['WinBanjoPreEnd']]=new WinBanjoPreEnd(this,_0x170bc9,{'header':_0x205e('0x70c'),'image':_0x205e('0x70e'),'imageX':0xc8,'no_exit':!![],'descriptionX':0x15e,'descriptionY':0x64});this['allWindows'][WindowType[_0x205e('0x5d0')]]=new WinSettings(this,_0x170bc9);if(VisualData[_0x205e('0x419')]()['photos']){this['allWindows'][WindowType[_0x205e('0x69a')]]=new WinPhotosMainMenu(this,_0x170bc9);this[_0x205e('0x6e5')][WindowType['WinPhotosQuest']]=new WinPhotosQuest(this,_0x170bc9);}this[_0x205e('0x70f')]=[];this[_0x205e('0x70f')][_0x205e('0xda')](this[_0x205e('0x6e5')][WindowType[_0x205e('0x710')]]);for(let _0x1d5af2 in this[_0x205e('0x6e5')]){const _0x19c710=this[_0x205e('0x6e5')][_0x1d5af2];_0x19c710[_0x205e('0x711')]=_0x1d5af2;_0x19c710[_0x205e('0x52b')][_0x205e('0x27d')](this[_0x205e('0x712')][_0x205e('0xe6')](this));}clickController['onFabrikaWasClicked'][_0x205e('0x27d')](_0x45dcd4=>{if(_0x45dcd4===_0x205e('0x1dd')&&this[_0x205e('0x713')]()&&!_0x170bc9[_0x205e('0x16b')]['isSupervisorActive']())this['openNewWindow'](WindowType[_0x205e('0x689')]);});clickController[_0x205e('0x4c6')]['addListener'](_0xc52200=>{if(_0xc52200===_0x205e('0x1dd')&&this[_0x205e('0x713')]()&&!_0x170bc9['progress'][_0x205e('0x2de')]())this[_0x205e('0x37e')](WindowType[_0x205e('0x6f2')]);});eventManager[_0x205e('0x288')][_0x205e('0x27d')](_0x5b9ab3=>{const _0xa3d836=this['openNewWindow'](WindowType[_0x205e('0x6eb')],!![]);_0xa3d836[_0x205e('0x64e')](_0x5b9ab3);});}[_0x205e('0x467')](){CalculateFonts();}['_checkForNewPopup'](){if(this[_0x205e('0x714')]['length']>0x0){const _0x11bd93=this[_0x205e('0x714')][0x0];this['popup'][_0x205e('0x715')]['setText'](_0x11bd93[_0x205e('0x1ff')]);this[_0x205e('0x716')][_0x205e('0x1f6')](!![]);this[_0x205e('0x714')][_0x205e('0x242')](0x0,0x1);audioManager[_0x205e('0x273')]();let _0x44d556=null;if(_0x11bd93[_0x205e('0x1fc')]){_0x44d556=this['engine']['add']['sprite'](this[_0x205e('0x716')][_0x205e('0x717')]['x'],this[_0x205e('0x716')][_0x205e('0x717')]['y'],_0x11bd93[_0x205e('0x1fc')]);this[_0x205e('0x716')][_0x205e('0xd4')](_0x44d556);this[_0x205e('0x716')][_0x205e('0x717')][_0x205e('0x1f6')](![]);}else this[_0x205e('0x716')][_0x205e('0x717')][_0x205e('0x1f6')](!![]);this[_0x205e('0x718')]=setTimeout(()=>{this[_0x205e('0x716')]['setVisible'](![]);if(_0x44d556)_0x44d556[_0x205e('0x22e')](!![]);setTimeout(()=>{this[_0x205e('0x718')]=null;this[_0x205e('0x719')]();},0x1f4);},0x7d0);}}[_0x205e('0x71a')](_0x24b5da,_0x2336a4){this[_0x205e('0x714')][_0x205e('0xda')]({'text':_0x24b5da,'icon':_0x2336a4});if(!this[_0x205e('0x718')])this[_0x205e('0x719')]();}[_0x205e('0x71b')](_0x2e718e){this[_0x205e('0x714')]=[];this[_0x205e('0x716')]=_0x2e718e[_0x205e('0xd4')]['container']();const _0x5d48ee=_0x2e718e[_0x205e('0xd4')][_0x205e('0x1fd')](0x0,0x0,_0x205e('0x34'))[_0x205e('0xd9')](0x0,0.5);this[_0x205e('0x716')]['thumb']=_0x2e718e['add'][_0x205e('0x1fd')](-0xa*GlobalScale,-0x14*GlobalScale,_0x205e('0x35'));this[_0x205e('0x716')][_0x205e('0x715')]=_0x2e718e[_0x205e('0xd4')]['text'](0x32*GlobalScale,0x0,_0x205e('0x71c'),DefaultFontSmall2)[_0x205e('0xd9')](0x0,0.5);this[_0x205e('0x716')][_0x205e('0xd4')](_0x5d48ee);this['popup']['add'](this[_0x205e('0x716')][_0x205e('0x717')]);this[_0x205e('0x716')][_0x205e('0xd4')](this[_0x205e('0x716')][_0x205e('0x715')]);this[_0x205e('0x716')][_0x205e('0xe8')](RealScreenWidth-_0x5d48ee[_0x205e('0xe4')]*imagesDeltaScale-0x64*GlobalScale,RealScreenHeight*0.4);this[_0x205e('0x716')][_0x205e('0xd7')](WinDefaultDepth+0x3e8);this[_0x205e('0x716')][_0x205e('0x1f6')](![]);eventManager[_0x205e('0x286')][_0x205e('0x27d')](()=>{this[_0x205e('0x71a')](LocalizationManager[_0x205e('0x226')](_0x205e('0x71d')));});eventManager[_0x205e('0x298')][_0x205e('0x27d')]((_0x3afd86,_0x16acb9)=>{let _0x8406a2=_0x205e('0x5e0');switch(_0x16acb9[_0x205e('0x2ea')]){case _0x205e('0x2eb'):_0x8406a2=LocalizationManager['getLocalizization'](_0x205e('0x71e'));break;case _0x205e('0x2cb'):_0x8406a2=LocalizationManager[_0x205e('0x226')](_0x205e('0x71f'))[_0x205e('0x477')](_0x16acb9[_0x205e('0x2ec')]);break;}this[_0x205e('0x71a')](_0x8406a2,_0x3afd86['getSmallIcon']());});}[_0x205e('0x712')](_0x2202d7){const _0x3f106e=this[_0x205e('0x70f')];if(_0x3f106e[_0x3f106e['length']-0x1]===_0x2202d7){_0x3f106e[_0x205e('0x152')]();_0x3f106e[_0x3f106e[_0x205e('0xe7')]-0x1]['setWindowVisible'](!![]);}else{for(let _0x2306ca in _0x3f106e){if(_0x3f106e[_0x2306ca]===_0x2202d7){_0x3f106e[_0x205e('0x242')](_0x2306ca,0x1);break;}}}this[_0x205e('0x720')]();}[_0x205e('0x720')](){const _0x6073fb=this['activeWindows'];const _0x34e237=this[_0x205e('0x721')]()[_0x205e('0x711')];const _0x1c2d28=_0x6073fb[_0x205e('0xe7')]===0x1;const _0x14c89d=_0x1c2d28||_0x34e237==WindowType['WinBossProccess'];visualGame['setBuildingsProductionVisible'](gameInit[_0x205e('0x30b')],_0x14c89d);visualGame[_0x205e('0x4e7')](_0x1c2d28);if(_0x34e237!=WindowType[_0x205e('0x6e8')])this[_0x205e('0x6e5')][WindowType[_0x205e('0x6e7')]][_0x205e('0x6c0')](_0x1c2d28,![],![],gameInit[_0x205e('0x30b')]);if(_0x34e237===WindowType[_0x205e('0x710')]){this[_0x205e('0x722')]();}else this[_0x205e('0x723')]();}[_0x205e('0x724')](_0x2a1760,_0x2d25ab){const _0x495ddd=WindowType[_0x205e('0x706')];const _0x4fb9cd=this[_0x205e('0x6e5')][_0x495ddd];_0x4fb9cd[_0x205e('0x676')](_0x2a1760,_0x2d25ab);this[_0x205e('0x37e')](_0x495ddd);}[_0x205e('0x50b')](){const _0x30807c=WindowType['WinStore'];const _0x34f23d=this['allWindows'][_0x30807c];_0x34f23d[_0x205e('0x5ec')]();this[_0x205e('0x37e')](_0x30807c);}[_0x205e('0x725')](){return this[_0x205e('0x70f')][this[_0x205e('0x70f')][_0x205e('0xe7')]-0x1][_0x205e('0x711')];}[_0x205e('0x721')](){return this[_0x205e('0x70f')][this[_0x205e('0x70f')][_0x205e('0xe7')]-0x1];}['getWindowByType'](_0x12c17f){return this[_0x205e('0x6e5')][_0x12c17f];}['openNewWindow'](_0x56c716,_0x5b50e3){const _0xcb61ad=this['activeWindows'];const _0x308566=this[_0x205e('0x6e5')][_0x56c716];if(_0x308566===_0xcb61ad[_0xcb61ad[_0x205e('0xe7')]-0x1])return _0x308566;if(_0x5b50e3){_0xcb61ad[_0xcb61ad[_0x205e('0xe7')]-0x1]['closeWindow']();return this[_0x205e('0x37e')](_0x56c716,![]);}else _0xcb61ad[_0xcb61ad[_0x205e('0xe7')]-0x1][_0x205e('0x551')](![]);_0x308566[_0x205e('0x551')](!![]);_0xcb61ad[_0x205e('0xda')](_0x308566);this['_checkForProduction']();return _0x308566;}[_0x205e('0x713')](){return this[_0x205e('0x664')]===GUIMode['Normal'];}[_0x205e('0x68a')](_0x315154){const _0x243cc8=gameInit[_0x205e('0x30b')];this[_0x205e('0x664')]=_0x315154;this[_0x205e('0x6ad')][_0x205e('0x281')](this[_0x205e('0x664')],_0x243cc8);switch(_0x315154){case GUIMode[_0x205e('0x68b')]:case GUIMode['Likes']:this[_0x205e('0x37e')](WindowType[_0x205e('0x6e8')]);break;case GUIMode[_0x205e('0x6be')]:audioManager[_0x205e('0x256')](0x0);gameInit[_0x205e('0x16b')][_0x205e('0x3a9')]();this[_0x205e('0x726')]();this[_0x205e('0x37e')](WindowType['WinBossProccess']);this[_0x205e('0x727')]=visualGame['prepareForHarvest']();break;}}[_0x205e('0x726')](){PrepareAndCreateObject(VisualData[_0x205e('0x728')],null,this[_0x205e('0xd2')],OverlayDepth+WinDefaultDepth,_0xb0477c=>{this[_0x205e('0x729')]=_0xb0477c;if(this[_0x205e('0x664')]!==GUIMode[_0x205e('0x6be')])this[_0x205e('0x72a')]();else this[_0x205e('0x729')][_0x205e('0x48f')][_0x205e('0xe8')](this[_0x205e('0x729')][_0x205e('0x48f')]['x']/localScale,this['harvesting'][_0x205e('0x48f')]['y']/localScale+0x306*GlobalScale);});}[_0x205e('0x72a')](){if(this[_0x205e('0x729')]){this[_0x205e('0x729')]['destroy'](!![]);this[_0x205e('0x729')]=null;}}[_0x205e('0x322')](){for(let _0x1d33b4 in this[_0x205e('0x6e5')])this[_0x205e('0x6e5')][_0x1d33b4]['localize']();}['create'](_0x39779c){this[_0x205e('0xd2')]=_0x39779c;this[_0x205e('0x6e4')][_0x205e('0x281')](_0x39779c);for(let _0xc9e315 in this[_0x205e('0x6e5')])this[_0x205e('0x6e5')][_0xc9e315]['localize']();this[_0x205e('0x70f')][0x0]['setWindowVisible'](!![]);gameInit[_0x205e('0x16b')][_0x205e('0x343')][_0x205e('0x27d')](this['puzzleReceived'][_0x205e('0xe6')](this));gameInit[_0x205e('0x16b')][_0x205e('0x286')][_0x205e('0x27d')](this[_0x205e('0x295')][_0x205e('0xe6')](this));this[_0x205e('0x72b')]=_0x39779c[_0x205e('0xd4')]['text'](VisualData[_0x205e('0x4ad')][_0x205e('0x4ae')]['x'],RealScreenHeight-0x3c*GlobalScale,null,DefaultFontBig)[_0x205e('0xd9')](0.5,0.5)[_0x205e('0xd7')](WinDefaultDepth-0x7d0);this['hideTutorialText']();this[_0x205e('0x71b')](_0x39779c);}['checkForTutorialPhrase'](){if(this[_0x205e('0x72b')]['text'])this[_0x205e('0x72b')][_0x205e('0x1f6')](!![]);}[_0x205e('0x72c')](_0x2c9b1d){this[_0x205e('0x72b')][_0x205e('0x4e9')](_0x2c9b1d);this[_0x205e('0x72b')][_0x205e('0x1f6')](_0x2c9b1d!=null&&this[_0x205e('0x721')]()['winType']==WindowType[_0x205e('0x710')]);}[_0x205e('0x723')](){this[_0x205e('0x72b')][_0x205e('0x1f6')](![]);}[_0x205e('0x295')](_0x215a35){switch(_0x215a35[_0x205e('0x2ea')]){case _0x205e('0x442'):this[_0x205e('0x724')](_0x215a35[_0x205e('0x2ec')]/0x3c,WinStore[_0x205e('0x5e1')](_0x215a35));break;}}['puzzleReceived'](_0x4638fd,_0x349cee,_0x27a9e8,_0x3f6a7a,_0x40396d){const _0x5618be=this[_0x205e('0x37e')](WindowType[_0x205e('0x68c')]);_0x5618be[_0x205e('0x580')](_0x4638fd,_0x349cee,_0x27a9e8,_0x3f6a7a,_0x40396d);}[_0x205e('0x296')](_0x532333,_0x32b0cd){this[_0x205e('0x287')][_0x205e('0x281')](_0x532333,_0x32b0cd,this[_0x205e('0xd2')]);}[_0x205e('0x472')](_0x5cda3f,_0x29e4b2){this[_0x205e('0x301')][_0x205e('0x281')](_0x5cda3f,_0x29e4b2,this[_0x205e('0xd2')]);}[_0x205e('0x312')](_0x5b2e76,_0x45380f){this[_0x205e('0x303')][_0x205e('0x281')](_0x5b2e76,_0x45380f,this['engine']);}[_0x205e('0x311')](_0xc40c3,_0x40a352){this[_0x205e('0x2a2')]['callListeners'](_0xc40c3,_0x40a352,this[_0x205e('0xd2')]);}['buildingResourcesUpdated'](_0x5ea789,_0x2fd09c){this['onBuildingResourcesUpdated'][_0x205e('0x281')](_0x5ea789,_0x2fd09c);}['tryToUpgradeBuilding'](_0x40c33b){if(gameInit[_0x205e('0x16b')][_0x205e('0x372')](_0x40c33b[_0x205e('0x2da')]())){_0x40c33b[_0x205e('0x2ef')]();}}[_0x205e('0x72d')](_0xe5d30b){if(gameInit[_0x205e('0x16b')][_0x205e('0x2de')]())return;if(gameInit[_0x205e('0x16b')][_0x205e('0x2c3')](_0xe5d30b)){const _0x52fda0=this[_0x205e('0x37e')](WindowType['WinConstruct']);_0x52fda0[_0x205e('0x72e')](_0xe5d30b);}}[_0x205e('0x6e3')](_0x52436e){switch(this[_0x205e('0x664')]){case GUIMode[_0x205e('0x661')]:{if(_0x52436e[_0x205e('0x2c2')]()===0x0)this[_0x205e('0x72d')](_0x52436e);else _0x52436e[_0x205e('0x2dd')]();break;}case GUIMode[_0x205e('0x68b')]:if(_0x52436e['getLevel']()>0x0)this[_0x205e('0x72f')](_0x52436e);break;case GUIMode[_0x205e('0x6be')]:if(!_0x52436e[_0x205e('0x4cd')]){this[_0x205e('0x727')]--;if(!this[_0x205e('0x727')]){this[_0x205e('0x68a')](GUIMode[_0x205e('0x661')]);gameInit[_0x205e('0x297')]();this[_0x205e('0x72a')]();this[_0x205e('0x6b2')][_0x205e('0x281')]();audioManager[_0x205e('0x256')](0x1);}}break;}}}const guiManager=new GUIManager(gameInit);class Tutorial{constructor(){this[_0x205e('0x489')]=WinDefaultDepth+0x384;this[_0x205e('0x730')]=![];this[_0x205e('0x731')]=![];this[_0x205e('0x732')]=![];}['loaded'](_0x32a74c){const _0x123684=_0x32a74c[_0x205e('0x3b9')]();if(_0x123684!==TutPhases[_0x205e('0x733')]){this[_0x205e('0x734')]=tutorial[_0x205e('0xe5')]['bind'](tutorial);gameInit[_0x205e('0xe5')][_0x205e('0x27d')](this[_0x205e('0x734')]);if(_0x123684>=TutPhases[_0x205e('0x3c0')]&&_0x123684<=TutPhases[_0x205e('0x3c0')]){for(let _0x4601e3=0x0;_0x4601e3<=TutPhases['WaitForSummonToEnd'];_0x4601e3++)this[_0x205e('0x735')](_0x4601e3);for(let _0x358c7b=TutPhases['FortuneWheel'];_0x358c7b<=_0x123684;_0x358c7b++)this['preparePhase'](_0x358c7b);}else{for(let _0x2753d1=0x0;_0x2753d1<=_0x123684;_0x2753d1++)this[_0x205e('0x735')](_0x2753d1);}}}[_0x205e('0x736')](){gameInit[_0x205e('0xe5')][_0x205e('0x27f')](this[_0x205e('0x734')]);guiManager[_0x205e('0x72c')](null);this[_0x205e('0x737')]['destroy'](!![]);this[_0x205e('0x738')][_0x205e('0x22e')](!![]);}['pointAtPosition'](_0x2728c2,_0x578c1c,_0x2babcc){this[_0x205e('0x737')][_0x205e('0x1f6')](!![]);const _0x4f3532=(_0x2babcc?_0x2728c2['x']/localScale:_0x2728c2['x'])+(_0x578c1c?0x0:VisualData[_0x205e('0x4ad')]['center']['x']);const _0x475825=(_0x2babcc?_0x2728c2['y']/localScale:_0x2728c2['y'])+(_0x578c1c?0x0:VisualData[_0x205e('0x4ad')][_0x205e('0x4ae')]['y']);this['finger'][_0x205e('0xe8')](_0x4f3532,_0x475825);this[_0x205e('0x738')][_0x205e('0xe8')](_0x4f3532,_0x475825);if(!this[_0x205e('0x4b0')]){setTimeout(()=>{if(this['finger'][_0x205e('0xe9')]&&!this[_0x205e('0x4b0')]){this[_0x205e('0x4b0')]=0x1;this[_0x205e('0x738')][_0x205e('0x1f6')](!![]);this['animation']=animManager[_0x205e('0x739')](this[_0x205e('0x738')],0.833);}},0x258);}else this[_0x205e('0x738')][_0x205e('0x1f6')](!![]);}[_0x205e('0x73a')](_0x12a1e2){return this['lastWindow']==_0x12a1e2;}[_0x205e('0x73b')](_0xf1aa3e,_0x257ac1){lockGuiAtButton(_0xf1aa3e);if(_0xf1aa3e[_0x205e('0x1f7')]){const _0x36b73f=_0xf1aa3e[_0x205e('0x1f7')]();this[_0x205e('0x73c')]({'x':_0x36b73f['x']/localScale,'y':_0x36b73f['y']/localScale+(0.5-_0xf1aa3e[_0x205e('0x73d')])*_0xf1aa3e[_0x205e('0xdf')]},_0x257ac1);}else if(_0xf1aa3e[_0x205e('0x73d')]&&_0xf1aa3e[_0x205e('0x73d')]!==0.5){this[_0x205e('0x73c')]({'x':_0xf1aa3e['x'],'y':_0xf1aa3e['y']+(0.5-_0xf1aa3e[_0x205e('0x73d')])*_0xf1aa3e[_0x205e('0xdf')]},_0x257ac1);}else{this[_0x205e('0x73c')](_0xf1aa3e,_0x257ac1);}}[_0x205e('0x73e')](){this['finger'][_0x205e('0x1f6')](![]);this[_0x205e('0x738')][_0x205e('0x1f6')](![]);}[_0x205e('0x73f')](){const _0x4cdbb6=VisualData[_0x205e('0x149')][0x1][_0x205e('0x6c7')];const _0x1d2f78=VisualData[_0x205e('0x149')][0x1][_0x205e('0x14a')][0x0][_0x205e('0x4d1')];const _0x8583ba=VisualData[_0x205e('0x143')][_0x1d2f78][_0x205e('0x144')][0x0];return{'x':_0x4cdbb6['x']+_0x8583ba['x'],'y':_0x4cdbb6['y']+_0x8583ba['y']};}[_0x205e('0x735')](_0x400b9e){this[_0x205e('0x740')]=_0x400b9e;this[_0x205e('0x741')]=guiManager[_0x205e('0x725')]();this[_0x205e('0x742')]=0x0;guiManager[_0x205e('0x72c')](this[_0x205e('0x743')]());switch(this['phase']){case TutPhases[_0x205e('0x744')]:if(this[_0x205e('0x73a')](WindowType[_0x205e('0x710')])){this[_0x205e('0x73c')](this[_0x205e('0x73f')]());lockGuiEverything();guiManager[_0x205e('0x721')]()[_0x205e('0x549')]();}else{if(this[_0x205e('0x73a')](WindowType['WinConstruct'])){this[_0x205e('0x73b')](guiManager[_0x205e('0x721')]()[_0x205e('0x548')]());}}break;case TutPhases[_0x205e('0x745')]:this[_0x205e('0x73e')]();lockGuiEverything();break;case TutPhases['UpgradeBuilding']:case TutPhases[_0x205e('0x746')]:if(this[_0x205e('0x73a')](WindowType[_0x205e('0x710')])){const _0x4b0e97=guiManager[_0x205e('0x721')]();_0x4b0e97[_0x205e('0x6a3')]();lockAtOneAnimatedObject(_0x4b0e97);this[_0x205e('0x73b')](_0x4b0e97[_0x205e('0x6a7')](),!![]);}else{if(this[_0x205e('0x73a')](WindowType[_0x205e('0x6e8')])){lockGuiEverything();unlockAnimatedObject();this['pointAtPosition'](this[_0x205e('0x73f')]());}}break;case TutPhases[_0x205e('0x747')]:case TutPhases['Collect10k']:unlockAnimatedObject();this[_0x205e('0x73e')]();unlockGUI();break;case TutPhases[_0x205e('0x748')]:if(this['_isWindow'](WindowType[_0x205e('0x710')])){GlobalInputLocked=!![];const _0x574c6d=guiManager[_0x205e('0x721')]();_0x574c6d[_0x205e('0x6a5')]();this[_0x205e('0x73b')](_0x574c6d[_0x205e('0x6a8')](),!![]);}else{if(this[_0x205e('0x73a')](WindowType['WinStore'])){GlobalInputLocked=![];const _0x558708=guiManager['getActiveWindow']();this['_lockAtButton'](_0x558708[_0x205e('0x5d4')](),!![]);_0x558708[_0x205e('0x5a0')]['setScrollerEnable'](![]);}}break;case TutPhases[_0x205e('0x3c7')]:if(this[_0x205e('0x73a')](WindowType['WinMain'])){if(this[_0x205e('0x730')])this[_0x205e('0x749')]();else{lockAtOneAnimatedObject(visualGame[_0x205e('0x4f2')]());GlobalInputLocked=![];lockGuiEverything();visualGame['showGuard']();this[_0x205e('0x73c')](visualGame[_0x205e('0x4f2')]()[_0x205e('0x48f')],!![],!![]);}}else{if(this[_0x205e('0x73a')](WindowType[_0x205e('0x6f2')])||this[_0x205e('0x73a')](WindowType[_0x205e('0x6f7')])){this[_0x205e('0x73b')](guiManager[_0x205e('0x721')]()[_0x205e('0x548')]());this['guardShown']=!![];}}break;case TutPhases['Boost6s']:if(this['_isWindow'](WindowType[_0x205e('0x710')])){if(this[_0x205e('0x731')])this[_0x205e('0x749')]();else{unlockAnimatedObject();GlobalInputLocked=!![];const _0x1179d5=guiManager[_0x205e('0x721')]();_0x1179d5[_0x205e('0x6a6')]();this[_0x205e('0x73b')](_0x1179d5['getSuperVisorButton'](),!![]);}}else{if(this['_isWindow'](WindowType[_0x205e('0x6ec')])||this[_0x205e('0x73a')](WindowType['WinNoAdd'])){this[_0x205e('0x73b')](guiManager[_0x205e('0x721')]()[_0x205e('0x548')]());this[_0x205e('0x731')]=!![];}}break;case TutPhases[_0x205e('0x3c0')]:if(this['_isWindow'](WindowType[_0x205e('0x710')])){if(this[_0x205e('0x732')]){this['moveToNextPhase']();}else{unlockAnimatedObject();GlobalInputLocked=!![];const _0x12ebba=guiManager['getActiveWindow']();this[_0x205e('0x73b')](_0x12ebba[_0x205e('0x6ab')](),!![]);}}else{if(this[_0x205e('0x73a')](WindowType[_0x205e('0x690')])||this['_isWindow'](WindowType[_0x205e('0x6f7')])){this[_0x205e('0x73b')](guiManager[_0x205e('0x721')]()[_0x205e('0x548')]());this[_0x205e('0x732')]=!![];}}break;case TutPhases['FortuneWheelEnded']:{if(this[_0x205e('0x73a')](WindowType[_0x205e('0x710')]))this[_0x205e('0x749')]();break;}case TutPhases[_0x205e('0x3c2')]:case TutPhases['BuildSlots9']:this[_0x205e('0x73e')]();unlockAnimatedObject();unlockGUI();break;case TutPhases[_0x205e('0x3c4')]:lockGuiEverything();lockAtOneAnimatedObject(visualGame[_0x205e('0x74a')]());if(this[_0x205e('0x73a')](WindowType[_0x205e('0x710')])){visualGame[_0x205e('0x4ed')]();this[_0x205e('0x73c')](visualGame[_0x205e('0x74a')]()[_0x205e('0x48f')],!![],!![]);}else{if(this[_0x205e('0x73a')](WindowType[_0x205e('0x689')])){this[_0x205e('0x73b')](guiManager[_0x205e('0x721')]()['getTutorialButton']());}else{if(this[_0x205e('0x73a')](WindowType[_0x205e('0x74b')])){this[_0x205e('0x73e')]();unlockGUI();unlockAnimatedObject();}}}break;case TutPhases[_0x205e('0x74c')]:unlockAnimatedObject();unlockGUI();guiManager[_0x205e('0x6d3')](WindowType[_0x205e('0x710')])[_0x205e('0x54a')]();break;case TutPhases['PuzzlesAvailable']:GlobalInputLocked=!![];if(this[_0x205e('0x73a')](WindowType[_0x205e('0x710')])){const _0x45940f=guiManager['getActiveWindow']();this['_lockAtButton'](_0x45940f[_0x205e('0x6aa')](),!![]);}else{if(this[_0x205e('0x73a')](WindowType['WinPuzzle'])){const _0x1f4ad8=guiManager[_0x205e('0x721')]();this[_0x205e('0x742')]=_0x1f4ad8['getSelectedTab']();if(this[_0x205e('0x742')]===0x0)this[_0x205e('0x73b')](_0x1f4ad8['getBoxesTab'](),!![]);else this[_0x205e('0x73b')](_0x1f4ad8[_0x205e('0x5cc')](),!![]);_0x1f4ad8[_0x205e('0x5a0')][0x1]['setScrollerEnable'](![]);}}break;case TutPhases[_0x205e('0x733')]:GlobalInputLocked=![];this[_0x205e('0x736')]();break;}}['getPhaseLocalization'](){let _0x2be098=null;switch(this[_0x205e('0x740')]){case TutPhases[_0x205e('0x74d')]:case TutPhases[_0x205e('0x747')]:case TutPhases[_0x205e('0x74e')]:return LocalizationManager[_0x205e('0x226')](_0x205e('0x428'))[_0x205e('0x477')](this[_0x205e('0x74f')]());case TutPhases[_0x205e('0x3c7')]:_0x2be098=_0x205e('0x750');break;case TutPhases['PuzzlesAvailable']:case TutPhases[_0x205e('0x3bf')]:_0x2be098=_0x205e('0x751')+this[_0x205e('0x740')];break;case TutPhases[_0x205e('0x74c')]:case TutPhases[_0x205e('0x3c0')]:case TutPhases[_0x205e('0x752')]:return null;default:_0x2be098=_0x205e('0x751')+(this[_0x205e('0x740')]+0x1);break;}return LocalizationManager[_0x205e('0x226')](_0x2be098);}['onCreated'](_0x474078){this[_0x205e('0xd2')]=_0x474078;const _0x29e34e=_0x205e('0x1');const _0xf61a5f=VisualData[_0x205e('0x140')][_0x29e34e];this[_0x205e('0x737')]=this[_0x205e('0xd2')][_0x205e('0xd4')][_0x205e('0x4b2')](0x0,0x0,_0x29e34e,_0xf61a5f[_0x205e('0x49a')][_0x205e('0x49c')],!![])[_0x205e('0xd7')](this[_0x205e('0x489')])[_0x205e('0xd8')](0x1);this['circle']=this[_0x205e('0xd2')][_0x205e('0xd4')]['sprite'](0x0,0x0,_0x205e('0x0'))[_0x205e('0xd7')](this[_0x205e('0x489')]-0x1);this[_0x205e('0x73e')]();}['moveToNextPhase'](){switch(this[_0x205e('0x740')]){case TutPhases[_0x205e('0x752')]:this[_0x205e('0x740')]=TutPhases[_0x205e('0x753')];break;case TutPhases[_0x205e('0x74c')]:this[_0x205e('0x740')]=TutPhases[_0x205e('0x3c0')];break;default:this[_0x205e('0x740')]++;break;}gameInit[_0x205e('0x16b')][_0x205e('0x754')](this[_0x205e('0x740')]);gameAnalytics[_0x205e('0x383')](_0x205e('0x755'),{'phase':this[_0x205e('0x740')]});this['preparePhase'](this[_0x205e('0x740')]);}[_0x205e('0x74f')](){switch(this[_0x205e('0x740')]){case TutPhases[_0x205e('0x745')]:return 0x1;case TutPhases[_0x205e('0x74d')]:return 0x14;case TutPhases[_0x205e('0x747')]:return 0x3e8;case TutPhases[_0x205e('0x74e')]:return 0x2710;}return 0x0;}[_0x205e('0x756')](){return this[_0x205e('0x74f')]()*RESOURCES_SCALE;}['_getRequiredUpgrades'](){switch(this['phase']){case TutPhases[_0x205e('0x757')]:return 0x1;case TutPhases[_0x205e('0x746')]:return 0x4;}return 0x0;}[_0x205e('0xe5')](){const _0x8e344c=guiManager[_0x205e('0x721')]();if(this['lastWindow']!=guiManager[_0x205e('0x725')]()||_0x8e344c[_0x205e('0x58d')]&&_0x8e344c[_0x205e('0x58d')]!==this['lastTab']){if(this[_0x205e('0x740')]!==TutPhases['WaitForSummonToEnd'])this[_0x205e('0x735')](this['phase']);}switch(this['phase']){case TutPhases[_0x205e('0x744')]:if(gameInit[_0x205e('0x16b')][_0x205e('0x3bb')](0x1,0x1))this[_0x205e('0x749')]();break;case TutPhases[_0x205e('0x745')]:case TutPhases[_0x205e('0x74d')]:if(!this[_0x205e('0x758')]&&gameInit[_0x205e('0x308')](0x1,0x1)[_0x205e('0x2ba')]){this[_0x205e('0x73c')](this[_0x205e('0x73f')]());this['fingerAnimation']=animManager['swipeInfinite'](this[_0x205e('0x737')],0x1);this[_0x205e('0x738')][_0x205e('0x1f6')](![]);}if(gameInit['progress'][_0x205e('0x35c')]()[_0x205e('0x27c')](this['_getRequiredResources']())>=0x0){if(this[_0x205e('0x740')]===TutPhases[_0x205e('0x74d')]){if(this['fingerAnimation']){this[_0x205e('0x758')]['stopAnimation']();this[_0x205e('0x758')]=null;}this[_0x205e('0x73e')]();}this[_0x205e('0x749')]();}break;case TutPhases[_0x205e('0x747')]:case TutPhases[_0x205e('0x74e')]:if(gameInit[_0x205e('0x16b')][_0x205e('0x35c')]()[_0x205e('0x27c')](this['_getRequiredResources']())>=0x0)this[_0x205e('0x749')]();break;case TutPhases['UpgradeBuilding']:case TutPhases[_0x205e('0x746')]:const _0x3cea63=gameInit[_0x205e('0x308')](0x1,0x1);if(_0x3cea63[_0x205e('0x2c2')]()>this['_getRequiredUpgrades']()){if(this[_0x205e('0x740')]===TutPhases[_0x205e('0x746')]){this['_hideFinger']();}this[_0x205e('0x749')]();}break;case TutPhases[_0x205e('0x748')]:const _0x423167=VisualData[_0x205e('0x5d5')]();if(gameInit['progress'][_0x205e('0x5d7')](_0x423167)){const _0x8e344c=guiManager[_0x205e('0x6d3')](WindowType[_0x205e('0x69c')]);_0x8e344c[_0x205e('0x5a0')][_0x205e('0x4fb')](!![]);unlockGUI();this[_0x205e('0x73e')]();this[_0x205e('0x749')]();}break;case TutPhases[_0x205e('0x3c7')]:if(gameInit[_0x205e('0x16b')][_0x205e('0x2d1')]()){this['_hideFinger']();this[_0x205e('0x749')]();}break;case TutPhases[_0x205e('0x759')]:if(gameInit[_0x205e('0x16b')]['isSupervisorActive']()){GlobalInputLocked=![];this[_0x205e('0x73e')]();this['moveToNextPhase']();}break;case TutPhases[_0x205e('0x3c2')]:if(gameInit[_0x205e('0x16b')][_0x205e('0x3c5')]()>=0x6){this[_0x205e('0x73e')]();this[_0x205e('0x749')]();}break;case TutPhases[_0x205e('0x3bf')]:if(gameInit[_0x205e('0x16b')][_0x205e('0x3c5')]()>=0x7){this[_0x205e('0x73e')]();this[_0x205e('0x749')]();}break;case TutPhases[_0x205e('0x3c4')]:{if(gameInit[_0x205e('0x16b')][_0x205e('0x3a7')]()>=0x1){this[_0x205e('0x73e')]();this[_0x205e('0x749')]();}break;}case TutPhases['WaitForSummonToEnd']:{if(guiManager[_0x205e('0x725')]()==WindowType[_0x205e('0x710')])this[_0x205e('0x749')]();break;}case TutPhases[_0x205e('0x753')]:{if(gameInit[_0x205e('0x16b')]['getOpenedBoxes']()>0x0){this[_0x205e('0x73e')]();this['moveToNextPhase']();const _0x8e344c=guiManager[_0x205e('0x6d3')](WindowType['WinPuzzle']);if(_0x8e344c[_0x205e('0x5a0')])_0x8e344c[_0x205e('0x5a0')][0x1][_0x205e('0x4fb')](!![]);}break;}}}[_0x205e('0x28a')](){switch(this[_0x205e('0x740')]){case TutPhases[_0x205e('0x3c0')]:this[_0x205e('0x73e')]();this[_0x205e('0x749')]();break;}}}const tutorial=new Tutorial();if(!VisualData['getGameSettings']()[_0x205e('0x75a')]){eventManager[_0x205e('0x28a')][_0x205e('0x27d')](tutorial[_0x205e('0x28a')][_0x205e('0xe6')](tutorial));eventManager[_0x205e('0x28c')][_0x205e('0x27d')](tutorial[_0x205e('0x28a')]['bind'](tutorial));gameInit[_0x205e('0xd6')]['addListener'](tutorial['onCreated']['bind'](tutorial));gameInit[_0x205e('0x455')][_0x205e('0x27d')](_0xb067ac=>tutorial[_0x205e('0x455')](_0xb067ac));}_0x205e('0x75b');VisualData[_0x205e('0x4ad')]['center']={'x':RealScreenWidth/0x2,'y':RealScreenHeight/0x2};const useNewScale=!![];let gameW,gameH;let dpi=useNewScale?window['devicePixelRatio']||0x1:0x1;function UpdateNumbers(){if(useNewScale){localScale=Math[_0x205e('0x271')](window[_0x205e('0x75c')]/RealScreenWidth,window[_0x205e('0x75d')]/RealScreenHeight);localScale*=dpi;const _0x416df9=0.5;if(localScale<_0x416df9){dpi*=_0x416df9/localScale;localScale=_0x416df9;}if(localScale<0.6){imagesDeltaScale=0x2;use2ximages=![];}else{imagesDeltaScale=0x1;use2ximages=!![];}imageSizeLocalScale=imagesDeltaScale*localScale;}else localScale=0x1;gameW=RealScreenWidth*localScale;gameH=RealScreenHeight*localScale;}UpdateNumbers();const renderType=Phaser['WEBGL'];let config={'type':renderType,'parent':_0x205e('0x75e'),'audio':{'disableWebAudio':!![]},'width':gameW,'height':gameH,'autoRound':![],'scale':{'width':gameW,'height':gameH,'zoom':0x1/dpi},'plugins':{'global':[NineSlice[_0x205e('0x75f')][_0x205e('0x760')]]},'scene':{'preload':preload,'create':create,'update':update,'pack':{'files':[{'type':_0x205e('0x761'),'key':renderType===Phaser['WEBGL']?_0x205e('0x762'):_0x205e('0x763'),'url':renderType===Phaser['WEBGL']?_0x205e('0x764'):_0x205e('0x765'),'sceneKey':_0x205e('0x4b2')},{'type':_0x205e('0x761'),'key':_0x205e('0x766'),'url':_0x205e('0x767'),'sceneKey':_0x205e('0x5b3')}]}}};function preload1(){}function create1(){console[_0x205e('0x161')]('1111122');}function update1(){}let gBase=null;const loadingImage=window[_0x205e('0x768')]['getElementById'](_0x205e('0x769'));let lastVal=0x0;const loadingSplash=window[_0x205e('0x768')]['getElementById'](_0x205e('0x76a'));const ScreenSize={'width':gameW/dpi,'height':gameH/dpi};loadingSplash['style'][_0x205e('0xe4')]=ScreenSize[_0x205e('0xe4')]+'px';loadingSplash['style'][_0x205e('0xdf')]=ScreenSize['height']+'px';if(!useNewScale)config[_0x205e('0x148')][_0x205e('0x76b')]=Math[_0x205e('0x271')](window[_0x205e('0x75d')]/RealScreenHeight,window['innerWidth']/RealScreenWidth);let game=null;readTextFile(VisualData[_0x205e('0x76c')](),_0xe3a069=>{if(!game){GameData['prepareAtlases'](_0xe3a069?JSON[_0x205e('0x329')](_0xe3a069):null);game=new Phaser['Game'](config);}});function readTextFile(_0x5c3e8d,_0x443334){var _0x210b94=new XMLHttpRequest();_0x210b94[_0x205e('0x76d')](_0x205e('0x76e'));_0x210b94[_0x205e('0x76f')](_0x205e('0x770'),_0x5c3e8d,!![]);_0x210b94[_0x205e('0x771')]=function(){if(_0x210b94[_0x205e('0x1a8')]==_0x205e('0x772')){if(_0x210b94[_0x205e('0x773')]===0x4){_0x443334(_0x210b94[_0x205e('0x774')]);}}else{_0x443334(null);}};_0x210b94['send'](null);}function preload(){this[_0x205e('0x261')]['on'](_0x205e('0x16b'),function(_0x274eb1){if(_0x274eb1>lastVal){loadingImage[_0x205e('0x4d5')][_0x205e('0xe4')]=_0x274eb1*0x1e+'%';lastVal=_0x274eb1;}});gameInit[_0x205e('0x45a')](this);}function PlayRewardedAd(_0x45ef6d){if(!socialManager)return;function _0x336c3e(){guiManager['openNewWindow'](WindowType[_0x205e('0x6f7')]);}function _0x16ea4d(){guiManager['openNewWindow'](WindowType[_0x205e('0x6fc')]);}function _0x4f6538(){audioManager[_0x205e('0x276')]();unlockAnimatedObject();unlockGUI();_0x45ef6d();}function _0x486566(){eventManager[_0x205e('0x29a')]();audioManager[_0x205e('0x775')]();GlobalInputLocked=!![];lockGuiEverything();}const _0x206ab8=gameInit[_0x205e('0x16b')]['isTutorialCompleted']();const _0x62ab21={'onCompleted':_0x4f6538,'onNoAds':_0x206ab8?_0x336c3e:_0x4f6538,'onAdBlock':_0x206ab8?_0x16ea4d:_0x4f6538,'onStarted':_0x486566};socialManager[_0x205e('0x776')](_0x62ab21);}const DefaultWidth=0x1f4;function UpdateTextPosition(_0x4caf44){if(!_0x4caf44[_0x205e('0x777')])return;if(_0x4caf44[_0x205e('0x777')]['style']['display']===_0x205e('0x4d7')||divElementForLabels[_0x205e('0x4d5')][_0x205e('0x4d6')]===_0x205e('0x4d7')){_0x4caf44[_0x205e('0x44b')]=!![];return;}const _0x3a4fe6=_0x4caf44[_0x205e('0x777')][_0x205e('0x4d5')];let _0x3d6d0e=_0x4caf44['x'];let _0xb988cc=_0x4caf44['y'];if(_0x4caf44[_0x205e('0x403')]){_0x3d6d0e+=_0x4caf44[_0x205e('0x403')]['x'];_0xb988cc+=_0x4caf44[_0x205e('0x403')]['y'];}_0x3a4fe6[_0x205e('0x778')]=_0x3d6d0e/dpi-_0x4caf44[_0x205e('0x777')][_0x205e('0x779')]*_0x4caf44[_0x205e('0x77a')]+'px';_0x3a4fe6['top']=_0xb988cc/dpi-_0x4caf44[_0x205e('0x777')]['clientHeight']*_0x4caf44['originY']+'px';}var divElementForLabels;function prepareTextToHtml(_0x5682bd){const _0x404dda=document[_0x205e('0x77b')](_0x205e('0x77c'));_0x404dda['className']=_0x205e('0x77d');document[_0x205e('0xdb')][_0x205e('0x77e')](_0x404dda);divElementForLabels=_0x404dda;const _0x5a5fa0=Phaser[_0x205e('0x1d8')][_0x205e('0x77f')][_0x205e('0x279')]['setPosition'];function _0x5e4ba1(_0xdb80a7,_0x59a3d9){_0x5a5fa0[_0x205e('0x4aa')](this,_0xdb80a7*localScale,_0x59a3d9*localScale);UpdateTextPosition(this);return this;}const _0x372c4c=Phaser[_0x205e('0x1d8')][_0x205e('0x77f')][_0x205e('0x279')][_0x205e('0x528')];function _0x50d700(_0x333280){if(this[_0x205e('0x777')])this[_0x205e('0x777')][_0x205e('0x4d5')]['maxWidth']=_0x333280*localScale/dpi+'px';return _0x372c4c[_0x205e('0x4aa')](this,_0x333280*localScale);}const _0x4044e0=Phaser[_0x205e('0x1d8')][_0x205e('0x77f')][_0x205e('0x279')][_0x205e('0x1f6')];function _0x597711(_0x38fdb5){if(this[_0x205e('0x777')]){if(_0x38fdb5){if(!this[_0x205e('0x777')][_0x205e('0x224')]){this[_0x205e('0x777')][_0x205e('0x224')]=setTimeout(()=>{this[_0x205e('0x777')][_0x205e('0x4d5')]['display']='inherit';if(this['needToUpdate']){UpdateTextPosition(this);this[_0x205e('0x44b')]=![];}this[_0x205e('0x777')][_0x205e('0x224')]=null;},0xc8);}}else{this[_0x205e('0x777')][_0x205e('0x4d5')][_0x205e('0x4d6')]=_0x205e('0x4d7');if(this[_0x205e('0x777')][_0x205e('0x224')]){clearInterval(this[_0x205e('0x777')][_0x205e('0x224')]);this['newText']['timer']=null;}}}return _0x4044e0['call'](this,_0x38fdb5);}function _0x2860fe(){if(this[_0x205e('0x777')])return this[_0x205e('0x777')][_0x205e('0x4d5')][_0x205e('0x4d6')]===_0x205e('0x780');return this[_0x205e('0xe9')];}const _0x269756=_0x5682bd[_0x205e('0xd4')][_0x205e('0x1ff')];function _0x524837(_0x8e5860,_0x21e719,_0x4ea54c,_0x789b54){const _0x544efa=_0x269756['call'](this,_0x8e5860,_0x21e719,null)[_0x205e('0xd8')](0x1);const _0x16bc5a=document[_0x205e('0x77b')]('p');_0x16bc5a[_0x205e('0x781')]=_0x4ea54c;_0x16bc5a[_0x205e('0x782')]=_0x205e('0x783');_0x16bc5a[_0x205e('0x4d5')]['fontSize']=_0x789b54[_0x205e('0x784')];_0x16bc5a[_0x205e('0x4d5')][_0x205e('0x785')]=_0x789b54[_0x205e('0x786')];_0x16bc5a[_0x205e('0x4d5')][_0x205e('0x787')]=_0x789b54[_0x205e('0x788')];_0x16bc5a[_0x205e('0x4d5')][_0x205e('0x789')]=_0x789b54[_0x205e('0x78a')]/0x3+'px';if(_0x789b54[_0x205e('0x78b')])_0x16bc5a[_0x205e('0x4d5')][_0x205e('0x78c')]=_0x789b54[_0x205e('0x78b')];_0x404dda[_0x205e('0x77e')](_0x16bc5a);_0x544efa['newText']=_0x16bc5a;_0x544efa[_0x205e('0x78d')]=0x0;UpdateTextPosition(_0x544efa);return _0x544efa;}const _0x33ce2c=Phaser[_0x205e('0x1d8')][_0x205e('0x77f')][_0x205e('0x279')][_0x205e('0x4e9')];Phaser[_0x205e('0x1d8')][_0x205e('0x77f')][_0x205e('0x279')][_0x205e('0x4e9')]=function(_0x3f3296){if(_0x3f3296===this[_0x205e('0x1ff')])return this;if(this[_0x205e('0x777')]){this[_0x205e('0x777')]['innerText']=_0x3f3296;UpdateTextPosition(this);}return _0x33ce2c[_0x205e('0x4aa')](this,_0x3f3296);};const _0x5e988d=Phaser[_0x205e('0x1d8')][_0x205e('0x77f')][_0x205e('0x279')]['setOrigin'];function _0x295c75(_0x230423,_0x55569c){_0x5e988d[_0x205e('0x4aa')](this,_0x230423,_0x55569c);UpdateTextPosition(this);return this;}_0x5682bd[_0x205e('0xd4')][_0x205e('0x1ff')]=_0x524837[_0x205e('0xe6')](_0x5682bd[_0x205e('0xd4')]);Phaser[_0x205e('0x1d8')][_0x205e('0x77f')][_0x205e('0x279')][_0x205e('0xe8')]=_0x5e4ba1;Phaser[_0x205e('0x1d8')]['Text']['prototype'][_0x205e('0x528')]=_0x50d700;Phaser[_0x205e('0x1d8')][_0x205e('0x77f')][_0x205e('0x279')][_0x205e('0x1f6')]=_0x597711;Phaser[_0x205e('0x1d8')][_0x205e('0x77f')][_0x205e('0x279')][_0x205e('0xd9')]=_0x295c75;Phaser[_0x205e('0x1d8')][_0x205e('0x77f')][_0x205e('0x279')][_0x205e('0x612')]=function(){return this[_0x205e('0x777')]?this[_0x205e('0x777')][_0x205e('0x779')]:this[_0x205e('0xe4')];};Phaser[_0x205e('0x1d8')][_0x205e('0x77f')][_0x205e('0x279')]['isVisible']=_0x2860fe;_0x5682bd[_0x205e('0xd4')][_0x205e('0x225')]=_0x269756[_0x205e('0xe6')](_0x5682bd[_0x205e('0xd4')]);}function overloadSetVisible(_0x58f925){const _0x3e55fb=_0x58f925[_0x205e('0x1f6')];function _0x325c5f(_0x3f2acd){if(!this[_0x205e('0x1e8')])this[_0x205e('0x78e')](_0x3f2acd);return _0x3e55fb[_0x205e('0x4aa')](this,_0x3f2acd);}_0x58f925[_0x205e('0x1f6')]=_0x325c5f;}function create(){const _0x5ea4b7=this;const _0x5c091d=this[_0x205e('0xd4')];const _0xc218bc=Phaser[_0x205e('0x1d8')][_0x205e('0x4f4')]['prototype'][_0x205e('0xe8')];function _0x50dfb3(_0x4409dd,_0x3d8278){_0xc218bc['call'](this,_0x4409dd?_0x4409dd*localScale:_0x4409dd,_0x3d8278?_0x3d8278*localScale:_0x3d8278);for(let _0x4745a5=0x0;_0x4745a5<this[_0x205e('0x4bd')]['length'];_0x4745a5++)UpdateTextPosition(this['list'][_0x4745a5]);return this;}Phaser[_0x205e('0x1d8')][_0x205e('0x4f4')][_0x205e('0x279')][_0x205e('0xe8')]=_0x50dfb3;Phaser['GameObjects'][_0x205e('0x4f4')][_0x205e('0x279')]['setPositionX']=function(_0x22a0ac){this['x']=_0x22a0ac*localScale;for(let _0x5256c9=0x0;_0x5256c9<this[_0x205e('0x4bd')]['length'];_0x5256c9++)UpdateTextPosition(this[_0x205e('0x4bd')][_0x5256c9]);return this;};Phaser[_0x205e('0x1d8')][_0x205e('0x4f4')][_0x205e('0x279')]['setPositionY']=function(_0x341d96){this['y']=_0x341d96*localScale;for(let _0x6bf260=0x0;_0x6bf260<this[_0x205e('0x4bd')][_0x205e('0xe7')];_0x6bf260++)UpdateTextPosition(this[_0x205e('0x4bd')][_0x6bf260]);return this;};const _0x597988=Phaser[_0x205e('0x1d8')][_0x205e('0x4f4')]['prototype']['setVisible'];function _0xaf9d63(_0x23f5a5){for(let _0x466406=0x0;_0x466406<this[_0x205e('0x4bd')][_0x205e('0xe7')];_0x466406++){if(!this[_0x205e('0x4bd')][_0x466406][_0x205e('0x495')])this['list'][_0x466406][_0x205e('0x1f6')](_0x23f5a5);}return _0x597988[_0x205e('0x4aa')](this,_0x23f5a5);}Phaser[_0x205e('0x1d8')][_0x205e('0x4f4')][_0x205e('0x279')][_0x205e('0x1f6')]=_0xaf9d63;const _0x42d849=Phaser['GameObjects'][_0x205e('0x4f4')]['prototype']['add'];function _0x2353fc(_0x2a66b9){if(_0x2a66b9[_0x205e('0x1e1')]==='Text'){if(!this['visible'])_0x2a66b9[_0x205e('0x1f6')](this[_0x205e('0xe9')]);_0x2a66b9[_0x205e('0x403')]=this;UpdateTextPosition(_0x2a66b9);}return _0x42d849[_0x205e('0x4aa')](this,_0x2a66b9);}Phaser[_0x205e('0x1d8')]['Container'][_0x205e('0x279')][_0x205e('0xd4')]=_0x2353fc;Phaser[_0x205e('0x1d8')][_0x205e('0x4f4')][_0x205e('0x279')]['create']=function(_0x2ae6f3,_0x264bff,_0x2cd53e){const _0x2cf2c9=_0x5ea4b7['add'][_0x205e('0x1fd')](_0x2ae6f3,_0x264bff,_0x2cd53e);this[_0x205e('0xd4')](_0x2cf2c9);return _0x2cf2c9;};Phaser[_0x205e('0x1d8')][_0x205e('0x78f')]['prototype'][_0x205e('0xd6')]=function(_0x31a422,_0x1bb7b2,_0x1f04f8){const _0x20df56=_0x5ea4b7[_0x205e('0xd4')][_0x205e('0x1fd')](_0x31a422,_0x1bb7b2,_0x1f04f8);this[_0x205e('0xd4')](_0x20df56);return _0x20df56;};Phaser[_0x205e('0x1d8')][_0x205e('0x78f')][_0x205e('0x279')][_0x205e('0x1f6')]=function(_0x1865c8){this[_0x205e('0xe9')]=_0x1865c8;return this;};_0x5ea4b7[_0x205e('0xd4')][_0x205e('0x1e9')]=function(_0x48ec20,_0x4cefd9,_0x2b0df5){const _0x529473=_0x2b0df5[_0x205e('0xe4')]*GlobalScale/ imagesDeltaScale;const _0x35ce45=_0x2b0df5[_0x205e('0xdf')]*GlobalScale/ imagesDeltaScale;const _0xed6362=VisualData[_0x205e('0x140')][_0x2b0df5[_0x205e('0x145')]];const _0x48354c=_0xed6362[_0x205e('0x790')]*GlobalScale/ imagesDeltaScale;const _0x20beae=_0xed6362[_0x205e('0x791')]*GlobalScale/ imagesDeltaScale;const _0x3eb908=(_0x2b0df5['y']||0x0)*GlobalScale;const _0x3c9923=_0x5ea4b7[_0x205e('0xd4')][_0x205e('0x792')](_0x48ec20*localScale,(_0x4cefd9+_0x3eb908)*localScale,_0x529473,_0x35ce45,_0x2b0df5[_0x205e('0x145')],_0x48354c,_0x20beae);const _0x473e6a=_0x3c9923[_0x205e('0x4a9')][_0x205e('0x279')];if(!_0x473e6a['scalePrepared']){_0x473e6a[_0x205e('0x793')]=!![];overloadSetVisible(_0x473e6a);const _0x40409b=_0x473e6a[_0x205e('0xd8')];function _0x3428c8(_0x48ec20,_0x4cefd9){return _0x40409b[_0x205e('0x4aa')](this,_0x48ec20*imageSizeLocalScale,_0x4cefd9?_0x4cefd9*imageSizeLocalScale:_0x4cefd9);}_0x473e6a['setScale']=_0x3428c8;}_0x3c9923[_0x205e('0xd8')](0x1);return _0x3c9923;};if(useNewScale){const _0x2517e7=Phaser[_0x205e('0x1d8')][_0x205e('0x1d9')][_0x205e('0x279')][_0x205e('0xe8')];function _0x456e79(_0x4bca05,_0x5c762a){return _0x2517e7[_0x205e('0x4aa')](this,_0x4bca05*localScale,_0x5c762a*localScale);}const _0x3722af=Phaser[_0x205e('0x1d8')][_0x205e('0x1d9')][_0x205e('0x279')][_0x205e('0xd8')];function _0x230bca(_0x4895f3,_0x31031a){return _0x3722af['call'](this,_0x4895f3*imageSizeLocalScale,_0x31031a?_0x31031a*imageSizeLocalScale:_0x31031a);}const _0x42b925=this[_0x205e('0xd4')][_0x205e('0x1fd')];let _0x59316e=0x0;function _0x275689(_0x3c14e8,_0x50251a,_0xc35eae){const _0x435886=VisualData[_0x205e('0x140')][_0xc35eae];if(_0x435886){if(GameData[_0x205e('0x1e3')](_0x435886))return _0x42b925['call'](_0x5c091d,_0x3c14e8,_0x50251a,_0x205e('0x1e4'),_0x435886['file'])[_0x205e('0xd8')](0x1);}return _0x42b925['call'](_0x5c091d,_0x3c14e8,_0x50251a,_0xc35eae)[_0x205e('0xd8')](0x1);}this[_0x205e('0xd4')][_0x205e('0x1fd')]=_0x275689[_0x205e('0xe6')](this[_0x205e('0xd4')]);Phaser[_0x205e('0x1d8')][_0x205e('0x1d9')][_0x205e('0x279')][_0x205e('0xe8')]=_0x456e79;Phaser['GameObjects'][_0x205e('0x1d9')][_0x205e('0x279')][_0x205e('0x48b')]=function(_0x5d7091){return this['x']=_0x5d7091*localScale;};Phaser[_0x205e('0x1d8')]['Sprite'][_0x205e('0x279')]['setPositionY']=function(_0x19588f){return this['y']=_0x19588f*localScale;};Phaser[_0x205e('0x1d8')]['Sprite']['prototype'][_0x205e('0xd8')]=_0x230bca;Phaser[_0x205e('0x1d8')][_0x205e('0x1d9')][_0x205e('0x279')][_0x205e('0x4ab')]=_0x230bca;Phaser[_0x205e('0x1d8')][_0x205e('0x1d9')][_0x205e('0x279')]['setForceInvisible']=function(_0x510367){this[_0x205e('0x495')]=_0x510367;this[_0x205e('0xe9')]=!_0x510367;};overloadSetVisible(Phaser[_0x205e('0x1d8')][_0x205e('0x77f')][_0x205e('0x279')]);prepareTextToHtml(_0x5ea4b7);overloadSetVisible(Phaser[_0x205e('0x1d8')][_0x205e('0x1d9')][_0x205e('0x279')]);overloadSetVisible(Phaser[_0x205e('0x1d8')][_0x205e('0x4f4')]['prototype']);overloadSetVisible(Phaser[_0x205e('0x1d8')][_0x205e('0x77f')][_0x205e('0x279')]);}gameInit['GameCreate'](this,()=>{loadingSplash['style'][_0x205e('0x4d6')]='none';setInterval(()=>{gBase[_0x205e('0x794')]();},0xea60);});gameTrail=new GameTrail(gameInit);window[_0x205e('0x795')]('wheel',function(_0x12c12b){_0x12c12b[_0x205e('0x796')]();eventManager[_0x205e('0x299')](_0x12c12b[_0x205e('0x797')],_0x12c12b[_0x205e('0x798')]);return![];},{'passive':![]});}function update(){gameInit['GameUpdate'](this);}
+const UnnyObjectType = {
+    Image: 0,
+    SpriteSheet: 1,
+    Spine: 2,
+    NineSlice: 3,
+    Audio: 4,
+    Json: 5
+};
+
+const RESOURCES_SCALE = 100;
+
+let localScale;
+let imageSizeLocalScale;
+let imagesDeltaScale;
+let use2ximages = true;
+
+const CommonVisualData = {
+    PRELOAD_OBJECTS: [//Bundle specific images
+        'Tut_Circle',
+        'Tut_Finger',
+        'Lock',
+        'LockIcon',
+        'LockPuzzle',
+
+        'Background1',
+        'PriceIcon',
+        'PriceGems',
+        'PriceSeeds',
+        // 'Building_1',
+        // 'Building_2',
+        // 'Building_3',
+        // 'Building_4',
+        // 'Building_5',
+        // 'Building_6',
+        // 'Building_7',
+        // 'Building_8',
+        // 'Building_9',
+
+        'Production_Progress_Bar_Back',
+        'Production_Progress_Bar',
+        'Upgrade_Progress_Bar',
+
+        'LikePlus',
+        'TableLike',
+        'TableUpgrade',
+
+        'WinStandardBack',
+        'WinUpgradeBack',
+        'DefaultButton',
+        'ExitButton',
+        'BlackPixel',
+        'CollectionBack',
+
+        'MM_Btn_Login',
+        'MM_Btn_Upgrade',
+        'MM_Btn_Likes',
+        'MM_Btn_Worlds',
+        'MM_Btn_Chests',
+        'MM_Btn_Store',
+
+        'Tab_Close',
+        'Tab_Open',
+        'TabIcon_Actual',
+        'TabIcon_Money',
+        'Store_Slot',
+
+        'BoxTabIcon',
+        'PuzzleTabIcon',
+
+        'PuzzleBonusBack',
+        'PuzzleItemFrame',
+        'PuzzleItemLockDL',
+        'PuzzleItemLockDR',
+        'PuzzleItemLockUL',
+        'PuzzleItemLockUR',
+        'PuzzleOpened',
+        'PuzzleBronze',
+        'PuzzleSilver',
+        'PuzzleGold',
+        'PuzzleDiamond',
+
+        'PuzzlesOpened',
+        'PuzzlesBronze',
+        'PuzzlesSilver',
+        'PuzzlesGold',
+        'PuzzlesDiamond',
+
+        'BoxCounter',
+
+        'FortuneItemTimeTravel',
+        'FortuneHUDButton',
+        'GiftBox',
+        'GiftBoxOpen',
+        'GiftBoxSuper',
+        'GiftBoxSuperOpen',
+
+        'Quests_RefreshBtn',
+        'Quests_ProgressFill',
+        'Quests_ProgressBar',
+        'QuestsHUDButton',
+        'Daily_HUDButton',
+        'QuestBack',
+        'Daily_Opened',
+        'Daily_Active',
+        'HudPlusButton',
+        'SeedsQuestIcon',
+
+        'Popup',
+        'PopupThumbsUp',
+
+        'SettingsBtn',
+        'FastProduction',
+        'Effect_Glow',
+        'AdCam',
+        'Notification'
+    ],
+
+    ALL_OBJECTS: {
+
+        'AdCam': {
+            file: 'UI/HUD_and_common/adCamIcon.png',
+        },
+        'Music_On': {
+            file: 'UI/Windows/Settings/musicOn.png',
+        },
+        'Music_Off': {
+            file: 'UI/Windows/Settings/musicOff.png',
+        },
+
+        'Sounds_On': {
+            file: 'UI/Windows/Settings/soundsOn.png',
+        },
+        'Sounds_Off': {
+            file: 'UI/Windows/Settings/soundsOff.png',
+        },
+
+        'Language_Arabic': {
+            file: 'UI/Windows/ChangeLanguage/Arabic.png',
+        },
+        'Language_Chinese (Simplified)': {
+            file: 'UI/Windows/ChangeLanguage/Chinese (Simplified).png',
+        },
+        'Language_Chinese (Traditional)': {
+            file: 'UI/Windows/ChangeLanguage/Chinese (Traditional).png',
+        },
+        'Language_English': {
+            file: 'UI/Windows/ChangeLanguage/English.png',
+        },
+        'Language_French': {
+            file: 'UI/Windows/ChangeLanguage/French.png',
+        },
+        'Language_German': {
+            file: 'UI/Windows/ChangeLanguage/German.png',
+        },
+        'Language_Italian': {
+            file: 'UI/Windows/ChangeLanguage/Italian.png',
+        },
+        'Language_Japanese': {
+            file: 'UI/Windows/ChangeLanguage/Japanese.png',
+        },
+        'Language_Korean': {
+            file: 'UI/Windows/ChangeLanguage/Korean.png',
+        },
+        'Language_Portuguese (Brazil)': {
+            file: 'UI/Windows/ChangeLanguage/Portuguese (Brazil).png',
+        },
+        'Language_Russian': {
+            file: 'UI/Windows/ChangeLanguage/Russian.png',
+        },
+        'Language_Spanish': {
+            file: 'UI/Windows/ChangeLanguage/Spanish.png',
+        },
+
+        'LoadingSplash': {
+            file: '../LoadingSplash.jpg',
+        },
+        'LoadingSplash_ProgressBar': {
+            file: '../ProgressBar.png',
+        },
+        'LoadingSplash_ProgressBarFill': {
+            file: '../ProgressBarFill.png',
+        },
+
+        'Tut_Circle': {
+            file: 'Tutorial/Circle.png',
+        },
+
+        'LockIcon': {
+            file: 'Slots/Lock.png',
+        },
+        'LockPuzzle': {
+            file: 'Slots/LockPuzzle.png',
+        },
+        'Lock': {
+            file: 'Slots/GroundBlocked.png',
+        },
+
+        'Notification': {
+            file: 'UI/HUD_and_common/ui_button_red.png',
+        },
+
+        'PriceIcon': {
+            file: 'UI/HUD_and_common/HUD/HudGoldIcon.png',
+        },
+        'PriceGems': {
+            file: 'UI/HUD_and_common/HUD/HudGemIcon.png',
+        },
+        'PriceSeeds': {
+            file: 'UI/HUD_and_common/HUD/HudSeedIcon.png',
+        },
+        'HudPlusButton': {
+            file: 'UI/HUD_and_common/HUD/HudPlusButton.png',
+        },
+        'SeedsQuestIcon': {
+            file: 'UI/HUD_and_common/HUD/SeedsQuestIcon.png',
+        },
+        'Tut_Finger': {
+            type: UnnyObjectType.Spine,
+            json: 'finger.json',
+            atlas: 'finger.atlas',
+            animations: {
+                idle: 'active',
+            },
+        },
+        'Background1': {
+            type: UnnyObjectType.Spine,
+            json: 'world1_fullhd.json',
+            atlas: 'world1_fullhd.atlas',
+            animations: {
+                idle: 'idle',
+            },
+            files: [
+                'world1_fullhd.png',
+                'world1_fullhd2.png'
+            ]
+        },
+        'Background2': {
+            type: UnnyObjectType.Spine,
+            json: 'winter_map_1920x1080.json',
+            atlas: 'winter_map_1920x1080.atlas',
+            animations: {
+                idle: 'Idle',
+            }
+        },
+        'Background3': {
+            type: UnnyObjectType.Spine,
+            json: 'cosmos_map_1920x1080.json',
+            atlas: 'cosmos_map_1920x1080.atlas',
+            animations: {
+                idle: 'Idle',
+            },
+            files: [
+                'cosmos_map_1920x1080.png',
+                'cosmos_map_1920x10802.png'
+            ]
+        },
+        'Building_1w1': {
+            type: UnnyObjectType.Spine,
+            json: 'Slot1.json',
+            atlas: 'Slot1.atlas',
+            animations: {
+                idle: 'Idle',
+                appear: 'Appear',
+                action: 'Touch',
+            }
+        },
+        'Building_2w1': {
+            type: UnnyObjectType.Spine,
+            json: 'Slot2.json',
+            atlas: 'Slot2.atlas',
+            animations: {
+                idle: 'Idle',
+                appear: 'Appear',
+                action: 'Touch',
+            }
+        },
+        'Building_3w1': {
+            type: UnnyObjectType.Spine,
+            json: 'Slot3.json',
+            atlas: 'Slot3.atlas',
+            animations: {
+                idle: 'Idle',
+                appear: 'Appear',
+                action: 'Touch',
+            }
+        },
+        'Building_4w1': {
+            type: UnnyObjectType.Spine,
+            json: 'Slot4.json',
+            atlas: 'Slot4.atlas',
+            animations: {
+                idle: 'Idle',
+                appear: 'Appear',
+                action: 'Touch',
+            }
+        },
+        'Building_5w1': {
+            type: UnnyObjectType.Spine,
+            json: 'Slot5.json',
+            atlas: 'Slot5.atlas',
+            animations: {
+                idle: 'Idle',
+                appear: 'Appear',
+                action: 'Touch',
+            }
+        },
+        'Building_6w1': {
+            type: UnnyObjectType.Spine,
+            json: 'Slot6.json',
+            atlas: 'Slot6.atlas',
+            animations: {
+                idle: 'Idle',
+                appear: 'Appear',
+                action: 'Touch',
+            }
+        },
+        'Building_7w1': {
+            type: UnnyObjectType.Spine,
+            json: 'slot7.json',
+            atlas: 'slot7.atlas',
+            animations: {
+                idle: 'Idle',
+                appear: 'Appear',
+                action: 'Touch',
+            }
+        },
+        'Building_8w1': {
+            type: UnnyObjectType.Spine,
+            json: 'slot8.json',
+            atlas: 'slot8.atlas',
+            animations: {
+                idle: 'Idle',
+                appear: 'Appear',
+                action: 'Touch',
+            }
+        },
+        'Building_9w1': {
+            type: UnnyObjectType.Spine,
+            json: 'slot9.json',
+            atlas: 'slot9.atlas',
+            animations: {
+                idle: 'Idle',
+                appear: 'Appear',
+                action: 'Touch',
+            }
+        },
+        'Building_1w2': {
+            type: UnnyObjectType.Spine,
+            json: 'Slot1w2.json',
+            atlas: 'Slot1w2.atlas',
+            animations: {
+                idle: 'Idle',
+                appear: 'Appear',
+                action: 'Touch',
+            }
+        },
+        'Building_2w2': {
+            type: UnnyObjectType.Spine,
+            json: 'slot2w2.json',
+            atlas: 'slot2w2.atlas',
+            animations: {
+                idle: 'Idle',
+                appear: 'Appear',
+                action: 'Touch',
+            }
+        },
+        'Building_3w2': {
+            type: UnnyObjectType.Spine,
+            json: 'slot3w2.json',
+            atlas: 'slot3w2.atlas',
+            animations: {
+                idle: 'Idle',
+                appear: 'Appear',
+                action: 'Touch',
+            }
+        },
+        'Building_4w2': {
+            type: UnnyObjectType.Spine,
+            json: 'slot4w2.json',
+            atlas: 'slot4w2.atlas',
+            animations: {
+                idle: 'Idle',
+                appear: 'Appear',
+                action: 'Touch',
+            }
+        },
+        'Building_5w2': {
+            type: UnnyObjectType.Spine,
+            json: 'slot5w2.json',
+            atlas: 'slot5w2.atlas',
+            animations: {
+                idle: 'Idle',
+                appear: 'Appear',
+                action: 'Touch',
+            }
+        },
+        'Building_6w2': {
+            type: UnnyObjectType.Spine,
+            json: 'slot6w2.json',
+            atlas: 'slot6w2.atlas',
+            animations: {
+                idle: 'Idle',
+                appear: 'Appear',
+                action: 'Touch',
+            }
+        },
+        'Building_7w2': {
+            type: UnnyObjectType.Spine,
+            json: 'slot7w2.json',
+            atlas: 'slot7w2.atlas',
+            animations: {
+                idle: 'Idle',
+                appear: 'Appear',
+                action: 'Touch',
+            }
+        },
+        'Building_8w2': {
+            type: UnnyObjectType.Spine,
+            json: 'slot8w2.json',
+            atlas: 'slot8w2.atlas',
+            animations: {
+                idle: 'Idle',
+                appear: 'Appear',
+                action: 'Touch',
+            }
+        },
+        'Building_9w2': {
+            type: UnnyObjectType.Spine,
+            json: 'slot9w2.json',
+            atlas: 'slot9w2.atlas',
+            animations: {
+                idle: 'Idle',
+                appear: 'Appear',
+                action: 'Touch',
+            }
+        },
+
+        'Building_1w3': {
+            type: UnnyObjectType.Spine,
+            json: 'Slot1w3.json',
+            atlas: 'Slot1w3.atlas',
+            animations: {
+                idle: 'Idle',
+                appear: 'Appear',
+                action: 'Touch',
+            }
+        },
+        'Building_2w3': {
+            type: UnnyObjectType.Spine,
+            json: 'Slot2w3.json',
+            atlas: 'Slot2w3.atlas',
+            animations: {
+                idle: 'Idle',
+                appear: 'Appear',
+                action: 'Touch',
+            }
+        },
+        'Building_3w3': {
+            type: UnnyObjectType.Spine,
+            json: 'Slot3w3.json',
+            atlas: 'Slot3w3.atlas',
+            animations: {
+                idle: 'Idle',
+                appear: 'Appear',
+                action: 'Touch',
+            }
+        },
+        'Building_4w3': {
+            type: UnnyObjectType.Spine,
+            json: 'Slot4w3.json',
+            atlas: 'Slot4w3.atlas',
+            animations: {
+                idle: 'Idle',
+                appear: 'Appear',
+                action: 'Touch',
+            }
+        },
+        'Building_5w3': {
+            type: UnnyObjectType.Spine,
+            json: 'Slot5w3.json',
+            atlas: 'Slot5w3.atlas',
+            animations: {
+                idle: 'Idle',
+                appear: 'Appear',
+                action: 'Touch',
+            }
+        },
+        'Building_6w3': {
+            type: UnnyObjectType.Spine,
+            json: 'Slot6w3.json',
+            atlas: 'Slot6w3.atlas',
+            animations: {
+                idle: 'Idle',
+                appear: 'Appear',
+                action: 'Touch',
+            }
+        },
+        'Building_7w3': {
+            type: UnnyObjectType.Spine,
+            json: 'Slot7w3.json',
+            atlas: 'Slot7w3.atlas',
+            animations: {
+                idle: 'Idle',
+                appear: 'Appear',
+                action: 'Touch',
+            }
+        },
+        'Building_8w3': {
+            type: UnnyObjectType.Spine,
+            json: 'Slot8w3.json',
+            atlas: 'Slot8w3.atlas',
+            animations: {
+                idle: 'Idle',
+                appear: 'Appear',
+                action: 'Touch',
+            }
+        },
+        'Building_9w3': {
+            type: UnnyObjectType.Spine,
+            json: 'Slot9w3.json',
+            atlas: 'Slot9w3.atlas',
+            animations: {
+                idle: 'Idle',
+                appear: 'Appear',
+                action: 'Touch',
+            }
+        },
+
+        'Production_Progress_Bar_Back': {
+            file: 'Slots/timeBar.png',
+        },
+        'Production_Progress_Bar': {
+            file: 'Slots/timeprogress.png',
+        },
+        'Upgrade_Progress_Bar': {
+            file: 'Slots/macroProgress.png',
+        },
+        'LikePlus': {
+            file: 'Slots/likePlus.png',
+        },
+        'TableLike': {
+            file: 'Slots/tableLike.png',
+        },
+        'TableUpgrade': {
+            file: 'Slots/tableUpgrade.png',
+        },
+        'FastProduction': {
+            type: UnnyObjectType.SpriteSheet,
+            file: 'Slots/timefast.jpg',
+            frameWidth: 256,
+            frameHeight: 29,
+            frames: 8,
+            period: 0.033,
+        },
+
+        'DefaultButton': {
+            file: 'UI/HUD_and_common/Buttons/Btn355x158.png', //TODO Optimize ... too many buttons
+            type: UnnyObjectType.NineSlice,
+            paddingX: 80,
+            paddingY: 79
+        },
+        'ExitButton': {
+            file: 'UI/HUD_and_common/Buttons/CloseBtn.png',
+        },
+        'BlackPixel': {
+            file: 'Backs/BlackPixel.png',
+        },
+        'CollectionBack': {
+            file: 'Backs/CollectionBack.png',
+        },
+
+        'MM_Btn_Login': {
+            file: 'UI/HUD_and_common/HUD/HudSocialBtn.png',
+        },
+        'MM_Btn_Upgrade': {
+            file: 'UI/HUD_and_common/HUD/HudSlotUpgradeBtn.png',
+        },
+        'MM_Btn_Likes': {
+            file: 'UI/HUD_and_common/HUD/HudLikesBtn.png',
+        },
+        'MM_Btn_Worlds': {
+            file: 'UI/HUD_and_common/HUD/HUDChangeLocation.png',
+        },
+        'MM_Btn_Chests': {
+            file: 'UI/HUD_and_common/HUD/HudPuzzlesBtn.png',
+        },
+        'MM_Btn_Store': {
+            file: 'UI/HUD_and_common/HUD/HudShovelBtn.png',
+        },
+
+        'Tab_Close': {
+            file: 'UI/Windows/Upgrade/DeactiveTabBack.png',
+        },
+        'Tab_Open': {
+            file: 'UI/Windows/Upgrade/ActiveTabBack.png',
+        },
+        'TabIcon_Actual': {
+            file: 'UI/Windows/Upgrade/ActualTabIcon.png',
+        },
+        'TabIcon_Money': {
+            file: 'UI/Windows/Upgrade/InappTabIcon.png',
+        },
+        'Store_Slot': {
+            file: 'UI/Windows/Upgrade/UpgradeItemBack.png',
+        },
+
+        'BoxTabIcon': {
+            file: 'UI/Windows/Puzzles/BoxTabIcon.png',
+        },
+        'PuzzleTabIcon': {
+            file: 'UI/Windows/Puzzles/PuzzleTabIcon.png',
+        },
+        'PuzzleBonusBack': {
+            file: 'UI/Windows/Puzzles/PuzzleItem/PuzzleBonusBack.png',
+        },
+        'PuzzleItemFrame': {
+            file: 'UI/Windows/Puzzles/PuzzleItem/PuzzleItemFrame.png',
+        },
+
+        'PuzzleItemLockDL': {
+            file: 'UI/Windows/Puzzles/PuzzleItem/Parts/blocked/PuzzleItemLockDL.png',
+        },
+        'PuzzleItemLockDR': {
+            file: 'UI/Windows/Puzzles/PuzzleItem/Parts/blocked/PuzzleItemLockDR.png',
+        },
+        'PuzzleItemLockUL': {
+            file: 'UI/Windows/Puzzles/PuzzleItem/Parts/blocked/PuzzleItemLockUL.png',
+        },
+        'PuzzleItemLockUR': {
+            file: 'UI/Windows/Puzzles/PuzzleItem/Parts/blocked/PuzzleItemLockUR.png',
+        },
+        'PuzzleOpened': {
+            file: 'UI/Windows/Puzzles/PuzzleItem/Parts/opened/s.png',
+        },
+        'PuzzleBronze': {
+            file: 'UI/Windows/Puzzles/PuzzleItem/Parts/bronze/s.png',
+        },
+        'PuzzleSilver': {
+            file: 'UI/Windows/Puzzles/PuzzleItem/Parts/silver/s.png',
+        },
+        'PuzzleGold': {
+            file: 'UI/Windows/Puzzles/PuzzleItem/Parts/gold/s.png',
+        },
+        'PuzzleDiamond': {
+            file: 'UI/Windows/Puzzles/PuzzleItem/Parts/diamond/s.png',
+        },
+
+        'PuzzlesOpened': {
+            file: 'UI/Windows/Puzzles/PuzzlesOpened.png',
+        },
+        'PuzzlesBronze': {
+            file: 'UI/Windows/Puzzles/PuzzlesBronze.png',
+        },
+        'PuzzlesSilver': {
+            file: 'UI/Windows/Puzzles/PuzzlesSilver.png',
+        },
+        'PuzzlesGold': {
+            file: 'UI/Windows/Puzzles/PuzzlesGold.png',
+        },
+        'PuzzlesDiamond': {
+            file: 'UI/Windows/Puzzles/PuzzlesDiamond.png',
+        },
+        'BoxCounter': {
+            file: 'UI/Windows/Puzzles/BoxCounter.png',
+        },
+        'CollectCrop': {
+            file: 'UI/WindowsBigPictures/CollectCrop.png',
+        },
+        'Banjo': {
+            file: 'UI/WindowsBigPictures/Banjo.png',
+        },
+        'BanjoEnd': {
+            file: 'UI/WindowsBigPictures/BanjoEnd.png',
+        },
+        'MultiplyOnStart': {
+            file: 'UI/WindowsBigPictures/MultiplyOnStart.png',
+        },
+        'Cloud': {
+            file: 'UI/WindowsBigPictures/Cloud.png',
+        },
+
+        'Popup': {
+            file: 'UI/HUD_and_common/Popup.png',
+        },
+        'PopupThumbsUp': {
+            file: 'UI/HUD_and_common/PopupThumbsUp.png',
+        },
+
+        'NotEnoughGems' : {
+            file :'UI/WindowsBigPictures/NotEnoughGems.png',
+        },
+        'NoAdAndRatings' : {
+            file : 'UI/WindowsBigPictures/spaceman.png',
+        },
+        'OtherWorldsLocked': {
+            file: 'UI/WindowsBigPictures/Scientist.png'
+        },
+        'Wait' : {
+            file : 'UI/WindowsBigPictures/Wait.png',
+        },
+        // 'Clockwork_icon_big' : {
+        //     file : 'GoodsBuyWindowIcons/Clockwork_icon.png',
+        // },
+        'AppleInfo' : {
+            file: 'UI/WindowsBigPictures/AppleInfo.png',
+        },
+        'TimeTravel4h' : {
+            file : 'UI/Windows/Upgrade/Items/TimeTravel4h.png',
+        },
+        'TimeTravel24h' : {
+            file : 'UI/Windows/Upgrade/Items/TimeTravel24h.png',
+        },
+        'TimeTravel7d' : {
+            file : 'UI/Windows/Upgrade/Items/TimeTravel7d.png',
+        },
+
+        'collectCropSplash': {
+            file: 'Backs/collectCropSplash.png',
+        },
+
+
+        'FortuneWheelBack': {
+            file: 'UI/Windows/FortuneWindow/WheelBack.png',
+        },
+        'FortuneWheel': {
+            file: 'UI/Windows/FortuneWindow/Wheel.png',
+        },
+        'FortuneItemTimeTravel': {
+            file: 'UI/Windows/FortuneWindow/ItemTimeTravel.png',
+        },
+        'FortuneHUDButton': {
+            file: 'UI/Windows/FortuneWindow/HUDButton.png',
+        },
+        'FortuneDevil': {
+            file: 'UI/Windows/FortuneWindow/Devil.png',
+        },
+        'FortuneWheelArrow': {
+            file: 'UI/Windows/FortuneWindow/WheelArrow.png',
+        },
+        'OpenedBox': {
+            file: 'UI/Windows/Puzzles/OpenedBox.png',
+        },
+        'GiftBox': {
+            file: 'UI/Windows/Upgrade/Items/GiftBox.png',
+        },
+        'GiftBoxSuper': {
+            file: 'UI/Windows/Upgrade/Items/GiftBoxSuper.png',
+        },
+
+        'QuestBack': {
+            file: 'UI/Windows/DailyQuests/Back.png',
+        },
+        'Quests_ProgressFill': {
+            file: 'UI/Windows/DailyQuests/ProgressFill.png',
+        },
+        'Quests_ProgressBar': {
+            file: 'UI/Windows/DailyQuests/ProgressBar.png',
+        },
+        'Quests_RefreshBtn': {
+            file: 'UI/Windows/DailyQuests/RefreshBtn.png',
+        },
+        'QuestsHUDButton': {
+            file: 'UI/HUD_and_common/HUD/HudDailyQuestsBtn.png',
+        },
+
+        'Daily_Opened': {
+            file: 'UI/Windows/LoginBonus/Opened.png',
+        },
+        'Daily_Closed': {
+            file: 'UI/Windows/LoginBonus/Closed.png',
+        },
+        'Daily_Active': {
+            file: 'UI/Windows/LoginBonus/Active.png',
+        },
+        'Daily_Check': {
+            file: 'UI/Windows/LoginBonus/04.png',
+        },
+        'Daily_HUDButton': {
+            file: 'UI/HUD_and_common/HUD/HudLoginBonusBtn.png',
+        },
+        'GiftBoxSuperOpen' : {
+            file :'UI/Windows/GetPuzzlePart/Chest_open.png',
+        },
+        'GiftBoxOpen' : {
+            file :'UI/Windows/GetPuzzlePart/ChestNormalOpen.png',
+        },
+
+        'SettingsBtn' : {
+            file :'UI/HUD_and_common/SeetingBtn.png',
+        },
+
+        'Effect_Glow': {
+            file: 'Effects/glow.png',
+        },
+    },
+};
+
+if (typeof exports !== 'undefined') {
+    if (typeof module !== 'undefined' && module.exports) {
+        exports = module.exports = CommonVisualData;
+    }
+    exports.CommonData = CommonVisualData;
+    exports.UnnyObjectType = UnnyObjectType;
+}
+
+class GameTrail {
+    constructor(game) {
+        const engine = game.engine;
+        this.group = engine.add.group();
+
+        this.points = [];
+        // const d = 0.2;
+        for (let i = 0;i<10;i++) {
+            const img = this.group.create(0, 0, "Effect_Glow").setDepth(WinDefaultDepth).setScale(0.5 ,0.5).setOrigin(0.5, 0);
+            // img.setCrop(0, img.height * d, img.width, img.height * (1 - d * 2));
+            this.points.push(img);
+        }
+
+        const trail = this;
+        document.body.onmousedown = function(ev) {
+            trail.showTrail({x: ev.clientX / ScreenSize.width * RealScreenWidth, y: ev.clientY / ScreenSize.height * RealScreenHeight});
+        };
+        document.body.onmouseup = function() {
+            trail.hideTrail();
+        };
+        document.body.onmousemove = function(ev) {
+            trail.moveTrail({x: ev.clientX / ScreenSize.width * RealScreenWidth, y: ev.clientY / ScreenSize.height * RealScreenHeight});
+        };
+
+        game.update.addListener(this.update.bind(this));
+
+        SetGroupVisible(this.group, false);
+    }
+
+    showTrail(pos) {
+        this.visible = true;
+        for (let i = 0; i < this.points.length; i++)
+            this.points[i].setPosition(pos.x, pos.y);
+
+        SetGroupVisible(this.group, true);
+    }
+
+    moveTrail(pos) {
+        this.points[0].setPosition(pos.x, pos.y);
+    }
+
+    update(deltaTime) {
+        if (this.visible) {
+            // for (let i = this.points.length - 1;i > 0; i--) {
+            //     const p = this.points[i];
+            //     const p0 = this.points[i - 1];
+            //     p.x = p0.x;
+            //     p.y = p0.y;
+            // }
+
+            for (let i = 1;i < this.points.length; i++) {
+                const p = this.points[i];
+                const dx = this.points[i-1].x - p.x;
+                const dy = this.points[i-1].y - p.y;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+
+                if (dist < 1) {
+                    p.setScale(0.5, 0);
+                    continue;
+                }
+
+                const newDist = dist * 0.75;
+                const k = newDist/dist;
+
+                p.angle = -Math.atan2(dx, dy) / Math.PI * 180;
+                p.setScale(0.5, dist / 38);
+
+                p.x = p.x + dx * k;
+                p.y = p.y + dy * k;
+            }
+        }
+    }
+
+    hideTrail() {
+        this.visible = false;
+        SetGroupVisible(this.group, false);
+    }
+}
+
+let gameTrail;
+
+let CommonData = null;
+
+const totalScale = 1;//temporary - it should be 1 in the release
+
+let RealScreenWidth = 1920 * totalScale;
+let RealScreenHeight = 1080 * totalScale;
+const GlobalScale = 0.595;
+
+const NormalTint = 0xffffff;
+const LockTint = 0xaaaaaa;
+
+var VisualData = (function() {
+
+    let DATA_FOLDER = './games/fish/data/';
+    let DATA_LOCALIZATIONS_RELATIVE = '../localizations/';
+    let DATA_AUDIO = './games/fish/Audio/';
+    let IMAGES_FOLDER = './games/fish/images/';
+    let IMAGES_FOLDER_2x = './games/fish/images2x/';
+    let STORE_IMAGES_FOLDER = 'UI/Windows/Upgrade/Items/';
+    let PUZZLE_UI_FOLDER = 'UI/Windows/Puzzles/';
+    let PUZZLE_IMAGES_FOLDER = 'GoodsPuzzleIcons/';
+
+    let QUEST_ICONS_FOLDER = 'UI/Windows/DailyQuests/DailyQuests Icons/';
+    let DAILY_ICONS_FOLDER = 'UI/Windows/LoginBonus/BonusTypes/';
+
+    if (typeof exports !== 'undefined') {
+        CommonData = require('../../../CommonVisualData');
+        UnnyObjectType = CommonData.UnnyObjectType;
+    } else
+        CommonData = CommonVisualData;
+
+    const AllLanguages = [
+        'Arabic',
+        // 'Chinese (Simplified)',
+        // 'Chinese (Traditional)',
+        'English',
+        'French',
+        'German',
+        'Italian',
+        'Japanese',
+        'Korean',
+        'Portuguese (Brazil)',
+        'Russian',
+        'Spanish'
+    ];
+
+    const PaymentInfo = {
+        hellprodgems100: {
+            vk_price: 20,
+            //ok_price: 20 * 7
+            ok_price: 20
+        },
+        hellprodgems200: {
+            vk_price: 40,
+            ok_price: 40 * 7
+        },
+        hellprodgems300: {
+            vk_price: 80,
+            ok_price: 80 * 7
+        },
+        hellprodgems400: {
+            vk_price: 160,
+            ok_price: 160 * 7
+        },
+        hellprodgems500: {
+            vk_price: 320,
+            ok_price: 320 * 7
+        }
+    };
+
+    const LocalObjects = {
+        'Fabrika': {
+            type: UnnyObjectType.Spine,
+                json: 'fabrika2.json',
+                atlas: 'fabrika2.atlas',
+                animations: {
+                idle: 'Active',
+                    appear: 'Appear'
+            },
+        },
+        'Podkova': {
+            type: UnnyObjectType.Spine,
+            json: 'podkova.json',
+            atlas: 'podkova.atlas',
+            animations: {
+                idle: 'Idle',
+                active: 'Active'
+            },
+        },
+        'SplitScreen': {
+            type: UnnyObjectType.Spine,
+            json: 'SplitScreen.json',
+            atlas: 'SplitScreen.atlas',
+            animations: {
+                appear: 'Appear',
+                disappear: 'Disappear',
+                idle: 'Idle_2'
+            },
+        },
+        'FactoryWorking': {
+            type: UnnyObjectType.Spine,
+                json: 'Conveer_fullhd.json',
+                atlas: 'Conveer_fullhd.atlas',
+                animations: {
+                idle: 'idle',
+            },
+        },
+
+        'WinStandardBack': {
+            file: 'UI/Windows/Common/standartBack.png',
+                type: UnnyObjectType.NineSlice,
+                paddingX: 100,
+                paddingY: 70
+        },
+        'WinStandardBack2': {
+            file: 'UI/Windows/Common/back2.png',
+                type: UnnyObjectType.NineSlice,
+                paddingX: 100,
+                paddingY: 70
+        },
+        'WinUpgradeBack': {
+            file: 'UI/Windows/Upgrade/UpgradeWindowBack.png',
+                type: UnnyObjectType.NineSlice,
+                paddingX: 100,
+                paddingY: 70
+        },
+        'DefaultButton_Slice': {
+            file: 'UI/HUD_and_common/Buttons/Btn355x158.png', //TODO Optimize ... too many buttons
+                type: UnnyObjectType.NineSlice,
+                paddingX: 80,
+                paddingY: 79
+        },
+
+
+        'MM_Btn_Bread': {
+            file: 'UI/HUD_and_common/HUD/HudBreadBtn.png',
+        },
+        'MM_Btn_Worlds_Inverse': {
+            file: 'UI/HUD_and_common/HUD/locEarth.png',
+        },
+        'MM_Btn_Worlds2': {
+            file: 'UI/HUD_and_common/HUD/locWinter.png',
+        },
+        'MM_Btn_Worlds2_Inverse': {
+            file: 'UI/HUD_and_common/HUD/HudTempBtn.png',
+        },
+
+        'ui_headline': {
+            file: 'UI/Windows/Upgrade/ui_headline.png',
+        },
+
+        'bread_1': {
+            file: 'bread/bread_1.png'
+        },
+        'bread_2': {
+            file: 'bread/bread_2.png'
+        },
+        'bread_3': {
+            file: 'bread/bread_3.png'
+        },
+        'bread_4': {
+            file: 'bread/bread_4.png'
+        },
+        'bread_5': {
+            file: 'bread/bread_5.png'
+        },
+        'bread_6': {
+            file: 'bread/bread_6.png'
+        },
+        'bread_7': {
+            file: 'bread/bread_7.png'
+        },
+
+        'LockWater': {
+            file: 'Slots/WaterBlocked.png',
+        },
+
+        'RainTimerBack': {
+            file: 'UI/HUD_and_common/HUD/RainTimerBack.png',
+        },
+
+        'BackgroundMusic': {
+            type: UnnyObjectType.Audio,
+            file: '../Audio/Fishclicker - Music/MUS_Sea_Theme_Loop.ogg',
+        },
+        'BackgroundMusic2': {
+            type: UnnyObjectType.Audio,
+            file: '../Audio/Fishclicker - Music/MUS_Space_Theme_Loop.ogg',
+        },
+        'BackgroundMusic3': {
+            type: UnnyObjectType.Audio,
+            file: '../Audio/Fishclicker - Music/MUS_Winter_Theme_Loop.ogg',
+        },
+        'Gathering': {
+            type: UnnyObjectType.Audio,
+            file: '../Audio/Fishclicker - Music/MUS_Gathering_Loop.ogg',
+        },
+        'Banjoded': {
+            type: UnnyObjectType.Audio,
+            file: '../Audio/Fishclicker - Music/MUS_Bread_Theme.ogg',
+        },
+        'Audio_Chest_1': {
+            type: UnnyObjectType.Audio,
+            file: '../Audio/Sounds/GetPuzzlePart/chest_1.wav',
+        },
+        'Audio_Chest_2': {
+            type: UnnyObjectType.Audio,
+            file: '../Audio/Sounds/GetPuzzlePart/chest_2.wav',
+        },
+        'Audio_Chest_3': {
+            type: UnnyObjectType.Audio,
+            file: '../Audio/Sounds/GetPuzzlePart/chest_3.wav',
+        },
+        'Audio_longtap1': {
+            type: UnnyObjectType.Audio,
+            file: '../Audio/Sounds/ObjectsClick/longtap1.wav',
+        },
+        'Audio_longtap2': {
+            type: UnnyObjectType.Audio,
+            file: '../Audio/Sounds/ObjectsClick/longtap2.wav',
+        },
+        'Audio_longtap3': {
+            type: UnnyObjectType.Audio,
+            file: '../Audio/Sounds/ObjectsClick/longtap3.wav',
+        },
+        'Audio_longtap4': {
+            type: UnnyObjectType.Audio,
+            file: '../Audio/Sounds/ObjectsClick/longtap4.wav',
+        },
+        'Audio_Pop-ani-1': {
+            type: UnnyObjectType.Audio,
+            file: '../Audio/Fishclicker - Sounds/SND_Tap_1.ogg',
+        },
+        'Audio_Pop-ani-2': {
+            type: UnnyObjectType.Audio,
+            file: '../Audio/Fishclicker - Sounds/SND_Tap_2.ogg',
+        },
+        'Audio_Pop-ani-3': {
+            type: UnnyObjectType.Audio,
+            file: '../Audio/Fishclicker - Sounds/SND_Tap_3.ogg',
+        },
+        'Audio_ClickUI': {
+            type: UnnyObjectType.Audio,
+            file: '../Audio/Fishclicker - Sounds/SND_Click.ogg',
+        },
+        'Audio_Info': {
+            type: UnnyObjectType.Audio,
+            file: '../Audio/Fishclicker - Sounds/SND_Tap_Dif_Level_Up.ogg',
+        },
+        // 'Audio_LevelUp': {
+        //     type: UnnyObjectType.Audio,
+        //     file: '../Audio/Sounds/UI/LevelUp.wav',
+        // },
+        'Audio_Money': {
+            type: UnnyObjectType.Audio,
+            file: '../Audio/Fishclicker - Sounds/SND_Fly_Fish_2.ogg',
+        },
+        'Audio_Window': {
+            type: UnnyObjectType.Audio,
+            file: '../Audio/Fishclicker - Sounds/SND_Window_Show.ogg',
+        },
+        // 'Audio_WindowHide': {
+        //     type: UnnyObjectType.Audio,
+        //     file: '../Audio/Fishclicker - Sounds/SND_Window_Hide.ogg',
+        // },
+    };
+
+    const PreloadObjects = [
+        'SplitScreen',
+        'Fabrika',
+        'Podkova',
+
+        'WinStandardBack2',
+        'DefaultButton_Slice',
+
+        'MM_Btn_Bread',
+        'MM_Btn_Worlds_Inverse',
+        'MM_Btn_Worlds2',
+        'MM_Btn_Worlds2_Inverse',
+
+        'ui_headline',
+        'LockWater',
+        'RainTimerBack'
+    ];
+
+    const GameSettings = {
+        fb_app_id: 2077329288999958,//hz
+        vk_app_id: 7123740,//6955719,
+        photos: false,
+        likes: {
+            ok: true,
+            vk: false,
+        },
+        share: {
+            ok: true,
+            vk: false,
+        }
+    };
+
+    return {
+        getGameSettings() {
+            return GameSettings;
+        },
+
+        getAllLanguages() {
+            return AllLanguages;
+        },
+
+        getGlobalScale() {
+            return GlobalScale;
+        },
+
+        IsVertical() {
+            return false;
+        },
+
+        getWorldsCount() {
+            return 3;
+        },
+
+        getPaymentInfoById(id) {
+            return PaymentInfo.hasOwnProperty(id) ? PaymentInfo[id] : null;
+        },
+
+        ANIMATIONS: {
+            flyingResources: 1.5,
+            flyingResourcesScale: 1,
+        },
+
+        GUI_WinStore: {
+            headerImg: "ui_headline",
+            headerOffsetY: -270,
+            btnOffsetY: 330,
+            descOffsetY: 160,
+            nineSlice: "store",
+            togglesX: -700,
+            togglesY: -550,
+            togglesDistance: 160,
+            activeOffset: 30,
+            iconOffset: 90,
+            iconOffsetActive: 160,
+            imageOffset: 80,
+        },
+
+        GUI_WinConstruct: {
+            nineSlice: "small",
+            headerOffset: -450,
+            buttonOffset: 400,
+        },
+
+        GUI_WinWithPicture: {
+            nineSlice: "long",
+            imageX: -500,
+            imageY: 0,
+            headerOffset: -370,
+            buttonOffset: 300,
+            buttonOffsetX: 350,
+            descriptionX: 350,
+            descriptionY: 0,
+        },
+
+        GUI_WinAppleDescription: {
+            nineSlice: "long",
+            centerX: 350,
+            distanceX: 430,
+            startY: -150,
+            distanceY: 75,
+            imageX: -500,
+            imageY: -200,
+            headerOffset: -370,
+        },
+
+        GUI_WinPuzzle: {
+            nineSlice: "puzzle",
+            storeDistanceX: 270,
+            storeDistanceY: 370,
+            togglesX: 700,
+            togglesY: -480,
+            togglesDistance: 160,
+            activeOffset: 30,
+            iconOffset: 90,
+            iconOffsetActive: 160,
+            imageOffset: 80,
+            centerBlock: false,
+            showGrid: false,
+            partSize: 310,
+            frontPartSize: 330,
+            BonusOffsetX: 160,
+        },
+
+        GUI_BuildingsGUI : {
+            loaderOffsetX: 0,
+            loaderOffsetY: -105,
+            loaderScale: 1,
+            purchaseIconScale: 1
+        },
+
+        GUI_WinDailyBonus : {
+            columns: 8,
+            rows: 4,
+            distance: 300,
+            addDistance: 50,
+        },
+
+        GUI_WinFortuneWheel: {
+            backX: 0,
+            backY: -50,
+            rotationX: 0,
+            rotationY: 70,
+            buttonY: 800,
+            heroX: 500,
+            heroY: 300,
+            arrowX: 0,
+            arrowY: -500,
+            headerY: 100,
+            initRotation: 180,
+            radius: 250,
+
+            backSize: {
+                width: 1327,
+                height: 1177
+            },
+            lights: [
+                {
+                    x: 180,
+                    y: 1000,
+                },
+                {
+                    x: 160,
+                    y: 830,
+                },
+                {
+                    x: 125,
+                    y: 640,
+                },
+                {
+                    x: 150,
+                    y: 520,
+                },
+                {
+                    x: 130,
+                    y: 300,
+                },
+                {
+                    x: 200,
+                    y: 130,
+                },
+                {
+                    x: 375,
+                    y: 125,
+                },
+                {
+                    x: 525,
+                    y: 150,
+                },
+
+                {
+                    x: 860,
+                    y: 150,
+                },
+                {
+                    x: 1010,
+                    y: 125,
+                },
+                {
+                    x: 1125,
+                    y: 125,
+                },
+                {
+                    x: 1200,
+                    y: 260,
+                },
+                {
+                    x: 1210,
+                    y: 430,
+                },
+                {
+                    x: 1175,
+                    y: 525,
+                },
+                {
+                    x: 1180,
+                    y: 715,
+                },
+                {
+                    x: 1200,
+                    y: 845,
+                },
+                {
+                    x: 1170,
+                    y: 1010,
+                }
+            ]
+        },
+
+        GUI_WinQuests: {
+            distance: 500,
+            centerY: 50,
+            iconsScale: 0.75,
+            noMoreQuestsIcon: 'FortuneDevil'
+        },
+
+        GUI_HUDResources: {
+            labelOffsetY: -6,
+            greenButtonOffsetX1: 420,
+
+            singleImage: 'RainTimerBack',
+            hudBackScale: 1.5
+        },
+
+        getFolderPath: function () {
+            return use2ximages ? IMAGES_FOLDER_2x : IMAGES_FOLDER;
+        },
+
+        getAtlasPath: function () {
+            return use2ximages ? 'altas_spritesv1.json' : 'altas_spritesv2.json';
+        },
+
+        getAtlasFullPath: function () {
+            return use2ximages ? './games/fish/images2x/altas_spritesv1.json' : './games/fish/images/altas_spritesv2.json';
+        },
+
+        getQuestIcons: function () {
+            return QUEST_ICONS_FOLDER;
+        },
+
+        getDataFolder() {
+            return DATA_FOLDER;
+        },
+
+        getDailyBonusIconsFolder() {
+            return DAILY_ICONS_FOLDER;
+        },
+
+        getLocalizationsFolder() {
+            return DATA_LOCALIZATIONS_RELATIVE;
+        },
+
+        getAudioFolder() {
+            return DATA_AUDIO;
+        },
+
+        getStoreFolder() {
+            return STORE_IMAGES_FOLDER;
+        },
+
+        getPuzzleFolder() {
+            return PUZZLE_IMAGES_FOLDER;
+        },
+
+        getPuzzleUIFolder() {
+            return PUZZLE_UI_FOLDER;
+        },
+
+        getGullPath: function (path) {
+            return path ? IMAGES_FOLDER + path : IMAGES_FOLDER;
+        },
+
+        getAutoClickSlot1Id() {
+            return 23;
+        },
+
+        WINDOW_NINE_SLICE: {
+            store: {
+                name: 'WinUpgradeBack',
+                width: 1800,
+                height: 1400,
+                y: 130
+            },
+            small: {
+                name: 'WinStandardBack',
+                width: 1200,
+                height: 1200,
+                y: 0
+            },
+            long: {
+                name: 'WinStandardBack',
+                width: 1800,
+                height: 1000,
+                y: 0
+            },
+            puzzle: {
+                name: 'WinStandardBack2',
+                width: 1800,
+                height: 1000,
+            }
+        },
+
+        STORE_SCROLL_CONFIG: {
+            maxSlots: 9,
+            columns: 3,
+            cellWidth: 500,
+            cellHeight: 850,
+            offsetX: 0,
+            offsetY: 170,
+            width: 1600,
+            height: 1200,
+        },
+
+        PUZZLE_SCROLL_CONFIG: {
+            columns: 4,
+            cellWidth: 350,
+            cellHeight: 350,
+            offsetX: 0,
+            offsetY: 0,
+            width: 1600,
+            height: 900,
+        },
+
+        PUZZLE_SCROLL_CONFIG_STORE: {
+            columns: 3,
+            cellWidth: 500,
+            cellHeight: 850,
+            offsetX: 0,
+            offsetY: 0,
+            width: 1600,
+            height: 900,
+        },
+
+        BUNDLE_FOLDERS: [//Bundle the folders
+            'GoodsBuyWindowIcons',
+            'GoodsSmallIcons',
+            'GoodsDrops',
+            'GoodsPuzzleIcons',
+            STORE_IMAGES_FOLDER,
+            QUEST_ICONS_FOLDER,
+            DAILY_ICONS_FOLDER
+            // '../Audio/'
+        ],
+
+        PRELOAD_OBJECTS: CommonData.PRELOAD_OBJECTS.concat(PreloadObjects),
+
+        MAP_PARAMS: {
+            width: 1536,
+            height: 2448,
+        },
+
+        BACKGROUNDS: {
+            1: {
+                objects: [
+                    {
+                        name: 'Background1'
+                    }
+                ]
+            },
+            2: {
+                objects: [
+                    {
+                        name: 'Background2',
+                    }
+                ]
+            },
+            3: {
+                objects: [
+                    {
+                        name: 'Background3',
+                    }
+                ]
+            }
+        },
+
+        SPLIT_SCREEN: {
+            objects: [
+                {
+                    name: 'SplitScreen'
+                }
+            ]
+        },
+
+        FACTORY_WORKING: {
+            objects: [
+                {
+                    name: 'FactoryWorking'
+                }
+            ]
+        },
+
+        FABRIKA: {
+            objects: [
+                {
+                    click: true,
+                    name: 'Fabrika',
+                    scale: 0.2 * totalScale,
+                    x: 750,
+                    y: -320,
+                }
+            ]
+        },
+
+        PODKOVA: {
+            objects: [
+                {
+                    click: true,
+                    name: 'Podkova',
+                    scale: 0.2 * totalScale,
+                    x: -800,
+                    y: -50,
+                }
+            ]
+        },
+
+        ALL_OBJECTS: Object.assign({}, CommonData.ALL_OBJECTS, LocalObjects),
+
+        ATLASES: [
+            'altas_spritesv2'
+        ],
+        ATLASES_2x: [
+            'altas_spritesv1'
+        ],
+
+        VISUAL_BUILDINGS: {
+            start1w1: {
+                objects: [
+                    {
+                        name: 'Lock',
+                        x: -106,
+                        y: -52,
+                    },
+                ]
+            },
+            start2w1: {
+                objects: [
+                    {
+                        name: 'Lock',
+                        x: 32,
+                        y: -16,
+                    },
+                ]
+            },
+            start3w1: {
+                objects: [
+                    {
+                        name: 'LockWater',
+                        x: 70,
+                        y: -26,
+                    },
+                ]
+            },
+            start4w1: {
+                objects: [
+                    {
+                        name: 'Lock',
+                        x: 20,
+                        y: -70,
+                    },
+                ]
+            },
+            start5w1: {
+                objects: [
+                    {
+                        name: 'LockWater',
+                        x: 76,
+                        y: -50,
+                    },
+                ]
+            },
+            start6w1: {
+                objects: [
+                    {
+                        name: 'LockWater',
+                        x: 8,
+                        y: -56,
+                    },
+                ]
+            },
+            start7w1: {
+                objects: [
+                    {
+                        name: 'LockWater',
+                        x: -30,
+                        y: -64,
+                    },
+                ]
+            },
+            start8w1: {
+                objects: [
+                    {
+                        name: 'LockWater',
+                        x: -22,
+                        y: -84,
+                    },
+                ]
+            },
+            start9w1: {
+                objects: [
+                    {
+                        name: 'LockWater',
+                        x: -90,
+                        y: -66,
+                    },
+                ]
+            },
+
+            start1w2: {
+                objects: [
+                    {
+                        name: 'Lock',
+                        x: -46,
+                        y: -70,
+                    },
+                ]
+            },
+            start2w2: {
+                objects: [
+                    {
+                        name: 'Lock',
+                        x: 26,
+                        y: -80,
+                    },
+                ]
+            },
+            start3w2: {
+                objects: [
+                    {
+                        name: 'Lock',
+                        x: -40,
+                        y: -100,
+                    },
+                ]
+            },
+            start4w2: {
+                objects: [
+                    {
+                        name: 'Lock',
+                        x: -10,
+                        y: -74,
+                    },
+                ]
+            },
+            start5w2: {
+                objects: [
+                    {
+                        name: 'LockWater',
+                        x: -10,
+                        y: -46,
+                    },
+                ]
+            },
+            start6w2: {
+                objects: [
+                    {
+                        name: 'LockWater',
+                        x: -12,
+                        y: -72,
+                    },
+                ]
+            },
+            start7w2: {
+                objects: [
+                    {
+                        name: 'LockWater',
+                        x: -30,
+                        y: -80,
+                    },
+                ]
+            },
+            start8w2: {
+                objects: [
+                    {
+                        name: 'LockWater',
+                        x: -84,
+                        y: -100,
+                    },
+                ]
+            },
+            start9w2: {
+                objects: [
+                    {
+                        name: 'LockWater',
+                        x: -190,
+                        y: -106,
+                    },
+                ]
+            },
+
+            start1w3: {
+                objects: [
+                    {
+                        name: 'Lock',
+                        x: 90,
+                        y: -60,
+                    },
+                ]
+            },
+            start2w3: {
+                objects: [
+                    {
+                        name: 'Lock',
+                        x: -160,
+                        y: -40,
+                    },
+                ]
+            },
+            start3w3: {
+                objects: [
+                    {
+                        name: 'Lock',
+                        x: -20,
+                        y: -26,
+                    },
+                ]
+            },
+            start4w3: {
+                objects: [
+                    {
+                        name: 'Lock',
+                        x: 36,
+                        y: -40,
+                    },
+                ]
+            },
+            start5w3: {
+                objects: [
+                    {
+                        name: 'LockWater',
+                        x: -60,
+                        y: 0,
+                    },
+                ]
+            },
+            start6w3: {
+                objects: [
+                    {
+                        name: 'Lock',
+                        x: -10,
+                        y: -60,
+                    },
+                ]
+            },
+            start7w3: {
+                objects: [
+                    {
+                        name: 'Lock',
+                        x: -120,
+                        y: -20,
+                    },
+                ]
+            },
+            start8w3: {
+                objects: [
+                    {
+                        name: 'Lock',
+                        x: -90,
+                        y: -20,
+                    },
+                ]
+            },
+            start9w3: {
+                objects: [
+                    {
+                        name: 'LockWater',
+                        x: -160,
+                        y: -46,
+                    },
+                ]
+            },
+
+            building1w1: {
+                objects: [
+                    {
+                        scale: 0.2 * totalScale,
+                        x: -70,
+                        y: 6,
+                    }
+                ]
+            },
+            building2w1: {
+                objects: [
+                    {
+                        scale: 0.21 * totalScale,
+                        x: 44,
+                        y: 0,
+                    }
+                ]
+            },
+            building3w1: {
+                objects: [
+                    {
+                        scale: 0.19 * totalScale,
+                        x: 24,
+                        y: 10,
+                    }
+                ]
+            },
+            building4w1: {
+                objects: [
+                    {
+                        scale: 0.24 * totalScale,
+                        x: 50,
+                        y: -30,
+                    }
+                ]
+            },
+            building5w1: {
+                objects: [
+                    {
+                        scale: 0.17 * totalScale,
+                        x: 56,
+                        y: 20,
+                    }
+                ]
+            },
+            building6w1: {
+                objects: [
+                    {
+                        scale: 0.16 * totalScale,
+                        x: 30,
+                        y: 0,
+                    }
+                ]
+            },
+            building7w1: {
+                objects: [
+                    {
+                        scale: 0.17 * totalScale,
+                        x: 0,
+                        y: 0,
+                    }
+                ]
+            },
+            building8w1: {
+                objects: [
+                    {
+                        scale: 0.16 * totalScale,
+                        x: -10,
+                        y: -46,
+                    }
+                ]
+            },
+            building9w1: {
+                objects: [
+                    {
+                        scale: 0.17 * totalScale,
+                        x: -30,
+                        y: -4,
+                    }
+                ]
+            },
+
+            building1w2: {
+                objects: [
+                    {
+                        scale: 0.31 * totalScale,
+                        x: -40,
+                        y: -24,
+                    }
+                ]
+            },
+            building2w2: {
+                objects: [
+                    {
+                        scale: 0.17 * totalScale,
+                        x: 40,
+                        y: -22,
+                    }
+                ]
+            },
+            building3w2: {
+                objects: [
+                    {
+                        scale: 0.32 * totalScale,
+                        x: -44,
+                        y: -40,
+                    }
+                ]
+            },
+            building4w2: {
+                objects: [
+                    {
+                        scale: 0.14 * totalScale,
+                        x: -20,
+                        y: -50,
+                    }
+                ]
+            },
+            building5w2: {
+                objects: [
+                    {
+                        scale: 0.16 * totalScale,
+                        x: -10,
+                        y: -50,
+                    }
+                ]
+            },
+            building6w2: {
+                objects: [
+                    {
+                        scale: 0.18 * totalScale,
+                        x: -36,
+                        y: -70,
+                    }
+                ]
+            },
+            building7w2: {
+                objects: [
+                    {
+                        scale: 0.21 * totalScale,
+                        x: -30,
+                        y: 10,
+                    }
+                ]
+            },
+            building8w2: {
+                objects: [
+                    {
+                        scale: 0.17 * totalScale,
+                        x: -100,
+                        y: 10,
+                    }
+                ]
+            },
+            building9w2: {
+                objects: [
+                    {
+                        scale: 0.23 * totalScale,
+                        x: -140,
+                        y: -110,
+                    }
+                ]
+            },
+
+            building1w3: {
+                objects: [
+                    {
+                        scale: 0.1 * totalScale,
+                        x: 104,
+                        y: -10,
+                    }
+                ]
+            },
+            building2w3: {
+                objects: [
+                    {
+                        scale: 0.12 * totalScale,
+                        x: -144,
+                        y: -4,
+                    }
+                ]
+            },
+            building3w3: {
+                objects: [
+                    {
+                        scale: 0.1 * totalScale,
+                        x: 14,
+                        y: 0,
+                    }
+                ]
+            },
+            building4w3: {
+                objects: [
+                    {
+                        scale: 0.13 * totalScale,
+                        x: 20,
+                        y: -10,
+                    }
+                ]
+            },
+            building5w3: {
+                objects: [
+                    {
+                        scale: 0.09 * totalScale,
+                        x: -40,
+                        y: -20,
+                    }
+                ]
+            },
+            building6w3: {
+                objects: [
+                    {
+                        scale: 0.16 * totalScale,
+                        x: -10,
+                        y: 10,
+                    }
+                ]
+            },
+            building7w3: {
+                objects: [
+                    {
+                        scale: 0.11 * totalScale,
+                        x: -6,
+                        y: 20,
+                    }
+                ]
+            },
+            building8w3: {
+                objects: [
+                    {
+                        scale: 0.1 * totalScale,
+                        x: -86,
+                        y: -20,
+                    }
+                ]
+            },
+            building9w3: {
+                objects: [
+                    {
+                        scale: 0.13 * totalScale,
+                        x: -164,
+                        y: -4,
+                    }
+                ]
+            }
+        },
+
+        PLACED_BUILDINGS: {
+            1: {
+                position: {
+                    x: 660 * totalScale,
+                    y: 356 * totalScale
+                }
+            },
+            2: {
+                position: {
+                    x: -500 * totalScale,
+                    y: 384 * totalScale
+                }
+            },
+            3: {
+                position: {
+                    x: -560 * totalScale,
+                    y: 104 * totalScale
+                }
+            },
+            4: {
+                position: {
+                    x: -20 * totalScale,
+                    y: 390 * totalScale
+                }
+            },
+            5: {
+                position: {
+                    x: -100 * totalScale,
+                    y: 64 * totalScale
+                }
+            },
+            6: {
+                position: {
+                    x: -400 * totalScale,
+                    y: -160 * totalScale
+                }
+            },
+            7: {
+                position: {
+                    x: 130 * totalScale,
+                    y: -162 * totalScale
+                }
+            },
+            8: {
+                position: {
+                    x: 350 * totalScale,
+                    y: 230 * totalScale
+                }
+            },
+            9: {
+                position: {
+                    x: 520 * totalScale,
+                    y: 10 * totalScale
+                }
+            },
+
+            10: {
+                position: {
+                    x: 650 * totalScale,
+                    y: 456 * totalScale
+                }
+            },
+            11: {
+                position: {
+                    x: -480 * totalScale,
+                    y: 456 * totalScale
+                }
+            },
+            12: {
+                position: {
+                    x: 0 * totalScale,
+                    y: 456 * totalScale
+                }
+            },
+            13: {
+                position: {
+                    x: 356 * totalScale,
+                    y: 288 * totalScale
+                }
+            },
+            14: {
+                position: {
+                    x: -50 * totalScale,
+                    y: 134 * totalScale
+                }
+            },
+            15: {
+                position: {
+                    x: -420 * totalScale,
+                    y: 140 * totalScale
+                }
+            },
+            16: {
+                position: {
+                    x: 80 * totalScale,
+                    y: -172 * totalScale
+                }
+            },
+            17: {
+                position: {
+                    x: -250 * totalScale,
+                    y: -150 * totalScale
+                }
+            },
+            18: {
+                position: {
+                    x: 626 * totalScale,
+                    y: 0 * totalScale
+                }
+            },
+
+            19: {
+                position: {
+                    x: 580 * totalScale,
+                    y: 446 * totalScale
+                }
+            },
+            20: {
+                position: {
+                    x: -370 * totalScale,
+                    y: 446 * totalScale
+                }
+            },
+            21: {
+                position: {
+                    x: -20 * totalScale,
+                    y: 426 * totalScale
+                }
+            },
+            22: {
+                position: {
+                    x: 340 * totalScale,
+                    y: 290 * totalScale
+                }
+            },
+            23: {
+                position: {
+                    x: 130 * totalScale,
+                    y: -180 * totalScale
+                }
+            },
+            24: {
+                position: {
+                    x: -50 * totalScale,
+                    y: 170 * totalScale
+                }
+            },
+            25: {
+                position: {
+                    x: -420 * totalScale,
+                    y: 90 * totalScale
+                }
+            },
+            26: {
+                position: {
+                    x: -330 * totalScale,
+                    y: -180 * totalScale
+                }
+            },
+            27: {
+                position: {
+                    x: 620 * totalScale,
+                    y: -50 * totalScale
+                }
+            }
+        }
+    }
+})();
+
+for (let w = 1; w <= 3; w++) {
+    const add = 'w' + w;
+    for (let i = 1; i <= 9; i++) {
+        const bName = 'building' + i + add;
+        const building2 = VisualData.VISUAL_BUILDINGS[bName].objects;
+        const b = building2[0];
+        b.x *= totalScale;
+        b.y *= totalScale;
+        b.name = 'Building_' + i + add;
+        b.click = true;
+
+        const sName = 'start' + i + add;
+        const obj = VisualData.VISUAL_BUILDINGS[sName].objects;
+        const s = obj[0];
+        s.x *= totalScale;
+        s.y *= totalScale;
+        s.click = true;
+        obj[0].scale = totalScale;
+
+        const slot = VisualData.PLACED_BUILDINGS[(w - 1) * 9 + i];
+        slot.depth = 3000 - (i - 1) * 100;
+        slot.levels = [
+            {
+                maxLevel: 0,
+                building: sName,
+            },
+            {
+                building: bName,
+            },
+        ];
+    }
+}
+
+if (typeof exports !== 'undefined') {
+    if (typeof module !== 'undefined' && module.exports) {
+        exports = module.exports = VisualData;
+    }
+    exports.VisualData = VisualData;
+}
+
+function SocialVK() {
+
+    let app_id;
+    let loadedAds = [];
+    let _getParams = null;
+    const PURCHASE_SUFFIX = ".vk";
+    let authorizing = false;
+
+    function _preloadAd(callbacks, playMethod) {
+        if (typeof admanInit === 'undefined') {
+            if (callbacks && callbacks.onAdBlock)
+                callbacks.onAdBlock();
+            return;
+        }
+        console.log("preloadAdFor app " + app_id);
+        admanInit({
+            user_id: null,
+            app_id: app_id,
+            type: 'rewarded',         // 'preloader' или 'rewarded' (по умолчанию - 'preloader')
+            // params: {preview: 1}   // для проверки корректности работы рекламы
+        }, onAdsReady, onNoAds);
+
+        function onAdsReady(adman) {
+            loadedAds.push(adman);
+            if (playMethod)
+                playMethod(callbacks);
+        }
+
+        function onNoAds() {
+            console.error("onNoAds");
+            if (callbacks && callbacks.onNoAds)
+                callbacks.onNoAds();
+        }
+    }
+
+    function _playRewardedAd(callbacks) {
+        if (loadedAds.length > 0) {
+            adman = loadedAds.pop();
+            if (callbacks.onStarted) {
+                adman.onStarted(function () {
+                    callbacks.onStarted();
+                });
+            }
+
+            if (callbacks.onCompleted) {
+                adman.onCompleted(function () {
+                    callbacks.onCompleted();
+                });
+            }
+            if (callbacks.onSkipped) {
+                adman.onSkipped(function () {
+                    callbacks.onSkipped();
+                });
+            }
+            if (callbacks.onClicked) {
+                adman.onClicked(function () {
+                    callbacks.onClicked();
+                });
+            }
+            adman.start('preroll');
+            _preloadAd();
+        } else
+            _preloadAd(callbacks, _playRewardedAd);
+    }
+
+    function getAuthKey() {
+        // return "a7aeecb9cf5b60cfba66225716e7395d";
+        return _getParams['auth_key'];
+    }
+
+    function getViewerId() {
+        // return "539955786";
+        return _getParams['viewer_id'];
+    }
+
+    function _checkPurchases(consumeCallback, offset) {
+        const request_limit = 20;
+        offset = offset || 0;
+        gBase.social.vkListPurchases(offset, request_limit, (err, response) => {
+            console.info("list  err ", err);
+            console.info("response ", response);
+            if (err) {
+                gameAnalytics.sendServerError(err, "vkListPurchases");
+                socialManager.checkAuthStatus(err, () => _checkPurchases(consumeCallback, 0));
+            } else {
+                if (response) {
+                    let stopped = false;
+                    const arr = response.details.originalResponse;
+                    for (let i = 0;i < arr.length; i++) {
+                        const a = arr[i];
+                        if (!a.isConsumed) {
+                            console.warn("CONSUME " + a.purchaseNum);
+                            gBase.social.vkConsumePurchase(a.purchaseNum, (err, response) => {
+                                console.info("consume err ", err);
+                                console.info("response ", response);
+
+                                if (err) {
+                                    gameAnalytics.sendServerError(err, "vkConsumePurchase");
+                                    socialManager.checkAuthStatus(err, () => _checkPurchases(consumeCallback, 0));
+                                    stopped = true;
+                                }
+                                else {
+                                    consumeCallback(a.itemId.substring(0, a.itemId.length - PURCHASE_SUFFIX.length));
+                                }
+                            });
+                        }
+
+                        if (stopped)
+                            return;
+                    }
+
+                    if (arr.length === request_limit)
+                        _checkPurchases(consumeCallback, offset + request_limit);
+                }
+            }
+        });
+    }
+
+    return {
+        initVK: function (appId) {
+            app_id = appId;
+            this.createGBase();
+            if (typeof VK !== 'undefined')
+            VK.init(function() {
+                // API initialization succeeded
+                // console.info("INIT2 ", window.location);
+                // Your code here
+                // VK.callMethod("showInviteBox");
+
+                var callbacksResults = document.getElementById('callbacks');
+
+                VK.addCallback('onOrderSuccess', (order_id) => {
+                    _checkPurchases((id)=>{
+                       gameInit.progress.publicConfirmedPayment(id);
+                    });
+                });
+            });
+            _preloadAd();
+        },
+
+        setAllGetParams(prms) {
+            _getParams = prms;
+        },
+
+        playRewardedAd: function (callbacks) {
+            _playRewardedAd(callbacks);
+        },
+
+        isAuthorizing() {
+            return authorizing;
+        },
+
+        reconnect(callback) {
+            this.createGBase();
+            this.authorize(()=> {
+                gBase.profile.getp((err) => {
+                    if (err)
+                        gameAnalytics.sendServerError(err, "getp");
+                    else
+                        callback();
+                });
+            });
+        },
+
+        authorize(callback) {
+            if (!getViewerId() || !getAuthKey())
+                callback();
+            else {
+                authorizing = true;
+                console.log("Authorize: " + getViewerId());
+                gBase.account.authWebVk(getViewerId(), getAuthKey(), (err) => {
+                    authorizing = false;
+                    if (err)
+                        gameAnalytics.sendServerError(err, "authWebVk");
+                    callback();
+                });
+            }
+        },
+
+        checkPurchases(consumeCallback) {
+            _checkPurchases(consumeCallback);
+        },
+
+        purchase(productId) {
+            var params = {
+                type: 'item',
+                item: productId + PURCHASE_SUFFIX
+            };
+
+            VK.callMethod('showOrderBox', params);
+        },
+
+        getPriceLabel(productId) {
+            const info = VisualData.getPaymentInfoById(productId);
+            return info ? (info.vk_price * 7) + " Руб." : null;
+        }
+    };
+}
+
+function SocialOK() {
+
+    let app_id;
+    let loadedAds = [];
+    let _getParams = null;
+    const PURCHASE_SUFFIX = ".ok";
+    let authorizing = false;
+
+    let callbackOnNoAds = null;
+    let callbackAdIsReady = null;
+    let callbackAdStarted = null;
+    let callbackAdCompleted = null;
+
+    let callbackPostMessage = null;
+
+    let authData;
+    let authCallback;
+
+    function _applyCallbacks() {
+
+    }
+
+    function _preloadAd(callbacks, playMethod) {
+        // if (typeof admanInit === 'undefined') {
+        //     if (callbacks && callbacks.onAdBlock)
+        //         callbacks.onAdBlock();
+        //     return;
+        // }
+        callbackAdIsReady = function onAdsReady() {
+            loadedAds.push(1);
+            if (playMethod)
+                playMethod(callbacks);
+            callbackAdIsReady = null;
+        };
+
+        callbackOnNoAds = function onNoAds() {
+            console.error("onNoAds");
+            if (callbacks && callbacks.onNoAds)
+                callbacks.onNoAds();
+            callbackOnNoAds = null;
+        };
+
+        FAPI.invokeUIMethod("prepareMidroll");
+    }
+
+    function _playRewardedAd(callbacks) {
+        if (callbacks.onStarted) {
+            callbackAdStarted = function () {
+                callbacks.onStarted();
+                callbackAdStarted = null;
+            }
+        }
+
+        if (callbacks.onCompleted) {
+            callbackAdCompleted = function () {
+                callbacks.onCompleted();
+                callbackAdCompleted = null;
+            }
+        }
+
+        if (loadedAds.length > 0) {
+            loadedAds.pop();
+
+            // if (callbacks.onCompleted) {//TODO
+            //     adman.onCompleted(function () {
+            //         callbacks.onCompleted();
+            //     });
+            // }
+
+            FAPI.invokeUIMethod("showMidroll");
+            _preloadAd();
+        } else
+            _preloadAd(callbacks, _playRewardedAd);
+    }
+
+    function _checkPurchases(consumeCallback, offset) {
+        const request_limit = 20;
+        offset = offset || 0;
+        gBase.social.okListPurchases(offset, request_limit, (err, response) => {
+            console.info("list  err ", err);
+            console.info("response ", response);
+            if (err) {
+                gameAnalytics.sendServerError(err, "okListPurchases");
+                socialManager.checkAuthStatus(err, () => _checkPurchases(consumeCallback, 0));
+            } else {
+                if (response) {
+                    let stopped = false;
+                    const arr = response.details.originalResponse;
+                    for (let i = 0; i < arr.length; i++) {
+                        const a = arr[i];
+                        if (!a.isConsumed) {
+                            console.warn("CONSUME " + a.purchaseNum);
+                            gBase.social.okConsumePurchase(a.purchaseNum, (err, response) => {
+                                console.info("consume err ", err);
+                                console.info("response ", response);
+
+                                if (err) {
+                                    gameAnalytics.sendServerError(err, "okConsumePurchase");
+                                    socialManager.checkAuthStatus(err, () => _checkPurchases(consumeCallback, 0));
+                                    stopped = true;
+                                }
+                                else {
+                                    consumeCallback(a.itemId.substring(0, a.itemId.length - PURCHASE_SUFFIX.length));
+                                }
+                            });
+                        }
+
+                        if (stopped)
+                            return;
+                    }
+
+                    if (arr.length === request_limit)
+                        _checkPurchases(consumeCallback, offset + request_limit);
+                }
+            }
+        });
+    }
+
+    return {
+        initOK: function (appId) {
+            app_id = appId;
+            this.createGBase();
+            // gBase = new Gbase.GbaseApi(CURRENT_ENVIRONMENT.name, CURRENT_ENVIRONMENT.env, CURRENT_ENVIRONMENT.hmac, CURRENT_ENVIRONMENT.platform, CURRENT_ENVIRONMENT.version);
+            if (typeof FAPI !== 'undefined') {
+                var rParams = FAPI.Util.getRequestParameters();
+                console.info("rParams", rParams);
+                authData = rParams;
+                FAPI.init(rParams["api_server"], rParams["apiconnection"],
+                    /*
+                    * Первый параметр:
+                    * функция, которая будет вызвана после успешной инициализации.
+                    */
+                    function () {
+                        window.API_callback = function (method, result, data) {
+                            console.warn("method " + method + " > " + result + " data = ", data);
+                            switch (method) {
+                                case "postMediatopic":
+                                    if (result === "ok") {
+                                        if (callbackPostMessage) {
+                                            callbackPostMessage();
+                                            callbackPostMessage = null;
+                                        }
+                                    }
+                                    break;
+                                case "showInvite":
+                                    if (result === "ok" && data) {
+                                        const ids = data.split(",");
+                                        if (ids && ids.length > 0)
+                                            gameInit.likedSuccessfull(ids);
+                                    }
+                                    break;
+                                case "showPayment":
+                                    if (result === "ok") {
+                                        _checkPurchases((id) => {
+                                            gameInit.progress.publicConfirmedPayment(id);
+                                        });
+                                    }
+                                    break;
+                                case "prepareMidroll":
+                                    switch (data) {
+                                        case "ready":
+                                            if (callbackAdIsReady)
+                                                callbackAdIsReady();
+                                            break;
+                                        case "in_use":
+                                            if (callbackAdStarted)
+                                                callbackAdStarted();
+                                            break;
+                                        default:
+                                            if (callbackOnNoAds)
+                                                callbackOnNoAds();
+                                            break;
+                                    }
+                                    break;
+                                case "showMidroll":
+                                    if (result === "ok") {
+                                        switch (data) {
+                                            case "complete":
+                                                if (callbackAdCompleted)
+                                                    callbackAdCompleted();
+                                                break;
+                                        }
+                                    } else {
+                                        if (callbackOnNoAds)
+                                            callbackOnNoAds();
+                                    }
+                                    break;
+                            }
+                        }
+                    },
+                    /*
+                    * Второй параметр:
+                    * функция, которая будет вызвана, если инициализация не удалась.
+                    */
+                    function (error) {
+                        alert("Ошибка инициализации");
+                    }
+                );
+            }
+
+            _preloadAd();
+        },
+
+        openLikes() {
+            FAPI.UI.showInvite("Поиграй в мою игру!");
+        },
+
+        setAllGetParams(prms) {
+            _getParams = prms;
+        },
+
+        playRewardedAd: function (callbacks) {
+            _playRewardedAd(callbacks);
+        },
+
+        isAuthorizing() {
+            return authorizing;
+        },
+
+        authorize(callback) {
+            if (!authData) {
+                console.log("Waiting for auth data");
+                authCallback = callback;
+            }
+            else {
+                authorizing = true;
+                // okId, okSecret, okSessionKey
+                gBase.account.authWebOk(authData.logged_user_id, authData.auth_sig, authData.session_key, (err) => {//TODO
+                    authorizing = false;
+                    console.info("auth!!", err);
+                    if (err)
+                        gameAnalytics.sendServerError(err, "authWebOk");
+                    callback();
+                });
+            }
+        },
+
+        checkPurchases(consumeCallback) {
+            _checkPurchases(consumeCallback);
+        },
+
+        purchase(productId) {
+            FAPI.UI.showPayment("Яблоко", "Это очень вкусно!", productId + PURCHASE_SUFFIX, this.getPrice(productId), null, null, "ok", "true");//TODO
+        },
+
+        getPrice(productId) {
+            const info = VisualData.getPaymentInfoById(productId);
+            return info ? info.ok_price : null;//TODO
+        },
+
+        getPriceLabel(productId) {
+            const price = this.getPrice(productId);
+            return price ? price + " Руб." : 0;
+        },
+
+        postMessage(callback) {
+            callbackPostMessage = callback;
+            FAPI.UI.postMediatopic({
+                "media":[
+                    {
+                        "type": "text",
+                        "text": "Давай играть вместе!"
+                    }
+                ]
+            }, false);
+        }
+    };
+}
+
+function SocialFB() {
+
+    let app_id;
+    let loadedAds = [];
+    let _getParams = null;
+
+    function _preloadAd(callbacks, playMethod) {
+        if (typeof admanInit === 'undefined') {
+            if (callbacks && callbacks.onAdBlock)
+                callbacks.onAdBlock();
+            return;
+        }
+        admanInit({
+            user_id: null,
+            app_id: app_id,
+            type: 'rewarded',         // 'preloader' или 'rewarded' (по умолчанию - 'preloader')
+            // params: {preview: 1}   // для проверки корректности работы рекламы
+        }, onAdsReady, onNoAds);
+
+        function onAdsReady(adman) {
+            loadedAds.push(adman);
+            if (playMethod)
+                playMethod(callbacks);
+        }
+
+        function onNoAds() {
+            console.error("onNoAds");
+            if (callbacks && callbacks.onNoAds)
+                callbacks.onNoAds();
+        }
+    }
+
+    function _playRewardedAd(callbacks) {
+        if (loadedAds.length > 0) {
+            adman = loadedAds.pop();
+            if (callbacks.onStarted) {
+                adman.onStarted(function () {
+                    callbacks.onStarted();
+                });
+            }
+
+            if (callbacks.onCompleted) {
+                adman.onCompleted(function () {
+                    callbacks.onCompleted();
+                });
+            }
+            if (callbacks.onSkipped) {
+                adman.onSkipped(function () {
+                    callbacks.onSkipped();
+                });
+            }
+            if (callbacks.onClicked) {
+                adman.onClicked(function () {
+                    callbacks.onClicked();
+                });
+            }
+            adman.start('preroll');
+            _preloadAd();
+        } else
+            _preloadAd(callbacks, _playRewardedAd);
+    }
+
+    return {
+        initFB: function (appId) {
+            app_id = appId;
+            gBase = new Gbase.GbaseApi(CURRENT_ENVIRONMENT.name, CURRENT_ENVIRONMENT.env, CURRENT_ENVIRONMENT.hmac, CURRENT_ENVIRONMENT.platform, CURRENT_ENVIRONMENT.version);
+        },
+
+        setAllGetParams(prms) {
+            _getParams = prms;
+        },
+
+        playRewardedAd: function (callbacks) {
+            // _playRewardedAd(callbacks);
+            console.error("not implemented");
+        },
+
+        authorize(callback) {
+            if (window.fbAsyncInit) {
+                callback();
+                return;
+            }
+            window.fbAsyncInit = function() {
+                FB.init({
+                    appId      : app_id,
+                    cookie     : true,
+                    xfbml      : true,
+                    version    : 'v3.3'
+                });
+
+                FB.AppEvents.logPageView();
+
+                function onLogin(response) {
+                    var accessToken = response.authResponse.accessToken;
+                    gBase.account.authFb(accessToken, (err) => {
+                        if (err)
+                            gameAnalytics.sendServerError(err, "authFb");
+                        callback();
+                    });
+                }
+
+                FB.getLoginStatus(function(response) {
+                    if (response.status === 'connected') {
+                        // the user is logged in and has authenticated your
+                        // app, and response.authResponse supplies
+                        // the user's ID, a valid access token, a signed
+                        // request, and the time the access token
+                        // and signed request each expire
+                        // var uid = response.authResponse.userID;
+                        onLogin(response);
+                    } else {
+                        FB.login(function (response) {
+                            onLogin(response);
+                        }, {scope: 'email'});
+                    }
+                });
+            };
+
+            (function(d, s, id){
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) {return;}
+                js = d.createElement(s); js.id = id;
+                js.src = "https://connect.facebook.net/en_US/sdk.js";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        },
+    };
+};
+
+function SocialFB_Instant() {
+
+    let app_id;
+    let loadedAds = [];
+    let _getParams = null;
+
+    function _preloadAd(callbacks, playMethod) {
+        if (typeof admanInit === 'undefined') {
+            if (callbacks && callbacks.onAdBlock)
+                callbacks.onAdBlock();
+            return;
+        }
+        admanInit({
+            user_id: null,
+            app_id: app_id,
+            type: 'rewarded',         // 'preloader' или 'rewarded' (по умолчанию - 'preloader')
+            // params: {preview: 1}   // для проверки корректности работы рекламы
+        }, onAdsReady, onNoAds);
+
+        function onAdsReady(adman) {
+            loadedAds.push(adman);
+            if (playMethod)
+                playMethod(callbacks);
+        }
+
+        function onNoAds() {
+            console.error("onNoAds");
+            if (callbacks && callbacks.onNoAds)
+                callbacks.onNoAds();
+        }
+    }
+
+    function _playRewardedAd(callbacks) {
+        if (loadedAds.length > 0) {
+            adman = loadedAds.pop();
+            if (callbacks.onStarted) {
+                adman.onStarted(function () {
+                    callbacks.onStarted();
+                });
+            }
+
+            if (callbacks.onCompleted) {
+                adman.onCompleted(function () {
+                    callbacks.onCompleted();
+                });
+            }
+            if (callbacks.onSkipped) {
+                adman.onSkipped(function () {
+                    callbacks.onSkipped();
+                });
+            }
+            if (callbacks.onClicked) {
+                adman.onClicked(function () {
+                    callbacks.onClicked();
+                });
+            }
+            adman.start('preroll');
+            _preloadAd();
+        } else
+            _preloadAd(callbacks, _playRewardedAd);
+    }
+
+    return {
+        initFB: function (appId) {
+            app_id = appId;
+            gBase = new Gbase.GbaseApi(CURRENT_ENVIRONMENT.name, CURRENT_ENVIRONMENT.env, CURRENT_ENVIRONMENT.hmac, CURRENT_ENVIRONMENT.platform, CURRENT_ENVIRONMENT.version);
+        },
+
+        setAllGetParams(prms) {
+            _getParams = prms;
+        },
+
+        playRewardedAd: function (callbacks) {
+            // _playRewardedAd(callbacks);
+            console.error("not implemented");
+        },
+
+        authorize(callback) {
+            callback();
+        },
+    };
+};
+
+const GAME_ENVIRONMENTS = {
+    'vk_production': {
+        name: "rmg-vkfish",
+        env: "production",
+        hmac: 'bR2UBrFSHflMlXILNVENAoLR',
+        platform: "webvk",
+        version: "0.0.1"
+    },
+    'vk_dev': {
+        name: 'rmg-vkfish',
+        env: 'dev',
+        hmac: 'mE2ibFZ1tPCDOcdc6n0XB7I4',
+        platform: "webvk",
+        version: "0.0.1"
+    },
+    'ok_production': {
+        name: "rmg-vkfish",
+        env: "production",
+        hmac: 'J8Bsh1KT2bt4gnUcSEJrjrep',
+        platform: "webok",
+        version: "0.0.1"
+    },
+    'ok_dev': {
+        name: 'rmg-vkfish',
+        env: 'dev',
+        hmac: 'uwe6KwuCvFLCU5WuwXXU4pMW',
+        platform: "webok",
+        version: "0.0.1"
+    }
+};
+
+const DEFAULT_PLATFORM = "fb_instant";
+const DEFAULT_ENVIRONMENT = "vk_production";
+
+let AllGetParams = null;
+function parseGetParams() {
+    if (!AllGetParams) {
+        const prms = {};
+        var queryString = window.location.search;
+        if (queryString && queryString.length > 0) {
+            queryString = queryString.substring(1);
+            const queries = queryString.split("&");
+
+            for (let i = 0; i < queries.length; i++) {
+                const kvp = queries[i].split('=');
+                if (kvp[0].startsWith("amp;"))
+                    prms[kvp[0].substring(4)] = kvp[1];
+                else
+                    prms[kvp[0]] = kvp[1];
+            }
+        }
+        AllGetParams = prms;
+    }
+    return AllGetParams;
+}
+var socialManager;
+parseGetParams();
+
+if (!AllGetParams.hasOwnProperty('game_platform')) {
+    console.error("platform wasn't specified");
+    AllGetParams.game_platform = DEFAULT_PLATFORM;
+}
+
+if (!AllGetParams.hasOwnProperty('game_env')) {
+    console.error("game_env wasn't specified");
+    AllGetParams.game_env = DEFAULT_ENVIRONMENT;
+}
+
+const CURRENT_ENVIRONMENT = GAME_ENVIRONMENTS[AllGetParams.game_env];
+
+const TEST_MODE = AllGetParams.test_mode;
+
+{
+    switch (AllGetParams.game_platform) {
+        case "vk":
+            socialManager = new SocialVK();
+            socialManager.initialize = function (gameSettings) {
+                socialManager.initVK(gameSettings.vk_app_id);
+            };
+            break;
+        case "ok":
+            socialManager = new SocialOK();
+            socialManager.initialize = function (gameSettings) {
+                socialManager.initOK(gameSettings.ok_app_id);
+            };
+            break;
+        case "fb":
+            socialManager = new SocialFB();
+            socialManager.initialize = function (gameSettings) {
+                socialManager.initFB(gameSettings.fb_app_id);
+            };
+            break;
+        case "fb_instant":
+            socialManager = new SocialFB_Instant();
+            socialManager.initialize = function (gameSettings) {
+                socialManager.initFB(gameSettings.fb_app_id);
+            };
+            FBInstant.initializeAsync()
+                .then(function() {
+                        console.log("LOAD");
+
+                        FBInstant.startGameAsync()
+                            .then(function () {
+                                // Retrieving context and player information can only be done
+                                // once startGameAsync() resolves
+                                var contextId = FBInstant.context.getID();
+                                var contextType = FBInstant.context.getType();
+
+                                var playerName = FBInstant.player.getName();
+                                var playerPic = FBInstant.player.getPhoto();
+                                var playerId = FBInstant.player.getID();
+
+                                // Once startGameAsync() resolves it also means the loading view has
+                                // been removed and the user can see the game viewport
+                                console.log("PLAYERID " + playerId);
+                                game.start();
+                            });
+                    });
+            break;
+    }
+}
+
+socialManager.createGBase = function() {
+    gBase = new Gbase.GbaseApi(CURRENT_ENVIRONMENT.name, CURRENT_ENVIRONMENT.env, CURRENT_ENVIRONMENT.hmac, CURRENT_ENVIRONMENT.platform, CURRENT_ENVIRONMENT.version);
+};
+
+socialManager.reconnect = function (callback) {
+    this.createGBase();
+    this.authorize(()=> {
+        gBase.profile.getp((err) => {
+            if (err)
+                gameAnalytics.sendServerError(err, "getp");
+            else
+                callback();
+        });
+    });
+},
+
+socialManager.checkAuthStatus = function(err, callback) {
+    if (err.code == 310 && !socialManager.isAuthorizing()) {
+        console.log("Re-auth");
+        socialManager.reconnect(callback);
+    }
+};
+
+let activeButtonForTutorial = null;
+const invisibleButton = {};
+
+function lockGuiAtButton(btn) {
+    activeButtonForTutorial = btn;
+}
+
+function lockGuiEverything() {
+    activeButtonForTutorial = invisibleButton;
+}
+
+function unlockGUI() {
+    activeButtonForTutorial = null;
+}
+
+class BasicButton extends Phaser.GameObjects.Sprite {
+    constructor(group, config, callback) {
+        config.x = config.x || 0;
+        config.y = config.y || 0;
+        //check if config contains a scene
+        if (!config.scene) {
+            console.log('missing scene');
+            return;
+        }
+        //check if config contains a key
+        if (!config.key) {
+            console.log("missing key!");
+            return;
+        }
+
+        //if there is no up property assume 0
+        if (!config.up) {
+            config.up = 0;
+        }
+        //if there is no down in config use up
+        if (!config.down) {
+            config.down = config.up;
+        }
+        //if there is no over in config use up
+        if (!config.over) {
+            config.over = config.up;
+        }
+
+        const obj = VisualData.ALL_OBJECTS[config.key];
+
+        var sliceName, nineSlice;
+        if (config.minWidth) {
+            sliceName = config.key + "_Slice";
+            nineSlice = VisualData.ALL_OBJECTS[sliceName];
+        }
+
+        if (nineSlice && nineSlice.type === UnnyObjectType.NineSlice) {
+            super(config.scene, config.x, config.y, null);
+        } else {
+            if (obj && GameData.getAtlasName(obj)) {
+                super(config.scene, config.x, config.y, 'atlas_sprites', obj.file);
+            }
+            else {
+                super(config.scene, config.x, config.y, config.key, config.up);
+            }
+        }
+        this.config = config;
+        this.callback = callback;
+
+        //add this to the scene
+        config.scene.add.existing(this);
+        this.group = group;
+        if (group)
+            group.add(this);
+
+        this.clickable = this;
+
+        if (config.minWidth) {
+            if (nineSlice.type === UnnyObjectType.NineSlice) {
+                this.clickable = config.scene.add.myNineSlice(config.x, config.y, {
+                    name: sliceName,
+                    width: config.minWidth,
+                    height: this.height,
+                }).setOrigin(0.5);
+                this.visible = false;
+                // this.visible = false;
+                this.nineActive = true;
+                if (group)
+                    group.add(this.clickable);
+            }
+        }
+
+        if (!config.scale)
+            config.scale = 1;
+        if (this.config.scale_parent)
+            this._defaultScale(1);
+        this.setScale(config.scale);
+
+        //make interactive and set listeners
+        this.clickable.setInteractive();
+        this.clickable.on('pointerdown',this.onDown,this);
+        this.clickable.on('pointerup',this.onUp,this);
+        this.clickable.on('pointerover',this.onOver,this);
+        this.clickable.on('pointerout',this.onOut,this);
+    }
+
+    setVisible(visible) {
+        if (!this.nineActive)
+            super.setVisible(visible);
+        else
+            this.clickable.setVisible(visible);
+    }
+
+    getParentObject() {
+        return this.config.scale_parent ? this.group : this.clickable;
+    }
+
+    isLocked() {
+        return (activeButtonForTutorial && activeButtonForTutorial !== this && !this.ignoreTutorial) || this.locked;
+    }
+
+    setButtonLocked(locked) {
+        this.locked = locked;
+        setLockedColor(this.clickable, locked);
+    }
+
+    onDown()
+    {
+        if (this.isLocked())
+            return;
+
+        this.down = true;
+        // this.setFrame(this.config.down);
+        if (this.callback) {
+            this.setScale(0.95 * this.config.scale);
+            audioManager.playButtonClick();
+        }
+    }
+    onOver()
+    {
+        if (this.isLocked())
+            return;
+
+        // this.setFrame(this.config.over);
+    }
+
+    onOut()
+    {
+        if (this.isLocked())
+            return;
+
+        this.down = false;
+        // this.setFrame(this.config.up);
+        if (this.callback)
+            this.setScale(this.config.scale);
+    }
+
+    _defaultScale(x, y) {
+        if (this.nineActive)
+            this.clickable.setScale(x, y);
+        else
+            super.setScale(x, y);
+    }
+
+    setScale(x, y) {
+        if (this.config.scale_parent) {
+            this.group.setScale(x, y);
+        } else
+            this._defaultScale(x, y);
+    }
+
+    onUp()
+    {
+        if (this.isLocked())
+            return;
+
+        // this.setFrame(this.config.up);
+        if (this.down && this.callback) {
+            this.down = false;
+            this.setScale(this.config.scale);
+            this.callback();
+        }
+    }
+}
+
+class ButtonWithText extends BasicButton {
+    constructor(group, config, callback) {
+        super(group, config, callback);//.setDepth(WinDefaultDepth + 100);
+
+        const iconSize = 100 * GlobalScale;
+
+        if (config.icon) {
+            const priceIcon = config.scene.add.sprite(this.x / localScale - config.minWidth / 2 * GlobalScale + iconSize, this.y / localScale, config.icon);
+            group.add(priceIcon);
+            this.caption = config.scene.add.text(priceIcon.x / localScale + iconSize, this.y / localScale, config.caption, DefaultFont)
+                .setOrigin(0, 0.5)
+                .setDepth(WinDefaultDepth + 110);
+        } else {
+            this.caption = config.scene.add.text(this.x / localScale, this.y / localScale, config.caption, DefaultFont)
+                .setOrigin(0.5, 0.5)
+                .setDepth(WinDefaultDepth + 110);
+        }
+
+        group.add(this.caption);
+    }
+
+    setScale(x, y) {
+        super.setScale(x, y);
+        if (this.caption)
+            this.caption.setScale(x, y);
+    }
+}
+
+class AnimationBase {
+    constructor(group, duration, callback, startDelay) {
+        this.group = group;
+        this.callback = callback;
+        this.time = 0;
+        this.delay = startDelay || 0;
+        this.duration = duration;
+        if (group) {
+            this.x = group.x / localScale;
+            this.y = group.y / localScale;
+            this.scaleX = group.scaleX / imageSizeLocalScale;
+            this.scaleY = group.scaleY / imageSizeLocalScale;
+        }
+    }
+
+    setInverse() {
+        this.inverse = true;
+        this.playFrame(0);
+    }
+
+    getTime() {
+        return this.inverse ? (1 - this.time / this.duration) : this.time / this.duration;
+    }
+
+    _playAnimation() {
+
+    }
+
+    stopAnimation() {
+        this.stopped = true;
+    }
+
+    playFrame(deltaTime){
+        if (this.stopped)
+            return true;
+
+        this.deltaTime = deltaTime;
+        this.time += deltaTime;
+        let done = false;
+        if (this.time >= this.duration) {
+            this.time = this.duration;
+            done = true;
+        }
+
+        this._playAnimation();
+
+        if (done) {
+            this.animationDone();
+            return true;
+        } else
+            return false;
+    }
+
+    animationDone() {
+        if (this.callback)
+            this.callback();
+    }
+}
+
+class AnimationChangeAlpha extends AnimationBase {
+    constructor(group, finalAlpha, duration, callback) {
+        super(group, duration, callback);
+        this.alphaStart = group.alpha;
+        this.alphaFinish = finalAlpha;
+    }
+
+    _playAnimation() {
+        const dt = this.getTime();
+        this.group.alpha = this.alphaStart * (1-dt) + this.alphaFinish * dt;
+    }
+}
+
+class AnimationWinOpen extends AnimationBase {
+    constructor(group, callback) {
+        super(group, 0.2, callback);
+        this.angle = Math.PI * 0.65;
+        this.sinAngle = Math.sin(this.angle);
+        this.scale = 1;
+
+        this.playFrame(0);
+    }
+
+    _playAnimation() {
+        this.group.alpha = this.getTime();
+        this.group.setScale(Math.sin(this.group.alpha * this.angle) / this.sinAngle * this.scale);
+    }
+}
+
+class AnimationButtonShow extends AnimationWinOpen {
+    constructor(button, callback) {
+        super(button, callback);
+        this.scale = button.config.scale;
+        this.duration = 0.5;
+    }
+}
+
+class MoveToPoint extends AnimationBase {
+    constructor(group, point, duration, callback) {
+        super(group, duration, callback);
+
+        this.dx = point.x - this.x;
+        this.dy = point.y - this.y;
+    }
+
+    _playAnimation() {
+        const dt = this.getTime();
+        this.group.setPosition(this.x + this.dx * dt, this.y + this.dy * dt);
+    }
+}
+
+class JumpShieldAnimation extends AnimationBase {
+    constructor(group, params, duration, callback) {
+        super(group, duration, callback);
+        this.params = params;
+    }
+
+    _playAnimation() {
+        const dt = this.getTime();
+        const a = Math.sin(Math.PI * dt);
+        this.group.setPositionY(this.y - this.params.height * a);
+        this.group.setScale((1 + a * this.params.scale));
+    }
+}
+
+class AnimationInfinite extends AnimationBase {
+    constructor(group, period, callback) {
+        super(group, Number.MAX_VALUE, callback);
+        this.period = period;
+    }
+
+    getTime() {
+        return this.time / this.period - Math.trunc(this.time / this.period);
+    }
+}
+
+class JumpFishAnimation extends AnimationInfinite {
+    constructor(group, params, period, callback) {
+        super(group, period, callback);
+        this.params = params;
+    }
+
+    _playAnimation() {
+        const dt = this.getTime();
+        const a = Math.sin(Math.PI * dt);
+        this.group.setPositionY(this.y - this.params.height * a);
+        this.group.setScale((1 + a * this.params.scale) * this.scaleX);
+    }
+}
+
+class FallFishAnimation extends AnimationInfinite {
+    constructor(group, params, period, callback) {
+        super(group, period, callback);
+        this.params = params;
+    }
+
+    _playAnimation() {
+        const dt = this.getTime();
+        const a = Math.sin(Math.PI * dt);
+        this.group.setPositionY(this.y - this.params.height * (1 - a));
+        this.group.setScale((1 + a * this.params.scale) * this.scaleX, (1 - this.params.scale + this.params.scale * (1 - a)) * this.scaleY);
+    }
+
+    stopAnimation() {
+        super.stopAnimation();
+
+        this.group.setPositionY(this.y);
+        this.group.setScale(this.scaleX, this.scaleY);
+    }
+}
+
+class RandomJumpRotation extends AnimationBase {
+    constructor(group, params, duration, callback) {
+        super(group, duration, callback);
+        this.params = params;
+    }
+
+    _playAnimation() {
+        const dt = this.getTime();
+        this.group.setPosition(this.group.x / localScale + this.params.vx * dt, this.group.y / localScale + this.params.vy * dt);
+        this.group.angle += this.params.angle * dt;
+        this.params.vy += this.params.g * dt;
+    }
+}
+
+class MoveToPointExtra extends MoveToPoint {
+    constructor(group, point, extra, duration, callback) {
+        super(group, point, duration, callback);
+        this.sinAngle = 1 - extra;
+        this.angle = Math.PI - Math.asin(this.sinAngle);
+    }
+
+    _playAnimation() {
+        const dt = Math.sin(this.getTime() * this.angle) / this.sinAngle;
+        this.group.setPosition(this.x + this.dx * dt, this.y + this.dy * dt);
+    }
+}
+
+class MoveToPointSin extends MoveToPoint {
+    constructor(group, point, duration, callback) {
+        super(group, point, duration, callback);
+        const d = Math.sqrt(this.dx * this.dx + this.dy * this.dy);
+        this.d = d;
+        this.nx = this.dy / d;
+        this.ny = -this.dx / d;
+    }
+
+    _playAnimation() {
+        const dt = this.getTime();
+        const a = Math.sin(dt * Math.PI * 2) * this.d / 10;
+        this.group.setPosition(this.x + this.dx * dt + a * this.nx, this.y + this.dy * dt + a * this.ny);
+    }
+}
+
+class ChangeShape extends AnimationBase {
+    constructor(group, scale, duration, periods, callback) {
+        super(group, duration, callback);
+        this.scale = scale;
+        this.periods = periods;
+    }
+
+    _playAnimation() {
+        const dt = this.getTime();
+        const a = Math.sin(dt * Math.PI * 2 * this.periods) * this.scale;
+        this.group.setScale2(this.scaleX * (1 + a), this.scaleY * (1 - a));
+    }
+}
+
+class ScaleAnimation extends AnimationBase {
+    constructor(group, scale, duration, callback) {
+        super(group, duration, callback);
+        this.scaleStart = group.scaleX;
+        this.scaleEnd = scale;
+    }
+
+    _playAnimation() {
+        const dt = this.getTime();
+        this.group.setScale(this.scaleStart * (1-dt) + this.scaleEnd * dt);
+    }
+}
+
+class RotationAnimation extends AnimationBase {
+    constructor(group, amplitude, duration, periods, callback) {
+        super(group, duration, callback);
+        this.amplitude = amplitude;
+        this.periods = periods;
+        this.angle = this.group.angle;
+    }
+
+    _playAnimation() {
+        const dt = this.getTime();
+        this.group.angle = this.angle + Math.sin(dt * Math.PI * 2 * this.periods) * this.amplitude;
+    }
+}
+
+class ShakeBox extends RotationAnimation {
+    constructor(group, amplitude, distance, duration, periods, callback) {
+        super(group, amplitude, duration, periods, callback);
+        this.distance = distance;
+    }
+
+    _playAnimation() {
+        const dt = this.getTime();
+        const delay = Math.PI / 2;
+        this.group.angle = -Math.sin(dt * (Math.PI * 2 * this.periods - delay) + delay) * this.amplitude;
+        const sin = Math.sin(dt * Math.PI * 2 * this.periods);
+        this.group.setPositionX(this.x + sin * this.distance);
+    }
+}
+
+class ScaleSinInfinite extends AnimationInfinite {
+    constructor(group, period, startScale, amplitude, callback) {
+        super(group, period, callback);
+        this.startScale = startScale;
+        this.amplitude = amplitude;
+    }
+
+    _playAnimation() {
+        const dt = this.getTime();
+        this.group.setScale(this.startScale + this.amplitude * Math.sin(dt * Math.PI * 2));
+    }
+}
+
+class MoveSinInfinite extends AnimationInfinite {
+    constructor(group, period, amplitudeX, amplitudeY, callback) {
+        super(group, period, callback);
+        this.amplitudeX = amplitudeX;
+        this.amplitudeY = amplitudeY;
+    }
+
+    _playAnimation() {
+        const dt = this.getTime();
+        this.group.setPosition(
+            this.x + this.amplitudeX * Math.sin(dt * Math.PI * 2),
+            this.y + this.amplitudeY * Math.sin(dt * Math.PI * 2)
+            );
+    }
+}
+
+class ScaleAlphaInfinite extends AnimationInfinite {
+    _playAnimation() {
+        const dt = this.getTime();
+        this.group.setScale(dt);
+        this.group.alpha = Math.cos(dt * Math.PI / 2) * 2;
+    }
+}
+
+class SwipeInfinite extends AnimationInfinite {
+    constructor(group, period, callback) {
+        super(group, period, callback);
+        this.part = 0.3;
+        this.endPoint = {
+            x: this.x + 200 * GlobalScale,
+            y: this.y - 100 * GlobalScale
+        };
+    }
+
+    _playAnimation() {
+        let dt = this.getTime();
+        if (dt <= this.part) {
+            dt /= this.part;
+            this.group.setPosition(this.x * (1-dt) + this.endPoint.x * dt, this.y * (1-dt) + this.endPoint.y * dt);
+        } else {
+            dt = 1 - dt;
+            dt /= (1 - this.part);
+            this.group.setPosition(this.x * (1-dt) + this.endPoint.x * dt, this.y * (1-dt) + this.endPoint.y * dt);
+        }
+    }
+}
+
+class AnimationFallingBread extends AnimationBase {
+    constructor(engine, group, duration, callback) {
+        super(group, duration, callback);
+        this.engine = engine;
+        this.breads = [];
+        this.period = 0.15;
+
+        this.respawn = true;
+        this.destroyedCount = 0;
+
+        this.timer = Math.trunc(duration - 0.5);
+
+        const number = this.engine.add.textOld(RealScreenWidth / 2, RealScreenHeight * 0.1, LocalizationManager.getLocalizization("BanjoManTipStart"), DefaultFontBig)
+            .setDepth(WinDefaultDepth)
+            .setOrigin(0.5);
+        animManager.applyWinOpenAnimation(number, ()=>{
+            setTimeout(()=>number.destroy(true), 500);
+        });
+
+        audioManager.playBanjoded();
+    }
+
+    playFrame(deltaTime){
+        if (this.stopped)
+            return true;
+
+        this.deltaTime = deltaTime;
+
+        if (this.respawn) {
+            this.time += deltaTime;
+            if (this.time >= this.duration - 1) {
+                this.time = this.duration;
+                this.respawn = false;
+            }
+        } else {
+            if (this.destroyedCount >= this.breads.length) {
+                this.animationDone();
+                return true;
+            }
+        }
+
+        this._playAnimation();
+    }
+
+    _playAnimation() {
+        const timeLeft = Math.trunc(this.duration - this.time);
+
+        if (timeLeft < this.timer) {
+            this.timer = timeLeft;
+            const number = this.engine.add.textOld(RealScreenWidth / 2, RealScreenHeight * 0.1, timeLeft, DefaultFontVeryBig)
+                .setDepth(WinDefaultDepth)
+                .setOrigin(0.5);
+            animManager.applyWinOpenAnimation(number, ()=>{
+                setTimeout(()=>number.destroy(true), 500);
+            });
+        }
+
+        const count = Math.trunc(this.time / this.period);
+        if (count > this.breads.length) {
+            let newCount = count - this.breads.length;
+            const part = 0.2;
+            for (let i = 0; i < newCount; i++) {
+                const obj = {};
+                this.breads.push(obj);
+                CreateImageInGroup(this.engine, this.group, 'bread_' + (Math.trunc(Math.random() * 7) + 1), (sprite)=>{
+                    obj.img = sprite;
+                    obj.v = (3 + Math.random()) * 400;
+                    obj.y = 0;
+                    let x;
+                    if (Math.random() > 0.5)
+                        x = (1 - part * 0.25 - Math.random() * part) * RealScreenWidth;
+                    else
+                        x = part * 0.25 + (Math.random() * part) * RealScreenWidth;
+                    sprite.setPosition(x, obj.y).setScale(0.7 + Math.random() * 0.5);
+                    sprite.angle = Math.random() * 360;
+                });
+            }
+        }
+
+        for (let i = 0; i < this.breads.length; i++) {
+            const obj = this.breads[i];
+            const img = obj.img;
+
+            if (img) {
+                obj.y += obj.v * this.deltaTime;
+                if (obj.y >= RealScreenHeight){
+                    this.destroyedCount++;
+                    obj.img.destroy(true);
+                    obj.img = null;
+                } else
+                    img.setPositionY(obj.y);
+            }
+        }
+    }
+}
+
+class AnimationsManager {
+
+    constructor() {
+        this.allAnimations = [];
+        this.deltaTime = 1.0 / 30.0;
+        setInterval(() => this.playAnimations(), this.deltaTime * 1000);
+    }
+
+    _canAddAnimation(group) {
+        for (let i in this.allAnimations) {
+            if (this.allAnimations[i].group === group)
+                return false;
+        }
+        return true;
+    }
+
+    _addAnimation(anim) {
+        this.allAnimations.push(anim);
+        return anim;
+    }
+
+    applyWinOpenAnimation(group, callback) {
+        return this._addAnimation(new AnimationWinOpen(group, callback));
+    }
+
+    applyButtonShowAnimation(group) {
+        return this._addAnimation(new AnimationButtonShow(group));
+    }
+
+    moveToPoint(group, point, duration, callback) {
+        return this._addAnimation(new MoveToPoint(group, point, duration, callback));
+    }
+
+    moveToPointExtra(group, point, extra, duration, callback) {
+        return this._addAnimation(new MoveToPointExtra(group, point, extra, duration, callback));
+    }
+
+    animationChangeAlpha(group, finalAlpha, duration, callback) {
+        return this._addAnimation(new AnimationChangeAlpha(group, finalAlpha, duration, callback));
+    }
+
+    moveToPointSin(group, point, duration, callback) {
+        return this._addAnimation(new MoveToPointSin(group, point, duration, callback));
+    }
+
+    changeShape(group, scale, duration, periods, callback) {
+        return this._addAnimation(new ChangeShape(group, scale, duration, periods, callback));
+    }
+
+    rotationAnimation(group, amplitude, duration, periods, callback) {
+        return this._addAnimation(new RotationAnimation(group, amplitude, duration, periods, callback));
+    }
+
+    shakeBox(group, amplitude, distance, duration, periods, callback) {
+        return this._addAnimation(new ShakeBox(group, amplitude, distance, duration, periods, callback));
+    }
+
+    scaleAnimation(group, scale, duration, callback) {
+        return this._addAnimation(new ScaleAnimation(group, scale, duration, callback));
+    }
+
+    randomJumpRotation(group, params, duration, callback) {
+        return this._addAnimation(new RandomJumpRotation(group, params, duration, callback));
+    }
+
+    jumpShieldAnimation(group, params, duration, callback) {
+        if (this._canAddAnimation(group))
+            return this._addAnimation(new JumpShieldAnimation(group, params, duration, callback));
+        return null;
+    }
+
+    jumpFishAnimation(group, params, period, callback) {
+        if (this._canAddAnimation(group))
+            return this._addAnimation(new JumpFishAnimation(group, params, period, callback));
+        return null;
+    }
+
+    fallFishAnimation(group, params, period, callback) {
+        if (this._canAddAnimation(group))
+            return this._addAnimation(new FallFishAnimation(group, params, period, callback));
+        return null;
+    }
+
+    waitAnimation(duration, callback) {
+        return this._addAnimation(new AnimationBase(null, duration, callback));
+    }
+
+    scaleAlphaInfinite(group, period, callback) {
+        return this._addAnimation(new ScaleAlphaInfinite(group, period, callback));
+    }
+
+    moveSinInfinite(group, period, amplitudeX, amplitudeY, callback) {
+        return this._addAnimation(new MoveSinInfinite(group, period, amplitudeX, amplitudeY, callback));
+    }
+
+    scaleSinInfinite(group, period, startScale, amplitude, callback) {
+        return this._addAnimation(new ScaleSinInfinite(group, period, startScale, amplitude, callback));
+    }
+
+    swipeInfinite(group, period, callback) {
+        return this._addAnimation(new SwipeInfinite(group, period, callback));
+    }
+
+    playFallingBread(engine, group, duration, callback) {
+        return this._addAnimation(new AnimationFallingBread(engine, group, duration, callback));
+    }
+
+    changeShapeOfSouls(group, callback) {
+        if (this._canAddAnimation(group)) {
+            audioManager.playMoneyCollected();
+            return this._addAnimation(new ChangeShape(group, 0.2, 0.5, 1, callback));
+        }
+        return null;
+    }
+
+    playAnimations() {
+        for (let i = this.allAnimations.length - 1; i >= 0; i--) {
+            if (this.allAnimations[i].playFrame(this.deltaTime)) {
+                this.allAnimations.splice(i, 1);
+            }
+        }
+    }
+}
+
+let animManager = new AnimationsManager();
+
+class AudioManager {
+    constructor() {
+        this.names = {
+            BackgroundMusic: 'BackgroundMusic',
+            Banjoded: 'Banjoded',
+            Chest: ['Audio_Chest_1',
+                'Audio_Chest_2',
+                'Audio_Chest_3'
+            ],
+            LongTap: [
+                'Audio_longtap1',
+                'Audio_longtap2',
+                'Audio_longtap3',
+                'Audio_longtap4'
+            ],
+            Click: [
+                'Audio_Pop-ani-1',
+                'Audio_Pop-ani-2',
+                'Audio_Pop-ani-3',
+            ],
+            ButtonClick: 'Audio_ClickUI',
+            Info: 'Audio_Info',
+            // LevelUp: 'Audio_LevelUp',
+            Money: 'Audio_Money',
+            Window: 'Audio_Window'
+        };
+
+        this.addMusic = {
+            BackgroundMusic2: 'BackgroundMusic2',
+            BackgroundMusic3: 'BackgroundMusic3',
+            Gathering: 'Gathering'
+        };
+        this.sounds = {};
+        this._activeWorldMusic = 0;
+    }
+
+    playFactoryMusic() {
+        this.playWorldMusic(0);
+    }
+
+    _playBackMusic(music, volume) {
+        if (this.activeMusic === music || GameSettings.musicOff)
+            return;
+
+        volume = volume || 1;
+        this.stopMusic();
+
+        if (music)
+            music.play({loop: true, volume: volume});
+        this.activeMusic = music;
+    }
+
+    stopMusic() {
+        if (this.activeMusic) {
+            this.activeMusic.stop();
+            this.activeMusic = null;
+        }
+    }
+
+    restoreMusic() {
+        this.playWorldMusic(this._activeWorldMusic);
+    }
+
+    _loadAndPlayMusicByKey(worldIndex, key) {
+        if (this.sounds.hasOwnProperty(key)) {
+            this._playBackMusic(this.sounds[key]);
+        } else {
+            const music = this.addMusic[key];
+            LoadPreparedFile(this.engine, music, ()=>{
+                this.sounds[key] = this.engine.sound.add(music);
+                if (this._activeWorldMusic === worldIndex)
+                    this._playBackMusic(this.sounds[key]);
+            });
+        }
+    }
+
+    playWorldMusic(worldIndex) {
+        worldIndex = parseInt(worldIndex);
+        this._activeWorldMusic = worldIndex;
+        switch (worldIndex) {
+            case 0:
+                this._loadAndPlayMusicByKey(worldIndex, 'Gathering');
+                break;
+            case 1:
+                this._playBackMusic(this.sounds.BackgroundMusic, 0.4);
+                break;
+            default:
+                this._loadAndPlayMusicByKey(worldIndex, 'BackgroundMusic' + worldIndex);
+                break;
+        }
+    }
+
+    load(engine) {
+        this.engine = engine;
+        const load = engine.load;
+
+        for (let key in this.names) {
+            if (typeof this.names[key] === 'object') {
+                for (let name of this.names[key])
+                    load.audio(name, VisualData.ALL_OBJECTS[name].file);
+            } else {
+                const name = this.names[key];
+                load.audio(name, VisualData.ALL_OBJECTS[name].file);
+            }
+        }
+
+        engine.load.once('complete', ()=>{
+            for (let key in this.names) {
+                if (typeof this.names[key] === 'object') {
+                    const arr = this.sounds[key] = [];
+                    for (let name of this.names[key])
+                        arr.push(engine.sound.add(name));
+                } else {
+                    const name = this.names[key];
+                    this.sounds[key] = engine.sound.add(name);
+                }
+            }
+
+            window.onclick = () => {
+                if (this._activeWorldMusic === 0)
+                    this.playWorldMusic(1);
+                window.onclick = null;
+            };
+        });
+        load.start();
+    }
+
+    playWindowOpen(){
+        if (GameSettings.soundsOff)
+            return;
+
+        if (this.sounds.Window)
+            this.sounds.Window.play();
+    }
+
+    playButtonClick(){
+        if (GameSettings.soundsOff)
+            return;
+
+        if (this.sounds.ButtonClick)
+            this.sounds.ButtonClick.play();
+    }
+
+    playMoneyCollected(){
+        if (GameSettings.soundsOff)
+            return;
+
+        if (this.sounds.Money)
+            this.sounds.Money.play();
+    }
+
+    playBuildingClick() {
+        if (GameSettings.soundsOff)
+            return;
+
+        if (this.sounds.Click)
+            this.sounds.Click[Math.trunc(Math.random() * this.sounds.Click.length)].play();
+    }
+
+    playUpgrade(counter) {
+        if (GameSettings.soundsOff)
+            return;
+
+        if (this.sounds.LongTap) {
+            const index = Math.min(this.sounds.LongTap.length - 1, Math.trunc(counter / 4));
+            const sound = this.sounds.LongTap[index];
+            sound.play();
+        }
+    }
+
+    playChestSound(index) {
+        if (GameSettings.soundsOff)
+            return;
+
+        if (this.sounds.Chest)
+            this.sounds.Chest[index].play();
+    }
+
+    playBanjoded() {
+        if (GameSettings.soundsOff)
+            return;
+
+        if (this.sounds.Banjoded)
+            this.sounds.Banjoded.play();
+    }
+
+    playInfo() {
+        if (GameSettings.soundsOff)
+            return;
+
+        if (this.sounds.Info)
+            this.sounds.Info.play();
+    }
+
+    muteSounds() {
+        if (!GameSettings.musicOff && this.activeMusic) {
+            this.activeMusic.pause();
+        }
+    }
+
+    unMuteSounds() {
+        if (!GameSettings.musicOff && this.activeMusic) {
+            this.activeMusic.resume();
+        }
+    }
+}
+
+var audioManager = new AudioManager();
+
+function Random(seed) {
+    this._seed = seed % 2147483647;
+    if (this._seed <= 0) this._seed += 2147483646;
+}
+
+/**
+ * Returns a pseudo-random value between 1 and 2^32 - 2.
+ */
+Random.prototype.next = function () {
+    return this._seed = this._seed * 16807 % 2147483647;
+};
+
+
+/**
+ * Returns a pseudo-random floating point number in range [0, 1).
+ */
+Random.prototype.nextFloat = function () {
+    return (this.next() - 1) / 2147483646;
+};
+
+function BigIntSqrRoot(val) {
+    function newtonIteration(x0) {
+        const x1 = val.divide(x0).add(x0).divide(2);
+        if (x1.compare(x0) >= 0)
+            return x1;
+
+        return newtonIteration(x1);
+    }
+
+    return newtonIteration(val);
+}
+
+class UnnyAction {
+
+    constructor(){
+        this.allListeners = [];
+    }
+
+    addListener(listener) {
+        this.allListeners.push(listener);
+    }
+
+    removeListener(listener) {
+        for (let i = 0;i < this.allListeners.length;i++){
+            if (this.allListeners[i] === listener){
+                this.allListeners.splice(i, 1);
+                break;
+            }
+        }
+    }
+
+    clear() {
+        this.allListeners = [];
+    }
+
+    callListeners (...theArgs) {
+        for (let i = 0;i < this.allListeners.length;i++)
+            this.allListeners[i](...theArgs);
+    }
+
+    callAndClearListeners (...theArgs) {
+        const temp = this.allListeners;
+        this.clear();
+        for (let i = 0;i < temp.length;i++)
+            temp[i](...theArgs);
+    }
+}
+
+class EventManager {
+    constructor() {
+        this.onSoulsCollected = new UnnyAction();//slot, amount
+        this.onBoxOpened = new UnnyAction();
+        this.onBoxPurchased = new UnnyAction();
+        this.onBoxReceived = new UnnyAction();
+        this.onLongSpeedActivated = new UnnyAction();
+        this.onShortSpeedActivated = new UnnyAction();
+        this.onUpgradePurchased = new UnnyAction();
+        this.onBuildingUpgraded = new UnnyAction();
+        this.onHarvestCompleted = new UnnyAction();
+        this.onMacroUpgraded = new UnnyAction();
+        this.onMouseWheel = new UnnyAction();
+        this.onAdStarted = new UnnyAction();
+        this.onDailyBonusCollected = new UnnyAction();
+        this.onQuestCompleted = new UnnyAction();
+        this.onQuestClaimed = new UnnyAction();
+        this.onLikesReseted = new UnnyAction();
+        this.onFortuneWheelUsed = new UnnyAction();
+        this.onActionQuestProgress = new UnnyAction();
+    }
+
+    soulsCollected(slot, amount) {
+        this.onSoulsCollected.callListeners(slot, amount);
+    }
+
+    boxOpened() {
+        this.onBoxOpened.callListeners();
+        gameAnalytics.sendEvent("BoxOpened");
+    }
+
+    boxReceived(amount) {
+        this.onBoxReceived.callListeners(amount);
+    }
+
+    boxPurchased(amount) {
+        this.onBoxPurchased.callListeners(amount);
+    }
+
+    longSpeedActivated() {
+        this.onLongSpeedActivated.callListeners();
+    }
+
+    shortSpeedActivated() {
+        this.onShortSpeedActivated.callListeners();
+    }
+
+    upgradePurchased(upgradeInfo) {
+        this.onUpgradePurchased.callListeners(upgradeInfo);
+    }
+
+    buildingUpgraded(building, slot) {
+        this.onBuildingUpgraded.callListeners(building, slot);
+    }
+
+    harvestCompleted(seeds) {
+        this.onHarvestCompleted.callListeners(seeds);
+    }
+
+    macroUpgraded(building, bonus) {
+        this.onMacroUpgraded.callListeners(building, bonus);
+    }
+
+    mouseWheel(deltaX, deltaY) {
+        this.onMouseWheel.callListeners(deltaX, deltaY);
+    }
+
+    adStarted() {
+        this.onAdStarted.callListeners();
+    }
+
+    dailyBonusCollected() {
+        this.onDailyBonusCollected.callListeners();
+    }
+
+    questClaimed() {
+        this.onQuestClaimed.callListeners();
+    }
+
+    questCompleted() {
+        this.onQuestCompleted.callListeners();
+    }
+
+    likesReseted() {
+        this.onLikesReseted.callListeners();
+    }
+
+    fortuneWheelUsed() {
+        this.onFortuneWheelUsed.callListeners();
+    }
+
+    actionQuestProgress(quest) {
+        this.onActionQuestProgress.callListeners(quest);
+    }
+}
+
+let eventManager = new EventManager();
+
+const BONUS_PER_LIKE = 1;
+const MAX_LIKES_COUNT = 100;
+
+const AllBuildings = {};
+
+class Building {
+    constructor(info, slot, key) {
+        this.onResourcesUpdated = new UnnyAction();
+        this.onBuildingUpdated = new UnnyAction();
+        this.onResourcesCollected = new UnnyAction();
+        this.onPreUpgrade = new UnnyAction();
+        this.onUpgraded = new UnnyAction();
+        this.onLiked = new UnnyAction();
+        this.onReseted = new UnnyAction();
+        this.onUnlockChanged = new UnnyAction();
+
+        this.currentLoading = 0;
+        this.info = info;
+        this.resources = 0;
+        this.level = 0;
+        this.likes = [];
+        this.slot = slot;
+        this.id = parseInt(key);
+
+        AllBuildings[this.slot] = this;
+
+        this.onLikesReseted = new UnnyAction();
+        eventManager.onLikesReseted.addListener(this.likesWereReseted.bind(this));
+    }
+
+    _saveState() {
+        this.savedProgress.resources = this.resources.toString();
+        this.savedProgress.loading = this.currentLoading;
+        this.savedProgress.update = this.update = Progress.getTimeNow();
+    }
+
+    _loadProgress(progress, globalProgress, nowTime) {
+        this.savedProgress = progress;
+
+        this.level = progress.level;
+        this.likes = progress.likes ? progress.likes : [];
+        this.resources = bigInt(progress.resources);
+        if (!progress.hasOwnProperty("upgradePrice")) {
+            progress.upgradePrice = "0"
+        }
+        this.upgradePrice = bigInt(this.level > 0 ? progress.upgradePrice : this.info.construct.price);
+        this.currentLoading = progress.loading || 0;
+        this.update = progress.update || 0;
+        this.bonus_SpeedUp = progress.speedUpMultiplier ? progress.speedUpMultiplier : 1;
+        if (!progress.hasOwnProperty('multiProfitMultiplier'))
+            progress.multiProfitMultiplier = "1";
+        this.bonus_MultiProfit = new bigInt(progress.multiProfitMultiplier);
+        this.autoCollect = progress.hasAutoClick;
+
+        this._updateFinalProductionRate();
+
+        if (this.level > 0) {
+            const loadTime = this.getLoadingTime();
+            const production = this.getProductionPerLoad();
+
+            let deltaTime = nowTime - this.update;
+
+            const guardEndTime = globalProgress.getGuardEndTime();
+            let guardScale = 1;
+            if (guardEndTime > this.update) {
+                if (guardEndTime >= nowTime)
+                    guardScale = 2;
+                else
+                    guardScale = ((nowTime - guardEndTime) + 2 * (guardEndTime - this.update)) / deltaTime;
+            }
+
+            if (this.resources.compare(0) !== 0 && !this.autoCollect) {
+                this.currentLoading = 0;
+                this.anyResources = true;
+            } else {
+                deltaTime /= 1000;
+                let periods = Math.trunc(deltaTime / loadTime);
+                if (!this.autoCollect)
+                    periods = Math.min(1, periods);
+
+                // console.log("id = " + this.id + " > " + this.autoCollect + " ? " + periods + " <> " + production + " this.resources = " + this.resources.toString());
+                // console.warn("guardScale " + guardScale);
+                this.resources = this.resources.add(production.multiply(Math.trunc(periods * guardScale)));
+                this.anyResources = this.resources.compare(0) !== 0;
+
+                if (this.anyResources && !this.autoCollect)
+                    this.currentLoading = 0;
+                else
+                    this.currentLoading += deltaTime - periods * loadTime;
+            }
+            this._calculateNextBigUpgradeLevel();
+
+        } else
+            this.anyResources = false;
+
+        globalProgress.onResourcesChanges.addListener(this.resourcesChanged.bind(this));
+
+        this._checkBuildingForOpen(globalProgress);
+        // const info = globalProgress.getPuzzleInfoById(this.id - 1);
+        // if (info && info.level > 1) {
+        //     const data = {
+        //         upgradeType: 'MultiProfit'
+        //     };
+        //     for (let i = 2;i < info.level;i++) {
+        //         data.parameter = GameData.getPuzzleResourceBonusPerLevel(i);
+        //         this._applyBonus(data);
+        //     }
+        // }
+    }
+
+    isUnlocked() {
+        return this.unlocked;
+    }
+
+    _checkBuildingForOpen(progress) {
+        if (this.getLevel() > 0) {
+            this.unlocked = false;
+        } else {
+            const newUnlocked = progress.isResourcesEnoughForConstruction(this);
+            if (this.unlocked !== newUnlocked) {
+                this.unlocked = newUnlocked;
+                this.onUnlockChanged.callListeners(this);
+            }
+        }
+    }
+
+    resourcesChanged(progress, increased) {
+        if (this.unlocked === !increased && increased !== undefined) {
+            this._checkBuildingForOpen(progress);
+        }
+    }
+
+    loadProgress(progress, globalProgress, nowTime) {
+        this._loadProgress(progress, globalProgress, nowTime);
+
+        globalProgress.onPuzzleCompleted.addListener(this.puzzleCompleted.bind(this));
+        globalProgress.onSeedsBonusChanged.addListener(this._updateFinalProductionRate.bind(this));
+    }
+
+    reseted(globalProgress, buildings) {
+        const nowTime = Math.trunc(Progress.getTimeNow());
+        const prog = buildings[this.id];
+
+        this._loadProgress(prog, globalProgress, nowTime);
+
+        this.onReseted.callListeners();
+    }
+
+    puzzleCompleted(info) {
+        if (info.id !== this.slot)
+            return;
+
+        const data = {
+            upgradeType: 'MultiProfit',
+            parameter: GameData.getPuzzleResourceBonusPerLevel(info.level),
+            div_parameter: GameData.getPuzzleResourceBonusDivPerLevel(info.level)
+        };
+
+        if (info.level === 1)
+            this._checkBuildingForOpen(gameInit.progress);
+
+        this._applyBonus(data);
+    }
+
+    getLoadingTime() {
+        return this.info.loading.duration / this.bonus_SpeedUp;
+    }
+
+    getProductionPerLoad() {
+        return this.finalProduction;// this.info.production.base.multiply(this.bonus_MultiProfit);
+    }
+
+    updateBuilding(deltaTime) {
+        if (this.level <= 0)
+            return;
+
+        if (this.anyResources && !this.autoCollect)
+            return;
+
+        this.currentLoading += deltaTime;
+        const loadTime = this.getLoadingTime();
+        if (this.currentLoading >= loadTime) {
+            let loads = Math.trunc(this.currentLoading / loadTime);
+
+            if (this.autoCollect)
+                this.currentLoading -= loads * loadTime;
+            else {
+                this.currentLoading = 0;
+                loads = 1;
+            }
+
+            const multiply = gameInit.progress.isGuardActive() ? 2 : 1;
+            this.resources = this.resources.add(this.getProductionPerLoad().multiply(loads * multiply));
+            this.onResourcesUpdated.callListeners(this);
+            this.anyResources = true;
+        }
+        this.onBuildingUpdated.callListeners(this);
+    }
+
+    getProducedResources() {
+        return this.resources;
+    }
+
+    getLoadingPercentage() {
+        if (this.anyResources && !this.autoCollect)
+            return 1;
+        return Math.min(this.currentLoading / this.getLoadingTime(), 1);
+    }
+
+    getLevel() {
+        return this.level;
+    }
+
+    likesWereReseted() {
+        if (this.getLikes() > 0) {
+            this.likes = [];
+            this._updateFinalProductionRate();
+            this.onLikesReseted.callListeners(this);
+        }
+    }
+
+    getLikes() {
+        return this.likes.length > MAX_LIKES_COUNT ? MAX_LIKES_COUNT : this.likes.length;
+    }
+
+    addLikes(arr) {
+        for (let i in arr) {
+            const val = arr[i];
+            if (!this.likes.includes(val))
+                this.likes.push(val);
+        }
+
+        this.savedProgress.likes = this.likes;
+        this.onLiked.callListeners(this);
+        this._updateFinalProductionRate();
+        gameInit.progress.saveProgress();
+    }
+
+    getUpgradePrice() {
+        return this.upgradePrice;//.getUpgradePrice(this.level);
+    }
+
+    getUpgradeProgress() {
+        return (this.level - this.prevBigUpgradeLevel) / (this.nextBigUpgradeLevel - this.prevBigUpgradeLevel);
+    }
+
+    buildingWasClicked() {
+        if (this.anyResources) {
+            if (gameInit.progress.isSupervisorActive()) {
+                const amount = this.resources.multiply(2);
+                this.onResourcesCollected.callListeners(this, amount);
+                gameInit.progress.addSupervisorResources(amount);
+            }
+            else
+                this.onResourcesCollected.callListeners(this, this.resources);
+            this.resources = bigInt(0);
+            this.anyResources = false;
+            this.onResourcesUpdated.callListeners(this);
+
+            this._saveState();
+        }
+    }
+
+    _calculateNextBigUpgradeLevel() {
+        const upgradeData = GameData.getSlotsUpgrade();
+
+        for (let i = 0; i < upgradeData.length; i++) {
+            const val = upgradeData[i];
+            if (this.level < val.requiredLevel) {
+                this.nextBigUpgradeLevel = val.requiredLevel;
+                this.prevBigUpgradeLevel = i === 0 ? 0 : upgradeData[i - 1].requiredLevel;
+                return;
+            }
+        }
+
+        this.nextBigUpgradeLevel = Math.trunc(this.level / 100 + 1) * 100;
+        this.prevBigUpgradeLevel = this.nextBigUpgradeLevel - 100;
+    }
+
+    _getBigUpgradeLevelBonus() {
+        const upgradeData = GameData.getSlotsUpgrade();
+
+        for (let i in upgradeData) {
+            const val = upgradeData[i];
+            if (val.requiredLevel === this.level)
+                return val;
+        }
+
+        return upgradeData[upgradeData.length - 1];
+    }
+
+    _applyPuzzleBonusAfterConstruction() {
+        const puzzleInfo = gameInit.progress.getPuzzleInfoById(this.slot - 1);
+        if (puzzleInfo.level >= 2) {
+            const data = {
+                upgradeType: 'MultiProfit',
+                parameter: GameData.getPuzzleResourceBonusPerLevel(puzzleInfo.level)
+            };
+            this._applyBonus(data);
+        }
+    }
+
+    upgradeBuilding(free) {
+        if (!free)
+            this.onPreUpgrade.callListeners(this);
+
+        this.level++;
+
+        this._updateFinalProductionRate();
+
+        const upgrade = this.info.upgrade;
+        if (this.level === 1) {
+            this.upgradePrice = bigInt(upgrade.base);
+            this._calculateNextBigUpgradeLevel();
+            this._applyPuzzleBonusAfterConstruction();
+        } else {
+            if (this.upgradePrice.compare(10) <= 0) {//Exception for level 1
+                const oldVal = this.upgradePrice;
+                this.upgradePrice = this.upgradePrice.multiply(Math.trunc(upgrade.scale * 100)).divide(100);
+                if (this.upgradePrice.compare(oldVal) === 0)
+                    this.upgradePrice = this.upgradePrice.add(1);
+            } else
+                this.upgradePrice = this.upgradePrice.multiply(Math.trunc(upgrade.scale * 100)).divide(100);
+
+            if (this.level === this.nextBigUpgradeLevel) {
+                const bonus = this._getBigUpgradeLevelBonus();
+
+                this._applyBonus(bonus);
+                this._calculateNextBigUpgradeLevel();
+
+                eventManager.macroUpgraded(this, bonus);
+            }
+
+            eventManager.buildingUpgraded(this, this.id);
+        }
+
+        this.update = Progress.getTimeNow();
+
+        this.savedProgress.level = this.level;
+        this.savedProgress.upgradePrice = this.upgradePrice.toString();
+        this._saveState();
+
+        this.onUpgraded.callListeners(this);
+
+        if (this.unlocked) {
+            this.unlocked = false;
+            this.onUnlockChanged.callListeners(this);
+        }
+    }
+
+    _updateFinalProductionRate() {
+        const seedsBonus = gameInit.progress.getTotalSeedsBonus();
+
+        this.finalProduction = this.info.production.base.multiply(this.getLevel()).multiply(seedsBonus).multiply(this.bonus_MultiProfit);
+        if (this.getLikes() > 0)
+            this.finalProduction = this.finalProduction.multiply(100 + this.getLikes() * BONUS_PER_LIKE).divide(100);
+    }
+
+    getProductionForLevel(level) {
+        const seedsBonus = gameInit.progress.getTotalSeedsBonus();
+        return this.info.production.base.multiply(level).multiply(seedsBonus).multiply(this.bonus_MultiProfit);
+    }
+
+    _applyBonus(bonus) {
+        switch (bonus.upgradeType) {
+            case 'SpeedUp':
+                this.bonus_SpeedUp *= bonus.parameter;
+                this.savedProgress.speedUpMultiplier = this.bonus_SpeedUp;
+                break;
+            case 'MultiProfit':
+                this.bonus_MultiProfit = this.bonus_MultiProfit.multiply(bonus.parameter);
+                if (bonus.div_parameter)
+                    this.bonus_MultiProfit = this.bonus_MultiProfit.divide(bonus.div_parameter);
+                this.savedProgress.multiProfitMultiplier = this.bonus_MultiProfit.toString();
+                this._updateFinalProductionRate();
+                break;
+            case 'AutoClick':
+                this.savedProgress.hasAutoClick = this.autoCollect = true;
+                break;
+            case 'TimeTravel':
+                this.updateBuilding(bonus.parameter);
+                break;
+            case 'Upgrade':
+                if (this.getLevel() > 0) {
+                    for (let i = 0; i < bonus.parameter; i++) {
+                        this.upgradeBuilding(true);
+                    }
+                }
+                break;
+            //TODO implement those:
+            case 'SuperSeed':
+            case 'SeedProc':
+        }
+        this._saveState();
+    }
+
+    upgradePurchased(data) {
+        if (data.slotNumber >= 0 && data.slotNumber + 1 !== this.id)
+            return;
+
+        this._applyBonus(data);
+    }
+
+    getDropIcon() {
+        return this.info.visual.drop;
+    }
+
+    getDropIconPath() {
+        return "GoodsDrops/" + this.info.visual.drop + ".png";
+    }
+
+    getSmallIcon() {
+        return this.info.visual.icon + "_small";
+    }
+
+    getSmallIconPath() {
+        return "GoodsSmallIcons/" + this.info.visual.icon + ".png";
+    }
+
+    getBigIcon() {
+        return this.info.visual.icon + "_big";
+    }
+
+    getBigIconPath() {
+        return "GoodsBuyWindowIcons/" + this.info.visual.icon + ".png"; //TODO Optimize ... do we need them?
+    }
+
+    getLocalizationKey() {
+        return this.info.visual.icon.substring(0, this.info.visual.icon.length - 5);
+    }
+}
+
+class World {
+    constructor(logic, key) {
+        this.onUpdateWorld = new UnnyAction();
+        this.onBuildingCreated = new UnnyAction();
+        this.onBuildingUpgraded = new UnnyAction();
+        this.onBuildingPreUpgrade = new UnnyAction();
+        this.onResourcesUpdated = new UnnyAction();
+        this.onBuildingUpdated = new UnnyAction();
+        this.onBuildingLiked = new UnnyAction();
+        this.onResourcesCollected = new UnnyAction();
+        this.onUpgradePurchased = new UnnyAction();
+        this.onReseted = new UnnyAction();
+        this.id = key;
+
+        logic.update.addListener(this.update.bind(this));
+        logic.reseted.addListener(this.resetWorld.bind(this));
+    }
+
+    upgradePurchased(data) {
+        this.onUpgradePurchased.callListeners(data);
+    }
+
+    loadProgress(progress) {
+        const buildings = progress.getBuildingsForWorld(this.id);
+
+        const nowtime = Math.trunc(Progress.getTimeNow());
+        this.allBuildings = {};
+        for (let key in buildings) {
+            const prog = buildings[key];
+            // const data = new BuildingData(GameData.getBuildingInfoByPlace(prog.name));
+            const building = this.createBuilding(GameData.getBuildingInfoBySlot(prog.slot), prog.slot, key);
+            building.loadProgress(prog, progress, nowtime);
+            this.onBuildingCreated.callListeners(this, building);
+            this.allBuildings[key] = building;
+        }
+    }
+
+    getBuildingById(id) {
+        return this.allBuildings[id];
+    }
+
+    resetWorld(progress) {
+        const buildings = progress.getBuildingsForWorld(this.id);
+        this.onReseted.callListeners(progress, buildings);
+    }
+
+    isSelected() {
+        return this.id == gameInit.selectedWorld;
+    }
+
+    createBuilding(data, slot, key) {
+        const building = new Building(data, slot, key);
+        this.onUpdateWorld.addListener(building.updateBuilding.bind(building));
+        this.onUpgradePurchased.addListener(building.upgradePurchased.bind(building));
+        this.onReseted.addListener(building.reseted.bind(building));
+        building.world = this;
+        building.onResourcesCollected.addListener(this.resourcesCollected.bind(this));
+        building.onUpgraded.addListener(this.buildingUpgraded.bind(this));
+        building.onPreUpgrade.addListener(this.buildingPreUpgrade.bind(this));
+        building.onResourcesUpdated.addListener(this.resourcesUpdate.bind(this));
+        building.onBuildingUpdated.addListener(this.buildingUpdated.bind(this));
+        building.onLiked.addListener(this.buildingLiked.bind(this));
+        return building;
+    }
+
+    buildingPreUpgrade(building) {
+        this.onBuildingPreUpgrade.callListeners(this, building);
+    }
+
+    buildingUpgraded(building) {
+        this.onBuildingUpgraded.callListeners(this, building);
+    }
+
+    resourcesUpdate(building) {
+        this.onResourcesUpdated.callListeners(this, building);
+    }
+
+    buildingUpdated(building) {
+        this.onBuildingUpdated.callListeners(this, building);
+    }
+
+    buildingLiked(building) {
+        this.onBuildingLiked.callListeners(this, building);
+    }
+
+    resourcesCollected(building, resources) {
+        this.onResourcesCollected.callListeners(building, resources);
+    }
+
+    update(deltaTime) {
+        this.onUpdateWorld.callListeners(deltaTime);
+    };
+}
+
+const TutPhases = {
+    BuildSlot1: 0,
+    Collect1: 1,
+    Collect20: 2,
+    UpgradeBuilding: 3,
+    UpgradeBuilding5: 4,
+    Collect1k: 5,
+    BuyAutoCollect: 6,
+    Boost4h: 7,
+    Collect10k: 8,
+    Boost6s: 9,
+    BuildSlots6: 10,
+    SummonBoss: 11,
+    WaitForSummonToEnd: 12,
+    PuzzlesAvailable: 13,
+    BuildSlots9: 14,
+    TutorialEnd: 15,
+    FortuneWheel: 100,
+    FortuneWheelEnded: 101,
+};
+
+const BanjoDuration = 7;
+const GuardDurationHours = 4;
+const SpinsResporeTime = 8 * 3600 * 1000;
+const AdsAvailableToWatchADay = 5;
+const MAX_PUZZLE_LEVEL = 5;
+const JACKPOT_SIZE = 5;
+const JACKPOT_INCREASE = 2;
+const GEMS_PRICE_FOR_WHEEL_SPIN = 5;
+const LIKES_RESET_TIMER = 3 * 24 * 3600 * 1000;
+
+const BoxType = {
+    GoldBox: "0",
+    GemsBox: "1",
+    SuperBox: "2",
+    GuardBox: "3",
+    GuardSuperBox: "4"
+};
+
+const MUSIC_STATE = "MUSIC_STATE";
+const SOUNDS_STATE = "SOUNDS_STATE";
+const CURRENT_LANGUAGE = "CURRENT_LANGUAGE";
+const GAME_VERSION = "0.9.14";
+
+let LockAllSounds = false;
+
+var ua = navigator.userAgent.toLowerCase();
+if (ua.indexOf('safari') != -1) {
+    if (ua.indexOf('chrome') > -1) {
+    } else {
+        LockAllSounds = true;
+    }
+}
+
+const GameSettings = {
+    musicOff: localStorage.getItem(MUSIC_STATE) || LockAllSounds,
+    soundsOff: localStorage.getItem(SOUNDS_STATE) || LockAllSounds,
+    language: localStorage.getItem(CURRENT_LANGUAGE),
+    allLanguages: {},
+};
+
+if (!GameSettings.language)
+    GameSettings.language = "Russian";
+
+function SetMusicState(state) {
+    GameSettings.musicOff = !state || LockAllSounds;
+    if (GameSettings.musicOff) {
+        localStorage.setItem(MUSIC_STATE, "true");
+        audioManager.stopMusic();
+    }
+    else {
+        localStorage.removeItem(MUSIC_STATE);
+        audioManager.restoreMusic();
+    }
+}
+
+function SetSoundsState(state) {
+    GameSettings.soundsOff = !state || LockAllSounds;
+    if (GameSettings.soundsOff)
+        localStorage.setItem(SOUNDS_STATE, "true");
+    else
+        localStorage.removeItem(SOUNDS_STATE);
+}
+
+function SetCurrentLanguage(language) {
+    GameSettings.language = language;
+    localStorage.setItem(CURRENT_LANGUAGE, language);
+
+    if (GameSettings.allLanguages.hasOwnProperty(GameSettings.language)) {
+        LocalizationManager.initWithJson(GameSettings.allLanguages[GameSettings.language]);
+        guiManager.localize();
+    }
+    else {
+        const localization = 'Localization_' + GameSettings.language;
+        LoadFile(gameInit.engine, localization, VisualData.getLocalizationsFolder() + localization + ".json", () => {
+            const json = gameInit.engine.cache.json.get(localization);
+            GameSettings.allLanguages[GameSettings.language] = json;
+            SetCurrentLanguage(GameSettings.language);
+        }, UnnyObjectType.Json);
+    }
+}
+
+function getCheatSave() {
+    return JSON.parse("{\"profile\":{\"version\":8,\"gold\":\"266171821978\",\"gems\":\"0\",\"seeds\":\"0\",\"goldSpent\":\"4949388240722\",\"seedsStrength\":2,\"firstTimeInGame\":1565169308763,\"tutorialPhase\":11,\"maxGoldModifier\":3,\"gameLanguage\":\"English\",\"sessionNumber\":2,\"harvestsCount\":0,\"gemsMultiProfit\":\"1\",\"adsWatched\":{\"count\":0,\"update\":0},\"savedVersion\":172},\"purchases\":{\"23\":1,\"24\":1,\"25\":1,\"26\":1,\"27\":1,\"28\":1,\"29\":1,\"30\":1,\"31\":1,\"34\":1},\"fortuneWheel\":{\"freeSpins\":1,\"windowOpened\":false,\"jackpot\":500,\"update\":0},\"puzzle\":{\"boxes\":{\"0\":3,\"1\":0,\"2\":0,\"3\":0,\"4\":0},\"goods\":[{\"id\":1,\"level\":1,\"pieces\":0},{\"id\":2,\"level\":1,\"pieces\":0},{\"id\":3,\"level\":1,\"pieces\":0},{\"id\":4,\"level\":1,\"pieces\":0},{\"id\":5,\"level\":1,\"pieces\":0},{\"id\":6,\"level\":1,\"pieces\":0},{\"id\":7,\"level\":1,\"pieces\":0},{\"id\":8,\"level\":1,\"pieces\":0},{\"id\":9,\"level\":1,\"pieces\":0},{\"id\":10,\"level\":0,\"pieces\":0},{\"id\":11,\"level\":0,\"pieces\":0},{\"id\":12,\"level\":0,\"pieces\":0},{\"id\":13,\"level\":0,\"pieces\":0},{\"id\":14,\"level\":0,\"pieces\":0},{\"id\":15,\"level\":0,\"pieces\":0},{\"id\":16,\"level\":0,\"pieces\":0},{\"id\":17,\"level\":0,\"pieces\":0},{\"id\":18,\"level\":0,\"pieces\":0},{\"id\":19,\"level\":0,\"pieces\":0},{\"id\":20,\"level\":0,\"pieces\":0},{\"id\":21,\"level\":0,\"pieces\":0},{\"id\":22,\"level\":0,\"pieces\":0},{\"id\":23,\"level\":0,\"pieces\":0},{\"id\":24,\"level\":0,\"pieces\":0},{\"id\":25,\"level\":0,\"pieces\":0},{\"id\":26,\"level\":0,\"pieces\":0},{\"id\":27,\"level\":0,\"pieces\":0}],\"guards\":[],\"openedBox\":0,\"goldBoxPrice\":\"100000000000000\"},\"worlds\":{\"1\":{\"buildings\":{\"1\":{\"slot\":1,\"level\":100,\"resources\":\"0\",\"multiProfitMultiplier\":\"3\",\"upgradePrice\":\"3708853\",\"loading\":0.024249999999280902,\"update\":1565174442352,\"speedUpMultiplier\":16,\"hasAutoClick\":true},\"2\":{\"slot\":2,\"level\":53,\"resources\":\"0\",\"multiProfitMultiplier\":\"9\",\"upgradePrice\":\"78608808\",\"loading\":0.20100000000062224,\"update\":1565174430226,\"hasAutoClick\":true,\"speedUpMultiplier\":8},\"3\":{\"slot\":3,\"level\":26,\"resources\":\"0\",\"multiProfitMultiplier\":\"9\",\"upgradePrice\":\"50805695\",\"loading\":0.7410000000000956,\"update\":1565174452038,\"speedUpMultiplier\":4,\"hasAutoClick\":true},\"4\":{\"slot\":4,\"level\":17,\"resources\":\"0\",\"multiProfitMultiplier\":\"9\",\"upgradePrice\":\"914740365\",\"loading\":4.584999999999955,\"update\":1565174442020,\"speedUpMultiplier\":2,\"hasAutoClick\":true},\"5\":{\"slot\":5,\"level\":23,\"resources\":\"0\",\"multiProfitMultiplier\":\"27\",\"upgradePrice\":\"1571183804763\",\"loading\":28.036999999999885,\"speedUpMultiplier\":2,\"update\":1565174435270},\"6\":{\"slot\":6,\"level\":12,\"resources\":\"0\",\"multiProfitMultiplier\":\"3\",\"upgradePrice\":\"552394641792\",\"loading\":17.944000000000017,\"speedUpMultiplier\":2,\"update\":1565174438829},\"7\":{\"slot\":7,\"level\":0,\"resources\":\"0\",\"multiProfitMultiplier\":\"3\",\"upgradePrice\":\"0\",\"loading\":0,\"speedUpMultiplier\":2,\"update\":1565170079333},\"8\":{\"slot\":8,\"level\":0,\"resources\":\"0\",\"multiProfitMultiplier\":\"3\",\"upgradePrice\":\"0\",\"loading\":0,\"speedUpMultiplier\":2,\"update\":1565170079333},\"9\":{\"slot\":9,\"level\":0,\"resources\":\"0\",\"multiProfitMultiplier\":\"3\",\"upgradePrice\":\"0\",\"loading\":0,\"speedUpMultiplier\":2,\"update\":1565170079333}}},\"2\":{\"buildings\":{\"1\":{\"slot\":10,\"level\":0,\"resources\":\"0\",\"multiProfitMultiplier\":\"3\",\"upgradePrice\":\"0\",\"hasAutoClick\":true,\"loading\":0,\"update\":1565170079333,\"speedUpMultiplier\":2},\"2\":{\"slot\":11,\"level\":0,\"resources\":\"0\",\"multiProfitMultiplier\":\"9\",\"upgradePrice\":\"0\",\"hasAutoClick\":true,\"loading\":0,\"update\":1565170329398,\"speedUpMultiplier\":2},\"3\":{\"slot\":12,\"level\":0,\"resources\":\"0\",\"multiProfitMultiplier\":\"9\",\"upgradePrice\":\"0\",\"loading\":0,\"speedUpMultiplier\":2,\"update\":1565170329948,\"hasAutoClick\":true},\"4\":{\"slot\":13,\"level\":0,\"resources\":\"0\",\"multiProfitMultiplier\":\"9\",\"upgradePrice\":\"0\",\"loading\":0,\"speedUpMultiplier\":2,\"update\":1565170426625,\"hasAutoClick\":true},\"5\":{\"slot\":14,\"level\":0,\"resources\":\"0\",\"multiProfitMultiplier\":\"27\",\"upgradePrice\":\"0\",\"loading\":0,\"speedUpMultiplier\":2,\"update\":1565174174974},\"6\":{\"slot\":15,\"level\":0,\"resources\":\"0\",\"multiProfitMultiplier\":\"3\",\"upgradePrice\":\"0\",\"loading\":0,\"speedUpMultiplier\":2,\"update\":1565170079334},\"7\":{\"slot\":16,\"level\":0,\"resources\":\"0\",\"multiProfitMultiplier\":\"3\",\"upgradePrice\":\"0\",\"loading\":0,\"speedUpMultiplier\":2,\"update\":1565170079334},\"8\":{\"slot\":17,\"level\":0,\"resources\":\"0\",\"multiProfitMultiplier\":\"3\",\"upgradePrice\":\"0\",\"loading\":0,\"speedUpMultiplier\":2,\"update\":1565170079334},\"9\":{\"slot\":18,\"level\":0,\"resources\":\"0\",\"multiProfitMultiplier\":\"3\",\"upgradePrice\":\"0\",\"loading\":0,\"speedUpMultiplier\":2,\"update\":1565170079334}}},\"3\":{\"buildings\":{\"1\":{\"slot\":19,\"level\":0,\"resources\":\"0\",\"multiProfitMultiplier\":\"3\",\"upgradePrice\":\"0\",\"hasAutoClick\":true,\"loading\":0,\"update\":1565170079334,\"speedUpMultiplier\":2},\"2\":{\"slot\":20,\"level\":0,\"resources\":\"0\",\"multiProfitMultiplier\":\"9\",\"upgradePrice\":\"0\",\"hasAutoClick\":true,\"loading\":0,\"update\":1565170329398,\"speedUpMultiplier\":2},\"3\":{\"slot\":21,\"level\":0,\"resources\":\"0\",\"multiProfitMultiplier\":\"9\",\"upgradePrice\":\"0\",\"loading\":0,\"speedUpMultiplier\":2,\"update\":1565170329948,\"hasAutoClick\":true},\"4\":{\"slot\":22,\"level\":0,\"resources\":\"0\",\"multiProfitMultiplier\":\"9\",\"upgradePrice\":\"0\",\"loading\":0,\"speedUpMultiplier\":2,\"update\":1565170426625,\"hasAutoClick\":true},\"5\":{\"slot\":23,\"level\":0,\"resources\":\"0\",\"multiProfitMultiplier\":\"27\",\"upgradePrice\":\"0\",\"loading\":0,\"speedUpMultiplier\":2,\"update\":1565174174975},\"6\":{\"slot\":24,\"level\":0,\"resources\":\"0\",\"multiProfitMultiplier\":\"3\",\"upgradePrice\":\"0\",\"loading\":0,\"speedUpMultiplier\":2,\"update\":1565170079334},\"7\":{\"slot\":25,\"level\":0,\"resources\":\"0\",\"multiProfitMultiplier\":\"3\",\"upgradePrice\":\"0\",\"loading\":0,\"speedUpMultiplier\":2,\"update\":1565170079334},\"8\":{\"slot\":26,\"level\":0,\"resources\":\"0\",\"multiProfitMultiplier\":\"3\",\"upgradePrice\":\"0\",\"loading\":0,\"speedUpMultiplier\":2,\"update\":1565170079334},\"9\":{\"slot\":27,\"level\":0,\"resources\":\"0\",\"multiProfitMultiplier\":\"3\",\"upgradePrice\":\"0\",\"loading\":0,\"speedUpMultiplier\":2,\"update\":1565170079334}}}},\"quests\":{\"activeQuests\":[{\"id\":10,\"isComplete\":false,\"isRefreshed\":false,\"level\":1,\"progress\":771},{\"id\":8,\"isComplete\":false,\"isRefreshed\":false,\"level\":2,\"progress\":7},{\"id\":0,\"isComplete\":false,\"isRefreshed\":false,\"level\":2,\"progress\":0}],\"update\":1565174169001},\"dailyBonus\":{\"seed\":0,\"update\":0,\"lastBonus\":0}}");
+}
+
+class Progress {
+    constructor(gameInit, progress) {
+        // gameInit.onBuildingCreated.addListener(this.buildingCreated.bind(this));
+        gameInit.onResourcesCollected.addListener(this.resourcesCollected.bind(this));
+        gameInit.onBuildingLiked.addListener(this.buildingLiked.bind(this));
+        gameInit.update.addListener(this.update.bind(this));
+        this.onResourcesChanges = new UnnyAction();
+        this.onUpgradePurchased = new UnnyAction();
+
+        const localProgress = this.loadProgress();
+        let save = progress;
+        let localSaveUsed = false;
+        if (!progress) {
+            save = localProgress;
+            localSaveUsed = true;
+            console.log("no server progress -> use local")
+        } else {
+            if (localProgress) {
+                const lp = localProgress.profile.savedVersion;
+                const sp = progress.profile.savedVersion;
+                console.log("server progress version: " + sp + " ; local version = " + lp);
+                if (lp && (!sp || lp > sp)) {
+                    save = localProgress;
+                    localSaveUsed = true;
+                    gameAnalytics.sendServerError({
+                            code: -1,
+                            message: "Old Version (local: " + lp + '; server: ' + sp + " )"
+                        }, "load_progress");
+                }
+            }
+        }
+
+        if (save && save.profile && save.profile.version >= 8) {
+            this.savedProgress = save;
+            this.savedProgress.profile.sessionNumber++;
+            if (!localSaveUsed)
+                this._getDeltaSave();
+        }
+        else {
+            this.savedProgress = {
+                profile: {
+                    version: 8,
+                    gold: "0",
+                    gems: "27500",
+                    seeds: "0",
+                    goldSpent: "0",
+                    seedsStrength: 2,
+                    firstTimeInGame: Progress.getTimeNow(),
+                    tutorialPhase: 0,
+                    maxGoldModifier: 0,
+                    gameLanguage: "English",
+                    sessionNumber: 1,
+                    harvestsCount: 0,
+                    gemsMultiProfit: "1",
+                    adsWatched: {
+                        count: 0,
+                        update: 0
+                    }
+                },
+                purchases: {
+                    //Id:key
+                },
+                fortuneWheel: {
+                    freeSpins: 1,
+                    windowOpened: false,
+                    jackpot: JACKPOT_SIZE * RESOURCES_SCALE,
+                    update: 0
+                },
+                puzzle: {
+                    boxes: {
+                        [BoxType.GoldBox]: 3,
+                        [BoxType.GemsBox]: 0,
+                        [BoxType.SuperBox]: 0,
+                        [BoxType.GuardBox]: 0,
+                        [BoxType.GuardSuperBox]: 0
+                    },
+                    goods: [],
+                    guards: [],
+                    openedBox: 0,
+                    goldBoxPrice: "100000000000000"
+                },
+                worlds: {
+                    1: {}
+                },
+                quests: {
+                    activeQuests: [],
+                    update: 0
+                },
+                dailyBonus: {
+                    seed: 0,
+                    update: 0,
+                    lastBonus: 0
+                }
+            };
+
+            this._resetConstructions();
+
+            const puzzle = this.savedProgress.puzzle.goods;
+            for (let i = 1; i <= 9; i++) {
+                puzzle.push({
+                    id: i,
+                    level: 1,
+                    pieces: 0
+                });
+            }
+
+            for (let i = 10; i <= 27; i++) {
+                puzzle.push({
+                    id: i,
+                    level: 0,
+                    pieces: 0
+                });
+            }
+
+            if (gBase.currentUnicorn)
+                gBase.profile.setp(
+                    this.savedProgress, null,
+                    null, null, null, null,
+                    (err) => {
+                        if (err)
+                            gameAnalytics.sendServerError(err, "setp");
+                    }
+                );
+
+            this._getDeltaSave();
+        }
+
+        // this.savedProgress.profile.tutorialPhase = TutPhases.TutorialEnd;
+        // this._resetConstructions();
+
+        // this._setResourceByName("gems", "20000");
+        // this._setResourceByName("seeds", "0");
+
+        for (let i = 1; i <= VisualData.getWorldsCount(); i++) {
+            if (!this.savedProgress.worlds.hasOwnProperty(i))
+                this._resetWorld(i);
+        }
+
+        this.supervisor = {};
+
+        this.general = {
+            resources: bigInt(this._getResourceByName("gold")),
+            seeds: bigInt(this._getResourceByName("seeds")),
+            resourcesSpent: bigInt(this._getResourceByName("goldSpent")),
+            gems: bigInt(this._getResourceByName("gems")),
+            boxPrice: bigInt(this.savedProgress.puzzle.goldBoxPrice),
+        };
+
+        this.onPuzzlePeaceReceived = new UnnyAction();
+        this.onPuzzleCompleted = new UnnyAction();
+        this.onSeedsBonusChanged = new UnnyAction();
+
+        this._updateTotalSeedsBonus();
+
+        this.dailyBonusData = new DailyBonus(this.savedProgress.dailyBonus.seed, GameData.getLoginData());
+        this.wheelOfFortune = new WheelOfFortune();
+
+        this.lastSaveTime = Progress.getTimeNow();
+
+        this.onResourcesChanges.addListener(this.saveProgress.bind(this));
+        this.onPuzzlePeaceReceived.addListener(this.saveProgress.bind(this));
+        this.onUpgradePurchased.addListener(this.saveProgress.bind(this));
+    }
+
+    _getResourceByName(name) {
+        return this.savedProgress.profile[name];
+    }
+
+    _setResourceByName(name, value) {
+        return this.savedProgress.profile[name] = value;
+    }
+
+    _resetWorld(worldId) {
+        const world = this.savedProgress.worlds[worldId] = {};
+        const buildings = world['buildings'] = {};
+        for (let i = 1; i <= 9; i++) {
+            buildings[i] = {
+                slot: i + (worldId - 1) * 9,
+                level: 0,
+                resources: "0",
+                multiProfitMultiplier: this.savedProgress.profile.gemsMultiProfit,
+            }
+        }
+    }
+
+    _resetConstructions() {
+        for (let i = 1; i <= VisualData.getWorldsCount(); i++)
+            this._resetWorld(i);
+    }
+
+    _updateTotalSeedsBonus() {
+        if (this.general.seeds.compare(0) <= 0)
+            this.general.seedsBonus = bigInt(1);
+        else
+            this.general.seedsBonus = this.general.seeds.multiply(this.savedProgress.profile.seedsStrength).divide(100 * RESOURCES_SCALE).add(1);
+        // console.log("APPLES " + this.savedProgress.general.seedsBonus + " * "+ this.general.seeds + " = " + this.general.seedsBonus);
+        this.onSeedsBonusChanged.callListeners(this.getTotalSeedsBonus());
+    }
+
+    static getTimeNow() {
+        return Math.trunc(new Date().getTime());
+    }
+
+    static getDayNow() {
+        return Math.trunc(this.getTimeNow() / (24 * 3600 * 1000));
+    }
+
+    static getDayFromTime(time) {
+        return Math.trunc(time / (24 * 3600 * 1000));
+        // return Math.trunc(Progress.getTimeNow() / (10));
+    }
+
+    getFortuneData() {
+        return this.wheelOfFortune;
+    }
+
+    getDailyBonusData() {
+        return this.dailyBonusData;
+    }
+
+    getMyDailyBonusInfo() {
+        return this.savedProgress.dailyBonus;
+    }
+
+    getGuardEndTime() {
+        return this.savedProgress.guard;
+    }
+
+    getGuardTimeLeft() {
+        return this.getGuardEndTime() - Progress.getTimeNow();
+    }
+
+    isSupervisorActive() {
+        return Progress.getTimeNow() < this.supervisor;
+    }
+
+    isGuardActive() {
+        return Progress.getTimeNow() < this.savedProgress.guard;
+    }
+
+    getTotalSeedsBonus() {
+        return this.general.seedsBonus;
+    }
+
+    getBonusPerSeed() {
+        return this.savedProgress.profile.seedsStrength;
+    }
+
+    getPuzzlesCountForId(id) {
+        const info = this.getPuzzleInfoById(id);
+        const size = GameData.getPuzzleSizePerLevel(info.level);
+        let count = 0;
+        for (let i = 0; i < size * size; i++) {
+            if ((info.pieces & (1 << i)) !== 0)
+                count++;
+        }
+        return count;
+    }
+
+    getPuzzleInfoById(id) {
+        return this.savedProgress.puzzle.goods[id];
+    }
+
+    getPuzzleInfo() {
+        return this.savedProgress.puzzle.goods;
+    }
+
+    getWorlds() {
+        return this.savedProgress.worlds;
+    }
+
+    getBuildingsForWorld(worldId) {
+        return this.savedProgress.worlds[worldId].buildings;
+    }
+
+    getTotalResources() {
+        return this.general.resources;
+    }
+
+    getTotalGems() {
+        return this.general.gems;
+    }
+
+    getTotalSeeds() {
+        return this.general.seeds;
+    }
+
+    getChestsCount() {
+        return this.savedProgress.puzzle.boxes[BoxType.GoldBox] + this.savedProgress.puzzle.boxes[BoxType.GemsBox];
+    }
+
+    // getAllPurchases() {
+    //     return this.savedProgress.purchases;
+    // }
+
+    _isPurchaseRepeatable(data) {
+        return (data.repeatable || data.priceType === "Gems");
+    }
+
+    _isPurchasePriceIncreasing(data) {
+        return (data.repeatable || (data.priceType === "Gems" && data.upgradeType === "MultiProfit"));
+    }
+
+    canPurchaseUpgrade(data) {
+        if (data.hasOwnProperty('slotNumber')) {
+            if (data.slotNumber >= 0 && !this.isBuildingConstructed(1, data.slotNumber + 1))
+                return false;
+        }
+
+        if (this._isPurchaseRepeatable(data))
+            return true;
+
+        return !this.isUpgradePurchased(data.id);
+    }
+
+    isUpgradePurchased(id) {
+        return this.savedProgress.purchases.hasOwnProperty(id);
+    }
+
+    isDailyBonusAvailable() {
+        const dayNow = Progress.getDayNow();
+        const dayWas = Progress.getDayFromTime(this.getMyDailyBonusInfo().update);
+
+        return dayNow > dayWas;
+    }
+
+    bonusWasActivated() {
+        const info = this.getMyDailyBonusInfo();
+        info.update = Progress.getTimeNow();
+        info.lastBonus++;
+        eventManager.dailyBonusCollected();
+
+        this.saveProgress();
+    }
+
+    activateSupervisor() {
+        this.supervisor = Progress.getTimeNow() + BanjoDuration * 1000;
+        this.resourcesCollectedWithSupervisor = bigInt("0");
+        eventManager.shortSpeedActivated();
+    }
+
+    addSupervisorResources(amount) {
+        this.resourcesCollectedWithSupervisor = this.resourcesCollectedWithSupervisor.add(amount);
+    }
+
+    getSupervisorResourcesCollected() {
+        return this.resourcesCollectedWithSupervisor;
+    }
+
+    activateGuard() {
+        // socialManager.playRewardedAd();
+        if (this.isGuardActive())
+            this.savedProgress.guard += 3600 * GuardDurationHours * 1000;
+        else
+            this.savedProgress.guard = Progress.getTimeNow() + 3600 * GuardDurationHours * 1000;
+        eventManager.longSpeedActivated();
+        this.saveProgress();
+    }
+
+    increaseBonusPerSeed(count) {
+        this.savedProgress.profile.seedsStrength += count;
+        this._updateTotalSeedsBonus();
+
+        this.saveProgress();
+    }
+
+    isResourcesWithTypeEnoughForPurchase(data) {
+        const price = this.getPurchasePrice(data);
+        switch (data.priceType) {
+            case "Gold":
+                return this.isResourcesEnough(price);
+            case "Seeds":
+                return this.isSeedsEnough(price);
+            case "Gems":
+                return this.isGemsEnough(price);
+        }
+        return true;
+    }
+
+    isResourcesWithTypeEnough(data) {
+        switch (data.priceType) {
+            case "Gold":
+                return this.isResourcesEnough(data.bigInt);
+            case "Seeds":
+                return this.isSeedsEnough(data.bigInt);
+            case "Gems":
+                return this.isGemsEnough(data.bigInt);
+        }
+        return true;
+    }
+
+    getPurchasePrice(data) {
+        if (this.savedProgress.purchases.hasOwnProperty(data.id) && this._isPurchasePriceIncreasing(data))
+            return new bigInt(this.savedProgress.purchases[data.id]);
+        return data.bigInt;
+    }
+
+    tryToPurchaseUpgrade(id) {
+        const data = GameData.getMarketPurchaseById(id);
+
+        if (!data || !this.canPurchaseUpgrade(data))
+            return false;
+
+        if (data.priceType === "IN_APP") {
+            socialManager.purchase(id);
+            return true;
+        } else {
+            return this.purchaseConfirmed(id, data);
+        }
+
+        return false;
+    }
+
+    publicConfirmedPayment(id) {
+        const data = GameData.getMarketPurchaseById(id);
+        const win = guiManager.openNewWindow(WindowType.WinInAppBought);
+        if (win)
+            win.setInAppData(data);
+        this.purchaseConfirmed(id, data);
+    }
+
+    purchaseConfirmed(id, data) {
+        let price = this.getPurchasePrice(data);
+
+        let mult;
+        switch (data.priceType) {
+            case "Gold":
+                if (!this.isResourcesEnough(price))
+                    return false;
+                mult = 1000;
+                this.resourcesSpent(price);
+                break;
+            case "Seeds":
+                if (!this.isSeedsEnough(price))
+                    return false;
+                mult = 100;
+                this.seedsSpent(price);
+                break;
+            case "IN_APP":
+                this.gotGems(data.gems);
+                break;
+            case "Gems":
+                if (!this.isGemsEnough(price))
+                    return false;
+
+                gameAnalytics.sendEvent("PurchaseUpgrade", {
+                    "gems": this.getTotalGems(),
+                    "spent": price.toString(),
+                    "session": this.savedProgress.profile.sessionNumber,
+                    id: id
+                });
+
+                mult = 2;
+                this.gemsSpent(price);
+                switch (data.upgradeType) {
+                    case "MultiProfit":
+                        const int = new bigInt(this.savedProgress.profile.gemsMultiProfit);
+                        this.savedProgress.profile.gemsMultiProfit = int.multiply(data.parameter).toString();
+                        break;
+                    case "SuperSeed":
+                        gameInit.harvestCompleted(true);
+                        break;
+                }
+                break;
+        }
+
+        if (price) {
+            if (!this._isPurchasePriceIncreasing(data))
+                this.savedProgress.purchases[id] = 1;
+            else {
+                this.savedProgress.purchases[id] = price.multiply(mult).toString();
+            }
+        }
+        this.onUpgradePurchased.callListeners(data);
+
+        eventManager.upgradePurchased(data);
+        return true;
+    }
+
+    getPriceForGoldBox() {
+        return this.general.boxPrice;
+    }
+
+    tryToPurchaseBoxForGold(count) {
+        if (this.isResourcesEnough(this.general.boxPrice)) {
+            this.purchaseBox(BoxType.GoldBox, count);
+            this.resourcesSpent(this.general.boxPrice);
+
+            this.general.boxPrice = this.general.boxPrice.multiply(3);
+            this.savedProgress.puzzle.goldBoxPrice = this.general.boxPrice.toString();
+            return this.getPriceForGoldBox();
+        }
+        return false;
+    }
+
+    purchaseBox(boxType, count) {
+        this.giveChests(boxType, count);
+        eventManager.boxPurchased(count);
+    }
+
+    giveChests(boxType, count) {
+        this.savedProgress.puzzle.boxes[boxType] += count;
+        this.saveProgress();
+
+        eventManager.boxReceived(count);
+
+        if (boxType === BoxType.SuperBox)
+            this.openSuperChest();
+    }
+
+    getOpenedBoxes() {
+        return this.savedProgress.puzzle.openedBox;
+    }
+
+    openChest() {
+        if (this.savedProgress.puzzle.boxes[BoxType.GoldBox] > 0)
+            this.savedProgress.puzzle.boxes[BoxType.GoldBox]--;
+        else
+            this.savedProgress.puzzle.boxes[BoxType.GemsBox]--;
+
+        this.savedProgress.puzzle.openedBox += 1;
+
+        const puzzle = this.getPuzzleInfo();
+        const image = Math.floor(Math.random() * puzzle.length);
+
+        const info = puzzle[image];
+        const size = GameData.getPuzzleSizePerLevel(info.level);
+
+        const piece = Math.floor(Math.random() * size * size);
+
+        const duplicate = (((1 << piece) & info.pieces) !== 0) || info.level >= MAX_PUZZLE_LEVEL;
+
+        const before = Object.assign({}, info);
+        if (duplicate)
+            this.gotGems(bigInt(GameData.getGemsForDublicate() * RESOURCES_SCALE));
+        else {
+            info.pieces |= (1 << piece);
+        }
+
+        if (info.level < MAX_PUZZLE_LEVEL) {
+            let completed = true;
+            for (let i = 0; i < size * size; i++) {
+                if ((1 << i & info.pieces) === 0) {
+                    completed = false;
+                    break;
+                }
+            }
+
+            if (completed) {
+                info.level++;
+                info.pieces = 0;
+                this.onPuzzleCompleted.callListeners(info);
+            }
+        }
+
+        this.onPuzzlePeaceReceived.callListeners(before, image, piece, duplicate, true);
+
+        eventManager.boxOpened();
+    }
+
+    areAllPuzzlesCollected() {
+        const puzzle = this.getPuzzleInfo();
+        for (let i = 0; i < puzzle.length; i++) {
+            if (puzzle[i].level < MAX_PUZZLE_LEVEL)
+                return false;
+        }
+        return true;
+    }
+
+    openSuperChest() {
+        if (this.savedProgress.puzzle.boxes[BoxType.SuperBox] <= 0 || this.areAllPuzzlesCollected())
+            return false;
+
+        const maxLevel = MAX_PUZZLE_LEVEL;
+        this.savedProgress.puzzle.boxes[BoxType.SuperBox] -= 1;
+
+        const puzzle = this.getPuzzleInfo();
+
+        let completedCount = 0;
+        for (let i = 0; i < puzzle.length; i++) {
+            if (puzzle[i].level >= maxLevel)
+                completedCount++;
+        }
+
+        if (completedCount === puzzle.length) {
+            console.log("Nothing to collect");
+            return;
+        }
+
+        let index = Math.floor(Math.random() * (puzzle.length - completedCount));
+
+        let image = index;
+        for (let i = 0; i <= index; i++) {
+            if (puzzle[i].level >= maxLevel) {
+                image++;
+                index++;
+            }
+        }
+
+        const info = puzzle[image];
+        const size = GameData.getPuzzleSizePerLevel(info.level);
+
+        let piece = 0;
+        for (let i = 0; i < size * size; i++) {
+            if ((1 << i & info.pieces) === 0) {
+                piece = i;
+                break;
+            }
+        }
+
+        const before = Object.assign({}, info);
+        const duplicate = false;
+        info.pieces |= (1 << piece);
+
+        if (info.level < maxLevel) {
+            let completed = true;
+            for (let i = 0; i < size * size; i++) {
+                if ((1 << i & info.pieces) === 0) {
+                    completed = false;
+                    break;
+                }
+            }
+
+            if (completed) {
+                info.level++;
+                info.pieces = 0;
+                this.onPuzzleCompleted.callListeners(info);
+            }
+        }
+
+        this.onPuzzlePeaceReceived.callListeners(before, image, piece, duplicate, false);
+
+        eventManager.boxOpened();
+
+        return true;
+    }
+
+    getSeedsForSoulsCount() {
+        const separator = bigInt("10000000000000000");
+        const totalResources = this.general.resources.add(this.general.resourcesSpent).divide(RESOURCES_SCALE);
+        if (totalResources.compare(0) <= 0)
+            return new bigInt(0);
+
+        if (totalResources.compare(separator) < 0) {
+            let result = BigIntSqrRoot(totalResources);
+            return BigIntSqrRoot(result).multiply(RESOURCES_SCALE);
+        } else {
+            let result = totalResources.multiply(totalResources).multiply(totalResources);
+            result = BigIntSqrRoot(result);
+            result = BigIntSqrRoot(result);
+            result = BigIntSqrRoot(result);
+            return result;//.divide(100);//RESOURCES_SCALE
+        }
+    }
+
+    //region likes
+
+    isLikesTimerActive() {
+        return this.savedProgress.profile.likedTimer;
+    }
+
+    resetLikesTimer() {
+        this.savedProgress.profile.likedTimer = 0;
+
+        for (let w in this.savedProgress.worlds) {
+            const world = this.savedProgress.worlds[w];
+            const buildings = world.buildings;
+            for (let b in buildings)
+                buildings[b].likes = [];
+        }
+
+        eventManager.likesReseted();
+        this.saveProgress();
+    }
+
+    getLikesTimeleft() {
+        return (LIKES_RESET_TIMER - (Progress.getTimeNow() - this.savedProgress.profile.likedTimer));
+    }
+
+    buildingLiked(world, building) {
+        if (!this.savedProgress.profile.likedTimer)
+            this.savedProgress.profile.likedTimer = Progress.getTimeNow();
+    }
+
+    //endregion
+
+    update() {
+        if (this.isLikesTimerActive()) {
+            if (this.getLikesTimeleft() <= 0)
+                this.resetLikesTimer();
+        }
+    }
+
+    /***
+     *
+     * @type {Building} building
+     * @type {bigInt} resources
+     */
+    resourcesCollected(building, resources) {
+        eventManager.soulsCollected(building.id, resources);
+        this.addResources(resources);
+    }
+
+    _resourcesWereUpdated() {
+        this._setResourceByName("gold", this.general.resources.toString());
+    }
+
+    _seedsWereUpdated() {
+        this._setResourceByName("seeds", this.general.seeds.toString());
+        this.onResourcesChanges.callListeners(this);
+        this._updateTotalSeedsBonus();
+    }
+
+    _gemsWereUpdated() {
+        this._setResourceByName("gems", this.general.gems.toString());
+        this.onResourcesChanges.callListeners(this);
+    }
+
+    /***
+     *
+     * @type {bigInt} resources
+     */
+    addResources(resources) {
+        this.general.resources = this.general.resources.add(resources);
+        this._resourcesWereUpdated();
+        this.onResourcesChanges.callListeners(this, true);
+
+        const len = Math.round(this._getResourceByName("gold").length / 3);
+        if (len > this.savedProgress.profile.maxGoldModifier) {
+            this.savedProgress.profile.maxGoldModifier = len;
+
+            gameAnalytics.sendEvent("NewGoldNumber", {
+                "gems": this.getTotalGems(),
+                "gold": len,
+                "session": this.savedProgress.profile.sessionNumber
+            });
+        }
+    }
+
+    isResourcesEnough(amount) {
+        return this.general.resources.compare(amount) >= 0;
+    }
+
+    isSeedsEnough(amount) {
+        return this.general.seeds.compare(amount) >= 0;
+    }
+
+    isGemsEnough(amount) {
+        return this.general.gems.compare(amount) >= 0;
+    }
+
+    /***
+     *
+     * @type {bigInt} resources
+     */
+    resourcesSpent(resources) {
+        this.general.resources = this.general.resources.minus(resources);
+        this.general.resourcesSpent = this.general.resourcesSpent.add(resources);
+        this._setResourceByName("goldSpent", this.general.resourcesSpent.toString());
+        this._resourcesWereUpdated();
+        this.onResourcesChanges.callListeners(this, false);
+    }
+
+    /***
+     *
+     * @type {bigInt} gems
+     */
+    seedsEarned(seeds) {
+        this.general.seeds = this.general.seeds.add(seeds);
+        this._seedsWereUpdated();
+    }
+
+    /***
+     *
+     * @type {bigInt} gems
+     */
+    seedsSpent(seeds) {
+        this.general.seeds = this.general.seeds.minus(seeds);
+        this._seedsWereUpdated();
+    }
+
+    getJackPotSize() {
+        return this.savedProgress.fortuneWheel.jackpot;
+    }
+
+    incJackPotSize() {
+        this.savedProgress.fortuneWheel.jackpot += JACKPOT_INCREASE * RESOURCES_SCALE;
+    }
+
+    giveJackPot() {
+        this.gotGems(this.savedProgress.fortuneWheel.jackpot);
+        this.savedProgress.fortuneWheel.jackpot = JACKPOT_SIZE * RESOURCES_SCALE;
+    }
+
+    /***
+     *
+     * @type {int} gems
+     */
+    gotGems(gems) {
+        this.general.gems = this.general.gems.add(gems);
+        this._gemsWereUpdated();
+    }
+
+    /***
+     *
+     * @type {bigInt} gems
+     */
+    gemsSpent(gems) {
+        gameAnalytics.sendEvent("GemsSpent", {
+            "gems": this.general.gems.toString(),
+            "spent": gems.toString(),
+            "session": this.savedProgress.profile.sessionNumber
+        });
+        this.general.gems = this.general.gems.minus(gems);
+        this._gemsWereUpdated();
+    }
+
+    saveBuilding(world, building) {
+        const deltaJson = {worlds: {}};
+        const worldJson = deltaJson.worlds[world.id] = {};
+        worldJson[building.id] = this.savedProgress.worlds[world.id].buildings[building.id];
+
+        //Send deltaJson to the server
+
+        this.saveProgress();
+    }
+
+    buildingCreated(world, building) {
+        //Check if that was from loading
+        const blds = this.savedProgress.worlds[world.id].buildings;
+        if (!blds.hasOwnProperty(building.id)) {
+            this.saveBuilding(world, building);
+        }
+    }
+
+    isWorldChangeAvailable() {
+        return this.getHarvestsCount() >= 1;
+    }
+
+    getHarvestsCount() {
+        return (this.savedProgress.profile.harvestsCount || 0);
+    }
+
+    harvestStarted() {
+        // const count = this.savedProgress.profile.harvestsCount || 0;
+        // this.savedProgress.profile.harvestsCount = count + 1;
+        // this.saveProgress();
+    }
+
+    harvestCompleted(dontReset) {
+        const count = this.savedProgress.profile.harvestsCount || 0;
+        this.savedProgress.profile.harvestsCount = count + 1;
+
+        const seeds = this.getSeedsForSoulsCount();
+        this._setResourceByName("gold", "0");
+        this._setResourceByName("goldSpent", "0");
+        this.general.resources = bigInt("0");
+        this.general.resourcesSpent = bigInt("0");
+        const gemsPurchases = {};
+        for (let id in this.savedProgress.purchases) {
+            if (GameData.getMarketPurchaseById(id).priceType === "Gems")
+                gemsPurchases[id] = this.savedProgress.purchases[id];
+        }
+        this.savedProgress.purchases = gemsPurchases;
+
+        this.seedsEarned(seeds);
+
+        if (!dontReset)
+            this._resetConstructions();
+
+        eventManager.harvestCompleted(seeds);
+
+        this.saveProgress();
+    }
+
+    _getDeltaSave() {
+        const newSave = {};
+
+        if (!this.lastSave)
+            this.lastSave = {};
+
+        const lastSave = this.lastSave;
+
+        function addFields(obj, path) {
+            for (let k in obj) {
+                const n = path + k;
+                if ((typeof obj[k]) == "object") {
+                    addFields(obj[k], n + ".");
+                } else {
+                    const v = obj[k];
+                    if (lastSave[n] !== v) {
+                        newSave[n] = obj[k];
+                        lastSave[n] = v;
+                    }
+                }
+            }
+        }
+
+        addFields(this.savedProgress, "");
+
+        return newSave;
+    }
+
+    _writeToStorage() {
+        if (socialManager.isAuthorizing()) {
+            console.log("authorizing right now, won't save");
+            return;
+        }
+
+        const v = this.savedProgress.profile.savedVersion || 0;
+        this.savedProgress.profile.savedVersion = v + 1;
+        window.localStorage.setItem("allProgress", JSON.stringify(this.savedProgress));
+        this.timerId = null;
+        this.lastSaveTime = Progress.getTimeNow();
+
+        const deltaSave = this._getDeltaSave();
+
+        this._sendDataToServer(deltaSave);
+    }
+
+    _sendDataToServer(deltaSave) {
+        if (gBase.currentUnicorn)
+            gBase.profile.update(
+                deltaSave, null,
+                null, null, null, null,
+                (err) => {
+                    if (err) {
+                        gameAnalytics.sendServerError(err, "update");
+                        socialManager.checkAuthStatus(err, () => this._sendDataToServer(deltaSave));
+                    }
+                }
+            );
+    }
+
+    saveProgress() {
+        if (this.timerId == null)
+            this.timerId = setTimeout(this._writeToStorage.bind(this), 2000);
+        else {
+            if (Progress.getTimeNow() - this.lastSaveTime <= 10000) {
+                clearTimeout(this.timerId);
+                this.timerId = setTimeout(this._writeToStorage.bind(this), 2000);
+            }
+        }
+    }
+
+    static loadProgressFromServer(callback) {
+        if (!gBase.currentAccount)
+            callback(null);
+        else {
+            if (!gBase.currentAccount.haveProfile) {
+                gBase.profile.create((err) => {
+                    if (err)
+                        gameAnalytics.sendServerError(err, "create");
+                });
+                callback(null);
+            } else {
+                gBase.profile.getp((err) => {
+                    if (err)
+                        gameAnalytics.sendServerError(err, "getp");
+                    callback(gBase.currentProfile.profileData);
+                });
+            }
+        }
+    }
+
+    loadProgress() {
+
+        const value = window.localStorage.getItem("allProgress");
+        // console.log("load " + value);
+        return value ? JSON.parse(value) : null;
+        // if (value) {
+        //     return Promise.resolve(JSON.parse(value));
+        // }
+        // return Promise.reject();
+    }
+
+    cheatResources() {
+        this.addResources(this.getTotalResources().add(1000).multiply(10));
+        // this.seedsEarned(this.getTotalSeeds().add(1).multiply(10));
+        // this.gotGems(this.getTotalGems().add(1).multiply(10));
+    }
+
+    getTutorialPhase() {
+        return this.savedProgress.profile.tutorialPhase || 0;
+    }
+
+    setTutorialPhase(phase) {
+        this.savedProgress.profile.tutorialPhase = phase;
+        this.saveProgress();
+    }
+
+    getBuildingLevel(worldId, buildingId) {
+        return this.savedProgress.worlds[worldId].buildings[buildingId].level;
+    }
+
+    isBuildingConstructed(worldId, buildingId) {
+        return this.getBuildingLevel(worldId, buildingId) >= 1;
+    }
+
+    getBuildingInfo(worldId, buildingId) {
+        return this.savedProgress.worlds[worldId].buildings[buildingId];
+    }
+
+    canCheckStore() {
+        return this.getTutorialPhase() >= TutPhases.BuildSlots9 && this.getTutorialPhase() < TutPhases.FortuneWheel;
+    }
+
+    isTutorialCompleted() {
+        return this.getTutorialPhase() >= TutPhases.BuildSlots6 && this.getTutorialPhase() < TutPhases.FortuneWheel;
+    }
+
+    canShowBoss(worldId) {
+        return this.getTutorialPhase() >= TutPhases.SummonBoss && this.getConstructedBuildingsCount(worldId) >= 6;
+    }
+
+    canShowGuard() {
+        return this.getTutorialPhase() >= TutPhases.Boost4h;
+    }
+
+    getConstructedBuildingsCount(worldId) {
+        worldId = worldId || 1;
+        const buildings = this.savedProgress.worlds[worldId].buildings;
+        let count = 0;
+        for (let i = 1; i <= 9; i++) {
+            if (buildings[i].level !== 0)
+                count++;
+        }
+        return count;
+    }
+
+    isResourcesEnoughForConstruction(building) {
+        return (this.isResourcesEnough(building.getUpgradePrice()) && this.getPuzzleInfoById(building.slot - 1).level >= 1);
+    }
+
+    saveQuestsProgress(manager) {
+        this.savedProgress.quests.update = manager.update;
+
+        const savedQuests = this.savedProgress.quests.activeQuests;
+        const quests = manager.activeQuests;
+        for (let i = 0; i < quests.length; i++) {
+            const q = quests[i];
+            savedQuests[i] = {
+                id: q.info.id,
+                level: q.level,
+                progress: q.progress,
+                isRefreshed: q.isRefreshed,
+                isComplete: q.isComplete,
+                // fullProgress:
+            };
+        }
+        this.saveProgress();
+    }
+
+    savePhotoQuestsProgress(quest) {
+        this._checkPhotoQuests();
+
+        const savedQuest = this.savedProgress.photo_quests[quest.info.parent.id];
+        savedQuest.level = quest.level;
+        savedQuest.progress = quest.progress;
+        savedQuest.isComplete = quest.isComplete;
+        this.saveProgress();
+    }
+
+    getQuestsProgress() {
+        return this.savedProgress.quests;
+    }
+
+    resetProgress() {
+        this.savedProgress.profile.version = 1;
+        this.saveProgress();
+    }
+
+    getFreeSpinsCount() {
+        return this.savedProgress.fortuneWheel.freeSpins;
+    }
+
+    getNextSpinTime() {
+        return this.savedProgress.fortuneWheel.update + SpinsResporeTime - Progress.getTimeNow();
+    }
+
+    spendSpin() {
+        if (this.getFreeSpinsCount() >= Progress.getMaxFreeSpins())
+            this.savedProgress.fortuneWheel.update = Progress.getTimeNow();
+        this.savedProgress.fortuneWheel.freeSpins = Math.max(0, this.savedProgress.fortuneWheel.freeSpins - 1);
+    }
+
+    canOpenOtherWorld() {
+        const puzzle = this.getPuzzleInfo();
+
+        for (let i = 9; i < puzzle.length; i++) {
+            if (puzzle[i].level > 0)
+                return true;
+        }
+
+        return this.getConstructedBuildingsCount() >= 9;
+    }
+
+    checkForNewSpin() {
+        if (this.getFreeSpinsCount() < Progress.getMaxFreeSpins()) {
+            if (this.getNextSpinTime() <= 0) {
+                console.log("add new spin");
+                this.savedProgress.fortuneWheel.freeSpins++;
+                this.savedProgress.fortuneWheel.update += SpinsResporeTime;
+                return true;
+            }
+        }
+        return false;
+    }
+
+    _checkForAdsField() {
+        if (!this.savedProgress.adsWatched) {
+            this.savedProgress.adsWatched = {
+                count: 0,
+                update: 0
+            };
+        }
+
+        const timeNow = Progress.getTimeNow();
+        const dayNow = Progress.getDayFromTime(timeNow);
+        const dayWas = Progress.getDayFromTime(this.savedProgress.adsWatched.update);
+        if (dayNow != dayWas)
+            this.savedProgress.adsWatched.count = 0;
+    }
+
+    getAdsWatchedToday() {
+        this._checkForAdsField();
+        return this.savedProgress.adsWatched.count;
+    }
+
+    adWasWatched() {
+        this._checkForAdsField();
+        this.savedProgress.adsWatched.count++;
+        this.savedProgress.adsWatched.update = Progress.getTimeNow();
+        this.saveProgress();
+    }
+
+    static getMaxFreeSpins() {
+        return 3;
+    }
+
+    _checkPhotoQuests() {
+        if (!this.savedProgress.photo_quests) {
+            this.savedProgress.photo_quests = {};
+        }
+    }
+
+    getPhotoQuestById(id) {
+        this._checkPhotoQuests();
+        if (this.savedProgress.photo_quests.hasOwnProperty(id))
+            return this.savedProgress.photo_quests[id];
+
+        const q = this.savedProgress.photo_quests[id] = {
+            level: 0,
+            progress: 0,
+            isComplete: false
+        };
+
+        return q;
+    }
+
+    static getTimeTillTheNextDay() {
+        const day = Progress.getDayNow() + 1;
+        const time = Progress.getTimeNow();
+        return day * 24 * 3600 - time / 1000;
+    }
+}
+
+let GameData = (function() {
+
+    BUILDINGS_INFO = {};
+    SLOTS_UPGRADE = null;
+
+    MARKET_GOLD = [];
+    MARKET_SEEDS = [];
+    MARKET_GEMS = [];
+
+    MARKET_DATA = {};
+
+    ATLAS_SPRITES = {};
+
+    IN_APP_DATA = {};
+
+    PHOTO_DATA = null;
+
+    _compareFunction = function(a, b) {
+        const intA = new bigInt(a.price);
+        const intB = new bigInt(b.price);
+        return intA.compare(intB);
+    };
+
+    _compareFunctionOrder = function(a, b) {
+        return a.order - b.order;
+    };
+
+    return {
+        getGemsForDublicate() {
+            return 5;
+        },
+
+        getMarketListGold(){
+            return MARKET_GOLD;
+        },
+
+        getMarketListSeeds(){
+            return MARKET_SEEDS;
+        },
+
+        getMarketListGems(){
+            return MARKET_GEMS;
+        },
+
+        getInAppData(){
+            return IN_APP_DATA;
+        },
+
+        getMarketPurchaseById(id){
+            return MARKET_DATA[id];
+        },
+
+        getBuildingInfoBySlot(slot) {
+            return BUILDINGS_INFO[slot];
+        },
+
+        getSlotsUpgrade() {
+            return SLOTS_UPGRADE;
+        },
+        
+        getPuzzleSizePerLevel(level){
+            switch (level) {
+                case 0:
+                case 1:
+                    return 2;
+                case 2:
+                case 3:
+                    return 3;
+                case 4:
+                case 5:
+                    return 4;
+            }
+        },
+
+        getPuzzleResourceBonusDivPerLevel(level){
+            switch (level) {
+                case 0:
+                case 1:
+                case 2:
+                    return 1;
+                case 3:
+                    return 2;
+                case 4:
+                    return 6;
+                default:
+                    return 26;
+            }
+        },
+
+        getPuzzleResourceBonusPerLevel(level){
+            switch (level) {
+                case 0:
+                case 1:
+                    return 1;
+                case 2:
+                    return 2;
+                case 3:
+                    return 6;
+                case 4:
+                    return 26;
+                default:
+                    return 126;
+            }
+        },
+
+        getPuzzleBackNamePerLevel(level) {
+            switch (level) {
+                case 1: return 'PuzzleOpened';
+                case 2: return 'PuzzleBronze';
+                case 3: return 'PuzzleSilver';
+                case 4: return 'PuzzleGold';
+                case 5: return 'PuzzleDiamond';
+            }
+            return null;
+        },
+
+        getPuzzlesIconNamePerLevel(level) {
+            switch (level) {
+                case 1: return 'PuzzlesOpened';
+                case 2: return 'PuzzlesBronze';
+                case 3: return 'PuzzlesSilver';
+                case 4: return 'PuzzlesGold';
+                case 5: return 'PuzzlesDiamond';
+            }
+            return null;
+        },
+
+        getPuzzlesTextPerLevel(level) {
+            switch (level) {
+                case 1: return 'PuzzleCounterOpened';
+                case 2: return 'PuzzleCounterBronze';
+                case 3: return 'PuzzleCounterSilver';
+                case 4: return 'PuzzleCounterGold';
+                case 5: return 'PuzzleCounterDiamond';
+            }
+            return null;
+        },
+
+        getIconByType(priceType) {
+            switch (priceType) {
+                case "Gold": return 'PriceIcon';
+                case "Seeds": return 'PriceSeeds';
+                case "Gems": return 'PriceGems';
+            }
+            return null;
+        },
+
+        getPuzzleIcon(id) {
+            return BUILDINGS_INFO[id].visual.puzzle;
+        },
+
+        getBoxData() {
+            return BOX_DATA;
+        },
+
+        getLoginData() {
+            return LOGIN_DATA;
+        },
+
+        getRandomQuest() {
+            // return QUESTS_DATA[10];
+            return QUESTS_DATA[Math.floor(Math.random() * QUESTS_DATA.length)];
+        },
+
+        getQuestById(id) {
+            for (let i in QUESTS_DATA) {
+                if (QUESTS_DATA[i].id === id)
+                    return QUESTS_DATA[i];
+            } 
+            return null;
+        },
+
+        getPhotoData() {
+            return PHOTO_DATA;
+        },
+
+        getPhotoDataBySlotId(id) {
+            for (let i in PHOTO_DATA) {
+                if (PHOTO_DATA[i].slot_id == id)
+                    return PHOTO_DATA[i];
+            }
+            return null;
+        },
+
+        prepareAtlases(atlasJson) {
+            if (atlasJson) {
+                for (let i in atlasJson.textures) {
+                    const frames = atlasJson.textures[i].frames;
+                    for (let f in frames) {
+                        ATLAS_SPRITES[frames[f].filename] = 1;
+                    }
+                }
+            }
+        },
+
+        getAtlasName(objInfo) {
+            return ATLAS_SPRITES.hasOwnProperty(objInfo.file) ? "AtlasJson" : null;
+        },
+
+        prepareGameData(data) {
+            const slotsData = data.SlotsData;
+            const goodsData = data.GoodsData;
+            const slotsUpgrade = data.SlotsUpgrade;
+            const marketData = data.MarketData;
+            const boxData = data.BoxData;
+            const questsData = data.QuestsData;
+            const loginData = data.LoginData;
+            const inAppData = data.InAppLots;
+
+            QUESTS_DATA = questsData;
+            inAppData.sort(_compareFunctionOrder);
+
+            for (let i = 0;i < slotsData.length; i++) {
+                let price = bigInt(slotsData[i].createPrice).multiply(RESOURCES_SCALE);
+                for (let w = 0; w < 3; w++) {
+                    const newKey = BUILDINGS_INFO[(i + 1 + w * 9)] = {};
+                    newKey.construct = {price: price};
+                }
+            }
+
+            for (let i = 0;i < goodsData.length; i++) {
+                const val = goodsData[i];
+                let add = 0;
+                switch (val.puzzleType) {
+                    case "Basic":
+                        add = 0;
+                        break;
+                    case "Middle":
+                        add = 9;
+                        break;
+                    default:
+                        add = 18;
+                        break;
+                }
+                // if (val.isBase) {
+                    const newKey = BUILDINGS_INFO[(val.slotNumber + 1 + add)];
+
+                    newKey.visual = {
+                        icon: val.smallIcon,
+                        drop: val.drop,
+                        puzzle: val.icon
+                    };
+
+                    newKey.production = {
+                        base: bigInt(val.incomeBase).multiply(RESOURCES_SCALE),
+                        perLevel: 0
+                    };
+
+                    newKey.upgrade = {
+                        base: bigInt(val.upgradePriceBase).multiply(RESOURCES_SCALE),
+                        scale: val.upgradePriceStep,
+                    };
+
+                    newKey.loading = {
+                        duration: val.incomeTimerBase,
+                    };
+                // }
+            }
+
+            SLOTS_UPGRADE = slotsUpgrade;
+
+            for (let i in marketData) {
+                const val = marketData[i];
+                switch (val.priceType) {
+                    case "Gold":
+                        MARKET_GOLD.push(val);
+                        break;
+                    case "Seeds":
+                        MARKET_SEEDS.push(val);
+                        break;
+                    case "Gems":
+                        val.price = val.priceGems.toString();
+                        MARKET_GEMS.push(val);
+                        break;
+                }
+                val.bigInt = bigInt(val.price).multiply(RESOURCES_SCALE);
+                MARKET_DATA[val.id] = val;
+            }
+
+            IN_APP_DATA = inAppData;
+            for (let i in inAppData) {
+                const val = inAppData[i];
+                val.id = val.itemIdprod;
+                val.priceType = "IN_APP";
+                val.repeatable = true;
+                val.originalGems = val.gems;
+                val.gems *= RESOURCES_SCALE;
+                MARKET_DATA[val.itemIdprod] = val;
+            }
+
+            MARKET_GOLD.sort(_compareFunction);
+            MARKET_SEEDS.sort(_compareFunction);
+
+            BOX_DATA = boxData;
+            for (let i = 0;i<BOX_DATA.length;i++) {
+                const d = BOX_DATA[i];
+                if (d.priceGems)
+                    d.bigInt = bigInt(d.priceGems).multiply(RESOURCES_SCALE);
+            }
+
+            LOGIN_DATA = loginData;
+
+            PHOTO_DATA = data.PhotoData;
+            for (let i in PHOTO_DATA) {
+                const pd = PHOTO_DATA[i];
+                const levels = pd.levels;
+                for (let l in levels) {
+                    const lev = levels[l];
+                    const q = this.getQuestById(lev.quest_id);
+                    if (q) {
+                        lev.type = q.type;
+                        lev.info = q.info;
+                        lev.parent = pd;
+                    } else
+                        console.error("Quest wasn't found " + lev.quest_id);
+                }
+
+            }
+        }
+    }
+})();
+
+class QuestBase {
+    constructor(prms, progress) {
+        this.info = prms;
+        if (progress) {
+            this.level = progress.level;
+            this.progress = progress.progress;
+            this.isRefreshed = progress.isRefreshed;
+            this.isComplete = progress.isComplete;
+        } else {
+            this.level = Math.floor(Math.random() * prms.reward.length);
+            this.progress = 0;
+            this.isRefreshed = false;
+            this.isComplete = false;
+        }
+        if (prms.hasOwnProperty("reward")) {
+            this.originalReward = prms.reward[this.level];
+            this.reward = this.originalReward * RESOURCES_SCALE;
+            this.count = prms.levels[this.level];
+        } else {
+            this.count = prms.count;
+        }
+
+        this.completeCallback = prms.completeCallback;
+        this.claimCallback = prms.claimCallback;
+        this.replaceCallback = prms.replaceCallback;
+        this.progressChanged = prms.progressChanged;
+
+        if (this.progress >= this.count)
+            this.completeCallback(this);
+    }
+
+    hasAction() {
+        return this.info.hasAction;
+    }
+
+    useAction() {
+
+    }
+
+    getRewardForUI() {
+        return this.originalReward;
+    }
+
+    increaseProgress(count) {
+        this.progress += count;
+        if (this.progress >= this.count)
+            this.completeCallback(this);
+
+        this.progressChanged(this);
+
+        eventManager.actionQuestProgress(this);
+    }
+
+    canReplaceQuest() {
+        return !this.isRefreshed;
+    }
+
+    canDisplayQuest() {
+        return !this.isComplete;
+    }
+
+    replaceQuest() {
+        this.isRefreshed = true;
+        this.replaceCallback();
+    }
+
+    claimReward() {
+        this.isComplete = true;
+        this.claimCallback(this);
+    }
+
+    clearCallback() {
+
+    }
+
+    isReadyToClaim() {
+        return this.progress >= this.count;
+    }
+}
+
+class QuestBoxOpen extends QuestBase {
+    constructor(prms, progress) {
+        super(prms, progress);
+        this.subscribe = () => this.increaseProgress(1);
+        eventManager.onBoxOpened.addListener(this.subscribe);
+    }
+
+    clearCallback() {
+        eventManager.onBoxOpened.removeListener(this.subscribe);
+    }
+}
+
+class QuestBoxPurchased extends QuestBase {
+    constructor(prms, progress) {
+        super(prms, progress);
+        this.subscribe = (count) => this.increaseProgress(count);
+        eventManager.onBoxPurchased.addListener(this.subscribe);
+    }
+
+    clearCallback() {
+        eventManager.onBoxPurchased.removeListener(this.subscribe);
+    }
+}
+
+class QuestCollectSoulsTimes extends QuestBase {
+    constructor(prms, progress) {
+        super(prms, progress);
+        this.subscribe = (slot) => {
+            if (slot === prms.slot || !prms.slot)
+                this.increaseProgress(1);
+        };
+        eventManager.onSoulsCollected.addListener(this.subscribe);
+    }
+
+    clearCallback() {
+        eventManager.onSoulsCollected.removeListener(this.subscribe);
+    }
+}
+
+class QuestCollectSoulsAmount extends QuestBase {
+    constructor(prms, progress) {
+        super(prms, progress);
+        this.progress = bigInt(this.progress);
+        this.subscribe = (slot, count) => {
+            if (slot === prms.slot || !prms.slot)
+            // this.increaseProgress(count);
+                this.progress = this.progress.add(count);
+        };
+        eventManager.onSoulsCollected.addListener(this.subscribe);
+    }
+
+    clearCallback() {
+        eventManager.onSoulsCollected.removeListener(this.subscribe);
+    }
+}
+
+class QuestLongSpeedActivate extends QuestBase {
+    constructor(prms, progress) {
+        super(prms, progress);
+        this.subscribe = () => {
+            this.increaseProgress(1);
+        };
+        eventManager.onLongSpeedActivated.addListener(this.subscribe);
+    }
+
+    clearCallback() {
+        eventManager.onLongSpeedActivated.removeListener(this.subscribe);
+    }
+}
+
+class QuestShortSpeedActivate extends QuestBase {
+    constructor(prms, progress) {
+        super(prms, progress);
+        this.subscribe = () => {
+            this.increaseProgress(1);
+        };
+        eventManager.onShortSpeedActivated.addListener(this.subscribe);
+    }
+
+    clearCallback() {
+        eventManager.onShortSpeedActivated.removeListener(this.subscribe);
+    }
+}
+
+class QuestPurchaseUpgrade extends QuestBase {
+    constructor(prms, progress) {
+        super(prms, progress);
+        this.subscribe = (upgradeInfo) => {
+            if (!prms.priceType || prms.priceType === upgradeInfo.priceType)
+                this.increaseProgress(1);
+        };
+        eventManager.onUpgradePurchased.addListener(this.subscribe);
+    }
+
+    clearCallback() {
+        eventManager.onUpgradePurchased.removeListener(this.subscribe);
+    }
+}
+
+class QuestBuildingUpgraded extends QuestBase {
+    constructor(prms, progress) {
+        super(prms, progress);
+        this.subscribe = (building, slot) => {
+            if (slot === prms.slot || !prms.slot)
+                this.increaseProgress(1);
+        };
+        eventManager.onBuildingUpgraded.addListener(this.subscribe);
+    }
+
+    clearCallback() {
+        eventManager.onBuildingUpgraded.removeListener(this.subscribe);
+    }
+}
+
+class QuestBuildingUpgraded25 extends QuestBase {
+    constructor(prms, progress) {
+        super(prms, progress);
+        this.subscribe = (building, slot) => {
+            if ((slot === prms.slot || !prms.slot) && (building.getLevel() % 25) === 0)
+                this.increaseProgress(1);
+        };
+        eventManager.onBuildingUpgraded.addListener(this.subscribe);
+    }
+
+    clearCallback() {
+        eventManager.onBuildingUpgraded.removeListener(this.subscribe);
+    }
+}
+
+class QuestShare extends QuestBase {
+    constructor(prms, progress) {
+        super(prms, progress);
+    }
+
+    useAction() {
+        socialManager.postMessage(() => {
+            this.increaseProgress(1);
+        });
+    }
+
+    claimReward() {
+        super.claimReward();
+        localStorage.setItem("quest_1000", Progress.getDayNow());
+    }
+}
+
+class QuestHarvest extends QuestBase {
+    constructor(prms, progress) {
+        super(prms, progress);
+        this.subscribe = () => {
+            this.increaseProgress(1);
+        };
+        eventManager.onHarvestCompleted.addListener(this.subscribe);
+    }
+
+    clearCallback() {
+        eventManager.onHarvestCompleted.removeListener(this.subscribe);
+    }
+}
+
+class QuestsManager {
+    constructor(questsFromProgress) {
+        this.activeQuests = [];
+        this.mainQuests = [];
+
+        const timeNow = Progress.getTimeNow();
+        const dayNow = Progress.getDayFromTime(timeNow);
+        const dayWas = Progress.getDayFromTime(questsFromProgress.update);
+
+        this.update = timeNow;
+        if (dayNow === dayWas) {
+            const quests = questsFromProgress.activeQuests;
+            for (let i = 0; i < quests.length; i++) {
+                const p = quests[i];
+                const info = GameData.getQuestById(p.id);
+                const quest = this._initQuest(info, p);
+                this.activeQuests.push(quest);
+            }
+        }
+        this.activateRandomQuests(this.activeQuests.length);
+
+        const gameSettings = VisualData.getGameSettings();
+        if (gameSettings.share && gameSettings.share.hasOwnProperty(AllGetParams.game_platform) && gameSettings.share[AllGetParams.game_platform]) {
+            const day = localStorage.getItem("quest_1000");
+            if (Progress.getDayNow() > day) {
+                const quest = this._initQuest({
+                    id: 1000,
+                    type: 'SharePost',
+                    levels: [1],
+                    reward: [5],
+                    info: 'SharePostInfo',
+                    hasAction: true
+                }, null);
+                this.mainQuests.push(quest);
+            }
+        }
+    }
+
+    getQuestInfo(index) {
+        if (this.mainQuests.length > index)
+            return this.mainQuests[index];
+        return this.activeQuests[index - this.mainQuests.length];
+    }
+
+    replaceQuest(index) {
+        const info = GameData.getRandomQuest();
+        let quest = this._initQuest(info);
+        this.activeQuests[index] = quest;
+        quest.replaceQuest();
+    }
+
+    questCompleted(quest) {
+        eventManager.questCompleted(quest);
+    }
+
+    questClaimed(quest) {
+        gameInit.progress.gotGems(quest.reward);
+        this.progressChanged();
+        eventManager.questClaimed(quest);
+    }
+
+    questReplaced() {
+        this.progressChanged();
+    }
+
+    progressChanged() {
+        gameInit.progress.saveQuestsProgress(this);
+    }
+
+    static publicGetQuest(prms, progress) {
+        switch (prms.type) {
+            case "OpenBox":
+                return new QuestBoxOpen(prms, progress);
+            case "CollectCrop":
+                return new QuestHarvest(prms, progress);
+            case "CollectLastSlot":
+                prms.slot = 9;
+                return new QuestCollectSoulsTimes(prms, progress);
+            case "Banjo":
+                return new QuestShortSpeedActivate(prms, progress);
+            case "Rain":
+                return new QuestLongSpeedActivate(prms, progress);
+            case "MacroUpgrades":
+                return new QuestPurchaseUpgrade(prms, progress);
+            case "BuyBox":
+                return new QuestBoxPurchased(prms, progress);
+            case "FirstSlotUpgrade":
+                return new QuestBuildingUpgraded25(prms, progress);
+            case "SeedsUpgrades":
+                prms.priceType = "Seeds";
+                return new QuestPurchaseUpgrade(prms, progress);
+            case "CollectGold":
+                return new QuestCollectSoulsTimes(prms, progress);
+            //TODO not implemented
+            case "Gift":
+            case "NewLevelGold":
+                // return new QuestBase(prms, progress);
+                return new QuestCollectSoulsTimes(prms, progress);
+            case "SharePost":
+                return new QuestShare(prms, progress);
+        }
+        return null;
+    }
+
+    _initQuest(prms, progress) {
+        if (!prms)
+            return null;
+
+        switch (prms.type) {
+            //TODO not implemented
+            case "Gift":
+            case "NewLevelGold":
+                console.error("replace", GameData.getQuestById(prms.id - 1));
+                prms = GameData.getQuestById(prms.id - 1);
+                break;
+        }
+        prms.completeCallback = this.questCompleted.bind(this);
+        prms.claimCallback = this.questClaimed.bind(this);
+        prms.replaceCallback = this.questReplaced.bind(this);
+        prms.progressChanged = this.progressChanged.bind(this);
+
+        return QuestsManager.publicGetQuest(prms, progress);
+    }
+
+    activateRandomQuestForSlot(slot) {
+        //TODO value depends on quest
+        const info = GameData.getRandomQuest();
+        let quest = this._initQuest(info);
+        this.activeQuests[slot] = quest;
+    }
+
+    activateRandomQuests(startIndex) {
+        for (let i = startIndex; i < 3; i++) {
+            this.activateRandomQuestForSlot(i);
+        }
+
+        if (startIndex < 3)
+            this.progressChanged();
+    }
+
+    isAnyCompleteQuest() {
+        for (let i in this.activeQuests) {
+            const q = this.activeQuests[i];
+            if (q && q.isReadyToClaim() && !q.isComplete)
+                return true;
+        }
+        return false;
+    }
+}
+
+const ResourceIncreaseGold = 20;
+const ResourceIncreaseSeed = 10;
+
+class BonusBase {
+    constructor(prms) {
+        this.info = prms;
+    }
+    
+    activateBonus() {
+    }
+
+    _getType() {
+        return this.info.bonusType;
+    }
+    
+    getIconName() {
+        return "DailyBonus_" + this._getType();
+    }
+
+    getIconPath() {
+        return VisualData.getDailyBonusIconsFolder() + this._getType() + ".png";
+    }
+    
+    getText() {
+        return this.info.parameter.toString();
+    }
+
+    isUpdatable() {
+        return false;
+    }
+}
+
+class BonusWithIndex extends BonusBase {
+    constructor(prms, index) {
+        super(prms);
+        this.index = index;
+    }
+}
+
+class BonusResources extends BonusWithIndex{
+
+    activateBonus() {
+        super.activateBonus();
+        gameInit.progress.addResources(this.getCount());
+    }
+
+    getCount() {
+        return Math.max(gameInit.progress.getTotalResources().multiply(Math.trunc(this.getKoeff() * RESOURCES_SCALE)).divide(RESOURCES_SCALE), 1000 * RESOURCES_SCALE);
+    }
+
+    isUpdatable() {
+        return true;
+    }
+
+    getKoeff() {
+        return (this.info.parameter + this.index * ResourceIncreaseGold) / 100;
+    }
+
+    getText() {
+        return 'x' + (this.getKoeff() + 1);
+    }
+}
+
+// class BonusScaleResources extends BonusBase{
+//
+//     activateBonus() {
+//         super.activateBonus();
+//         let current = gameInit.progress.getResources();
+//         gameInit.progress.addResources(Math.trunc(current * this.info.value));
+//     }
+// }
+
+class BonusGems extends BonusBase {
+
+    activateBonus() {
+        super.activateBonus();
+        gameInit.progress.gotGems(this.info.parameter * RESOURCES_SCALE);
+    }
+}
+
+class BonusSeeds extends BonusWithIndex {
+
+    activateBonus() {
+        super.activateBonus();
+        gameInit.progress.seedsEarned(this.getCount());
+    }
+
+    getKoeff() {
+        return (this.info.parameter + this.index * ResourceIncreaseSeed) / 100;
+    }
+
+    getText() {
+        return 'x' + (this.getKoeff() + 1);
+    }
+
+    getCount() {
+        return Math.max(gameInit.progress.getTotalSeeds().multiply(Math.trunc(this.getKoeff() * RESOURCES_SCALE)).divide(RESOURCES_SCALE), 1000 * RESOURCES_SCALE);
+    }
+
+    isUpdatable() {
+        return true;
+    }
+}
+
+class BonusSeedsStrength extends BonusBase {
+
+    activateBonus() {
+        super.activateBonus();
+        gameInit.progress.increaseBonusPerSeed(this.info.parameter);
+    }
+
+    getText() {
+        return "+" + super.getText() + "%";
+    }
+}
+
+class BonusBox extends BonusBase {
+
+    activateBonus() {
+        super.activateBonus();
+        gameInit.progress.giveChests(BoxType.GoldBox, this.info.parameter);
+    }
+}
+
+class BonusSuperBox extends BonusBase {
+
+    activateBonus() {
+        super.activateBonus();
+        gameInit.progress.giveChests(BoxType.SuperBox, this.info.parameter);
+    }
+
+    _getType() {
+        return "SuperBox";
+    }
+}
+
+class BonusTimeTravel extends BonusBase {
+    activateBonus() {
+        super.activateBonus();
+        gameInit.upgradePurchased({
+            upgradeType: this.info.bonusType,
+            parameter: this.info.parameter * 3600
+        });
+    }
+}
+
+class DailyBonus
+{
+    constructor(seed, data) {
+        this.bonuses = {};
+        this.goldIndex = 0;
+        this.seedIndex = 0;
+
+        const totalDays = 30;
+        const randomPrizes = [];
+        let takenDays = 0;
+
+        for (let k in data) {
+            const info = data[k];
+            const day = info.number;
+            if (day > 0) {
+                const bonus = this._generateBonus(info);
+                this.bonuses[day] = bonus;
+                takenDays++;
+            } else
+                randomPrizes.push(info);
+        }
+
+        for (let i = 0; i < randomPrizes.length && randomPrizes.length < (totalDays - takenDays);i++) {
+            randomPrizes.push(randomPrizes[i]);
+        }
+
+        const rnd = new Random(seed);
+
+        for (let i = 1; i<= 30;i++) {
+            if (!this.bonuses.hasOwnProperty(i)) {
+                const ind = Math.trunc(rnd.nextFloat() * randomPrizes.length);
+                const bonus = this._generateBonus(randomPrizes[ind]);
+                if (bonus)
+                    this.bonuses[i] = bonus;
+                randomPrizes.splice(ind, 1);
+            }
+        }
+    }
+
+    _generateBonus(info) {
+        switch (info.bonusType) {
+            case "Gold": return new BonusResources(info, this.goldIndex++);
+            case "Box": return new BonusBox(info);
+            case "SuperBox":
+            case "MiddlePuzzle":
+            case "SuperPuzzle":
+                return new BonusSuperBox(info);
+            case "TimeTravel": return new BonusTimeTravel(info);
+            case "Seed": return new BonusSeeds(info, this.seedIndex++);
+            case "SeedStrength": return new BonusSeedsStrength(info);
+            case "Crystal":
+            case "MegaCrystal":
+                return new BonusGems(info);
+        }
+        return null;
+    }
+
+    getBonusForDay(day){
+        return this.bonuses[day];
+    }
+}
+
+class WheelPrizeBase {
+    constructor(prms) {
+        this.info = prms;
+    }
+
+    getChance() {
+        return this.info.chance;
+    }
+    
+    activateBonus() {
+        gameInit.progress.incJackPotSize();
+    }
+
+    getType() {
+        return this.info.bonusType;
+    }
+    
+    getIconName() {
+        return "DailyBonus_" + this.info.bonusType;
+    }
+
+    getIconPath() {
+        return VisualData.getDailyBonusIconsFolder() + this.info.bonusType + ".png";
+    }
+    
+    getText() {
+        return this.info.parameter;
+    }
+
+    needToUpdate() {
+        return false;
+    }
+}
+
+class WheelResources extends WheelPrizeBase {
+    
+    activateBonus() {
+        super.activateBonus();
+        gameInit.progress.addResources(this._getBonusSize());
+    }
+
+    _getBonusSize()
+    {
+        return Math.max(gameInit.progress.getTotalSeeds() * 1000, 1000 * RESOURCES_SCALE, AllBuildings[3].getProducedResources());
+    }
+
+    getText() {
+        return LocalizationManager.getLocalizedNumber(this._getBonusSize());
+    }
+
+    needToUpdate() {
+        return true;
+    }
+}
+
+class WheelGems extends WheelPrizeBase {
+
+    activateBonus() {
+        super.activateBonus();
+        gameInit.progress.gotGems(this.info.parameter);
+    }
+
+    getText() {
+        return Math.round(this.info.parameter / RESOURCES_SCALE);
+    }
+}
+
+class WheelJackPot extends WheelPrizeBase {
+
+    activateBonus() {
+        // super.activateBonus(); Don't call it
+        gameInit.progress.giveJackPot();
+    }
+
+    getText() {
+        return Math.round(gameInit.progress.getJackPotSize() / RESOURCES_SCALE);
+    }
+
+    needToUpdate() {
+        return true;
+    }
+}
+
+class WheelBox extends WheelPrizeBase {
+
+    activateBonus() {
+        super.activateBonus();
+        gameInit.progress.giveChests(BoxType.GoldBox, this.info.parameter);
+    }
+}
+
+class WheelTimeTravel extends WheelPrizeBase {
+    activateBonus() {
+        super.activateBonus();
+        gameInit.upgradePurchased({
+            upgradeType: this.info.bonusType,
+            parameter: this.info.parameter * 60
+        });
+    }
+}
+
+class WheelOfFortune
+{
+    constructor() {
+        this.bonuses = [
+            new WheelTimeTravel({
+                chance: 10,
+                parameter: 30,
+                bonusType: "TimeTravel"
+            }),
+            new WheelBox({
+                chance: 5,
+                parameter: 1,
+                bonusType: 'Box',
+            }),
+            new WheelJackPot({
+                chance: 3,
+                bonusType: 'JackPot'
+            }),
+            new WheelTimeTravel({
+                chance: 35,
+                parameter: 15,
+                bonusType: "TimeTravel",
+            }),
+            new WheelGems({
+                chance: 12,
+                parameter: 5 * RESOURCES_SCALE,
+                bonusType: 'Gems'
+            }),
+            new WheelResources({
+                chance: 35,
+                bonusType: 'Gold'
+            })
+        ];
+    }
+
+    getBonuses() {
+        return this.bonuses;
+    }
+}
+
+class PhotoManager
+{
+    constructor(progress) {
+        this.activeQuests = {};
+
+        progress.onPuzzleCompleted.addListener(this.newPuzzleCompleted.bind(this));
+        const photoData = GameData.getPhotoData();
+
+        for (let i = 0; i < photoData.length; i++) {
+            const p = photoData[i];
+            this._addPhotoQuest(p);
+        }
+    }
+
+    _addPhotoQuest(photoData) {
+        const puzzleInfo = gameInit.progress.getPuzzleInfoById(photoData.slot_id - 1);
+        const myQ = gameInit.progress.getPhotoQuestById(photoData.id);
+        if (puzzleInfo.level > myQ.level) {
+            const questByLevel = photoData.levels[myQ.level];
+            const quest = this._initQuest(questByLevel, myQ);
+            this.activeQuests[photoData.id] = quest;
+        }
+    }
+
+    newPuzzleCompleted(info) {
+        const data = GameData.getPhotoDataBySlotId(info.id);
+        this._addPhotoQuest(data);
+    }
+
+    questCompleted(quest) {
+
+    }
+
+    questClaimed(quest) {
+        quest.level++;
+        quest.clearCallback();
+        //TODO show photo
+        this.progressChanged(quest);
+        delete this.activeQuests[quest.info.parent.id];
+        this._addPhotoQuest(quest.info.parent);
+    }
+
+    progressChanged(quest) {
+        gameInit.progress.savePhotoQuestsProgress(quest);
+    }
+
+    _initQuest(prms, progress) {
+        if (!prms)
+            return null;
+
+        prms.completeCallback = this.questCompleted.bind(this);
+        prms.claimCallback = this.questClaimed.bind(this);
+        prms.progressChanged = this.progressChanged.bind(this);
+
+        return QuestsManager.publicGetQuest(prms, progress);
+    }
+
+    getQuestById(id) {
+        return this.activeQuests.hasOwnProperty(id) ? this.activeQuests[id] : null;
+    }
+}
+
+class GameInit{
+    constructor() {
+        this.preload = new UnnyAction();
+        this.create = new UnnyAction();
+        this.update = new UnnyAction();
+        this.loaded = new UnnyAction();
+        this.reseted = new UnnyAction();
+        this.onBuildingCreated = new UnnyAction();
+        this.onBuildingUpgraded = new UnnyAction();
+        this.onResourcesCollected = new UnnyAction();
+        this.onResourcesUpdated = new UnnyAction();
+        this.onBuildingResourcesUpdated = new UnnyAction();
+        this.onBuildingUpdated = new UnnyAction();
+        this.onBuildingLiked = new UnnyAction();
+        this.onWorldChanged = new UnnyAction();
+        this.onWorldPreChanged = new UnnyAction();
+
+        this.allWorlds = [];
+        this.selectedWorld = "1";
+    }
+
+    GamePreload(engine) {
+        this.engine = engine;
+
+        const load = engine.load;
+        load.setPath(VisualData.getDataFolder());
+        load.json('GoodsData', 'goods_data.json');
+        load.json('SlotsData', 'farm_slot_data.json');
+        load.json('SlotsUpgrade', 'slots_upgrade_data.json');
+        load.json('MarketData', 'market_upgrades.json');
+        load.json('BoxData', 'box_data.json');
+        load.json('QuestsData', 'dailyquests_data.json');
+        load.json('LoginData', 'loginbonus_data.json');
+        load.json('InAppLots', 'in_app_lots.json');
+
+        if (VisualData.getGameSettings().photos)
+            load.json('PhotoData', 'photo_data.json');
+
+        load.setPath(VisualData.getFolderPath());
+        const localization = 'Localization_' + GameSettings.language;
+        load.json(localization, VisualData.getLocalizationsFolder() + localization + '.json');
+
+        load.multiatlas('atlas_sprites', VisualData.getAtlasPath());
+
+        this.preload.callListeners(engine);
+    }
+
+    upgradePurchased(data) {
+        for (let key in this.allWorlds) {
+            const world = this.allWorlds[key];
+            world.upgradePurchased(data);
+        }
+
+        switch (data.upgradeType) {
+            case 'SeedProc':
+                this.progress.increaseBonusPerSeed(data.parameter);
+                break;
+            //TODO implement those:
+            case 'SuperSeed':
+            case 'Upgrade':
+                break;
+        }
+    }
+
+    LoadProgress() {
+        // const purchases = this.progress.getAllPurchases();
+        // for (let key in purchases) {
+        //     const data = GameData.getMarketPurchaseById(key);
+        //     this.upgradePurchased(data);
+        // }
+
+        const worlds = this.progress.getWorlds();
+        for (let key in worlds) {
+            const w = new World(this, key);
+            this.allWorlds.push(w);
+            w.onBuildingCreated.addListener(this.buildingCreated.bind(this));
+            w.onBuildingUpgraded.addListener(this.buildingUpgraded.bind(this));
+            w.onResourcesCollected.addListener(this.resourcesCollected.bind(this));
+            w.onBuildingPreUpgrade.addListener(this.buildingPreUpgrade.bind(this));
+            w.onBuildingUpdated.addListener(this.buildingUpdated.bind(this));
+            w.onResourcesUpdated.addListener(this.buildingResourcesUpdate.bind(this));
+            w.onBuildingLiked.addListener(this.buildingLiked.bind(this));
+            w.loadProgress(this.progress);
+        }
+
+        this.loaded.callListeners(this.progress);
+    }
+
+    GameCreate(engine, hideCallback) {
+        const cache = engine.cache;
+        const data = {
+            SlotsData: cache.json.get('SlotsData'),
+            GoodsData: cache.json.get('GoodsData'),
+            SlotsUpgrade: cache.json.get('SlotsUpgrade'),
+            MarketData: cache.json.get('MarketData'),
+            BoxData: cache.json.get('BoxData'),
+            QuestsData: cache.json.get('QuestsData'),
+            LoginData: cache.json.get('LoginData'),
+            InAppLots: cache.json.get('InAppLots')
+        };
+
+        if (VisualData.getGameSettings().photos)
+            data.PhotoData = cache.json.get('PhotoData');
+        GameData.prepareGameData(data);
+
+        const localization = 'Localization_' + GameSettings.language;
+        const json = cache.json.get(localization);
+        GameSettings.allLanguages[GameSettings.language] = json;
+        LocalizationManager.initWithJson(json);
+
+        socialManager.setAllGetParams(parseGetParams());
+        try {
+            socialManager.initialize(VisualData.getGameSettings());
+        } catch (e) {
+            console.error(e);
+        }
+
+        socialManager.authorize(()=> {
+            Progress.loadProgressFromServer((progress) => {
+                this.progress = new Progress(this, progress);
+                this.progress.onUpgradePurchased.addListener(this.upgradePurchased.bind(this));
+
+                this.create.callListeners(engine);
+
+                this.time = engine.time.now / 1000;
+                this.LoadProgress();
+
+                this.questsManager = new QuestsManager(this.progress.getQuestsProgress());
+                if (VisualData.getGameSettings().photos)
+                    this.photoManager = new PhotoManager(this.progress);
+
+                audioManager.load(engine);
+
+                hideCallback();
+            });
+        });
+    }
+
+    GameUpdate(engine) {
+        if (!this.progress)
+            return;
+
+        const newTime = engine.time.now / 1000;
+        this.deltaTime = newTime - this.time;
+        this.time = newTime;
+
+        this.update.callListeners(this.deltaTime);
+
+        // const daynow = Progress.getDayNow();
+        // if (this.daynow !== daynow) {
+        //     // console.log("DAY " + daynow);
+        //     this.daynow = daynow;
+        // }
+    }
+
+    buildingPreUpgrade(world, building) {
+        const price = building.getUpgradePrice();
+        this.progress.resourcesSpent(price);
+        this.onResourcesUpdated.callListeners(this.progress);
+    }
+
+    resourcesCollected(building, resources) {
+        this.onResourcesCollected.callListeners(building, resources);
+        this.onResourcesUpdated.callListeners(this.progress);
+    }
+
+    buildingResourcesUpdate(world, building) {
+        this.onBuildingResourcesUpdated.callListeners(world, building);
+    }
+
+    buildingCreated(world, building) {
+        this.onBuildingCreated.callListeners(world, building);
+    }
+
+    buildingUpgraded(world, building) {
+        this.onBuildingUpgraded.callListeners(world, building);
+    }
+
+    buildingUpdated(world, building) {
+        this.onBuildingUpdated.callListeners(world, building);
+    }
+
+    buildingLiked(world, building) {
+        this.onBuildingLiked.callListeners(world, building);
+    }
+
+    harvestCompleted(dontReset) {
+        this.progress.harvestCompleted(dontReset);
+        this.reseted.callListeners(this.progress);
+    }
+
+    getBuildingById(worldIndex, id) {
+        return this.allWorlds[worldIndex - 1].getBuildingById(id);
+    }
+
+    switchWorld(worldId) {
+        if (!this.progress.canOpenOtherWorld()) {
+            guiManager.openNewWindow(WindowType.WinOtherWorlds);
+        } else {
+            this.onWorldPreChanged.callListeners(() => {
+                this.selectedWorld = worldId;
+                this.onWorldChanged.callListeners(this.selectedWorld);
+            });
+        }
+    }
+
+    openLikesForBuilding(building) {
+        this.likedBuilding = building;
+        if (socialManager.openLikes)
+            socialManager.openLikes();
+    }
+
+    likedSuccessfull(ids) {
+        if (this.likedBuilding)
+            this.likedBuilding.addLikes(ids);
+    }
+}
+
+let gameInit = new GameInit();
+
+if (!String.prototype.format) {
+    String.prototype.format = function() {
+        var args = arguments;
+        return this.replace(/{(\d+)}/g, function(match, number) {
+            return typeof args[number] !== 'undefined'
+                ? args[number]
+                : match
+                ;
+        });
+    };
+}
+
+let LocalizationManager = (function() {
+
+    const ALPHABET = 'abcdefghijklmnopqrstuvwxyz';
+    let ALL_WORDS = null;
+
+    _getLocalizization = function(text){
+        if (ALL_WORDS.hasOwnProperty(text))
+            return ALL_WORDS[text];
+        return "!!!" + text;
+    };
+
+    _getNumberText = function (count){
+        if (count >= 1 && count <= 4)
+            return this._getLocalizization("GoldString" + count);
+
+        if (count >= 5) {
+            count -= 5;
+            const alpLen = ALPHABET.length;
+            if (count < ALPHABET.length) {
+                const char = ALPHABET.charAt(count);
+                return char + char;
+            } else {
+                count -= alpLen;
+                if (count < ALPHABET.length) {
+                    const char = ALPHABET.charAt(count).toUpperCase();
+                    return char + char + char;
+                } else {
+                    count -= alpLen;
+                    if (count < ALPHABET.length) {
+                        const char = ALPHABET.charAt(count).toUpperCase();
+                        return char + 'x4';
+                    } else {
+                        count -= alpLen;
+                        if (count < ALPHABET.length) {
+                            const char = ALPHABET.charAt(count).toUpperCase();
+                            return char + 'x5';
+                        } else {
+                            count -= alpLen;
+                            if (count < ALPHABET.length) {
+                                const char = ALPHABET.charAt(count).toUpperCase();
+                                return char + 'x6';
+                            } else
+                                return '!!!'
+                        }
+                    }
+                }
+            }
+        }
+
+        return null;
+    };
+
+    return {
+        initWithJson(json) {
+            ALL_WORDS = json;
+        },
+
+        getLocalizization(text){
+            if (ALL_WORDS.hasOwnProperty(text))
+                return ALL_WORDS[text];
+            return "!!!" + text;
+        },
+
+        removeCodes(text) {
+            text = text.split("\\n").join("");
+
+            while (true) {
+                const index = text.indexOf("<");
+                if (index < 0)
+                    break;
+
+                const index2 = text.indexOf(">");
+                if (index >= index2)
+                    break;
+
+                text = text.slice(0, index) + text.slice(index2 + 1);
+            }
+
+            return text;
+        },
+
+        getLocalizedNumberString(str){
+            if (str.length <= 2)
+                return "0";
+
+            str = str.substring(0, str.length - 2);
+
+            const len = str.length;
+            let count = Math.trunc(len / 3);
+            let numbersCount = len - count * 3;
+            if (numbersCount === 0) {
+                numbersCount = 3;
+                count--;
+            }
+
+            const letters = _getNumberText(count);
+            let number = str.substring(0, numbersCount);
+            if (len >= 4) {
+                const decimal = str.substring(numbersCount, numbersCount + 1);
+                if (decimal !== '0')
+                    number += ',' + decimal;
+            }
+            return letters ? number + ' ' + letters : str;
+        },
+
+        getLocalizedNumber(bigNumber){
+            return this.getLocalizedNumberString(bigNumber.toString());
+        },
+
+        getStoreItemTitle(item) {
+            if (!item.upgradeType)
+                return this.getLocalizization(item.title);
+
+            let name = "Title";
+            switch (item.upgradeType) {
+                case "MultiProfit": {
+                    if (item.priceType === "Gems")
+                        name = "GemsTitle";
+                    else {
+                        if (item.slotNumber < 0)
+                            name = "AllTitle";
+                    }
+                    break;
+                }
+                case "TimeTravel": {
+                    name = "Title" + item.parameter;
+                    break;
+                }
+            }
+
+            return this.getLocalizization(item.upgradeType + name);
+        },
+
+        getStoreItemDescription(item) {
+            if (!item.upgradeType)
+                return this.getLocalizization(item.description).format(item.originalGems);
+
+            let name = "Desc";
+            switch (item.upgradeType) {
+                case "MultiProfit": {
+                    switch (item.priceType) {
+                        case "Gems":
+                            return this.getLocalizization(item.upgradeType +"GemsDesc");
+                        case "Gold":
+                        case "Seeds":
+                            if (item.slotNumber >= 0)
+                                return this.getLocalizization(item.upgradeType +"DescMultiSlot").format(item.slotNumber + 1, item.parameter);
+                            else
+                                return this.getLocalizization(item.upgradeType +"AllDesc").format(item.parameter);
+                    }
+                    break;
+                }
+                case "SeedProc": {
+                    return this.getLocalizization(item.upgradeType +"Desc").format(item.parameter);
+                }
+                case "TimeTravel": {
+                    return this.getLocalizization(item.upgradeType + "Desc" + item.parameter);
+                }
+                case "Upgrade": {
+                    return this.getLocalizization("UpgradeDescMultiSlot").format(item.parameter, item.slotNumber + 1);
+                }
+                case "AutoClick": {
+                    if (item.slotNumber >= 0)
+                        return this.getLocalizization(item.upgradeType +"DescMultiSlot").format(item.slotNumber + 1);
+                    else
+                        return this.getLocalizization(item.upgradeType +"Desc");
+                }
+            }
+            return this.getLocalizization(item.upgradeType + name);
+        }
+    }
+})();
+
+class Loader {
+    constructor(parent, backImg, frontImg, x, y, scale, makeFast) {
+        scale = scale || 1;
+        if (backImg) {
+            this.back = parent.scene.add.sprite(x, y, backImg).setScale(scale).setDepth(parent.depth + 1);
+            parent.add(this.back);
+        }
+
+        this.parent = parent;
+        this.x = x;
+        this.y = y;
+        this.progressBar = parent.scene.add.sprite(x, y, frontImg).setScale(scale).setOrigin(0, 0.5).setDepth(parent.depth + 2);
+        this.progressBar.setPositionX(this.progressBar.x / localScale - this.progressBar.width / 2 * scale * imageSizeLocalScale / localScale);
+        this.scale = scale;
+        this.value = -1;
+
+        parent.add(this.progressBar);
+
+        if (makeFast) {
+            this._makeFast();
+            this.fastBar.obj.setForceInvisible(true);
+        }
+    }
+
+    setTint(color) {
+        this.progressBar.tint = color;
+    }
+
+    setVisible(visible) {
+        if (this.back)
+            this.back.setVisible(visible);
+        this.progressBar.setVisible(visible);
+    }
+
+    setProgress(value) {
+        if (Math.abs(value - this.value) > 0.005) {
+            this.value = value;
+            this.progressBar.setScale(value * this.scale, this.scale);
+        }
+    }
+
+    _makeFast() {
+        this.fastBar = PrepareSpriteSheetObject(this.parent.scene, 'FastProduction', this.x, this.y);
+        this.fastBar.obj.setDepth(this.parent.depth + 2);
+        this.fastBar.obj.setScale(1.1);
+        this.parent.add(this.fastBar.obj);
+    }
+
+    setFast(fast) {
+        this.fastBar.obj.forceInvisible = this.progressBar.visible = !fast;
+        this.progressBar.forceInvisible = fast;
+
+        if (this.parent.visible !== false || !fast)
+            this.fastBar.obj.setVisible(fast);
+    }
+}
+
+class SpriteSheetObject {
+    constructor(obj, info) {
+        this.obj = obj;
+        this.frame = 0;
+        this.time = 0;
+        this.info = info;
+        gameInit.update.addListener(this.update.bind(this));
+    }
+
+    setVisible(visible) {
+        this.obj.setVisible(visible);
+    }
+
+    update(deltaTime) {
+        if (this.obj.visible) {
+            this.time += deltaTime;
+            if (this.time >= this.info.period) {
+                this.time -= this.info.period;
+                this.frame = (this.frame + 1) % this.info.frames;
+                this.obj.setFrame(this.frame);
+            }
+        }
+    }
+}
+
+class AnimatedObject {
+
+    constructor(obj, animations) {
+        this.obj = obj;
+        this.animations = animations;
+        this.nextPlay = 0;
+        this.playAppear();
+    }
+
+    getAnimationDuration(name) {
+        // return 0;
+        const anims = this.obj.skeletonData.animations;
+        for (let i in anims) {
+            if (anims[i].name === name)
+               return anims[i].duration;
+        }
+        return 0;
+    }
+
+    playAnimation(name, force) {
+        // return;
+        const duration = this.getAnimationDuration(name);
+
+        const time = Progress.getTimeNow() / 1000;
+        if (time >= this.nextPlay || force) {
+            this.nextPlay = time + duration;
+            this.obj.play(name);
+            if (this.animations.idle)
+                this.obj.addAnimation(0, this.animations.idle, true, duration);
+        }
+    }
+
+    getObject() {
+        return this.obj;
+    }
+
+    setVisible(visible) {
+        this.obj.setVisible(visible);
+    }
+
+    destroy(param) {
+        this.obj.destroy(param);
+    }
+
+    playAction(force) {
+        if (this.animations.action)
+            this.playAnimation(this.animations.action, force);
+    }
+
+    playAppear(force) {
+        if (this.animations.appear)
+            this.playAnimation(this.animations.appear, force);
+    }
+
+    playDisappear(force) {
+        if (this.animations.disappear)
+            this.playAnimation(this.animations.disappear, force);
+    }
+
+    _play(anim) {
+        this.obj.play(anim, true);
+    }
+
+    playActiveLoop() {
+        if (this.animations.active)
+            this._play(this.animations.active);
+    }
+
+    playIdleLoop() {
+        if (this.animations.idle)
+            this._play(this.animations.idle);
+    }
+}
+
+let GlobalInputLocked = false;
+
+const GlobalClickables = [];
+
+let LockedAnimatedObject = null;
+
+function lockAtOneAnimatedObject(animatedObject) {
+    LockedAnimatedObject = animatedObject;
+    GlobalInputLocked = false;
+}
+
+function unlockAnimatedObject() {
+    LockedAnimatedObject = null;
+    GlobalInputLocked = false;
+}
+
+function SetClickablesActive(active) {
+    if (active) {
+        for (let i = GlobalClickables.length - 1; i >= 0; i--) {
+            const gr = GlobalClickables[i];
+            if (gr && gr.active)
+                gr.setInteractive();
+            else
+                GlobalClickables.splice(i, 1);
+        }
+    } else {
+        for (let i = GlobalClickables.length - 1; i >= 0; i--) {
+            const gr = GlobalClickables[i];
+            if (gr && gr.active)
+                gr.disableInteractive();
+            else
+                GlobalClickables.splice(i, 1);
+        }
+    }
+}
+
+function timeToStringClock(time) {
+    function giveTimeNumberAsString(number) {
+        if (number >= 10)
+            return number;
+        return "0" + number;
+    }
+
+    const hours = Math.trunc(time / 3600);
+    const minutes = Math.trunc((time % 3600) / 60);
+    const seconds = Math.trunc(time % 60);
+    if (hours > 0)
+        return "{0}:{1}:{2}".format(giveTimeNumberAsString(hours), giveTimeNumberAsString(minutes), giveTimeNumberAsString(seconds));
+    else
+        return "{0}:{1}".format(giveTimeNumberAsString(minutes), giveTimeNumberAsString(seconds));
+}
+
+let spineMethodsReady = false;
+function PrepareSpineMethods(obj) {
+    if (!spineMethodsReady) {
+        spineMethodsReady = true;
+        const scale = localScale;
+        // const scale = imageSizeLocalScale;
+        const prot = obj.constructor.prototype;
+        const oldSpinePosition = prot.setPosition;
+        function newSpinePosition(x, y) {
+            return oldSpinePosition.call(this, x * scale, y * scale);
+        }
+
+        const oldSpineScale = prot.setScale;
+        function newSpineScale(x, y) {
+            return oldSpineScale.call(this, x * scale, y ? y * scale : y);
+        }
+
+        prot.setPosition = newSpinePosition;
+        prot.setScale = newSpineScale;
+        prot.setScale2 = function (x, y) {
+            return oldSpineScale.call(this, x * imageSizeLocalScale, y ? y * imageSizeLocalScale : y);
+        };
+
+        obj.setPosition(obj.x, obj.y);
+
+        overloadSetVisible(prot);
+    }
+}
+
+function PrepareSpriteSheetObject(engine, name, x, y) {
+    const allObj = VisualData.ALL_OBJECTS[name];
+    const sprite = engine.add.sprite(x, y, name);
+    return new SpriteSheetObject(sprite, allObj);
+}
+
+function addInvisibleClickable(engine, group, depth, x, y) {
+    const obj = engine.add.sprite (0,0).setInteractive();
+    obj.clickable = true;
+    if (group) {
+        obj.setVisible(group.visible);
+        group.add(obj);
+    }
+    obj.setPosition(x / localScale, y / localScale);
+    obj.setScale(10 * GlobalScale / imagesDeltaScale, 20 * GlobalScale / imagesDeltaScale);
+    obj.setDepth(depth);
+    obj.clicker = true;
+    return obj;
+}
+
+function PrepareObject(objects, group, engine, depth, pos, clickCallback) {
+    let main = null;
+    for (let i = 0;i < objects.length;i++) {
+        const b = objects[i];
+        let x = (pos ? pos.x : 0) + VisualData.MAP_PARAMS.center.x;
+        let y = (pos ? pos.y : 0) + VisualData.MAP_PARAMS.center.y;
+
+        if (b.hasOwnProperty('x'))
+            x += b.x;
+        if (b.hasOwnProperty('y'))
+            y += b.y;
+
+        const allObj = VisualData.ALL_OBJECTS[b.name];
+
+        let obj;
+        const clickable = b.click && clickCallback;
+        switch (allObj.type) {
+            case UnnyObjectType.SpriteSheet: {
+                const sprite = group.create(x, y, b.name);
+                if (clickable)
+                    sprite.setInteractive();
+                if (allObj.hasOwnProperty('animation')) {
+                    const animName = allObj.animation.key;
+                    sprite.anims.load(animName);
+                    sprite.anims.play(animName);
+                }
+                obj = sprite;
+
+                main = new SpriteSheetObject(obj, allObj);
+                break;
+            }
+            case UnnyObjectType.Spine: {
+                obj = engine.add.spine(x, y, b.name, allObj.animations.idle, true);
+                PrepareSpineMethods(obj);
+
+                // obj = engine.add.sprite(x, y, b.name);
+
+                obj.setScale(allObj.scale || 1);
+                main = new AnimatedObject(obj, allObj.animations, allObj);
+
+                if (b.hasOwnProperty('scale'))
+                    main.obj.setScale(b.scale);
+
+                obj.objName = b.name + "_spine";
+                if (clickable) {
+                    obj.setDepth(depth);
+                    obj = addInvisibleClickable(engine, group, depth, main.obj.x, main.obj.y);
+                }
+
+                if (group)
+                    group.add(main.obj);
+                break;
+            }
+            default:
+                obj = group.create(x, y, b.name);
+                obj.setVisible(group.visible);
+                if (b.hasOwnProperty('scale'))
+                    obj.setScale(b.scale);
+
+                obj.objName = b.name + "_default";
+                if (clickable) {
+                    obj.setDepth(depth);
+                    obj = addInvisibleClickable(engine, group, depth, obj.x, obj.y);
+                }
+
+                break;
+        }
+
+        obj.objName = b.name;
+        if (clickable) {
+            GlobalClickables.push(obj);
+            obj.clickable = true;
+
+            const delay = 200;
+
+            function canBeClicked() {
+                if (main && !main.obj.visible)
+                    return false;
+
+                return (!LockedAnimatedObject || LockedAnimatedObject === main);
+            }
+
+            const funcDown = () => {
+                if (!canBeClicked())
+                    return;
+
+                obj.lastTime = engine.time.now;
+                if (engine.input.activePointer.isDown && !GlobalInputLocked)
+                    clickCallback('down');
+            };
+            const funcMove = () => {
+                if (!canBeClicked())
+                    return;
+
+                if (engine.input.activePointer.isDown && !GlobalInputLocked) {
+                    const newTime = engine.time.now;
+                    if (newTime - obj.lastTime >= delay || !obj.lastTime) {
+                        obj.lastTime = newTime;
+                        clickCallback('move');
+                    }
+                }
+            };
+            obj.on('pointerdown', funcDown);
+            obj.on('pointermove', funcMove);
+        }
+
+        obj.setDepth(depth);
+    }
+    return main;
+}
+
+function SetGroupVisible(group, visible, startElement) {
+    group.invisible = !visible;
+    group.setVisible(visible);
+    if (group.children)
+    {
+        const children = group.children.entries;
+        if (children) {
+            startElement = startElement || 0;
+            for (let i = startElement; i < children.length; i++) {
+                if (!children[i].forceInvisible)
+                    children[i].setVisible(visible);
+            }
+        }
+    } else {
+        if (group.list) {
+            for (let i = 0; i < group.list.length; i++) {
+                if (!group.list[i].forceInvisible)
+                    group.list[i].setVisible(visible);
+            }
+        }
+    }
+}
+
+function SetBuildingVisible(group, visible, clicker) {
+    group.setVisible(clicker);
+    if (group.children)
+    {
+        const children = group.children.entries;
+        if (children) {
+            for (let i = 0; i < children.length; i++)
+                children[i].setVisible(children[i].clicker ? clicker : visible);
+        }
+    }
+}
+
+let loadCallbackHelper;
+let loadingImages = {};
+let loadedImages = {};
+
+for (let i in VisualData.PRELOAD_OBJECTS) {
+    loadedImages[VisualData.PRELOAD_OBJECTS[i]] = 1;
+}
+
+function LoadingComplete() {
+    loadedImages = Object.assign(loadedImages, loadingImages);
+    loadingImages = {};
+    loadCallbackHelper.callAndClearListeners();
+}
+
+function LoadingError() {
+    console.log("Error Occured");
+}
+
+function CreateImageInGroup(engine, group, name, callback) {
+    LoadPreparedFile(engine, name, () => {
+        const image = engine.add.sprite(0, 0, name);
+        group.add(image);
+        callback(image);
+    });
+}
+
+function CreateImage(engine, x, y, name, callback) {
+    LoadPreparedFile(engine, name, () => {
+        callback(engine.add.sprite(x, y, name));
+    });
+}
+
+function PreloadObjects(engine, objects, callback) {
+    let count = 0;
+    for (let i = 0;i < objects.length;i++) {
+        const name = objects[i].name;
+        if (!loadedImages.hasOwnProperty(name)) {
+            LoadPreparedFile(engine, name, count === 0 ? callback : null);
+            count++;
+        }
+    }
+
+    if (count === 0 && callback)
+        callback();
+}
+
+function LoadPreparedFile(engine, name, callback) {
+    const allObj = VisualData.ALL_OBJECTS[name];
+    if (!allObj)
+        console.trace("ERROR " + name);
+    else {
+        switch (allObj.type) {
+            case UnnyObjectType.Spine:
+                LoadFile(engine, name, allObj.json, callback, allObj.type, allObj.atlas);
+                break;
+            default:
+                LoadFile(engine, name, allObj.file, callback, allObj.type);
+                break;
+        }
+    }
+}
+
+function LoadFile(engine, name, path, callback, type, secondPath) {
+    if (loadedImages.hasOwnProperty(name)) {
+        callback();
+        return;
+    }
+
+    path += "?v=9";
+    secondPath += "?v=9";
+
+    if (!loadingImages.hasOwnProperty(name)) {
+        switch (type) {
+            case UnnyObjectType.Audio:
+                engine.load.audio(name, path);
+                break;
+            case UnnyObjectType.Spine:
+                engine.load.spine(name, path, secondPath);
+                break;
+            case UnnyObjectType.Json:
+                engine.load.json(name, path);
+                break;
+            // case UnnyObjectType.NineSlice:
+            //     const allObj = VisualData.ALL_OBJECTS[name];
+            //     console.log(">> ", allObj);
+            //     // engine.load.nineSlice(name, path, 25);
+            //     engine.load.image(name, path);
+            //     break;
+            default:
+                const obj = VisualData.ALL_OBJECTS[name];
+                if (!obj || !GameData.getAtlasName(obj))
+                    engine.load.image(name, path);
+                break;
+        }
+        loadingImages[name] = 1;
+    }
+
+    if (!loadCallbackHelper) {
+        loadCallbackHelper = new UnnyAction();
+        engine.load.on('complete', LoadingComplete, this);
+        engine.load.on('loadError', LoadingError, this);
+    }
+
+    loadCallbackHelper.addListener(callback);
+
+    if (!engine.load.isLoading())
+        engine.load.start();
+}
+
+function WaitForEverythingToLoad(callback) {
+    if (!gameInit.engine.load.isLoading())
+        callback();
+    else
+        loadCallbackHelper.addListener(callback);
+}
+
+function PrepareAndCreateObject(object, parent, engine, depth, callback, clickCallback) {
+    const objects = object.objects;
+    const name = objects[0].name;
+    LoadPreparedFile(engine, name, () => {
+        const obj = PrepareObject(objects, parent, engine, depth, null, clickCallback);
+        if (callback)
+            callback(obj);
+    });
+}
+
+class ClickController {
+
+    constructor() {
+        this.onBuildingClicked = new UnnyAction();
+        this.onFabrikaWasClicked = new UnnyAction();
+        this.onPodkovaWasClicked = new UnnyAction();
+    }
+
+    buildingWasClicked(buildingInterface) {
+        this.onBuildingClicked.callListeners(buildingInterface);
+    }
+
+    fabrikaWasClicked(buildingInterface) {
+        this.onFabrikaWasClicked.callListeners(buildingInterface);
+    }
+
+    podkovaWasClicked(buildingInterface) {
+        this.onPodkovaWasClicked.callListeners(buildingInterface);
+    }
+}
+
+let clickController = new ClickController();
+
+class VisualBuilding {
+
+    constructor(engine, building, visible) {
+        this.buildingInterface = building;
+        this.buildingInterface.onUpgraded.addListener(this.buildingUpgraded.bind(this));
+        this.buildingInterface.onResourcesUpdated.addListener(this.resourcesUpdated.bind(this));
+
+        this.group = engine.add.group();
+        this.engine = engine;
+        if (visible)
+            this.applyTexture(this.buildingInterface.getLevel());
+        else
+            this.delayApplyTexture = true;
+
+        this.setVisible(visible);
+
+        building.onReseted.addListener(this.reseted.bind(this));
+        building.onUnlockChanged.addListener(this.changeVisibility.bind(this));
+    }
+
+    harvestStarted() {
+        if (this.buildingInterface.getLevel() > 0) {
+            this.buildingInterface.harvest = 5;
+            return true;
+        } else
+            this.setVisible(false);
+        return false;
+    }
+
+    reseted() {
+        this.applyTexture(this.buildingInterface.getLevel());
+        this.setVisible(this.buildingInterface.world.isSelected());
+    }
+
+    resourcesUpdated(building) {
+        if (building.autoCollect) {
+            if (this.animatedObject)
+                this.animatedObject.playAction();
+        }
+    }
+
+    buildingWasClicked(action) {
+        // console.log("buildingWasClicked " + action + " > " + this.buildingInterface.getLevel() + " harv = " + this.buildingInterface.harvest + " :res = " + this.buildingInterface.anyResources);
+        if (action === 'move' && this.buildingInterface.getLevel() === 0)
+            return;
+
+        let playAnimation = false;
+
+        if (this.buildingInterface.harvest) {
+            this.buildingInterface.harvest--;
+            if (!this.buildingInterface.harvest)
+                this.setVisible(false);
+            playAnimation = true;
+        } else
+            playAnimation = this.buildingInterface.anyResources || this.buildingInterface.getLevel() === 0;
+
+        if (playAnimation) {
+            clickController.buildingWasClicked(this.buildingInterface);
+            if (this.animatedObject)
+                this.animatedObject.playAction(true);
+        }
+    }
+
+    setProductionVisible(visible) {
+        SetGroupVisible(this.group, visible, this.buildingInterface.getLevel() ? 0 : 1);
+    }
+
+    setVisible(visible) {
+        if (this.delayApplyTexture) {
+            this.delayApplyTexture = false;
+            this.applyTexture(this.buildingInterface.getLevel());
+        }
+        this.visible = visible;
+        SetBuildingVisible(this.group, visible && !this.buildingInterface.isUnlocked(), visible);
+    }
+
+    buildingUpgraded(building) {
+        if (building.getLevel() === 1)
+            this.applyTexture(building.getLevel());
+    }
+
+    changeVisibility() {
+        this.setVisible(this.visible);
+    }
+
+    isVisible() {
+        return (!this.buildingInterface.isUnlocked() && this.group.visible);
+    }
+
+    applyTexture(level) {
+        const engine = this.engine;
+        this.group.clear(true, true);
+
+        const bInfo = VisualData.PLACED_BUILDINGS[this.buildingInterface.slot];
+        const pos = bInfo.position;
+        const levels = bInfo.levels;
+
+        let bName = null;
+        for (let i = 0;i < levels.length; i++){
+            bName = levels[i].building;
+            if (!levels[i].hasOwnProperty('maxLevel') || level <= levels[i].maxLevel)
+                break;
+        }
+
+        if (bName) {
+            const building = VisualData.VISUAL_BUILDINGS[bName];
+            const objects = building.objects;
+            PreloadObjects(engine, objects, ()=> {
+                this.animatedObject = PrepareObject(objects, this.group, engine, bInfo.depth, pos, this.buildingWasClicked.bind(this));
+                if (this.animatedObject)
+                    this.animatedObject.setVisible(this.isVisible());
+            });
+        }
+    }
+}
+
+class VisualInit {
+
+    constructor() {
+        gameInit.preload.addListener(this.preload.bind(this));
+        gameInit.create.addListener(this.create.bind(this));
+        gameInit.onBuildingCreated.addListener(this.buildingCreated.bind(this));
+        gameInit.onBuildingUpgraded.addListener(this.buildingUpgraded.bind(this));
+        gameInit.onWorldChanged.addListener(this.worldChanged.bind(this));
+        gameInit.onWorldPreChanged.addListener(this.worldPreChanged.bind(this));
+        gameInit.loaded.addListener(this.progressWasLoaded.bind(this));
+        gameInit.update.addListener(this.update.bind(this));
+        gameInit.reseted.addListener(this.reseted.bind(this));
+    }
+
+    worldPreChanged(callback) {
+        const self = this;
+        function go(splitAnimation, callback) {
+            //splitAnimation.playAction(true);
+            splitAnimation.playAppear(true);
+            divElementForLabels.style.display = 'none';
+            if (self.timer)
+                clearTimeout(self.timer);
+
+            self.timer = setTimeout(()=>{
+                if (callback)
+                    callback();
+                // self.timer = setTimeout(()=> {
+                WaitForEverythingToLoad(()=>{
+                    splitAnimation.playDisappear(true);
+                    self.timer = setTimeout(()=> {
+                        GlobalInputLocked = false;
+                        unlockGUI();
+                        divElementForLabels.style.display = 'inherit';
+                        self.timer = null;
+                        splitAnimation.setVisible(false);
+                    }, 1000);
+                });
+                //, 1000);
+            }, 1000);
+        }
+
+        if (!VisualData.SPLIT_SCREEN) {
+            callback();
+        } else {
+            GlobalInputLocked = true;
+            lockGuiEverything();
+
+            if (this.splitAnimation) {
+                this.splitAnimation.setVisible(true);
+                go(this.splitAnimation, callback);
+            } else {
+                PrepareAndCreateObject(VisualData.SPLIT_SCREEN, null, this.engine, OverlayDepth + WinDefaultDepth, (splitAnimation) => {
+                    this.splitAnimation = splitAnimation;
+                    go(this.splitAnimation, callback);
+                });
+            }
+        }
+    }
+
+    worldChanged(worldId) {
+        for (let id in this.visible_groups) {
+            if (this.visible_groups[id]) {
+                if (id !== worldId)
+                    this.setBuildingsVisible(id, false);
+            } else {
+                if (id === worldId)
+                    this.setBuildingsVisible(id, true);
+            }
+        }
+
+        this.showBackground(worldId);
+        audioManager.playWorldMusic(worldId);
+        this.updateBossState();
+    }
+
+    preload(engine) {
+        this.engine = engine;
+        const loader = engine.load;
+
+        for (let i in VisualData.PRELOAD_OBJECTS) {
+            const key = VisualData.PRELOAD_OBJECTS[i];
+            const obj = VisualData.ALL_OBJECTS[key];
+            // const path = VisualData.getGullPath(obj.path);
+            if (!obj)
+                console.log("[ERROR] No such object: " + key);
+
+            switch (obj.type) {
+                case UnnyObjectType.SpriteSheet:
+                    const newParams = {
+                        frameWidth: Math.trunc(obj.frameWidth * GlobalScale / imagesDeltaScale),
+                        frameHeight: (obj.frameHeight * GlobalScale / imagesDeltaScale)
+                    };
+                    loader.spritesheet(key, obj.file, newParams);
+                    break;
+                case UnnyObjectType.Spine: loader.spine(key, obj.json, obj.atlas);
+                    break;
+                // case UnnyObjectType.NineSlice:
+                //     loader.nineSlice(key, obj.file, obj.paddingY, obj.paddingX, obj.paddingX, obj.paddingY);
+                //     break;
+                default:
+                    if (!GameData.getAtlasName(obj))
+                        loader.image(key, obj.file);
+                    break;
+            }
+        }
+    }
+
+    create(engine) {
+        for (let i in VisualData.PRELOAD_OBJECTS) {
+            const key = VisualData.PRELOAD_OBJECTS[i];
+            const obj = VisualData.ALL_OBJECTS[key];
+            switch (obj.type) {
+                case UnnyObjectType.SpriteSheet:
+                {
+                    if (obj.hasOwnProperty('animation')) {
+                        const config = Object.assign({
+                            frames: engine.anims.generateFrameNumbers(key)
+                        }, obj.animation);
+                        engine.anims.create(config);
+                    }
+                    break;
+                }
+            }
+        }
+
+        this.backgrounds = {};
+        this.showBackground(gameInit.selectedWorld);
+
+        this.groups = {};
+        this.visible_groups = {};
+    }
+
+    updatePodkova(progress) {
+        if (this.podkova) {
+            this.podkovaActive = progress.isGuardActive();
+            if (this.podkovaActive) {
+                this.podkova.playActiveLoop();
+                this.podkovaTimer.setVisible(true);
+            }
+            else {
+                this.podkova.playIdleLoop();
+                this.podkovaTimer.setVisible(false);
+            }
+        }
+    }
+
+    setGameObjectsVisible(visible) {
+        if (this.podkovaTimer && this.podkovaActive)
+            this.podkovaTimer.setVisible(visible);
+    }
+
+    update() {
+        if (this.podkovaActive !== gameInit.progress.isGuardActive())
+            this.updatePodkova(gameInit.progress);
+
+        if (this.podkovaActive) {
+            const left = Math.trunc(gameInit.progress.getGuardTimeLeft() / 1000);
+            if (this.podkovaTimerTime !== left) {
+                this.podkovaTimerTime = left;
+                this.podkovaTimer.time.setText(timeToStringClock(left));
+            }
+        }
+    }
+
+    progressWasLoaded(progress) {
+        this.updatePodkova(progress);
+    }
+
+    showBackground(worldId, callback) {
+        if (!this.backgrounds.hasOwnProperty(worldId)) {
+            this.backgrounds[worldId] = this.engine.add.group();
+            PrepareAndCreateObject(VisualData.BACKGROUNDS[worldId], this.backgrounds[worldId], this.engine, 0, callback);
+        }
+
+        for (let i in this.backgrounds)
+            SetGroupVisible(this.backgrounds[i], i == worldId);
+
+        //load fabrika and podkova if necessary and apply position
+        if (!this.fabrika && VisualData.FABRIKA) {
+            PrepareAndCreateObject(VisualData.FABRIKA, null, this.engine, 1, (fabrika)=>{
+                this.fabrika = fabrika;
+                this.updateBossState();
+            }, (action)=>clickController.fabrikaWasClicked(action));
+        }
+
+        if (!this.podkova && VisualData.PODKOVA) {
+            PrepareAndCreateObject(VisualData.PODKOVA, null, this.engine, 1, (podkova)=>{
+                this.podkova = podkova;
+                this.podkova.setVisible(gameInit.progress.canShowGuard());
+                this.podkovaTimer = this.engine.add.container();
+                const back = this.engine.add.sprite(0, 0, 'RainTimerBack');
+                this.podkovaTimer.add(back);
+                this.podkovaTimer.time = this.engine.add.text(0, -4 * GlobalScale, null, DefaultFontSmall).setOrigin(0.5);
+                this.podkovaTimer.add(this.podkovaTimer.time);
+                this.podkovaTimer.setPosition(this.podkova.obj.x / localScale, this.podkova.obj.y / localScale + 100 * GlobalScale);
+                this.podkovaTimer.setDepth(WinDefaultDepth - 1000);
+            }, (action)=>clickController.podkovaWasClicked(action));
+        }
+    }
+
+    updateBossState() {
+        this.fabrika.setVisible(gameInit.progress.canShowBoss(gameInit.selectedWorld));
+    }
+
+    getBoss() {
+        return this.fabrika;
+    }
+
+    showGuard() {
+        if (this.podkova)
+            this.podkova.setVisible(true);
+    }
+
+    getGuard() {
+        return this.podkova;
+    }
+
+    reseted() {
+        this.updateBossState();
+    }
+
+    buildingUpgraded(world, building) {
+        if (building.getLevel() === 1) {
+            this.updateBossState();
+        }
+    }
+
+    buildingCreated(world, building) {
+        let group;
+        if (!this.groups.hasOwnProperty(world.id)) {
+            group = this.groups[world.id] = {};
+            this.visible_groups[world.id] = world.isSelected();
+        } else
+            group = this.groups[world.id];
+
+        group[building.id] = new VisualBuilding(this.engine, building, this.visible_groups[world.id]);
+    }
+
+    setBuildingsProductionVisible(worldId, visible) {
+        const group = this.groups[worldId];
+        if (group) {
+            for (let i in group)
+                group[i].setProductionVisible(visible);
+        }
+    }
+
+    setBuildingsVisible(worldId, visible) {
+        const group = this.groups[worldId];
+        if (group) {
+            for (let i in group)
+                group[i].setVisible(visible);
+        }
+        this.visible_groups[worldId] = visible;
+    }
+
+    prepareForHarvest() {
+        const worldId = gameInit.selectedWorld;
+
+        const group = this.groups[worldId];
+        let count = 0;
+        if (group) {
+            for (let i in group) {
+                if (group[i].harvestStarted())
+                    count++;
+            }
+        }
+        return count;
+    }
+}
+
+let visualGame = new VisualInit();
+
+class GUINotification extends Phaser.GameObjects.Container {
+    constructor(config) {
+        super(config.scene, config.x, config.y);
+        this.config = config;
+
+        config.scene.add.existing(this);
+
+        this.image = config.scene.add.sprite(0, 0, 'Notification').setScale(0.4);
+        this.text = config.scene.add.textOld(0, 0, config.getText(), DefaultFont).setOrigin(0.5);
+        this.add(this.image);
+        this.add(this.text);
+        animManager.jumpFishAnimation(this, {
+            height: 20 * GlobalScale,
+            scale: 0.2
+        }, 0.6);
+
+        if (config.group)
+            config.group.add(this);
+
+        this.config.subscribe(this.update.bind(this));
+    }
+
+    setVisible(visible) {
+        super.setVisible(this.config.parent.visible && visible && this.config.isVisible());
+    }
+
+    update() {
+        this.setVisible(true);
+        this.text.setText(this.config.getText());
+    }
+}
+
+class GUIScroll {
+    constructor(engine, config, getCellMethod, getItemsMethod) {
+        // let background = engine.add.sprite(0, 0, 'WinUpgradeBack').setInteractive().setDepth(WinDefaultDepth - 1000);
+        const padding = (config.width - config.cellWidth * config.columns);
+        const conf = {
+            // Position
+            x: config.x * localScale,
+            y: config.y * localScale,
+
+            // Elements
+            // background: engine.add.sprite(0, 0, "ExitButton").setDepth(5000),
+            // background: engine.rexUI.add.roundRectangle(0, 0, 0, 0, 13, 0xffffff),
+            // background: background,
+
+            table: {
+                width: config.width * GlobalScale * localScale,
+                height: config.height * GlobalScale * localScale,
+
+                cellWidth: config.cellWidth * GlobalScale * localScale,
+                cellHeight: config.cellHeight * GlobalScale * localScale,
+                // width: config.width,
+                // height: config.height,
+                //
+                // cellWidth: config.cellWidth,
+                // cellHeight: config.cellHeight,
+                columns: config.columns,
+                interactive: false
+            },
+
+            // slider: {
+            //     track: engine.rexUI.add.roundRectangle(0, 0, 20, 10, 10, 0x260e04),
+            //     thumb: engine.rexUI.add.roundRectangle(0, 0, 0, 0, 13, 0x7b5e57),
+            // },
+
+            scroller: {
+                slidingDeceleration: 5000,
+                backDeceleration: 2000,
+            },
+
+            space: {
+                left: padding * GlobalScale * localScale,
+                right: 0,
+                top: 0,
+                bottom: 0,
+
+                table: 0,
+            },
+
+            createCellContainerCallback: getCellMethod,
+
+            items: getItemsMethod(),//this.getItems(5),
+
+            name: '',
+        };
+
+        // this.table = engine.rexUI.add.gridTable(conf).setInteractive().setDepth(WinDefaultDepth).layout();
+        this.table = new RexPlugins.UI.GridTable(engine, conf).setInteractive().setDepth(WinDefaultDepth).layout();
+    }
+
+    setScrollerEnable(enable) {
+        this.table.setScrollerEnable(enable);
+        this.scrollerDisabled = !enable;
+    }
+
+    fakeMove() {
+        this._mouseWheel(0, -1);
+    }
+
+    _mouseWheel(x, y) {
+        if (this.scrollerDisabled)
+            return;
+
+        let t = this.table.t + Math.sign(y) * Math.min(Math.abs(y), 20) * 0.005;
+        if (t) {
+            if (t < 0)
+                t = 0;
+            if (t > 1)
+                t = 1;
+            this.table.setT(t);
+        }
+    }
+
+    setVisible(visible) {
+        this.table.visible = visible;
+        if (this.table.visible) {
+            if (!this.wheel) {
+                this.wheel = this._mouseWheel.bind(this);
+                eventManager.onMouseWheel.addListener(this.wheel);
+            }
+        } else {
+            if (this.wheel) {
+                eventManager.onMouseWheel.removeListener(this.wheel);
+                this.wheel = null;
+            }
+        }
+    }
+}
+
+let mainResourceIcon = null;
+let cansResourceIcon = null;
+let hudResources;
+
+class HUDResources {
+    /***
+     *
+     * @type {GUIManager} gui
+     * @type {GameInit} gameInit
+     */
+    constructor(gameInit){
+        gameInit.loaded.addListener(this.gameLoaded.bind(this));
+        hudResources = this;
+    }
+
+    setVisible(visible) {
+        SetGroupVisible(this.group, visible);
+    }
+
+    createGame(engine) {
+        this.group = engine.add.group();
+
+        const centerX = VisualData.MAP_PARAMS.center.x;
+        const centerY = VisualData.MAP_PARAMS.center.y;
+        const Distance = 120 * GlobalScale;
+        const IconOffset = 30 * GlobalScale;
+        const LabelOffset = 80 * GlobalScale;
+
+        let x = centerX - RealScreenWidth / 2 + 50 * GlobalScale;
+        let y = centerY - RealScreenHeight / 2 + 80 * GlobalScale;
+
+        const font = DefaultFontSmall;
+        const info = VisualData.GUI_HUDResources;
+
+        let image;
+        image = engine.add.sprite(x, y, info.singleImage ? info.singleImage : 'HudResBack1').setOrigin(0, 0.5);
+        if (info.hudBackScale)
+            image.setScale(info.hudBackScale, 1);
+        this.group.add(image);
+        mainResourceIcon = this.group.create(x + IconOffset, y, 'PriceIcon').setScale(0.85, 0.9);
+        this.resources = engine.add.text(x + LabelOffset, y + info.labelOffsetY * GlobalScale, '99999', font).setOrigin(0, 0.5);
+        this.group.add(this.resources);
+
+        y += Distance;
+        image = engine.add.sprite(x, y, info.singleImage ? info.singleImage : 'HudResBack2').setOrigin(0, 0.5);
+        if (info.hudBackScale)
+            image.setScale(info.hudBackScale, 1);
+        this.group.add(image);
+        this.group.create(x + IconOffset, y, 'PriceGems');
+        this.gems = engine.add.text(x + LabelOffset, y + info.labelOffsetY * GlobalScale, '99999', font).setOrigin(0, 0.5);
+        this.group.add(this.gems);
+        new BasicButton(this.group, {
+            'scene': engine,
+            'key': 'HudPlusButton',
+            'x': x + info.greenButtonOffsetX1 * GlobalScale,
+            'y': y,
+        }, ()=>guiManager.openGemsStore());
+
+        y += Distance;
+        image = engine.add.sprite(x, y, info.singleImage ? info.singleImage : 'HudResBack3').setOrigin(0, 0.5);
+        if (info.hudBackScale)
+            image.setScale(info.hudBackScale, 1);
+        this.group.add(image);
+        cansResourceIcon = this.group.create(x + IconOffset, y, 'PriceSeeds').setScale(0.9);
+        this.seeds = engine.add.text(x + LabelOffset, y + info.labelOffsetY * GlobalScale, '99999', font).setOrigin(0, 0.5);
+        this.group.add(this.seeds);
+        new BasicButton(this.group, {
+            'scene': engine,
+            'key': 'SeedsQuestIcon',
+            'x': x + info.greenButtonOffsetX1 * GlobalScale,
+            'y': y,
+        }, ()=>guiManager.openNewWindow(WindowType.WinApples));
+
+        this.group.setDepth(WinDefaultDepth + 100);
+    }
+
+    /***
+     *
+     * @type {Progress} progress
+     */
+    gameLoaded(progress) {
+        progress.onResourcesChanges.addListener(this.updateResources.bind(this));
+        this.updateResources(progress);
+    }
+
+    /***
+     *
+     * @type {Progress} progress
+     */
+    updateResources(progress) {
+        this.resources.setText(LocalizationManager.getLocalizedNumber(progress.getTotalResources()));
+        this.gems.setText(LocalizationManager.getLocalizedNumber(progress.getTotalGems()));
+        this.seeds.setText(LocalizationManager.getLocalizedNumber(progress.getTotalSeeds()));
+    }
+}
+
+const OverlayDepth = 30000;
+const WinDefaultDepth = 10000;
+const TextScale = 1;
+
+function getFont(size) {
+    return Math.trunc(size * GlobalScale * localScale * TextScale * 1.2) + 'px';
+}
+
+function getFont2(size) {
+    // return Math.trunc(size * GlobalScale * localScale * TextScale / dpi * 1.4) + 'px PT Sans Narrow';
+    return Math.trunc(size * GlobalScale * localScale * TextScale / dpi * 1.4) + 'px';
+}
+
+function getStroke(size) {
+    return Math.max(1, Math.trunc(size * localScale / dpi)) * TextScale;
+}
+//ElectraMedium
+//ArchivoBlack
+let DefaultFontVeryBig, DefaultFontBig, DefaultFont, DefaultFontSmall, DefaultFontSmall2, DefaultFontBlack, DefaultFontSmallBlack, DefaultFontVerySmall, DefaultFontVerySmall2;
+
+const DefaultFontColor = "#fff";
+const DefaultStrokeColor = "#555";
+
+function createFont(obj) {
+    obj.fontFamily = "PT Sans Narrow";
+    obj.fontSize = obj.font;
+    delete obj.font;
+    return obj;
+}
+
+function CalculateFonts() {
+    DefaultFontVeryBig = createFont({
+        font: getFont(150),
+        font2: getFont2(150),
+        fill: DefaultFontColor,
+        align: 'center',
+        stroke: DefaultStrokeColor,
+        strokeThickness: getStroke(6)
+    });
+    DefaultFontBig = createFont({
+        font: getFont(80),
+        font2: getFont2(80),
+        fill: DefaultFontColor,
+        align: 'center',
+        stroke: DefaultStrokeColor,
+        strokeThickness: getStroke(8)
+    });
+    DefaultFont = createFont({
+        font: getFont(60),
+        font2: getFont2(60),
+        fill: DefaultFontColor,
+        align: 'center',
+        stroke: DefaultStrokeColor,
+        strokeThickness: getStroke(7)
+    });
+    DefaultFontSmall = createFont({
+        font: getFont(50),
+        font2: getFont2(50),
+        fill: DefaultFontColor,
+        align: 'center',
+        stroke: DefaultStrokeColor,
+        strokeThickness: getStroke(7)
+    });
+    DefaultFontSmall2 = createFont({
+        font: getFont(40),
+        font2: getFont2(40),
+        fill: DefaultFontColor,
+        align: 'center',
+        stroke: DefaultStrokeColor,
+        strokeThickness: getStroke(5)
+    });
+    DefaultFontBlack = createFont({font: getFont(45), font2: getFont2(45), fill: '#333', align: 'center'});
+    DefaultFontSmallBlack = createFont({font: getFont(40), font2: getFont2(40), fill: '#333', align: 'center'});
+    DefaultFontVerySmall = createFont({
+        font: getFont(40),
+        font2: getFont2(40),
+        fill: '#333',
+        align: 'center',
+        // stroke: '#000',
+        // strokeThickness: getStroke(4)
+    });
+    DefaultFontVerySmall2 = createFont({
+        font: getFont(55),
+        font2: getFont2(55),
+        fill: '#333',
+        align: 'center',
+        // stroke: '#000',
+        // strokeThickness: getStroke(4)
+    });
+}
+
+class ToogleButton {
+    constructor(engine, group, icon, x, y, callback, winInfo) {
+        this.winInfo = winInfo;
+        const offset = (winInfo && winInfo.activeOffset) || 0;
+        this.button = new BasicButton(group, {
+                'scene': engine,
+                'key':'Tab_Close',
+                'x': x,
+                'y': y},
+            callback)
+            .setOrigin(0.5, 1)
+            .setDepth(WinDefaultDepth - 250);
+        this.y = y;
+        this.selected = new BasicButton(group, {
+                'scene': engine,
+                'key':'Tab_Open',
+                'x': x,
+                'y': y + offset},
+            callback)
+            .setOrigin(0.5, 1)
+            .setDepth(WinDefaultDepth - 120);
+        this.icon = group.create(x, y - 70, icon).setDepth(WinDefaultDepth - 50);
+        this.icon.setScale(100 * GlobalScale / this.icon.width / imagesDeltaScale);
+    }
+
+    setSelected(selected) {
+        this.selected.setVisible(selected);
+        this.button.setVisible(!selected);
+        this.icon.setPositionY(this.y - (selected ? ((this.winInfo && this.winInfo.iconOffsetActive) || 100) * GlobalScale : ((this.winInfo && this.winInfo.iconOffset) || 70) * GlobalScale));
+    }
+}
+
+function setStoreCellLocked(group, locked) {
+    const color = locked ? LockTint : NormalTint;
+    group.unny_btn.setButtonLocked(locked);
+    group.priceText.tint = color;
+    if (group.priceIcon)
+        group.priceIcon.tint = color;
+}
+
+function setLockedColor(group, locked) {
+    group.tint = locked ? LockTint : NormalTint;
+}
+
+function createStoreCell(engine, group, cellCenterX, cellCenterY, title, imageName, imagePath, desc, priceImg, price, purchaseCallback, ignoreVisibility, scroll, addSecondLabel) {
+    const depth = WinDefaultDepth + 100;
+
+    const storeGUI = VisualData.GUI_WinStore;
+
+    group.unny_back = engine.add.sprite(cellCenterX, cellCenterY, "Store_Slot").setDepth(depth);
+    group.add(group.unny_back);
+
+    if (storeGUI.headerImg) {
+        const headerImg = engine.add.sprite(cellCenterX, cellCenterY + storeGUI.headerOffsetY * GlobalScale , storeGUI.headerImg).setDepth(depth);
+        group.add(headerImg);
+    }
+
+    group.unny_text = engine.add.textOld(cellCenterX, cellCenterY + storeGUI.headerOffsetY * GlobalScale, title, DefaultFontVerySmall).setOrigin(0.5, 0.5).setDepth(depth);
+    group.add(group.unny_text);
+    group.unny_text.setWordWrapWidth(400 * GlobalScale);
+
+    const btnCenterY = cellCenterY + storeGUI.btnOffsetY * GlobalScale;
+    group.unny_container = engine.add.container(cellCenterX, btnCenterY);
+    group.unny_btn = new BasicButton(group.unny_container, {
+        'scene': engine,
+        'key': 'DefaultButton',
+        'x': 0,
+        'y': 0,
+        'scale_parent': true
+    }, purchaseCallback);
+
+    // group.add(group.unny_btn.setDepth(depth));
+    group.add(group.unny_container.setDepth(depth));
+
+    //Image
+    let loading = true;
+    if (imageName) {
+        LoadFile(engine, imageName, imagePath, () => {
+            if (group && group.active) {
+                const sprite = engine.add.sprite((group.x / localScale || 0) + cellCenterX, (group.y / localScale || 0) + cellCenterY - (storeGUI.imageOffset || 110) * GlobalScale, imageName)
+                    .setDepth(depth);
+                group.add(sprite);
+                group.unny_sprite = sprite;
+                if (!ignoreVisibility && !group.visible && group.children)
+                    sprite.setVisible(false);
+                else {
+                    if (scroll && !loading)
+                        scroll.fakeMove();
+                }
+            }
+        });
+    }
+    loading = false;
+    //
+
+    desc = LocalizationManager.removeCodes(desc);
+    group.unny_desc = engine.add.textOld(cellCenterX, cellCenterY + storeGUI.descOffsetY * GlobalScale, desc, DefaultFontVerySmall).setOrigin(0.5, 0.5).setDepth(depth);
+    group.add(group.unny_desc);
+    group.unny_desc.setWordWrapWidth(400 * GlobalScale);
+
+    let priceText;
+    if (priceImg) {
+        const priceIcon = engine.add.sprite(- 120 * GlobalScale, 0, priceImg);
+        priceIcon.setScale(70 / priceIcon.width * GlobalScale / imagesDeltaScale).setDepth(depth);
+        group.unny_container.add(priceIcon);
+        group.priceIcon = priceIcon;
+        priceText = engine.add.textOld(- 70 * GlobalScale, 0, price, DefaultFontVerySmall2).setOrigin(0, 0.5).setDepth(depth);
+    } else {
+        priceText = engine.add.textOld(0, 0, price, DefaultFontVerySmall2).setOrigin(0.5, 0.5).setDepth(depth);
+    }
+    group.priceText = priceText;
+    group.unny_container.add(priceText);
+
+    if (addSecondLabel) {
+        group.priceText2 = engine.add.textOld(0, 50 * GlobalScale, "Hdhsadsa", DefaultFontVerySmall).setOrigin(0.5, 0.5).setDepth(depth);
+        group.unny_container.add(group.priceText2);
+    }
+    return priceText;
+}
+
+class WinBase {
+    constructor(gui, gameInit){
+        gui.onCreate.addListener(this.createGame.bind(this));
+        this.onClose = new UnnyAction();
+        this.gui = gui;
+        this.disableClickables = false;
+        this.gameInit = gameInit;
+
+        this.applyWinInfo("GUI_" + this.constructor.name);
+    }
+
+    createButton(key, x, y, action) {
+        const btn = new BasicButton(this.group, {
+            'scene': this.engine,
+            'key': key,
+            'x': x,
+            'y': y,
+        }, action);
+        this.addButton(btn);
+        return btn;
+    }
+
+    applyWinInfo(key) {
+        this.winInfo = VisualData[key];
+
+        if (this.winInfo && this.winInfo.nineSlice)
+            this.nineSlice = this.winInfo.nineSlice;
+    }
+
+    addButton(button) {
+        if (!this.allButtons)
+            this.allButtons = [];
+
+        this.allButtons.push(button);
+    }
+
+    playButtonsAnimation() {
+        if (this.allButtons) {
+            for (let i in this.allButtons) {
+                animManager.applyButtonShowAnimation(this.allButtons[i]);
+            }
+        }
+    }
+
+    createGroup() {
+        this.group = this.engine.add.container(this.centerX, this.centerY).setDepth(WinDefaultDepth);
+    }
+
+    createGroupNotCenter() {
+        this.group = this.engine.add.container(0, 0).setDepth(WinDefaultDepth);
+    }
+
+    createGame(engine) {
+        this.centerX = VisualData.MAP_PARAMS.center.x;
+        this.centerY = VisualData.MAP_PARAMS.center.y;
+
+        this.engine = engine;
+        this.createGroup();
+        this.group.setVisible(false);
+    }
+
+    destroyImage() {
+        if (this.image) {
+            this.image.destroy(true);
+            this.image = null;
+        }
+    }
+
+    _createBlackBackground() {
+        const size = 32 * GlobalScale;
+        this.group.create(size * 5, size * 3, 'BlackPixel')
+            .setScale(RealScreenWidth / size + 10, RealScreenHeight / size + 10)
+            .setDepth(WinDefaultDepth - 2).setInteractive();
+    }
+
+    closeWindow() {
+        this.setWindowVisible(false);
+        this.destroyImage();
+        this.onClose.callListeners(this);
+    }
+
+    playOpenAnimation() {
+        animManager.applyWinOpenAnimation(this.group);
+    }
+
+    setWindowVisible(visible) {
+        this.visible = visible;
+        SetGroupVisible(this.group, visible);
+
+        if (!this.enableClickables)
+            SetClickablesActive(!visible);
+
+        if (visible) {
+            this.playOpenAnimation();
+            this.playButtonsAnimation();
+        }
+    }
+
+    localize(){
+
+    }
+
+    imageWasLoaded() {
+
+    }
+
+    loadImage(icon, x, y) {
+        LoadPreparedFile(this.engine, icon, () => {
+            this.destroyImage();
+            if (this.visible) {
+                this.image = this.group.create(x, y, icon).setDepth(WinDefaultDepth + 1);
+                if (this.info.scaleImage)
+                    this.image.setScale(this.info.scaleImage);
+                this.imageWasLoaded();
+            }
+        });
+    }
+
+    getWinInfoValue(key, def) {
+        const val = this.winInfo && this.winInfo[key];
+        return ((val || val === 0) || def) * GlobalScale;
+    }
+
+    createHeader(engine) {
+        this.header = engine.add.text(0, this.getWinInfoValue('headerOffset', -600), null, DefaultFontBig)
+            .setOrigin(0.5, 0.5)
+            .setDepth(WinDefaultDepth);
+        this.group.add(this.header);
+    }
+
+    createActionButton(engine, action, y, visible, scale, x, minWidth, icon) {
+        y = y || this.getWinInfoValue('buttonOffset', 500 * GlobalScale);
+        x = x || this.getWinInfoValue('buttonOffsetX', 0);
+        this.actionButton = new ButtonWithText(this.group, {
+            'scene': engine,
+            'key': 'DefaultButton',
+            'x': x,
+            'y': y,
+            'scale': scale,
+            'minWidth': minWidth,//for nine slice
+            icon: icon
+        }, action)
+            .setDepth(WinDefaultDepth + 100);
+
+        this.buttonLabel = this.actionButton.caption;
+        return this.buttonLabel;
+    }
+
+    getTutorialButton() {
+        return this.actionButton;
+    }
+
+    hideAllButtonsForTutorial() {
+        for (let i in this.allButtons)
+            this.allButtons[i].setForceInvisible(true);
+    }
+
+    showAllButtonsFromTutorial() {
+        for (let i in this.allButtons)
+            this.allButtons[i].forceInvisible = false;
+
+        this.setAllButtonsVisible(true);
+    }
+
+    showButtonFromTutorial(btn) {
+        btn.setVisible(true);
+        btn.forceInvisible = false;
+    }
+
+    setAllButtonsVisible(visible) {
+        for (let i in this.allButtons) {
+            if (!visible || !this.allButtons[i].forceInvisible)
+                this.allButtons[i].setVisible(visible);
+        }
+    }
+
+    _showAllButtonsBack() {
+        for (let i in this.allButtons) {
+            const btn = this.allButtons[i];
+            if (btn.temp_mark) {
+                delete btn.temp_mark;
+                btn.setVisible(true);
+                animManager.applyButtonShowAnimation(btn);
+            }
+        }
+    }
+
+    hideAllButtonsForTime(duration) {
+        for (let i in this.allButtons) {
+            const btn = this.allButtons[i];
+            if (btn.visible) {
+                btn.setVisible(false);
+                btn.temp_mark = true;
+            }
+        }
+
+        setTimeout(()=>{
+            this._showAllButtonsBack();
+        }, duration * 1000);
+    }
+}
+
+class WinWithExit extends WinBase {
+
+    createGame(engine) {
+        super.createGame(engine);
+        this.createExitButton();
+    }
+
+    createExitButton() {
+        let x, y;
+        if (VisualData.IsVertical()) {
+            x = 150 * GlobalScale;
+            y = RealScreenHeight - 150 * GlobalScale;
+        } else {
+            x = RealScreenWidth - 180 * GlobalScale;
+            y = 150 * GlobalScale;
+        }
+        this.exitButton = new BasicButton(null, {
+            'scene': this.engine,
+            'key': 'ExitButton',
+            'x': x,
+            'y': y,
+        }, this.closeWindow.bind(this)).setDepth(WinDefaultDepth);
+        this.exitButton.visible = false;
+        this.addButton(this.exitButton);
+    }
+
+    setWindowVisible(visible) {
+        super.setWindowVisible(visible);
+        if (this.exitButton)
+            this.exitButton.visible = visible;
+    }
+}
+
+let staticWinBack = null;
+let staticWinBlackBack = null;
+
+let staticBackgrounds = {};
+
+class WinWithBack extends WinWithExit {
+
+    constructor(gui, gameInit){
+        super(gui, gameInit);
+    }
+
+    createBack() {
+        if (!staticWinBack) {
+            staticWinBack = this.engine.add.container(this.centerX, this.centerY).setDepth(WinDefaultDepth - 1);
+
+            staticWinBack.add(this.engine.add.sprite(0, 0, 'WinStandardBack').setDepth(WinDefaultDepth - 1));
+            staticWinBack.setVisible(false);
+        }
+    }
+
+    createGame(engine) {
+        super.createGame(engine);
+
+        if (!staticWinBlackBack) {
+            const size = 32 * GlobalScale;
+            staticWinBlackBack = engine.add.sprite(this.centerX + size * 5, this.centerY + size * 3, 'BlackPixel')
+                .setScale(RealScreenWidth / size + 10, RealScreenHeight / size + 10)
+                .setDepth(WinDefaultDepth - 200);
+            staticWinBlackBack.setVisible(false);
+        }
+
+        if (!this.nineSlice) {
+            this.createBack();
+        } else {
+            if (!staticBackgrounds.hasOwnProperty(this.nineSlice)) {
+                const container = this.engine.add.container(this.centerX, this.centerY).setDepth(WinDefaultDepth - 1);
+                const back = engine.add.myNineSlice(0, 0, VisualData.WINDOW_NINE_SLICE[this.nineSlice]).setOrigin(0.5);
+                container.add(back);
+                container.setVisible(false);
+                staticBackgrounds[this.nineSlice] = container;
+            }
+        }
+    }
+
+    showBackground(visible) {
+        let back = staticWinBack;
+        if (back) {
+            back.setVisible(visible);
+            if (visible)
+                animManager.applyWinOpenAnimation(back);
+        }
+    }
+
+    showBackOrNineSlice(visible){
+        let back = null;
+
+        if (this.nineSlice)
+            back = staticBackgrounds[this.nineSlice];
+
+        if (back) {
+            back.setVisible(visible);
+            if (visible)
+                animManager.applyWinOpenAnimation(back);
+        } else
+            this.showBackground(visible);
+    }
+
+    setBlackBackVisible(visible) {
+        if (staticWinBlackBack)
+            staticWinBlackBack.setVisible(visible);
+    }
+
+    setWindowVisible(visible) {
+        super.setWindowVisible(visible);
+        this.showBackOrNineSlice(visible);
+        this.setBlackBackVisible(visible);
+
+        if (visible)
+            audioManager.playWindowOpen();
+    }
+}
+
+let staticWinBrownBack = null;
+
+class WinWithBrownBack extends WinWithBack {
+
+    createGame(engine) {
+        super.createGame(engine);
+
+        if (!staticWinBrownBack) {
+            const size = 32 * GlobalScale;
+            staticWinBrownBack = engine.add.sprite(this.centerX + size * 5, this.centerY + size * 3, 'CollectionBack')
+                .setScale(RealScreenWidth / size + 10, RealScreenHeight / size + 10)
+                .setDepth(WinDefaultDepth - 1000);
+            staticWinBrownBack.setVisible(false);
+        }
+
+        // this.createMyExitButton();
+    }
+
+    createExitButton2() {
+        //TOTO temp hack
+    }
+
+    playOpenAnimation() {
+        //no default animation
+    }
+
+    showBackground() {
+        //DO nothing
+    }
+
+    setBlackBackVisible(visible) {
+        if (this.nineSlice)
+            super.setBlackBackVisible(visible);
+        else {
+            if (staticWinBrownBack)
+                staticWinBrownBack.setVisible(visible);
+        }
+    }
+
+    createMyExitButton() {
+        this.exitButton = new BasicButton(this.group, {
+            'scene': this.engine,
+            'key': 'ExitButton',
+            'x': this.centerX - RealScreenWidth / 2 + 150 * GlobalScale,
+            'y': this.centerY + RealScreenHeight / 2 - 150 * GlobalScale,
+        }, this.closeWindow.bind(this)).setDepth(WinDefaultDepth);
+        this.addButton(this.exitButton);
+    }
+
+    createGroup() {
+        this.createGroupNotCenter();
+    }
+}
+
+class WinDailyBonus extends WinWithBrownBack {
+    constructor(gui, gameInit){
+        super(gui, gameInit);
+    }
+
+    setWindowVisible(visible) {
+        super.setWindowVisible(visible);
+
+        if (visible) {
+            if (!this.prepared)
+                this.prepareWindow();
+            else {
+                const dailyBonusData = this.gameInit.progress.getDailyBonusData();
+                for (let i = 0;i < this.days.length;i++) {
+                    const dayInfo = dailyBonusData.getBonusForDay(i + 1);
+                    if (dayInfo && dayInfo.isUpdatable()) {
+                        const group = this.days[i];
+                        group.parameter.setText(dayInfo.getText());
+                    }
+                }
+            }
+
+            const dailyBonusInfo = this.gameInit.progress.getMyDailyBonusInfo();
+
+            const dayNow = Progress.getDayNow();
+            const dayWas = Progress.getDayFromTime(dailyBonusInfo.update);
+
+            this.setBonusInfo(dailyBonusInfo.lastBonus, dayNow > dayWas);
+            this._updateButtonState();
+        }
+    }
+
+    _applyVisibilityClosed(group) {
+        if (group.img_closed)
+            group.img_closed.visible = group.vis_closed === true;
+    }
+
+    _applyVisibilityCheck(group) {
+        if (group.img_check)
+            group.img_check.visible = group.vis_check === true;
+    }
+
+    _applyVisibilityActive(group) {
+        if (group.img_active)
+            group.img_active.visible = group.vis_active === true;
+    }
+
+    setBonusInfo(lastBonus, activeNext) {
+        this.activeIndex = -1;
+        for (let i = 0;i < this.days.length;i++) {
+            const group = this.days[i];
+
+            if (i < lastBonus) {
+                group.vis_closed = group.vis_check = true;
+                group.vis_active = false;
+            } else {
+                group.vis_closed = group.vis_check = false;
+                group.vis_active = (i == lastBonus && activeNext);//== on purpose
+                if (group.vis_active)
+                    this.activeIndex = i;
+            }
+            this._applyVisibilityClosed(group);
+            this._applyVisibilityCheck(group);
+            this._applyVisibilityActive(group);
+        }
+    }
+
+    prepareWindow() {
+        this.prepared = true;
+        const engine = this.engine;
+
+        this.days = [];
+
+        const columns = this.winInfo.columns;
+        const rows = this.winInfo.rows;
+        const distance = this.winInfo.distance * GlobalScale;
+
+        const dailyBonusData = this.gameInit.progress.getDailyBonusData();
+
+        let index = 0;
+        for (let j = 0;j < rows; j++) {
+            for (let i = 0; i < columns; i++) {
+                index++;
+
+                const dayInfo = dailyBonusData.getBonusForDay(index);
+                if (!dayInfo)
+                    break;
+                const group = engine.add.container();
+
+                group.setPosition(
+                    this.centerX + (i - columns / 2 + 0.5) * distance,
+                    this.centerY + (j - rows / 2 + 0.5) * distance - this.winInfo.addDistance * GlobalScale);
+                group.depth = WinDefaultDepth;
+
+                CreateImageInGroup(engine, group, 'Daily_Opened', (image) => {
+                    image.setDepth(WinDefaultDepth);
+                });
+
+                CreateImageInGroup(engine, group, 'Daily_Active', (image) => {
+                    group.img_active = image.setDepth(WinDefaultDepth + 10);
+                    this._applyVisibilityActive(group);
+                });
+
+                if (dayInfo) {
+                    LoadFile(engine, dayInfo.getIconName(), dayInfo.getIconPath(), () => {
+                        const img = engine.add.sprite(0, 0, dayInfo.getIconName());
+                        group.add(img);
+                        img.setDepth(WinDefaultDepth + 15);
+
+                        group.parameter = engine.add.text(110 * GlobalScale, 30 * GlobalScale, dayInfo.getText(), DefaultFont)
+                            .setOrigin(1, 0)
+                            .setDepth(WinDefaultDepth + 18);
+                        group.add(group.parameter);
+
+                        CreateImageInGroup(engine, group, 'Daily_Closed', (image) => {
+                            group.img_closed = image.setDepth(WinDefaultDepth + 20);
+                            this._applyVisibilityClosed(group);
+
+                            CreateImageInGroup(engine, group, 'Daily_Check', (image) => {
+                                image.x += 90 * GlobalScale * localScale;
+                                image.y -= 90 * GlobalScale * localScale;
+                                group.img_check = image.setDepth(WinDefaultDepth + 30);
+                                this._applyVisibilityCheck(group);
+                            });
+                        });
+                    });
+                }
+
+                this.group.add(group);
+                this.days.push(group);
+            }
+        }
+
+        this.createActionButton(engine, this.buttonClicked.bind(this), RealScreenHeight - 200 * GlobalScale, true, 1, RealScreenWidth / 2, 1400 * GlobalScale);
+    }
+
+    _updateButtonState() {
+        if (this.activeIndex >= 0) {
+            this.buttonLabel.setText(LocalizationManager.getLocalizization("LoginBonusGetBtn"));
+            this.actionButton.setButtonLocked(false);
+        }
+        else {
+            this.buttonLabel.setText(LocalizationManager.getLocalizization("LoginBonusBlockedBtn"));
+            this.actionButton.setButtonLocked(true);
+        }
+    }
+
+    buttonClicked() {
+        if (this.activeIndex >= 0) {
+            const dailyBonusData = this.gameInit.progress.getDailyBonusData();
+            const bonus = dailyBonusData.getBonusForDay(this.activeIndex + 1);
+            if (bonus)
+                bonus.activateBonus();
+            else
+                console.log('No bonus');
+            this.gameInit.progress.bonusWasActivated();
+
+            //Visual Update
+            const group = this.days[this.activeIndex];
+            group.vis_closed = group.vis_check = true;
+            group.vis_active = false;
+            this._applyVisibilityClosed(group);
+            this._applyVisibilityCheck(group);
+            this._applyVisibilityActive(group);
+
+            this.activeIndex = -1;
+            this._updateButtonState();
+        }
+    }
+
+    localize() {
+        super.localize();
+        this.header.setText(LocalizationManager.getLocalizization("LoginBonusTitle"));
+    }
+
+    createGame(engine) {
+        super.createGame(engine);
+
+        this.header = this.engine.add.text(this.centerX, 100 * GlobalScale, null, DefaultFont)
+            .setOrigin(0.5, 0)
+            .setDepth(WinDefaultDepth + 1);
+        this.group.add(this.header);
+    //     this.prepareWindow();
+        SetGroupVisible(this.group, false);
+    }
+}
+
+let staticWinLargeBack = null;
+
+class WinWithLargeBack extends WinWithBack {
+
+    constructor(gui, gameInit){
+        super(gui, gameInit);
+    }
+
+    createBack() {
+        if (!staticWinLargeBack) {
+            staticWinLargeBack = this.engine.add.container(this.centerX, this.centerY).setDepth(WinDefaultDepth - 1);
+            staticWinLargeBack.add(this.engine.add.sprite(0, 100 * GlobalScale, 'WinUpgradeBack').setDepth(WinDefaultDepth - 100));
+            staticWinLargeBack.visible = false;
+            staticWinLargeBack.setDepth(WinDefaultDepth - 100);
+        }
+    }
+
+    showBackground(visible) {
+        if (staticWinLargeBack) {
+            staticWinLargeBack.visible = visible;
+            if (visible)
+                animManager.applyWinOpenAnimation(staticWinLargeBack);
+        }
+    }
+}
+
+class WinDropPuzzle extends WinWithBrownBack {
+    constructor(gui, gameInit) {
+        super(gui, gameInit);
+        this.disableClickables = true;
+        this.itemsToDestroy = [];
+    }
+
+    createExitButton() {
+
+    }
+
+    createGame(engine) {
+        super.createGame(engine);
+
+        function mult(o) {
+            o.x *= localScale;
+            o.y *= localScale;
+            return o;
+        }
+
+        const boxScale = 1.5;
+        this.dropPoint = ({x: this.centerX, y: this.centerY + 400 * GlobalScale});
+        this.puzzlePoint = ({x: this.centerX, y: this.centerY - 100 * GlobalScale});
+        this.puzzleUpPoint = ({x: this.centerX, y: this.centerY - 300 * GlobalScale});
+        this.collectedPoint = ({x: this.centerX, y: this.centerY});
+        this.collectedPoint2 = mult({x: this.centerX, y: this.centerY});
+        this.startPoxY = -RealScreenHeight * 0.1;
+
+        this.giftBox = this.engine.add.sprite(0, 0, "GiftBox").setScale(boxScale).setOrigin(0.5, 1);
+        this.group.add(this.giftBox);
+
+        this.giftBoxSuper = this.engine.add.sprite(0, 0, "GiftBoxSuper").setScale(boxScale).setOrigin(0.5, 1);
+        this.group.add(this.giftBoxSuper);
+
+        this.giftBoxOpen = this.engine.add.sprite(0, 0, "GiftBoxOpen").setScale(boxScale).setPosition(this.dropPoint.x - 60 * GlobalScale, this.dropPoint.y - 40 * GlobalScale).setOrigin(0.5, 1);
+        this.group.add(this.giftBoxOpen);
+
+        this.giftBoxSuperOpen = this.engine.add.sprite(0, 0, "GiftBoxSuperOpen").setScale(boxScale * 1.2).setPosition(this.dropPoint.x - 70 * GlobalScale, this.dropPoint.y + 10 * GlobalScale).setOrigin(0.5, 1);
+        this.group.add(this.giftBoxSuperOpen);
+
+        this.header = this.engine.add.text(this.centerX, 300 * GlobalScale, "", DefaultFont).setOrigin(0.5);
+        this.group.add(this.header);
+        this.bottomLabel = this.engine.add.text(this.centerX, RealScreenHeight - 500 * GlobalScale, "", DefaultFont).setOrigin(0.5);
+        this.group.add(this.bottomLabel);
+
+        this.createActionButton(this.engine, this._tryToCloseWindow.bind(this), RealScreenHeight - 250 * GlobalScale, true, 1, this.centerX);
+    }
+
+    _tryToCloseWindow() {
+        this._destroyStuff();
+        if (!gameInit.progress.openSuperChest())
+            this.closeWindow();
+    }
+
+    localize() {
+        this.buttonLabel.setText(LocalizationManager.getLocalizization("ButtonOk"));
+    }
+
+    createMyExitButton()
+    {
+        //Do nothing
+    }
+
+    _destroyStuff() {
+        if (this.itemsToDestroy && this.itemsToDestroy.length) {
+            for (let i in this.itemsToDestroy)
+                this.itemsToDestroy[i].destroy();
+            this.itemsToDestroy = [];
+        }
+    }
+
+    setWindowVisible(visible) {
+        super.setWindowVisible(visible);
+        if (!visible)
+            this._destroyStuff();
+    }
+
+    dropPuzzle(beforeInfo, imageId, drop, dublicate, normal) {
+        const imageInfo = beforeInfo;
+        const newImageInfo = gameInit.progress.getPuzzleInfoById(imageId);
+        const size = GameData.getPuzzleSizePerLevel(imageInfo.level);
+        const engine = this.engine;
+
+        const i = Math.trunc(drop / size);
+        const j = drop % size;
+
+        this.header.setVisible(false);
+        this.bottomLabel.setVisible(false);
+        this.actionButton.setVisible(false);
+        this.buttonLabel.setVisible(false);
+
+        this.giftBox.setVisible(normal);
+        this.giftBoxSuper.setVisible(!normal);
+        this.giftBoxOpen.setVisible(false);
+        this.giftBoxSuperOpen.setVisible(false);
+
+        const box = normal ? this.giftBox : this.giftBoxSuper;
+        const openedBox = normal ? this.giftBoxOpen : this.giftBoxSuperOpen;
+
+        box.setPosition(this.dropPoint.x, this.startPoxY);
+
+        // console.log("imageId " + imageId + " > " + drop);
+        //Image
+        const ImageName = GameData.getPuzzleIcon(imageId + 1);
+
+        LoadFile(engine, ImageName, VisualData.getPuzzleFolder() + ImageName + ".png", () => {
+
+            animManager.moveToPointExtra(box, this.dropPoint, 0.05, 0.3, ()=>{
+                audioManager.playChestSound(0);
+                animManager.changeShape(box, 0.4, 0.5, 1, ()=>{
+                    animManager.rotationAnimation(box, 10, 0.7, 3, ()=>{
+                        box.setVisible(false);
+                        openedBox.setVisible(true);
+
+                        const scale = 0.5;
+                        const puzzleCont = engine.add.container(this.puzzlePoint.x, this.puzzlePoint.y);
+                        const puzzleImg = engine.add.sprite(0, 0, ImageName);
+                        const step = puzzleImg.width / size;
+                        puzzleImg.setCrop(i*step, j*step, step, step).setScale(scale * size).setOrigin((i + 0.5) / size, (j + 0.5) / size);
+
+                        let realLevel = newImageInfo.level;
+                        if (newImageInfo.pieces & (1 << (drop)))
+                            realLevel++;
+
+                        const backImg = engine.add.sprite(0, 0, GameData.getPuzzleBackNamePerLevel(realLevel));
+                        backImg.setScale(puzzleImg.width / backImg.width * scale);
+
+                        puzzleCont.add(backImg);
+                        puzzleCont.add(puzzleImg);
+                        puzzleCont.setDepth(WinDefaultDepth + 100);
+                        puzzleCont.angle = 180;
+
+                        //Labels
+                        if (dublicate) {
+                            this.header.text = LocalizationManager.getLocalizization("GetPuzzlePartDupTitle");
+                            this.bottomLabel.text = LocalizationManager.getLocalizization("GetPuzzlePartDupText").format(GameData.getGemsForDublicate());
+                        } else {
+                            this.header.text = LocalizationManager.getLocalizization("GetPuzzlePartText");
+                            this.bottomLabel.text = LocalizationManager.getLocalizization("GetPuzzlePartTitle");
+                        }
+                        this.header.setVisible(true);
+                        this.bottomLabel.setVisible(true);
+                        animManager.applyWinOpenAnimation(this.header);
+                        animManager.applyWinOpenAnimation(this.bottomLabel);
+
+                        //Labels...
+
+                        audioManager.playChestSound(1);
+                        const upDuration = 0.3;
+                        animManager.moveToPointExtra(puzzleCont, this.puzzleUpPoint, 0.1, upDuration);
+                        animManager.scaleAnimation(puzzleCont, 2, upDuration);
+                        animManager.rotationAnimation(puzzleCont, 180, upDuration, 0.25, ()=>{
+                            animManager.animationChangeAlpha(openedBox, 0, 0.3, ()=> {
+                                openedBox.setVisible(false);
+                                openedBox.alpha = 1;
+
+                                const collectedPuzzle = winPuzzleInstance.getCell({item: imageInfo, index: imageId}, true);
+                                this.itemsToDestroy.push(collectedPuzzle);
+                                collectedPuzzle.setPosition(this.collectedPoint2.x * localScale, RealScreenHeight * 1.1 * localScale);
+                                const moveUpDuration = 0.5;
+                                animManager.moveToPointExtra(collectedPuzzle, this.collectedPoint2, 0.05, moveUpDuration);
+
+                                animManager.waitAnimation(0.7 * moveUpDuration, ()=> {
+                                    const downDuration = 0.5;
+                                    animManager.scaleAnimation(puzzleCont, 1, downDuration);
+                                    animManager.rotationAnimation(puzzleCont, 90, downDuration, 0.25);
+                                    puzzleCont.setPosition(this.collectedPoint.x, this.collectedPoint.y);
+                                    const fallAnim = animManager.moveToPointExtra(puzzleCont, this.puzzleUpPoint, 0.5, downDuration, () => {
+                                        audioManager.playChestSound(2);
+                                        puzzleCont.destroy(true);
+                                        if (!dublicate) {
+                                            const prevBack = collectedPuzzle.images[i * size + j];
+                                            prevBack.destroy(true);
+
+                                            const puzzleSize = size;
+                                            const backSize = winPuzzleInstance.winInfo.partSize * GlobalScale;
+                                            const partSize = backSize / puzzleSize;
+
+                                            const x = collectedPuzzle.x / localScale + (i - puzzleSize * 0.5) * partSize;
+                                            const y = collectedPuzzle.y / localScale + (j - puzzleSize * 0.5) * partSize;
+
+                                            const newBack = engine.add.sprite(x, y, GameData.getPuzzleBackNamePerLevel(realLevel))
+                                                .setOrigin(0, 0)
+                                                .setDepth(WinDefaultDepth + 100 - 10);
+
+                                            newBack.setScale(partSize / newBack.width / imagesDeltaScale);
+
+                                            collectedPuzzle.add(newBack);
+                                        }
+
+                                        this.actionButton.setVisible(true);
+                                        this.buttonLabel.setVisible(true);
+                                        animManager.applyButtonShowAnimation(this.actionButton);
+                                    });
+                                    fallAnim.setInverse();
+                                });
+                            });
+                        });
+                    });
+                })
+            });
+        });
+    }
+}
+
+let winPuzzleInstance;
+
+class WinPuzzle extends WinWithBrownBack {
+    constructor(gui, gameInit) {
+        super(gui, gameInit);
+
+        this.disableClickables = true;
+        this.selectedTab = 0;
+        winPuzzleInstance = this;
+        this.allCells = [];
+    }
+
+    localize() {
+        super.localize();
+
+        this.header.text = LocalizationManager.getLocalizization("PuzzlesWindowTitle");
+
+        for (let i = 0;i < 5;i++)
+            this.puzzleNames[i].text = LocalizationManager.getLocalizization(GameData.getPuzzlesTextPerLevel(i+1));
+    }
+
+    addTab(icon, x, y) {
+        const tab = new ToogleButton(this.engine, this.group, icon, x, y, () => this.tabWasSwitched(tab), this.winInfo);
+
+        this.tabs.push(tab);
+    }
+
+    _prepareWindow() {
+        if (this.prepared)
+            return;
+
+        this.prepared = true;
+
+        this.createStore(this.engine);
+    }
+
+    createGame(engine) {
+        super.createGame(engine);
+
+        const yPos = this.centerY + this.winInfo.togglesY * GlobalScale;
+
+        this.header = engine.add.text(this.centerX - this.winInfo.togglesX * GlobalScale, yPos - 30 * GlobalScale, null, DefaultFont)
+            .setOrigin(0, 1)
+            .setDepth(WinDefaultDepth + 1);
+        this.group.add(this.header);
+
+        //Tabs
+        const distance = this.winInfo.togglesDistance * GlobalScale;
+        let xPos = this.centerX + this.winInfo.togglesX * GlobalScale - distance;
+
+        this.tabs = [];
+        this.addTab('PuzzleTabIcon', xPos, yPos);
+        xPos += distance;
+        this.addTab('BoxTabIcon', xPos, yPos);
+
+        this.configs = [];
+        this.configs[0] = VisualData.PUZZLE_SCROLL_CONFIG;
+        this.configs[0].x = this.centerX + this.configs[0].offsetX * GlobalScale;
+        this.configs[0].y = this.centerY + this.configs[0].offsetY * GlobalScale;
+
+        this.groups = [];
+        this.groups.push(engine.add.group());
+        this.groups.push(engine.add.group());
+
+        this.createSummary(engine);
+        // this.createStore(engine);
+
+        this.updateNumbers();
+
+        for (let i in this.groups)
+            SetGroupVisible(this.groups[i], false);
+        SetGroupVisible(this.group, false);
+    }
+
+    createStore(engine) {
+        this.scroll = [];
+        this.scroll.push(new GUIScroll(engine, this.configs[0], this.getCell.bind(this), this.getItems.bind(this)));
+        this.scroll[0].setVisible(false);
+
+        this.configs[1] = VisualData.PUZZLE_SCROLL_CONFIG_STORE;
+        this.configs[1].x = this.centerX + this.configs[1].offsetX * GlobalScale;
+        this.configs[1].y = this.centerY + this.configs[1].offsetY * GlobalScale;
+        this.scroll.push(new GUIScroll(engine, this.configs[1], this.getStoreCell.bind(this), this.getStoreItems.bind(this)));
+        this.scroll[1].setVisible(false);
+    }
+
+    updateChestsNumber()
+    {
+        const group = this.allCells[0];
+
+        if (!group || !group.active)
+            return;
+
+        const chestsCount = gameInit.progress.getChestsCount();
+
+        const showButton = chestsCount > 0 && this.selectedTab === 1 && this.visible;
+
+        if (showButton) {
+            if (!this.myChestsBack || !this.myChestsBack.active) {
+                const config = this.configs[this.selectedTab];
+                const depth = WinDefaultDepth + 200;
+                const center = false;
+                const cellCenterX = center ? 0 : config.cellWidth / 2 * GlobalScale;
+                const cellCenterY = center ? 0 : config.cellHeight / 2 * GlobalScale;
+
+                const offsetX = 80 * GlobalScale;
+                const offsetY = -180 * GlobalScale;
+
+                const px = group.x / localScale + cellCenterX + offsetX;
+                const py = group.y / localScale + cellCenterY + offsetY;
+                this.myChestsBack = this.engine.add.sprite(px, py, "BoxCounter").setDepth(depth);
+                this.myChestsNumber = this.engine.add.textOld(px, py, "H", DefaultFont).setDepth(depth + 1).setOrigin(0.5);
+
+                group.add(this.myChestsBack);
+                group.add(this.myChestsNumber);
+            }
+        } else {
+            if (this.myChestsBack && this.myChestsBack.active) {
+                this.myChestsBack.destroy();
+                this.myChestsNumber.destroy();
+                this.myChestsBack = null;
+                this.myChestsNumber = null;
+            }
+        }
+
+        if (chestsCount > 0 && this.selectedTab === 1) {
+            if (this.myChestsNumber && this.myChestsNumber.active)
+                this.myChestsNumber.text = chestsCount;
+            setStoreCellLocked(this.availableBoxes, false);
+            if (this.visible)
+                this.scroll[1].fakeMove();
+        } else {
+            setStoreCellLocked(this.availableBoxes, true);
+        }
+    }
+
+    createSummary(engine) {
+        const group = this.groups[0];
+        const distanceX = 800 * GlobalScale;
+        const distanceY = 120 * GlobalScale;
+
+        const cx = this.centerX + distanceX / 4;
+        const cy = RealScreenHeight - distanceY * 3 - 50 * GlobalScale;
+
+        this.puzzleNumbers = [];
+        this.puzzleNames = [];
+
+        for (let i = 1; i <= 5;i++) {
+            const x = cx - (i % 2) * distanceX;
+            const y = cy + Math.trunc(((i - 1) / 2)) * distanceY;
+            group.create(x, y, GameData.getPuzzlesIconNamePerLevel(i))
+                .setOrigin(0, 0)
+                .setDepth(WinDefaultDepth);
+
+            const number = engine.add.text(x + 130 * GlobalScale, y + 10 * GlobalScale, null, DefaultFontSmall).setDepth(WinDefaultDepth);
+            const name = engine.add.text(x + 130 * GlobalScale, y + 60 * GlobalScale, null, DefaultFontSmall).setDepth(WinDefaultDepth);
+            this.puzzleNumbers.push(number);
+            this.puzzleNames.push(name);
+            group.add(number);
+            group.add(name);
+        }
+    }
+
+    tabWasSwitched(tab) {
+        for (let i = 0;i < this.tabs.length;i++) {
+            if (this.tabs[i] === tab) {
+                this.tabs[i].setSelected(true);
+                this.selectedTab = i;
+
+                SetGroupVisible(this.groups[i], true);
+            } else {
+                this.tabs[i].setSelected(false);
+                SetGroupVisible(this.groups[i], false);
+            }
+        }
+
+        this.scroll[this.selectedTab].setVisible(true);
+        this.scroll[1 - this.selectedTab].setVisible(false);
+        if (this.selectedTab === 0) {
+            this.scroll[0].table.setItems(this.getItems());
+        } else {
+            this.scroll[1].table.setItems(this.getStoreItems());
+            this.updateChestsNumber();
+        }
+    }
+
+    updateNumbers() {
+        const puzzles = this.getItems();
+        const counts = [];
+        for (let i = 0;i < 5;i++)
+            counts.push(0);
+
+        for (let i = 0;i < puzzles.length;i++){
+            if (puzzles[i].level > 0)
+                counts[puzzles[i].level - 1]++;
+        }
+
+        const max = "/" + puzzles.length;
+        for (let i = 0;i < 5;i++)
+            this.puzzleNumbers[i].text = counts[i] + max;
+    }
+
+    _removeTimer() {
+        if (this.boxShakeTimer) {
+            clearInterval(this.boxShakeTimer);
+            this.boxShakeTimer = null;
+        }
+    }
+
+    setWindowVisible(visible) {
+        super.setWindowVisible(visible);
+        this._removeTimer();
+        if (visible) {
+            this._prepareWindow();
+            this.tabWasSwitched(this.tabs[this.selectedTab]);
+            this.updateNumbers();
+            this.updateChestsNumber();
+            this.boxShakeTimer = setInterval(() => {
+                if (gameInit.progress.getChestsCount() > 0 && this.availableBoxes && this.availableBoxes.active)
+                    animManager.shakeBox(this.availableBoxes.unny_sprite, 7, 20 * GlobalScale, 0.6, 2);
+            }, 2000);
+        } else {
+            for (let i in this.scroll)
+                this.scroll[i].table.setVisible(false);
+
+            for (let i in this.groups)
+                SetGroupVisible(this.groups[i], visible);
+        }
+
+        hudResources.setVisible(visible);
+    }
+
+    _checkPriceInGold(group, price) {
+        setStoreCellLocked(group, !gameInit.progress.isResourcesEnough(price));
+    }
+
+    _checkPrice(group, data) {
+        setStoreCellLocked(group, !gameInit.progress.isResourcesWithTypeEnough(data));
+    }
+
+    getStoreCell(cell, center) {
+        const progress = gameInit.progress;
+        const engine = this.engine;
+
+        const config = this.configs[this.selectedTab];
+        const cellCenterX = center ? 0 : config.cellWidth / 2 * GlobalScale;
+        const cellCenterY = center ? 0 : config.cellHeight / 2 * GlobalScale;
+        const boxData = GameData.getBoxData();
+
+        const offsetX = 80 * GlobalScale;
+        const offsetY = -180 * GlobalScale;
+
+        let group = engine.rexUI.add.container(0,0);
+        const depth = WinDefaultDepth + 200;
+        const chestImage = "GiftBox";
+        const chestImagePath = VisualData.getStoreFolder() + "GiftBox.png";
+
+        this.allCells[cell.index] = group;
+
+        switch (cell.index) {
+            case 0:
+                this.availableBoxes = group;
+
+                createStoreCell(engine, group, cellCenterX, cellCenterY,
+                    LocalizationManager.getLocalizization("BoxOpenTitle"),
+                    "OpenedBox",
+                    VisualData.getPuzzleUIFolder() + "OpenedBox.png",
+                    LocalizationManager.getLocalizization("BoxOpenDesc"),
+                    null,
+                    LocalizationManager.getLocalizization("BoxOpenButtonText"),
+                    () => {
+                        if (progress.getChestsCount() > 0) {
+                            progress.openChest();
+                            this.updateChestsNumber();
+                        }
+                    }
+                );
+
+                this.updateChestsNumber();
+                break;
+            case 1:
+                let price = progress.getPriceForGoldBox();
+                const boxForGold = createStoreCell(engine, group, cellCenterX, cellCenterY,
+                    LocalizationManager.getLocalizization("BoxGoldTitle"),
+                    chestImage,
+                    chestImagePath,
+                    LocalizationManager.getLocalizization("BoxGoldDesc"),
+                    GameData.getIconByType(boxData[0].priceType),
+                    LocalizationManager.getLocalizedNumber(price),
+                    () => {
+                        price = progress.tryToPurchaseBoxForGold(boxData[0].count);
+                        if (price) {
+                            this.updateChestsNumber();
+                            boxForGold.text = LocalizationManager.getLocalizedNumber(price);
+                            this._checkPriceInGold(group, price);
+                        }
+                    });
+
+                this._checkPriceInGold(group, price);
+
+                group.add(engine.add.sprite(cellCenterX + offsetX, cellCenterY + offsetY, "BoxCounter").setDepth(depth));
+                group.add(engine.add.textOld(cellCenterX + offsetX, cellCenterY + offsetY, "x1", DefaultFont).setDepth(depth).setOrigin(0.5));
+                break;
+            case 2:
+                createStoreCell(engine, group, cellCenterX, cellCenterY,
+                    LocalizationManager.getLocalizization("BoxGemTitle"),
+                    chestImage,
+                    chestImagePath,
+                    LocalizationManager.getLocalizization("BoxGemDesc"),
+                    GameData.getIconByType(boxData[1].priceType),
+                    boxData[1].priceGems,
+                    () => {
+                        const gemsPrice = boxData[1].bigInt;
+                        if (progress.isGemsEnough(gemsPrice)) {
+                            if (!progress.areAllPuzzlesCollected()) {
+                                progress.gemsSpent(gemsPrice);
+                                progress.purchaseBox(BoxType.GemsBox, boxData[1].count);
+                                this.updateChestsNumber();
+                                // this.checkGemsPrice();
+                            }
+                        } else
+                            guiManager.openNewWindow(WindowType.WinNotEnoughGems);
+                    });
+
+                // this.checkGemsPrice();
+                group.add(engine.add.sprite(cellCenterX + offsetX, cellCenterY + offsetY, "BoxCounter").setDepth(depth));
+                group.add(engine.add.textOld(cellCenterX + offsetX, cellCenterY + offsetY, "x3", DefaultFont).setDepth(depth).setOrigin(0.5));
+                break;
+            case 3:
+                createStoreCell(engine, group, cellCenterX, cellCenterY,
+                    LocalizationManager.getLocalizization("BoxGemSuperTitle"),
+                    "GiftBoxSuper",
+                    VisualData.getStoreFolder() + "GiftBoxSuper.png",
+                    LocalizationManager.getLocalizization("BoxGemSuperDesc"),
+                    GameData.getIconByType(boxData[2].priceType),
+                    boxData[2].priceGems,
+                    () => {
+                        const gemsPrice = boxData[2].bigInt;
+                        if (progress.isGemsEnough(gemsPrice)) {
+                            if (!progress.areAllPuzzlesCollected()) {
+                                progress.gemsSpent(gemsPrice);
+                                progress.giveChests(BoxType.SuperBox, boxData[2].count);
+                                // this.checkGemsPrice();
+                            }
+                        } else
+                            guiManager.openNewWindow(WindowType.WinNotEnoughGems);
+                    });
+
+                // this.checkGemsPrice();
+                break;
+        }
+
+        return group.setOrigin(0).setDepth(depth);
+    }
+
+    // checkGemsPrice() {
+    //     const boxData = GameData.getBoxData();
+    //
+    //     if (this.allCells[2])
+    //         this._checkPrice(this.allCells[2], boxData[1]);
+    //     if (this.allCells[3])
+    //         this._checkPrice(this.allCells[3], boxData[2]);
+    // }
+
+    getCell(cell, center) {
+        const config = this.configs[0];
+
+        const puzzle = cell.item;
+        const engine = this.engine;
+        // const item = cell.item;
+        //
+        // if (!item) {
+        //     return engine.rexUI.add.label();
+        // }
+        const cellCenterX = center ? 0 : config.cellWidth / 2 * GlobalScale;
+        const cellCenterY = center ? 0 : config.cellHeight / 2 * GlobalScale;
+
+        let group = engine.rexUI.add.container(0,0);
+        group.images = [];
+
+        const depth = WinDefaultDepth + 100;
+
+        //Image
+        const ImageName = GameData.getPuzzleIcon(cell.index + 1);
+
+        let loading = true;
+        if (ImageName) {
+            LoadFile(engine, ImageName, VisualData.getPuzzleFolder() + ImageName + ".png", () => {
+                if (group && group.active) {
+                    group.add(
+                        engine.add.sprite(group.x / localScale + cellCenterX, group.y / localScale + cellCenterY, ImageName)
+                            .setDepth(depth - 7));
+                    if (!loading)
+                        this.scroll[0].fakeMove();
+                }
+            });
+        }
+        loading = false;
+        //
+
+        //Background
+        const puzzleSize = GameData.getPuzzleSizePerLevel(puzzle.level);
+        const backSize = this.winInfo.partSize * GlobalScale;
+        const partSize2 = this.winInfo.frontPartSize * GlobalScale / puzzleSize;
+        const partSize = backSize / puzzleSize;
+
+        const backDepth = depth - 10;
+        let index = 0;
+        for (let i = 0;i < puzzleSize;i++) {
+            for (let j = 0;j < puzzleSize;j++) {
+                let realLevel = puzzle.level;
+                if ((puzzle.pieces & (1 << (index++))) !== 0)
+                    realLevel++;
+
+                let backImg;
+                if (realLevel === 0) {
+                    let puzzleImg = null;
+                    switch (index) {
+                        case 1: puzzleImg = 'PuzzleItemLockUL';
+                            break;
+                        case 2: puzzleImg = 'PuzzleItemLockDL';
+                            break;
+                        case 3: puzzleImg = 'PuzzleItemLockUR';
+                            break;
+                        case 4: puzzleImg = 'PuzzleItemLockDR';
+                            break;
+                    }
+
+                    if (this.winInfo.centerBlock) {
+                        backImg = engine.add.sprite(cellCenterX, cellCenterY, puzzleImg)
+                            .setDepth(depth - 2);
+                    } else {
+                        const x = cellCenterX + (i - puzzleSize * 0.5) * partSize2;
+                        const y = cellCenterY + (j - puzzleSize * 0.5) * partSize2;
+                        backImg = engine.add.sprite(x, y, puzzleImg).setDepth(depth - 2).setOrigin(0, 0);
+                    }
+                } else {
+                    const x = cellCenterX + (i - puzzleSize * 0.5) * partSize;
+                    const y = cellCenterY + (j - puzzleSize * 0.5) * partSize;
+
+                    backImg = engine.add.sprite(x, y, GameData.getPuzzleBackNamePerLevel(realLevel))
+                        .setOrigin(0, 0)
+                        .setDepth(backDepth);
+
+                    backImg.setScale(partSize / backImg.width / imagesDeltaScale);
+                }
+
+                group.add(backImg);
+                group.images.push(backImg);
+            }
+        }
+
+        const frame = engine.add.sprite(cellCenterX, cellCenterY, "PuzzleItemFrame").setDepth(depth - 5);
+        group.add(frame);
+
+        if (puzzle.level > 0 && puzzle.level < 5 && this.winInfo.showGrid) {
+            const bonusBack = engine.add.sprite(cellCenterX, cellCenterY, "Grid" + puzzleSize)
+                .setDepth(depth - 6);
+            group.add(bonusBack);
+        }
+
+        if (puzzle.level >= 2) {
+            const bonusBack = engine.add.sprite(cellCenterX + this.winInfo.BonusOffsetX * GlobalScale, cellCenterY - 140 * GlobalScale, "PuzzleBonusBack")
+                .setOrigin(1, 0.5)
+                .setDepth(depth);
+            group.add(bonusBack);
+
+            const resources = engine.add.sprite(cellCenterX - 55 * GlobalScale, cellCenterY - 140 * GlobalScale, "PriceIcon")
+                .setScale(0.7)
+                .setDepth(depth);
+            group.add(resources);
+
+            const bonusText = engine.add.textOld(cellCenterX - 10 * GlobalScale, cellCenterY - 140 * GlobalScale, "+" + (GameData.getPuzzleResourceBonusPerLevel(puzzle.level) - 1) * 100 + "%", DefaultFontSmall)
+                .setOrigin(0, 0.5)
+                .setDepth(depth);
+            group.add(bonusText);
+        }
+
+        return group
+            .setOrigin(0);
+            // .setDepth(depth);
+    }
+
+    getItems() {
+        return gameInit.progress.getPuzzleInfo();
+    }
+
+    getStoreItems() {
+        return [0, 1, 2, 3];
+    }
+
+    getSelectedTab() {
+        return this.selectedTab;
+    }
+
+    getBoxesTab() {
+        return this.tabs[1].button;
+    }
+
+    getPuzzleOpenBox() {
+        return this.allCells[0].unny_btn;
+    }
+}
+
+const GEMS_VIDEO_REWARD_ID = 'gemsForVideoAd';
+
+class WinStore extends WinWithLargeBack {
+
+    constructor(gui, gameInit){
+        super(gui, gameInit);
+        this.selectedTab = 0;
+        this.allCells = {};
+        this.disableClickables = true;
+    }
+
+    createSettingsButton() {
+        let x, y;
+        // if (VisualData.IsVertical()) {
+        //     x = 150 * GlobalScale;
+        //     y = RealScreenHeight - 150 * GlobalScale;
+        // } else {
+        x = RealScreenWidth - 180 * GlobalScale;
+        y = RealScreenHeight - 150 * GlobalScale;
+        // }
+        this.settings = new BasicButton(null, {
+            'scene': this.engine,
+            'key': 'SettingsBtn',
+            'x': x,
+            'y': y,
+        }, ()=>{
+            this.gui.openNewWindow(WindowType.WinSettings);
+        }).setDepth(WinDefaultDepth);
+        this.addButton(this.settings);
+        this.settings.setVisible(false);
+    }
+
+    createGame(engine) {
+        super.createGame(engine);
+
+        this.engine = engine;
+
+        const yPos = this.winInfo.togglesY * GlobalScale;
+        let xPos = this.winInfo.togglesX * GlobalScale;
+        const distance = this.winInfo.togglesDistance * GlobalScale;
+
+        this.tabs = [];
+        this.addTab('TabIcon_Actual', xPos, yPos);
+        xPos += distance;
+        this.addTab('PriceIcon', xPos, yPos);
+        xPos += distance;
+        this.addTab('PriceSeeds', xPos, yPos);
+        xPos += distance;
+        this.addTab('PriceGems', xPos, yPos);
+
+        xPos = -this.winInfo.togglesX * GlobalScale;
+        this.addTab('TabIcon_Money', xPos, yPos);
+
+        this.config = VisualData.STORE_SCROLL_CONFIG;
+        this.config.x = this.centerX + this.config.offsetX * GlobalScale;
+        this.config.y = this.centerY + this.config.offsetY * GlobalScale;
+
+        this.slots = [];
+        this.scroll = new GUIScroll(engine, this.config, this.getCell.bind(this), this.getItems.bind(this));
+        this.scroll.setVisible(false);
+        // this.group.add(this.scroll.table);
+
+        SetGroupVisible(this.group, false);
+
+        this.createSettingsButton();
+    }
+
+    getFirstUpgradeSlot(){
+        return this.allCells[VisualData.getAutoClickSlot1Id()].unny_btn;
+    }
+
+    addTab(icon, x, y) {
+        const tab = new ToogleButton(this.engine, this.group, icon, x, y, () => this.tabWasSwitched(tab), this.winInfo);
+
+        this.tabs.push(tab);
+    }
+
+    _getOneItemFromList(list) {
+        for (let i = 0; i < list.length; i++) {
+            if (this.gameInit.progress.canPurchaseUpgrade(list[i]))
+                return list[i];
+        }
+
+        for (let i = 0; i < list.length; i++) {
+            if (!this.gameInit.progress.isUpgradePurchased(list[i].id))
+                return list[i];
+        }
+        return null;
+    }
+
+    _upgradeSelectedTabItems() {
+        this.slots = [];
+        let list = null;
+        switch (this.selectedTab) {
+            case 0: {
+                let item = null;
+                item = this._getOneItemFromList(GameData.getMarketListGold());
+                if (item)
+                    this.slots.push(item);
+
+                item = this._getOneItemFromList(GameData.getMarketListSeeds());
+                if (item)
+                    this.slots.push(item);
+
+                item = this._getOneItemFromList(GameData.getMarketListGems());
+                if (item)
+                    this.slots.push(item);
+
+                this.scroll.table.setItems(this.slots);
+                return;
+            }
+            case 1: list = GameData.getMarketListGold();
+                break;
+            case 2: list = GameData.getMarketListSeeds();
+                break;
+            case 3: list = GameData.getMarketListGems();
+                break;
+            case 4: list = GameData.getInAppData();
+                break;
+        }
+
+        // console.info(list);
+        if (list) {
+            for (let i = 0; i < list.length; i++) {
+                if (this.gameInit.progress.canPurchaseUpgrade(list[i]) || WinStore.isUnlimitedPurchaseIndex(this.selectedTab)) {
+                    this.slots.push(list[i]);
+
+                    if (this.slots.length >= this.config.maxSlots)
+                        break;
+                }
+            }
+
+            this.scroll.table.setItems(this.slots);
+        }
+    }
+
+    static isUnlimitedPurchaseIndex(index) {
+        return index > 3;
+    }
+
+    tabWasSwitched(tab) {
+        for (let i = 0;i < this.tabs.length;i++) {
+            if (this.tabs[i] === tab) {
+                this.tabs[i].setSelected(true);
+                this.selectedTab = i;
+
+                this._upgradeSelectedTabItems();
+            } else {
+                this.tabs[i].setSelected(false);
+            }
+        }
+
+        this.scroll.table.setT(0);
+    }
+
+    tryToPurchaseUpgrade(id) {
+        //TODO check resources
+        switch (id) {
+            case GEMS_VIDEO_REWARD_ID: {
+                const progress = gameInit.progress;
+                if (progress.getAdsWatchedToday() < AdsAvailableToWatchADay) {
+                    PlayRewardedAd(() => {
+                        gameAnalytics.sendEvent("Ads_For_Gems");
+                        progress.adWasWatched();
+                        const data = GameData.getMarketPurchaseById(id);
+                        progress.gotGems(data.gems);
+                        this._upgradeSelectedTabItems();
+                    });
+                }
+                return;
+            }
+        }
+
+        if (this.gameInit.progress.tryToPurchaseUpgrade(id)) {
+            if (!WinStore.isUnlimitedPurchaseIndex(this.selectedTab))
+                this._upgradeSelectedTabItems();
+        } else {
+            this.closeWindow();
+            guiManager.openNewWindow(WindowType.WinNotEnoughGems);
+        }
+    }
+
+    _getStoreCellButtonCaption(item) {
+        if (item.price)
+            return LocalizationManager.getLocalizedNumber(gameInit.progress.getPurchasePrice(item))
+
+        const price = socialManager.getPriceLabel(item.id);
+        if (price)
+            return price;
+
+        switch (item.id) {
+            case GEMS_VIDEO_REWARD_ID: {
+                return gameInit.progress.getAdsWatchedToday() + "/" + AdsAvailableToWatchADay;
+            }
+        }
+
+        return "Unknown";
+    }
+
+    getCell(cell) {
+        const engine = this.engine;
+
+        const item = cell.item;
+        const group = engine.rexUI.add.container(0, 0);
+
+        if (!item)
+            return group;
+
+        const config = this.config;
+        const cellCenterX = config.cellWidth / 2 * GlobalScale;
+        const cellCenterY= config.cellHeight / 2 * GlobalScale;
+
+        const imageName = WinStore.getImageName(item);
+
+        createStoreCell(engine, group, cellCenterX, cellCenterY,
+            LocalizationManager.getStoreItemTitle(item),
+            imageName,
+            VisualData.getStoreFolder() + imageName + ".png",
+            LocalizationManager.getStoreItemDescription(item),
+            GameData.getIconByType(item.priceType),
+            this._getStoreCellButtonCaption(item),
+            () => this.tryToPurchaseUpgrade(item.id),
+            true, this.scroll, item.id === GEMS_VIDEO_REWARD_ID && gameInit.progress.getAdsWatchedToday() >= AdsAvailableToWatchADay);
+
+        group.item = item;
+        this.allCells[item.id] = group;
+        this._checkPriceForButton(group);
+        if (group.priceText2) {
+            this.timerText = group.priceText2;
+            this.updateTimer();
+        }
+        return group.setOrigin(0).setDepth(WinDefaultDepth + 100);
+    }
+
+    _checkPriceForButton(group) {
+        let locked;
+        switch (group.item.id) {
+            case GEMS_VIDEO_REWARD_ID: {
+                locked = gameInit.progress.getAdsWatchedToday() >= AdsAvailableToWatchADay;
+                break;
+            }
+            default:
+                locked = group.item.priceType !== "Gems" && !gameInit.progress.isResourcesWithTypeEnoughForPurchase(group.item);
+                break;
+        }
+        setStoreCellLocked(group, locked);
+    }
+
+    static getImageName(item) {
+        if (item.title) {
+            return item.title.replace("Name","");
+        }
+        switch (item.upgradeType) {
+            case "MultiProfit": {
+                if (item.priceType === "Gems")
+                    return "MultiProfitGems";
+                return item.slotNumber >= 0 ? "MultiProfitOneSlot" : "MultiProfitAll";
+            }
+            case "TimeTravel": {
+                switch (item.parameter) {
+                    case 3600 * 4: return "TimeTravel4h";
+                    case 3600 * 24: return "TimeTravel24h";
+                    case 3600 * 24 * 7: return "TimeTravel7d";
+                }
+                break;
+            }
+            default:
+                return item.upgradeType;
+        }
+        return null;
+    }
+
+    getItems() {
+        return this.slots;
+    }
+
+    setGemsPage() {
+        this.forceGems = true;
+    }
+
+    removeTimer() {
+        if (this.timer) {
+            clearInterval(this.timer);
+            this.timer = null;
+        }
+    }
+
+    updateTimer() {
+        if (this.timerText && this.timerText.active) {
+            this.timerText.setText(timeToStringClock(Progress.getTimeTillTheNextDay()));
+        }
+    }
+
+    setWindowVisible(visible) {
+        super.setWindowVisible(visible);
+        // GlobalInputLocked = visible;
+        this.scroll.setVisible(visible);
+        this.removeTimer();
+        if (visible) {
+            if (this.forceGems) {
+                this.selectedTab = 4;
+                this.forceGems = false;
+            } else
+                this.selectedTab = 0;
+            this.tabWasSwitched(this.tabs[this.selectedTab]);
+
+            if (gameInit.progress.canCheckStore()) {
+                socialManager.checkPurchases((itemId) => {
+                    gameInit.progress.publicConfirmedPayment(itemId);
+                });
+            }
+
+            this.timer = setInterval(()=>{
+                this.updateTimer();
+            }, 1000);
+        }
+
+        this.settings.setVisible(visible);
+        hudResources.setVisible(visible);
+    }
+}
+
+class WinFortuneWheel extends WinWithExit {
+    constructor(gui, gameInit){
+        super(gui, gameInit);
+
+        this.lightAnimation = 1;
+        this.lightIndex = 0;
+        this.lightTime = 0;
+        this.timeToUpdate = 0;
+    }
+
+    createGame(engine) {
+        super.createGame(engine);
+        this._createBlackBackground();
+
+        this.exitButton.ignoreTutorial = true;
+    }
+
+    localize() {
+        super.localize();
+
+        if (this.header)
+            this.header.setText(LocalizationManager.getLocalizization("FortuneWheelWindowTitle"));
+
+        if (this.buttonLabel)
+            this.buttonLabel.setText(LocalizationManager.getLocalizization("FortuneWheelWindowGemsButton").format(GEMS_PRICE_FOR_WHEEL_SPIN));
+
+        if (this.buttonLabelFree)
+            this.buttonLabelFree.setText(LocalizationManager.getLocalizization("FortuneWheelWindowAdButton"));
+
+        this._updateSpinsTimer();
+        this._updateSpinsCount();
+    }
+
+    _updateButtonLocalization() {
+        if (!this.visible)
+            return;
+
+        const spins = gameInit.progress.getFreeSpinsCount() > 0;
+
+        this.actionButtonFree.setVisible(spins);
+        this.buttonLabelFree.setVisible(spins);
+        this.actionButton.setVisible(!spins);
+        this.buttonLabel.setVisible(!spins);
+        this.buttonGems.setVisible(!spins);
+    }
+
+    _updateSpinsCount() {
+        if (this.spinsCounter) {
+            const spins = gameInit.progress.getFreeSpinsCount();
+            this.spinsCounter.setText(LocalizationManager.getLocalizization("FortuneWheelWindowSpinCountText").format(spins, Progress.getMaxFreeSpins()));
+            if (this.visible)
+                this.spinsTimer.setVisible(spins < Progress.getMaxFreeSpins());
+
+            this._updateButtonLocalization();
+        }
+    }
+
+    _updateSpinsTimer() {
+        if (this.spinsTimer) {
+            const time = gameInit.progress.getNextSpinTime() / 1000;
+            if (time <= 0) {
+                if (gameInit.progress.checkForNewSpin())
+                    this._updateSpinsCount();
+            } else
+                this.spinsTimer.setText(LocalizationManager.getLocalizization("FortuneWheelWindowCooldownText").format(timeToStringClock(time)));
+        }
+    }
+
+    _startArrowAnimation() {
+        if (this.arrowImage && !this.arrowAnimation) {
+            this.arrowImage.setPositionY(this.arrosPos.y);
+            this.arrowAnimation = animManager.moveSinInfinite(this.arrowImage, 1, 0, 50 * GlobalScale);
+        }
+    }
+
+    setWindowVisible(visible) {
+        super.setWindowVisible(visible);
+
+        if (visible) {
+            if (!this.updateListener) {
+                this.updateListener = this.updateWindow.bind(this);
+                gameInit.update.addListener(this.updateListener);
+            }
+
+            this._startArrowAnimation();
+        } else {
+            if (this.updateListener) {
+                gameInit.update.removeListener(this.updateListener);
+                this.updateListener = null;
+            }
+
+            if (this.arrowAnimation) {
+                this.arrowAnimation.stopAnimation();
+                this.arrowAnimation = null;
+            }
+        }
+        if (visible) {
+            if (this.loaded) {
+                //Refresh gold
+                this._updateTexts();
+            } else {
+                this.loaded = true;
+                const engine = this.engine;
+
+                const x = this.winInfo.backX * GlobalScale;
+                const y = this.winInfo.backY * GlobalScale;
+
+                const btnY = y + this.winInfo.buttonY * GlobalScale;
+
+                this.createActionButton(engine, this.spinWheel.bind(this), btnY, true, 1, 0, 1600 * GlobalScale, 'AdCam');
+                this.actionButtonFree = this.actionButton;
+                this.buttonLabelFree = this.buttonLabel;
+
+                this.createActionButton(engine, this.spinWheel.bind(this), btnY, true, 1, 0, 1600 * GlobalScale);
+
+                this.buttonGems = this.group.create(0, btnY, 'PriceGems').setOrigin(0, 0.5);
+
+                const backImage = 'FortuneWheelBack';
+                CreateImage(engine, x, y, backImage, (image) => {
+                    this.group.add(image);
+                    image.setDepth(WinDefaultDepth).setVisible(this.visible);
+
+                    //this.rotation = engine.rexUI.add.label();
+                    this.rotation = engine.add.container(x + this.winInfo.rotationX * GlobalScale, y + this.winInfo.rotationY * GlobalScale).setDepth(WinDefaultDepth + 10);
+                    // this.rotation.x = x - 90;
+                    // this.rotation.y = y - 110;
+                    this.rotation.angle = this.winInfo.initRotation;
+                    this.group.add(this.rotation);
+
+                    const wheel = 'FortuneWheel';
+                    LoadPreparedFile(engine, wheel, () => {
+                        this.wheel = this.rotation.create(0, 0, wheel).setDepth(WinDefaultDepth + 100);
+                        this.wheel.angle = 180;
+
+                        const arrow = 'FortuneWheelArrow';
+                        LoadPreparedFile(engine, arrow, () => {
+                            this.arrosPos = {
+                                x: x + this.winInfo.arrowX * GlobalScale,
+                                y: y + this.winInfo.arrowY * GlobalScale
+                            };
+                            this.arrowImage = this.group.create(this.arrosPos.x, this.arrosPos.y, arrow).setDepth(WinDefaultDepth + 130);
+                            this._startArrowAnimation();
+                        });
+
+                        this.header = engine.add.text(0, this.winInfo.headerY * GlobalScale - RealScreenHeight / 2, null, DefaultFontBig)
+                            .setOrigin(0.5, 0.5)
+                            .setDepth(WinDefaultDepth + 40);
+                        this.group.add(this.header);
+
+                        this.placePrizes();
+
+                        this.createLights(x, y);
+
+                        const devil = 'FortuneDevil';
+                        LoadPreparedFile(engine, devil, () => {
+                            this.group.create(x + this.winInfo.heroX * GlobalScale, y + this.winInfo.heroY * GlobalScale, devil).setDepth(WinDefaultDepth + 120);
+                        });
+
+                        this.spinsCounter = engine.add.text(0, btnY - 125 * GlobalScale, null, DefaultFont)
+                            .setOrigin(0.5, 0.5)
+                            .setDepth(WinDefaultDepth + 200);
+                        this.group.add(this.spinsCounter);
+
+                        this.spinsTimer = engine.add.text(0, btnY - 200 * GlobalScale, null, DefaultFont)
+                            .setOrigin(0.5, 0.5)
+                            .setDepth(WinDefaultDepth + 200);
+                        this.group.add(this.spinsTimer);
+
+                        this.localize();
+                    });
+                });
+            }
+
+            this._updateButtonLocalization();
+            const timer = setInterval(()=>{
+                let kill = !this.visible;
+                if (this.buttonLabel.isVisible()) {
+                    this.buttonGems.setPositionX((this.buttonLabel.x + this.buttonLabel.getWidth()));
+                    kill = true;
+                }
+                if (kill)
+                    clearInterval(timer);
+            }, 210);
+        }
+    }
+
+    getTutorialButton() {
+        return this.actionButtonFree;
+    }
+
+    createLights(backX, backY) {
+        this.lights = [];
+        const list = this.winInfo.lights;
+        const backSize = this.winInfo.backSize;
+        for (let i in list) {
+            const p = list[i];
+            const x = backX + (p.x - backSize.width / 2) * GlobalScale;
+            const y = backY + (p.y - backSize.height / 2) * GlobalScale;
+            const l = this.group.create(x, y, 'Effect_Glow').setDepth(WinDefaultDepth + 100).setScale(2);
+            l.alpha = 0.3;
+            this.lights.push(l);
+            l.setVisible(false);
+        }
+    }
+
+    placePrizes() {
+        const items = gameInit.progress.getFortuneData().getBonuses();
+        const engine = this.engine;
+        const depth = WinDefaultDepth + 100;
+        this.allPrizesText = [];
+
+        for (let i = 0;i < items.length;i++) {
+            const type = items[i].getType();
+
+            let label = null;
+            let image = null;
+            let imageAngle;
+            let labelAngle;
+
+            let radius = this.winInfo.radius * GlobalScale;
+
+            const angle = 30 + 60 * i;
+            let imgScale = 1;
+
+            let x = 0;
+            let y = 0;
+
+            switch (type) {
+                case "Gold": {
+                    image = "PriceIcon";
+                    imageAngle = angle - 15;
+
+                    label = items[i].getText();
+                    labelAngle = angle;
+                    break;
+                }
+                case "Gems": {
+                    image = "PriceGems";
+                    imageAngle = angle - 5;
+
+                    label = items[i].getText();
+                    labelAngle = angle + 10;
+                    break;
+                }
+                case "TimeTravel": {
+                    image = "FortuneItemTimeTravel";
+                    imageAngle = angle - 10;
+
+                    label = LocalizationManager.getLocalizization("FortuneWheelWindowMinutes").format(items[i].getText());
+                    labelAngle = angle + 5;
+                    break;
+                }
+                case "Box": {
+                    image = "GiftBox";
+                    imageAngle = angle;
+
+                    radius -= 10;
+                    imgScale = 0.8;
+                    break;
+                }
+                case "JackPot": {
+                    image = "PriceGems";
+                    imageAngle = angle - 5;
+
+                    label = items[i].getText();
+                    labelAngle = angle + 10;
+
+                    radius -= 50 * GlobalScale;
+
+                    if (this.winInfo.jackpotImage) {
+                        const back = engine.add.sprite(x, y, "FortuneJackpot")
+                            .setOrigin(0, 0)
+                            .setDepth(depth);
+                        this.rotation.add(back);
+                    }
+                    break;
+                }
+            }
+
+            imageAngle *= Math.PI / 180;
+            labelAngle *= Math.PI / 180;
+
+            if (image) {
+                const img = engine.add.sprite(x + radius * Math.sin(imageAngle), y - radius * Math.cos(imageAngle), image)
+                    .setScale(imgScale)
+                    .setDepth(depth);
+                img.angle = angle;
+                this.rotation.add(img);
+            }
+
+            if (label) {
+                const text = engine.add.textOld(x + radius * Math.sin(labelAngle), y - radius * Math.cos(labelAngle), label, DefaultFont)
+                    .setOrigin(0, 0.5)
+                    .setWordWrapWidth(150 * GlobalScale)
+                    .setDepth(depth);
+                text.angle = angle;
+                this.allPrizesText[i] = text;
+                this.rotation.add(text)
+            }
+        }
+    }
+
+    _updateTexts() {
+        const items = gameInit.progress.getFortuneData().getBonuses();
+        for (let i = 0;i < items.length;i++) {
+            if (items[i].needToUpdate() && this.allPrizesText[i]) {
+                this.allPrizesText[i].setText(items[i].getText());
+            }
+        }
+    }
+
+    rotateWheel(deltaTime) {
+        if (this.rotationLeft <= 0) {
+            this.stopWheel();
+
+            gameInit.progress.spendSpin();
+            this._updateSpinsCount();
+            this._updateSpinsTimer();
+
+            this.reward.activateBonus();
+            setTimeout(()=> {
+                if (this.visible)
+                    this._updateTexts();
+            }, 1000);
+        } else {
+            if (this.rotationSpeed >= 50)
+                this.rotationSpeed *= 0.996;
+
+            const speed = this.rotationSpeed;
+
+            const angle = speed * deltaTime;
+            this.rotation.angle += angle;
+            this.rotationLeft -= angle;
+        }
+    }
+
+    updateWindow(deltaTime) {
+        if (this.listener) {
+            this.rotateWheel(deltaTime);
+        }
+
+        if (this.timeToUpdate <= 0 && this.spinsTimer && this.spinsTimer.visible) {
+            this.timeToUpdate = 1;
+            this._updateSpinsTimer();
+        } else
+            this.timeToUpdate -= deltaTime;
+
+        if (this.lights) {
+            this.lightTime += deltaTime;
+            switch (this.lightAnimation) {
+                case 1: {
+                    if (this.lightTime > 0.05) {
+                        this.lightTime = 0;
+                        this.lights[this.lightIndex].setVisible(false);
+                        this.lightIndex = (this.lightIndex - 1);
+                        if (this.lightIndex < 0)
+                            this.lightIndex = this.lights.length - 1;
+                        this.lights[this.lightIndex].setVisible(true);
+                    }
+                    break;
+                }
+                case 2: {
+                    if (this.lightTime > 0.2) {
+                        this.lightTime = 0;
+                        this.lightIndex = (this.lightIndex + 1) % 2;
+                        for (let i in this.lights)
+                            this.lights[i].setVisible((i % 2) === this.lightIndex);
+                    }
+                    break;
+                }
+            }
+        }
+    }
+
+    stopWheel() {
+        this.listener = false;
+        this.lightAnimation = 2;
+        if (this.arrowAnimation) {
+            this.arrowAnimation.stopAnimation();
+            this.arrowAnimation = null;
+        }
+
+        this.arrowImage.setPositionY(this.arrosPos.y + 50);
+
+        unlockGUI();
+    }
+
+    spinWheel() {
+        if (!this.listener) {
+
+            const func = () => {
+                eventManager.fortuneWheelUsed();
+                gameAnalytics.sendEvent("Ad_Wheel");
+                this._startArrowAnimation();
+                this.lightAnimation = 1;
+
+                const items = gameInit.progress.getFortuneData().getBonuses();
+                this.rotationSpeed = 800;
+
+                let ind = Math.random() * 100;
+                let index = 0;
+                for (let i = 0; i < items.length; i++) {
+                    const chance = items[i].getChance();
+                    if (ind <= chance) {
+                        index = i;
+                        break;
+                    } else
+                        ind -= chance;
+                }
+
+                const finalAngle = (60 * (5 - index) + 360 * 8 + 30);// + 5 + Math.random() * 50 + 360);
+                this.rotation.angle = this.rotation.angle % 360;
+
+                this.reward = items[index];
+                this.rotationLeft = finalAngle - this.rotation.angle;
+                // this.time = (finalAngle - this.rotation.angle) / this.rotationSpeed;
+                this.listener = true;
+
+                lockGuiEverything();
+                this.exitButton.ignoreTutorial = false;
+            };
+
+            if (gameInit.progress.getFreeSpinsCount() <= 0) {
+                if (!gameInit.progress.isGemsEnough(GEMS_PRICE_FOR_WHEEL_SPIN * RESOURCES_SCALE)) {
+                    guiManager.openNewWindow(WindowType.WinNotEnoughGems);
+                } else {
+                    gameInit.progress.gemsSpent(GEMS_PRICE_FOR_WHEEL_SPIN * RESOURCES_SCALE);
+                    func();
+                }
+            } else {
+                this.exitButton.ignoreTutorial = false;
+                PlayRewardedAd(func);
+            }
+        }
+    }
+}
+
+class WinQuests extends WinWithBrownBack {
+    constructor(gui, gameInit) {
+        super(gui, gameInit);
+    }
+
+    createGame(engine) {
+        super.createGame(engine);
+        this.questGroups = [];
+        this.prepareWindow(engine);
+
+        eventManager.onActionQuestProgress.addListener(this._actionQuestProgress.bind(this));
+    }
+
+    _actionQuestProgress() {
+        if (this.visible) {
+            const qm = gameInit.questsManager;
+            for (let i = 0; i < this.questGroups.length; i++)
+                this._applyQuestInfo(this.questGroups[i], qm.getQuestInfo(i));
+        }
+    }
+
+    _getYPosForQuest(index) {
+        return this.centerY + (index - 1) * this.winInfo.distance * GlobalScale + this.winInfo.centerY * GlobalScale;
+    }
+
+    prepareWindow(engine) {
+        this.header = engine.add.text(this.centerX, 70 * GlobalScale, null, DefaultFont)
+            .setOrigin(0.5, 0)
+            .setDepth(WinDefaultDepth + 1);
+
+        this.group.add(this.header);
+
+        this.timerText = engine.add.text(RealScreenWidth - 50, RealScreenHeight - 100 * GlobalScale, null, DefaultFont)
+            .setOrigin(1, 0.5)
+            .setDepth(WinDefaultDepth + 1);
+        this.group.add(this.timerText);
+
+        this.noQuestsText = engine.add.text(this.centerX, this.centerY + 500 * GlobalScale, null, DefaultFont)
+            .setOrigin(0.5, 0.5)
+            .setDepth(WinDefaultDepth + 1);
+        this.group.add(this.noQuestsText);
+
+        LoadPreparedFile(this.engine, this.winInfo.noMoreQuestsIcon, () => {
+            this.noQuestsTextIcon = this.group.create(this.centerX, this.centerY - 100 * GlobalScale, this.winInfo.noMoreQuestsIcon).setDepth(WinDefaultDepth + 1);
+            this.group.add(this.noQuestsTextIcon);
+            this.noQuestsTextIcon.setVisible(this.group.visible && this.noQuestsTextIconVisible || false);
+        });
+
+        for (let i = 0; i < 3; i++) {
+            const group = engine.add.container();
+            const info = group;
+
+            info.index = i;
+            group.setPosition(this.centerX, this._getYPosForQuest(i));
+            group.depth = WinDefaultDepth;
+
+            group.create(0, 0, 'QuestBack').setDepth(WinDefaultDepth);
+            // CreateImageInGroup(engine, group, 'QuestBack', (image) => {
+            //     image.setDepth(WinDefaultDepth);//.visible = this.visible;
+            // });
+
+            info.button = new ButtonWithText(group, {
+                'scene': engine,
+                'key': 'DefaultButton',
+                'x': 0 * GlobalScale,
+                'y': 170 * GlobalScale,
+                'minWidth' : 800 * GlobalScale
+            }, () => this._collectQuest(i))
+                .setDepth(WinDefaultDepth + 1);
+
+            info.refreshButton = new BasicButton(group, {
+                'scene': engine,
+                'key': 'Quests_RefreshBtn',
+                'x': -460 * GlobalScale,
+                'y': -170 * GlobalScale,
+            }, () => this._replaceQuest(i))
+                .setDepth(WinDefaultDepth + 1);
+
+            info.loader = new Loader(group, 'Quests_ProgressBar', 'Quests_ProgressFill', -60 * GlobalScale, 50 * GlobalScale);
+
+            info.progress = engine.add.text(120 * GlobalScale, 50 * GlobalScale, null, DefaultFontSmall)
+                .setOrigin(0, 0.5)
+                .setDepth(WinDefaultDepth + 1);
+            group.add(info.progress);
+
+            const rightPrizeX = 370 * GlobalScale;
+            info.prizes = engine.add.text(rightPrizeX, -70 * GlobalScale, null, DefaultFontSmall)
+                .setOrigin(0.5, 0.5)
+                .setDepth(WinDefaultDepth + 1);
+            group.add(info.prizes);
+
+            CreateImageInGroup(engine, group, 'PriceGems', (image) => {
+                image.setPosition(rightPrizeX, 10 * GlobalScale);
+                image.setDepth(WinDefaultDepth);
+            });
+
+            info.xLabel = engine.add.text(rightPrizeX + 20 * GlobalScale, 30 * GlobalScale, null, DefaultFontSmall)
+                .setOrigin(0, 0.5)
+                .setDepth(WinDefaultDepth + 1);
+            group.add(info.xLabel);
+
+            info.description = engine.add.text(0, -50 * GlobalScale, null, DefaultFontSmallBlack)
+                .setOrigin(0.5, 0.5)
+                .setWordWrapWidth(500 * GlobalScale)
+                .setDepth(WinDefaultDepth + 1);
+            group.add(info.description);
+
+            this.questGroups.push(info);
+            this.group.add(group);
+        }
+
+        if (TEST_MODE)
+            this.createButton('MM_Btn_Worlds', 100, 100, () => this._testQuests());
+
+        SetGroupVisible(this.group, false);
+    }
+
+    _testQuests() {
+        gameInit.questsManager.activateRandomQuests(0);
+        this.setWindowVisible(true);
+    }
+
+    localize() {
+        super.localize();
+
+        this.header.setText(LocalizationManager.getLocalizization("DailyQuestsTitle"));
+        this.noQuestsText.setText(LocalizationManager.getLocalizization("DailyQuestsNoQuestsLabel"));
+
+        const prizesString = LocalizationManager.getLocalizization("DailyQuestsRewardLabel");
+        for (let i in this.questGroups) {
+            const group = this.questGroups[i];
+            this._applyQuestButtonLocalization(group, gameInit.questsManager && gameInit.questsManager.getQuestInfo(i));
+            group.prizes.setText(prizesString);
+        }
+    }
+
+    _applyQuestButtonLocalization(group, quest) {
+        group.button.caption.setText(quest && quest.hasAction() && !this._isQuestCompleted(group.index) ? LocalizationManager.getLocalizization("BanjoManTipStart") : LocalizationManager.getLocalizization("DailyQuestsCollectBtn"));
+    }
+
+    _applyQuestInfo(group, quest) {
+        if (!quest.canDisplayQuest()) {
+            group.setVisible(false);
+            return false;
+        }
+
+        group.setVisible(true);
+
+        const info = quest.info;
+
+        const current = Math.min(quest.progress, quest.count);
+        group.xLabel.setText("x" + quest.getRewardForUI());
+        group.description.setText(LocalizationManager.getLocalizization(info.info).format(quest.count));
+        group.progress.setText(current + '/' + quest.count);
+        group.loader.setProgress(current / quest.count);
+
+        this._applyQuestButtonLocalization(group, quest);
+
+        const completed = this._isQuestCompleted(group.index);
+        group.button.setButtonLocked(!completed && !quest.hasAction());
+
+        group.refreshButton.setVisible(quest.canReplaceQuest() && !completed);
+
+        const icon = "Quest_" + info.type;
+        const path = VisualData.getQuestIcons() + info.type + ".png";
+        LoadFile(this.engine, icon, path, () => {
+            if (this.visible) {
+                if (group.icon)
+                    group.icon.destroy(true);
+                group.icon = this.engine.add.sprite(-370 * GlobalScale, 0, icon).setDepth(WinDefaultDepth + 1);
+                group.add(group.icon);
+                if (this.winInfo.iconsScale)
+                    group.icon.setScale(this.winInfo.iconsScale);
+            }
+        });
+        return true;
+    }
+
+    _replaceQuest(index) {
+        const qm = gameInit.questsManager;
+        qm.replaceQuest(index);
+
+        this._applyQuestInfo(this.questGroups[index], qm.getQuestInfo(index));
+    }
+
+    _isQuestCompleted(index) {
+        const qm = gameInit.questsManager;
+        const quest = qm.getQuestInfo(index);
+        return quest.progress >= quest.count;
+    }
+
+    _collectQuest(index) {
+        const qm = gameInit.questsManager;
+        const quest = qm.getQuestInfo(index);
+        if (quest.progress >= quest.count) {
+            this.questGroups[index].setVisible(false);
+            quest.claimReward();
+            let dec = 1;
+            for (let i = 0; i < index; i++)
+                if (!this.questGroups[i].visible)
+                    dec++;
+            for (let i = index + 1; i < this.questGroups.length; i++) {
+                if (this.questGroups[i].visible) {
+                    const pos = {
+                        x: this.centerX,
+                        y: this._getYPosForQuest(i - dec)
+                    };
+                    animManager.moveToPointExtra(this.questGroups[i], pos, 0.1, 0.4);
+                } else
+                    dec++;
+            }
+        } else {
+            if (quest.hasAction())
+                quest.useAction();
+        }
+        this._checkForNoQuests();
+    }
+
+    _updateTimer() {
+        this.timerText.setText(LocalizationManager.getLocalizization("DailyQuestsTimer").format(timeToStringClock(Progress.getTimeTillTheNextDay())));
+    }
+
+    _checkForNoQuests() {
+        let visible = true;
+        for (let i = 0; i < this.questGroups.length; i++) {
+            if (this.questGroups[i].visible) {
+                visible = false;
+                break;
+            }
+        }
+
+        this.noQuestsTextIconVisible = visible;
+        this.noQuestsTextIcon.setVisible(visible);
+        this.noQuestsText.setVisible(visible);
+    }
+
+    setWindowVisible(visible) {
+        super.setWindowVisible(visible);
+
+        if (visible) {
+            const qm = gameInit.questsManager;
+            let dec = 0;
+            for (let i = 0; i < this.questGroups.length; i++) {
+                if (!this._applyQuestInfo(this.questGroups[i], qm.getQuestInfo(i)))
+                    dec++;
+
+                this.questGroups[i].setPositionY(this._getYPosForQuest(i - dec));
+            }
+            if (!this.timer) {
+                this.timer = setInterval(() => this._updateTimer(), 1000);
+                this._updateTimer();
+            }
+            this._checkForNoQuests();
+        } else {
+            if (this.timer) {
+                clearInterval(this.timer);
+                this.timer = null;
+            }
+        }
+    }
+}
+
+class WinHarvested extends WinBase {
+    constructor(gui, gameInit){
+        super(gui, gameInit);
+        this.cansCount = 20;
+    }
+
+    createGame(engine) {
+        super.createGame(engine);
+        this._createBlackBackground();
+    }
+
+    setWindowVisible(visible) {
+        super.setWindowVisible(visible);
+        if (visible) {
+            if (!this.header) {
+                const icon = 'collectCropSplash';
+                LoadPreparedFile(this.engine, icon, () => {
+                    this.destroyImage();
+                    if (this.visible) {
+                        this.group.create(0, 0, icon).setDepth(WinDefaultDepth - 10);
+
+                        if (!this.header) {
+                            this.header = this.engine.add.text(0, -600 * GlobalScale, null, DefaultFontBig)
+                                .setOrigin(0.5, 0.5)
+                                .setWordWrapWidth(1200 * GlobalScale)
+                                .setDepth(WinDefaultDepth);
+                            this.group.add(this.header);
+
+                            this.description = this.engine.add.text(0, RealScreenHeight / 2 - 400 * GlobalScale, this.seeds ? this._getDescription() : null, DefaultFontBig)
+                                .setOrigin(0.5, 0.5)
+                                .setWordWrapWidth(1200 * GlobalScale)
+                                .setDepth(WinDefaultDepth);
+                            this.group.add(this.description);
+
+                            this.createActionButton(this.engine, this.closeWindow.bind(this), RealScreenHeight / 2 - 150 * GlobalScale, true).setText(LocalizationManager.getLocalizization("ButtonOk"));
+                            this.addButton(this.actionButton);
+                        }
+
+                        this.header.setText(LocalizationManager.getLocalizization("CollectCropSplash"));
+                        this._hideUIForAnimation();
+                    }
+                });
+            } else
+                this._hideUIForAnimation();
+
+            this._startAnimation().then(() => {
+                this.header.setVisible(true);
+                animManager.applyWinOpenAnimation(this.header, ()=>{
+                    this.description.setVisible(true);
+                    animManager.applyWinOpenAnimation(this.description, ()=> {
+                        this.actionButton.setVisible(true);
+                        this.buttonLabel.setVisible(true);
+                        animManager.applyButtonShowAnimation(this.actionButton);
+                    });
+                })
+            });
+        } else {
+            this._sendCansToResoruces();
+        }
+    }
+
+    _hideUIForAnimation() {
+        this.header.setVisible(false);
+        this.description.setVisible(false);
+        this.actionButton.setVisible(false);
+        this.buttonLabel.setVisible(false);
+    }
+
+    timeout(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    async _sendCansToResoruces() {
+        if (this.cans) {
+            for (let i in this.cans) {
+                const icon = this.cans[i];
+                animManager.moveToPoint(icon, cansResourceIcon, 0.5, ()=>{
+                    icon.destroy(true);
+                    animManager.changeShapeOfSouls(cansResourceIcon);
+                });
+                await this.timeout(100);
+            }
+        }
+        this.cans = null;
+    }
+
+    async _startAnimation() {
+        this.cans = [];
+        const radius = 400 * GlobalScale;
+        for (let i = 0; i < this.cansCount;i++) {
+            const angle = Math.PI * 2* Math.random();
+            const r = radius * (Math.random() * 0.7 + 0.3);
+            const can = this.engine.add.sprite(this.centerX + r * Math.sin(angle), this.centerY + r * Math.cos(angle), "PriceSeeds")
+                .setDepth(WinDefaultDepth + 100);
+            this.cans.push(can);
+
+            await this.timeout(100);
+        }
+
+        return Promise.resolve(true);
+    }
+
+    _getDescription() {
+        return LocalizationManager.getLocalizization("CollectCropSplashText").format(LocalizationManager.getLocalizedNumber(this.seeds));
+    }
+
+    setApplesAcount(seeds) {
+        this.seeds = seeds;
+        if (this.description)
+            this.description.text = this._getDescription();
+    }
+}
+
+class WinSettings extends WinWithExit {
+    constructor(gui, gameInit){
+        super(gui, gameInit);
+    }
+
+    createGame(engine) {
+        super.createGame(engine);
+        this._createBlackBackground();
+    }
+
+    createGame(engine) {
+        super.createGame(engine);
+        this._createBlackBackground();
+    }
+
+    localize() {
+        super.localize();
+
+        if (this.header)
+            this.header.setText(LocalizationManager.getLocalizization("ButtonChangeLanguage"));
+
+        if (this.soundsText)
+            this.soundsText.setText(LocalizationManager.getLocalizization("SettingsSound"));
+
+        if (this.musicText)
+            this.musicText.setText(LocalizationManager.getLocalizization("SettingsMusic"));
+    }
+
+    setWindowVisible(visible) {
+        super.setWindowVisible(visible);
+
+        if (visible && !this.initialized) {
+            this.initialized = true;
+
+            const distanceX = 300 * GlobalScale;
+            const distanceY = 250 * GlobalScale;
+            const columns = 5;
+
+            this.header = this.addText(0, - 100 * GlobalScale);
+
+            const allLanguages = VisualData.getAllLanguages();
+            let index = 0;
+            for (let i in allLanguages) {
+                const lang = allLanguages[i];
+                const name = 'Language_' + lang;
+                const x = (i % columns - (columns - 1) / 2) * distanceX;
+                const y = 100 * GlobalScale + Math.trunc(i / columns) * distanceY;
+                LoadPreparedFile(this.engine, name, () => {
+                    this.createButton(name, x, y, ()=>{
+                        SetCurrentLanguage(lang);
+                    });
+                });
+                index++;
+            }
+
+            this.settingsButtons = {};
+
+            const posX = 300 * GlobalScale;
+            const posY = -550 * GlobalScale;
+            const textDist = 200 * GlobalScale;
+
+            this.soundsText = this.addText(-posX, posY + textDist);
+            this.musicText = this.addText(posX, posY + textDist);
+
+            this.loadAndCreateButton("Sounds_On", -posX, posY, ()=>{
+                this.settingsButtons["Sounds_Off"].setVisible(true);
+                this.settingsButtons["Sounds_On"].setVisible(false);
+                SetSoundsState(false);
+            }, ()=>{
+                return !GameSettings.soundsOff;
+            });
+
+            this.loadAndCreateButton("Sounds_Off", -posX, posY, ()=>{
+                this.settingsButtons["Sounds_On"].setVisible(true);
+                this.settingsButtons["Sounds_Off"].setVisible(false);
+                SetSoundsState(true);
+            }, ()=>{
+                return !!GameSettings.soundsOff;
+            });
+
+            this.loadAndCreateButton("Music_On", posX, posY, ()=>{
+                this.settingsButtons["Music_Off"].setVisible(true);
+                this.settingsButtons["Music_On"].setVisible(false);
+                SetMusicState(false);
+            }, ()=>{
+                return !GameSettings.musicOff;
+            });
+
+            this.loadAndCreateButton("Music_Off", posX, posY, ()=>{
+                this.settingsButtons["Music_On"].setVisible(true);
+                this.settingsButtons["Music_Off"].setVisible(false);
+                SetMusicState(true);
+            }, ()=>{
+                return !!GameSettings.musicOff;
+            });
+
+            this.localize();
+
+            const version = this.engine.add.text(RealScreenWidth / 2 - 50, RealScreenHeight / 2 - 50, "v" + GAME_VERSION, DefaultFontSmall)
+                .setOrigin(1, 0.5)
+                .setDepth(WinDefaultDepth + 40);
+
+            this.group.add(version);
+
+            if (TEST_MODE)
+                this.createButton('MM_Btn_Worlds', RealScreenWidth / 2 - 100, 0, () => gameInit.progress.resetProgress());
+        } else {
+            this.setButtonVisible("Sounds_On", !GameSettings.soundsOff);
+            this.setButtonVisible("Sounds_Off", !!GameSettings.soundsOff);
+            this.setButtonVisible("Music_On", !GameSettings.musicOff);
+            this.setButtonVisible("Music_Off", !!GameSettings.musicOff);
+        }
+    }
+
+    addText(x, y) {
+        const text = this.engine.add.text(x, y, null, DefaultFontBig)
+            .setOrigin(0.5, 0.5)
+            .setDepth(WinDefaultDepth + 40);
+
+        this.group.add(text);
+        return text;
+    }
+
+    loadAndCreateButton(name, x, y, action, isVisible) {
+        LoadPreparedFile(this.engine, name, () => {
+            const b = this.createButton(name, x, y, action);
+            this.settingsButtons[name] = b;
+            b.setVisible(isVisible());
+        });
+    }
+
+    setButtonVisible(name, visible) {
+        const btn = this.settingsButtons[name];
+        if (btn)
+            btn.setVisible(visible);
+    }
+}
+
+class WinConstruct extends WinWithBack {
+    constructor(gui, gameInit){
+        super(gui, gameInit);
+    }
+
+    setWindowVisible(visible) {
+        super.setWindowVisible(visible);
+    }
+
+    localize() {
+        super.localize();
+        this.buttonLabel.setText(LocalizationManager.getLocalizization("BuySlotButtonText"));
+    }
+
+    createGame(engine) {
+        super.createGame(engine);
+
+        this.createActionButton(engine, this.constructBuilding.bind(this), null, false, null, null, 500);
+        this.createHeader(engine);
+    }
+
+    constructBuilding() {
+        this.building.upgradeBuilding();
+        this.closeWindow();
+    }
+
+    setInfo(building) {
+        const icon = building.getBigIcon();
+        this.building = building;
+        LoadFile(this.engine, icon, building.getBigIconPath(), () => {
+            this.destroyImage();
+            if (this.visible)
+                this.image = this.group.create(0, -30 * GlobalScale, icon).setDepth(WinDefaultDepth + 1);
+        });
+
+        this.header.setText(LocalizationManager.getLocalizization(building.getLocalizationKey()));
+    }
+}
+
+class WinUpgrade extends WinWithExit {
+    closeWindow(){
+        super.closeWindow();
+        this.gui.changeMode(GUIMode.Normal);
+    }
+
+    setWindowVisible(visible) {
+        super.setWindowVisible(visible);
+        hudResources.setVisible(visible);
+
+        this._clearTimer();
+        if (visible) {
+            this.label.setVisible(guiManager.guiMode === GUIMode.Likes);
+            this.resetTimer.setVisible(guiManager.guiMode === GUIMode.Likes);
+
+            if (guiManager.guiMode === GUIMode.Likes) {
+                this.timer = setInterval(() => {
+                    this._updateTimer();
+                }, 1000);
+
+                this._updateTimer();
+            }
+        }
+    }
+
+    _updateTimer() {
+        if (gameInit.progress.isLikesTimerActive()) {
+            this.resetTimer.setVisible(true);
+            this.resetTimer.setText(timeToStringClock(Math.trunc(gameInit.progress.getLikesTimeleft()/1000)));
+        } else
+            this.resetTimer.setVisible(false);
+    }
+
+    _clearTimer() {
+        if (this.timer) {
+            clearInterval(this.timer);
+            this.timer = null;
+        }
+    }
+
+    localize() {
+        super.localize();
+        this.label.setText(LocalizationManager.getLocalizization("LikesInfoText"));
+    }
+
+    createGame(engine) {
+        super.createGame(engine);
+
+        this.label = engine.add.text(0, RealScreenHeight / 2 - 200 * GlobalScale, null, DefaultFontBig)
+            .setOrigin(0.5, 0.5)
+            .setDepth(WinDefaultDepth);
+        this.group.add(this.label);
+
+        this.resetTimer = engine.add.text(0, RealScreenHeight / 2 - 100 * GlobalScale, null, DefaultFont)
+            .setOrigin(0.5, 0.5)
+            .setDepth(WinDefaultDepth);
+        this.group.add(this.resetTimer);
+    }
+}
+
+class WinBossProccess extends WinBase{
+    constructor(gui, gameInit) {
+        super(gui, gameInit);
+        this.enableClickables = true;
+    }
+
+    localize() {
+        super.localize();
+        this.description.setText(LocalizationManager.getLocalizization("CollectCropTipText"));
+    }
+
+    createGame(engine) {
+        super.createGame(engine);
+
+        this.description = engine.add.text(0, -RealScreenHeight/2 + 100 * GlobalScale, null, DefaultFont)
+            .setOrigin(0.5, 0.5)
+            .setDepth(WinDefaultDepth);
+        this.description.visible = false;
+        this.group.add(this.description);
+    }
+
+    // setWindowVisible(visible) {
+    //     super.setWindowVisible(visible);
+    //
+    //     if (visible) {
+    //         this.loadImage('CollectCrop', this.centerX, 200);
+    //     }
+    // }
+}
+
+class WinWithPicture extends WinWithBack {
+    constructor(gui, gameInit, info){
+        super(gui, gameInit);
+        this.info = info;
+    }
+
+    applyWinInfo(key) {
+        super.applyWinInfo(key);
+        if (!this.winInfo)
+            super.applyWinInfo("GUI_WinWithPicture");
+    }
+
+    localize() {
+        super.localize();
+
+        if (this.header)
+            this.header.setText(LocalizationManager.getLocalizization(this.info.header));
+        if (this.description)
+            this.description.setText(LocalizationManager.getLocalizization(this.info.description));
+        if (this.buttonLabel)
+            this.buttonLabel.setText(LocalizationManager.getLocalizization(this.info.button));
+    }
+
+    createExitButton() {
+        if (!this.info.no_exit)
+            super.createExitButton();
+    }
+
+    createGame(engine) {
+        super.createGame(engine);
+
+        if (this.info.button)
+            this.createActionButton(engine, this.actionClicked.bind(this), null, true, null, null, this.info.btn_min_width, this.info.icon);
+        if (this.info.header)
+            this.createHeader(engine);
+
+        if (this.info.description) {
+            this.description = engine.add.text(this.getWinInfoValue("descriptionX", 0), this.getWinInfoValue("descriptionY", -300), null, this.info.smallFont ? DefaultFontSmallBlack : DefaultFontBlack)
+                .setWordWrapWidth((this.info.wordWrapWidth || 900) * GlobalScale)
+                .setOrigin(0.5, 0.5)
+                .setDepth(WinDefaultDepth);
+            this.group.add(this.description);
+        }
+    }
+
+    actionClicked() {
+        this.closeWindow();
+        if (this.info.action)
+            this.info.action();
+    }
+
+    setWindowVisible(visible) {
+        super.setWindowVisible(visible);
+
+        if (visible) {
+            let x = (this.info.imageX || 0);
+            let y = (this.info.imageY || 100);
+            if (this.winInfo) {
+                if (this.winInfo.imageX)
+                    x += this.winInfo.imageX;
+                if (this.winInfo.imageY)
+                    y += this.winInfo.imageY;
+            }
+            this.loadImage(this.info.image, x * GlobalScale, y * GlobalScale);
+        }
+        else
+            this.destroyImage();
+    }
+}
+
+
+class WinBossSummon extends WinWithPicture {
+
+    setWindowVisible(visible) {
+        super.setWindowVisible(visible);
+
+        if (visible) {
+            const seeds = LocalizationManager.getLocalizedNumber(this.gameInit.progress.getSeedsForSoulsCount());
+            this.description.setText(LocalizationManager.removeCodes(LocalizationManager.getLocalizization(this.info.description)
+                .format(seeds)));
+        }
+    }
+}
+
+class WinWithUnlockedExitButton extends WinWithPicture {
+
+    createGame(engine) {
+        super.createGame(engine);
+        this.exitButton.ignoreTutorial = true;
+    }
+}
+
+class WinGuard extends WinWithUnlockedExitButton {
+
+    setWindowVisible(visible) {
+        super.setWindowVisible(visible);
+
+        if (visible) {
+            this.description.setText(LocalizationManager.getLocalizization(this.info.description)
+                .format(GuardDurationHours));
+        }
+    }
+}
+
+class WinBanjoEnd extends WinWithPicture {
+
+     setWindowVisible(visible) {
+        super.setWindowVisible(visible);
+
+        if (visible) {
+            this.description.setText(LocalizationManager.getLocalizization(this.info.description)
+                .format(LocalizationManager.getLocalizedNumber(gameInit.progress.getSupervisorResourcesCollected())));
+        }
+    }
+}
+
+class WinBanjoPreEnd extends WinWithPicture {
+
+    createGame(engine) {
+        super.createGame(engine);
+
+        this.description2 = engine.add.text(this.info.descriptionX * GlobalScale, this.info.descriptionY * GlobalScale, null, DefaultFontVeryBig)
+            .setOrigin(0.5, 0.5)
+            .setDepth(WinDefaultDepth);
+        this.group.add(this.description2);
+    }
+
+    imageWasLoaded() {
+        super.imageWasLoaded();
+
+        if (!this.amplitudeImage) {
+            this.amplitudeImage = animManager.scaleSinInfinite(this.image, 0.6, 0.9, 0.1);
+        }
+    }
+
+    setWindowVisible(visible) {
+        super.setWindowVisible(visible);
+
+        if (visible) {
+            const max = gameInit.progress.getSupervisorResourcesCollected();
+            const steps = 40;
+            const step = max.divide(steps);
+            let curStep = 1;
+            let current = step;
+
+            let amplitudeDesc = animManager.scaleSinInfinite(this.description2, 0.6, 0.8, 0.2);
+
+            let timer = setInterval(()=>{
+                curStep++;
+                if (curStep === steps) {
+                    this.description2.setText(LocalizationManager.getLocalizedNumber(max));
+                    clearInterval(timer);
+
+                    amplitudeDesc.stopAnimation();
+                    if (this.amplitudeImage) {
+                        this.amplitudeImage.stopAnimation();
+                        this.amplitudeImage = null;
+                    }
+
+                    setTimeout(()=>{
+                        guiManager.openNewWindow(WindowType.WinBanjoEnd, true);
+                    }, 2000);
+                } else {
+                    current = current.add(step);
+                    this.description2.setText(LocalizationManager.getLocalizedNumber(current));
+                }
+            }, 100);
+        }
+    }
+}
+
+class WinTimeTravel extends WinWithPicture {
+
+    setTravelTime(minutes, image) {
+        this.minutes = minutes;
+        this.info.image = image;
+    }
+
+    setWindowVisible(visible) {
+        super.setWindowVisible(visible);
+
+        if (visible) {
+            this.description.setText(LocalizationManager.getLocalizization(this.info.description)
+                .format(this.minutes));
+        }
+    }
+}
+
+class WinInAppBought extends WinWithPicture {
+    setInAppData(data) {
+        this.description.setText(LocalizationManager.getLocalizization(this.info.description) + "\n" + data.originalGems);
+    }
+}
+
+class WinAppleDescription extends WinWithPicture {
+
+    localize() {
+        super.localize();
+
+        this.profitBonus.setText(LocalizationManager.getLocalizization("SeedInfoProfitBonus"));
+        this.totalBonus.setText(LocalizationManager.getLocalizization("SeedInfoTotalProfit"));
+        this.label1.setText(LocalizationManager.getLocalizization("SeedInfoBiggerFarm") + " " + LocalizationManager.getLocalizization("SeedInfoGetSeeds"));
+        // this.label2.text = LocalizationManager.getLocalizization("SeedInfoGetSeeds");
+    }
+
+    setWindowVisible(visible) {
+        super.setWindowVisible(visible);
+
+        if (visible) {
+            this.profitNumber.setText(this.gameInit.progress.getBonusPerSeed() + '%');
+            this.totalNumber.setText(LocalizationManager.getLocalizedNumber(this.gameInit.progress.getTotalSeedsBonus().minus(1).multiply(100 * RESOURCES_SCALE)) + '%');
+        }
+    }
+
+    createGame(engine) {
+        super.createGame(engine);
+
+        const info = this.winInfo;
+
+        const distanceX = (info ? info.distanceX : 430) * GlobalScale;
+        const startY = (info ? info.startY : -300) * GlobalScale;
+        const centerX = (info ? info.centerX : 0) * GlobalScale;
+        const distanceY = (info ? info.distanceY : 75) * GlobalScale;
+
+        let y = startY;
+        this.profitBonus = engine.add.text(centerX - distanceX, y, null, DefaultFontBlack)
+            .setOrigin(0, 0.5)
+            .setDepth(WinDefaultDepth);
+        this.group.add(this.profitBonus);
+
+        this.profitNumber = engine.add.text(centerX + distanceX, y, null, DefaultFontBlack)
+            .setOrigin(1, 0.5)
+            .setDepth(WinDefaultDepth);
+        this.group.add(this.profitNumber);
+
+        y += distanceY;
+        this.totalBonus = engine.add.text(centerX - distanceX, y, null, DefaultFontBlack)
+            .setOrigin(0, 0.5)
+            .setDepth(WinDefaultDepth);
+        this.group.add(this.totalBonus);
+
+        this.totalNumber = engine.add.text(centerX + distanceX, y, null, DefaultFontBlack)
+            .setOrigin(1, 0.5)
+            .setDepth(WinDefaultDepth);
+        this.group.add(this.totalNumber);
+
+        y += 1 * distanceY;
+        this.label1 = engine.add.text(centerX, y, null, DefaultFontSmallBlack)
+            .setOrigin(0.5, 0)
+            .setWordWrapWidth(900 * GlobalScale)
+            .setDepth(WinDefaultDepth);
+        this.group.add(this.label1);
+
+        // y += distanceY;
+        // this.label2 = engine.add.text(centerX, y, null, DefaultFontBlack)
+        //     .setOrigin(0.5, 0.5)
+        //     .setDepth(WinDefaultDepth);
+        // this.group.add(this.label2);
+    }
+}
+
+
+class MyResources {
+    constructor(gui, gameInit) {
+        this.gui = gui;
+
+        gameInit.create.addListener(this.createGame.bind(this));
+        gameInit.loaded.addListener(this.gameWasLoaded.bind(this));
+        gameInit.onResourcesUpdated.addListener(this.resourcesUpdate.bind(this));
+    }
+}
+
+class WinMain extends WinBase{
+    constructor(gui, gameInit) {
+        super(gui, gameInit);
+
+        this.enableClickables = true;
+        this.hudResources = new HUDResources(gameInit);
+        gameInit.onWorldChanged.addListener(this.worldChanged.bind(this));
+    }
+
+    setAllButtonsVisible(visible) {
+        super.setAllButtonsVisible(visible);
+        if (visible)
+            this.worldChanged(gameInit.selectedWorld);
+    }
+
+    setWindowVisible(visible) {
+        super.setWindowVisible(visible);
+        hudResources.setVisible(visible);
+        this.worldChanged(gameInit.selectedWorld);
+    }
+
+    worldChanged(worldIndex) {
+        if (!this.worldbtn2_Inverse)
+            return;
+
+        if (!gameInit.progress.isWorldChangeAvailable()) {
+            this.worldbtn_Inverse.setForceInvisible(true);
+            this.worldbtn.setForceInvisible(true);
+            this.worldbtn2_Inverse.setForceInvisible(true);
+            this.worldbtn2.setForceInvisible(true);
+            return;
+        }
+
+        switch (parseInt(worldIndex)) {
+            case 1:
+                this.worldbtn_Inverse.setForceInvisible(true);
+                this.worldbtn.setForceInvisible(false);
+
+                this.worldbtn2_Inverse.setForceInvisible(true);
+                this.worldbtn2.setForceInvisible(false);
+                break;
+            case 3:
+                this.worldbtn_Inverse.setForceInvisible(false);
+                this.worldbtn.setForceInvisible(true);
+
+                this.worldbtn2_Inverse.setForceInvisible(true);
+                this.worldbtn2.setForceInvisible(false);
+                break;
+            case 2:
+                this.worldbtn_Inverse.setForceInvisible(true);
+                this.worldbtn.setForceInvisible(false);
+
+                this.worldbtn2_Inverse.setForceInvisible(false);
+                this.worldbtn2.setForceInvisible(true);
+                break;
+        }
+    }
+
+    playOpenAnimation() {
+
+    }
+
+    createButtonsVertical() {
+        const width = RealScreenWidth;
+        const centerX = this.centerX;
+        const centerY = this.centerY;
+        let posY = centerY + RealScreenHeight / 2 - 150 * GlobalScale;
+        const delta = width / 4;
+
+        this.createButton('MM_Btn_Login', centerX - delta * 1.5, posY, () => this.gui.openNewWindow(WindowType.WinBossSummon));
+        this.upgradeButton = this.createButton('MM_Btn_Upgrade', centerX - delta * 0.5, posY, () => this.gui.changeMode(GUIMode.UpgradeBuildings));
+        this.createButton('MM_Btn_Likes', centerX + delta * 0.5, posY, () => this.gui.openNewWindow(WindowType.WinDropPuzzle));
+        this.createButton('MM_Btn_Worlds', centerX + delta * 1.5, posY);
+
+        posY = centerY - RealScreenHeight / 2 + 150 * GlobalScale;
+        let posX = centerX + RealScreenWidth / 2 - 150 * GlobalScale;
+
+        this.storeButton = this.createButton('MM_Btn_Store', posX, posY, () => this.gui.openNewWindow(WindowType.WinStore));
+
+        posX -= 250 * GlobalScale;
+        this.puzzlesButton = this.createButton('MM_Btn_Chests', posX, posY, () => this.gui.openNewWindow(WindowType.WinPuzzle));
+
+        posX = RealScreenWidth - 100 * GlobalScale;
+        posY = RealScreenHeight - 800 * GlobalScale;
+        this.createButton('FortuneHUDButton', posX, posY, () => this.gui.openNewWindow(WindowType.WinFortuneWheel));
+
+        posY += 180 * GlobalScale;
+        this.questsButton = this.createButton('QuestsHUDButton', posX, posY, () => this.gui.openNewWindow(WindowType.WinQuests));
+
+        posY += 180 * GlobalScale;
+        this.dailyBonus = this.createButton('Daily_HUDButton', posX, posY, () => this.gui.openNewWindow(WindowType.WinDaily));
+
+        //TODO temp
+        posX = 100 * GlobalScale;
+        posY = RealScreenHeight - 600 * GlobalScale;
+        this.createButton('FortuneHUDButton', posX, posY, () => this.gui.openNewWindow(WindowType.WinFreeUpgrade));
+
+        posY += 180 * GlobalScale;
+        this.createButton('QuestsHUDButton', posX, posY, () => this.gui.openNewWindow(WindowType.WinNotEnoughGems));
+    }
+
+    createButtonsHorizontal() {
+        const gameSettings = VisualData.getGameSettings();
+
+        const distance = 250 * GlobalScale;
+        const padding = 170 * GlobalScale;
+        const padding2 = padding + 30 * GlobalScale;
+
+        const centerX = this.centerX;
+
+        if (VisualData.ALL_OBJECTS.MM_Btn_Bread)
+            this.superVisorButton = this.createButton('MM_Btn_Bread', 4 * padding, padding, () => this.gui.openNewWindow(WindowType.WinSupervisor));
+
+        // this.createButton('MM_Btn_Login', padding, RealScreenHeight - padding, () => this.gui.openNewWindow(WindowType.WinBossSummon));
+        this.fortuneButton = this.createButton('FortuneHUDButton', padding, RealScreenHeight - padding, () => this.gui.openNewWindow(WindowType.WinFortuneWheel));
+        this.dailyBonus = this.createButton('Daily_HUDButton', padding, RealScreenHeight - padding - distance, () => this.gui.openNewWindow(WindowType.WinDaily));
+        this.upgradeButton = this.createButton('MM_Btn_Upgrade', RealScreenWidth - padding2, RealScreenHeight - padding, () => this.gui.changeMode(GUIMode.UpgradeBuildings));
+        this.questsButton = this.createButton('QuestsHUDButton', RealScreenWidth - padding2, RealScreenHeight - padding - distance, () => this.gui.openNewWindow(WindowType.WinQuests));
+        if (gameSettings.photos) {
+            this.createButton('MM_Btn_Likes', RealScreenWidth - padding2, RealScreenHeight - padding - distance * 2, () => {
+                guiManager.openNewWindow(WindowType.WinPhotosMainMenu);
+            });
+        }
+
+        if (gameSettings.likes && gameSettings.likes.hasOwnProperty(AllGetParams.game_platform) && gameSettings.likes[AllGetParams.game_platform]) {
+            this.createButton('MM_Btn_Likes', padding, RealScreenHeight - padding - distance * 2,() => this.gui.changeMode(GUIMode.Likes));
+        }
+
+        // if (gameSettings.share && gameSettings.share.hasOwnProperty(AllGetParams.game_platform) && gameSettings.share[AllGetParams.game_platform]) {
+        //     this.createButton('MM_Btn_Likes', padding, RealScreenHeight - padding - distance * 3,() => socialManager.postMessage());
+        // }
+
+        if (!gameSettings.locations_window) {
+            this.worldbtn2 = this.createButton('MM_Btn_Worlds2', RealScreenWidth - padding2, RealScreenHeight - padding - distance * 2, () => {
+                gameInit.switchWorld("2");
+            });
+            this.worldbtn2_Inverse = this.createButton('MM_Btn_Worlds2_Inverse', RealScreenWidth - padding2, RealScreenHeight - padding - distance * 2, () => {
+                gameInit.switchWorld("1");
+            });
+            this.worldbtn2_Inverse.setForceInvisible(true);
+        }
+
+        const paddigSmall = padding / 1.5;
+
+        this.storeButton = this.createButton('MM_Btn_Store', centerX - distance, paddigSmall, () => this.gui.openNewWindow(WindowType.WinStore));
+        this.puzzlesButton = this.createButton('MM_Btn_Chests', centerX, paddigSmall, () => this.gui.openNewWindow(WindowType.WinPuzzle));
+        if (!gameSettings.locations_window) {
+            this.worldbtn = this.createButton('MM_Btn_Worlds', centerX + distance, paddigSmall, () => {
+                gameInit.switchWorld("3");
+            });
+            this.worldbtn_Inverse = this.createButton('MM_Btn_Worlds_Inverse', centerX + distance, paddigSmall, () => {
+                gameInit.switchWorld("1");
+            });
+            this.worldbtn_Inverse.setForceInvisible(true);
+        }
+
+        if (TEST_MODE)
+            this.createButton('MM_Btn_Worlds', RealScreenWidth - padding, padding, () => gameInit.progress.cheatResources());
+        this.allButtons.pop();
+    }
+
+    playBreadAnimation() {
+        this.hideAllButtonsForTime(BanjoDuration);
+        lockGuiEverything();
+        animManager.playFallingBread(this.engine, this.group, BanjoDuration, ()=>{
+            unlockGUI();
+            this.gui.openNewWindow(WindowType.WinBanjoPreEnd);
+        });
+    }
+
+    createGroup() {
+        this.createGroupNotCenter();
+    }
+
+    createGame(engine) {
+        super.createGame(engine);
+        if (VisualData.IsVertical())
+            this.createButtonsVertical();
+        else
+            this.createButtonsHorizontal();
+        this.hudResources.createGame(engine);
+
+        const progress = gameInit.progress;
+        this.allNotifications = [];
+        this._createNotificationForButton(
+            engine,
+            this.storeButton,
+            function (func) {
+                progress.onResourcesChanges.addListener(func);
+            },
+            function () {
+                const list = GameData.getMarketListGold();
+                for (let i = 0; i < list.length; i++) {
+                    if (progress.canPurchaseUpgrade(list[i])) {
+                        const price = progress.getPurchasePrice(list[i]);
+                        return progress.isResourcesEnough(price)
+                    }
+                }
+                return false;
+            },
+            function () {
+                return "!";
+            }
+        );
+
+        this._createNotificationForButton(
+            engine,
+            this.puzzlesButton,
+            function (func) {
+                eventManager.onBoxPurchased.addListener(func);
+                eventManager.onBoxReceived.addListener(func);
+                eventManager.onBoxOpened.addListener(func);
+            },
+            function () {
+                return progress.getChestsCount() > 0;
+            },
+            function () {
+                return progress.getChestsCount().toString();
+            }
+        );
+
+        this._createNotificationForButton(
+            engine,
+            this.dailyBonus,
+            function (func) {
+                eventManager.onDailyBonusCollected.addListener(func);
+            },
+            function () {
+                return progress.isDailyBonusAvailable();
+            },
+            function () {
+                return "!";
+            }
+        );
+
+        this._createNotificationForButton(
+            engine,
+            this.questsButton,
+            function (func) {
+                eventManager.onQuestCompleted.addListener(func);
+                eventManager.onQuestClaimed.addListener(func);
+            },
+            function () {
+                return gameInit.questsManager && gameInit.questsManager.isAnyCompleteQuest();
+            },
+            function () {
+                return "!";
+            }
+        );
+    }
+
+    _createNotificationForButton(engine, btn, subscribe, isVisible, getText) {
+        this.allNotifications.push(new GUINotification({
+                scene: engine,
+                parent: btn,
+                group: this.group,
+                x: (btn.x - btn.width * 0.4) / localScale,
+                y: (btn.y + btn.height * 0.4) / localScale,
+                subscribe: subscribe,
+                isVisible: isVisible,
+                getText: getText
+            })
+        );
+    }
+
+    showUpgradeButton() {
+        this.showButtonFromTutorial(this.upgradeButton);
+    }
+
+    showStoreButton() {
+        this.showButtonFromTutorial(this.storeButton);
+    }
+
+    showSuperVisorButton() {
+        this.showButtonFromTutorial(this.superVisorButton);
+    }
+
+    getUpgradeButton() {
+        return this.upgradeButton;
+    }
+
+    getStoreButton() {
+        return this.storeButton;
+    }
+
+    getSuperVisorButton() {
+        return this.superVisorButton;
+    }
+
+    getPuzzlesButton() {
+        return this.puzzlesButton;
+    }
+
+    getFortuneWheelButton() {
+        return this.fortuneButton;
+    }
+
+    _updateAllNotifications() {
+        for (let i in this.allNotifications)
+            this.allNotifications[i].update();
+    }
+
+    hideAllButtonsForTutorial() {
+        super.hideAllButtonsForTutorial();
+        this._updateAllNotifications();
+    }
+
+    showAllButtonsFromTutorial() {
+        super.showAllButtonsFromTutorial();
+        this._updateAllNotifications();
+        this.worldChanged(gameInit.selectedWorld);
+    }
+
+    showButtonFromTutorial(btn) {
+        super.showButtonFromTutorial(btn);
+        this._updateAllNotifications();
+    }
+
+    setAllButtonsVisible(visible) {
+        super.setAllButtonsVisible(visible);
+        this._updateAllNotifications();
+    }
+
+    hideAllButtonsForTime(duration) {
+        super.hideAllButtonsForTime(duration);
+        this._updateAllNotifications();
+    }
+
+    _showAllButtonsBack() {
+        super._showAllButtonsBack();
+        this._updateAllNotifications();
+    }
+}
+
+class BuildingsGUI extends WinBase{
+    constructor(gui, gameInit) {
+        super(gui, gameInit);
+        gui.onBuildingCreated.addListener(this.buildingCreated.bind(this));
+        gui.onModeChanged.addListener(this.modeChanged.bind(this));
+
+        this.worldsData = {};
+
+        gui.onBuildingResourcesUpdated.addListener(this.resourcesUpdate.bind(this));
+        gui.onBuildingUpdated.addListener(this.productionUpdate.bind(this));
+        gui.onBuildingLiked.addListener(this.buildingLiked.bind(this));
+        gui.onBuildingUpgraded.addListener(this.buildingUpgrade.bind(this));
+        gui.onReset.addListener(this.resetAll.bind(this));
+        gameInit.onWorldChanged.addListener(this.worldChanged.bind(this));
+
+        this.enableClickables = true;
+        clickController.onBuildingClicked.addListener(this.buildingWasClicked.bind(this));
+        gameInit.loaded.addListener(this._progressLoaded.bind(this));
+
+        eventManager.onBuildingUpgraded.addListener(this._updateAvailabilityForUpdrages.bind(this));
+    }
+
+    _progressLoaded(progress) {
+        progress.onPuzzleCompleted.addListener(this.puzzleCompleted.bind(this));
+        progress.onPuzzlePeaceReceived.addListener(this.puzzlePeaceReceived.bind(this));
+    }
+
+    setWorldVisible(worldId, visible) {
+        const worldsData = this.worldsData[worldId];
+
+        const prod = worldsData.production;
+        const purc = worldsData.purchase;
+
+        for (let key in prod) {
+            if (purc.hasOwnProperty(key)) {
+                SetGroupVisible(purc[key].group, visible);
+            } else
+                SetGroupVisible(prod[key].group, visible);
+        }
+
+        worldsData.visible = visible;
+    }
+
+    worldChanged(worldId) {
+        for (let id in this.worldsData) {
+            if (this.worldsData[id].visible) {
+                if (id !== worldId) {
+                    this.setWorldVisible(id, false);
+                }
+            } else {
+                if (id === worldId)
+                    this.setWorldVisible(id, true);
+            }
+        }
+    }
+
+    _sendFlyingResources(worldsData, buildingId, destination) {
+        const production = worldsData.production;
+        if (production.hasOwnProperty(buildingId)) {
+            const groupInfo = production[buildingId];
+
+            const icon = this.engine.add.sprite(groupInfo.icon.x / localScale, groupInfo.icon.y / localScale, 'PriceIcon').setScale(VisualData.ANIMATIONS.flyingResourcesScale).setDepth(OverlayDepth);
+            const p = {
+                x: destination.x / localScale,
+                y: destination.y / localScale
+            };
+            animManager.moveToPointSin(icon, p, VisualData.ANIMATIONS.flyingResources, () => {
+                icon.destroy(true);
+                animManager.changeShapeOfSouls(destination);
+            });
+            audioManager.playBuildingClick();
+        }
+    }
+
+    _setUpgradeShieledAvailable(upgradeInfo, available) {
+        if (upgradeInfo.available !== available) {
+            upgradeInfo.available = available;
+
+            const color = available ? NormalTint : LockTint;
+
+            upgradeInfo.table.tint = color;
+            upgradeInfo.level.tint = color;
+            upgradeInfo.price.tint = color;
+            upgradeInfo.priceIcon.tint = color;
+            if (upgradeInfo.loadedIcon)
+                upgradeInfo.loadedIcon.tint = color;
+            upgradeInfo.loader.setTint(color);
+        }
+    }
+
+    _updateAvailabilityForUpdrages() {
+        if (guiManager.guiMode === GUIMode.UpgradeBuildings) {
+            for (let w in this.worldsData) {
+                const worldsData = this.worldsData[w];
+                if (!worldsData.visible)
+                    continue;
+
+                const upgradeInfo = worldsData.upgrade;
+                const wIndex = parseInt(w);
+                for (let b in upgradeInfo) {
+                    const building = gameInit.getBuildingById(wIndex, b);
+                    this._setUpgradeShieledAvailable(upgradeInfo[b], gameInit.progress.isResourcesEnough(building.getUpgradePrice()));
+                }
+            }
+        }
+    }
+
+    buildingWasClicked(building) {
+        if (building.getLevel() === 0)
+            return;
+
+        for (let w in this.worldsData) {
+            const worldsData = this.worldsData[w];
+            if (!worldsData.visible)
+                continue;
+
+            switch (guiManager.guiMode) {
+                case GUIMode.UpgradeBuildings:
+                    const upgradeInfo = worldsData.upgrade;
+                    if (upgradeInfo.hasOwnProperty(building.id)) {
+                        const upgrade = upgradeInfo[building.id];
+
+                        if (!upgrade.available)// not enough resources
+                            continue;
+
+                        const smallIcon = building.getDropIcon();
+                        LoadFile(this.engine, smallIcon, building.getDropIconPath(), () => {
+                            const rnd = (Math.random() - 0.5);
+                            const x = upgrade.x + rnd * 160 * GlobalScale;
+                            const vx = -rnd * 50 * GlobalScale;
+                            const sprite = this.engine.add.sprite(x, upgrade.y - 75 * GlobalScale, smallIcon).setDepth(upgrade.depth - 100);
+                            animManager.randomJumpRotation(sprite, {vx: vx,
+                                vy: -200 * GlobalScale,
+                                g: 70 * GlobalScale,
+                                angle: (Math.random() - 0.5) * 60
+                            }, 0.4, ()=> {
+                                sprite.destroy(true);
+                            });
+                        });
+
+                        animManager.jumpShieldAnimation(upgrade.group, {height: 40 * GlobalScale, scale: 0.1}, 0.3);
+                    }
+                    break;
+                case GUIMode.Likes:
+                    gameInit.openLikesForBuilding(building);
+                    break;
+                case GUIMode.Normal:
+                    this._sendFlyingResources(worldsData, building.id, mainResourceIcon);
+                    break;
+                case GUIMode.Boss:
+                    this._sendFlyingResources(worldsData, building.id, visualGame.getBoss().getObject());
+                    break;
+            }
+            break;
+        }
+    }
+
+    showNormal(show, showUpgrade, showLikes, worldID) {
+        if (showUpgrade)
+            this._updateAvailabilityForUpdrages();
+
+        const worldsData = this.worldsData[worldID];
+        const prod = worldsData.production;
+        const upgr = worldsData.upgrade;
+        const likesGroup = worldsData.likes;
+        const purc = worldsData.purchase;
+
+        for (let key in prod) {
+            if (purc.hasOwnProperty(key)) {
+                SetGroupVisible(purc[key].group, show);
+            } else
+                SetGroupVisible(prod[key].group, show);
+
+            const upgrade = upgr[key];
+            if (upgrade) {
+                SetGroupVisible(upgrade.group, showUpgrade);
+
+                if (showUpgrade && !upgrade.iconLoading) {
+                    upgrade.iconLoading = true;
+                    const smallIcon = upgrade.building.getSmallIcon();
+                    LoadFile(this.engine, smallIcon, upgrade.building.getSmallIconPath(), () => {
+                        upgrade.loadedIcon = upgrade.group.create(- 90 * GlobalScale, - 135 * GlobalScale, smallIcon).setDepth(upgrade.depth + 1).setScale(0.6);
+                        setLockedColor(upgrade.loadedIcon, !upgrade.available);
+                    });
+                }
+            }
+
+            const likes = likesGroup[key];
+            if (likes) {
+                SetGroupVisible(likes.group, showLikes);
+
+                if (showLikes && !likes.iconLoading) {
+                    likes.iconLoading = true;
+                    const smallIcon = likes.building.getSmallIcon();
+                    LoadFile(this.engine, smallIcon, likes.building.getSmallIconPath(), () => {
+                        likes.loadedIcon = likes.group.create(- 90 * GlobalScale, - 135 * GlobalScale, smallIcon).setDepth(likes.depth + 1).setScale(0.6);
+                        setLockedColor(likes.loadedIcon, !likes.available);
+                    });
+                }
+            }
+        }
+    }
+
+    modeChanged(newMode, worldID) {
+        this.showNormal(newMode === GUIMode.Normal, newMode === GUIMode.UpgradeBuildings, newMode === GUIMode.Likes, worldID);
+    }
+
+    resetAll() {
+        for (let k in this.worldsData) {
+            const worldData = this.worldsData[k];
+            const upgradeGroup = worldData.upgrade;
+            for (let up in upgradeGroup) {
+                const info = upgradeGroup[up];
+                this.createPurchaseLabel(info.building, worldData, true);
+                info.group.destroy(true);
+            }
+
+            const likesGroup = worldData.likes;
+            for (let up in likesGroup) {
+                likesGroup[up].group.destroy(true);
+            }
+
+            const productionGroup = worldData.production;
+            for (let up in productionGroup) {
+                const prod = worldData.production[up];
+                prod.isFast = false;
+                prod.loader.setFast(false);
+                prod.resources.setText("0");
+                SetGroupVisible(prod.group, false);
+            }
+            worldData.upgrade = {};
+            worldData.likes = {};
+        }
+    }
+
+    buildingCreated(world, building, engine) {
+        let worldData;
+        if (!this.worldsData.hasOwnProperty(world.id)) {
+            worldData = this.worldsData[world.id] = {
+                production: {},
+                upgrade: {},
+                purchase: {},
+                likes: {},
+                visible: world.isSelected()
+            }
+        } else
+            worldData = this.worldsData[world.id];
+
+        const productionGroup = worldData.production;
+        // const purchaseGroup = worldData.purchase;
+
+        const bInfo = VisualData.PLACED_BUILDINGS[building.slot];
+        const depth = bInfo.depth + 100;
+        const pos = bInfo.position;
+
+        let x = pos.x + this.centerX;
+        let y = pos.y + this.centerY;
+
+        const bLevel = building.getLevel();
+        //production
+        const visProdGroup = engine.add.group();
+        const progX = x;
+        const progY = y + 60 * GlobalScale;
+        const resources = bLevel === 0 ? ''  : this.getBuildingProducedResources(building);
+        let text = engine.add.text(progX, progY + 10 * GlobalScale, resources, DefaultFontSmall).setOrigin(0.5, 0);
+        const loader = new Loader(visProdGroup, 'Production_Progress_Bar_Back', 'Production_Progress_Bar', progX, progY, 1, true);
+
+        const groupInfo = {
+            resources: text,
+            loader: loader,
+            group: visProdGroup,
+        };
+
+        productionGroup[building.id] = groupInfo;
+        visProdGroup.add(text);
+        groupInfo.icon = visProdGroup.create(progX - 55 * GlobalScale, progY - 30 * GlobalScale, 'PriceIcon').setScale(0.6);
+        animManager.jumpFishAnimation(groupInfo.icon, {
+            height: 40 * GlobalScale,
+            scale: 0.2,
+        }, 0.6);
+
+        if (bLevel === 0 || !worldData.visible)
+            SetGroupVisible(visProdGroup, false);
+        visProdGroup.setDepth(depth);
+
+        groupInfo.icon.setDepth(depth + 5);
+        //production...
+
+        //upgrade && likes
+        if (bLevel > 0) {
+            this.createUpgradeGroup(world, building);
+            this.createLikesGroup(world, building);
+        }
+        //upgrade...
+
+        //purchase
+        if (bLevel === 0)
+            this.createPurchaseLabel(building, worldData);
+        //upgrade...
+    }
+
+    puzzlePeaceReceived(info) {
+        if (info.level === 0) {
+            const worldId = Math.trunc((info.id - 1) / 9 + 1);
+            const worldData = this.worldsData[worldId];
+            const buildingId = info.id - (worldId - 1) * 9;
+            const purchaseData = worldData.purchase[buildingId];
+
+            if (purchaseData && purchaseData.needPuzzle) {
+                purchaseData.price.setText(gameInit.progress.getPuzzlesCountForId(info.id - 1) + "/4");
+            }
+        }
+    }
+
+    puzzleCompleted(info) {
+        if (info.level > 0) {
+            const worldId = Math.trunc((info.id - 1) / 9 + 1);
+            const worldData = this.worldsData[worldId];
+            const buildingId = info.id - (worldId - 1) * 9;
+            const purchaseData = worldData.purchase[buildingId];
+
+            if (purchaseData) {
+                if (purchaseData.needPuzzle) {
+                    purchaseData.group.destroy(true);
+                    const building = gameInit.getBuildingById(worldId, buildingId);
+                    this.createPurchaseLabel(building, worldData);
+                }
+            }
+        }
+    }
+
+    createPurchaseLabel(building, worldData, invisible) {
+        const engine = this.engine;
+        const bInfo = VisualData.PLACED_BUILDINGS[building.slot];
+        const center = VisualData.VISUAL_BUILDINGS[bInfo.levels[0].building].objects[0];
+        const depth = bInfo.depth + 100;
+        const pos = bInfo.position;
+
+        const purchaseGroup = worldData.purchase;
+
+        let x = pos.x + this.centerX + (center.x || 0);
+        let y = pos.y + this.centerY + (center.y || 0);
+
+        const puzzleId = building.slot - 1;
+        const puzzleInfo = gameInit.progress.getPuzzleInfoById(puzzleId);
+        const needPuzzle = puzzleInfo.level < 1;
+
+        const visPurchaseGroup = engine.add.group();
+
+        let purchaseIcon;
+        let purchaseLabel;
+        if (!needPuzzle) {
+            const bGUI = VisualData.GUI_BuildingsGUI;
+            purchaseIcon = engine.add.sprite(x, y - 36 * GlobalScale, "PriceIcon").setScale(bGUI.purchaseIconScale);
+
+            purchaseLabel = engine.add.text(x, y + 30 * GlobalScale, this.getBuildingUpgradePrice(building), DefaultFontSmall)
+                .setOrigin(0.5, 0.5);
+        } else {
+            purchaseIcon = engine.add.sprite(x - 10, y + 10 * GlobalScale, "LockPuzzle").setOrigin(1, 0.5);
+            purchaseLabel = engine.add.text(x, y + 10 * GlobalScale, gameInit.progress.getPuzzlesCountForId(puzzleId) + "/4", DefaultFontSmall).setOrigin(0, 0.5);
+
+            const lockSprite = engine.add.sprite(x, y - 80 * GlobalScale, "LockIcon");
+            visPurchaseGroup.add(lockSprite);
+        }
+
+        const purchaseInfo = {
+            price: purchaseLabel,
+            icon: purchaseIcon,
+            group: visPurchaseGroup,
+            needPuzzle: needPuzzle
+        };
+
+        purchaseGroup[building.id] = purchaseInfo;
+        visPurchaseGroup.add(purchaseIcon);
+        visPurchaseGroup.add(purchaseLabel);
+        visPurchaseGroup.setDepth(depth);
+        if (!worldData.visible || invisible)
+            SetGroupVisible(visPurchaseGroup, false);
+
+        building.onUnlockChanged.addListener(this.changeBuildingAvailability.bind(this));
+        this.changeBuildingAvailability(building);
+    }
+
+    changeBuildingAvailability(building) {
+        const worldId = Math.trunc((building.slot - 1) / 9 + 1);
+        const worldsData = this.worldsData[worldId];
+        const purchase = worldsData.purchase;
+        if (purchase.hasOwnProperty(building.id)) {
+            const purchaseInfo = purchase[building.id];
+            if (building.unlocked) {
+                if (!purchaseInfo.jumpAnimation)
+                    purchaseInfo.jumpAnimation = animManager.fallFishAnimation(purchaseInfo.icon, {
+                        height: 60 * GlobalScale,
+                        scale: 0.2,
+                    }, 0.6);
+            } else {
+                if (purchaseInfo.jumpAnimation) {
+                    purchaseInfo.jumpAnimation.stopAnimation();
+                    purchaseInfo.jumpAnimation = null;
+                }
+            }
+        }
+    }
+
+    createUpgradeGroup(world, building) {
+        const engine = this.engine;
+        const worldData = this.worldsData[world.id];
+        const upgradeGroup = worldData.upgrade ? worldData.upgrade : (worldData.upgrade = {});
+
+        const bInfo = VisualData.PLACED_BUILDINGS[building.slot];
+        const center = VisualData.VISUAL_BUILDINGS[bInfo.levels[0].building].objects[0];
+        const depth = bInfo.depth + 100;
+        const pos = bInfo.position;
+        const bLevel = building.getLevel();
+
+        let x = pos.x + this.centerX + (center.x || 0);
+        let y = pos.y + this.centerY + (center.y || 0);
+
+        const visUpgradeGroup = engine.add.container();
+        visUpgradeGroup.setPosition(x, y);
+        const upX = 0;
+        const upY = 0 - 60 * GlobalScale;
+        const table = visUpgradeGroup.create(upX, upY, 'TableUpgrade').setInteractive();
+        const clearTimer = function () {
+            if (table.timer) {
+                clearInterval(table.timer);
+                table.timer = null;
+            }
+        };
+
+        const priceIcon = visUpgradeGroup.create(upX - 80 * GlobalScale, upY + 20 * GlobalScale, 'PriceIcon').setScale(0.55);
+        let levelLabel = engine.add.text(upX - 0 * GlobalScale, upY - 40 * GlobalScale, bLevel, DefaultFont).setOrigin(0.5);
+        let upgradePrice = engine.add.text(upX - 40 * GlobalScale, upY + 25 * GlobalScale, this.getBuildingUpgradePrice(building), DefaultFontSmall2).setOrigin(0, 0.5);
+        const bGUI = VisualData.GUI_BuildingsGUI;
+        const loaderUpgrade = new Loader(visUpgradeGroup, null, 'Upgrade_Progress_Bar', upX + bGUI.loaderOffsetX * GlobalScale, upY + bGUI.loaderOffsetY * GlobalScale, bGUI.loaderScale);
+        loaderUpgrade.setProgress(building.getUpgradeProgress());
+
+        const upgradeInfo = {
+            priceIcon: priceIcon,
+            level: levelLabel,
+            price: upgradePrice,
+            group: visUpgradeGroup,
+            table: table,
+            iconLoading: false,
+            x: x,
+            y: y,
+            depth: depth,
+            building: building,
+            loader: loaderUpgrade,
+            available: true
+        };
+
+        table.on('pointerdown', () => {
+            if (!upgradeInfo.available)// not enough resources
+                return;
+
+            table.down = true;
+            clearTimer();
+            setTimeout(() => {
+                if (table.down) {
+                    clearTimer();
+                    table.counter = 0;
+                    table.timer = setInterval(() => {
+                        if (!upgradeInfo.available)// not enough resources
+                        {
+                            clearTimer();
+                            return;
+                        }
+
+                        clickController.buildingWasClicked(building);
+                        table.counter++;
+                        audioManager.playUpgrade(table.counter);
+                    }, 100);
+                }
+            }, 500);
+            clickController.buildingWasClicked(building);
+            audioManager.playUpgrade(0);
+        });
+
+        table.on('pointerout', () => {
+            table.down = false;
+            clearTimer();
+        });
+
+        table.on('pointerup', () => {
+            table.down = false;
+            clearTimer();
+        });
+
+        // //TODO Temp
+        // this.speed = engine.add.text(upX - 100, upY + 50, null, DefaultFontVerySmall);
+        // this.profit = engine.add.text(upX, upY + 50, null, DefaultFontVerySmall);
+
+        upgradeGroup[building.id] = upgradeInfo;
+        visUpgradeGroup.add(levelLabel);
+        visUpgradeGroup.add(upgradePrice);
+        SetGroupVisible(visUpgradeGroup, false);
+        visUpgradeGroup.setDepth(depth);
+    }
+
+    createLikesGroup(world, building) {
+        const engine = this.engine;
+        const worldData = this.worldsData[world.id];
+        const likesGroup = worldData.likes ? worldData.likes : (worldData.likes = {});
+
+        const bInfo = VisualData.PLACED_BUILDINGS[building.slot];
+        const center = VisualData.VISUAL_BUILDINGS[bInfo.levels[0].building].objects[0];
+        const depth = bInfo.depth + 100;
+        const pos = bInfo.position;
+
+        let x = pos.x + this.centerX + (center.x || 0);
+        let y = pos.y + this.centerY + (center.y || 0);
+
+        const visUpgradeGroup = engine.add.container();
+        visUpgradeGroup.setPosition(x, y);
+        const upX = 0;
+        const upY = 0 - 60 * GlobalScale;
+        const table = visUpgradeGroup.create(upX, upY, 'TableLike').setInteractive();
+
+        const priceIcon = visUpgradeGroup.create(upX + 90 * GlobalScale, upY - 70 * GlobalScale, 'LikePlus');
+        let levelLabel = engine.add.text(upX - 0 * GlobalScale, upY - 20 * GlobalScale, building.getLikes(), DefaultFont).setOrigin(0.5);
+
+        const upgradeInfo = {
+            priceIcon: priceIcon,
+            level: levelLabel,
+            group: visUpgradeGroup,
+            table: table,
+            iconLoading: false,
+            x: x,
+            y: y,
+            depth: depth,
+            building: building,
+            available: true
+        };
+
+        table.on('pointerup', () => {
+            clickController.buildingWasClicked(building);
+        });
+
+        likesGroup[building.id] = upgradeInfo;
+        visUpgradeGroup.add(levelLabel);
+        SetGroupVisible(visUpgradeGroup, false);
+        visUpgradeGroup.setDepth(depth);
+
+
+        building.onLikesReseted.addListener((b) => {
+            if (levelLabel) {
+                levelLabel.setText(b.getLikes());
+            }
+        });
+    }
+
+    localize() {
+        super.localize();
+
+        // for (let k in this.worldsData) {
+        //     const worldData = this.worldsData[k];
+        //     const upgradeGroup = worldData.upgrade;
+        //     for (let up in upgradeGroup) {
+        //         const info = upgradeGroup[up];
+        //         this.createPurchaseLabel(info.building, worldData);
+        //         info.group.destroy(true);
+        //
+        //         const prod = worldData.production[up];
+        //         prod.isFast = false;
+        //         prod.loader.setFast(false);
+        //         prod.resources.text = "0";
+        //         SetGroupVisible(prod.group, false);
+        //     }
+        //     worldData.upgrade = {};
+        // }
+    }
+
+    getBuildingProducedResources(building) {
+        return LocalizationManager.getLocalizedNumber(building.getProducedResources());
+    }
+
+    getBuildingUpgradePrice(building) {
+        return LocalizationManager.getLocalizedNumber(building.getUpgradePrice());
+    }
+
+    buildingUpgrade(world, building) {
+        const worldsData = this.worldsData[world.id];
+        const purchaseData = worldsData.purchase;
+
+        if (purchaseData.hasOwnProperty(building.id)){
+            const b = purchaseData[building.id];
+            b.group.destroy(true);
+            if (b.jumpAnimation)
+                b.jumpAnimation.stopAnimation();
+            delete purchaseData[building.id];
+            SetGroupVisible(worldsData.production[building.id].group, true);
+        }
+
+        if (!worldsData.upgrade.hasOwnProperty(building.id))
+            this.createUpgradeGroup(world, building);
+
+        if (!worldsData.likes.hasOwnProperty(building.id))
+            this.createLikesGroup(world, building);
+
+        const groupInfo = worldsData.upgrade[building.id];
+        groupInfo.level.setText(building.getLevel());
+        groupInfo.price.setText(this.getBuildingUpgradePrice(building));
+        groupInfo.loader.setProgress(building.getUpgradeProgress());
+    }
+
+    resourcesUpdate(world, building) {
+        const groupInfo = this.worldsData[world.id].production[building.id];
+        groupInfo.resources.setText(this.getBuildingProducedResources(building));
+    }
+
+    buildingLiked(world, building) {
+        const groupInfo = this.worldsData[world.id].likes[building.id];
+        if (groupInfo)
+            groupInfo.level.setText(building.getLikes());
+    }
+
+    productionUpdate(world, building) {
+        if (building.getLevel() > 0) {
+            const groupInfo = this.worldsData[world.id].production[building.id];
+            if (!groupInfo.isFast) {
+                if (building.getLoadingTime() < 1 && building.autoCollect) {
+                    groupInfo.isFast = true;
+                    groupInfo.loader.setFast(true);
+                } else
+                    groupInfo.loader.setProgress(building.getLoadingPercentage());
+            }
+            if (building.anyResources !== groupInfo.icon.visible) {
+                groupInfo.icon.setVisible(building.anyResources && !groupInfo.group.invisible);
+            }
+        }
+    }
+}
+
+
+
+class WinPhotosMainMenu extends WinWithBrownBack{
+    constructor(gui, gameInit) {
+        super(gui, gameInit);
+    }
+
+    localize() {
+        super.localize();
+        // this.description.setText(LocalizationManager.getLocalizization("CollectCropTipText"));
+    }
+
+    createGame(engine) {
+        super.createGame(engine);
+    }
+
+    setWindowVisible(visible) {
+        super.setWindowVisible(visible);
+
+        if (visible) {
+            if (!this.prepared) {
+                this.prepared = true;
+                this.config = VisualData.PHOTOS_MENU_SCROLL_CONFIG;
+                this.config.x = this.centerX + this.config.offsetX * GlobalScale;
+                this.config.y = this.centerY + this.config.offsetY * GlobalScale;
+
+                this.scroll = new GUIScroll(this.engine, this.config, this.getCell.bind(this), this.getItems.bind(this));
+            }
+        }
+
+        this.scroll.setVisible(visible);
+    }
+
+    getItems() {
+        return GameData.getPhotoData();
+    }
+
+    getCell(cell) {
+        const engine = this.engine;
+        const config = this.config;
+        const cellCenterX = config.cellWidth / 2 * GlobalScale;
+        const cellCenterY= config.cellHeight / 2 * GlobalScale;
+        const item = cell.item;
+
+        const mySlotInfo = gameInit.progress.getPhotoQuestById(item.id);
+
+        let group = engine.rexUI.add.container(0,0);
+        group.unny_container = engine.add.container(cellCenterX, cellCenterY);
+        group.add(group.unny_container);
+        new BasicButton(group.unny_container, {
+            'scene': engine,
+            'key': 'QuestBack',
+            'x': 0,
+            'y': 0,
+        }, ()=> {
+            guiManager.openNewWindow(WindowType.WinPhotosQuest);
+            guiManager.getWindowByType(WindowType.WinPhotosQuest).selectQuest(item);
+        });
+
+        const imageName = GameData.getPuzzleIcon(item.slot_id);
+        const path = VisualData.getPuzzleFolder() + imageName + ".png";
+
+        LoadFile(engine, imageName, path, () => {
+            if (this.visible && group.active) {
+                group.icon = engine.add.sprite(group.x / localScale + cellCenterX - 370 * GlobalScale, group.y / localScale + cellCenterY, imageName).setDepth(WinDefaultDepth + 100);
+                group.add(group.icon.setScale(0.7));
+                // this.scroll.fakeMove();
+            }
+        });
+
+        const photoName = engine.add.textOld(cellCenterX + 80 * GlobalScale, cellCenterY - 120 * GlobalScale, 'Girl Name', DefaultFont).setOrigin(0.5);
+        group.add(photoName);
+
+        const photoDesc = engine.add.textOld(cellCenterX + 80 * GlobalScale, cellCenterY + 40 * GlobalScale, 'some description of the photo. short and concise!', DefaultFontBlack).setOrigin(0.5).setWordWrapWidth(600 * GlobalScale);
+        group.add(photoDesc);
+
+        const levelDesc = engine.add.textOld(cellCenterX + 400 * GlobalScale, cellCenterY - 120 * GlobalScale, mySlotInfo.level + "/" + MAX_PUZZLE_LEVEL, DefaultFontBlack).setOrigin(0.5);
+        group.add(levelDesc);
+
+        return group.setOrigin(0).setDepth(WinDefaultDepth + 100);
+    }
+}
+
+class WinPhotosQuest extends WinWithBrownBack{
+    constructor(gui, gameInit) {
+        super(gui, gameInit);
+        this.resourcesModules = {};
+    }
+
+    localize() {
+        super.localize();
+        if (this.buttonLabel)
+            this.buttonLabel.setText(LocalizationManager.getLocalizization("UNLOCK"));//TODO localize
+    }
+
+    createGame(engine) {
+        super.createGame(engine);
+    }
+
+    setWindowVisible(visible) {
+        super.setWindowVisible(visible);
+
+        if (visible) {
+            if (!this.prepared) {
+                this.prepared = true;
+                const engine = this.engine;
+
+                const centerX = this.centerX = 2000 * GlobalScale;
+
+                this.photoName = engine.add.text(centerX, 400 * GlobalScale, null, DefaultFont).setOrigin(0.5);
+                this.group.add(this.photoName);
+
+                this.photoDesc = engine.add.text(centerX, 500 * GlobalScale, null, DefaultFontBlack).setOrigin(0.5, 0).setWordWrapWidth(1200 * GlobalScale);
+                this.group.add(this.photoDesc);
+
+                this.questDesc = engine.add.text(centerX, 1250 * GlobalScale, null, DefaultFontBlack).setOrigin(0.5, 0).setWordWrapWidth(1200 * GlobalScale);
+                this.group.add(this.questDesc);
+
+                const progressY = 1400 * GlobalScale;
+                this.loader = new Loader(this.group, 'Quests_ProgressBar', 'Quests_ProgressFill', centerX - 60 * GlobalScale, progressY);
+                this.questProgress = engine.add.text(centerX + 150 * GlobalScale, progressY, null, DefaultFontBlack).setOrigin(0, 0.5);
+                this.group.add(this.questProgress);
+
+                this.createActionButton(this.engine, ()=>{
+                    const quest = gameInit.photoManager.getQuestById(this.lastItem.id);
+                    if (quest) {
+                        quest.claimReward();
+                        this.selectQuest(this.lastItem);
+                    }
+                }, progressY + 200 * GlobalScale, true, 1, centerX, 800 * GlobalScale);
+
+                this.localize();
+            }
+        } else {
+            this._clearAnimatedObject();
+        }
+
+        hudResources.setVisible(visible);
+    }
+
+    _clearAnimatedObject() {
+        if (this.animatedGroup) {
+            this.animatedGroup.destroy(true);
+            this.animatedObject = null;
+            this.animatedGroup = null;
+        }
+    }
+
+    selectQuest(item) {
+        this.lastItem = item;
+
+        const slot = item.slot_id;
+        const level = 1;
+        const bInfo = VisualData.PLACED_BUILDINGS[slot];
+        const pos = {
+            x: -600 * GlobalScale,
+            y: 200 * GlobalScale
+        };
+        const levels = bInfo.levels;
+
+        let bName = null;
+        for (let i = 0;i < levels.length; i++){
+            bName = levels[i].building;
+            if (!levels[i].hasOwnProperty('maxLevel') || level <= levels[i].maxLevel)
+                break;
+        }
+
+        if (bName) {
+            const building = VisualData.VISUAL_BUILDINGS[bName];
+            const objects = building.objects;
+            PreloadObjects(this.engine, objects, ()=> {
+                if (this.visible) {
+                    this._clearAnimatedObject();
+
+                    this.animatedGroup = this.engine.add.container(0, 0);
+                    this.group.add(this.animatedGroup);
+                    this.animatedObject = PrepareObject(objects, this.animatedGroup, this.engine, bInfo.depth, pos, this.buildingWasClicked.bind(this));
+                }
+            });
+        }
+
+        this.photoName.setText("Photo name");
+        this.photoDesc.setText("Photo description. Photo description. Photo description. Photo description. Photo description. Photo description. Photo description. Photo description. Photo description. Photo description. Photo description. Photo description. Photo description. ");
+
+        const mySlotInfo = gameInit.progress.getPhotoQuestById(item.id);
+        console.info("item " + mySlotInfo.level, item);
+        if (mySlotInfo.level < item.levels.length) {
+            const questByLevel = item.levels[mySlotInfo.level];
+            const price = questByLevel.price;
+
+            for (let i in this.resourcesModules)
+                this.resourcesModules[i].setVisible(false);
+
+            const quest = gameInit.photoManager.getQuestById(item.id);
+
+            if (quest) {
+                this.activeResources = [];
+
+                for (let i in price) {
+                    const p = price[i];
+                    let pGroup;
+                    if (this.resourcesModules.hasOwnProperty(p.typePrice)) {
+                        pGroup = this.resourcesModules[p.typePrice];
+                        pGroup.setVisible(true);
+                    }
+                    else {
+                        pGroup = this.resourcesModules[p.typePrice] = this.engine.add.container(0, 0).setDepth(WinDefaultDepth + 1000);
+                        this.group.add(pGroup);
+                        const sprite = this.engine.add.sprite(0, -60 * GlobalScale, GameData.getIconByType(p.typePrice));
+                        pGroup.unny_text = this.engine.add.text(0, 60 * GlobalScale, null, DefaultFontBlack).setOrigin(0.5);
+
+                        pGroup.add(sprite);
+                        pGroup.add(pGroup.unny_text);
+                    }
+
+                    pGroup.unny_text.setText(LocalizationManager.getLocalizedNumberString(p.price.toString()));
+                    this.activeResources.push(pGroup);
+                }
+
+                const distance = 250 * GlobalScale;
+
+                let x = this.centerX - distance * (this.activeResources.length - 1) / 2;
+
+                for (let i in this.activeResources) {
+                    this.activeResources[i].setPosition(x, 1100 * GlobalScale);
+                    x += distance;
+                }
+
+                const qText = LocalizationManager.getLocalizization(questByLevel.info).format(quest.count);
+                this.questDesc.setText(qText);
+
+                this.loader.setProgress(Math.min(1, quest.progress / quest.count));
+                this.questProgress.setText(quest.progress + "/" + quest.count);
+
+                const showBtn = quest.progress >= quest.count;
+                this.actionButton.setVisible(showBtn);
+                this.buttonLabel.setVisible(showBtn);
+                return;
+            }
+        }
+
+        this.actionButton.setVisible(false);
+        this.buttonLabel.setVisible(false);
+        this.loader.setVisible(false);
+        this.questProgress.setVisible(false);
+        this.questDesc.setText("COMPLETE THE PUZZLE TO UNLOCK THE QUEST");
+    }
+
+    buildingWasClicked() {
+        if (this.animatedObject)
+            this.animatedObject.playAction(true);
+    }
+}
+
+const GUIMode = {
+    Normal: 1,
+    UpgradeBuildings: 2,
+    Boss: 3,
+    Likes: 4,
+};
+
+const WindowType = {
+    WinMain: 0,
+    WinConstruct: 1,
+    WinBuildings: 2,
+    WinUpgrade: 3,
+    WinStore: 4,
+    WinPuzzle: 5,
+    WinBossSummon: 6,
+    WinBossProccess: 7,
+    WinHarvested: 8,
+    WinFortuneWheel: 9,
+    WinQuests: 10,
+    WinSupervisor: 11,
+    WinGuard: 12,
+    WinDaily: 13,
+    WinDropPuzzle: 14,
+    WinNoAdd: 15,
+    WinNotEnoughGems: 16,
+    WinWaiting: 17,
+    WinFreeUpgrade: 18,
+    WinTimeTravel: 19,
+    WinApples: 20,
+    WinBanjoEnd: 21,
+    WinBanjoPreEnd: 22,
+    WinSettings: 23,
+    WinAdBLock: 24,
+    WinOtherWorlds: 25,
+    WinPhotosMainMenu: 26,
+    WinPhotosQuest: 27,
+    WinPhotosAll: 28,
+    WinInAppBought: 29
+};
+
+class GUIManager {
+
+    constructor(gameInit) {
+        gameInit.create.addListener(this.create.bind(this));
+        gameInit.preload.addListener(this.preload.bind(this));
+        gameInit.onBuildingCreated.addListener(this.buildingCreated.bind(this));
+        gameInit.onBuildingUpdated.addListener(this.buildingUpdated.bind(this));
+        gameInit.onBuildingLiked.addListener(this.buildingLiked.bind(this));
+        gameInit.onBuildingResourcesUpdated.addListener(this.buildingResourcesUpdated.bind(this));
+        gameInit.onBuildingUpgraded.addListener(this.buildingUpgraded.bind(this));
+        clickController.onBuildingClicked.addListener(this.buildingClicked.bind(this));
+        this.onBuildingCreated = new UnnyAction();
+        this.onBuildingUpgraded = new UnnyAction();
+        this.onBuildingUpdated = new UnnyAction();
+        this.onBuildingLiked = new UnnyAction();
+        this.onResourcesUpdated = new UnnyAction();
+        this.onBuildingResourcesUpdated = new UnnyAction();
+        this.onReset = new UnnyAction();
+
+        this.onModeChanged = new UnnyAction();
+        this.onCreate = new UnnyAction();
+        this.guiMode = GUIMode.Normal;
+
+        this.allWindows = [];
+        this.allWindows[WindowType.WinMain] = new WinMain(this, gameInit);
+        this.allWindows[WindowType.WinConstruct] = new WinConstruct(this, gameInit);
+        this.allWindows[WindowType.WinBuildings] = new BuildingsGUI(this, gameInit);
+        this.allWindows[WindowType.WinUpgrade] = new WinUpgrade(this, gameInit);
+        this.allWindows[WindowType.WinStore] = new WinStore(this, gameInit);
+        this.allWindows[WindowType.WinPuzzle] = new WinPuzzle(this, gameInit);
+        this.allWindows[WindowType.WinBossSummon] = new WinBossSummon(this, gameInit, {
+            header: "CollectCropTitle",
+            description: "CollectCropText",
+            image: "CollectCrop",
+            button: "CollectCropStartButton",
+            action: ()=>this.changeMode(GUIMode.Boss)
+        });
+        this.allWindows[WindowType.WinBossProccess] = new WinBossProccess(this, gameInit);
+        this.allWindows[WindowType.WinHarvested] = new WinHarvested(this, gameInit);
+        this.allWindows[WindowType.WinFortuneWheel] = new WinFortuneWheel(this, gameInit);
+        this.allWindows[WindowType.WinQuests] = new WinQuests(this, gameInit);
+        this.allWindows[WindowType.WinSupervisor] = new WinWithUnlockedExitButton(this, gameInit, {
+            header: "BanjoTitle",
+            description: "BanjoDesc",
+            image: "Banjo",
+            button: "BanjoButtonText",
+            btn_min_width: 1700 * GlobalScale,
+            icon: 'AdCam',
+            action: ()=>{
+                PlayRewardedAd(()=> {
+                    gameAnalytics.sendEvent("Ad_Banjo");
+                    gameInit.progress.activateSupervisor();
+                    this.getWindowByType(WindowType.WinMain).playBreadAnimation();
+                });
+            }
+        });
+        this.allWindows[WindowType.WinGuard] = new WinGuard(this, gameInit, {
+            header: "RainTitle",
+            description: "RainDescFreeProSpecial",
+            image: "Cloud",
+            button: "RainButtonText",
+            btn_min_width: 1000 * GlobalScale,
+            icon: 'AdCam',
+            action: ()=>{
+                PlayRewardedAd(()=> {
+                    gameAnalytics.sendEvent("Ad_Rain");
+                    gameInit.progress.activateGuard();
+                });
+            }
+        });
+        this.allWindows[WindowType.WinDaily] = new WinDailyBonus(this, gameInit);
+        this.allWindows[WindowType.WinDropPuzzle] = new WinDropPuzzle(this, gameInit);
+
+        this.allWindows[WindowType.WinNoAdd] = new WinWithPicture(this, gameInit, {
+            header: "NoAdTitle",
+            description: "NoAdText",
+            image: "NoAdAndRatings",
+            button: "ButtonOk",
+            no_exit: true,
+        });
+
+        this.allWindows[WindowType.WinAdBLock] = new WinWithPicture(this, gameInit, {
+            header: "NoAdTitle",
+            description: "AdBlock",
+            image: "NoAdAndRatings",
+            button: "ButtonOk",
+            no_exit: true,
+        });
+
+        this.allWindows[WindowType.WinOtherWorlds] = new WinWithPicture(this, gameInit, {
+            header: "LocationsNotOpenedWindowTitle",
+            description: "LocationsNotOpenedWindowDesc",
+            image: "OtherWorldsLocked",
+            button: "ButtonOk",
+            no_exit: true,
+            smallFont: true,
+            wordWrapWidth: 1000
+        });
+
+        this.allWindows[WindowType.WinInAppBought] = new WinInAppBought(this, gameInit, {
+            header: "GetPuzzlePartTitle",
+            description: "PopupInApp",
+            image: "FortuneDevil",
+            button: "ButtonOk",
+            no_exit: true,
+            imageX: 100,
+            imageY: 70,
+            scaleImage: 0.9
+        });
+
+        this.allWindows[WindowType.WinNotEnoughGems] = new WinWithPicture(this, gameInit, {
+            description: "NotEnoughGemsText",
+            image: "NotEnoughGems",
+            button: "ButtonOk",
+            imageX: 100,
+            action: ()=>this.openGemsStore()
+        });
+
+        this.allWindows[WindowType.WinWaiting] = new WinWithPicture(this, gameInit, {
+            description: "GiftWindowGettingInfo",
+            image: "Wait",
+            no_exit: true,
+        });
+
+        this.allWindows[WindowType.WinFreeUpgrade] = new WinWithPicture(this, gameInit, {
+            header: 'PurchaseForAdWindowTitle',
+            description: "PurchaseForAdWindowDesc",
+            image: "Clockwork_icon_big",
+            button: "ButtonOk",
+        });
+
+        this.allWindows[WindowType.WinTimeTravel] = new WinTimeTravel(this, gameInit, {
+            description: "TimeTravelWindowText",
+            image: "TimeTravel4h",
+            button: "ButtonOk",
+        });
+
+        this.allWindows[WindowType.WinApples] = new WinAppleDescription(this, gameInit, {
+            header: "SeedInfoTitle",
+            image: "AppleInfo",
+            imageY: 300
+        });
+
+        this.allWindows[WindowType.WinBanjoEnd] = new WinBanjoEnd(this, gameInit, {
+            header: "BanjoEndTitle",
+            description: "BanjoEndDesc",
+            image: "BanjoEnd",
+            button: "ButtonOk",
+            no_exit: true,
+        });
+
+        this.allWindows[WindowType.WinBanjoPreEnd] = new WinBanjoPreEnd(this, gameInit, {
+            header: "BanjoEndTitle",
+            image: "MultiplyOnStart",
+            imageX: 200,
+            no_exit: true,
+            descriptionX: 350,
+            descriptionY: 100,
+        });
+
+        this.allWindows[WindowType.WinSettings] = new WinSettings(this, gameInit);
+
+        if (VisualData.getGameSettings().photos) {
+            this.allWindows[WindowType.WinPhotosMainMenu] = new WinPhotosMainMenu(this, gameInit);
+            this.allWindows[WindowType.WinPhotosQuest] = new WinPhotosQuest(this, gameInit);
+        }
+
+        this.activeWindows = [];
+        this.activeWindows.push(this.allWindows[WindowType.WinMain]);
+
+        for (let i in this.allWindows) {
+            const win = this.allWindows[i];
+            win.winType = i;
+            // win.setWindowVisible(false);
+            win.onClose.addListener(this.onWindowsClosed.bind(this));
+        }
+
+        clickController.onFabrikaWasClicked.addListener((action)=>{
+            if (action === 'down' && this.isNormalMode() && !gameInit.progress.isSupervisorActive())
+                this.openNewWindow(WindowType.WinBossSummon);
+        });
+        clickController.onPodkovaWasClicked.addListener((action)=>{
+            if (action === 'down' && this.isNormalMode() && !gameInit.progress.isSupervisorActive())
+                this.openNewWindow(WindowType.WinGuard)
+        });
+
+        eventManager.onHarvestCompleted.addListener((seeds)=>{
+            const win = this.openNewWindow(WindowType.WinHarvested, true);
+            win.setApplesAcount(seeds);
+        });
+    }
+
+    preload() {
+        CalculateFonts();
+    }
+
+    _checkForNewPopup() {
+        if (this.popups.length > 0) {
+            const info = this.popups[0];
+            this.popup.textLabel.setText(info.text);
+            this.popup.setVisible(true);
+            this.popups.splice(0, 1);
+            audioManager.playInfo();
+
+            let iconToDestroy = null;
+            if (info.icon) {
+                iconToDestroy = this.engine.add.sprite(this.popup.thumb.x, this.popup.thumb.y, info.icon);
+                this.popup.add(iconToDestroy);
+                this.popup.thumb.setVisible(false);
+            } else
+                this.popup.thumb.setVisible(true);
+
+            this.popupTimer = setTimeout(()=>{
+                this.popup.setVisible(false);
+
+                if (iconToDestroy)
+                    iconToDestroy.destroy(true);
+
+                setTimeout(()=> {
+                    this.popupTimer = null;
+                    this._checkForNewPopup();
+                }, 500);
+            }, 2000);
+        }
+    }
+
+    showPopup(text, icon) {
+        this.popups.push({
+            text: text,
+            icon: icon
+        });
+
+        if (!this.popupTimer)
+            this._checkForNewPopup();
+    }
+
+    createPopup(engine) {
+        this.popups = [];
+        this.popup = engine.add.container();
+        const back = engine.add.sprite(0, 0, 'Popup').setOrigin(0, 0.5);
+        this.popup.thumb = engine.add.sprite(-10 * GlobalScale, -20 * GlobalScale, 'PopupThumbsUp');
+        this.popup.textLabel = engine.add.text(50 * GlobalScale, 0, '+100%', DefaultFontSmall2).setOrigin(0, 0.5);
+        this.popup.add(back);
+        this.popup.add(this.popup.thumb);
+        this.popup.add(this.popup.textLabel);
+
+        this.popup.setPosition(RealScreenWidth - back.width * imagesDeltaScale - 100 * GlobalScale, RealScreenHeight * 0.4);
+        this.popup.setDepth(WinDefaultDepth + 1000);
+        this.popup.setVisible(false);
+
+        eventManager.onUpgradePurchased.addListener(()=>{
+            this.showPopup(LocalizationManager.getLocalizization("PopupMarketUpgrade"));
+        });
+        eventManager.onMacroUpgraded.addListener((building, bonus)=>{
+            let text = "Unknown";
+            switch (bonus.upgradeType) {
+                case 'SpeedUp':
+                    text = LocalizationManager.getLocalizization("PopupSpeedUpMacro");
+                    break;
+                case 'MultiProfit':
+                    text = LocalizationManager.getLocalizization("PopupMultiprofitMacro").format(bonus.parameter);
+                    break;
+            }
+            this.showPopup(text, building.getSmallIcon());
+        });
+    }
+
+    onWindowsClosed(window) {
+        const wins = this.activeWindows;
+        if (wins[wins.length - 1] === window) {
+            wins.pop();
+            wins[wins.length - 1].setWindowVisible(true);
+        } else {
+            for (let i in wins) {
+                if (wins[i] === window) {
+                    wins.splice(i, 1);
+                    break;
+                }
+            }
+        }
+
+        this._checkForProduction();
+    }
+
+    _checkForProduction() {
+        const wins = this.activeWindows;
+        const type = this.getActiveWindow().winType;
+        const showGUI = wins.length === 1;
+        const show = showGUI || type == WindowType.WinBossProccess;
+
+        visualGame.setBuildingsProductionVisible(gameInit.selectedWorld, show);
+        visualGame.setGameObjectsVisible(showGUI);
+
+        if (type != WindowType.WinUpgrade)
+            this.allWindows[WindowType.WinBuildings].showNormal(showGUI, false, false, gameInit.selectedWorld);
+
+        if (type === WindowType.WinMain) {
+            this.checkForTutorialPhrase();
+        } else
+            this.hideTutorialText();
+    }
+
+    showTimeTravel(minutes, image) {
+        const windowType = WindowType.WinTimeTravel;
+        const win = this.allWindows[windowType];
+        win.setTravelTime(minutes, image);
+        this.openNewWindow(windowType);
+    }
+
+    openGemsStore() {
+        const windowType = WindowType.WinStore;
+        const win = this.allWindows[windowType];
+        win.setGemsPage();
+        this.openNewWindow(windowType);
+    }
+
+    getWinTypeAtTheTop() {
+        return this.activeWindows[this.activeWindows.length - 1].winType;
+    }
+
+    getActiveWindow() {
+        return this.activeWindows[this.activeWindows.length - 1];
+    }
+
+    getWindowByType(windowType) {
+        return this.allWindows[windowType];
+    }
+
+    openNewWindow(windowType, closePrevious) {
+        const wins = this.activeWindows;
+        const win = this.allWindows[windowType];
+
+        if (win === wins[wins.length - 1])
+            return win;
+
+        if (closePrevious) {
+            wins[wins.length - 1].closeWindow();
+            return this.openNewWindow(windowType, false);
+        }
+        else
+            wins[wins.length - 1].setWindowVisible(false);
+
+        win.setWindowVisible(true);
+        wins.push(win);
+
+        this._checkForProduction();
+        return win;
+    }
+
+    isNormalMode() {
+        return this.guiMode === GUIMode.Normal;
+    }
+
+    changeMode(newMode) {
+        const worldID = gameInit.selectedWorld;
+        this.guiMode = newMode;
+        this.onModeChanged.callListeners(this.guiMode, worldID);
+
+        // visualGame.setBuildingsProductionVisible(worldID, this.guiMode !== GUIMode.UpgradeBuildings);
+
+        switch (newMode) {
+            case GUIMode.UpgradeBuildings:
+            case GUIMode.Likes:
+                this.openNewWindow(WindowType.WinUpgrade);
+                break;
+            case GUIMode.Boss:
+                audioManager.playWorldMusic(0);
+                gameInit.progress.harvestStarted();
+                this.createHarvestAnimation();
+                this.openNewWindow(WindowType.WinBossProccess);
+                this.harvestBuildings = visualGame.prepareForHarvest();
+                break;
+        }
+    }
+
+    createHarvestAnimation() {
+        PrepareAndCreateObject(VisualData.FACTORY_WORKING, null, this.engine, OverlayDepth + WinDefaultDepth, (splitAnimation) => {
+            this.harvesting = splitAnimation;
+            if (this.guiMode !== GUIMode.Boss)
+                this.stopHarvestingAnimation();
+            else
+                this.harvesting.obj.setPosition(this.harvesting.obj.x / localScale, this.harvesting.obj.y / localScale + 774 * GlobalScale);
+        });
+    }
+
+    stopHarvestingAnimation() {
+        if (this.harvesting) {
+            this.harvesting.destroy(true);
+            this.harvesting = null;
+        }
+    }
+
+    localize() {
+        for (let i in this.allWindows)
+            this.allWindows[i].localize();
+    }
+
+    create(engine) {
+        this.engine = engine;
+        this.onCreate.callListeners(engine);
+
+        for (let i in this.allWindows)
+            this.allWindows[i].localize();
+
+        this.activeWindows[0].setWindowVisible(true);
+
+        gameInit.progress.onPuzzlePeaceReceived.addListener(this.puzzleReceived.bind(this));
+        gameInit.progress.onUpgradePurchased.addListener(this.upgradePurchased.bind(this));
+
+        this.tutorialLabel = engine.add.text(VisualData.MAP_PARAMS.center.x, RealScreenHeight - 60 * GlobalScale, null, DefaultFontBig).setOrigin(0.5, 0.5).setDepth(WinDefaultDepth - 2000);
+        this.hideTutorialText();
+
+        this.createPopup(engine);
+    }
+
+    checkForTutorialPhrase() {
+        if (this.tutorialLabel.text)
+            this.tutorialLabel.setVisible(true);
+    }
+
+    setTutorialPhrase(text) {
+        this.tutorialLabel.setText(text);
+        this.tutorialLabel.setVisible(text != null && this.getActiveWindow().winType == WindowType.WinMain);
+    }
+
+    hideTutorialText(){
+        this.tutorialLabel.setVisible(false);
+    }
+
+    upgradePurchased(bonus) {
+        switch (bonus.upgradeType) {
+            case 'TimeTravel':
+                this.showTimeTravel(bonus.parameter / 60, WinStore.getImageName(bonus));
+                break;
+        }
+    }
+
+    puzzleReceived(prevImg, imageId, piece, duplicate, normal){
+        const win = this.openNewWindow(WindowType.WinDropPuzzle);
+        win.dropPuzzle(prevImg, imageId, piece, duplicate, normal);
+    }
+
+    buildingUpgraded(world, building) {
+        this.onBuildingUpgraded.callListeners(world, building, this.engine);
+    }
+
+    buildingCreated(world, building) {
+        this.onBuildingCreated.callListeners(world, building, this.engine);
+    }
+
+    buildingLiked(world, building) {
+        this.onBuildingLiked.callListeners(world, building, this.engine);
+    }
+
+    buildingUpdated(world, building) {
+        this.onBuildingUpdated.callListeners(world, building, this.engine);
+    }
+
+    buildingResourcesUpdated(world, building) {
+        this.onBuildingResourcesUpdated.callListeners(world, building);
+    }
+
+    tryToUpgradeBuilding(buildingInterface) {
+        if (gameInit.progress.isResourcesEnough(buildingInterface.getUpgradePrice())) {
+            buildingInterface.upgradeBuilding();
+        }
+    }
+
+    tryToConstructBuilding(buildingInterface) {
+        if (gameInit.progress.isSupervisorActive())
+            return;
+
+        if (gameInit.progress.isResourcesEnoughForConstruction(buildingInterface)) {
+            const win = this.openNewWindow(WindowType.WinConstruct);
+            win.setInfo(buildingInterface);
+        }
+    }
+
+    buildingClicked(buildingInterface) {
+        // console.log("buildingClicked " + this.guiMode + " : " + buildingInterface.harvest);
+        switch (this.guiMode) {
+            case GUIMode.Normal: {
+                if (buildingInterface.getLevel() === 0)
+                    this.tryToConstructBuilding(buildingInterface);
+                else
+                    buildingInterface.buildingWasClicked();
+                break;
+            }
+            case GUIMode.UpgradeBuildings:
+                if (buildingInterface.getLevel() > 0)
+                    this.tryToUpgradeBuilding(buildingInterface);
+                break;
+            case GUIMode.Boss:
+                if (!buildingInterface.harvest) {
+                    this.harvestBuildings--;
+                    if (!this.harvestBuildings) {
+                        this.changeMode(GUIMode.Normal);
+
+                        gameInit.harvestCompleted();
+                        this.stopHarvestingAnimation();
+                        this.onReset.callListeners();
+                        audioManager.playWorldMusic(1);
+                    }
+                }
+                break;
+        }
+    }
+}
+
+const guiManager = new GUIManager(gameInit);
+
+class Tutorial {
+    constructor() {
+        this.depth = WinDefaultDepth + 900;
+        this.guardShown = false;
+        this.supervisorShown = false;
+        this.fortuneShown = false;
+    }
+
+    loaded(progress) {
+        const phase = progress.getTutorialPhase();
+        if (phase !== TutPhases.TutorialEnd) {
+            this.newMethod = tutorial.update.bind(tutorial);
+            gameInit.update.addListener(this.newMethod);
+
+            if (phase >= TutPhases.FortuneWheel && phase <= TutPhases.FortuneWheel) {
+                for (let i = 0; i <= TutPhases.WaitForSummonToEnd; i++)
+                    this.preparePhase(i);
+                for (let i = TutPhases.FortuneWheel; i <= phase; i++)
+                    this.preparePhase(i);
+            } else {
+                for (let i = 0; i <= phase; i++)
+                    this.preparePhase(i);
+            }
+        }
+    }
+
+    stopTutorial(){
+        gameInit.update.removeListener(this.newMethod);
+        guiManager.setTutorialPhrase(null);
+        this.finger.destroy(true);
+        this.circle.destroy(true);
+    }
+
+    pointAtPosition(pos, center, useScale) {
+        this.finger.setVisible(true);
+        const x = (useScale ? pos.x / localScale : pos.x) + (center ? 0 : VisualData.MAP_PARAMS.center.x);
+        const y = (useScale ? pos.y / localScale : pos.y) + (center ? 0 : VisualData.MAP_PARAMS.center.y);
+        this.finger.setPosition(x, y);
+        this.circle.setPosition(x, y);
+
+        // console.log("Point " + x + " > " + y + " > " + pos.x + " > center " + center);
+
+        if (!this.animation) {
+            setTimeout(() => {
+                if (this.finger.visible && !this.animation) {
+                    this.animation = 1;
+                    this.circle.setVisible(true);
+                    this.animation = animManager.scaleAlphaInfinite(this.circle, 0.833);
+                }
+            }, 600);
+        } else
+            this.circle.setVisible(true);
+    }
+
+    _isWindow(winType) {
+        return this.lastWindow == winType;
+    }
+
+    _lockAtButton(btn, center) {
+        lockGuiAtButton(btn);
+        if (btn.getParentObject) {
+            const p = btn.getParentObject();
+            this.pointAtPosition({
+                x: p.x / localScale,
+                y: p.y / localScale + (0.5 - btn.originY) * btn.height
+            }, center);
+        } else
+        if (btn.originY && btn.originY !== 0.5) {
+            this.pointAtPosition({
+                x: btn.x,
+                y: btn.y + (0.5 - btn.originY) * btn.height
+            }, center);
+        } else {
+            this.pointAtPosition(btn, center);
+        }
+    }
+
+    _hideFinger() {
+        this.finger.setVisible(false);
+        this.circle.setVisible(false);
+    }
+
+    _getFirstSlotPosition() {
+        const pos = VisualData.PLACED_BUILDINGS[1].position;
+        const key = VisualData.PLACED_BUILDINGS[1].levels[0].building;
+        const offset = VisualData.VISUAL_BUILDINGS[key].objects[0];
+        return {
+            x: pos.x + offset.x,
+            y: pos.y + offset.y,
+        };
+    }
+
+    preparePhase(phase) {
+        this.phase = phase;
+        this.lastWindow = guiManager.getWinTypeAtTheTop();
+        this.lastTab = 0;
+        guiManager.setTutorialPhrase(this.getPhaseLocalization());
+
+        switch (this.phase) {
+            case TutPhases.BuildSlot1:
+                if (this._isWindow(WindowType.WinMain)) {
+                    this.pointAtPosition(this._getFirstSlotPosition());
+                    lockGuiEverything();
+                    guiManager.getActiveWindow().hideAllButtonsForTutorial();
+                } else {
+                    if (this._isWindow(WindowType.WinConstruct)) {
+                        this._lockAtButton(guiManager.getActiveWindow().getTutorialButton());
+                    }
+                }
+                break;
+            case TutPhases.Collect1:
+                this._hideFinger();
+                lockGuiEverything();
+                break;
+            case TutPhases.UpgradeBuilding:
+            case TutPhases.UpgradeBuilding5:
+                if (this._isWindow(WindowType.WinMain)) {
+                    const win = guiManager.getActiveWindow();
+                    win.showUpgradeButton();
+                    lockAtOneAnimatedObject(win);
+                    this._lockAtButton(win.getUpgradeButton(), true);
+                } else {
+                    if (this._isWindow(WindowType.WinUpgrade)) {
+                        lockGuiEverything();
+                        unlockAnimatedObject();
+                        this.pointAtPosition(this._getFirstSlotPosition());
+                    }
+                }
+                break;
+            case TutPhases.Collect1k:
+            case TutPhases.Collect10k:
+                unlockAnimatedObject();
+                this._hideFinger();
+                unlockGUI();
+                break;
+            case TutPhases.BuyAutoCollect:
+                if (this._isWindow(WindowType.WinMain)) {
+                    GlobalInputLocked = true;
+                    const win = guiManager.getActiveWindow();
+                    win.showStoreButton();
+                    this._lockAtButton(win.getStoreButton(), true);
+                } else {
+                    if (this._isWindow(WindowType.WinStore)) {
+                        GlobalInputLocked = false;
+                        const win = guiManager.getActiveWindow();
+                        this._lockAtButton(win.getFirstUpgradeSlot(), true);
+                        win.scroll.setScrollerEnable(false);
+                    }
+                }
+                break;
+            case TutPhases.Boost4h:
+                if (this._isWindow(WindowType.WinMain)) {
+                    if (this.guardShown)
+                        this.moveToNextPhase();
+                    else {
+                        lockAtOneAnimatedObject(visualGame.getGuard());
+                        GlobalInputLocked = false;
+                        lockGuiEverything();
+                        visualGame.showGuard();
+                        this.pointAtPosition(visualGame.getGuard().obj, true, true);
+                    }
+                } else {
+                    if (this._isWindow(WindowType.WinGuard) || this._isWindow(WindowType.WinNoAdd)) {
+                        this._lockAtButton(guiManager.getActiveWindow().getTutorialButton());
+                        this.guardShown = true;
+                    }
+                }
+                break;
+            case TutPhases.Boost6s:
+                if (this._isWindow(WindowType.WinMain)) {
+                    if (this.supervisorShown)
+                        this.moveToNextPhase();
+                    else {
+                        unlockAnimatedObject();
+                        GlobalInputLocked = true;
+                        const win = guiManager.getActiveWindow();
+                        win.showSuperVisorButton();
+                        this._lockAtButton(win.getSuperVisorButton(), true);
+                    }
+                } else {
+                    if (this._isWindow(WindowType.WinSupervisor) || this._isWindow(WindowType.WinNoAdd)) {
+                        this._lockAtButton(guiManager.getActiveWindow().getTutorialButton());
+                        this.supervisorShown = true;
+                    }
+                }
+                break;
+            case TutPhases.FortuneWheel:
+                if (this._isWindow(WindowType.WinMain)) {
+                    if (this.fortuneShown) {
+                        this.moveToNextPhase();
+                    }
+                    else {
+                        unlockAnimatedObject();
+                        GlobalInputLocked = true;
+                        const win = guiManager.getActiveWindow();
+                        this._lockAtButton(win.getFortuneWheelButton(), true);
+                    }
+                } else {
+                    if (this._isWindow(WindowType.WinFortuneWheel) || this._isWindow(WindowType.WinNoAdd)) {
+                        this._lockAtButton(guiManager.getActiveWindow().getTutorialButton());
+                        this.fortuneShown = true;
+                    }
+                }
+                break;
+            case TutPhases.FortuneWheelEnded: {
+                if (this._isWindow(WindowType.WinMain))
+                    this.moveToNextPhase();
+                break;
+            }
+            case TutPhases.BuildSlots6:
+            case TutPhases.BuildSlots9:
+                this._hideFinger();
+                unlockAnimatedObject();
+                unlockGUI();
+                break;
+            case TutPhases.SummonBoss:
+                lockGuiEverything();
+                lockAtOneAnimatedObject(visualGame.getBoss());
+                if (this._isWindow(WindowType.WinMain)) {
+                    visualGame.updateBossState();
+                    this.pointAtPosition(visualGame.getBoss().obj, true, true);
+                } else {
+                    if (this._isWindow(WindowType.WinBossSummon)) {
+                        this._lockAtButton(guiManager.getActiveWindow().getTutorialButton());
+                    } else {
+                        if (this._isWindow(WindowType.WinBossProccess)) {
+                            this._hideFinger();
+                            unlockGUI();
+                            unlockAnimatedObject();
+                        }
+                    }
+                }
+                break;
+            case TutPhases.WaitForSummonToEnd:
+                unlockAnimatedObject();
+                unlockGUI();
+                guiManager.getWindowByType(WindowType.WinMain).showAllButtonsFromTutorial();
+                break;
+            case TutPhases.PuzzlesAvailable:
+                GlobalInputLocked = true;
+                if (this._isWindow(WindowType.WinMain)) {
+                    const win = guiManager.getActiveWindow();
+                    this._lockAtButton(win.getPuzzlesButton(), true);
+                } else {
+                    if (this._isWindow(WindowType.WinPuzzle)) {
+                        const win = guiManager.getActiveWindow();
+                        this.lastTab = win.getSelectedTab();
+                        if (this.lastTab === 0)
+                            this._lockAtButton(win.getBoxesTab(), true);
+                        else
+                            this._lockAtButton(win.getPuzzleOpenBox(), true);
+
+                        win.scroll[1].setScrollerEnable(false);
+                    }
+                }
+                break;
+            case TutPhases.TutorialEnd:
+                GlobalInputLocked = false;
+                this.stopTutorial();
+                break;
+        }
+    }
+    
+    getPhaseLocalization() {
+        let local = null;
+        switch (this.phase) {
+            case TutPhases.Collect20:
+            case TutPhases.Collect1k:
+            case TutPhases.Collect10k:
+                return LocalizationManager.getLocalizization("CollectGold").format(this._getRequiredResourcesForUI());
+            case TutPhases.Boost4h:
+                local = "Step9";
+                break;
+            case TutPhases.PuzzlesAvailable:
+            case TutPhases.BuildSlots9:
+                local = "Step" + (this.phase);
+                break;
+            case TutPhases.WaitForSummonToEnd:
+            case TutPhases.FortuneWheel:
+            case TutPhases.FortuneWheelEnded:
+                return null;
+            default:
+                local = "Step" + (this.phase + 1);
+                break;
+        }
+
+        return LocalizationManager.getLocalizization(local);
+    }
+
+    onCreated(engine) {
+        this.engine = engine;
+
+        const name = "Tut_Finger";
+        const allObj = VisualData.ALL_OBJECTS[name];
+        this.finger = this.engine.add.spine(0, 0, name, allObj.animations.idle, true).setDepth(this.depth).setScale(1);
+                // this.finger = this.engine.add.sprite(0, 0, "Tut_Finger").setDepth(this.depth).setOrigin(0.4, 0);
+        this.circle = this.engine.add.sprite(0, 0, "Tut_Circle").setDepth(this.depth - 1);
+        this._hideFinger();
+    }
+
+    moveToNextPhase() {
+        switch (this.phase) {
+            case TutPhases.FortuneWheelEnded:
+                this.phase = TutPhases.PuzzlesAvailable;
+                break;
+            case TutPhases.WaitForSummonToEnd:
+                this.phase = TutPhases.FortuneWheel;
+                break;
+            default:
+                this.phase++;
+                break;
+        }
+
+        gameInit.progress.setTutorialPhase(this.phase);
+        // console.log("MOVE to " + this.phase);
+        gameAnalytics.sendEvent("Tutorial", {
+            "phase": this.phase
+        });
+        this.preparePhase(this.phase);
+    }
+
+    _getRequiredResourcesForUI() {
+        switch (this.phase) {
+            case TutPhases.Collect1: return 1;
+            case TutPhases.Collect20: return 20;
+            case TutPhases.Collect1k: return 1000;
+            case TutPhases.Collect10k: return 10000;
+        }
+        return 0;
+    }
+
+    _getRequiredResources() {
+        return this._getRequiredResourcesForUI() * RESOURCES_SCALE;
+    }
+
+    _getRequiredUpgrades() {
+        switch (this.phase) {
+            case TutPhases.UpgradeBuilding: return 1;
+            case TutPhases.UpgradeBuilding5: return 4;
+        }
+        return 0;
+    }
+
+    update() {
+        const win = guiManager.getActiveWindow();
+        if (this.lastWindow != guiManager.getWinTypeAtTheTop() || (win.selectedTab && win.selectedTab !== this.lastTab)) {
+            if (this.phase !== TutPhases.WaitForSummonToEnd)
+                this.preparePhase(this.phase);
+        }
+
+        switch (this.phase) {
+            case TutPhases.BuildSlot1:
+                if (gameInit.progress.isBuildingConstructed(1, 1))
+                    this.moveToNextPhase();
+                break;
+            case TutPhases.Collect1:
+            case TutPhases.Collect20:
+                if (!this.fingerAnimation && gameInit.getBuildingById(1, 1).anyResources) {
+                    this.pointAtPosition(this._getFirstSlotPosition());
+                    this.fingerAnimation = animManager.swipeInfinite(this.finger, 1);
+                    this.circle.setVisible(false);
+                }
+                if (gameInit.progress.getTotalResources().compare(this._getRequiredResources()) >= 0) {
+                    if (this.phase === TutPhases.Collect20) {
+                        if (this.fingerAnimation) {
+                            this.fingerAnimation.stopAnimation();
+                            this.fingerAnimation = null;
+                        }
+                        this._hideFinger();
+                    }
+                    this.moveToNextPhase();
+                }
+                break;
+            case TutPhases.Collect1k:
+            case TutPhases.Collect10k:
+                if (gameInit.progress.getTotalResources().compare(this._getRequiredResources()) >= 0)
+                    this.moveToNextPhase();
+                break;
+            case TutPhases.UpgradeBuilding:
+            case TutPhases.UpgradeBuilding5:
+                const b = gameInit.getBuildingById(1, 1);
+                if (b.getLevel() > this._getRequiredUpgrades()) {
+                    if (this.phase === TutPhases.UpgradeBuilding5) {
+                        this._hideFinger();
+                    }
+                    this.moveToNextPhase();
+                }
+                break;
+            case TutPhases.BuyAutoCollect:
+                 const id = VisualData.getAutoClickSlot1Id();
+                 if (gameInit.progress.isUpgradePurchased(id)) {
+                     const win = guiManager.getWindowByType(WindowType.WinStore);
+                     win.scroll.setScrollerEnable(true);
+                     unlockGUI();
+                     this._hideFinger();
+                     this.moveToNextPhase();
+                 }
+                break;
+            case TutPhases.Boost4h:
+                if (gameInit.progress.isGuardActive()) {
+                    this._hideFinger();
+                    this.moveToNextPhase();
+                }
+                break;
+            case TutPhases.Boost6s:
+                if (gameInit.progress.isSupervisorActive()) {
+                    GlobalInputLocked = false;
+                    this._hideFinger();
+                    this.moveToNextPhase();
+                }
+                break;
+            case TutPhases.BuildSlots6:
+                if (gameInit.progress.getConstructedBuildingsCount() >= 6) {
+                    this._hideFinger();
+                    this.moveToNextPhase();
+                }
+                break;
+            case TutPhases.BuildSlots9:
+                if (gameInit.progress.getConstructedBuildingsCount() >= 7) {
+                    this._hideFinger();
+                    this.moveToNextPhase();
+                }
+                break;
+            case TutPhases.SummonBoss: {
+                if (gameInit.progress.getHarvestsCount() >= 1) {
+                    this._hideFinger();
+                    this.moveToNextPhase();
+                }
+                break;
+            }
+            case TutPhases.WaitForSummonToEnd: {
+                if (guiManager.getWinTypeAtTheTop() == WindowType.WinMain)
+                    this.moveToNextPhase();
+                break;
+            }
+            case TutPhases.PuzzlesAvailable: {
+                if (gameInit.progress.getOpenedBoxes() > 0) {
+                    this._hideFinger();
+                    this.moveToNextPhase();
+
+                    const win = guiManager.getWindowByType(WindowType.WinPuzzle);
+                    if (win.scroll)
+                        win.scroll[1].setScrollerEnable(true);
+                }
+                break;
+            }
+
+        }
+    }
+
+    onAdStarted() {
+        switch (this.phase) {
+            case TutPhases.FortuneWheel:
+                this._hideFinger();
+                this.moveToNextPhase();
+                break;
+        }
+    }
+}
+
+const tutorial = new Tutorial();
+if (!VisualData.getGameSettings().no_tutorial) {
+    eventManager.onAdStarted.addListener(tutorial.onAdStarted.bind(tutorial));
+    eventManager.onFortuneWheelUsed.addListener(tutorial.onAdStarted.bind(tutorial));
+    gameInit.create.addListener(tutorial.onCreated.bind(tutorial));
+    gameInit.loaded.addListener((progress) => tutorial.loaded(progress));
+}
+
+'use strict';
+
+VisualData.MAP_PARAMS.center = {
+    x: RealScreenWidth /2,
+    y: RealScreenHeight /2,
+};
+
+const useNewScale = true;
+
+let gameW, gameH;
+let dpi = useNewScale ? (window.devicePixelRatio || 1) : 1;
+
+function UpdateNumbers() {
+    if (useNewScale) {
+        localScale = Math.min(window.innerWidth / RealScreenWidth, window.innerHeight / RealScreenHeight);
+        localScale *= dpi;
+
+        const minValue = 0.5;
+        if (localScale < minValue) {
+            dpi *= minValue / localScale;
+            localScale = minValue;
+        }
+
+        if (localScale < 0.6) {
+            imagesDeltaScale = 2;
+            use2ximages = false;
+        } else {
+            imagesDeltaScale = 1;
+            use2ximages = true;
+        }
+        imageSizeLocalScale = imagesDeltaScale * localScale;
+    } else
+        localScale = 1;
+    gameW = RealScreenWidth * localScale;
+    gameH = RealScreenHeight * localScale;
+}
+UpdateNumbers();
+
+const renderType = Phaser.WEBGL;
+// const renderType = Phaser.CANVAS;
+
+let config = {
+    type: renderType,
+    parent: 'phaser-app',
+
+    audio: {
+        disableWebAudio: true
+    },
+
+    width: gameW,
+    height: gameH,
+    // autoRound: false,
+    // fps: {
+    //     target: 30,
+    //     min: 2,
+    //     max: 30,
+    //     forceSetTimeOut: true
+    // },
+    // render: {
+    //     antialias: true
+    // },
+
+    autoRound: false,
+    scale: {
+        // parent: 'phaser-app',
+        // mode: Phaser.DOM.NONE,
+        // mode: Phaser.Scale.FIT,
+        // autoCenter: Phaser.Scale.CENTER_BOTH,
+        width: gameW,
+        height: gameH,
+        zoom: 1 / dpi,
+    },
+    plugins: {
+        // global: [ NineSlice.Plugin.DefaultCfg ]
+        global: [ NineSlice.Plugin.DefaultCfg ]
+    },
+    scene: {
+        preload: preload,
+        create: create,
+        update: update,
+        pack: {
+            files: [
+                {
+                    type: 'scenePlugin',
+                    key: renderType === Phaser.WEBGL ? 'SpineWebGLPlugin' : 'SpineCanvasPlugin',
+                    url: renderType === Phaser.WEBGL ? 'plugins/SpineWebGLPlugin.js' : 'plugins/SpineCanvasPlugin.js',
+                    sceneKey: 'spine'
+                },
+                {
+                    type: 'scenePlugin',
+                    key: 'rexuiplugin',
+                    // url: 'plugins/rexuiplugin.min.js',
+                    url: 'https://raw.githubusercontent.com/rexrainbow/phaser3-rex-notes/master/plugins/dist/rexuiplugin.min.js',
+                    sceneKey: 'rexUI'
+                }
+            ]
+        },
+    }
+};
+
+function preload1() {
+
+}
+
+function create1() {
+console.warn("1111122");
+}
+
+function update1() {
+
+}
+
+let gBase = null;
+
+const loadingImage = window.document.getElementById("progress-fill");
+let lastVal = 0;
+const loadingSplash = window.document.getElementById("loading-div");
+const ScreenSize = {
+    width: gameW / dpi,
+    height: gameH / dpi
+};
+
+loadingSplash.style.width = ScreenSize.width + 'px';
+loadingSplash.style.height = ScreenSize.height + 'px';
+
+if (!useNewScale)
+    config.scale.zoom = Math.min(window.innerHeight / RealScreenHeight, window.innerWidth / RealScreenWidth);
+
+let game = null;
+// let game = new Phaser.Game({
+//     type: Phaser.WEBGL,
+//     parent: 'phaser-example',
+//     scene1: {
+//         preload: preload,
+//         create: create,
+//         update: update
+//     }
+// });
+
+readTextFile(VisualData.getAtlasFullPath(), (json) => {
+    if (!game) {
+        GameData.prepareAtlases(json ? JSON.parse(json) : null);
+        game = new Phaser.Game(config);
+    }
+});
+
+function readTextFile(file, callback) {
+    var rawFile = new XMLHttpRequest();
+    rawFile.overrideMimeType("application/json");
+    rawFile.open("GET", file, true);
+    rawFile.onreadystatechange = function() {
+        if (rawFile.status == "200") {
+            if (rawFile.readyState === 4) {
+                callback(rawFile.responseText);
+            }
+        }else {
+            // console.error(rawFile);
+            callback(null);
+        }
+    };
+    rawFile.send(null);
+}
+
+function preload () {
+    this.load.on('progress', function (value) {
+        if (value > lastVal) {
+            loadingImage.style.width = (value * 30) + '%';
+            lastVal = value;
+        }
+    });
+
+    gameInit.GamePreload(this);
+}
+
+function PlayRewardedAd(doneCallback) {
+    if (!socialManager)
+        return;
+
+    function onNoAds() {
+        guiManager.openNewWindow(WindowType.WinNoAdd);
+    }
+
+    function onAdBlock() {
+        guiManager.openNewWindow(WindowType.WinAdBLock);
+    }
+
+    function onCompleted() {
+        audioManager.unMuteSounds();
+        unlockAnimatedObject();
+        unlockGUI();
+        doneCallback();
+    }
+
+    function onStarted() {
+        eventManager.adStarted();
+        audioManager.muteSounds();
+        GlobalInputLocked = true;
+        lockGuiEverything();
+    }
+
+    const tutCompleted = gameInit.progress.isTutorialCompleted();
+
+    const callbacks = {
+        onCompleted: onCompleted,
+        onNoAds: tutCompleted ? onNoAds : onCompleted,
+        onAdBlock: tutCompleted ? onAdBlock : onCompleted,
+        onStarted: onStarted
+    };
+
+    socialManager.playRewardedAd(callbacks);
+}
+
+const DefaultWidth = 500;
+
+function UpdateTextPosition(text) {
+    if (!text.newText)
+        return;
+
+    if (text.newText.style.display === 'none' || divElementForLabels.style.display === 'none') {
+        text.needToUpdate = true;
+        return;
+    }
+
+    const style = text.newText.style;
+    let x = text.x;
+    let y = text.y;
+    if (text.parent) {
+        x += text.parent.x;
+        y += text.parent.y;
+    }
+    style.left = (x / dpi - text.newText.clientWidth * text.originX) + "px";
+    style.top = (y / dpi - text.newText.clientHeight * (text.originY)) + "px";
+}
+
+var divElementForLabels;
+
+function prepareTextToHtml(engine) {
+
+    const divElement = document.createElement("div");
+    divElement.className = "loading-img";
+    document.body.appendChild(divElement);
+    divElementForLabels = divElement;
+
+    //Text
+    const oldTextPosition = Phaser.GameObjects.Text.prototype.setPosition;
+    function newTextPosition(x, y) {
+        oldTextPosition.call(this, x * localScale, y * localScale);
+        UpdateTextPosition(this);
+        return this;
+    }
+
+    const oldTextWrap = Phaser.GameObjects.Text.prototype.setWordWrapWidth;
+    function newTextWrap(width) {
+        if (this.newText)
+            this.newText.style.maxWidth = (width * localScale / dpi) + "px";
+        return oldTextWrap.call(this, width * localScale);
+    }
+
+    const oldSetVisible = Phaser.GameObjects.Text.prototype.setVisible;
+    function newSetVisible(visible) {
+        if (this.newText) {
+            if (visible) {
+                if (!this.newText.timer) {
+                    this.newText.timer = setTimeout(() => {
+                        this.newText.style.display = 'inherit';
+                        if (this.needToUpdate) {
+                            UpdateTextPosition(this);
+                            this.needToUpdate = false;
+                        }
+                        this.newText.timer = null;
+                    }, 200);
+                }
+            }
+            else {
+                this.newText.style.display = 'none';
+                if (this.newText.timer) {
+                    clearInterval(this.newText.timer);
+                    this.newText.timer = null;
+                }
+            }
+        }
+        return oldSetVisible.call(this, visible);
+    }
+
+    function newIsVisible() {
+        if (this.newText)
+            return this.newText.style.display === 'inherit';
+        return this.visible;
+    }
+
+    const oldTest = engine.add.text;
+    function newText(x, y, name, style) {
+        const t = oldTest.call(this, x, y, null).setScale(1);
+        const element = document.createElement("p");
+        element.innerText = name;
+        element.className = "myp";
+        // element.style.font = style.font2;
+        element.style.fontSize = style.font2;
+        element.style.color = style.fill;
+        // element.style.fontWeight = "bolder";
+        element.style.webkitTextStrokeColor = style.stroke;
+        element.style.webkitTextStrokeWidth = style.strokeThickness / 3 + "px";
+        if (style.align)
+            element.style.textAlign = style.align;
+        divElement.appendChild(element);
+
+        t.newText = element;
+        t.renderFlags = 0;
+        UpdateTextPosition(t);
+        return t;
+    }
+
+    const oldSetText = Phaser.GameObjects.Text.prototype.setText;
+    Phaser.GameObjects.Text.prototype.setText = function(text) {
+        if (text === this.text)
+            return this;
+        if (this.newText) {
+            this.newText.innerText = text;
+            UpdateTextPosition(this);
+        }
+        return oldSetText.call(this, text);
+    };
+
+    const oldSetOrigin = Phaser.GameObjects.Text.prototype.setOrigin;
+    function newSetOrigin(x, y) {
+        oldSetOrigin.call(this, x, y);
+        UpdateTextPosition(this);
+        return this;
+    }
+
+    engine.add.text = newText.bind(engine.add);
+    Phaser.GameObjects.Text.prototype.setPosition = newTextPosition;
+    Phaser.GameObjects.Text.prototype.setWordWrapWidth = newTextWrap;
+    Phaser.GameObjects.Text.prototype.setVisible = newSetVisible;
+    Phaser.GameObjects.Text.prototype.setOrigin = newSetOrigin;
+    Phaser.GameObjects.Text.prototype.getWidth = function() {
+        return this.newText? this.newText.clientWidth : this.width;
+    };
+    Phaser.GameObjects.Text.prototype.isVisible = newIsVisible;
+    engine.add.textOld = oldTest.bind(engine.add);
+}
+
+function overloadSetVisible(object) {
+    const oldSetVisible = object.setVisible;
+    function newSetVisible(visible) {
+        if (!this.clickable)
+            this.setActive(visible);
+        return oldSetVisible.call(this, visible);
+    }
+    object.setVisible = newSetVisible;
+}
+
+function create ()
+{
+    const engine = this;
+    const cachedAdd = this.add;
+
+    const oldContainerPosition = Phaser.GameObjects.Container.prototype.setPosition;
+    function newContainerPosition(x, y) {
+        oldContainerPosition.call(this, x ? x * localScale : x, y ? y * localScale : y);
+        for (let i = 0; i < this.list.length; i++)
+            UpdateTextPosition(this.list[i]);
+        return this;
+    }
+    Phaser.GameObjects.Container.prototype.setPosition = newContainerPosition;
+
+    Phaser.GameObjects.Container.prototype.setPositionX = function(x) {
+        this.x = x * localScale;
+        for (let i = 0; i < this.list.length; i++)
+            UpdateTextPosition(this.list[i]);
+        return this;
+    };
+
+    Phaser.GameObjects.Container.prototype.setPositionY = function(y) {
+        this.y = y * localScale;
+        for (let i = 0; i < this.list.length; i++)
+            UpdateTextPosition(this.list[i]);
+        return this;
+    };
+
+    const oldSetVisible = Phaser.GameObjects.Container.prototype.setVisible;
+    function newSetVisible(visible) {
+        for (let i = 0; i < this.list.length; i++) {
+            if (!this.list[i].forceInvisible)
+                this.list[i].setVisible(visible);
+        }
+        return oldSetVisible.call(this, visible);
+    }
+    Phaser.GameObjects.Container.prototype.setVisible = newSetVisible;
+
+    const oldAddChild = Phaser.GameObjects.Container.prototype.add;
+    function newAddChild(obj) {
+        if (obj.type === 'Text') {
+            if (!this.visible)
+                obj.setVisible(this.visible);
+            obj.parent = this;
+            UpdateTextPosition(obj);
+        }
+        return oldAddChild.call(this, obj);
+    }
+    Phaser.GameObjects.Container.prototype.add = newAddChild;
+
+    // const oldContainerScale = Phaser.GameObjects.Container.prototype.setScale;
+    // function newContainerScale(x, y) {
+    //     return oldContainerScale.call(this, x ? x * localScale : x, y ? y * localScale : y);
+    // }
+    // Phaser.GameObjects.Container.prototype.setScale = newContainerScale;
+
+    Phaser.GameObjects.Container.prototype.create = function (x, y, name) {
+        const image = engine.add.sprite(x, y, name);
+        this.add(image);
+        return image;
+    };
+
+    Phaser.GameObjects.Group.prototype.create = function (x, y, name) {
+        const image = engine.add.sprite(x, y, name);
+        this.add(image);
+        return image;
+    };
+
+    Phaser.GameObjects.Group.prototype.setVisible = function (visible) {
+        this.visible = visible;
+        return this;
+    };
+
+    engine.add.myNineSlice = function (x, y, info) {
+        const width = info.width * GlobalScale / imagesDeltaScale;
+        const height = info.height * GlobalScale / imagesDeltaScale;
+        const nineSliceInfo = VisualData.ALL_OBJECTS[info.name];
+        const paddingX = nineSliceInfo.paddingX * GlobalScale / imagesDeltaScale;
+        const paddingY = nineSliceInfo.paddingY * GlobalScale / imagesDeltaScale;
+        const dy = (info.y || 0) * GlobalScale;
+        const obj = engine.add.nineslice(
+            x * localScale, (y + dy) * localScale,             // this is the starting x/y location
+            width, height,         // the width and height of your object
+            info.name,             // a key to an already loaded image
+            paddingX,              // the width and height to offset for a corner slice
+            paddingY               // (optional) pixels to offset when computing the safe usage area
+        );
+
+        const prot = obj.constructor.prototype;
+        if (!prot.scalePrepared) {
+            prot.scalePrepared = true;
+
+            overloadSetVisible(prot);
+
+            // const oldPosition1 = prot.setPosition;
+            // function newPosition1(x, y) {
+            //     return oldPosition1.call(this, x ? x * localScale : x, y ? y * localScale : y);
+            // }
+
+            const oldScale1 = prot.setScale;
+            function newScale1(x, y) {
+                return oldScale1.call(this, x * imageSizeLocalScale, y ? y * imageSizeLocalScale : y);
+            }
+
+            // prot.setPosition = newPosition1;
+            prot.setScale = newScale1;
+        }
+
+        obj.setScale(1);
+
+        return obj;
+    };
+
+    if (useNewScale) {
+        //Sprites
+        const oldSetPosition = Phaser.GameObjects.Sprite.prototype.setPosition;
+        function newSetPosition(x, y) {
+            return oldSetPosition.call(this, x * localScale, y * localScale);
+        }
+
+        const oldSetScale = Phaser.GameObjects.Sprite.prototype.setScale;
+        function newSetScale(x, y) {
+            return oldSetScale.call(this, x * imageSizeLocalScale, y ? y * imageSizeLocalScale : y);
+        }
+
+        const oldSprite = this.add.sprite;
+        let spritesCount = 0;
+        function newSprite(x, y, name) {
+            // spritesCount++;
+            // console.log("spritesCount " + spritesCount + " > " + name);
+            const obj = VisualData.ALL_OBJECTS[name];
+            if (obj) {
+                if (GameData.getAtlasName(obj))
+                    return oldSprite.call(cachedAdd, x, y, 'atlas_sprites', obj.file).setScale(1);
+            }
+            return oldSprite.call(cachedAdd, x, y, name).setScale(1);
+            // return oldSprite.call(cachedAdd, x, y, "MM_Btn_Login").setScale(1);
+        }
+
+        this.add.sprite = newSprite.bind(this.add);
+        Phaser.GameObjects.Sprite.prototype.setPosition = newSetPosition;
+        Phaser.GameObjects.Sprite.prototype.setPositionX = function(x) {
+            return this.x = x * localScale;
+        };
+        Phaser.GameObjects.Sprite.prototype.setPositionY = function(y) {
+            return this.y = y * localScale;
+        };
+        Phaser.GameObjects.Sprite.prototype.setScale = newSetScale;
+        Phaser.GameObjects.Sprite.prototype.setScale2 = newSetScale;
+        Phaser.GameObjects.Sprite.prototype.setForceInvisible = function(invisible) {
+            this.forceInvisible = invisible;
+            this.visible = !invisible;
+        };
+
+        overloadSetVisible(Phaser.GameObjects.Text.prototype);//Old text
+
+        prepareTextToHtml(engine);
+
+        overloadSetVisible(Phaser.GameObjects.Sprite.prototype);
+        // overloadSetVisible(Phaser.GameObjects.Group.prototype);
+        overloadSetVisible(Phaser.GameObjects.Container.prototype);
+        overloadSetVisible(Phaser.GameObjects.Text.prototype);//New text
+    }
+
+    gameInit.GameCreate(this, () => {
+        loadingSplash.style.display = 'none';
+
+        setInterval(()=>{
+            gBase.userInputBeenDone();
+        }, 60000);
+    });
+
+    gameTrail = new GameTrail(gameInit);
+
+    window.addEventListener('wheel',function(event){
+        event.preventDefault();
+        eventManager.mouseWheel(event.deltaX, event.deltaY);
+        return false;
+    }, { passive: false });
+}
+
+function update () {
+    gameInit.GameUpdate(this);
+}
+
