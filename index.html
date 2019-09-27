@@ -37,7 +37,7 @@
         body {
             margin: 0;
         }
-        #loading-div-parent {
+        .loading-div-parent {
             position: fixed;
             left: 0;
             top: 0;
@@ -47,7 +47,7 @@
             justify-content:center;
         }
 
-        #loading-div {
+        .relative-pos {
             position: relative;
             /*position: fixed;*/
             /*left: 0;*/
@@ -99,10 +99,12 @@
     <!--<script type="text/javascript" src="https://vk.com/js/api/adman_init.js" charset="utf-8"></script>-->
 </head>
 <body><div id="phaser-app">
-    </div><div id="loading-div-parent">
-    <div id="loading-div">
-        <img src="./games/fish/LoadingSplash.jpg" class="loading-img">
-        <img src="./games/fish/ProgressBar.png" class="progress-bar">
-        <img src="./games/fish/ProgressBarFill.png" id="progress-fill" class="progress-bar test">
-    </div>
+    </div><div class="loading-div-parent">
+        <div id="labels-div" class="relative-pos"></div>
+    </div><div class="loading-div-parent">
+        <div id="loading-div" class="relative-pos">
+            <img src="./games/fish/LoadingSplash.jpg" class="loading-img">
+            <img src="./games/fish/ProgressBar.png" class="progress-bar">
+            <img src="./games/fish/ProgressBarFill.png" id="progress-fill" class="progress-bar test">
+        </div>
     </div><script src="https://vk.com/js/api/xd_connection.js?2"></script><script src="https://ad.mail.ru/static/admanhtml/rbadman-html5.min.js"></script><script src="https://vk.com/js/api/adman_init.js"></script><script src="//api.ok.ru/js/fapi5.js"></script><script src="index.js"></script></body>
