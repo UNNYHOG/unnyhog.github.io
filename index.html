@@ -11,6 +11,7 @@
     <!-- End Google Analytics -->
 
     <script src="plugins/BigInteger.min.js"></script>
+    <script src="plugins/textFit.min.js"></script>
 
     <!--<script src="./plugins/phaser-list-view.js"></script>-->
     <!--<script type="text/javascript" src="//cdn.jsdelivr.net/npm/phaser@3.18.1/dist/phaser.min.js"></script>-->
@@ -45,6 +46,7 @@
             height:100%;
             display: flex;
             justify-content:center;
+            pointer-events: none;
         }
 
         .relative-pos {
@@ -73,6 +75,11 @@
             font-style: normal;
         }
 
+        .textFitted {
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+
         .myp {
             position: absolute;
             margin: 0;
@@ -80,6 +87,10 @@
             font-weight: 600;
             font-family: 'pt_sans_narrowbold', "Arial Rounded MT Bold", sans-serif;
             /*font-family: 'pt_sans_narrowbold', "Helvetica Neue", sans-serif;*/
+        }
+
+        .myp-fit {
+            display: flex !important;
         }
 
         #phaser-app {
