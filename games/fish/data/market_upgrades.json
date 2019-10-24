@@ -20,7 +20,7 @@
 	{
 		"id": 3,
 		"priceType": "Gems",
-		"priceGems": 100,
+		"priceGems": 50,
 		"upgradeType": "TimeTravel",
 		"parameter": 14400,
 		"slotNumber": -1,
