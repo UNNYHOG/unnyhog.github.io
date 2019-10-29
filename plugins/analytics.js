@@ -8,7 +8,7 @@ class GameAnalytics {
     }
 
     sendServerError(error, type) {
-        console.error("sendServerError", error);
+        console.warn("sendServerError", error);
 
         this.sendEvent("ServerError", {
             error: error.code,
