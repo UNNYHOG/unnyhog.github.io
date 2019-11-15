@@ -17472,8 +17472,8 @@ const GAME_ENVIRONMENTS = {
     }
 };
 
-const DEFAULT_PLATFORM = "fb_instant";
-const DEFAULT_ENVIRONMENT = "vk_production";
+const DEFAULT_PLATFORM = "nutaku";
+const DEFAULT_ENVIRONMENT = "myth_dev";
 
 let AllGetParams = null;
 function parseGetParams() {
@@ -17500,12 +17500,12 @@ var socialManager;
 parseGetParams();
 
 if (!AllGetParams.hasOwnProperty('game_platform')) {
-    console.error("platform wasn't specified");
+    console.log("platform wasn't specified");
     AllGetParams.game_platform = DEFAULT_PLATFORM;
 }
 
 if (!AllGetParams.hasOwnProperty('game_env')) {
-    console.error("game_env wasn't specified");
+    console.log("game_env wasn't specified");
     AllGetParams.game_env = DEFAULT_ENVIRONMENT;
 }
 
