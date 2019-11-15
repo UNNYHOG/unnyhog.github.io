@@ -15138,11 +15138,13 @@ const GlobalScale = 0.595;
 const NormalTint = 0xffffff;
 const LockTint = 0xaaaaaa;
 
+const REMOTE_GAME_PATH = "https://unnyhog.github.io/myth/";
+
 var VisualData = (function() {
 
     let GAME_NAME = 'MYTH';
-    let GAME_PATH = './games/myth';
-    let DATA_FOLDER = './games/myth/data/';//GAME_PATH + '/data/';
+    let GAME_PATH = REMOTE_GAME_PATH + 'games/myth';
+    let DATA_FOLDER = GAME_PATH + '/data/';
     let DATA_LOCALIZATIONS_RELATIVE = '../localizations/';
     let DATA_AUDIO = GAME_PATH + '/Audio/';
     let IMAGES_FOLDER = GAME_PATH + '/images/';
