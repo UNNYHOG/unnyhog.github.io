@@ -1,0 +1,209 @@
+
+Slot3w1.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+arm_left
+  rotate: false
+  xy: 388, 252
+  size: 107, 138
+  orig: 107, 138
+  offset: 0, 0
+  index: -1
+arm_right_a
+  rotate: false
+  xy: 955, 849
+  size: 56, 174
+  orig: 56, 174
+  offset: 0, 0
+  index: -1
+arm_right_b
+  rotate: false
+  xy: 361, 592
+  size: 221, 232
+  orig: 221, 232
+  offset: 0, 0
+  index: -1
+blue
+  rotate: false
+  xy: 361, 825
+  size: 294, 198
+  orig: 294, 198
+  offset: 0, 0
+  index: -1
+body
+  rotate: true
+  xy: 683, 367
+  size: 163, 197
+  orig: 163, 197
+  offset: 0, 0
+  index: -1
+face_a
+  rotate: true
+  xy: 488, 396
+  size: 187, 194
+  orig: 187, 194
+  offset: 0, 0
+  index: -1
+face_b
+  rotate: true
+  xy: 496, 206
+  size: 189, 172
+  orig: 189, 172
+  offset: 0, 0
+  index: -1
+face_c
+  rotate: false
+  xy: 669, 197
+  size: 190, 169
+  orig: 190, 169
+  offset: 0, 0
+  index: -1
+flower
+  rotate: true
+  xy: 860, 190
+  size: 171, 154
+  orig: 171, 154
+  offset: 0, 0
+  index: -1
+forearm_left
+  rotate: false
+  xy: 881, 362
+  size: 51, 168
+  orig: 51, 168
+  offset: 0, 0
+  index: -1
+forearm_right
+  rotate: true
+  xy: 565, 80
+  size: 125, 82
+  orig: 125, 82
+  offset: 0, 0
+  index: -1
+hair_1
+  rotate: false
+  xy: 648, 71
+  size: 128, 125
+  orig: 128, 125
+  offset: 0, 0
+  index: -1
+hair_2
+  rotate: true
+  xy: 372, 1
+  size: 58, 115
+  orig: 58, 115
+  offset: 0, 0
+  index: -1
+hair_3
+  rotate: false
+  xy: 1, 10
+  size: 204, 266
+  orig: 204, 266
+  offset: 0, 0
+  index: -1
+hair_4
+  rotate: false
+  xy: 1, 590
+  size: 359, 433
+  orig: 359, 433
+  offset: 0, 0
+  index: -1
+hand_left
+  rotate: false
+  xy: 298, 277
+  size: 89, 113
+  orig: 89, 113
+  offset: 0, 0
+  index: -1
+hand_right
+  rotate: false
+  xy: 924, 108
+  size: 81, 81
+  orig: 81, 81
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 1, 277
+  size: 296, 312
+  orig: 296, 312
+  offset: 0, 0
+  index: -1
+leg_2
+  rotate: false
+  xy: 656, 860
+  size: 298, 163
+  orig: 298, 163
+  offset: 0, 0
+  index: -1
+leg_down_1
+  rotate: true
+  xy: 730, 531
+  size: 133, 199
+  orig: 133, 199
+  offset: 0, 0
+  index: -1
+leg_up_1
+  rotate: true
+  xy: 937, 685
+  size: 163, 81
+  orig: 163, 81
+  offset: 0, 0
+  index: -1
+neck
+  rotate: true
+  xy: 488, 11
+  size: 48, 60
+  orig: 48, 60
+  offset: 0, 0
+  index: -1
+necklase
+  rotate: false
+  xy: 777, 82
+  size: 55, 114
+  orig: 55, 114
+  offset: 0, 0
+  index: -1
+skirt_a
+  rotate: false
+  xy: 583, 584
+  size: 146, 240
+  orig: 146, 240
+  offset: 0, 0
+  index: -1
+skirt_b
+  rotate: true
+  xy: 298, 391
+  size: 198, 189
+  orig: 198, 189
+  offset: 0, 0
+  index: -1
+skirt_back_b
+  rotate: false
+  xy: 206, 20
+  size: 165, 256
+  orig: 165, 256
+  offset: 0, 0
+  index: -1
+skirt_back_c
+  rotate: true
+  xy: 372, 60
+  size: 145, 192
+  orig: 145, 192
+  offset: 0, 0
+  index: -1
+skirt_d
+  rotate: false
+  xy: 730, 665
+  size: 206, 194
+  orig: 206, 194
+  offset: 0, 0
+  index: -1
+waist
+  rotate: false
+  xy: 833, 84
+  size: 90, 105
+  orig: 90, 105
+  offset: 0, 0
+  index: -1

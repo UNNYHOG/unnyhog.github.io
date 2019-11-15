@@ -1,0 +1,314 @@
+
+Slot6w1.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+female_ankle_right
+  rotate: false
+  xy: 549, 322
+  size: 116, 194
+  orig: 116, 194
+  offset: 0, 0
+  index: -1
+female_arm_left_1
+  rotate: false
+  xy: 944, 377
+  size: 79, 147
+  orig: 79, 147
+  offset: 0, 0
+  index: -1
+female_arm_left_2
+  rotate: true
+  xy: 552, 33
+  size: 72, 128
+  orig: 72, 128
+  offset: 0, 0
+  index: -1
+female_arm_right
+  rotate: false
+  xy: 162, 171
+  size: 239, 124
+  orig: 239, 124
+  offset: 0, 0
+  index: -1
+female_arm_right_2
+  rotate: true
+  xy: 666, 287
+  size: 81, 186
+  orig: 81, 186
+  offset: 0, 0
+  index: -1
+female_body
+  rotate: true
+  xy: 666, 369
+  size: 155, 133
+  orig: 155, 133
+  offset: 0, 0
+  index: -1
+female_face
+  rotate: false
+  xy: 400, 34
+  size: 151, 135
+  orig: 151, 135
+  offset: 0, 0
+  index: -1
+female_face_2
+  rotate: true
+  xy: 307, 34
+  size: 136, 92
+  orig: 136, 92
+  offset: 0, 0
+  index: -1
+female_fingers
+  rotate: false
+  xy: 825, 44
+  size: 54, 52
+  orig: 54, 52
+  offset: 0, 0
+  index: -1
+female_foream_left_1
+  rotate: false
+  xy: 549, 217
+  size: 116, 104
+  orig: 116, 104
+  offset: 0, 0
+  index: -1
+female_foream_left_2
+  rotate: true
+  xy: 803, 207
+  size: 71, 127
+  orig: 71, 127
+  offset: 0, 0
+  index: -1
+female_hand_left_2
+  rotate: true
+  xy: 887, 145
+  size: 61, 36
+  orig: 61, 36
+  offset: 0, 0
+  index: -1
+female_hand_right
+  rotate: false
+  xy: 765, 31
+  size: 59, 65
+  orig: 59, 65
+  offset: 0, 0
+  index: -1
+female_head
+  rotate: false
+  xy: 384, 756
+  size: 218, 267
+  orig: 218, 267
+  offset: 0, 0
+  index: -1
+female_hips
+  rotate: false
+  xy: 1, 12
+  size: 158, 174
+  orig: 158, 174
+  offset: 0, 0
+  index: -1
+female_leg
+  rotate: false
+  xy: 807, 718
+  size: 204, 114
+  orig: 204, 114
+  offset: 0, 0
+  index: -1
+female_leg_left
+  rotate: true
+  xy: 1, 187
+  size: 353, 160
+  orig: 353, 160
+  offset: 0, 0
+  index: -1
+female_mouth_back
+  rotate: false
+  xy: 973, 612
+  size: 39, 61
+  orig: 39, 61
+  offset: 0, 0
+  index: -1
+female_mouth_forward
+  rotate: true
+  xy: 201, 531
+  size: 162, 207
+  orig: 162, 207
+  offset: 0, 0
+  index: -1
+female_neck
+  rotate: true
+  xy: 973, 674
+  size: 43, 50
+  orig: 43, 50
+  offset: 0, 0
+  index: -1
+female_skirt
+  rotate: false
+  xy: 807, 833
+  size: 208, 190
+  orig: 208, 190
+  offset: 0, 0
+  index: -1
+female_skirt_back
+  rotate: false
+  xy: 381, 321
+  size: 167, 195
+  orig: 167, 195
+  offset: 0, 0
+  index: -1
+female_skirt_back_2
+  rotate: false
+  xy: 640, 588
+  size: 140, 175
+  orig: 140, 175
+  offset: 0, 0
+  index: -1
+female_tail
+  rotate: false
+  xy: 552, 106
+  size: 111, 110
+  orig: 111, 110
+  offset: 0, 0
+  index: -1
+female_vagina_
+  rotate: false
+  xy: 942, 282
+  size: 78, 94
+  orig: 78, 94
+  offset: 0, 0
+  index: -1
+female_waist
+  rotate: true
+  xy: 853, 279
+  size: 111, 88
+  orig: 111, 88
+  offset: 0, 0
+  index: -1
+male_arm_man left
+  rotate: true
+  xy: 781, 593
+  size: 124, 191
+  orig: 124, 191
+  offset: 0, 0
+  index: -1
+male_arm_right man
+  rotate: false
+  xy: 565, 527
+  size: 74, 228
+  orig: 74, 228
+  offset: 0, 0
+  index: -1
+male_balls
+  rotate: true
+  xy: 931, 210
+  size: 68, 92
+  orig: 68, 92
+  offset: 0, 0
+  index: -1
+male_body_man
+  rotate: false
+  xy: 162, 296
+  size: 218, 234
+  orig: 218, 234
+  offset: 0, 0
+  index: -1
+male_dick
+  rotate: false
+  xy: 666, 220
+  size: 136, 66
+  orig: 136, 66
+  offset: 0, 0
+  index: -1
+male_down_body man
+  rotate: false
+  xy: 1, 541
+  size: 199, 482
+  orig: 199, 482
+  offset: 0, 0
+  index: -1
+male_face_man_1
+  rotate: false
+  xy: 774, 97
+  size: 112, 109
+  orig: 112, 109
+  offset: 0, 0
+  index: -1
+male_face_man_2
+  rotate: false
+  xy: 666, 106
+  size: 107, 113
+  orig: 107, 113
+  offset: 0, 0
+  index: -1
+male_foream_left man
+  rotate: false
+  xy: 402, 170
+  size: 145, 150
+  orig: 145, 150
+  offset: 0, 0
+  index: -1
+male_hair_1 man
+  rotate: true
+  xy: 681, 3
+  size: 102, 83
+  orig: 102, 83
+  offset: 0, 0
+  index: -1
+male_head_man
+  rotate: false
+  xy: 201, 694
+  size: 182, 329
+  orig: 182, 329
+  offset: 0, 0
+  index: -1
+male_hips_man
+  rotate: false
+  xy: 603, 764
+  size: 203, 259
+  orig: 203, 259
+  offset: 0, 0
+  index: -1
+male_man_waist
+  rotate: false
+  xy: 640, 525
+  size: 140, 62
+  orig: 140, 62
+  offset: 0, 0
+  index: -1
+male_neck_man
+  rotate: false
+  xy: 955, 537
+  size: 68, 55
+  orig: 68, 55
+  offset: 0, 0
+  index: -1
+male_part_1
+  rotate: true
+  xy: 781, 525
+  size: 67, 173
+  orig: 67, 173
+  offset: 0, 0
+  index: -1
+male_part_2
+  rotate: false
+  xy: 409, 517
+  size: 155, 238
+  orig: 155, 238
+  offset: 0, 0
+  index: -1
+male_skirt_back man
+  rotate: false
+  xy: 160, 1
+  size: 146, 169
+  orig: 146, 169
+  offset: 0, 0
+  index: -1
+male_tail_man
+  rotate: false
+  xy: 800, 391
+  size: 143, 133
+  orig: 143, 133
+  offset: 0, 0
+  index: -1
