@@ -17477,7 +17477,8 @@ const GAME_ENVIRONMENTS = {
         version: "0.0.1"
     },
     'myth_dev': {
-        un_game_id: "f6d3e8d9-e41b-4fde-bdf0-d30df9092672",
+        // un_game_id: "f6d3e8d9-e41b-4fde-bdf0-d30df9092672",
+        un_game_id: "fba9c57d-ed77-489e-ac45-20dbbcd4d286",
         un_key: "YTNkYmQxZjktNTk0Ny00"
     }
 };
