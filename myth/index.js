@@ -17332,7 +17332,7 @@ function SocialNutaku() {
 
         authorize(callback) {
             const resp = (response) => {
-                console.info("AUTH", response);
+                console.info("AUTH>", response);
                 if (response.success)
                     callback();
                 else
