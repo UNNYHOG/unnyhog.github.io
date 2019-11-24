@@ -20844,6 +20844,7 @@ class Progress {
     }
 
     canCheckStore() {
+        return true;
         return this.getTutorialPhase() >= TutPhases.BuildSlots9 && this.getTutorialPhase() < TutPhases.FortuneWheel;
     }
 
