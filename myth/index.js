@@ -26331,6 +26331,8 @@ class WinStore extends WinWithLargeBack {
         // GlobalInputLocked = visible;
         this.scroll.setVisible(visible);
         this.removeTimer();
+
+        console.warn(">>> " + visible + " <> " + gameInit.progress.canCheckStore());
         if (visible) {
             if (this.forceGems) {
                 this.selectedTab = 4;
