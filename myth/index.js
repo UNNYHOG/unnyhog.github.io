@@ -17347,12 +17347,6 @@ class Tutorial {
     }
 }
 
-const tutorial = new Tutorial();
-gameInit.create.addListener(tutorial.onCreated.bind(tutorial));
-eventManager.onAdStarted.addListener(tutorial.onAdStarted.bind(tutorial));
-eventManager.onFortuneWheelUsed.addListener(tutorial.onAdStarted.bind(tutorial));
-gameInit.loaded.addListener((progress) => tutorial.loaded(progress));
-
 function SocialVK() {
 
     let app_id;
@@ -31232,6 +31226,14 @@ class GUIManager {
 }
 
 const guiManager = new GUIManager(gameInit);
+
+const tutorial = new Tutorial();
+gameInit.create.addListener(tutorial.onCreated.bind(tutorial));
+if (!VisualData.getGameSettings().no_tutorial) {
+    eventManager.onAdStarted.addListener(tutorial.onAdStarted.bind(tutorial));
+    eventManager.onFortuneWheelUsed.addListener(tutorial.onAdStarted.bind(tutorial));
+    gameInit.loaded.addListener((progress) => tutorial.loaded(progress));
+}
 
 'use strict';
 
