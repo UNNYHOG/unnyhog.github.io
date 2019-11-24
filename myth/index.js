@@ -17475,7 +17475,7 @@ function SocialNutaku() {
 
     return {
         initNutaku: function (appId) {
-            console.error("==>>>> " + UnnyNet.PURCHASE_STATUS_FILTER.COMPLETED);
+            console.error("++==>>>> " + UnnyNet.PURCHASE_STATUS_FILTER.COMPLETED);
 
             if (typeof opensocial != "undefined") {
                 let req = opensocial.newDataRequest();
@@ -17489,7 +17489,7 @@ function SocialNutaku() {
                             // error
                         } else {
                             let viewer = item.getData();
-                            this.user_id = viewer.getId();
+                            user_id = viewer.getId();
                             // var nickname = viewer.getDisplayName();
                             console.info("USER", viewer);
                             // ...
