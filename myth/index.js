@@ -17432,7 +17432,7 @@ function SocialNutaku() {
         if (!user_id)
             return null;
 
-        UnnyNet.UnnyNet.getPurchases(UnnyNet.PURCHASE_STATUS_FILTER.COMPLETED, (response)=>{
+        UnnyNet.UnnyNet.getPurchases(UnnyNet.PURCHASE_STATUS_FILTER.COMPLETED, (response) => {
             console.info("COMPLETED", response);
             if (response.success) {
                 // const list = response.data;
@@ -17452,14 +17452,14 @@ function SocialNutaku() {
             }
         });
 
-        UnnyNet.UnnyNet.getPurchases(UnnyNet.PURCHASE_STATUS_FILTER.PENDING, (response)=>{
+        UnnyNet.UnnyNet.getPurchases(UnnyNet.PURCHASE_STATUS_FILTER.PENDING, (response) => {
             console.info("RESPINSE", response);
             if (response.success) {
                 const list = response.data;
                 for (let i in list) {
                     const id = list[i].id;
                     if (id)
-                        UnnyNet.UnnyNet.completeNutakuPurchase2(user_id, UnnyNet.NUTAKU_PLATFORM.PCBrowser, id, (response2)=>{
+                        UnnyNet.UnnyNet.completeNutakuPurchase2(user_id, UnnyNet.NUTAKU_PLATFORM.PCBrowser, id, (response2) => {
                             if (response2.success) {
                                 console.info("COMPLETE", response2);
                             } else {
@@ -17475,25 +17475,28 @@ function SocialNutaku() {
 
     return {
         initNutaku: function (appId) {
-            console.error(">>>> " + UnnyNet.PURCHASE_STATUS_FILTER.COMPLETED);
-            let req = opensocial.newDataRequest();
-            req.add(req.newFetchPersonRequest(opensocial.IdSpec.PersonId.VIEWER), "viewer");
-            req.send(function(response) {
-                if (response.hadError()) {
-                    // error
-                } else {
-                    let item = response.get("viewer");
-                    if (item.hadError()) {
+            console.error("==>>>> " + UnnyNet.PURCHASE_STATUS_FILTER.COMPLETED);
+
+            if (typeof opensocial != "undefined") {
+                let req = opensocial.newDataRequest();
+                req.add(req.newFetchPersonRequest(opensocial.IdSpec.PersonId.VIEWER), "viewer");
+                req.send(function (response) {
+                    if (response.hadError()) {
                         // error
                     } else {
-                        let viewer = item.getData();
-                        this.user_id = viewer.getId();
-                        // var nickname = viewer.getDisplayName();
-                        console.info("USER", viewer);
-                        // ...
+                        let item = response.get("viewer");
+                        if (item.hadError()) {
+                            // error
+                        } else {
+                            let viewer = item.getData();
+                            this.user_id = viewer.getId();
+                            // var nickname = viewer.getDisplayName();
+                            console.info("USER", viewer);
+                            // ...
+                        }
                     }
-                }
-            });
+                });
+            }
         },
 
         setAllGetParams(prms) {
@@ -17501,12 +17504,17 @@ function SocialNutaku() {
         },
 
         checkPurchases(consumeCallback) {
-            console.log("checkPurchases!!");
-
+            console.log("checkPurchases!!>>");
+            _checkPurchases(consumeCallback);
         },
 
         purchase(productId) {
-            UnnyNet.UnnyNet.purchaseProduct("test");
+            UnnyNet.UnnyNet.purchaseProduct("test", (response) => {
+                console.warn("Go check now", response);
+                _checkPurchases((id) => {
+                    gameInit.progress.publicConfirmedPayment("hellprodgems200");
+                });
+            });
         },
 
         authorize(callback) {
