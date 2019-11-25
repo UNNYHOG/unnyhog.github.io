@@ -38,13 +38,5 @@
     "description": "InApp5Desc",
     "gems": 15500,
     "order": 6
-  },
-  {
-    "itemId": "gemsForVideoAd",
-    "itemIdprod": "gemsForVideoAd",
-    "title": "GemsForVideoName",
-    "description": "GemsForVideoDesc",
-    "gems": 5,
-    "order": 1
   }
 ]
