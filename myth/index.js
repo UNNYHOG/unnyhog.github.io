@@ -16314,6 +16314,7 @@ var VisualData = (function() {
                 objects: [
                     {
                         scale: 0.07 * totalScale,
+                        scaleSize: {x: 1, y: 0.5}
                     }
                 ]
             },
@@ -18008,7 +18009,7 @@ function SocialNutaku() {
                 for (let i in list) {
                     const id = list[i].id;
                     if (id)
-                        UnnyNet.UnnyNet.claimPurchase2(user_id, UnnyNet.NUTAKU_PLATFORM.PCBrowser, id, (response2)=>{
+                        UnnyNet.UnnyNet.claimPurchase2(user_id, 2, id, (response2) => {//TODO fix it
                             if (response2.success) {
                                 console.info("claim2", response2);
                                 if (consumeCallback)
@@ -18033,7 +18034,7 @@ function SocialNutaku() {
                         UnnyNet.UnnyNet.completeNutakuPurchase2(user_id, UnnyNet.NUTAKU_PLATFORM.PCBrowser, id, (response2) => {
                             if (response2.success) {
                                 console.info("COMPLETE..", response2);
-                                UnnyNet.UnnyNet.claimPurchase2(user_id, UnnyNet.NUTAKU_PLATFORM.PCBrowser, response2.data.id, (response3)=>{
+                                UnnyNet.UnnyNet.claimPurchase2(user_id, 2, response2.data.id, (response3) => {//TODO fix it
                                     console.info("CLAIMED..", response3);
                                     if (consumeCallback)
                                         consumeCallback();
@@ -24040,7 +24041,7 @@ function PrepareSpriteSheetObject(engine, name, x, y) {
     return new SpriteSheetObject(sprite, allObj);
 }
 
-function addInvisibleClickable(engine, group, depth, x, y) {
+function addInvisibleClickable(engine, group, depth, x, y, scale) {
     const obj = engine.add.sprite (0,0).setInteractive();
     obj.clickable = true;
     if (group) {
@@ -24049,7 +24050,7 @@ function addInvisibleClickable(engine, group, depth, x, y) {
     }
     obj.setPosition(x / localScale, y / localScale);
     const scalesize = 10 * GlobalScale / imagesDeltaScale;
-    obj.setScale(scalesize, scalesize);
+    obj.setScale(scalesize * (scale ? scale.x : 1), scalesize * (scale ? scale.y : 1));
     obj.setDepth(depth).setOrigin(0.5, 0.9);
     obj.clicker = true;
     return obj;
@@ -24107,7 +24108,7 @@ function PrepareObject(objects, group, engine, depth, pos, clickCallback) {
                 obj.objName = b.name + "_spine";
                 if (clickable) {
                     obj.setDepth(depth);
-                    obj = addInvisibleClickable(engine, group, depth, main.obj.x, main.obj.y);
+                    obj = addInvisibleClickable(engine, group, depth, main.obj.x, main.obj.y, b.scaleSize);
                 }
 
                 if (group)
@@ -28596,23 +28597,27 @@ class WinZoomIn extends WinWithExit {
     }
 
     onBuildingClicked(building) {
-        if (this.zoomed) {
+        if (building.getLevel() > 0 && !this.zoomed) {
+            this.zoomed = true;
+
+            const all = visualGame.getAllVisibleBuildings();
+            const b = all[building.id];
+            const pos = b.getPosition();
+
             const camera = this.engine.cameras.main;
-            camera.pan(VisualData.MAP_PARAMS.center.x, VisualData.MAP_PARAMS.center.y, 300, 'Linear');
-            camera.zoomTo(1, 300, 'Linear');
-            this.zoomed = false;
-        } else {
-            if (building.getLevel() > 0) {
-                this.zoomed = true;
+            camera.pan((pos.x + VisualData.MAP_PARAMS.center.x) * localScale, (pos.y + VisualData.MAP_PARAMS.center.y) * localScale, 300, 'Linear');
+            camera.zoomTo(2.6, 300, 'Linear');
 
-                const all = visualGame.getAllVisibleBuildings();
-                const b = all[building.id];
-                const pos = b.getPosition();
+            setTimeout(() => {
+                window.onclick = () => {
+                    window.onclick = null;
 
-                const camera = this.engine.cameras.main;
-                camera.pan(pos.x + VisualData.MAP_PARAMS.center.x, pos.y + VisualData.MAP_PARAMS.center.y, 300, 'Linear');
-                camera.zoomTo(2.6, 300, 'Linear');
-            }
+                    const camera = this.engine.cameras.main;
+                    camera.pan(VisualData.MAP_PARAMS.center.x * localScale, VisualData.MAP_PARAMS.center.y * localScale, 300, 'Linear');
+                    camera.zoomTo(1, 300, 'Linear');
+                    this.zoomed = false;
+                };
+            }, 1000);
         }
     }
 
