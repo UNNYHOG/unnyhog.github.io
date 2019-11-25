@@ -28587,7 +28587,46 @@ class MyResources {
     }
 }
 
-class WinMain extends WinBase{
+class WinZoomIn extends WinWithExit {
+
+    constructor(gui, gameInit) {
+        super(gui, gameInit);
+        this.callback = this.onBuildingClicked.bind(this);
+        this.enableClickables = true;
+    }
+
+    onBuildingClicked(building) {
+        if (this.zoomed) {
+            const camera = this.engine.cameras.main;
+            camera.pan(VisualData.MAP_PARAMS.center.x, VisualData.MAP_PARAMS.center.y, 300, 'Linear');
+            camera.zoomTo(1, 300, 'Linear');
+            this.zoomed = false;
+        } else {
+            if (building.getLevel() > 0) {
+                this.zoomed = true;
+
+                const all = visualGame.getAllVisibleBuildings();
+                const b = all[building.id];
+                const pos = b.getPosition();
+
+                const camera = this.engine.cameras.main;
+                camera.pan(pos.x + VisualData.MAP_PARAMS.center.x, pos.y + VisualData.MAP_PARAMS.center.y, 300, 'Linear');
+                camera.zoomTo(2.6, 300, 'Linear');
+            }
+        }
+    }
+
+    setWindowVisible(visible) {
+        super.setWindowVisible(visible);
+
+        if (visible)
+            clickController.onBuildingClicked.addListener(this.callback);
+        else
+            clickController.onBuildingClicked.removeListener(this.callback);
+    }
+}
+
+class WinMain extends WinBase {
     constructor(gui, gameInit) {
         super(gui, gameInit);
 
@@ -28670,7 +28709,7 @@ class WinMain extends WinBase{
         this.storeButton = this.createButton('MM_Btn_Store', posX, posY, () => this.gui.openNewWindow(WindowType.WinStore));
 
         if (TEST_MODE)
-            this.createButton('MM_Btn_Worlds', posX, posY + 250* GlobalScale, () => gameInit.progress.cheatResources());
+            this.createButton('MM_Btn_Worlds', posX, posY + 250 * GlobalScale, () => gameInit.progress.cheatResources());
 
         posX -= 250 * GlobalScale;
         this.puzzlesButton = this.createButton('MM_Btn_Chests', posX, posY, () => this.gui.openNewWindow(WindowType.WinPuzzle));
@@ -28710,7 +28749,7 @@ class WinMain extends WinBase{
         }
 
         if (gameSettings.likes && gameSettings.likes.hasOwnProperty(AllGetParams.game_platform) && gameSettings.likes[AllGetParams.game_platform]) {
-            this.createButton('MM_Btn_Likes', padding, RealScreenHeight - padding - distance * 2,() => this.gui.changeMode(GUIMode.Likes));
+            this.createButton('MM_Btn_Likes', padding, RealScreenHeight - padding - distance * 2, () => this.gui.changeMode(GUIMode.Likes));
         }
 
         this.upgradeButton = this.createButton('MM_Btn_Upgrade', centerX - distance * 2, bottomButtons, () => this.gui.changeMode(GUIMode.UpgradeBuildings));
@@ -28722,6 +28761,8 @@ class WinMain extends WinBase{
         this.createButton('MM_Btn_ManagerDoubling', RealScreenWidth - paddingX * 3, padding, () => this.gui.openNewWindow(WindowType.WinManagerDoubling));
 
         this.factoryButton = this.createButton('MM_Btn_Prestige', centerX, padding, () => this.gui.openNewWindow(WindowType.WinBossSummon));
+
+        this.zoomIns = this.createButton('MM_Btn_Likes', centerX + 400 * GlobalScale, padding, () => this.gui.openNewWindow(WindowType.WinZoomIn));
 
         let y = padding + distance;
         this.questsButton = this.createButton('QuestsHUDButton', RealScreenWidth - padding2, y, () => this.gui.openNewWindow(WindowType.WinQuests));
@@ -28820,7 +28861,7 @@ class WinMain extends WinBase{
         }
 
         if (gameSettings.likes && gameSettings.likes.hasOwnProperty(AllGetParams.game_platform) && gameSettings.likes[AllGetParams.game_platform]) {
-            this.createButton('MM_Btn_Likes', padding, RealScreenHeight - padding - distance * 2,() => this.gui.changeMode(GUIMode.Likes));
+            this.createButton('MM_Btn_Likes', padding, RealScreenHeight - padding - distance * 2, () => this.gui.changeMode(GUIMode.Likes));
         }
 
         if (!gameSettings.locations_window) {
@@ -28886,7 +28927,7 @@ class WinMain extends WinBase{
     playBreadAnimation() {
         this.hideAllButtonsForTime(BanjoDuration);
         lockGuiEverything();
-        animManager.playFallingBread(this.engine, this.group, BanjoDuration, ()=>{
+        animManager.playFallingBread(this.engine, this.group, BanjoDuration, () => {
             unlockGUI();
             this.gui.openNewWindow(WindowType.WinBanjoPreEnd);
         });
@@ -30288,7 +30329,7 @@ class WinPhotosPreview extends WinBase {
 
     setImage(item) {
         console.error("OPEN");
-        this.photo.src = 'https://i.imgur.com/' + item.name;
+        this.photo.src = item.name;
     }
 
     createGame(engine) {
@@ -30807,6 +30848,7 @@ const WindowType = {
     WinSpecialOffer1: 33,
     WinPhotosListSingleImages: 34,
     WinManagerDoubling: 35,
+    WinZoomIn: 36,
 };
 
 class GUIManager {
@@ -31012,6 +31054,7 @@ class GUIManager {
             this.allWindows[WindowType.WinPhotosList] = new WinPhotosList(this, gameInit);
             this.allWindows[WindowType.WinPhotosListSingleImages] = new WinPhotosListSingleImages(this, gameInit);
             this.allWindows[WindowType.WinManagerDoubling] = new WinManagerDoubling(this, gameInit);
+            this.allWindows[WindowType.WinZoomIn] = new WinZoomIn(this, gameInit);
         }
 
         this.activeWindows = [];
@@ -31159,7 +31202,7 @@ class GUIManager {
         const wins = this.activeWindows;
         const type = this.getActiveWindow().winType;
         const showGUI = wins.length === 1;
-        const show = showGUI || type == WindowType.WinBossProccess;
+        const show = showGUI || type == WindowType.WinBossProccess || type == WindowType.WinZoomIn;
 
         visualGame.setBuildingsProductionVisible(gameInit.selectedWorld, show);
         visualGame.setGameObjectsVisible(showGUI);
