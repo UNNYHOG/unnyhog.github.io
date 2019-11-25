@@ -15362,6 +15362,12 @@ var VisualData = (function() {
                 idle: 'idle',
             },
         },
+        'DefaultButton_Slice': {
+            file: 'Slots/Ground.png',
+                type: UnnyObjectType.NineSlice,
+            paddingX: 50,
+            paddingY: 22
+        },
 
         'WinStandardBack': {
             file: 'UI/Windows/Common/paper.png',
@@ -15505,6 +15511,7 @@ var VisualData = (function() {
         'SplitScreen',
         'GuardsTabIcon',
         // 'WinStandardBack2',
+        'DefaultButton_Slice',
 
         'HudResBack',
         'MM_Btn_GirlMenu',
@@ -16953,6 +16960,9 @@ class Tutorial {
     }
 
     _lockAtButton(btn, center) {
+        if (!btn)
+            return;
+
         lockGuiAtButton(btn);
         if (btn.getParentObject) {
             const p = btn.getParentObject();
@@ -16998,8 +17008,7 @@ class Tutorial {
         switch (this.phase) {
             case TutPhases.BuildSlot1:
                 if (this._isWindow(WindowType.WinMain)) {
-                    this.pointAtPosition(this._getFirstSlotPosition());
-                    lockGuiEverything();
+                    this._lockAtButton(buildingsGUI.getPurchaseButton(1), true);
                     guiManager.getActiveWindow().hideAllButtonsForTutorial();
                 } else {
                     if (this._isWindow(WindowType.WinConstruct)) {
@@ -17993,18 +18002,20 @@ function SocialNutaku() {
         UnnyNet.UnnyNet.getPurchases(UnnyNet.PURCHASE_STATUS_FILTER.COMPLETED, (response) => {
             console.info("COMPLETED", response);
             if (response.success) {
-                // const list = response.data;
-                // for (let i in list) {
-                //     const id = list[i].id;
-                //     if (id)
-                //         UnnyNet.UnnyNet.completeNutakuPurchase2(user_id, UnnyNet.NUTAKU_PLATFORM.PCBrowser, id, (response2)=>{
-                //             if (response2.success) {
-                //                 console.info("COMPLETE", response2);
-                //             } else {
-                //                 console.error("[ERROR]completeNutakuPurchase2: ", response2);
-                //             }
-                //         });
-                // }
+                const list = response.data;
+                for (let i in list) {
+                    const id = list[i].id;
+                    if (id)
+                        UnnyNet.UnnyNet.claimPurchase2(user_id, UnnyNet.NUTAKU_PLATFORM.PCBrowser, id, (response2)=>{
+                            if (response2.success) {
+                                console.info("claim2", response2);
+                                if (consumeCallback)
+                                    consumeCallback();
+                            } else {
+                                console.error("[ERROR]completeNutakuPurchase2: ", response2);
+                            }
+                        });
+                }
             } else {
                 console.error("[ERROR]getPurchases: ", response);
             }
@@ -18015,11 +18026,16 @@ function SocialNutaku() {
             if (response.success) {
                 const list = response.data;
                 for (let i in list) {
-                    const id = list[i].order_id;
+                    const id = list[i].id;
                     if (id)
-                        UnnyNet.UnnyNet.completeNutakuPurchase(user_id, UnnyNet.NUTAKU_PLATFORM.PCBrowser, id, (response2) => {
+                        UnnyNet.UnnyNet.completeNutakuPurchase2(user_id, UnnyNet.NUTAKU_PLATFORM.PCBrowser, id, (response2) => {
                             if (response2.success) {
-                                console.info("COMPLETE", response2);
+                                console.info("COMPLETE..", response2);
+                                UnnyNet.UnnyNet.claimPurchase2(user_id, UnnyNet.NUTAKU_PLATFORM.PCBrowser, response2.data.id, (response3)=>{
+                                    console.info("CLAIMED..", response3);
+                                    if (consumeCallback)
+                                        consumeCallback();
+                                });
                             } else {
                                 console.error("[ERROR]completeNutakuPurchase2: ", response2);
                             }
@@ -18065,7 +18081,9 @@ function SocialNutaku() {
         },
 
         checkPurchases(consumeCallback) {
-            _checkPurchases(consumeCallback);
+            _checkPurchases((id) => {
+                gameInit.progress.publicConfirmedPayment("hellprodgems200");
+            });
         },
 
         purchase(productId) {
@@ -18396,7 +18414,7 @@ class BasicButton extends Phaser.GameObjects.Sprite {
 
         var sliceName, nineSlice;
         if (config.minWidth) {
-            sliceName = config.key;// + "_Slice";
+            sliceName = config.key + "_Slice";
             nineSlice = VisualData.ALL_OBJECTS[sliceName];
         }
 
@@ -29080,6 +29098,8 @@ class WinMain extends WinBase{
     }
 }
 
+let buildingsGUI = null;
+
 class BuildingsGUI extends WinBase{
     constructor(gui, gameInit) {
         super(gui, gameInit);
@@ -29101,6 +29121,8 @@ class BuildingsGUI extends WinBase{
 
         eventManager.onBuildingUpgraded.addListener(this._updateAvailabilityForUpdrages.bind(this));
         eventManager.onPhotoTokensEarnedFromBuilding.addListener(this._tokensWereEarned.bind(this));
+
+        buildingsGUI = this;
     }
 
     _progressLoaded(progress) {
@@ -29428,6 +29450,11 @@ class BuildingsGUI extends WinBase{
         }
     }
 
+    getPurchaseButton(slot_id) {
+        const purchase = this.worldsData[1].purchase;
+        return purchase.hasOwnProperty(slot_id) ? purchase[slot_id].button : null;
+    }
+
     createPurchaseLabel(building, worldData, invisible) {
         const engine = this.engine;
         const bInfo = VisualData.PLACED_BUILDINGS[building.slot];
@@ -29448,6 +29475,7 @@ class BuildingsGUI extends WinBase{
         const useButtons = VisualData.getGameSettings().slot_purchase_as_buttons;
         let purchaseIcon;
         let purchaseLabel;
+        let button;
         if (!needPuzzle) {
             const bGUI = VisualData.GUI_BuildingsGUI;
             let iconPos;
@@ -29457,7 +29485,7 @@ class BuildingsGUI extends WinBase{
             if (useButtons) {
                 iconPos = useButtons.icon_pos;
                 pricePos = useButtons.price_pos;
-                new BasicButton(visPurchaseGroup, {
+                button = new BasicButton(visPurchaseGroup, {
                     'scene': engine,
                     'key': useButtons.available,
                     'x': x,
@@ -29486,7 +29514,8 @@ class BuildingsGUI extends WinBase{
             price: purchaseLabel,
             icon: purchaseIcon,
             group: visPurchaseGroup,
-            needPuzzle: needPuzzle
+            needPuzzle: needPuzzle,
+            button: button
         };
 
         purchaseGroup[building.id] = purchaseInfo;
@@ -31249,7 +31278,7 @@ class GUIManager {
         gameInit.progress.onPuzzlePeaceReceived.addListener(this.puzzleReceived.bind(this));
         gameInit.progress.onUpgradePurchased.addListener(this.upgradePurchased.bind(this));
 
-        this.tutorialLabel = engine.add.text(VisualData.MAP_PARAMS.center.x, RealScreenHeight - 60 * GlobalScale, null, DefaultFontBig).setOrigin(0.5, 0.5).setDepth(WinDefaultDepth - 2000);
+        this.tutorialLabel = engine.add.text(VisualData.MAP_PARAMS.center.x, RealScreenHeight - 240 * GlobalScale, null, DefaultFontBig).setOrigin(0.5, 1).setDepth(WinDefaultDepth - 2000);
         this.hideTutorialText();
 
         this.createPopup(engine);
