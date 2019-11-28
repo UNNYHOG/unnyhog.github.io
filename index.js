@@ -17424,6 +17424,8 @@ function SocialVK() {
                     if (err)
                         gameAnalytics.sendServerError(err, "authWebVk");
                     callback();
+
+                    UnnyNet.UnnyNet.Vkontakte.authorize();
                 });
             }
         },
