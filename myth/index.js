@@ -18106,7 +18106,7 @@ function SocialNutaku() {
         if (!user_id)
             return null;
 
-        UnnyNet.UnnyNet.getPurchases(UnnyNet.PURCHASE_STATUS_FILTER.COMPLETED, (response) => {
+        UnnyNet.UnnyNet.getPurchases(UnnyNet.PurchaseStatusFilter.COMPLETED, (response) => {
             console.info("COMPLETED", response);
             if (response.success) {
                 const list = response.data;
@@ -18128,14 +18128,14 @@ function SocialNutaku() {
             }
         });
 
-        UnnyNet.UnnyNet.getPurchases(UnnyNet.PURCHASE_STATUS_FILTER.PENDING, (response) => {
+        UnnyNet.UnnyNet.getPurchases(UnnyNet.PurchaseStatusFilter.PENDING, (response) => {
             console.info("RESPINSE", response);
             if (response.success) {
                 const list = response.data;
                 for (let i in list) {
                     const id = list[i].id;
                     if (id)
-                        UnnyNet.UnnyNet.completeNutakuPurchase2(user_id, UnnyNet.NUTAKU_PLATFORM.PCBrowser, id, (response2) => {
+                        UnnyNet.UnnyNet.completeNutakuPurchase2(user_id, UnnyNet.NutakuPlatform.PCBrowser, id, (response2) => {
                             if (response2.success) {
                                 console.info("COMPLETE..", response2);
                                 UnnyNet.UnnyNet.claimPurchase2(user_id, 2, response2.data.id, (response3) => {//TODO fix it
