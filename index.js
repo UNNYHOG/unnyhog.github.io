@@ -21472,7 +21472,9 @@ class Progress {
     static loadProgressFromServer(callback, useGoblin) {
 
         function AuthInUnnyNet(callback, goblinVersion) {
+            console.error("SEND AuthInUnnyNet");
             UnnyNet.UnnyNet.load(COLLECTION_NAME, COLLECTION_KEY_NAME, (response)=>{
+                console.info("***response", response);
                 if (response.success) {
                     if (response.data && response.data.length) {
                         const json = JSON.parse(response.data[0].value);
@@ -21489,10 +21491,13 @@ class Progress {
             });
         }
 
+        console.warn("useGoblin " + useGoblin);
         if (useGoblin) {
+            console.warn("gBase.currentAccount " + gBase.currentAccount);
             if (!gBase.currentAccount)
                 callback(null);
             else {
+                console.warn("gBase.currentAccount.haveProfile " + gBase.currentAccount.haveProfile);
                 if (!gBase.currentAccount.haveProfile) {
                     gBase.profile.create((err) => {
                         if (err)
@@ -21506,6 +21511,7 @@ class Progress {
                         const data = gBase.currentProfile.profileData;
                         callback(data);
 
+                        console.warn("err", data);
                         AuthInUnnyNet(null, data && data.profile ? data.profile.savedVersion : 'unknown');
                     });
                 }
