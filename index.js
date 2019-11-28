@@ -21415,6 +21415,9 @@ class Progress {
     }
 
     _writeToStorage() {
+        const v = this.savedProgress.profile.savedVersion || 0;
+        this.savedProgress.profile.savedVersion = v + 1;
+
         if (this.useGoblin)
         {
             if (socialManager.isAuthorizing()) {
@@ -21422,19 +21425,12 @@ class Progress {
                 return;
             }
 
-            const v = this.savedProgress.profile.savedVersion || 0;
-            this.savedProgress.profile.savedVersion = v + 1;
             window.localStorage.setItem("allProgress", JSON.stringify(this.savedProgress));
-            this.timerId = null;
-
             const deltaSave = this._getDeltaSave();
-
             this._sendDataToServer(deltaSave);
         }
 
         {
-            const v = this.savedProgress.profile.savedVersion || 0;
-            this.savedProgress.profile.savedVersion = v + 1;
             UnnyNet.UnnyNet.save(COLLECTION_NAME, COLLECTION_KEY_NAME, JSON.stringify(this.savedProgress), 0, (response) => {
                 if (!response.success)
                     console.error("couldn't save", response.error);
