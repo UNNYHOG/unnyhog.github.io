@@ -30,21 +30,21 @@ body {
     height: 4%;
 }
 
-/*@font-face {*/
-    /*font-family: 'pt_sans_narrowbold';*/
-    /*src: url('fonts/2220-webfont.woff2') format('woff2'),*/
-    /*url('fonts/2220-webfont.woff') format('woff');*/
-    /*font-weight: normal;*/
-    /*font-style: normal;*/
-/*}*/
-
 @font-face {
-    font-family: 'kid_kosmicregular';
-    src: url('fonts/kidkosmic-webfont.woff2') format('woff2'),
-    url('fonts/kidkosmic-webfont.woff') format('woff');
+    font-family: 'pt_sans_narrowbold';
+    src: url('fonts/2220-webfont.woff2') format('woff2'),
+    url('fonts/2220-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
+
+/*@font-face {*/
+    /*font-family: 'kid_kosmicregular';*/
+    /*src: url('fonts/kidkosmic-webfont.woff2') format('woff2'),*/
+    /*url('fonts/kidkosmic-webfont.woff') format('woff');*/
+    /*font-weight: normal;*/
+    /*font-style: normal;*/
+/*}*/
 
 .textFitted {
     margin-top: auto;
@@ -57,8 +57,8 @@ body {
     margin: 0;
     padding: 0;
     /*font-weight: 600;*/
-    /*font-family: 'pt_sans_narrowbold', "Arial Rounded MT Bold", sans-serif;*/
-    font-family: 'kid_kosmicregular', "Arial Rounded MT Bold", sans-serif;
+    font-family: 'pt_sans_narrowbold', "Arial Rounded MT Bold", sans-serif;
+    /*font-family: 'kid_kosmicregular', "Arial Rounded MT Bold", sans-serif;*/
     /*font-family: 'pt_sans_narrowbold', "Helvetica Neue", sans-serif;*/
 }
 
