@@ -17380,8 +17380,12 @@ function SocialVK() {
 
                 var callbacksResults = document.getElementById('callbacks');
 
-                VK.callMethod('account.getProfileInfo', (response)=>{
-                   console.info("VK_INFO", response);
+                VK.api('account.getProfileInfo', {}, (response)=>{
+                   console.info("1>VK_INFO", response);
+                });
+
+                VK.api('account.getProfileInfo', (response)=>{
+                    console.info("2>VK_INFO", response);
                 });
 
                 VK.addCallback('onOrderSuccess', (order_id) => {
