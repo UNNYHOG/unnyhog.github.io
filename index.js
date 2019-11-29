@@ -31522,7 +31522,9 @@ class GUIManager {
         gameInit.progress.onPuzzlePeaceReceived.addListener(this.puzzleReceived.bind(this));
         gameInit.progress.onUpgradePurchased.addListener(this.upgradePurchased.bind(this));
 
-        this.tutorialLabel = engine.add.text(VisualData.MAP_PARAMS.center.x, RealScreenHeight - 240 * GlobalScale, null, DefaultFontBig).setOrigin(0.5, 1).setDepth(WinDefaultDepth - 2000);
+        const set = VisualData.getGameSettings();
+
+        this.tutorialLabel = engine.add.text(VisualData.MAP_PARAMS.center.x, RealScreenHeight - (set.tut_phrase_y || 60) * GlobalScale, null, DefaultFontBig).setOrigin(0.5, 1).setDepth(WinDefaultDepth - 2000);
         this.hideTutorialText();
 
         this.createPopup(engine);
