@@ -17380,12 +17380,6 @@ function SocialVK() {
 
                 var callbacksResults = document.getElementById('callbacks');
 
-                // VK.api('account.getProfileInfo', {
-                //     test_mode: 1
-                // }, (response)=>{
-                //    console.info("1>VK_INFO", response);
-                // });
-
                 VK.addCallback('onOrderSuccess', (order_id) => {
                     _checkPurchases((id)=>{
                        gameInit.progress.publicConfirmedPayment(id);
@@ -18445,7 +18439,7 @@ class ButtonWithText extends BasicButton {
 
         const iconSize = 100 * GlobalScale;
         const borderSize = 100 * GlobalScale;
-        const maxWidth = config.minWidth * GlobalScale / imagesDeltaScale - borderSize;
+        const maxWidth = config.minWidth * GlobalScale - borderSize;
         const maxHeight = this.height * (VisualData.getGameSettings().btn_text_height || 1);
 
         if (config.icon) {
@@ -19902,6 +19896,7 @@ class Building {
 
         this.onUpgraded.callListeners(this);
 
+        console.log("upgradede " + this.slot);
         achsManager.slotWasUpgraded(this);
 
         if (this.unlocked) {
@@ -22213,8 +22208,10 @@ let GameData = (function () {
                         MARKET_GEMS.push(val);
                         break;
                 }
-                if (!val.slotNumber)
-                    val.slotNumber = val.upgradeTier - 1;
+                if (!val.hasOwnProperty('slotNumber')) {
+                    if (val.hasOwnProperty('upgradeTier'))
+                        val.slotNumber = val.upgradeTier - 1;
+                }
                 val.bigInt = bigInt(val.price).multiply(RESOURCES_SCALE);
                 MARKET_DATA[val.id] = val;
             }
@@ -23391,8 +23388,11 @@ class AchsManager {
     slotWasUpgraded(building) {
         this.callWithDelay('slot_' + building.slot, () => {
             const intSlot = parseInt(building.slot);
+            console.log("intSlot " + intSlot + " > " + building.getLevel());
             if (intSlot >= 1 && intSlot <= 9) {
-                UnnyNet.UnnyNet.reportAchievements(intSlot + 3, building.getLevel());
+                UnnyNet.UnnyNet.reportAchievements(intSlot + 3, building.getLevel(), (response)=>{
+                    console.error("response", response);
+                });
             }
         });
     }
@@ -23537,13 +23537,23 @@ class GameInit{
             console.error(e);
         }
 
+        let platform;
+        switch (AllGetParams.game_platform) {
+            case "vk":
+                platform = UnnyNet.Platform.VKONTAKTE;
+                break;
+            case "nutaku":
+                platform = UnnyNet.Platform.NUTAKU;
+                break;
+        }
+
         UnnyNet.UnnyNet.initialize({
             game_id: CURRENT_ENVIRONMENT.un_game_id,
             public_key: CURRENT_ENVIRONMENT.un_key,
             default_channel: "0",
             open_animation: UnnyNet.ViewOpenDirection.RIGHT_TO_LEFT,
             game_login: false,
-            platform: UnnyNet.Platform.VKONTAKTE,
+            platform: platform,
             load_dictionaries: !oldSystem
         }, ()=> {
 
@@ -27010,15 +27020,15 @@ class WinStore extends WinWithLargeBack {
         if (item.price)
             return LocalizationManager.getLocalizedNumber(gameInit.progress.getPurchasePrice(item))
 
-        const price = socialManager.getPriceLabel(item.id);
-        if (price)
-            return price;
-
         switch (item.id) {
             case GEMS_VIDEO_REWARD_ID: {
                 return gameInit.progress.getAdsWatchedToday() + "/" + AdsAvailableToWatchADay;
             }
         }
+
+        const price = socialManager.getPriceLabel(item.id);
+        if (price)
+            return price;
 
         return "Unknown";
     }
@@ -31524,7 +31534,7 @@ class GUIManager {
 
         const set = VisualData.getGameSettings();
 
-        this.tutorialLabel = engine.add.text(VisualData.MAP_PARAMS.center.x, RealScreenHeight - (set.tut_phrase_y || 60) * GlobalScale, null, DefaultFontBig).setOrigin(0.5, 1).setDepth(WinDefaultDepth - 2000);
+        this.tutorialLabel = engine.add.text(VisualData.MAP_PARAMS.center.x, RealScreenHeight - (set.tut_phrase_y || 0) * GlobalScale, null, DefaultFontBig).setOrigin(0.5, 1).setDepth(WinDefaultDepth - 2000);
         this.hideTutorialText();
 
         this.createPopup(engine);
@@ -31536,6 +31546,7 @@ class GUIManager {
     }
 
     setTutorialPhrase(text) {
+        console.log("M>>> " + text);
         this.tutorialLabel.setText(text);
         this.tutorialLabel.setVisible(text != null && this.getActiveWindow().winType == WindowType.WinMain);
     }
@@ -31644,7 +31655,7 @@ VisualData.MAP_PARAMS.center = {
 const useNewScale = true;
 
 let gameW, gameH;
-let dpi = useNewScale ? (window.devicePixelRatio || 1) : 1;
+let dpi = 1;//useNewScale ? (window.devicePixelRatio || 1) : 1;
 
 function UpdateNumbers() {
     if (useNewScale) {
@@ -32029,6 +32040,7 @@ function overloadSetVisible(object) {
 
 function create ()
 {
+    console.warn("ver  = 1");
     const engine = this;
     const cachedAdd = this.add;
 
