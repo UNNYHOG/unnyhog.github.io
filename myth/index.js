@@ -16191,9 +16191,11 @@ var VisualData = (function () {
             'GoodsSmallIcons',
             'GoodsDrops',
             'GoodsPuzzleIcons',
+            'Tutorial',
             STORE_IMAGES_FOLDER,
             QUEST_ICONS_FOLDER,
-            DAILY_ICONS_FOLDER
+            DAILY_ICONS_FOLDER,
+            GUARD_PUZZLE_IMAGES_FOLDER
             // '../Audio/'
         ],
 
