@@ -15212,7 +15212,7 @@ var VisualData = (function () {
             duplicate: [
                 {
                     name: 'UI/HUD_and_common/PriceGoldSmall.png',
-                    scale: 0.3
+                    scale: 0.16
                 }
             ]
         },
@@ -15221,7 +15221,7 @@ var VisualData = (function () {
             duplicate: [
                 {
                     name: 'UI/HUD_and_common/PriceGemsSmall.png',
-                    scale: 0.3
+                    scale: 0.16
                 }
             ]
         },
@@ -15230,7 +15230,7 @@ var VisualData = (function () {
             duplicate: [
                 {
                     name: 'UI/HUD_and_common/PriceSeedsSmall.png',
-                    scale: 0.3
+                    scale: 0.16
                 }
             ]
         },
