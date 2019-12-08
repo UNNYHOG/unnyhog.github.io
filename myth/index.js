@@ -14216,7 +14216,7 @@ class GameAnalytics {
 
 const gameAnalytics = new GameAnalytics();
 
-!function(e,t){"object"==typeof exports&&"object"==typeof module?module.exports=t():"function"==typeof define&&define.amd?define([],t):"object"==typeof exports?exports.UnnyNet=t():e.UnnyNet=t()}(window,(function(){return function(e){var t=window.webpackHotUpdateUnnyNet;window.webpackHotUpdateUnnyNet=function(e,n){!function(e,t){if(g[e]&&_[e]){for(var n in _[e]=!1,t)Object.prototype.hasOwnProperty.call(t,n)&&(h[n]=t[n]);0==--m&&0===y&&O()}}(e,n),t&&t(e,n)};var n,a=!0,o="4ae29c0730be98d6bfaa",r=1e4,i={},u=[],s=[];function l(e){var t=P[e];if(!t)return I;function a(a){return t.hot.active?(P[a]?-1===P[a].parents.indexOf(e)&&P[a].parents.push(e):(u=[e],n=a),-1===t.children.indexOf(a)&&t.children.push(a)):(console.warn("[HMR] unexpected require("+a+") from disposed module "+e),u=[]),I(a)}function o(e){return{configurable:!0,enumerable:!0,get:function(){return I[e]},set:function(t){I[e]=t}}}for(var r in I)Object.prototype.hasOwnProperty.call(I,r)&&"e"!==r&&"t"!==r&&Object.defineProperty(a,r,o(r));return a.e=function(e){return"ready"===d&&f("prepare"),y++,I.e(e).then(t,(function(e){throw t(),e}));function t(){y--,"prepare"===d&&(b[e]||C(e),0===y&&0===m&&O())}},a.t=function(e,t){return 1&t&&(e=a(e)),I.t(e,-2&t)},a}var c=[],d="idle";function f(e){d=e;for(var t=0;t<c.length;t++)c[t].call(null,e)}var p,h,v,m=0,y=0,b={},_={},g={};function k(e){return+e+""===e?+e:e}function w(e){if("idle"!==d)throw new Error("check() is only allowed in idle status");return a=e,f("check"),function(e){return e=e||1e4,new Promise((function(t,n){if("undefined"==typeof XMLHttpRequest)return n(new Error("No browser support"));try{var a=new XMLHttpRequest,r=I.p+""+o+".hot-update.json";a.open("GET",r,!0),a.timeout=e,a.send(null)}catch(e){return n(e)}a.onreadystatechange=function(){if(4===a.readyState)if(0===a.status)n(new Error("Manifest request to "+r+" timed out."));else if(404===a.status)t();else if(200!==a.status&&304!==a.status)n(new Error("Manifest request to "+r+" failed."));else{try{var e=JSON.parse(a.responseText)}catch(e){return void n(e)}t(e)}}}))}(r).then((function(e){if(!e)return f("idle"),null;_={},b={},g=e.c,v=e.h,f("prepare");var t=new Promise((function(e,t){p={resolve:e,reject:t}}));return h={},C(0),"prepare"===d&&0===y&&0===m&&O(),t}))}function C(e){g[e]?(_[e]=!0,m++,function(e){var t=document.createElement("script");t.charset="utf-8",t.src=I.p+""+e+"."+o+".hot-update.js",document.head.appendChild(t)}(e)):b[e]=!0}function O(){f("ready");var e=p;if(p=null,e)if(a)Promise.resolve().then((function(){return R(a)})).then((function(t){e.resolve(t)}),(function(t){e.reject(t)}));else{var t=[];for(var n in h)Object.prototype.hasOwnProperty.call(h,n)&&t.push(k(n));e.resolve(t)}}function R(t){if("ready"!==d)throw new Error("apply() is only allowed in ready status");var n,a,r,s,l;function c(e){for(var t=[e],n={},a=t.map((function(e){return{chain:[e],id:e}}));0<a.length;){var o=a.pop(),r=o.id,i=o.chain;if((s=P[r])&&!s.hot._selfAccepted){if(s.hot._selfDeclined)return{type:"self-declined",chain:i,moduleId:r};if(s.hot._main)return{type:"unaccepted",chain:i,moduleId:r};for(var u=0;u<s.parents.length;u++){var l=s.parents[u],c=P[l];if(c){if(c.hot._declinedDependencies[r])return{type:"declined",chain:i.concat([l]),moduleId:r,parentId:l};-1===t.indexOf(l)&&(c.hot._acceptedDependencies[r]?(n[l]||(n[l]=[]),p(n[l],[r])):(delete n[l],t.push(l),a.push({chain:i.concat([l]),id:l})))}}}}return{type:"accepted",moduleId:e,outdatedModules:t,outdatedDependencies:n}}function p(e,t){for(var n=0;n<t.length;n++){var a=t[n];-1===e.indexOf(a)&&e.push(a)}}function m(){console.warn("[HMR] unexpected require("+C.moduleId+") to disposed module")}t=t||{};var y={},b=[],_={};for(var w in h)if(Object.prototype.hasOwnProperty.call(h,w)){var C;l=k(w);var O=!1,R=!1,A=!1,S="";switch((C=h[w]?c(l):{type:"disposed",moduleId:w}).chain&&(S="\nUpdate propagation: "+C.chain.join(" -> ")),C.type){case"self-declined":t.onDeclined&&t.onDeclined(C),t.ignoreDeclined||(O=new Error("Aborted because of self decline: "+C.moduleId+S));break;case"declined":t.onDeclined&&t.onDeclined(C),t.ignoreDeclined||(O=new Error("Aborted because of declined dependency: "+C.moduleId+" in "+C.parentId+S));break;case"unaccepted":t.onUnaccepted&&t.onUnaccepted(C),t.ignoreUnaccepted||(O=new Error("Aborted because "+l+" is not accepted"+S));break;case"accepted":t.onAccepted&&t.onAccepted(C),R=!0;break;case"disposed":t.onDisposed&&t.onDisposed(C),A=!0;break;default:throw new Error("Unexception type "+C.type)}if(O)return f("abort"),Promise.reject(O);if(R)for(l in _[l]=h[l],p(b,C.outdatedModules),C.outdatedDependencies)Object.prototype.hasOwnProperty.call(C.outdatedDependencies,l)&&(y[l]||(y[l]=[]),p(y[l],C.outdatedDependencies[l]));A&&(p(b,[C.moduleId]),_[l]=m)}var E,T=[];for(a=0;a<b.length;a++)l=b[a],P[l]&&P[l].hot._selfAccepted&&_[l]!==m&&T.push({module:l,errorHandler:P[l].hot._selfAccepted});f("dispose"),Object.keys(g).forEach((function(e){!1===g[e]&&function(e){delete installedChunks[e]}(e)}));for(var N,q,D=b.slice();0<D.length;)if(l=D.pop(),s=P[l]){var G={},M=s.hot._disposeHandlers;for(r=0;r<M.length;r++)(n=M[r])(G);for(i[l]=G,s.hot.active=!1,delete P[l],delete y[l],r=0;r<s.children.length;r++){var j=P[s.children[r]];j&&0<=(E=j.parents.indexOf(l))&&j.parents.splice(E,1)}}for(l in y)if(Object.prototype.hasOwnProperty.call(y,l)&&(s=P[l]))for(q=y[l],r=0;r<q.length;r++)N=q[r],0<=(E=s.children.indexOf(N))&&s.children.splice(E,1);for(l in f("apply"),o=v,_)Object.prototype.hasOwnProperty.call(_,l)&&(e[l]=_[l]);var x=null;for(l in y)if(Object.prototype.hasOwnProperty.call(y,l)&&(s=P[l])){q=y[l];var F=[];for(a=0;a<q.length;a++)if(N=q[a],n=s.hot._acceptedDependencies[N]){if(-1!==F.indexOf(n))continue;F.push(n)}for(a=0;a<F.length;a++){n=F[a];try{n(q)}catch(n){t.onErrored&&t.onErrored({type:"accept-errored",moduleId:l,dependencyId:q[a],error:n}),t.ignoreErrored||(x=x||n)}}}for(a=0;a<T.length;a++){var U=T[a];l=U.module,u=[l];try{I(l)}catch(a){if("function"==typeof U.errorHandler)try{U.errorHandler(a)}catch(n){t.onErrored&&t.onErrored({type:"self-accept-error-handler-errored",moduleId:l,error:n,originalError:a}),t.ignoreErrored||(x=x||n),x=x||a}else t.onErrored&&t.onErrored({type:"self-accept-errored",moduleId:l,error:a}),t.ignoreErrored||(x=x||a)}}return x?(f("fail"),Promise.reject(x)):(f("idle"),new Promise((function(e){e(b)})))}var P={};function I(t){if(P[t])return P[t].exports;var a=P[t]={i:t,l:!1,exports:{},hot:function(e){var t={_acceptedDependencies:{},_declinedDependencies:{},_selfAccepted:!1,_selfDeclined:!1,_disposeHandlers:[],_main:n!==e,active:!0,accept:function(e,n){if(void 0===e)t._selfAccepted=!0;else if("function"==typeof e)t._selfAccepted=e;else if("object"==typeof e)for(var a=0;a<e.length;a++)t._acceptedDependencies[e[a]]=n||function(){};else t._acceptedDependencies[e]=n||function(){}},decline:function(e){if(void 0===e)t._selfDeclined=!0;else if("object"==typeof e)for(var n=0;n<e.length;n++)t._declinedDependencies[e[n]]=!0;else t._declinedDependencies[e]=!0},dispose:function(e){t._disposeHandlers.push(e)},addDisposeHandler:function(e){t._disposeHandlers.push(e)},removeDisposeHandler:function(e){var n=t._disposeHandlers.indexOf(e);0<=n&&t._disposeHandlers.splice(n,1)},check:w,apply:R,status:function(e){if(!e)return d;c.push(e)},addStatusHandler:function(e){c.push(e)},removeStatusHandler:function(e){var t=c.indexOf(e);0<=t&&c.splice(t,1)},data:i[e]};return n=void 0,t}(t),parents:(s=u,u=[],s),children:[]};return e[t].call(a.exports,a,a.exports,l(t)),a.l=!0,a.exports}return I.m=e,I.c=P,I.d=function(e,t,n){I.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:n})},I.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},I.t=function(e,t){if(1&t&&(e=I(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var n=Object.create(null);if(I.r(n),Object.defineProperty(n,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var a in e)I.d(n,a,function(t){return e[t]}.bind(null,a));return n},I.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return I.d(t,"a",t),t},I.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},I.p="",I.h=function(){return o},l(9)(I.s=9)}([function(e,t,n){"use strict";var a;Object.defineProperty(t,"__esModule",{value:!0});function o(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}function r(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}t.Errors={NotInitialized:-1,Unknown:1,NotAuthorized:2,NoMessage:3,NoChannel:4,UnnynetNotReady:5,NoGameId:6,NoSuchLeaderboard:7,NoLeaderboardsForTheGame:8,NoAchievementsForTheGame:9,NoGuildsForTheGame:10,NotInGuild:11,NoSuchAchievement:12,WrongAchievementType:13,AchievementIsNotPublished:14,LeaderboardReportsTooOften:15,NoAccessToken:16};var i=(function(e,t,n){t&&o(e.prototype,t),n&&o(e,n)}(u,null,[{key:"GetCommand",value:function(e){return u.jsCommands[e]}},{key:"getResponceData",value:function(e){var t={};return e.error?(t.success=!1,t.error=JSON.parse(e.error)):t.success=!0,e.data&&(t.data=JSON.parse(e.data)),t}},{key:"getErrorResponse",value:function(e,t){return{success:!1,error:{code:e,message:1<arguments.length&&void 0!==t?t:""}}}},{key:"getSuccessResponse",value:function(e){var t=0<arguments.length&&void 0!==e?e:null,n={success:!0};return t&&(n.data=t),n}}]),u);function u(){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,u)}i.Command={OpenLeaderBoards:1,OpenAchievements:2,OpenFriends:3,OpenChannel:4,OpenGuilds:5,OpenMyGuild:6,SetSafeArea:7,SendMessage:20,UnnyNetWasOpened:30,ReportLeaderboardScoresAsync:40,ReportAchievementProgressAsync:41,AddGuildExperience:60,RequestFailed:70,RequestSucceeded:71,RequestReply:72,SetKeyboardOffset:80,SetConfig:81,SetDefaultChannel:82,AuthorizeWithCredentials:100,AuthorizeAsGuest:101,AuthorizeWithCustomId:102,ForceLogout:110,GetGuildInfo:120,GetAchievementsInfo:130,GetPlayerPublicInfo:140,GetLeaderboardScores:150},i.jsCommands=(r(a={},i.Command.OpenLeaderBoards,"window.globalReactFunctions.apiOpenLeaderboards();"),r(a,i.Command.OpenAchievements,"window.globalReactFunctions.apiOpenAchievements();"),r(a,i.Command.OpenFriends,"window.globalReactFunctions.apiOpenFriends();"),r(a,i.Command.OpenChannel,"window.globalReactFunctions.apiOpenChannel('{0}');"),r(a,i.Command.OpenGuilds,"window.globalReactFunctions.apiOpenGuilds();"),r(a,i.Command.OpenMyGuild,"window.globalReactFunctions.apiOpenMyGuild();"),r(a,i.Command.SendMessage,"window.globalReactFunctions.apiSendMessage('{0}', '{1}');"),r(a,i.Command.UnnyNetWasOpened,"window.globalReactFunctions.apiUnnyNetWasOpened();"),r(a,i.Command.ReportLeaderboardScoresAsync,"window.globalReactFunctions.apiReportLeaderboardScoresAsync(<*id*>, '{0}', {1}, '{2}');"),r(a,i.Command.ReportAchievementProgressAsync,"window.globalReactFunctions.apiReportAchievementProgressAsync(<*id*>, {0}, {1});"),r(a,i.Command.AddGuildExperience,"window.globalReactFunctions.apiAddGuildExperience('{0}');"),r(a,i.Command.RequestFailed,"window.globalReactFunctions.requestFailed('{0}', \"{1}\");"),r(a,i.Command.RequestSucceeded,"window.globalReactFunctions.requestSucceeded('{0}');"),r(a,i.Command.RequestReply,"window.globalReactFunctions.requestReply('{0}', '{1}');"),r(a,i.Command.SetKeyboardOffset,"window.globalReactFunctions.apiSetKeyboardOffset('{0}');"),r(a,i.Command.SetConfig,"window.globalReactFunctions.apiSetConfig('{0}');"),r(a,i.Command.SetDefaultChannel,"window.globalReactFunctions.apiSetDefaultChannel('{0}');"),r(a,i.Command.AuthorizeWithCredentials,"window.globalReactFunctions.apiAuthWithCredentials('{0}', '{1}', '{2}');"),r(a,i.Command.AuthorizeAsGuest,"window.globalReactFunctions.apiAuthAsGuest('{0}');"),r(a,i.Command.AuthorizeWithCustomId,"window.globalReactFunctions.apiAuthWithCustomId('{0}', '{1}');"),r(a,i.Command.ForceLogout,"window.globalReactFunctions.apiForceLogout();"),r(a,i.Command.GetGuildInfo,"window.globalReactFunctions.apiGetGuildInfo(<*id*>, {0});"),r(a,i.Command.SetSafeArea,"window.globalReactFunctions.apiSetSafeArea({0}, {1}, {2}, {3});"),r(a,i.Command.GetAchievementsInfo,"window.globalReactFunctions.apiGetAchievementsInfo(<*id*>);"),r(a,i.Command.GetPlayerPublicInfo,"window.globalReactFunctions.apiGetPlayerPublicInfo(<*id*>);"),r(a,i.Command.GetLeaderboardScores,"window.globalReactFunctions.apiGetLeaderboardScores(<*id*>, '{0}');"),a),t.default=i},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.NutakuPlatform={PCBrowser:1,SPBrowser:2,Android:3,ClientGames:4},t.default={GENERAL_CONSTANTS:{REMOTE_URL:"https://unnynet.com",VERSION:2,PLUGIN_VERSION:"2.9"},MAX_DELAYED_CONFIRMATIONS:10,REQUESTS_SAVE_TIME:60,CHECK_PERIOD:1,MAX_QUEUE_LENGTH:100,SEND_REQUEST_RETRY_DELAY:1,ANIMATIONS:{OPEN_DURATION:.5},Platform:{NUTAKU:2},PurchaseStatusFilter:{ALL:0,PENDING:1,COMPLETED:2,CLAIMED:3}}},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});function a(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}var o=s(n(4)),r=s(n(0)),i=n(6),u=s(i);function s(e){return e&&e.__esModule?e:{default:e}}var l=(function(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}(c,o.default),function(e,t,n){t&&a(e.prototype,t),n&&a(e,n)}(c,null,[{key:"initialize",value:function(e,t){c.instance=new c(e,t)}},{key:"openLeaderboards",value:function(e){o.default.evaluateCommand(r.default.Command.OpenLeaderBoards,!0,e)}},{key:"openAchievements",value:function(e){o.default.evaluateCommand(r.default.Command.OpenAchievements,!0,e)}},{key:"openFriends",value:function(e){o.default.evaluateCommand(r.default.Command.OpenFriends,!0,e)}},{key:"openChannel",value:function(e,t){var n=r.default.GetCommand(r.default.Command.OpenChannel).format(e);o.default.evaluateCodeInJavaScript(new u.default(r.default.Command.OpenChannel,n,!0,t))}},{key:"openGuilds",value:function(e){o.default.evaluateCommand(r.default.Command.OpenGuilds,!0,e)}},{key:"openMyGuild",value:function(e){o.default.evaluateCommand(r.default.Command.OpenMyGuild,!0,e)}},{key:"authorizeWithCredentials",value:function(e,t,n,a){var i=r.default.GetCommand(r.default.Command.AuthorizeWithCredentials).format(e,t,n);o.default.evaluateCodeInJavaScript(new u.default(r.default.Command.AuthorizeWithCredentials,i,!1,a),!0)}},{key:"authorizeAsGuest",value:function(e,t){var n=r.default.GetCommand(r.default.Command.AuthorizeAsGuest).format(e);o.default.evaluateCodeInJavaScript(new u.default(r.default.Command.AuthorizeAsGuest,n,!1,t),!0)}},{key:"authorizeWithCustomId",value:function(e,t,n){var a=r.default.GetCommand(r.default.Command.AuthorizeWithCustomId).format(e,t);o.default.evaluateCodeInJavaScript(new u.default(r.default.Command.AuthorizeWithCustomId,a,!1,n),!0)}},{key:"forceLogout",value:function(e){o.default.evaluateCommand(r.default.Command.ForceLogout,!1,e)}},{key:"getGuildInfo",value:function(e,t){var n=r.default.GetCommand(r.default.Command.GetGuildInfo).format(e?1:0);o.default.evaluateCodeInJavaScript(new i.UnnyCommandInfoDelayed(r.default.Command.GetGuildInfo,n,t))}},{key:"getAchievementsInfo",value:function(e){var t=r.default.GetCommand(r.default.Command.GetAchievementsInfo);o.default.evaluateCodeInJavaScript(new i.UnnyCommandInfoDelayed(r.default.Command.GetAchievementsInfo,t,e))}},{key:"getPlayerPublicInfo",value:function(e){var t=r.default.GetCommand(r.default.Command.GetPlayerPublicInfo);o.default.evaluateCodeInJavaScript(new i.UnnyCommandInfoDelayed(r.default.Command.GetPlayerPublicInfo,t,e))}},{key:"getLeaderboardScores",value:function(e,t){var n=r.default.GetCommand(r.default.Command.GetLeaderboardScores).format(e);o.default.evaluateCodeInJavaScript(new i.UnnyCommandInfoDelayed(r.default.Command.GetLeaderboardScores,n,t))}},{key:"sendMessageToChannel",value:function(e,t,n){if(t){var a=r.default.GetCommand(r.default.Command.SendMessage).format(e,t);o.default.evaluateCodeInJavaScript(new u.default(r.default.Command.SendMessage,a,!1,n))}}},{key:"reportLeaderboards",value:function(e,t,n,a){n=n?encodeURIComponent(n):"";var u=r.default.GetCommand(r.default.Command.ReportLeaderboardScoresAsync).format(e,t,n);o.default.evaluateCodeInJavaScript(new i.UnnyCommandInfoDelayed(r.default.Command.ReportLeaderboardScoresAsync,u,a))}},{key:"reportAchievements",value:function(e,t,n){var a=r.default.GetCommand(r.default.Command.ReportAchievementProgressAsync).format(e,t);o.default.evaluateCodeInJavaScript(new i.UnnyCommandInfoDelayed(r.default.Command.ReportAchievementProgressAsync,a,n))}},{key:"addGuildExperience",value:function(e,t){var n=r.default.GetCommand(r.default.Command.AddGuildExperience).format(e);o.default.evaluateCodeInJavaScript(new u.default(r.default.Command.AddGuildExperience,n,!1,t))}},{key:"authorize",value:function(e,t,n){c.instance.API.authWithLogin(e,t,n)}},{key:"save",value:function(e,t,n,a,o){c.instance.API.save(e,t,n,a,o)}},{key:"load",value:function(e,t,n){c.instance.API.load(e,t,n)}},{key:"purchaseProduct",value:function(e,t){c.instance.API.purchaseProduct(e,t)}},{key:"completeNutakuPurchase",value:function(e,t,n,a){c.instance.API.completeNutakuPurchase(e,t,n,a)}},{key:"completeNutakuPurchase2",value:function(e,t,n,a){c.instance.API.completeNutakuPurchase2(e,t,n,a)}},{key:"getPurchases",value:function(e,t){c.instance.API.getPurchases(e,t)}},{key:"claimPurchase",value:function(e,t,n,a){c.instance.API.claimPurchase(e,t,n,a)}},{key:"claimPurchase2",value:function(e,t,n,a){c.instance.API.claimPurchase2(e,t,n,a)}}]),c);function c(){return function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,c),function(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}(this,(c.__proto__||Object.getPrototypeOf(c)).apply(this,arguments))}l.instance=null,t.default=l},function(e,t,n){"use strict";function a(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}Object.defineProperty(t,"__esModule",{value:!0});var o=(function(e,t,n){t&&a(e.prototype,t),n&&a(e,n)}(r,[{key:"_getSaveKey",value:function(){return"UN_API_SAVE_"+this.game_id}},{key:"_updateTokenForRequests",value:function(e){for(var t in this.requestsQueue){var n=this.requestsQueue[t].data.request;n.headers.hasOwnProperty("Authorization")&&(n.headers.Authorization="Bearer "+e)}}},{key:"_enqueueRequest",value:function(e,t,n,a,o){var r={data:{url:e,request:t},callback:o,retries:0,save:n};a?this.requestsQueue.unshift(r):this.requestsQueue.push(r),this.requests_were_updated=!0,1===this.requestsQueue.length&&this._sendNextRequest()}},{key:"_checkRequestToSave",value:function(){if(0<this.requestsQueue.length&&this.requests_were_updated){var e=Date.now();5e3<e-this.last_update_time&&(this.last_update_time=e,this.requests_were_updated=!1,this.saveRequests())}}},{key:"_removeFirstRequest",value:function(e){for(var t=0;t<this.requestsQueue.length;t++)this.requestsQueue[t]===e&&this.requestsQueue.splice(t,1);this._sendNextRequest(),this.last_update_time=Date.now()}},{key:"_sendNextRequest",value:function(){var e=this;if(0!==this.requestsQueue.length){var t=this.requestsQueue[0],n=t.data.url,a=t.data.request,o=t.callback;console.log("FETCH: "+n),fetch(n,a).then((function(e){return console.log("Request succeeded with JSON response",e),200<=e.status&&e.status<300?e.json():Promise.reject(e)})).then((function(n){console.info("FETCH response, ",n),o&&o(null,n),e._removeFirstRequest(t)})).catch((function(n){console.log("Request failed",n),t.retries<3?(t.retries++,setTimeout((function(){return e._sendNextRequest()}),1e3)):(o&&o(n,null),e._removeFirstRequest(t))}))}}},{key:"loadRequests",value:function(){var e=localStorage.getItem(this._getSaveKey());if(e){var t=JSON.parse(e);if(t)for(var n in t){var a=t[n];this._enqueueRequest(a.url,a.request,!0,null)}localStorage.removeItem(this._getSaveKey())}}},{key:"saveRequests",value:function(){var e=Math.min(100,this.requestsQueue.length);if(0<e){for(var t=[],n=0;n<e;n++)this.requestsQueue[n].save&&t.push(this.requestsQueue[n].data);localStorage.setItem(this._getSaveKey(),JSON.stringify(t))}}}],[{key:"updateTokenForRequests",value:function(e){r.instance._updateTokenForRequests(e)}},{key:"enqueueRequest",value:function(e,t,n,a){r.instance._enqueueRequest(e,t,n,!1,a)}},{key:"enqueueImportantRequest",value:function(e,t,n,a){r.instance._enqueueRequest(e,t,n,!0,a)}}]),r);function r(e){var t=this;!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,r),this.game_id=e.game_id,this.requestsQueue=[],(r.instance=this).loadRequests(),this.last_update_time=Date.now(),this.requests_were_updated=!1,setInterval((function(){return t._checkRequestToSave()}),1e3)}t.default=o},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});function a(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}var o=v(n(10)),r=v(n(6)),i=n(0),u=v(i),s=v(n(7)),l=v(n(11)),c=v(n(2)),d=v(n(1)),f=v(n(3)),p=v(n(12)),h=v(n(14));function v(e){return e&&e.__esModule?e:{default:e}}String.prototype.format||(String.prototype.format=function(){var e=arguments;return this.replace(/{(\d+)}/g,(function(t,n){return void 0!==e[n]?e[n]:t}))});var m=(function(e,t,n){t&&a(e.prototype,t),n&&a(e,n)}(y,[{key:"_receiveMessage",value:function(e){var t=e.path,n=e.args;switch(t){case"authorised":c.default.onPlayerAuthorized&&c.default.onPlayerAuthorized(n),this.config.default_channel&&y._setDefaultChannel(this.config.default_channel);break;case"logged_out":c.default.onPlayerLoggedOut&&c.default.onPlayerLoggedOut();break;case"renamed":c.default.onPlayerNameChanged&&c.default.onPlayerNameChanged(n.name);break;case"rank_changed":c.default.onRankChanged&&c.default.onRankChanged(n);break;case"new_guild":null!=c.default.onNewGuild&&c.default.onNewGuild(n);break;case"ask_new_guild":case"popup_appeared":l.default.create(t,n,y._sendRequestReply);break;case"popup_button_clicked":l.default.buttonClicked(n);break;case"ach_completed":null!=c.default.onAchievementCompleted&&c.default.onAchievementCompleted(n);break;case"new_message":null!=c.default.onNewMessageReceived&&c.default.onNewMessageReceived(n);break;case"game_login_request":null!=c.default.onGameLoginRequest&&c.default.onGameLoginRequest();break;case"request_reply":s.default.replyReceived(n);break;case"open_url":n.url&&window.open(n.url,"_blank")}}},{key:"_update",value:function(){this._checkQueue(),(!this.last_save_time||Date.now()-this.last_save_time>=1e3*d.default.REQUESTS_SAVE_TIME)&&this._saveQueue()}},{key:"_getSaveKey",value:function(){return"UN_SAVE_"+this.config.game_id}},{key:"_saveQueue",value:function(){this.last_save_time=Date.now();var e=[];for(var t in this.queue){var n=this.queue[t];n.needToSave()&&e.push(n.getSaveData())}var a=this._getSaveKey();0===e.length?localStorage.removeItem(a):localStorage.setItem(a,JSON.stringify(e))}},{key:"_loadQueue",value:function(){var e=this._getSaveKey(),t=localStorage.getItem(e);if(t){var n=JSON.parse(t);for(var a in n){var o=r.default.loadData(n[a]);this.queue.push(o)}localStorage.removeItem(e)}}},{key:"_checkQueue",value:function(){var e=this;if(0!==this.queue.length&&y._checkWebView()){var t=null;for(var n in this.queue){var a=this.queue[n];if(!a.isWaiting()){t=a;break}if(!(a.startedTime&&Date.now()-a.startedTime<1e3*d.default.MAX_DELAYED_CONFIRMATIONS)){t=a;break}}if(t){t.startedTime=Date.now();try{this.webView.evaluateJavaScript(t.getCode(),(function(n){var a=!1;if(n.success)t.isDelayedRequestConfirm()?t.startWaiting():a=!0,t.info.openWindow&&y.openUnnyNet();else if(n.error)switch(n.error.code){case i.Errors.UnnynetNotReady:case i.Errors.NotAuthorized:console.log("Waiting..."+n.error.message);break;default:a=!0}a&&(e.queue.shift(),null!=t&&t.invokeCallback(n),e._checkQueue())}))}catch(n){console.error("EVAL ERROR: ",n)}}}}},{key:"hideWebView",value:function(){null!=c.default.onUnnyNetClosed&&c.default.onUnnyNetClosed(),this.webView.hide(this.config)}},{key:"showWebView",value:function(){this.webView.show(this.config),y.evaluateCommand(u.default.Command.UnnyNetWasOpened,!1,null)}}],[{key:"_setDefaultChannel",value:function(e){var t=u.default.GetCommand(u.default.Command.SetDefaultChannel).format(e);y.evaluateCodeInJavaScript(new r.default(u.default.Command.SetDefaultChannel,t,!1))}},{key:"_sendRequestReply",value:function(e,t){var n=u.default.GetCommand(u.default.Command.RequestReply).format(e,t);y.evaluateCodeInJavaScript(new r.default(u.default.Command.RequestReply,n,!1))}},{key:"_checkWebView",value:function(){return!!y.staticUnnyNetInstance||(console.error("UnnyNet wasn't properly initialized"),!1)}},{key:"evaluateCommand",value:function(e,t,n){y.evaluateCodeInJavaScript(new r.default(e,u.default.GetCommand(e),t,n))}},{key:"evaluateCodeInJavaScript",value:function(e,t){var n=1<arguments.length&&void 0!==t&&t;if(y._checkWebView()){for(var a=y.staticUnnyNetInstance.queue,o=-1,r=1;r<a.length;r++)if(a[r].couldBeReplaced(e.Command)){o=r;break}if(-1===o){if(n?a.unshift(e):a.push(e),1===a.length)y.staticUnnyNetInstance._checkQueue();else if(a.length>=d.default.MAX_QUEUE_LENGTH)for(var i=0;i<a.length;i++)if(a[i].isDelayedRequestConfirm()){a.splice(i,1);break}}else a[o]=e}}},{key:"openUnnyNet",value:function(){y._checkWebView()&&y.staticUnnyNetInstance.showWebView()}},{key:"closeUnnyNet",value:function(){null!=y.staticUnnyNetInstance&&y.staticUnnyNetInstance.hideWebView()}},{key:"delayedCommandWasConfirmed",value:function(e){var t=y.staticUnnyNetInstance.queue;for(var n in t)if(e===t[n]){t.splice(n,1);break}}},{key:"setFrame",value:function(e){y.staticUnnyNetInstance.webView.setFrame(e)}},{key:"setCloseButtonVisible",value:function(e){y.staticUnnyNetInstance.webView.setCloseButtonVisible(e)}}]),y);function y(e,t){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,y),this.config=e,this.webView=new o.default(e),this.queue=[],y.staticUnnyNetInstance=this,e.game_id||(e.game_id="8ff16d3c-ebcc-4582-a734-77ca6c14af29"),this.webView.openGameUrl(e.game_id,e.public_key,!!c.default.onGameLoginRequest),this.webView.onMessageReceived=this._receiveMessage.bind(this),setInterval(this._update.bind(this),1e3*d.default.CHECK_PERIOD),this._loadQueue(),this.API=new p.default(e),this.apiRequests=new f.default(e),this.allGetParams=function(){var e={},t=window.location.search;if(t&&0<t.length)for(var n=(t=t.substring(1)).split("&"),a=0;a<n.length;a++){var o=n[a].split("=");o[0].startsWith("amp;")?e[o[0].substring(4)]=o[1]:e[o[0]]=o[1]}return e}(),y.RGC=h.default.UnnyRGC.initialize({game_id:e.game_id},(function(){t&&t()})),y.Nutaku={authorize:function(e){y.staticUnnyNetInstance.API.authWithNutakuGadget(e)}},y.Vkontakte={authorize:function(e){y.staticUnnyNetInstance.API.authWithVK(this.allGetParams.viewer_id,this.allGetParams.auth_key,e)}}}m.staticUnnyNetInstance=null,m.RGC=null,m.Nutaku=null,t.default=m},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.ViewOpenDirection=void 0;function a(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}var o,r=(o=n(1))&&o.__esModule?o:{default:o},i=t.ViewOpenDirection={NONE:0,LEFT_TO_RIGHT:2,RIGHT_TO_LEFT:4,TOP_TO_BOTTOM:1,BOTTOM_TO_TOP:3},u=(function(e,t,n){t&&a(e.prototype,t),n&&a(e,n)}(s,[{key:"_receiveMessage",value:function(e){if(e.origin===r.default.GENERAL_CONSTANTS.REMOTE_URL&&e.data)if(e.data.reply){var t=e.data.id;if(this.evaluationsById.hasOwnProperty(t)){var n=e.data.reply,a=this.evaluationsById[t].callback;delete this.evaluationsById[t],a(n)}}else if(e.data&&e.data.message&&e.data.message.split){var o=decodeURIComponent(e.data.message).split("?"),i=void 0,u={};if(0<o.length&&(i=o[0],1<o.length))for(var s=o[1].split("&"),l=0;l<s.length;l++){var c=s[l].split("=");1<c.length&&(u[c[0]]=c[1])}this.onMessageReceived&&this.onMessageReceived({path:i,args:u})}}},{key:"openUrl",value:function(e){this.iFrame.src=e}},{key:"setFrame",value:function(e){this.cachedFrame=e,this._isVisible()?this._applyNormalPosition():this._applyHiddenPosition()}},{key:"_applyNormalPosition",value:function(){var e=this.cachedFrame,t=this.parent.style;t.left=e.left,t.right=e.right,t.top=e.top,t.bottom=e.bottom,t.width=e.width,t.height=e.height}},{key:"_applyHiddenPosition",value:function(){var e=this.parent.style;switch(this._applyNormalPosition(),this.config.open_animation){case i.LEFT_TO_RIGHT:e.left="-"+e.width,e.right=void 0;break;case i.RIGHT_TO_LEFT:e.left=void 0,e.right="-"+e.width;break;case i.TOP_TO_BOTTOM:e.top="-"+e.height,e.bottom=void 0;break;case i.BOTTOM_TO_TOP:e.top=void 0,e.bottom="-"+e.height}}},{key:"_isVisible",value:function(){return"visible"===this.parent.style.visibility}},{key:"_setAnimationActive",value:function(e){var t=this.parent.style;t["-webkit-transition"]=t.transition=e?"all "+r.default.ANIMATIONS.OPEN_DURATION+"s ease-in-out":void 0}},{key:"_clearTimer",value:function(){this.timer&&(clearTimeout(this.timer),this.timer=null)}},{key:"hide",value:function(){var e=this;this._clearTimer(),this._applyHiddenPosition(),this.timer=setTimeout((function(){e.parent.style.visibility="hidden",e.timer=null}),1e3*r.default.ANIMATIONS.OPEN_DURATION)}},{key:"show",value:function(){this._clearTimer(),this.parent.style.visibility="visible",this._applyNormalPosition()}},{key:"evaluateJavaScript",value:function(e,t){var n={eval_code:e,id:this.instanceId++};this.evaluationsById[n.id]={callback:t},this.window.postMessage(n,r.default.GENERAL_CONSTANTS.REMOTE_URL)}}]),s);function s(e){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,s);var t=document.createElement("div");this.parent=document.body.appendChild(t);var n=document.createElement("iframe");this.iFrame=this.parent.appendChild(n),this.window=this.iFrame.contentWindow;var a=this.iFrame.style;a.position="absolute",a.left=a.right="0",a.top=a.bottom="0",a.width=a.height="100%",a.border="none";var o=this.parent.style;o.zIndex="999999",o.position="fixed",o.visibility="hidden",this.config=e,this.evaluationsById={},this.instanceId=0,this.onMessageReceived=null,e.open_animation&&this._setAnimationActive(!0),this.setFrame({left:"0",top:"0",width:"50%",height:"100%"}),window.addEventListener("message",this._receiveMessage.bind(this),!1)}t.default=u},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.UnnyCommandInfoDelayed=void 0;var a=function(e,t,n){return t&&o(e.prototype,t),n&&o(e,n),e};function o(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}var r=u(n(0)),i=u(n(7));function u(e){return e&&e.__esModule?e:{default:e}}function s(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var l=(a(c,[{key:"getSaveData",value:function(){var e={command:this.info.command,code:this.info.code};return 0<=this.req_id&&(e.req_id=this.req_id),e}},{key:"getCode",value:function(){return this.info.code}},{key:"setCode",value:function(e){this.info.code=e}},{key:"getCommand",value:function(){return this.info.command}},{key:"invokeCallback",value:function(e){this.info.callback&&this.info.callback(e)}},{key:"invokeCallbackDelayed",value:function(e){var t=r.default.getResponceData(e);return this.info.callbackDelayed&&this.info.callbackDelayed(t),t}},{key:"needToSave",value:function(){switch(this.info.command){case r.default.Command.SendMessage:case r.default.Command.ReportLeaderboardScoresAsync:case r.default.Command.ReportAchievementProgressAsync:case r.default.Command.AddGuildExperience:return!0;default:return!1}}},{key:"couldBeReplaced",value:function(e){var t=this.getCommand();switch(e){case r.default.Command.OpenLeaderBoards:case r.default.Command.OpenAchievements:case r.default.Command.OpenFriends:case r.default.Command.OpenChannel:case r.default.Command.OpenGuilds:case r.default.Command.OpenMyGuild:return t===r.default.Command.OpenLeaderBoards||t===r.default.Command.OpenAchievements||t===r.default.Command.OpenFriends||t===r.default.Command.OpenChannel||t===r.default.Command.OpenGuilds||t===r.default.Command.OpenMyGuild;case r.default.Command.AuthorizeWithCredentials:case r.default.Command.AuthorizeAsGuest:case r.default.Command.AuthorizeWithCustomId:case r.default.Command.ForceLogout:case r.default.Command.GetGuildInfo:case r.default.Command.GetAchievementsInfo:case r.default.Command.GetPlayerPublicInfo:case r.default.Command.GetLeaderboardScores:case r.default.Command.SetSafeArea:case r.default.Command.UnnyNetWasOpened:return t===e;default:return!1}}},{key:"_isOpenCommand",value:function(e){switch(e){case r.default.Command.OpenLeaderBoards:case r.default.Command.OpenAchievements:case r.default.Command.OpenFriends:case r.default.Command.OpenChannel:case r.default.Command.OpenGuilds:case r.default.Command.OpenMyGuild:return!0;default:return!1}}},{key:"sameType",value:function(e){var t=this.getCommand();return!(!this._isOpenCommand(e)||!this._isOpenCommand(t))||e===t}},{key:"isDelayedRequestConfirm",value:function(){return c.isDelayedRequestConfirm(this.getCommand())}},{key:"startWaiting",value:function(){this.delayedRequestWaiting=!0}},{key:"isWaiting",value:function(){return this.delayedRequestWaiting}}],[{key:"loadData",value:function(e){var t=null;return e.hasOwnProperty("req_id")?((t=new d(e.command,e.code)).setRequestId(e.req_id),i.default.addLoadedRequest(t)):t=new c(e.command,e.code),t}},{key:"isDelayedRequestConfirm",value:function(e){switch(e){case r.default.Command.ReportLeaderboardScoresAsync:case r.default.Command.ReportAchievementProgressAsync:return!0}return!1}}]),c);function c(e,t){var n=2<arguments.length&&void 0!==arguments[2]&&arguments[2],a=3<arguments.length&&void 0!==arguments[3]?arguments[3]:null;s(this,c),this.info={command:e,code:t,openWindow:n,callback:a},this.startedTime=null,this.req_id=-1,this.delayedRequestWaiting=!1}t.default=l;var d=t.UnnyCommandInfoDelayed=(function(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}(f,l),a(f,[{key:"setRequestId",value:function(e){this.req_id=e}}]),f);function f(e,t){var n=2<arguments.length&&void 0!==arguments[2]?arguments[2]:null;s(this,f);var a=function(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}(this,(f.__proto__||Object.getPrototypeOf(f)).call(this,e,t,!1,null));return a.info.callbackDelayed=n,i.default.addRequest(a),a}},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});function a(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}var o,r=(o=n(4))&&o.__esModule?o:{default:o},i=n(0),u=(function(e,t,n){t&&a(e.prototype,t),n&&a(e,n)}(s,[{key:"_requestId",value:function(){return this.uniqueIds===Number.MAX_SAFE_INTEGER?this.uniqueIds=0:this.uniqueIds++,this.uniqueIds}}],[{key:"getInstance",value:function(){return s.staticRequestsManagerInstance||(s.staticRequestsManagerInstance=new s),s.staticRequestsManagerInstance}},{key:"addRequest",value:function(e){var t=s.getInstance(),n=t._requestId();if((t.allRequests[n]=e).getCode()){var a=e.getCode().replace("<*id*>",n);e.setRequestId(n),e.setCode(a)}}},{key:"addLoadedRequest",value:function(e){if(0<=e.req_id){var t=s.getInstance(),n=e.req_id;t.allRequests[n]=e,n>=t.uniqueIds&&(t.uniqueIds=n===Number.MAX_SAFE_INTEGER?0:n+1)}}},{key:"replyReceived",value:function(e){var t=s.getInstance(),n=e.id;if(console.info("replyReceived",e),t.allRequests.hasOwnProperty(n)){var a=t.allRequests[n],o=a.invokeCallbackDelayed(e);if(a.isDelayedRequestConfirm()){var u=o.success;if(!u)switch(o.error.code){case i.Errors.NoSuchLeaderboard:case i.Errors.NoSuchAchievement:case i.Errors.WrongAchievementType:case i.Errors.AchievementIsNotPublished:u=!0}u&&(r.default.delayedCommandWasConfirmed(a),delete t.allRequests[n])}else delete t.allRequests[n]}}}]),s);function s(){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,s),this.uniqueIds=0,this.allRequests={}}u.staticRequestsManagerInstance=null,t.default=u},function(e,t,n){"use strict";function a(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}Object.defineProperty(t,"__esModule",{value:!0});var o="un_token",r="un_refresh_token",i=(function(e,t,n){n&&a(e,n)}(u,0,[{key:"_saveValue",value:function(e,t){localStorage.setItem(e,t)}},{key:"_getValue",value:function(e){return localStorage.getItem(e)}},{key:"_removeItem",value:function(e){localStorage.removeItem(e)}},{key:"setToken",value:function(e){u._saveValue(o,e)}},{key:"getToken",value:function(){return u._getValue(o)}},{key:"setRefreshToken",value:function(e){u._saveValue(r,e)}},{key:"getRefreshToken",value:function(){u._getValue(r)}},{key:"clearTokens",value:function(){u._removeItem(o),u._removeItem(r)}}]),u);function u(){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,u)}t.default=i},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var a=c(n(2)),o=n(16),r=c(o),i=n(5),u=n(0),s=n(1),l=c(s);function c(e){return e&&e.__esModule?e:{default:e}}t.default={UnnyNet:a.default,PopupButtons:r.default,ButtonType:o.ButtonType,ViewOpenDirection:i.ViewOpenDirection,Errors:u.Errors,NutakuPlatform:s.NutakuPlatform,Platform:l.default.Platform,PurchaseStatusFilter:l.default.PurchaseStatusFilter}},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});function a(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}var o=u(n(5)),r=u(n(1)),i=u(n(2));function u(e){return e&&e.__esModule?e:{default:e}}var s=(function(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}(l,o.default),function(e,t,n){t&&a(e.prototype,t),n&&a(e,n)}(l,[{key:"openGameUrl",value:function(e,t,n){var a=r.default.GENERAL_CONSTANTS.REMOTE_URL+"/#/plugin/"+e+"?version="+r.default.GENERAL_CONSTANTS.VERSION+"&public_key="+t;n&&(a+="&game_login=1"),a+="&location_origin="+window.location.origin;var o=localStorage.getItem("js_device_id");o||(o=function(){var e=(new Date).getTime();return"undefined"!=typeof performance&&"function"==typeof performance.now&&(e+=performance.now()),"xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g,(function(t){var n=(e+16*Math.random())%16|0;return e=Math.floor(e/16),("x"===t?n:3&n|8).toString(16)}))}(),localStorage.setItem("js_device_id",o)),a+="&device_id="+o,this.openUrl(a)}},{key:"setCloseButtonVisible",value:function(e){this.closeBtn.style.visibility=e?"visible":"hidden"}}]),l);function l(e){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,l);var t=function(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}(this,(l.__proto__||Object.getPrototypeOf(l)).call(this,e)),n=document.createElement("button");t.closeBtn=t.parent.appendChild(n);var a=t.closeBtn.style;return a.position="absolute",a.top=a.right="7px",a.outline="none",a.background="none",a.border="none",t.closeBtn.innerHTML='<img src="https://unnynet.azureedge.net/users/attachments/b246adbe-c1af-4532-88ca-f1d1709b0211/09b47e40-e61b-11e9-b83d-a5adea23c281.png" />',t.closeBtn.onclick=i.default.closeUnnyNet,t}t.default=s},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});function a(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}var o,r=n(0),i=(o=n(2))&&o.__esModule?o:{default:o},u=(function(e,t,n){t&&a(e.prototype,t),n&&a(e,n)}(s,null,[{key:"create",value:function(e,t,n){switch(e){case"ask_new_guild":s._askNewGuildRequest(t,n);break;case"popup_appeared":s._playerPopupAppearedRequest(t,n)}}},{key:"sendFailed",value:function(e,t,n,a){var o=2<arguments.length&&void 0!==n?n:"";t(e,'{"success": 0, "error": {"code":'+(3<arguments.length&&void 0!==a?a:r.Errors.Unknown)+', "message": "'+o+'"}}')}},{key:"sendSuccess",value:function(e,t){t(e,'{"success": 1}')}},{key:"sendSuccessWithData",value:function(e,t,n){n(e,'{"success": 1, "data":'+t+"}")}},{key:"_askNewGuildRequest",value:function(e,t){var n=e.sys_id,a=null;i.default.onNewGuildRequest&&(a=i.default.onNewGuildRequest(e)),a?s.sendFailed(n,t,a):s.sendSuccess(n,t)}},{key:"_playerPopupAppearedRequest",value:function(e,t){var n=e.sys_id;if(null!=i.default.onPopupOpened){var a=i.default.onPopupOpened(e);if(null!=a)return void s.sendSuccessWithData(n,a.parse(),t)}s.sendSuccess(n,t)}},{key:"buttonClicked",value:function(e){if(PopupButtons.activePopup){var t=e.button_id;if(t){var n=parseInt(t);PopupButtons.activePopup.buttonClicked(n)}}}}]),s);function s(){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,s)}t.default=u},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});function a(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}var o=l(n(8)),r=l(n(13)),i=n(0),u=l(i),s=l(n(3));function l(e){return e&&e.__esModule?e:{default:e}}function c(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}l(n(1));var d="https://un-api.unnynet.com",f=(function(e,t,n){t&&a(e.prototype,t),n&&a(e,n)}(p,[{key:"_onAuth",value:function(e){var t=e?e.accessToken:null,n=e?e.refreshToken:null;console.info("_onAuth",e),t&&(o.default.setToken(t),s.default.updateTokenForRequests(t)),n&&o.default.setRefreshToken(n)}},{key:"_onAuthCallback",value:function(e,t,n){var a=void 0;e?a=u.default.getErrorResponse(i.Errors.Unknown,e.status+":"+e.statusText):(a=u.default.getSuccessResponse(t),this._onAuth(t)),n&&n(a)}},{key:"_onCallback",value:function(e,t,n){var a;a=e?u.default.getErrorResponse(i.Errors.Unknown,e.status+":"+e.statusText):u.default.getSuccessResponse(t),n&&n(a)}},{key:"authWithLogin",value:function(e,t,n){var a=this;o.default.clearTokens(),new r.default(d+"/v1/auth/name",{name:e,password:t,game_id:this.config.game_id,public_key:this.config.public_key},(function(e,t){return a._onAuthCallback(e,t,n)})).markAsAuth().post()}},{key:"authWithVK",value:function(e,t,n){var a=this;return e?t?(o.default.clearTokens(),void new r.default(d+"/v1/auth/vk",{user_id:e,token:t,game_id:this.config.game_id,public_key:this.config.public_key},(function(e,t){return a._onAuthCallback(e,t,n)})).markAsAuth().post()):console.error("[VK]: no auth_key provided"):console.error("[VK]: no viewer_id provided")}},{key:"authWithNutaku",value:function(e,t,n,a,i,u){var s=this;o.default.clearTokens(),new r.default(d+"/v1/auth/nutaku",{user_id:e,platform:t.toString(),oauth_token:n,oauth_token_secret:a,autologin_token:i,game_id:this.config.game_id,public_key:this.config.public_key},(function(e,t){return s._onAuthCallback(e,t,u)})).markAsAuth().post()}},{key:"authWithNutakuGadget",value:function(e){var t,n=this;o.default.clearTokens();var a=(c(t={},gadgets.io.RequestParameters.METHOD,gadgets.io.MethodType.POST),c(t,gadgets.io.RequestParameters.CONTENT_TYPE,gadgets.io.ContentType.JSON),c(t,gadgets.io.RequestParameters.POST_DATA,gadgets.io.encodeValues({game_id:this.config.game_id,public_key:this.config.public_key})),c(t,gadgets.io.RequestParameters.AUTHORIZATION,gadgets.io.AuthorizationType.SIGNED),t);console.error("SENDING...",a),gadgets.io.makeRequest(d+"/v1/auth/nutaku_pc",(function(t){console.info("NUTAKU REPLY",t),t.errors&&t.errors.length&&console.error("AUTH ERROR",t.errors),n._onAuthCallback(null,t.data,e)}),a)}},{key:"purchaseProduct",value:function(e,t){var n=this,a={};a[opensocial.BillingItem.Field.SKU_ID]="com.un.test.1",a[opensocial.BillingItem.Field.PRICE]=2e3,a[opensocial.BillingItem.Field.COUNT]=1,a[opensocial.BillingItem.Field.DESCRIPTION]="item 001",a[nutaku.BillingItem.Field.NAME]="Much Doge1",a[nutaku.BillingItem.Field.IMAGE_URL]="http://i.imgur.com/cBAPCQ4.png";var o=opensocial.newBillingItem(a),r={};r[opensocial.Payment.Field.ITEMS]=[o],r[opensocial.Payment.Field.MESSAGE]="Optional message to show alongside the items",r[opensocial.Payment.Field.PAYMENT_TYPE]=opensocial.Payment.PaymentType.PAYMENT;var i=opensocial.newPayment(r);console.info("MAKE_PURCHASE",i),opensocial.requestPayment(i,(function(e){if(e.hadError())console.error("ERROR",e),n._onCallback(e,null,t);else{var a=e.getData(),o=a.getField(nutaku.Payment.Field.PAYMENT_ID);console.info("INFO> "+o,a),n._onCallback(null,e,t)}}))}},{key:"getPurchases",value:function(e,t){var n=this;return console.log("1 getPurchases = "+e),new r.default(d+"/v1/payments/purchases?status="+e,null,(function(e,a){return n._onCallback(e,a,t)})).setToken(o.default.getToken()).get()}},{key:"completeNutakuPurchase",value:function(e,t,n,a){var i=this;return new r.default(d+"/v1/payments/nutaku/complete",{platform:t,order_id:n,user_id:e},(function(e,t){return i._onCallback(e,t,a)})).setToken(o.default.getToken()).post()}},{key:"completeNutakuPurchase2",value:function(e,t,n,a){var i=this;return new r.default(d+"/v1/payments/nutaku/complete",{platform:t,un_order_id:n,user_id:e},(function(e,t){return i._onCallback(e,t,a)})).setToken(o.default.getToken()).post()}},{key:"claimPurchase",value:function(e,t,n,a){var i=this;return new r.default(d+"/v1/payments/all/claim",{platform:t,order_id:n,user_id:e},(function(e,t){return i._onCallback(e,t,a)})).setToken(o.default.getToken()).post()}},{key:"claimPurchase2",value:function(e,t,n,a){var i=this;return new r.default(d+"/v1/payments/all/claim",{platform:t,un_order_id:n,user_id:e},(function(e,t){return i._onCallback(e,t,a)})).setToken(o.default.getToken()).post()}},{key:"_save",value:function(e,t,n,a,i){var u=this;a=a||-1,new r.default(d+"/v1/saves",{collection:e,key:t,value:n},(function(e,t){return u._onCallback(e,t,i)})).setToken(o.default.getToken()).setHeader("data-version",a.toString()).post()}},{key:"save",value:function(e,t,n,a,r){o.default.getToken()?this._save(e,t,n,a,r):r&&r(u.default.getErrorResponse(i.Errors.NoAccessToken))}},{key:"_load",value:function(e,t,n){var a=this;new r.default(d+"/v1/saves?collection="+e+(t?"&key="+t:""),null,(function(e,t){return a._onCallback(e,t,n)})).setToken(o.default.getToken()).get()}},{key:"load",value:function(e,t,n){o.default.getToken()?this._load(e,t,n):n&&n(u.default.getErrorResponse(i.Errors.NoAccessToken))}}]),p);function p(e){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,p),this.config=e}t.default=f},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});function a(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}var o=r(n(3));function r(e){return e&&e.__esModule?e:{default:e}}r(n(8));var i=(function(e,t,n){t&&a(e.prototype,t),n&&a(e,n)}(u,[{key:"setHeaders",value:function(e){return this.headers=e,this}},{key:"setHeader",value:function(e,t){return this.headers||(this.headers={}),this.headers[e]=t,this}},{key:"setToken",value:function(e){return this.setHeader("Authorization","Bearer "+e)}},{key:"_sendRequest",value:function(e,t){this.important?o.default.enqueueImportantRequest(this.url,e,t,this.callback):o.default.enqueueRequest(this.url,e,t,this.callback)}},{key:"_send",value:function(e,t){if(e.headers={"Content-Type":"application/json"},this.headers)for(var n in this.headers)e.headers[n]=this.headers[n];this._sendRequest(e,t)}},{key:"markAsAuth",value:function(){return this.markAsUnsavable().markImportant()}},{key:"markAsUnsavable",value:function(){return this.savePost=!1,this}},{key:"markImportant",value:function(){return this.important=!0,this}},{key:"get",value:function(){this._send({method:"GET"},!1)}},{key:"post",value:function(){var e={method:"POST"};this.data&&(e.body=JSON.stringify(this.data)),this._send(e,this.savePost)}}]),u);function u(e,t){var n=2<arguments.length&&void 0!==arguments[2]?arguments[2]:null;!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,u),this.url=e,this.data=t,this.callback=n,this.retry=0,this.savePost=!0,this.important=!1}t.default=i},function(e,t,n){"use strict";(function(e){var n,a,o,r,i="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};window,r=function(){return function(e){var t=window.webpackHotUpdateUnnyAdmin;window.webpackHotUpdateUnnyAdmin=function(e,n){!function(e,t){if(k[e]&&g[e]){for(var n in g[e]=!1,t)Object.prototype.hasOwnProperty.call(t,n)&&(v[n]=t[n]);0==--y&&0===b&&R()}}(e,n),t&&t(e,n)};var n,a=!0,o="222703fd7b689a678937",r=1e4,u={},s=[],l=[];function c(e){var t=I[e];if(!t)return A;function a(a){return t.hot.active?(I[a]?-1===I[a].parents.indexOf(e)&&I[a].parents.push(e):(s=[e],n=a),-1===t.children.indexOf(a)&&t.children.push(a)):(console.warn("[HMR] unexpected require("+a+") from disposed module "+e),s=[]),A(a)}function o(e){return{configurable:!0,enumerable:!0,get:function(){return A[e]},set:function(t){A[e]=t}}}for(var r in A)Object.prototype.hasOwnProperty.call(A,r)&&"e"!==r&&"t"!==r&&Object.defineProperty(a,r,o(r));return a.e=function(e){return"ready"===f&&p("prepare"),b++,A.e(e).then(t,(function(e){throw t(),e}));function t(){b--,"prepare"===f&&(_[e]||O(e),0===b&&0===y&&R())}},a.t=function(e,t){return 1&t&&(e=a(e)),A.t(e,-2&t)},a}var d=[],f="idle";function p(e){f=e;for(var t=0;t<d.length;t++)d[t].call(null,e)}var h,v,m,y=0,b=0,_={},g={},k={};function w(e){return+e+""===e?+e:e}function C(e){if("idle"!==f)throw new Error("check() is only allowed in idle status");return a=e,p("check"),(t=(t=r)||1e4,new Promise((function(e,n){if("undefined"==typeof XMLHttpRequest)return n(new Error("No browser support"));try{var a=new XMLHttpRequest,r=A.p+""+o+".hot-update.json";a.open("GET",r,!0),a.timeout=t,a.send(null)}catch(e){return n(e)}a.onreadystatechange=function(){if(4===a.readyState)if(0===a.status)n(new Error("Manifest request to "+r+" timed out."));else if(404===a.status)e();else if(200!==a.status&&304!==a.status)n(new Error("Manifest request to "+r+" failed."));else{try{var t=JSON.parse(a.responseText)}catch(t){return void n(t)}e(t)}}}))).then((function(e){if(!e)return p("idle"),null;g={},_={},k=e.c,m=e.h,p("prepare");var t=new Promise((function(e,t){h={resolve:e,reject:t}}));return v={},O(0),"prepare"===f&&0===b&&0===y&&R(),t}));var t}function O(e){var t,n;k[e]?(g[e]=!0,y++,t=e,(n=document.createElement("script")).charset="utf-8",n.src=A.p+""+t+"."+o+".hot-update.js",document.head.appendChild(n)):_[e]=!0}function R(){p("ready");var e=h;if(h=null,e)if(a)Promise.resolve().then((function(){return P(a)})).then((function(t){e.resolve(t)}),(function(t){e.reject(t)}));else{var t=[];for(var n in v)Object.prototype.hasOwnProperty.call(v,n)&&t.push(w(n));e.resolve(t)}}function P(t){if("ready"!==f)throw new Error("apply() is only allowed in ready status");var n,a,r,i,l;function c(e){for(var t=[e],n={},a=t.map((function(e){return{chain:[e],id:e}}));0<a.length;){var o=a.pop(),r=o.id,u=o.chain;if((i=I[r])&&!i.hot._selfAccepted){if(i.hot._selfDeclined)return{type:"self-declined",chain:u,moduleId:r};if(i.hot._main)return{type:"unaccepted",chain:u,moduleId:r};for(var s=0;s<i.parents.length;s++){var l=i.parents[s],c=I[l];if(c){if(c.hot._declinedDependencies[r])return{type:"declined",chain:u.concat([l]),moduleId:r,parentId:l};-1===t.indexOf(l)&&(c.hot._acceptedDependencies[r]?(n[l]||(n[l]=[]),d(n[l],[r])):(delete n[l],t.push(l),a.push({chain:u.concat([l]),id:l})))}}}}return{type:"accepted",moduleId:e,outdatedModules:t,outdatedDependencies:n}}function d(e,t){for(var n=0;n<t.length;n++){var a=t[n];-1===e.indexOf(a)&&e.push(a)}}function h(){console.warn("[HMR] unexpected require("+C.moduleId+") to disposed module")}t=t||{};var y={},b=[],_={};for(var g in v)if(Object.prototype.hasOwnProperty.call(v,g)){var C;l=w(g);var O=!1,R=!1,P=!1,S="";switch((C=v[g]?c(l):{type:"disposed",moduleId:g}).chain&&(S="\nUpdate propagation: "+C.chain.join(" -> ")),C.type){case"self-declined":t.onDeclined&&t.onDeclined(C),t.ignoreDeclined||(O=new Error("Aborted because of self decline: "+C.moduleId+S));break;case"declined":t.onDeclined&&t.onDeclined(C),t.ignoreDeclined||(O=new Error("Aborted because of declined dependency: "+C.moduleId+" in "+C.parentId+S));break;case"unaccepted":t.onUnaccepted&&t.onUnaccepted(C),t.ignoreUnaccepted||(O=new Error("Aborted because "+l+" is not accepted"+S));break;case"accepted":t.onAccepted&&t.onAccepted(C),R=!0;break;case"disposed":t.onDisposed&&t.onDisposed(C),P=!0;break;default:throw new Error("Unexception type "+C.type)}if(O)return p("abort"),Promise.reject(O);if(R)for(l in _[l]=v[l],d(b,C.outdatedModules),C.outdatedDependencies)Object.prototype.hasOwnProperty.call(C.outdatedDependencies,l)&&(y[l]||(y[l]=[]),d(y[l],C.outdatedDependencies[l]));P&&(d(b,[C.moduleId]),_[l]=h)}var E,T=[];for(a=0;a<b.length;a++)l=b[a],I[l]&&I[l].hot._selfAccepted&&_[l]!==h&&T.push({module:l,errorHandler:I[l].hot._selfAccepted});p("dispose"),Object.keys(k).forEach((function(e){!1===k[e]&&delete installedChunks[e]}));for(var N,q,D=b.slice();0<D.length;)if(l=D.pop(),i=I[l]){var G={},M=i.hot._disposeHandlers;for(r=0;r<M.length;r++)(n=M[r])(G);for(u[l]=G,i.hot.active=!1,delete I[l],delete y[l],r=0;r<i.children.length;r++){var j=I[i.children[r]];j&&0<=(E=j.parents.indexOf(l))&&j.parents.splice(E,1)}}for(l in y)if(Object.prototype.hasOwnProperty.call(y,l)&&(i=I[l]))for(q=y[l],r=0;r<q.length;r++)N=q[r],0<=(E=i.children.indexOf(N))&&i.children.splice(E,1);for(l in p("apply"),o=m,_)Object.prototype.hasOwnProperty.call(_,l)&&(e[l]=_[l]);var x=null;for(l in y)if(Object.prototype.hasOwnProperty.call(y,l)&&(i=I[l])){q=y[l];var F=[];for(a=0;a<q.length;a++)if(N=q[a],n=i.hot._acceptedDependencies[N]){if(-1!==F.indexOf(n))continue;F.push(n)}for(a=0;a<F.length;a++){n=F[a];try{n(q)}catch(n){t.onErrored&&t.onErrored({type:"accept-errored",moduleId:l,dependencyId:q[a],error:n}),t.ignoreErrored||(x=x||n)}}}for(a=0;a<T.length;a++){var U=T[a];l=U.module,s=[l];try{A(l)}catch(a){if("function"==typeof U.errorHandler)try{U.errorHandler(a)}catch(n){t.onErrored&&t.onErrored({type:"self-accept-error-handler-errored",moduleId:l,error:n,originalError:a}),t.ignoreErrored||(x=x||n),x=x||a}else t.onErrored&&t.onErrored({type:"self-accept-errored",moduleId:l,error:a}),t.ignoreErrored||(x=x||a)}}return x?(p("fail"),Promise.reject(x)):(p("idle"),new Promise((function(e){e(b)})))}var I={};function A(t){if(I[t])return I[t].exports;var a,o=I[t]={i:t,l:!1,exports:{},hot:(a={_acceptedDependencies:{},_declinedDependencies:{},_selfAccepted:!1,_selfDeclined:!1,_disposeHandlers:[],_main:n!==t,active:!0,accept:function(e,t){if(void 0===e)a._selfAccepted=!0;else if("function"==typeof e)a._selfAccepted=e;else if("object"==(void 0===e?"undefined":i(e)))for(var n=0;n<e.length;n++)a._acceptedDependencies[e[n]]=t||function(){};else a._acceptedDependencies[e]=t||function(){}},decline:function(e){if(void 0===e)a._selfDeclined=!0;else if("object"==(void 0===e?"undefined":i(e)))for(var t=0;t<e.length;t++)a._declinedDependencies[e[t]]=!0;else a._declinedDependencies[e]=!0},dispose:function(e){a._disposeHandlers.push(e)},addDisposeHandler:function(e){a._disposeHandlers.push(e)},removeDisposeHandler:function(e){var t=a._disposeHandlers.indexOf(e);0<=t&&a._disposeHandlers.splice(t,1)},check:C,apply:P,status:function(e){if(!e)return f;d.push(e)},addStatusHandler:function(e){d.push(e)},removeStatusHandler:function(e){var t=d.indexOf(e);0<=t&&d.splice(t,1)},data:u[t]},n=void 0,a),parents:(l=s,s=[],l),children:[]};return e[t].call(o.exports,o,o.exports,c(t)),o.l=!0,o.exports}return A.m=e,A.c=I,A.d=function(e,t,n){A.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:n})},A.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},A.t=function(e,t){if(1&t&&(e=A(e)),8&t)return e;if(4&t&&"object"==(void 0===e?"undefined":i(e))&&e&&e.__esModule)return e;var n=Object.create(null);if(A.r(n),Object.defineProperty(n,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var a in e)A.d(n,a,function(t){return e[t]}.bind(null,a));return n},A.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return A.d(t,"a",t),t},A.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},A.p="",A.h=function(){return o},c(0)(A.s=0)}([function(e,t,n){Object.defineProperty(t,"__esModule",{value:!0});var a,o=(a=n(1))&&a.__esModule?a:{default:a};t.default={UnnyRGC:o.default}},function(e,t,n){Object.defineProperty(t,"__esModule",{value:!0}),t.Errors=void 0;var a="function"==typeof Symbol&&"symbol"==i(Symbol.iterator)?function(e){return void 0===e?"undefined":i(e)}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":void 0===e?"undefined":i(e)};function o(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}var r=s(n(2)),u=s(n(3));function s(e){return e&&e.__esModule?e:{default:e}}var l,c,d="name",f="version",p=t.Errors={FAILED_DOWNLOAD_VERSIONS:1e3,FAILED_DOWNLOAD_DICTIONARY:1001,PARSING_ERROR:1002},h=(c=[{key:"_sendFailedCallback",value:function(e,t,n){e({success:!1,error:{code:t,message:n}})}},{key:"initialize",value:function(e,t){return(v.instance=new v)._initialize(e.game_id,t),v.instance}}],o((l=v).prototype,[{key:"_getFileExtension",value:function(){return".json"}},{key:"_downloadNextDictionary",value:function(){function e(e){var n=t.allDictionaries[e];if(1===n.status){var a=t.downloadUrl+n[d]+(n.version?"_v"+n.version:"")+t._getFileExtension();return v.instance.downloader.loadJson(a,(function(e){e.success?(n.value=e.data,n.status=0,t.db.saveDictionary(n[d],n.value,n[f]),t._downloadNextDictionary()):(e.error.code=p.FAILED_DOWNLOAD_DICTIONARY,t.callback(e))})),{v:void 0}}}var t=this;for(var n in this.allDictionaries){var o=e(n);if("object"===(void 0===o?"undefined":a(o)))return o.v}this.callback&&(this.callback({success:!0}),this.callback=null)}},{key:"_initialize",value:function(e,t){var n=this;this.callback=t,this.db=new u.default("UNNY_RGC_"+e,2),this.downloadUrl="https://dictionaries-unnynet.fra1.cdn.digitaloceanspaces.com/dictionaries/"+e+"/";var a="https://dictionaries-unnynet.fra1.digitaloceanspaces.com/dictionaries/"+e+"/versions"+this._getFileExtension()+"?timestamp="+Math.trunc((new Date).getTime());v.instance.downloader.loadJson(a,(function(e){if(e.success){var a=e.data.dictionaries;a?n.db.waitForTheConnection((function(){for(var e=a.length,t=function(t){var o=a[t],r=o[d];n.db.loadDictionary(r,(function(t){o[f]<=(t?t.version:-1)&&t.value?(o.status=0,o.value=t.value):o.status=1,n.allDictionaries[o.name]=o,0==--e&&n._downloadNextDictionary()}))},o=0;o<a.length;o++)t(o)})):v._sendFailedCallback(t,p.PARSING_ERROR,e.data.toString())}else e.error.code=p.FAILED_DOWNLOAD_VERSIONS,t(e)}))}},{key:"getDictionary",value:function(e){return this.allDictionaries.hasOwnProperty(e)?this.allDictionaries[e].value:null}}]),o(l,c),v);function v(){!function(e){if(!(e instanceof v))throw new TypeError("Cannot call a class as a function")}(this),this.downloader=new r.default,this.allDictionaries=[]}t.default=h},function(e,t,n){Object.defineProperty(t,"__esModule",{value:!0});var a=(function(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}(o.prototype,[{key:"loadJson",value:function(e,t){fetch(e).then((function(e){return e.json()})).then((function(e){return t({success:!0,data:e})})).catch((function(e){return t({success:!1,error:{message:e.toString()}})}))}}]),o);function o(){!function(e){if(!(e instanceof o))throw new TypeError("Cannot call a class as a function")}(this)}t.default=a},function(e,t,n){Object.defineProperty(t,"__esModule",{value:!0});var a=0,o=-1,r=2,i=3,u="all_dictionaries",s=(function(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}(l.prototype,[{key:"_callCallback",value:function(){this.callback&&(this.callback(this.isActive()),this.callback=null)}},{key:"waitForTheConnection",value:function(e){this.callback=e,this.dbState!==r&&this._callCallback()}},{key:"saveDictionary",value:function(e,t,n){if(this.isActive())try{this.db.transaction([u],"readwrite").objectStore(u).put({name:e,value:t,version:n}).onerror=function(t){console.error("Failed to save "+e,t)}}catch(t){console.error("Something went wrong during saving",t)}}},{key:"loadDictionary",value:function(e,t){if(this.isActive())try{var n=this.db.transaction([u],"readonly").objectStore(u).get(e);n.onerror=function(n){console.error("couldn't load dictionary "+e,n),t(null)},n.onsuccess=function(){t(n.result)}}catch(n){console.error("Something went wrong during loading",n),t(null)}}},{key:"isActive",value:function(){return this.dbState===i}}]),l);function l(e,t){var n=this;if(function(e){if(!(e instanceof l))throw new TypeError("Cannot call a class as a function")}(this),this.dbSupport=!!window.indexedDB,this.dbSupport){this.dbState=r;var s=window.indexedDB.open(e,t);s.onerror=function(e){console.error("Couldn't connect to DB",s.errorCode),n.dbState=a,n._callCallback()},s.onsuccess=function(e){n.db=e.target.result,n.dbState=i,n._callCallback()},s.onupgradeneeded=function(e){n.db=e.target.result,n.db.createObjectStore(u,{keyPath:"name"})}}else console.error("IndexedDB isn't supported"),this.dbState=o}t.default=s}]).default},"object"==i(t)&&"object"==i(e)?e.exports=r():(a=[],void 0===(o="function"==typeof(n=r)?n.apply(t,a):n)||(e.exports=o))}).call(this,n(15)(e))},function(e,t){e.exports=function(e){return e.webpackPolyfill||(e.deprecate=function(){},e.paths=[],e.children||(e.children=[]),Object.defineProperty(e,"loaded",{enumerable:!0,get:function(){return e.l}}),Object.defineProperty(e,"id",{enumerable:!0,get:function(){return e.i}}),e.webpackPolyfill=1),e}},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});function a(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}var o=t.ButtonType={Primary:"Primary",Secondary:"Secondary",Success:"Success",Info:"Info",Warning:"Warning",Danger:"Danger"},r=(function(e,t,n){t&&a(e.prototype,t),n&&a(e,n)}(i,[{key:"addButton",value:function(e,t,n){var a=2<arguments.length&&void 0!==n?n:o.Primary;this.allButtons.push({id:i._buttonInstance++,title:e,type:a}),this.allButtonsAction.push(t)}},{key:"parse",value:function(){var e=JSON.stringify(this.allButtons);return console.log("> "+e),'{"buttons": '+e+"}"}},{key:"buttonClicked",value:function(e){for(var t=0;t<this.allButtons.length;t++)if(this.allButtons[t].id===e){var n=this.allButtonsAction[t];n&&n();break}}}]),i);function i(){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,i),(i.activePopup=this).allButtons=[],this.allButtonsAction=[]}r._buttonInstance=0,t.default=r}]).default}));
+!function(e,t){"object"==typeof exports&&"object"==typeof module?module.exports=t():"function"==typeof define&&define.amd?define([],t):"object"==typeof exports?exports.UnnyNet=t():e.UnnyNet=t()}(window,(function(){return function(e){var t=window.webpackHotUpdateUnnyNet;window.webpackHotUpdateUnnyNet=function(e,n){!function(e,t){if(_[e]&&g[e]){for(var n in g[e]=!1,t)Object.prototype.hasOwnProperty.call(t,n)&&(h[n]=t[n]);0==--m&&0===y&&O()}}(e,n),t&&t(e,n)};var n,a=!0,o="4e56fb4c32319596c8f6",r=1e4,i={},u=[],s=[];function l(e){var t=I[e];if(!t)return R;function a(a){return t.hot.active?(I[a]?-1===I[a].parents.indexOf(e)&&I[a].parents.push(e):(u=[e],n=a),-1===t.children.indexOf(a)&&t.children.push(a)):(console.warn("[HMR] unexpected require("+a+") from disposed module "+e),u=[]),R(a)}function o(e){return{configurable:!0,enumerable:!0,get:function(){return R[e]},set:function(t){R[e]=t}}}for(var r in R)Object.prototype.hasOwnProperty.call(R,r)&&"e"!==r&&"t"!==r&&Object.defineProperty(a,r,o(r));return a.e=function(e){return"ready"===d&&f("prepare"),y++,R.e(e).then(t,(function(e){throw t(),e}));function t(){y--,"prepare"===d&&(b[e]||C(e),0===y&&0===m&&O())}},a.t=function(e,t){return 1&t&&(e=a(e)),R.t(e,-2&t)},a}var c=[],d="idle";function f(e){d=e;for(var t=0;t<c.length;t++)c[t].call(null,e)}var p,h,v,m=0,y=0,b={},g={},_={};function k(e){return+e+""===e?+e:e}function w(e){if("idle"!==d)throw new Error("check() is only allowed in idle status");return a=e,f("check"),function(e){return e=e||1e4,new Promise((function(t,n){if("undefined"==typeof XMLHttpRequest)return n(new Error("No browser support"));try{var a=new XMLHttpRequest,r=R.p+""+o+".hot-update.json";a.open("GET",r,!0),a.timeout=e,a.send(null)}catch(e){return n(e)}a.onreadystatechange=function(){if(4===a.readyState)if(0===a.status)n(new Error("Manifest request to "+r+" timed out."));else if(404===a.status)t();else if(200!==a.status&&304!==a.status)n(new Error("Manifest request to "+r+" failed."));else{try{var e=JSON.parse(a.responseText)}catch(e){return void n(e)}t(e)}}}))}(r).then((function(e){if(!e)return f("idle"),null;g={},b={},_=e.c,v=e.h,f("prepare");var t=new Promise((function(e,t){p={resolve:e,reject:t}}));return h={},C(0),"prepare"===d&&0===y&&0===m&&O(),t}))}function C(e){_[e]?(g[e]=!0,m++,function(e){var t=document.createElement("script");t.charset="utf-8",t.src=R.p+""+e+"."+o+".hot-update.js",document.head.appendChild(t)}(e)):b[e]=!0}function O(){f("ready");var e=p;if(p=null,e)if(a)Promise.resolve().then((function(){return P(a)})).then((function(t){e.resolve(t)}),(function(t){e.reject(t)}));else{var t=[];for(var n in h)Object.prototype.hasOwnProperty.call(h,n)&&t.push(k(n));e.resolve(t)}}function P(t){if("ready"!==d)throw new Error("apply() is only allowed in ready status");var n,a,r,s,l;function c(e){for(var t=[e],n={},a=t.map((function(e){return{chain:[e],id:e}}));0<a.length;){var o=a.pop(),r=o.id,i=o.chain;if((s=I[r])&&!s.hot._selfAccepted){if(s.hot._selfDeclined)return{type:"self-declined",chain:i,moduleId:r};if(s.hot._main)return{type:"unaccepted",chain:i,moduleId:r};for(var u=0;u<s.parents.length;u++){var l=s.parents[u],c=I[l];if(c){if(c.hot._declinedDependencies[r])return{type:"declined",chain:i.concat([l]),moduleId:r,parentId:l};-1===t.indexOf(l)&&(c.hot._acceptedDependencies[r]?(n[l]||(n[l]=[]),p(n[l],[r])):(delete n[l],t.push(l),a.push({chain:i.concat([l]),id:l})))}}}}return{type:"accepted",moduleId:e,outdatedModules:t,outdatedDependencies:n}}function p(e,t){for(var n=0;n<t.length;n++){var a=t[n];-1===e.indexOf(a)&&e.push(a)}}function m(){console.warn("[HMR] unexpected require("+C.moduleId+") to disposed module")}t=t||{};var y={},b=[],g={};for(var w in h)if(Object.prototype.hasOwnProperty.call(h,w)){var C;l=k(w);var O=!1,P=!1,A=!1,S="";switch((C=h[w]?c(l):{type:"disposed",moduleId:w}).chain&&(S="\nUpdate propagation: "+C.chain.join(" -> ")),C.type){case"self-declined":t.onDeclined&&t.onDeclined(C),t.ignoreDeclined||(O=new Error("Aborted because of self decline: "+C.moduleId+S));break;case"declined":t.onDeclined&&t.onDeclined(C),t.ignoreDeclined||(O=new Error("Aborted because of declined dependency: "+C.moduleId+" in "+C.parentId+S));break;case"unaccepted":t.onUnaccepted&&t.onUnaccepted(C),t.ignoreUnaccepted||(O=new Error("Aborted because "+l+" is not accepted"+S));break;case"accepted":t.onAccepted&&t.onAccepted(C),P=!0;break;case"disposed":t.onDisposed&&t.onDisposed(C),A=!0;break;default:throw new Error("Unexception type "+C.type)}if(O)return f("abort"),Promise.reject(O);if(P)for(l in g[l]=h[l],p(b,C.outdatedModules),C.outdatedDependencies)Object.prototype.hasOwnProperty.call(C.outdatedDependencies,l)&&(y[l]||(y[l]=[]),p(y[l],C.outdatedDependencies[l]));A&&(p(b,[C.moduleId]),g[l]=m)}var E,T=[];for(a=0;a<b.length;a++)l=b[a],I[l]&&I[l].hot._selfAccepted&&g[l]!==m&&T.push({module:l,errorHandler:I[l].hot._selfAccepted});f("dispose"),Object.keys(_).forEach((function(e){!1===_[e]&&function(e){delete installedChunks[e]}(e)}));for(var N,D,q=b.slice();0<q.length;)if(l=q.pop(),s=I[l]){var G={},M=s.hot._disposeHandlers;for(r=0;r<M.length;r++)(n=M[r])(G);for(i[l]=G,s.hot.active=!1,delete I[l],delete y[l],r=0;r<s.children.length;r++){var j=I[s.children[r]];j&&0<=(E=j.parents.indexOf(l))&&j.parents.splice(E,1)}}for(l in y)if(Object.prototype.hasOwnProperty.call(y,l)&&(s=I[l]))for(D=y[l],r=0;r<D.length;r++)N=D[r],0<=(E=s.children.indexOf(N))&&s.children.splice(E,1);for(l in f("apply"),o=v,g)Object.prototype.hasOwnProperty.call(g,l)&&(e[l]=g[l]);var U=null;for(l in y)if(Object.prototype.hasOwnProperty.call(y,l)&&(s=I[l])){D=y[l];var F=[];for(a=0;a<D.length;a++)if(N=D[a],n=s.hot._acceptedDependencies[N]){if(-1!==F.indexOf(n))continue;F.push(n)}for(a=0;a<F.length;a++){n=F[a];try{n(D)}catch(n){t.onErrored&&t.onErrored({type:"accept-errored",moduleId:l,dependencyId:D[a],error:n}),t.ignoreErrored||(U=U||n)}}}for(a=0;a<T.length;a++){var L=T[a];l=L.module,u=[l];try{R(l)}catch(a){if("function"==typeof L.errorHandler)try{L.errorHandler(a)}catch(n){t.onErrored&&t.onErrored({type:"self-accept-error-handler-errored",moduleId:l,error:n,originalError:a}),t.ignoreErrored||(U=U||n),U=U||a}else t.onErrored&&t.onErrored({type:"self-accept-errored",moduleId:l,error:a}),t.ignoreErrored||(U=U||a)}}return U?(f("fail"),Promise.reject(U)):(f("idle"),new Promise((function(e){e(b)})))}var I={};function R(t){if(I[t])return I[t].exports;var a=I[t]={i:t,l:!1,exports:{},hot:function(e){var t={_acceptedDependencies:{},_declinedDependencies:{},_selfAccepted:!1,_selfDeclined:!1,_disposeHandlers:[],_main:n!==e,active:!0,accept:function(e,n){if(void 0===e)t._selfAccepted=!0;else if("function"==typeof e)t._selfAccepted=e;else if("object"==typeof e)for(var a=0;a<e.length;a++)t._acceptedDependencies[e[a]]=n||function(){};else t._acceptedDependencies[e]=n||function(){}},decline:function(e){if(void 0===e)t._selfDeclined=!0;else if("object"==typeof e)for(var n=0;n<e.length;n++)t._declinedDependencies[e[n]]=!0;else t._declinedDependencies[e]=!0},dispose:function(e){t._disposeHandlers.push(e)},addDisposeHandler:function(e){t._disposeHandlers.push(e)},removeDisposeHandler:function(e){var n=t._disposeHandlers.indexOf(e);0<=n&&t._disposeHandlers.splice(n,1)},check:w,apply:P,status:function(e){if(!e)return d;c.push(e)},addStatusHandler:function(e){c.push(e)},removeStatusHandler:function(e){var t=c.indexOf(e);0<=t&&c.splice(t,1)},data:i[e]};return n=void 0,t}(t),parents:(s=u,u=[],s),children:[]};return e[t].call(a.exports,a,a.exports,l(t)),a.l=!0,a.exports}return R.m=e,R.c=I,R.d=function(e,t,n){R.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:n})},R.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},R.t=function(e,t){if(1&t&&(e=R(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var n=Object.create(null);if(R.r(n),Object.defineProperty(n,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var a in e)R.d(n,a,function(t){return e[t]}.bind(null,a));return n},R.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return R.d(t,"a",t),t},R.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},R.p="",R.h=function(){return o},l(9)(R.s=9)}([function(e,t,n){"use strict";var a;Object.defineProperty(t,"__esModule",{value:!0});function o(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}function r(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}t.Errors={NotInitialized:-1,Unknown:1,NotAuthorized:2,NoMessage:3,NoChannel:4,UnnynetNotReady:5,NoGameId:6,NoSuchLeaderboard:7,NoLeaderboardsForTheGame:8,NoAchievementsForTheGame:9,NoGuildsForTheGame:10,NotInGuild:11,NoSuchAchievement:12,WrongAchievementType:13,AchievementIsNotPublished:14,LeaderboardReportsTooOften:15,NoAccessToken:16};var i=(function(e,t,n){t&&o(e.prototype,t),n&&o(e,n)}(u,null,[{key:"GetCommand",value:function(e){return u.jsCommands[e]}},{key:"getResponceData",value:function(e){var t={};return e.error?(t.success=!1,t.error=JSON.parse(e.error)):t.success=!0,e.data&&(t.data=JSON.parse(e.data)),t}},{key:"getErrorResponse",value:function(e,t){return{success:!1,error:{code:e,message:1<arguments.length&&void 0!==t?t:""}}}},{key:"getSuccessResponse",value:function(e){var t=0<arguments.length&&void 0!==e?e:null,n={success:!0};return t&&(n.data=t),n}}]),u);function u(){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,u)}i.Command={OpenLeaderBoards:1,OpenAchievements:2,OpenFriends:3,OpenChannel:4,OpenGuilds:5,OpenMyGuild:6,SetSafeArea:7,SendMessage:20,UnnyNetWasOpened:30,ReportLeaderboardScoresAsync:40,ReportAchievementProgressAsync:41,AddGuildExperience:60,RequestFailed:70,RequestSucceeded:71,RequestReply:72,SetKeyboardOffset:80,SetConfig:81,SetDefaultChannel:82,AuthorizeWithCredentials:100,AuthorizeAsGuest:101,AuthorizeWithCustomId:102,ForceLogout:110,GetGuildInfo:120,GetAchievementsInfo:130,GetPlayerPublicInfo:140,GetLeaderboardScores:150},i.jsCommands=(r(a={},i.Command.OpenLeaderBoards,"window.globalReactFunctions.apiOpenLeaderboards();"),r(a,i.Command.OpenAchievements,"window.globalReactFunctions.apiOpenAchievements();"),r(a,i.Command.OpenFriends,"window.globalReactFunctions.apiOpenFriends();"),r(a,i.Command.OpenChannel,"window.globalReactFunctions.apiOpenChannel('{0}');"),r(a,i.Command.OpenGuilds,"window.globalReactFunctions.apiOpenGuilds();"),r(a,i.Command.OpenMyGuild,"window.globalReactFunctions.apiOpenMyGuild();"),r(a,i.Command.SendMessage,"window.globalReactFunctions.apiSendMessage('{0}', '{1}');"),r(a,i.Command.UnnyNetWasOpened,"window.globalReactFunctions.apiUnnyNetWasOpened();"),r(a,i.Command.ReportLeaderboardScoresAsync,"window.globalReactFunctions.apiReportLeaderboardScoresAsync(<*id*>, '{0}', {1}, '{2}');"),r(a,i.Command.ReportAchievementProgressAsync,"window.globalReactFunctions.apiReportAchievementProgressAsync(<*id*>, {0}, {1});"),r(a,i.Command.AddGuildExperience,"window.globalReactFunctions.apiAddGuildExperience('{0}');"),r(a,i.Command.RequestFailed,"window.globalReactFunctions.requestFailed('{0}', \"{1}\");"),r(a,i.Command.RequestSucceeded,"window.globalReactFunctions.requestSucceeded('{0}');"),r(a,i.Command.RequestReply,"window.globalReactFunctions.requestReply('{0}', '{1}');"),r(a,i.Command.SetKeyboardOffset,"window.globalReactFunctions.apiSetKeyboardOffset('{0}');"),r(a,i.Command.SetConfig,"window.globalReactFunctions.apiSetConfig('{0}');"),r(a,i.Command.SetDefaultChannel,"window.globalReactFunctions.apiSetDefaultChannel('{0}');"),r(a,i.Command.AuthorizeWithCredentials,"window.globalReactFunctions.apiAuthWithCredentials('{0}', '{1}', '{2}');"),r(a,i.Command.AuthorizeAsGuest,"window.globalReactFunctions.apiAuthAsGuest('{0}');"),r(a,i.Command.AuthorizeWithCustomId,"window.globalReactFunctions.apiAuthWithCustomId('{0}', '{1}');"),r(a,i.Command.ForceLogout,"window.globalReactFunctions.apiForceLogout();"),r(a,i.Command.GetGuildInfo,"window.globalReactFunctions.apiGetGuildInfo(<*id*>, {0});"),r(a,i.Command.SetSafeArea,"window.globalReactFunctions.apiSetSafeArea({0}, {1}, {2}, {3});"),r(a,i.Command.GetAchievementsInfo,"window.globalReactFunctions.apiGetAchievementsInfo(<*id*>);"),r(a,i.Command.GetPlayerPublicInfo,"window.globalReactFunctions.apiGetPlayerPublicInfo(<*id*>);"),r(a,i.Command.GetLeaderboardScores,"window.globalReactFunctions.apiGetLeaderboardScores(<*id*>, '{0}');"),a),t.default=i},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.NutakuPlatform={PCBrowser:1,SPBrowser:2,Android:3,ClientGames:4},t.default={GENERAL_CONSTANTS:{REMOTE_URL:"https://unnynet.com",VERSION:2,PLUGIN_VERSION:"2.9"},MAX_DELAYED_CONFIRMATIONS:10,REQUESTS_SAVE_TIME:60,CHECK_PERIOD:1,MAX_QUEUE_LENGTH:100,SEND_REQUEST_RETRY_DELAY:1,ANIMATIONS:{OPEN_DURATION:.5},Platform:{NUTAKU:2,VKONTAKTE:3},PurchaseStatusFilter:{ALL:0,PENDING:1,COMPLETED:2,CLAIMED:3}}},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});function a(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}var o=s(n(3)),r=s(n(0)),i=n(6),u=s(i);function s(e){return e&&e.__esModule?e:{default:e}}var l=(function(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}(c,o.default),function(e,t,n){t&&a(e.prototype,t),n&&a(e,n)}(c,null,[{key:"initialize",value:function(e,t){c.instance=new c(e,t)}},{key:"openLeaderboards",value:function(e){o.default.evaluateCommand(r.default.Command.OpenLeaderBoards,!0,e)}},{key:"openAchievements",value:function(e){o.default.evaluateCommand(r.default.Command.OpenAchievements,!0,e)}},{key:"openFriends",value:function(e){o.default.evaluateCommand(r.default.Command.OpenFriends,!0,e)}},{key:"openChannel",value:function(e,t){var n=r.default.GetCommand(r.default.Command.OpenChannel).format(e);o.default.evaluateCodeInJavaScript(new u.default(r.default.Command.OpenChannel,n,!0,t))}},{key:"openGuilds",value:function(e){o.default.evaluateCommand(r.default.Command.OpenGuilds,!0,e)}},{key:"openMyGuild",value:function(e){o.default.evaluateCommand(r.default.Command.OpenMyGuild,!0,e)}},{key:"authorizeWithCredentials",value:function(e,t,n,a){var i=r.default.GetCommand(r.default.Command.AuthorizeWithCredentials).format(e,t,n);o.default.evaluateCodeInJavaScript(new u.default(r.default.Command.AuthorizeWithCredentials,i,!1,a),!0)}},{key:"authorizeAsGuest",value:function(e,t){var n=r.default.GetCommand(r.default.Command.AuthorizeAsGuest).format(e);o.default.evaluateCodeInJavaScript(new u.default(r.default.Command.AuthorizeAsGuest,n,!1,t),!0)}},{key:"authorizeWithCustomId",value:function(e,t,n){var a=r.default.GetCommand(r.default.Command.AuthorizeWithCustomId).format(e,t);o.default.evaluateCodeInJavaScript(new u.default(r.default.Command.AuthorizeWithCustomId,a,!1,n),!0)}},{key:"forceLogout",value:function(e){o.default.evaluateCommand(r.default.Command.ForceLogout,!1,e)}},{key:"getGuildInfo",value:function(e,t){var n=r.default.GetCommand(r.default.Command.GetGuildInfo).format(e?1:0);o.default.evaluateCodeInJavaScript(new i.UnnyCommandInfoDelayed(r.default.Command.GetGuildInfo,n,t))}},{key:"getAchievementsInfo",value:function(e){var t=r.default.GetCommand(r.default.Command.GetAchievementsInfo);o.default.evaluateCodeInJavaScript(new i.UnnyCommandInfoDelayed(r.default.Command.GetAchievementsInfo,t,e))}},{key:"getPlayerPublicInfo",value:function(e){var t=r.default.GetCommand(r.default.Command.GetPlayerPublicInfo);o.default.evaluateCodeInJavaScript(new i.UnnyCommandInfoDelayed(r.default.Command.GetPlayerPublicInfo,t,e))}},{key:"getLeaderboardScores",value:function(e,t){var n=r.default.GetCommand(r.default.Command.GetLeaderboardScores).format(e);o.default.evaluateCodeInJavaScript(new i.UnnyCommandInfoDelayed(r.default.Command.GetLeaderboardScores,n,t))}},{key:"sendMessageToChannel",value:function(e,t,n){if(t){var a=r.default.GetCommand(r.default.Command.SendMessage).format(e,t);o.default.evaluateCodeInJavaScript(new u.default(r.default.Command.SendMessage,a,!1,n))}}},{key:"reportLeaderboards",value:function(e,t,n,a){n=n?encodeURIComponent(n):"";var u=r.default.GetCommand(r.default.Command.ReportLeaderboardScoresAsync).format(e,t,n);o.default.evaluateCodeInJavaScript(new i.UnnyCommandInfoDelayed(r.default.Command.ReportLeaderboardScoresAsync,u,a))}},{key:"reportAchievements",value:function(e,t,n){var a=r.default.GetCommand(r.default.Command.ReportAchievementProgressAsync).format(e,t);o.default.evaluateCodeInJavaScript(new i.UnnyCommandInfoDelayed(r.default.Command.ReportAchievementProgressAsync,a,n))}},{key:"addGuildExperience",value:function(e,t){var n=r.default.GetCommand(r.default.Command.AddGuildExperience).format(e);o.default.evaluateCodeInJavaScript(new u.default(r.default.Command.AddGuildExperience,n,!1,t))}},{key:"authorize",value:function(e,t,n){c.instance.API.authWithLogin(e,t,n)}},{key:"save",value:function(e,t,n,a,o){c.instance.API.save(e,t,n,a,o)}},{key:"load",value:function(e,t,n){c.instance.API.load(e,t,n)}},{key:"purchaseProduct",value:function(e,t){c.instance.API.purchaseProduct(e,t)}},{key:"completeNutakuPurchase",value:function(e,t,n,a){c.instance.API.completeNutakuPurchase(e,t,n,a)}},{key:"completeNutakuPurchase2",value:function(e,t,n,a){c.instance.API.completeNutakuPurchase2(e,t,n,a)}},{key:"getPurchases",value:function(e,t){c.instance.API.getPurchases(e,t)}},{key:"claimPurchase",value:function(e,t,n,a){c.instance.API.claimPurchase(e,t,n,a)}},{key:"claimPurchase2",value:function(e,t,n,a){c.instance.API.claimPurchase2(e,t,n,a)}}]),c);function c(){return function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,c),function(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}(this,(c.__proto__||Object.getPrototypeOf(c)).apply(this,arguments))}l.instance=null,t.default=l},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});function a(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}var o=v(n(10)),r=v(n(6)),i=n(0),u=v(i),s=v(n(7)),l=v(n(11)),c=v(n(2)),d=v(n(1)),f=v(n(4)),p=v(n(12)),h=v(n(14));function v(e){return e&&e.__esModule?e:{default:e}}String.prototype.format||(String.prototype.format=function(){var e=arguments;return this.replace(/{(\d+)}/g,(function(t,n){return void 0!==e[n]?e[n]:t}))});var m=(function(e,t,n){t&&a(e.prototype,t),n&&a(e,n)}(y,[{key:"_setDebug",value:function(e){this.debug=e}},{key:"_getDeviceId",value:function(){switch(this.config.platform){case d.default.Platform.VKONTAKTE:return"vkontakte_"+this._getVkUserId()}return null}},{key:"_getVkUserId",value:function(){return this.allGetParams.viewer_id}},{key:"_receiveMessage",value:function(e){var t=e.path,n=e.args;switch(t){case"authorised":c.default.onPlayerAuthorized&&c.default.onPlayerAuthorized(n),this.config.default_channel&&y._setDefaultChannel(this.config.default_channel);break;case"logged_out":c.default.onPlayerLoggedOut&&c.default.onPlayerLoggedOut();break;case"renamed":c.default.onPlayerNameChanged&&c.default.onPlayerNameChanged(n.name);break;case"rank_changed":c.default.onRankChanged&&c.default.onRankChanged(n);break;case"new_guild":null!=c.default.onNewGuild&&c.default.onNewGuild(n);break;case"ask_new_guild":case"popup_appeared":l.default.create(t,n,y._sendRequestReply);break;case"popup_button_clicked":l.default.buttonClicked(n);break;case"ach_completed":null!=c.default.onAchievementCompleted&&c.default.onAchievementCompleted(n);break;case"new_message":null!=c.default.onNewMessageReceived&&c.default.onNewMessageReceived(n);break;case"game_login_request":null!=c.default.onGameLoginRequest&&c.default.onGameLoginRequest();break;case"request_reply":s.default.replyReceived(n);break;case"open_url":n.url&&window.open(n.url,"_blank");break;case"debug":this._setDebug(1==n.enable)}y.log("_receiveMessage",e)}},{key:"_update",value:function(){this._checkQueue(),(!this.last_save_time||Date.now()-this.last_save_time>=1e3*d.default.REQUESTS_SAVE_TIME)&&this._saveQueue()}},{key:"_getSaveKey",value:function(){return"UN_SAVE_"+this.config.game_id}},{key:"_saveQueue",value:function(){this.last_save_time=Date.now();var e=[];for(var t in this.queue){var n=this.queue[t];n.needToSave()&&e.push(n.getSaveData())}var a=this._getSaveKey();0===e.length?localStorage.removeItem(a):localStorage.setItem(a,JSON.stringify(e))}},{key:"_loadQueue",value:function(){var e=this._getSaveKey(),t=localStorage.getItem(e);if(t){var n=JSON.parse(t);for(var a in n){var o=r.default.loadData(n[a]);this.queue.push(o)}y.log("_loadQueue",this.queue),localStorage.removeItem(e)}}},{key:"_checkQueue",value:function(){var e=this;if(0!==this.queue.length&&y._checkWebView()){var t=null;for(var n in this.queue){var a=this.queue[n];if(!a.isWaiting()){t=a;break}if(!(a.startedTime&&Date.now()-a.startedTime<1e3*d.default.MAX_DELAYED_CONFIRMATIONS)){t=a;break}}if(t){t.startedTime=Date.now();try{y.log("evaluate",t.getCode()),this.webView.evaluateJavaScript(t.getCode(),(function(n){y.log("response",n);var a=!1;if(n.success)t.isDelayedRequestConfirm()?t.startWaiting():a=!0,t.info.openWindow&&y.openUnnyNet();else if(n.error)switch(n.error.code){case i.Errors.UnnynetNotReady:case i.Errors.NotAuthorized:y.log("Waiting...",n);break;default:a=!0}a&&(e.queue.shift(),null!=t&&t.invokeCallback(n),e._checkQueue())}))}catch(n){console.error("EVAL ERROR: ",n)}}}}},{key:"hideWebView",value:function(){null!=c.default.onUnnyNetClosed&&c.default.onUnnyNetClosed(),this.webView.hide(this.config)}},{key:"showWebView",value:function(){this.webView.show(this.config),y.evaluateCommand(u.default.Command.UnnyNetWasOpened,!1,null)}}],[{key:"log",value:function(e){for(var t,n=arguments.length,a=Array(1<n?n-1:0),o=1;o<n;o++)a[o-1]=arguments[o];y.staticUnnyNetInstance.debug&&(t=console).info.apply(t,["[UNNYNET_JS] "+e].concat(a))}},{key:"_setDefaultChannel",value:function(e){var t=u.default.GetCommand(u.default.Command.SetDefaultChannel).format(e);y.evaluateCodeInJavaScript(new r.default(u.default.Command.SetDefaultChannel,t,!1))}},{key:"_sendRequestReply",value:function(e,t){var n=u.default.GetCommand(u.default.Command.RequestReply).format(e,t);y.evaluateCodeInJavaScript(new r.default(u.default.Command.RequestReply,n,!1))}},{key:"_checkWebView",value:function(){return!!y.staticUnnyNetInstance||(console.error("UnnyNet wasn't properly initialized"),!1)}},{key:"evaluateCommand",value:function(e,t,n){y.evaluateCodeInJavaScript(new r.default(e,u.default.GetCommand(e),t,n))}},{key:"evaluateCodeInJavaScript",value:function(e,t){var n=1<arguments.length&&void 0!==t&&t;if(y._checkWebView()){for(var a=y.staticUnnyNetInstance.queue,o=-1,r=1;r<a.length;r++)if(a[r].couldBeReplaced(e.Command)){o=r;break}if(-1===o){if(n?a.unshift(e):a.push(e),1===a.length)y.staticUnnyNetInstance._checkQueue();else if(a.length>=d.default.MAX_QUEUE_LENGTH)for(var i=0;i<a.length;i++)if(a[i].isDelayedRequestConfirm()){a.splice(i,1);break}}else a[o]=e}}},{key:"openUnnyNet",value:function(){y._checkWebView()&&y.staticUnnyNetInstance.showWebView()}},{key:"closeUnnyNet",value:function(){null!=y.staticUnnyNetInstance&&y.staticUnnyNetInstance.hideWebView()}},{key:"delayedCommandWasConfirmed",value:function(e){var t=y.staticUnnyNetInstance.queue;for(var n in t)if(e===t[n]){t.splice(n,1);break}}},{key:"setFrame",value:function(e){y.staticUnnyNetInstance.webView.setFrame(e)}},{key:"setCloseButtonVisible",value:function(e){y.staticUnnyNetInstance.webView.setCloseButtonVisible(e)}}]),y);function y(e,t){var n=this;switch(function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,y),this.config=e,this.allGetParams=function(){var e={},t=window.location.search;if(t&&0<t.length)for(var n=(t=t.substring(1)).split("&"),a=0;a<n.length;a++){var o=n[a].split("=");o[0].startsWith("amp;")?e[o[0].substring(4)]=o[1]:e[o[0]]=o[1]}return e}(),this.webView=new o.default(e),this.queue=[],y.staticUnnyNetInstance=this,e.game_id||(e.game_id="8ff16d3c-ebcc-4582-a734-77ca6c14af29"),this.webView.openGameUrl(e,!!c.default.onGameLoginRequest,this._getDeviceId()),this.webView.onMessageReceived=this._receiveMessage.bind(this),setInterval(this._update.bind(this),1e3*d.default.CHECK_PERIOD),this.API=new p.default(e),this.apiRequests=new f.default(e),y.RGC=h.default.UnnyRGC.initialize({game_id:e.game_id},(function(){t&&t()})),y.Nutaku={authorize:function(e){y.staticUnnyNetInstance.API.authWithNutakuGadget(e)}},y.Vkontakte={authorize:function(e){y.staticUnnyNetInstance.API.authWithVK(n._getVkUserId(),n.allGetParams.access_token,e)}},this._setDebug(this.config.debug),this._loadQueue(),this.config.platform){case d.default.Platform.VKONTAKTE:c.default.authorizeAsGuest("")}}m.staticUnnyNetInstance=null,m.RGC=null,m.Nutaku=null,t.default=m},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});function a(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}var o,r=(o=n(3))&&o.__esModule?o:{default:o},i=(function(e,t,n){t&&a(e.prototype,t),n&&a(e,n)}(u,[{key:"_getSaveKey",value:function(){return"UN_API_SAVE_"+this.game_id}},{key:"_updateTokenForRequests",value:function(e){for(var t in this.requestsQueue){var n=this.requestsQueue[t].data.request;n.headers.hasOwnProperty("Authorization")&&(n.headers.Authorization="Bearer "+e)}}},{key:"_enqueueRequest",value:function(e,t,n,a,o){var r={data:{url:e,request:t},callback:o,retries:0,save:n};a?this.requestsQueue.unshift(r):this.requestsQueue.push(r),this.requests_were_updated=!0,1===this.requestsQueue.length&&this._sendNextRequest()}},{key:"_checkRequestToSave",value:function(){if(0<this.requestsQueue.length&&this.requests_were_updated){var e=Date.now();5e3<e-this.last_update_time&&(this.last_update_time=e,this.requests_were_updated=!1,this.saveRequests())}}},{key:"_removeFirstRequest",value:function(e){for(var t=0;t<this.requestsQueue.length;t++)this.requestsQueue[t]===e&&this.requestsQueue.splice(t,1);this._sendNextRequest(),this.last_update_time=Date.now()}},{key:"_sendNextRequest",value:function(){var e=this;if(0!==this.requestsQueue.length){var t=this.requestsQueue[0],n=t.data.url,a=t.data.request,o=t.callback;r.default.log("fetch",n,a.body),fetch(n,a).then((function(e){return r.default.log("fetch response",e),200<=e.status&&e.status<300?e.json():Promise.reject(e)})).then((function(n){o&&o(null,n),e._removeFirstRequest(t)})).catch((function(n){r.default.log("fetch failed",n),t.retries<3?(t.retries++,setTimeout((function(){return e._sendNextRequest()}),1e3)):(o&&o(n,null),e._removeFirstRequest(t))}))}}},{key:"loadRequests",value:function(){var e=localStorage.getItem(this._getSaveKey());if(e){var t=JSON.parse(e);if(t)for(var n in t){var a=t[n];this._enqueueRequest(a.url,a.request,!0,null)}localStorage.removeItem(this._getSaveKey())}}},{key:"saveRequests",value:function(){var e=Math.min(100,this.requestsQueue.length);if(0<e){for(var t=[],n=0;n<e;n++)this.requestsQueue[n].save&&t.push(this.requestsQueue[n].data);localStorage.setItem(this._getSaveKey(),JSON.stringify(t))}}}],[{key:"updateTokenForRequests",value:function(e){u.instance._updateTokenForRequests(e)}},{key:"enqueueRequest",value:function(e,t,n,a){u.instance._enqueueRequest(e,t,n,!1,a)}},{key:"enqueueImportantRequest",value:function(e,t,n,a){u.instance._enqueueRequest(e,t,n,!0,a)}}]),u);function u(e){var t=this;!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,u),this.game_id=e.game_id,this.requestsQueue=[],(u.instance=this).loadRequests(),this.last_update_time=Date.now(),this.requests_were_updated=!1,setInterval((function(){return t._checkRequestToSave()}),1e3)}t.default=i},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.ViewOpenDirection=void 0;function a(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}var o,r=(o=n(1))&&o.__esModule?o:{default:o},i=t.ViewOpenDirection={NONE:0,LEFT_TO_RIGHT:2,RIGHT_TO_LEFT:4,TOP_TO_BOTTOM:1,BOTTOM_TO_TOP:3},u=(function(e,t,n){t&&a(e.prototype,t),n&&a(e,n)}(s,[{key:"_receiveMessage",value:function(e){if(e.origin===r.default.GENERAL_CONSTANTS.REMOTE_URL&&e.data)if(e.data.reply){var t=e.data.id;if(this.evaluationsById.hasOwnProperty(t)){var n=e.data.reply,a=this.evaluationsById[t].callback;delete this.evaluationsById[t],a(n)}}else if(e.data&&e.data.message&&e.data.message.split){var o=decodeURIComponent(e.data.message).split("?"),i=void 0,u={};if(0<o.length&&(i=o[0],1<o.length))for(var s=o[1].split("&"),l=0;l<s.length;l++){var c=s[l].split("=");1<c.length&&(u[c[0]]=c[1])}this.onMessageReceived&&this.onMessageReceived({path:i,args:u})}}},{key:"openUrl",value:function(e){this.iFrame.src=e}},{key:"setFrame",value:function(e){this.cachedFrame=e,this._isVisible()?this._applyNormalPosition():this._applyHiddenPosition()}},{key:"_applyNormalPosition",value:function(){var e=this.cachedFrame,t=this.parent.style;t.left=e.left,t.right=e.right,t.top=e.top,t.bottom=e.bottom,t.width=e.width,t.height=e.height}},{key:"_applyHiddenPosition",value:function(){var e=this.parent.style;switch(this._applyNormalPosition(),this.config.open_animation){case i.LEFT_TO_RIGHT:e.left="-"+e.width,e.right=void 0;break;case i.RIGHT_TO_LEFT:e.left=void 0,e.right="-"+e.width;break;case i.TOP_TO_BOTTOM:e.top="-"+e.height,e.bottom=void 0;break;case i.BOTTOM_TO_TOP:e.top=void 0,e.bottom="-"+e.height}}},{key:"_isVisible",value:function(){return"visible"===this.parent.style.visibility}},{key:"_setAnimationActive",value:function(e){var t=this.parent.style;t["-webkit-transition"]=t.transition=e?"all "+r.default.ANIMATIONS.OPEN_DURATION+"s ease-in-out":void 0}},{key:"_clearTimer",value:function(){this.timer&&(clearTimeout(this.timer),this.timer=null)}},{key:"hide",value:function(){var e=this;this._clearTimer(),this._applyHiddenPosition(),this.timer=setTimeout((function(){e.parent.style.visibility="hidden",e.timer=null}),1e3*r.default.ANIMATIONS.OPEN_DURATION)}},{key:"show",value:function(){this._clearTimer(),this.parent.style.visibility="visible",this._applyNormalPosition()}},{key:"evaluateJavaScript",value:function(e,t){var n={eval_code:e,id:this.instanceId++};this.evaluationsById[n.id]={callback:t},this.window.postMessage(n,r.default.GENERAL_CONSTANTS.REMOTE_URL)}}]),s);function s(e){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,s);var t=document.createElement("div");this.parent=document.body.appendChild(t);var n=document.createElement("iframe");this.iFrame=this.parent.appendChild(n),this.window=this.iFrame.contentWindow;var a=this.iFrame.style;a.position="absolute",a.left=a.right="0",a.top=a.bottom="0",a.width=a.height="100%",a.border="none";var o=this.parent.style;o.zIndex="999999",o.position="fixed",o.visibility="hidden",this.config=e,this.evaluationsById={},this.instanceId=0,this.onMessageReceived=null,e.open_animation&&this._setAnimationActive(!0),this.setFrame({left:"0",top:"0",width:"50%",height:"100%"}),window.addEventListener("message",this._receiveMessage.bind(this),!1)}t.default=u},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.UnnyCommandInfoDelayed=void 0;var a=function(e,t,n){return t&&o(e.prototype,t),n&&o(e,n),e};function o(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}var r=u(n(0)),i=u(n(7));function u(e){return e&&e.__esModule?e:{default:e}}function s(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var l=(a(c,[{key:"getSaveData",value:function(){var e={command:this.info.command,code:this.info.code};return 0<=this.req_id&&(e.req_id=this.req_id),e}},{key:"getCode",value:function(){return this.info.code}},{key:"setCode",value:function(e){this.info.code=e}},{key:"getCommand",value:function(){return this.info.command}},{key:"invokeCallback",value:function(e){this.info.callback&&this.info.callback(e)}},{key:"invokeCallbackDelayed",value:function(e){var t=r.default.getResponceData(e);return this.info.callbackDelayed&&this.info.callbackDelayed(t),t}},{key:"needToSave",value:function(){switch(this.info.command){case r.default.Command.SendMessage:case r.default.Command.ReportLeaderboardScoresAsync:case r.default.Command.ReportAchievementProgressAsync:case r.default.Command.AddGuildExperience:return!0;default:return!1}}},{key:"couldBeReplaced",value:function(e){var t=this.getCommand();switch(e){case r.default.Command.OpenLeaderBoards:case r.default.Command.OpenAchievements:case r.default.Command.OpenFriends:case r.default.Command.OpenChannel:case r.default.Command.OpenGuilds:case r.default.Command.OpenMyGuild:return t===r.default.Command.OpenLeaderBoards||t===r.default.Command.OpenAchievements||t===r.default.Command.OpenFriends||t===r.default.Command.OpenChannel||t===r.default.Command.OpenGuilds||t===r.default.Command.OpenMyGuild;case r.default.Command.AuthorizeWithCredentials:case r.default.Command.AuthorizeAsGuest:case r.default.Command.AuthorizeWithCustomId:case r.default.Command.ForceLogout:case r.default.Command.GetGuildInfo:case r.default.Command.GetAchievementsInfo:case r.default.Command.GetPlayerPublicInfo:case r.default.Command.GetLeaderboardScores:case r.default.Command.SetSafeArea:case r.default.Command.UnnyNetWasOpened:return t===e;default:return!1}}},{key:"_isOpenCommand",value:function(e){switch(e){case r.default.Command.OpenLeaderBoards:case r.default.Command.OpenAchievements:case r.default.Command.OpenFriends:case r.default.Command.OpenChannel:case r.default.Command.OpenGuilds:case r.default.Command.OpenMyGuild:return!0;default:return!1}}},{key:"sameType",value:function(e){var t=this.getCommand();return!(!this._isOpenCommand(e)||!this._isOpenCommand(t))||e===t}},{key:"isDelayedRequestConfirm",value:function(){return c.isDelayedRequestConfirm(this.getCommand())}},{key:"startWaiting",value:function(){this.delayedRequestWaiting=!0}},{key:"isWaiting",value:function(){return this.delayedRequestWaiting}}],[{key:"loadData",value:function(e){var t=null;return e.hasOwnProperty("req_id")?((t=new d(e.command,e.code)).setRequestId(e.req_id),i.default.addLoadedRequest(t)):t=new c(e.command,e.code),t}},{key:"isDelayedRequestConfirm",value:function(e){switch(e){case r.default.Command.ReportLeaderboardScoresAsync:case r.default.Command.ReportAchievementProgressAsync:return!0}return!1}}]),c);function c(e,t){var n=2<arguments.length&&void 0!==arguments[2]&&arguments[2],a=3<arguments.length&&void 0!==arguments[3]?arguments[3]:null;s(this,c),this.info={command:e,code:t,openWindow:n,callback:a},this.startedTime=null,this.req_id=-1,this.delayedRequestWaiting=!1}t.default=l;var d=t.UnnyCommandInfoDelayed=(function(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}(f,l),a(f,[{key:"setRequestId",value:function(e){this.req_id=e}}]),f);function f(e,t){var n=2<arguments.length&&void 0!==arguments[2]?arguments[2]:null;s(this,f);var a=function(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}(this,(f.__proto__||Object.getPrototypeOf(f)).call(this,e,t,!1,null));return a.info.callbackDelayed=n,i.default.addRequest(a),a}},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});function a(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}var o,r=(o=n(3))&&o.__esModule?o:{default:o},i=n(0),u=(function(e,t,n){t&&a(e.prototype,t),n&&a(e,n)}(s,[{key:"_requestId",value:function(){return this.uniqueIds===Number.MAX_SAFE_INTEGER?this.uniqueIds=0:this.uniqueIds++,this.uniqueIds}}],[{key:"getInstance",value:function(){return s.staticRequestsManagerInstance||(s.staticRequestsManagerInstance=new s),s.staticRequestsManagerInstance}},{key:"addRequest",value:function(e){var t=s.getInstance(),n=t._requestId();if((t.allRequests[n]=e).getCode()){var a=e.getCode().replace("<*id*>",n);e.setRequestId(n),e.setCode(a)}}},{key:"addLoadedRequest",value:function(e){if(0<=e.req_id){var t=s.getInstance(),n=e.req_id;t.allRequests[n]=e,n>=t.uniqueIds&&(t.uniqueIds=n===Number.MAX_SAFE_INTEGER?0:n+1)}}},{key:"replyReceived",value:function(e){var t=s.getInstance(),n=e.id;if(t.allRequests.hasOwnProperty(n)){var a=t.allRequests[n],o=a.invokeCallbackDelayed(e);if(a.isDelayedRequestConfirm()){var u=o.success;if(!u)switch(o.error.code){case i.Errors.NoSuchLeaderboard:case i.Errors.NoSuchAchievement:case i.Errors.WrongAchievementType:case i.Errors.AchievementIsNotPublished:u=!0}u&&(r.default.delayedCommandWasConfirmed(a),delete t.allRequests[n])}else delete t.allRequests[n]}}}]),s);function s(){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,s),this.uniqueIds=0,this.allRequests={}}u.staticRequestsManagerInstance=null,t.default=u},function(e,t,n){"use strict";function a(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}Object.defineProperty(t,"__esModule",{value:!0});var o="un_token",r="un_refresh_token",i=(function(e,t,n){n&&a(e,n)}(u,0,[{key:"_saveValue",value:function(e,t){localStorage.setItem(e,t)}},{key:"_getValue",value:function(e){return localStorage.getItem(e)}},{key:"_removeItem",value:function(e){localStorage.removeItem(e)}},{key:"setToken",value:function(e){u._saveValue(o,e)}},{key:"getToken",value:function(){return u._getValue(o)}},{key:"setRefreshToken",value:function(e){u._saveValue(r,e)}},{key:"getRefreshToken",value:function(){u._getValue(r)}},{key:"clearTokens",value:function(){u._removeItem(o),u._removeItem(r)}}]),u);function u(){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,u)}t.default=i},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var a=c(n(2)),o=n(16),r=c(o),i=n(5),u=n(0),s=n(1),l=c(s);function c(e){return e&&e.__esModule?e:{default:e}}t.default={UnnyNet:a.default,PopupButtons:r.default,ButtonType:o.ButtonType,ViewOpenDirection:i.ViewOpenDirection,Errors:u.Errors,NutakuPlatform:s.NutakuPlatform,Platform:l.default.Platform,PurchaseStatusFilter:l.default.PurchaseStatusFilter}},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});function a(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}var o=u(n(5)),r=u(n(1)),i=u(n(2));function u(e){return e&&e.__esModule?e:{default:e}}var s=(function(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}(l,o.default),function(e,t,n){t&&a(e.prototype,t),n&&a(e,n)}(l,[{key:"openGameUrl",value:function(e,t,n){var a={game_id:e.game_id,public_key:e.public_key,version:r.default.GENERAL_CONSTANTS.VERSION,device:"web",location_origin:window.location.origin};t&&(a.game_login=1),n&&(a.device_id=n),e.platform&&(a.platform=e.platform);var o=encodeURIComponent(JSON.stringify(a)),i=r.default.GENERAL_CONSTANTS.REMOTE_URL+"/#/plugin/?data="+o;this.openUrl(i)}},{key:"setCloseButtonVisible",value:function(e){this.closeBtn.style.visibility=e?"visible":"hidden"}}]),l);function l(e){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,l);var t=function(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}(this,(l.__proto__||Object.getPrototypeOf(l)).call(this,e)),n=document.createElement("button");t.closeBtn=t.parent.appendChild(n);var a=t.closeBtn.style;return a.position="absolute",a.top=a.right="7px",a.outline="none",a.background="none",a.border="none",t.closeBtn.innerHTML='<img src="https://unnynet.azureedge.net/users/attachments/b246adbe-c1af-4532-88ca-f1d1709b0211/09b47e40-e61b-11e9-b83d-a5adea23c281.png" />',t.closeBtn.onclick=i.default.closeUnnyNet,t}t.default=s},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});function a(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}var o,r=n(0),i=(o=n(2))&&o.__esModule?o:{default:o},u=(function(e,t,n){t&&a(e.prototype,t),n&&a(e,n)}(s,null,[{key:"create",value:function(e,t,n){switch(e){case"ask_new_guild":s._askNewGuildRequest(t,n);break;case"popup_appeared":s._playerPopupAppearedRequest(t,n)}}},{key:"sendFailed",value:function(e,t,n,a){var o=2<arguments.length&&void 0!==n?n:"";t(e,'{"success": 0, "error": {"code":'+(3<arguments.length&&void 0!==a?a:r.Errors.Unknown)+', "message": "'+o+'"}}')}},{key:"sendSuccess",value:function(e,t){t(e,'{"success": 1}')}},{key:"sendSuccessWithData",value:function(e,t,n){n(e,'{"success": 1, "data":'+t+"}")}},{key:"_askNewGuildRequest",value:function(e,t){var n=e.sys_id,a=null;i.default.onNewGuildRequest&&(a=i.default.onNewGuildRequest(e)),a?s.sendFailed(n,t,a):s.sendSuccess(n,t)}},{key:"_playerPopupAppearedRequest",value:function(e,t){var n=e.sys_id;if(null!=i.default.onPopupOpened){var a=i.default.onPopupOpened(e);if(null!=a)return void s.sendSuccessWithData(n,a.parse(),t)}s.sendSuccess(n,t)}},{key:"buttonClicked",value:function(e){if(PopupButtons.activePopup){var t=e.button_id;if(t){var n=parseInt(t);PopupButtons.activePopup.buttonClicked(n)}}}}]),s);function s(){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,s)}t.default=u},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});function a(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}var o=l(n(8)),r=l(n(13)),i=n(0),u=l(i),s=l(n(4));function l(e){return e&&e.__esModule?e:{default:e}}function c(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}l(n(1));var d="https://un-api.unnynet.com",f=(function(e,t,n){t&&a(e.prototype,t),n&&a(e,n)}(p,[{key:"_onAuth",value:function(e){var t=e?e.accessToken:null,n=e?e.refreshToken:null;t&&(o.default.setToken(t),s.default.updateTokenForRequests(t)),n&&o.default.setRefreshToken(n)}},{key:"_onAuthCallback",value:function(e,t,n){var a=void 0;e?a=u.default.getErrorResponse(i.Errors.Unknown,e.status+":"+e.statusText):(a=u.default.getSuccessResponse(t),this._onAuth(t)),n&&n(a)}},{key:"_onCallback",value:function(e,t,n){var a;a=e?u.default.getErrorResponse(i.Errors.Unknown,e.status+":"+e.statusText):u.default.getSuccessResponse(t),n&&n(a)}},{key:"authWithLogin",value:function(e,t,n){var a=this;o.default.clearTokens(),new r.default(d+"/v1/auth/name",{name:e,password:t,game_id:this.config.game_id,public_key:this.config.public_key},(function(e,t){return a._onAuthCallback(e,t,n)})).markAsAuth().post()}},{key:"authWithVK",value:function(e,t,n){var a=this;return e?t?(o.default.clearTokens(),void new r.default(d+"/v1/auth/vk",{user_id:e,token:t,game_id:this.config.game_id,public_key:this.config.public_key},(function(e,t){return a._onAuthCallback(e,t,n)})).markAsAuth().post()):console.error("[VK]: no auth_key provided"):console.error("[VK]: no viewer_id provided")}},{key:"authWithNutaku",value:function(e,t,n,a,i,u){var s=this;o.default.clearTokens(),new r.default(d+"/v1/auth/nutaku",{user_id:e,platform:t.toString(),oauth_token:n,oauth_token_secret:a,autologin_token:i,game_id:this.config.game_id,public_key:this.config.public_key},(function(e,t){return s._onAuthCallback(e,t,u)})).markAsAuth().post()}},{key:"authWithNutakuGadget",value:function(e){var t=this;if("undefined"!=typeof gadgets){var n;o.default.clearTokens();var a=(c(n={},gadgets.io.RequestParameters.METHOD,gadgets.io.MethodType.POST),c(n,gadgets.io.RequestParameters.CONTENT_TYPE,gadgets.io.ContentType.JSON),c(n,gadgets.io.RequestParameters.POST_DATA,gadgets.io.encodeValues({game_id:this.config.game_id,public_key:this.config.public_key})),c(n,gadgets.io.RequestParameters.AUTHORIZATION,gadgets.io.AuthorizationType.SIGNED),n);console.error("SENDING...",a),gadgets.io.makeRequest(d+"/v1/auth/nutaku_pc",(function(n){console.info("NUTAKU REPLY",n),n.errors&&n.errors.length&&console.error("AUTH ERROR",n.errors),t._onAuthCallback(null,n.data,e)}),a)}}},{key:"purchaseProduct",value:function(e,t){var n=this,a={};a[opensocial.BillingItem.Field.SKU_ID]="com.un.test.1",a[opensocial.BillingItem.Field.PRICE]=2e3,a[opensocial.BillingItem.Field.COUNT]=1,a[opensocial.BillingItem.Field.DESCRIPTION]="item 001",a[nutaku.BillingItem.Field.NAME]="Much Doge1",a[nutaku.BillingItem.Field.IMAGE_URL]="http://i.imgur.com/cBAPCQ4.png";var o=opensocial.newBillingItem(a),r={};r[opensocial.Payment.Field.ITEMS]=[o],r[opensocial.Payment.Field.MESSAGE]="Optional message to show alongside the items",r[opensocial.Payment.Field.PAYMENT_TYPE]=opensocial.Payment.PaymentType.PAYMENT;var i=opensocial.newPayment(r);console.info("MAKE_PURCHASE",i),opensocial.requestPayment(i,(function(e){if(e.hadError())console.error("ERROR",e),n._onCallback(e,null,t);else{var a=e.getData(),o=a.getField(nutaku.Payment.Field.PAYMENT_ID);console.info("INFO> "+o,a),n._onCallback(null,e,t)}}))}},{key:"getPurchases",value:function(e,t){var n=this;return console.log("1 getPurchases = "+e),new r.default(d+"/v1/payments/purchases?status="+e,null,(function(e,a){return n._onCallback(e,a,t)})).setToken(o.default.getToken()).get()}},{key:"completeNutakuPurchase",value:function(e,t,n,a){var i=this;return new r.default(d+"/v1/payments/nutaku/complete",{platform:t,order_id:n,user_id:e},(function(e,t){return i._onCallback(e,t,a)})).setToken(o.default.getToken()).post()}},{key:"completeNutakuPurchase2",value:function(e,t,n,a){var i=this;return new r.default(d+"/v1/payments/nutaku/complete",{platform:t,un_order_id:n,user_id:e},(function(e,t){return i._onCallback(e,t,a)})).setToken(o.default.getToken()).post()}},{key:"claimPurchase",value:function(e,t,n,a){var i=this;return new r.default(d+"/v1/payments/all/claim",{platform:t,order_id:n,user_id:e},(function(e,t){return i._onCallback(e,t,a)})).setToken(o.default.getToken()).post()}},{key:"claimPurchase2",value:function(e,t,n,a){var i=this;return new r.default(d+"/v1/payments/all/claim",{platform:t,un_order_id:n,user_id:e},(function(e,t){return i._onCallback(e,t,a)})).setToken(o.default.getToken()).post()}},{key:"_save",value:function(e,t,n,a,i){var u=this;a=a||-1,new r.default(d+"/v1/saves",{collection:e,key:t,value:n},(function(e,t){return u._onCallback(e,t,i)})).setToken(o.default.getToken()).setHeader("data-version",a.toString()).post()}},{key:"save",value:function(e,t,n,a,r){o.default.getToken()?this._save(e,t,n,a,r):r&&r(u.default.getErrorResponse(i.Errors.NoAccessToken))}},{key:"_load",value:function(e,t,n){var a=this;new r.default(d+"/v1/saves?collection="+e+(t?"&key="+t:""),null,(function(e,t){return a._onCallback(e,t,n)})).setToken(o.default.getToken()).get()}},{key:"load",value:function(e,t,n){o.default.getToken()?this._load(e,t,n):n&&n(u.default.getErrorResponse(i.Errors.NoAccessToken))}}]),p);function p(e){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,p),this.config=e}t.default=f},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});function a(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}var o=r(n(4));function r(e){return e&&e.__esModule?e:{default:e}}r(n(8));var i=(function(e,t,n){t&&a(e.prototype,t),n&&a(e,n)}(u,[{key:"setHeaders",value:function(e){return this.headers=e,this}},{key:"setHeader",value:function(e,t){return this.headers||(this.headers={}),this.headers[e]=t,this}},{key:"setToken",value:function(e){return this.setHeader("Authorization","Bearer "+e)}},{key:"_sendRequest",value:function(e,t){this.important?o.default.enqueueImportantRequest(this.url,e,t,this.callback):o.default.enqueueRequest(this.url,e,t,this.callback)}},{key:"_send",value:function(e,t){if(e.headers={"Content-Type":"application/json"},this.headers)for(var n in this.headers)e.headers[n]=this.headers[n];this._sendRequest(e,t)}},{key:"markAsAuth",value:function(){return this.markAsUnsavable().markImportant()}},{key:"markAsUnsavable",value:function(){return this.savePost=!1,this}},{key:"markImportant",value:function(){return this.important=!0,this}},{key:"get",value:function(){this._send({method:"GET"},!1)}},{key:"post",value:function(){var e={method:"POST"};this.data&&(e.body=JSON.stringify(this.data)),this._send(e,this.savePost)}}]),u);function u(e,t){var n=2<arguments.length&&void 0!==arguments[2]?arguments[2]:null;!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,u),this.url=e,this.data=t,this.callback=n,this.retry=0,this.savePost=!0,this.important=!1}t.default=i},function(e,t,n){"use strict";(function(e){var n,a,o,r,i="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};window,r=function(){return function(e){var t=window.webpackHotUpdateUnnyAdmin;window.webpackHotUpdateUnnyAdmin=function(e,n){!function(e,t){if(k[e]&&_[e]){for(var n in _[e]=!1,t)Object.prototype.hasOwnProperty.call(t,n)&&(v[n]=t[n]);0==--y&&0===b&&P()}}(e,n),t&&t(e,n)};var n,a=!0,o="222703fd7b689a678937",r=1e4,u={},s=[],l=[];function c(e){var t=R[e];if(!t)return A;function a(a){return t.hot.active?(R[a]?-1===R[a].parents.indexOf(e)&&R[a].parents.push(e):(s=[e],n=a),-1===t.children.indexOf(a)&&t.children.push(a)):(console.warn("[HMR] unexpected require("+a+") from disposed module "+e),s=[]),A(a)}function o(e){return{configurable:!0,enumerable:!0,get:function(){return A[e]},set:function(t){A[e]=t}}}for(var r in A)Object.prototype.hasOwnProperty.call(A,r)&&"e"!==r&&"t"!==r&&Object.defineProperty(a,r,o(r));return a.e=function(e){return"ready"===f&&p("prepare"),b++,A.e(e).then(t,(function(e){throw t(),e}));function t(){b--,"prepare"===f&&(g[e]||O(e),0===b&&0===y&&P())}},a.t=function(e,t){return 1&t&&(e=a(e)),A.t(e,-2&t)},a}var d=[],f="idle";function p(e){f=e;for(var t=0;t<d.length;t++)d[t].call(null,e)}var h,v,m,y=0,b=0,g={},_={},k={};function w(e){return+e+""===e?+e:e}function C(e){if("idle"!==f)throw new Error("check() is only allowed in idle status");return a=e,p("check"),(t=(t=r)||1e4,new Promise((function(e,n){if("undefined"==typeof XMLHttpRequest)return n(new Error("No browser support"));try{var a=new XMLHttpRequest,r=A.p+""+o+".hot-update.json";a.open("GET",r,!0),a.timeout=t,a.send(null)}catch(e){return n(e)}a.onreadystatechange=function(){if(4===a.readyState)if(0===a.status)n(new Error("Manifest request to "+r+" timed out."));else if(404===a.status)e();else if(200!==a.status&&304!==a.status)n(new Error("Manifest request to "+r+" failed."));else{try{var t=JSON.parse(a.responseText)}catch(t){return void n(t)}e(t)}}}))).then((function(e){if(!e)return p("idle"),null;_={},g={},k=e.c,m=e.h,p("prepare");var t=new Promise((function(e,t){h={resolve:e,reject:t}}));return v={},O(0),"prepare"===f&&0===b&&0===y&&P(),t}));var t}function O(e){var t,n;k[e]?(_[e]=!0,y++,t=e,(n=document.createElement("script")).charset="utf-8",n.src=A.p+""+t+"."+o+".hot-update.js",document.head.appendChild(n)):g[e]=!0}function P(){p("ready");var e=h;if(h=null,e)if(a)Promise.resolve().then((function(){return I(a)})).then((function(t){e.resolve(t)}),(function(t){e.reject(t)}));else{var t=[];for(var n in v)Object.prototype.hasOwnProperty.call(v,n)&&t.push(w(n));e.resolve(t)}}function I(t){if("ready"!==f)throw new Error("apply() is only allowed in ready status");var n,a,r,i,l;function c(e){for(var t=[e],n={},a=t.map((function(e){return{chain:[e],id:e}}));0<a.length;){var o=a.pop(),r=o.id,u=o.chain;if((i=R[r])&&!i.hot._selfAccepted){if(i.hot._selfDeclined)return{type:"self-declined",chain:u,moduleId:r};if(i.hot._main)return{type:"unaccepted",chain:u,moduleId:r};for(var s=0;s<i.parents.length;s++){var l=i.parents[s],c=R[l];if(c){if(c.hot._declinedDependencies[r])return{type:"declined",chain:u.concat([l]),moduleId:r,parentId:l};-1===t.indexOf(l)&&(c.hot._acceptedDependencies[r]?(n[l]||(n[l]=[]),d(n[l],[r])):(delete n[l],t.push(l),a.push({chain:u.concat([l]),id:l})))}}}}return{type:"accepted",moduleId:e,outdatedModules:t,outdatedDependencies:n}}function d(e,t){for(var n=0;n<t.length;n++){var a=t[n];-1===e.indexOf(a)&&e.push(a)}}function h(){console.warn("[HMR] unexpected require("+C.moduleId+") to disposed module")}t=t||{};var y={},b=[],g={};for(var _ in v)if(Object.prototype.hasOwnProperty.call(v,_)){var C;l=w(_);var O=!1,P=!1,I=!1,S="";switch((C=v[_]?c(l):{type:"disposed",moduleId:_}).chain&&(S="\nUpdate propagation: "+C.chain.join(" -> ")),C.type){case"self-declined":t.onDeclined&&t.onDeclined(C),t.ignoreDeclined||(O=new Error("Aborted because of self decline: "+C.moduleId+S));break;case"declined":t.onDeclined&&t.onDeclined(C),t.ignoreDeclined||(O=new Error("Aborted because of declined dependency: "+C.moduleId+" in "+C.parentId+S));break;case"unaccepted":t.onUnaccepted&&t.onUnaccepted(C),t.ignoreUnaccepted||(O=new Error("Aborted because "+l+" is not accepted"+S));break;case"accepted":t.onAccepted&&t.onAccepted(C),P=!0;break;case"disposed":t.onDisposed&&t.onDisposed(C),I=!0;break;default:throw new Error("Unexception type "+C.type)}if(O)return p("abort"),Promise.reject(O);if(P)for(l in g[l]=v[l],d(b,C.outdatedModules),C.outdatedDependencies)Object.prototype.hasOwnProperty.call(C.outdatedDependencies,l)&&(y[l]||(y[l]=[]),d(y[l],C.outdatedDependencies[l]));I&&(d(b,[C.moduleId]),g[l]=h)}var E,T=[];for(a=0;a<b.length;a++)l=b[a],R[l]&&R[l].hot._selfAccepted&&g[l]!==h&&T.push({module:l,errorHandler:R[l].hot._selfAccepted});p("dispose"),Object.keys(k).forEach((function(e){!1===k[e]&&delete installedChunks[e]}));for(var N,D,q=b.slice();0<q.length;)if(l=q.pop(),i=R[l]){var G={},M=i.hot._disposeHandlers;for(r=0;r<M.length;r++)(n=M[r])(G);for(u[l]=G,i.hot.active=!1,delete R[l],delete y[l],r=0;r<i.children.length;r++){var j=R[i.children[r]];j&&0<=(E=j.parents.indexOf(l))&&j.parents.splice(E,1)}}for(l in y)if(Object.prototype.hasOwnProperty.call(y,l)&&(i=R[l]))for(D=y[l],r=0;r<D.length;r++)N=D[r],0<=(E=i.children.indexOf(N))&&i.children.splice(E,1);for(l in p("apply"),o=m,g)Object.prototype.hasOwnProperty.call(g,l)&&(e[l]=g[l]);var U=null;for(l in y)if(Object.prototype.hasOwnProperty.call(y,l)&&(i=R[l])){D=y[l];var F=[];for(a=0;a<D.length;a++)if(N=D[a],n=i.hot._acceptedDependencies[N]){if(-1!==F.indexOf(n))continue;F.push(n)}for(a=0;a<F.length;a++){n=F[a];try{n(D)}catch(n){t.onErrored&&t.onErrored({type:"accept-errored",moduleId:l,dependencyId:D[a],error:n}),t.ignoreErrored||(U=U||n)}}}for(a=0;a<T.length;a++){var L=T[a];l=L.module,s=[l];try{A(l)}catch(a){if("function"==typeof L.errorHandler)try{L.errorHandler(a)}catch(n){t.onErrored&&t.onErrored({type:"self-accept-error-handler-errored",moduleId:l,error:n,originalError:a}),t.ignoreErrored||(U=U||n),U=U||a}else t.onErrored&&t.onErrored({type:"self-accept-errored",moduleId:l,error:a}),t.ignoreErrored||(U=U||a)}}return U?(p("fail"),Promise.reject(U)):(p("idle"),new Promise((function(e){e(b)})))}var R={};function A(t){if(R[t])return R[t].exports;var a,o=R[t]={i:t,l:!1,exports:{},hot:(a={_acceptedDependencies:{},_declinedDependencies:{},_selfAccepted:!1,_selfDeclined:!1,_disposeHandlers:[],_main:n!==t,active:!0,accept:function(e,t){if(void 0===e)a._selfAccepted=!0;else if("function"==typeof e)a._selfAccepted=e;else if("object"==(void 0===e?"undefined":i(e)))for(var n=0;n<e.length;n++)a._acceptedDependencies[e[n]]=t||function(){};else a._acceptedDependencies[e]=t||function(){}},decline:function(e){if(void 0===e)a._selfDeclined=!0;else if("object"==(void 0===e?"undefined":i(e)))for(var t=0;t<e.length;t++)a._declinedDependencies[e[t]]=!0;else a._declinedDependencies[e]=!0},dispose:function(e){a._disposeHandlers.push(e)},addDisposeHandler:function(e){a._disposeHandlers.push(e)},removeDisposeHandler:function(e){var t=a._disposeHandlers.indexOf(e);0<=t&&a._disposeHandlers.splice(t,1)},check:C,apply:I,status:function(e){if(!e)return f;d.push(e)},addStatusHandler:function(e){d.push(e)},removeStatusHandler:function(e){var t=d.indexOf(e);0<=t&&d.splice(t,1)},data:u[t]},n=void 0,a),parents:(l=s,s=[],l),children:[]};return e[t].call(o.exports,o,o.exports,c(t)),o.l=!0,o.exports}return A.m=e,A.c=R,A.d=function(e,t,n){A.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:n})},A.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},A.t=function(e,t){if(1&t&&(e=A(e)),8&t)return e;if(4&t&&"object"==(void 0===e?"undefined":i(e))&&e&&e.__esModule)return e;var n=Object.create(null);if(A.r(n),Object.defineProperty(n,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var a in e)A.d(n,a,function(t){return e[t]}.bind(null,a));return n},A.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return A.d(t,"a",t),t},A.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},A.p="",A.h=function(){return o},c(0)(A.s=0)}([function(e,t,n){Object.defineProperty(t,"__esModule",{value:!0});var a,o=(a=n(1))&&a.__esModule?a:{default:a};t.default={UnnyRGC:o.default}},function(e,t,n){Object.defineProperty(t,"__esModule",{value:!0}),t.Errors=void 0;var a="function"==typeof Symbol&&"symbol"==i(Symbol.iterator)?function(e){return void 0===e?"undefined":i(e)}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":void 0===e?"undefined":i(e)};function o(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}var r=s(n(2)),u=s(n(3));function s(e){return e&&e.__esModule?e:{default:e}}var l,c,d="name",f="version",p=t.Errors={FAILED_DOWNLOAD_VERSIONS:1e3,FAILED_DOWNLOAD_DICTIONARY:1001,PARSING_ERROR:1002},h=(c=[{key:"_sendFailedCallback",value:function(e,t,n){e({success:!1,error:{code:t,message:n}})}},{key:"initialize",value:function(e,t){return(v.instance=new v)._initialize(e.game_id,t),v.instance}}],o((l=v).prototype,[{key:"_getFileExtension",value:function(){return".json"}},{key:"_downloadNextDictionary",value:function(){function e(e){var n=t.allDictionaries[e];if(1===n.status){var a=t.downloadUrl+n[d]+(n.version?"_v"+n.version:"")+t._getFileExtension();return v.instance.downloader.loadJson(a,(function(e){e.success?(n.value=e.data,n.status=0,t.db.saveDictionary(n[d],n.value,n[f]),t._downloadNextDictionary()):(e.error.code=p.FAILED_DOWNLOAD_DICTIONARY,t.callback(e))})),{v:void 0}}}var t=this;for(var n in this.allDictionaries){var o=e(n);if("object"===(void 0===o?"undefined":a(o)))return o.v}this.callback&&(this.callback({success:!0}),this.callback=null)}},{key:"_initialize",value:function(e,t){var n=this;this.callback=t,this.db=new u.default("UNNY_RGC_"+e,2),this.downloadUrl="https://dictionaries-unnynet.fra1.cdn.digitaloceanspaces.com/dictionaries/"+e+"/";var a="https://dictionaries-unnynet.fra1.digitaloceanspaces.com/dictionaries/"+e+"/versions"+this._getFileExtension()+"?timestamp="+Math.trunc((new Date).getTime());v.instance.downloader.loadJson(a,(function(e){if(e.success){var a=e.data.dictionaries;a?n.db.waitForTheConnection((function(){for(var e=a.length,t=function(t){var o=a[t],r=o[d];n.db.loadDictionary(r,(function(t){o[f]<=(t?t.version:-1)&&t.value?(o.status=0,o.value=t.value):o.status=1,n.allDictionaries[o.name]=o,0==--e&&n._downloadNextDictionary()}))},o=0;o<a.length;o++)t(o)})):v._sendFailedCallback(t,p.PARSING_ERROR,e.data.toString())}else e.error.code=p.FAILED_DOWNLOAD_VERSIONS,t(e)}))}},{key:"getDictionary",value:function(e){return this.allDictionaries.hasOwnProperty(e)?this.allDictionaries[e].value:null}}]),o(l,c),v);function v(){!function(e){if(!(e instanceof v))throw new TypeError("Cannot call a class as a function")}(this),this.downloader=new r.default,this.allDictionaries=[]}t.default=h},function(e,t,n){Object.defineProperty(t,"__esModule",{value:!0});var a=(function(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}(o.prototype,[{key:"loadJson",value:function(e,t){fetch(e).then((function(e){return e.json()})).then((function(e){return t({success:!0,data:e})})).catch((function(e){return t({success:!1,error:{message:e.toString()}})}))}}]),o);function o(){!function(e){if(!(e instanceof o))throw new TypeError("Cannot call a class as a function")}(this)}t.default=a},function(e,t,n){Object.defineProperty(t,"__esModule",{value:!0});var a=0,o=-1,r=2,i=3,u="all_dictionaries",s=(function(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}(l.prototype,[{key:"_callCallback",value:function(){this.callback&&(this.callback(this.isActive()),this.callback=null)}},{key:"waitForTheConnection",value:function(e){this.callback=e,this.dbState!==r&&this._callCallback()}},{key:"saveDictionary",value:function(e,t,n){if(this.isActive())try{this.db.transaction([u],"readwrite").objectStore(u).put({name:e,value:t,version:n}).onerror=function(t){console.error("Failed to save "+e,t)}}catch(t){console.error("Something went wrong during saving",t)}}},{key:"loadDictionary",value:function(e,t){if(this.isActive())try{var n=this.db.transaction([u],"readonly").objectStore(u).get(e);n.onerror=function(n){console.error("couldn't load dictionary "+e,n),t(null)},n.onsuccess=function(){t(n.result)}}catch(n){console.error("Something went wrong during loading",n),t(null)}}},{key:"isActive",value:function(){return this.dbState===i}}]),l);function l(e,t){var n=this;if(function(e){if(!(e instanceof l))throw new TypeError("Cannot call a class as a function")}(this),this.dbSupport=!!window.indexedDB,this.dbSupport){this.dbState=r;var s=window.indexedDB.open(e,t);s.onerror=function(e){console.error("Couldn't connect to DB",s.errorCode),n.dbState=a,n._callCallback()},s.onsuccess=function(e){n.db=e.target.result,n.dbState=i,n._callCallback()},s.onupgradeneeded=function(e){n.db=e.target.result,n.db.createObjectStore(u,{keyPath:"name"})}}else console.error("IndexedDB isn't supported"),this.dbState=o}t.default=s}]).default},"object"==i(t)&&"object"==i(e)?e.exports=r():(a=[],void 0===(o="function"==typeof(n=r)?n.apply(t,a):n)||(e.exports=o))}).call(this,n(15)(e))},function(e,t){e.exports=function(e){return e.webpackPolyfill||(e.deprecate=function(){},e.paths=[],e.children||(e.children=[]),Object.defineProperty(e,"loaded",{enumerable:!0,get:function(){return e.l}}),Object.defineProperty(e,"id",{enumerable:!0,get:function(){return e.i}}),e.webpackPolyfill=1),e}},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});function a(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}var o=t.ButtonType={Primary:"Primary",Secondary:"Secondary",Success:"Success",Info:"Info",Warning:"Warning",Danger:"Danger"},r=(function(e,t,n){t&&a(e.prototype,t),n&&a(e,n)}(i,[{key:"addButton",value:function(e,t,n){var a=2<arguments.length&&void 0!==n?n:o.Primary;this.allButtons.push({id:i._buttonInstance++,title:e,type:a}),this.allButtonsAction.push(t)}},{key:"parse",value:function(){var e=JSON.stringify(this.allButtons);return console.log("> "+e),'{"buttons": '+e+"}"}},{key:"buttonClicked",value:function(e){for(var t=0;t<this.allButtons.length;t++)if(this.allButtons[t].id===e){var n=this.allButtonsAction[t];n&&n();break}}}]),i);function i(){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,i),(i.activePopup=this).allButtons=[],this.allButtonsAction=[]}r._buttonInstance=0,t.default=r}]).default}));
 window.onerror = function myErrorHandler(errorMsg, url, lineNumber) {
     console.info("[ERROR]: ", errorMsg, url, lineNumber);
     if (typeof ga != 'undefined') {
@@ -15139,7 +15139,7 @@ const LockTint = 0xaaaaaa;
 
 const REMOTE_GAME_PATH = "https://unnyhog.github.io/myth/";
 
-var VisualData = (function() {
+var VisualData = (function () {
 
     let GAME_NAME = 'MYTH';
     let GAME_PATH = REMOTE_GAME_PATH + 'games/myth';
@@ -15151,9 +15151,11 @@ var VisualData = (function() {
     let STORE_IMAGES_FOLDER = 'UI/Windows/Upgrade/Items/';
     let PUZZLE_UI_FOLDER = 'UI/Windows/Puzzles/';
     let PUZZLE_IMAGES_FOLDER = 'GoodsPuzzleIcons/';
+    let GUARD_PUZZLE_IMAGES_FOLDER = 'GuardsIcons/Puzzles/';
 
     let QUEST_ICONS_FOLDER = 'UI/Windows/DailyQuests/DailyQuests Icons/';
     let DAILY_ICONS_FOLDER = 'UI/Windows/LoginBonus/BonusTypes/';
+    let GIRLS_ICONS_FOLDER = 'UI/Windows/GirlsMenu/girls/';
 
     if (typeof exports !== 'undefined') {
         CommonData = require('../../../CommonVisualData');
@@ -15179,7 +15181,7 @@ var VisualData = (function() {
     const PaymentInfo = {
         hellprodgems100: {
             nutaku_price: 20
-        } ,
+        },
         hellprodgems200: {
             nutaku_price: 50
         },
@@ -15264,7 +15266,47 @@ var VisualData = (function() {
         'CollectionBack': {
             file: 'Backs/BlackPixel.png',
         },
+        'CollectCrop': {
+            file: 'UI/Windows/Prestige/prestige_icon.png',
+        },
         //overrides...
+
+        'CollectCrop': {
+            file: 'UI/Windows/Prestige/loading_stripe.png',
+        },
+
+
+        'PlayerIcon': {
+            file: 'UI/HUD_and_common/HUD/pleer_lvl_avatar.png'
+        },
+
+        'PlayerExpLoader': {
+            file: 'UI/HUD_and_common/HUD/pleer_lvl_load.png'
+        },
+
+        'PlayerExpLoaderBack': {
+            file: 'UI/HUD_and_common/HUD/pleer_lvl_loading.png'
+        },
+
+        'PlayerExpStar': {
+            file: 'UI/HUD_and_common/HUD/pleer_lvl_star.png'
+        },
+
+        'StoreButton_Pink': {
+            file: 'UI/Windows/Upgrade/button_pink.png',
+        },
+        'StoreButton_Inactive': {
+            file: 'UI/Windows/Upgrade/button_inactive.png',
+        },
+        'StoreButton_Blue': {
+            file: 'UI/Windows/Upgrade/button_blue.png',
+        },
+        'StoreTab_Active': {
+            file: 'UI/Windows/Upgrade/ActiveTabBack.png',
+        },
+        'StoreTab_Inactive': {
+            file: 'UI/Windows/Upgrade/DeactiveTabBack.png',
+        },
 
         'PlaceSlotButton': {
             file: 'Slots/Ground.png',
@@ -15274,13 +15316,13 @@ var VisualData = (function() {
             file: 'UI/Windows/Puzzles/GuardTabIcon.png',
         },
         'TokenCommon': {
-            file: 'UI/Windows/Puzzles/PuzzlesOpened.png',
+            file: 'UI/HUD_and_common/HUD/res_loc_1.png',
         },
         'TokenRare': {
-            file: 'UI/Windows/Puzzles/PuzzlesBronze.png',
+            file: 'UI/HUD_and_common/HUD/res_loc_2.png',
         },
         'TokenEpic': {
-            file: 'UI/Windows/Puzzles/PuzzlesSilver.png',
+            file: 'UI/HUD_and_common/HUD/res_loc_3.png',
         },
         'StripeText': {
             file: 'UI/Windows/PhotoAlbum/stripe_text.png',
@@ -15338,6 +15380,9 @@ var VisualData = (function() {
         'MM_Btn_ManagerDoubling': {
             file: 'UI/HUD_and_common/HUD/manager.png',
         },
+        'MM_Btn_Zoom': {
+            file: 'UI/HUD_and_common/HUD/zoom.png',
+        },
 
         'Background1': {
             type: UnnyObjectType.Image,
@@ -15355,26 +15400,26 @@ var VisualData = (function() {
         // },
         'Podkova': {
             type: UnnyObjectType.Spine,
-                json: 'podkova.json',
-                atlas: 'podkova.atlas',
-                animations: {
+            json: 'podkova.json',
+            atlas: 'podkova.atlas',
+            animations: {
                 idle: 'Idle',
-                    active: 'Active'
+                active: 'Active'
             },
         },
         'SplitScreen': {
             type: UnnyObjectType.Spine,
-                json: 'SplitScreen.json',
-                atlas: 'SplitScreen.atlas',
-                animations: {
+            json: 'SplitScreen.json',
+            atlas: 'SplitScreen.atlas',
+            animations: {
                 action: '2Sec',
             },
         },
         'FactoryWorking': {
             type: UnnyObjectType.Spine,
-                json: 'Conveer_fullhd.json',
-                atlas: 'Conveer_fullhd.atlas',
-                animations: {
+            json: 'Conveer_fullhd.json',
+            atlas: 'Conveer_fullhd.atlas',
+            animations: {
                 idle: 'idle',
             },
         },
@@ -15387,9 +15432,9 @@ var VisualData = (function() {
 
         'WinStandardBack': {
             file: 'UI/Windows/Common/paper.png',
-                type: UnnyObjectType.NineSlice,
-                paddingX: 100,
-                paddingY: 70
+            type: UnnyObjectType.NineSlice,
+            paddingX: 100,
+            paddingY: 70
         },
 
         'HudResBack': {
@@ -15482,10 +15527,6 @@ var VisualData = (function() {
         // },
 
         //Without preload
-        'PhotoQuest_Aphrodite': {
-            file: 'UI/Windows/GirlsMenu/girls/aphrodite.png',
-        },
-
         'Managers_UnderText_1': {
             file: 'UI/Windows/Manager-Donate_doubling/undertext_1.png',
         },
@@ -15499,8 +15540,22 @@ var VisualData = (function() {
             file: 'UI/Windows/Manager-Donate_doubling/blue_button.png'
         },
 
+        'ButtonPink': {
+            file: 'UI/Windows/Manager-Donate_doubling/pink_button.png'
+        },
+
         'TableUpgradeGR': {
             file: 'Slots/tableUpgrade_gr.png',
+        },
+
+        'PrestigeBtnPink': {
+            file: 'UI/Windows/Prestige/pink_button.png'
+        },
+        'PrestigeBtnGrey': {
+            file: 'UI/Windows/Prestige/grey_button.png'
+        },
+        'PrestigeBlueHead': {
+            file: 'UI/Windows/Common/blue_head.png'
         },
 
 //TODO remove it later
@@ -15536,6 +15591,7 @@ var VisualData = (function() {
         'HudResBack',
         'MM_Btn_GirlMenu',
         'MM_Btn_ManagerDoubling',
+        'MM_Btn_Zoom',
         'MM_Btn_PhotoAlbum',
         'MM_Btn_Prestige',
         'GetQuestButton',
@@ -15558,21 +15614,34 @@ var VisualData = (function() {
         'Managers_UnderText_2',
         'ButtonGreen',
         'ButtonBlue',
+        'ButtonPink',
         'PlaceSlotButton',
-        'TableUpgradeGR'
+        'TableUpgradeGR',
+        'StoreButton_Pink',
+        'StoreButton_Inactive',
+        'StoreButton_Blue',
+        'StoreTab_Active',
+        'StoreTab_Inactive',
+        'PrestigeBtnPink',
+        'PrestigeBtnGrey',
+        'PrestigeBlueHead',
+        'PlayerIcon',
+        'PlayerExpLoader',
+        'PlayerExpLoaderBack',
+        'PlayerExpStar'
     ];
 
     const GameSettings = {
         fb_app_id: 2077329288999958,//hz
         vk_app_id: 6955719,//fish
+        player_level: true,
         photos: true,
         locations_window: true,
         no_guard: true,
         guards: true,
-        locked_puzzle_scale: 1.15,
         no_offers: true,
         no_availability_jump: true,
-        btn_text_height: 1.5,
+        // btn_text_height: 1.2,
         slot_purchase_as_buttons: {
             'locked': 'Lock',
             'puzzle': 'LockIcon',
@@ -15604,15 +15673,20 @@ var VisualData = (function() {
         },
         dont_show_shield_icon: true,
         shields: {
-            drop_icon: false,
+            drop_icon: true,
             icon: false,
             upgrade_x: 80,
             upgrade_y: -60,
             level_x: 0,
             level_y: 30,
             level_suffix: 'LVL ',
-            shield_locked: 'TableUpgradeGR'
-        }
+            shield_locked: 'TableUpgradeGR',
+            rewards: true,
+            reward_x: -90,
+            reward_y: 95
+        },
+        tut_phrase_y: 240,
+        puzzle_top: true
     };
 
     return {
@@ -15660,19 +15734,45 @@ var VisualData = (function() {
         },
 
         GUI_WinStore: {
-            // headerImg: "ui_headline",
-            headerOffsetY: -270,
-            btnOffsetY: 300,
-            descOffsetY: 150,
+            headerImg: "Managers_UnderText_1",
+            headerOffsetY: -230,
+            header_wrap: 360,
+            btnOffsetY: 330,
+            descOffsetY: 220,
             nineSlice: "store",
             togglesX: -700,
-            togglesY: -550,
-            togglesDistance: 300,
-            activeOffset: 30,
-            iconOffset: 90,
-            iconOffsetActive: 160,
-            imageOffset: 80,
-            showHud: true
+            togglesY: -560,
+            togglesDistance: 160,
+            activeOffset: 10,
+            iconOffset: 70,
+            iconOffsetActive: 70,
+            iconScaleActive: 1.1,
+            imageOffset: 20,
+            showHud: true,
+            store_back_scale: 1.5,
+            headerFont: true,
+            // btnMinWidth: 280,
+            btnScale: 1.26,
+            btnSpriteNormal: "StoreButton_Pink",
+            btnSpriteInactive: "StoreButton_Inactive",
+            btnSpriteGems: "StoreButton_Blue",
+            tabClose: "StoreTab_Inactive",
+            tabOpen: "StoreTab_Active",
+            tabCloseOffsetX: 20,
+        },
+
+        GUI_WinBossSummon: {
+            nineSlice: "prestige",
+            imageY: -100,
+            no_description: true,
+            mystButtons: true,
+            headerFont: true,
+            btnImage: 'PrestigeBtnPink',
+            btnImage2: 'PrestigeBtnGrey',
+            header_image: 'PrestigeBlueHead',
+            buttonY: 550 * GlobalScale,
+            buttonY2: 400 * GlobalScale,
+            headerOffset: -450
         },
 
         GUI_WinConstruct: {
@@ -15716,28 +15816,38 @@ var VisualData = (function() {
             imageOffset: 80,
             centerBlock: false,
             showGrid: false,
-            partSize: 310,
-            frontPartSize: 330,
+            partSize: 286,
+            frontPartSize: 286,
             BonusOffsetX: 160,
-            showHud: true
+            showHud: true,
+            popup_x: 140,
+            popup_y: -130,
+            puzzleNumberFont: true,
+            no_frame: true
         },
 
-        GUI_BuildingsGUI : {
+        GUI_BuildingsGUI: {
             loaderOffsetX: 0,
             loaderOffsetY: -8,
             loaderScale: 1,
             purchaseIconScale: 1,
         },
 
-        GUI_WinDailyBonus : {
+        GUI_WinDailyBonus: {
             columns: 8,
             rows: 4,
             distance: 300,
             addDistance: 50,
+            dailyClosedDepth: 11,
+            // btnsScale: 1.2,
+            check_y: -90,
+            text_x: 80,
+            text_y: 35,
+            font: true,
         },
 
         GUI_WinPhotosMainMenu: {
-            nineSlice: "photo_menu",
+            nineSlice: "none",
         },
 
         GUI_WinPhotosQuest: {
@@ -15867,7 +15977,7 @@ var VisualData = (function() {
             desc_x: -330,
             desc_y: 20,
             desc_ox: 0,
-            desc_width: 700,
+            desc_width: 560,
             x_x: -330,
             x_y: 80,
         },
@@ -15897,6 +16007,10 @@ var VisualData = (function() {
             return QUEST_ICONS_FOLDER;
         },
 
+        getGirlsImagesFolder: function () {
+            return GIRLS_ICONS_FOLDER;
+        },
+
         getDataFolder() {
             return DATA_FOLDER;
         },
@@ -15919,6 +16033,10 @@ var VisualData = (function() {
 
         getPuzzleFolder() {
             return PUZZLE_IMAGES_FOLDER;
+        },
+
+        getManagerPuzzleFolder() {
+            return GUARD_PUZZLE_IMAGES_FOLDER;
         },
 
         getPuzzleUIFolder() {
@@ -15951,6 +16069,12 @@ var VisualData = (function() {
             small: {
                 name: 'WinStandardBack',
                 width: 1200,
+                height: 1400,
+                y: 0
+            },
+            prestige: {
+                name: 'WinStandardBack',
+                width: 1100,
                 height: 1400,
                 y: 0
             },
@@ -15997,9 +16121,9 @@ var VisualData = (function() {
             cellWidth: 500,
             cellHeight: 850,
             offsetX: 0,
-            offsetY: 170,
+            offsetY: 130,
             width: 1600,
-            height: 1200,
+            height: 1280,
         },
 
         PUZZLE_SCROLL_CONFIG: {
@@ -16112,13 +16236,13 @@ var VisualData = (function() {
             ]
         },
 
-        FACTORY_WORKING: {
-            objects: [
-                {
-                    name: 'FactoryWorking'
-                }
-            ]
-        },
+        // FACTORY_WORKING: {
+        //     objects: [
+        //         {
+        //             name: 'FactoryWorking'
+        //         }
+        //     ]
+        // },
 
         // FABRIKA: {
         //     objects: [
@@ -16832,9 +16956,12 @@ for (let w = 1; w <= 3; w++) {
 const DefaultFontColor = "#fff";
 const DefaultStrokeColor = "#570105";
 
-let DefaultFontPurchaseSlot;
+let DefaultFontPurchaseSlot, DefaultFontStoreItemHeader;
 let DefaultFontProduction;
-let ShieldFontPrice, ShieldFontLevel;
+let ShieldFontPrice, ShieldFontLevel, DefaultFontDailyBonus, PuzzleNumberFont, ShieldRewardFont;
+let GirlsMenuHeaderFont, GirlsMenuDescFont, PhotoQuestDescFont, PhotoQuestPrice, PhotosCountInListFont,
+    BossSummonHeaderFont, QuestFont;
+let TutorialFont;
 
 function CalculateFonts() {
     TextScale = 0.7;
@@ -16895,21 +17022,33 @@ function CalculateFonts() {
         strokeThickness: getStroke(5)
     });
     DefaultFontBlack = createFont({font: getFont(45), font2: getFont2(45), fill: '#333', align: 'center'});
-    DefaultFontSmallBlack = createFont({font: getFont(35), font2: getFont2(35), fill: DefaultStrokeColor, align: 'center'});//quests
+    DefaultFontSmallBlack = createFont({
+        font: getFont(35),
+        font2: getFont2(35),
+        fill: DefaultStrokeColor,
+        align: 'center'
+    });//quests
     DefaultFontVerySmall = createFont({
-        font: getFont(40),
-        font2: getFont2(40),
-        fill: '#333',
+        font: getFont(30),
+        font2: getFont2(30),
+        fill: DefaultStrokeColor,
         align: 'center',
         lineSpacing: getLineSpacing(-5)
-    });
+    });//store desc
     DefaultFontVerySmall2 = createFont({
-        font: getFont(55),
-        font2: getFont2(55),
-        fill: '#333',
+        font: getFont(45),
+        font2: getFont2(45),
+        fill: DefaultFontColor,
         align: 'center',
-    });
+    });//store btn
     //new
+    DefaultFontStoreItemHeader = createFont({
+        font: getFont(40),
+        font2: getFont2(40),
+        fill: DefaultFontColor,
+        align: 'center',
+        lineSpacing: getLineSpacing(-5)
+    });//store header
     DefaultFontPurchaseSlot = createFont({
         font: getFont(30),
         font2: getFont2(30),
@@ -16939,6 +17078,89 @@ function CalculateFonts() {
         fill: DefaultFontColor,
         align: 'center',
     });
+    DefaultFontDailyBonus = createFont({
+        font: getFont(50),
+        font2: getFont2(50),
+        fill: DefaultFontColor,
+    });
+
+    PuzzleNumberFont = createFont({//hud
+        font: getFont(45),
+        font2: getFont2(45),
+        fill: DefaultFontColor,
+    });
+
+    GirlsMenuHeaderFont = createFont({
+        font: getFont(35),
+        font2: getFont2(35),
+        fill: DefaultFontColor,
+    });
+
+    GirlsMenuDescFont = createFont({
+        font: getFont(25),
+        font2: getFont2(25),
+        fill: DefaultFontColor,
+    });
+
+    PhotoQuestDescFont = createFont({
+        font: getFont(30),
+        font2: getFont2(30),
+        fill: DefaultStrokeColor,
+        align: 'center',
+    });
+
+    PhotoQuestPrice = createFont({
+        font: getFont(35),
+        font2: getFont2(35),
+        fill: DefaultStrokeColor,
+        align: 'center',
+    });
+
+    PhotosCountInListFont = createFont({
+        font: getFont(35),
+        font2: getFont2(35),
+        fill: DefaultStrokeColor,
+        align: 'center',
+    });
+
+    BossSummonHeaderFont = createFont({
+        font: getFont(50),
+        font2: getFont2(50),
+        fill: DefaultFontColor,
+        align: 'center',
+    });
+
+    QuestFont = createFont({
+        font: getFont(30),
+        font2: getFont2(30),
+        fill: DefaultStrokeColor,
+        align: 'left',
+    });
+
+    ShieldRewardFont = createFont({
+        font: getFont(20),
+        font2: getFont2(20),
+        fill: DefaultStrokeColor,
+        align: 'left',
+    });
+
+    TutorialFont = createFont({
+        font: getFont(40),
+        font2: getFont2(40),
+        fill: DefaultFontColor,
+        align: 'center',
+        stroke: DefaultStrokeColor,
+        strokeThickness: getStroke(5)
+    });
+
+    PlayerLevelFont = createFont({
+        font: getFont(40),
+        font2: getFont2(40),
+        fill: DefaultFontColor,
+        align: 'center',
+        stroke: DefaultStrokeColor,
+        strokeThickness: getStroke(5)
+    });
 }
 
 if (typeof exports !== 'undefined') {
@@ -16948,6 +17170,14 @@ if (typeof exports !== 'undefined') {
     exports.VisualData = VisualData;
 }
 
+const FINGER_TYPE = {
+    NONE: "None",
+    SOFT: "Soft",
+    HARD: "Hard"
+};
+
+const TutStartPhase = 0;
+
 class Tutorial {
     constructor() {
         this.depth = WinDefaultDepth + 900;
@@ -16955,34 +17185,56 @@ class Tutorial {
         this.supervisorShown = false;
         this.fortuneShown = false;
         this.timers = [];
+
+        this.dialogCallback = this.dialogClicked.bind(this);
+        this.resourcesCallback = this.resourcesChanged.bind(this);
+    }
+
+    dialogClicked() {
+        this.goToNextStep();
+    }
+
+    resourcesChanged() {
+        switch (this.phaseData.actionType) {
+            case 'CollectGold':
+                // console.log("IS " + this.phaseData.parameter + " ? " + gameInit.progress.getTotalResources().compare(this.phaseData.parameter * RESOURCES_SCALE));
+                if (gameInit.progress.getTotalResources().compare(this.phaseData.parameter * RESOURCES_SCALE) >= 0)
+                    this.goToNextStep();
+                break;
+        }
     }
 
     loaded(progress) {
         const phase = progress.getTutorialPhase();
-        if (phase !== TutPhases.TutorialEnd) {
-            this.newMethod = tutorial.update.bind(tutorial);
-            gameInit.update.addListener(this.newMethod);
 
-            if (phase >= TutPhases.FortuneWheel && phase <= TutPhases.FortuneWheel) {
-                for (let i = 0; i <= TutPhases.WaitForSummonToEnd; i++)
-                    this.preparePhase(i);
-                for (let i = TutPhases.FortuneWheel; i <= phase; i++)
-                    this.preparePhase(i);
-            } else {
-                for (let i = 0; i <= phase; i++)
-                    this.preparePhase(i);
-            }
+        // console.error("loaded " + phase);
+        const data = GameData.getTutorialConfig();
+        const phaseIndex = this.getPhaseIndex(phase);
+
+        if (phaseIndex >= 0) {
+            if (data[phaseIndex].actionType !== 'Completed') {
+
+                gameInit.progress.onResourcesChanges.addListener(this.resourcesCallback);
+                this.newMethod = tutorial.update.bind(tutorial);
+                gameInit.update.addListener(this.newMethod);
+
+                for (let i = 0; i <= phaseIndex; i++)
+                    this.preparePhase(data[i].stepNumber, i);
+            } else
+                this.stopTutorial();
         }
     }
 
-    stopTutorial(){
-        gameInit.update.removeListener(this.newMethod);
+    stopTutorial() {
+        if (this.newMethod) {
+            gameInit.progress.onResourcesChanges.removeListener(this.resourcesCallback);
+            gameInit.update.removeListener(this.newMethod);
+        }
         guiManager.setTutorialPhrase(null);
         this._hideFinger();
     }
 
-    playSwipeAnimation ()
-    {
+    playSwipeAnimation() {
         const oxy = {
             x: this.finger.obj.x / localScale,
             y: this.finger.obj.y / localScale
@@ -16991,11 +17243,14 @@ class Tutorial {
         const play = () => {
             if (this.finger.visible) {
                 this.finger.playAppear(true);
-                this.timers[0] = setTimeout(()=>{
-                    this.finger_move_animation = animManager.moveToPoint(this.finger.obj, {x: oxy.x + 200 * GlobalScale, y: oxy.y - 100 * GlobalScale}, 0.3, ()=> {
+                this.timers[0] = setTimeout(() => {
+                    this.finger_move_animation = animManager.moveToPoint(this.finger.obj, {
+                        x: oxy.x + 200 * GlobalScale,
+                        y: oxy.y - 100 * GlobalScale
+                    }, 0.3, () => {
                         this.finger.playDisappear(true);
-                        this.timers[1] = setTimeout(()=> {
-                            this.finger_move_animation = animManager.moveToPoint(this.finger.obj, oxy, 0.7, ()=>{
+                        this.timers[1] = setTimeout(() => {
+                            this.finger_move_animation = animManager.moveToPoint(this.finger.obj, oxy, 0.7, () => {
                                 this.finger_move_animation = null;
                             });
                             this.timers[1] = null;
@@ -17005,7 +17260,7 @@ class Tutorial {
                 }, 500);
             }
         };
-        const intervalTimer = setInterval(()=>{
+        const intervalTimer = setInterval(() => {
             play();
         }, 2000);
         play();
@@ -17028,7 +17283,7 @@ class Tutorial {
             this.finger_move_animation = null;
         }
 
-        for (let i = 0;i<=1;i++) {
+        for (let i = 0; i <= 1; i++) {
             if (this.timers[i]) {
                 clearTimeout(this.timers[i]);
                 this.timers[i] = null;
@@ -17044,19 +17299,19 @@ class Tutorial {
         const play = () => {
             if (this.finger.visible) {
                 this.finger.playAppear(true);
-                this.timers[0] = setTimeout(()=>{
+                this.timers[0] = setTimeout(() => {
                     this.circle.setVisible(true);
                     animManager.scaleAlphaOnce(this.circle, 0.5, null, 0.5);
                     this.timers[0] = null;
                 }, 100);
 
-                this.timers[1] = setTimeout(()=>{
+                this.timers[1] = setTimeout(() => {
                     this.finger.playDisappear(true);
                     this.timers[1] = null;
                 }, 500 + hold_time);
             }
         };
-        this.intervalTimer = setInterval(()=>{
+        this.intervalTimer = setInterval(() => {
             play();
         }, 1200 + hold_time);
         play();
@@ -17066,19 +17321,23 @@ class Tutorial {
         return this.lastWindow == winType;
     }
 
-    _lockAtButton(btn, center) {
+    _lockAtButton(btn, center, pos) {
         if (!btn)
             return;
 
         lockGuiAtButton(btn);
+        if (pos) {
+            this.pointAtPosition(pos);
+            return;
+        }
+
         if (btn.getParentObject) {
             const p = btn.getParentObject();
             this.pointAtPosition({
                 x: p.x / localScale,
                 y: p.y / localScale + (0.5 - btn.originY) * btn.height
             }, center);
-        } else
-        if (btn.originY && btn.originY !== 0.5) {
+        } else if (btn.originY && btn.originY !== 0.5) {
             this.pointAtPosition({
                 x: btn.x,
                 y: btn.y + (0.5 - btn.originY) * btn.height
@@ -17103,255 +17362,261 @@ class Tutorial {
         };
     }
 
-    preparePhase(phase) {
-        if (this.shallIgnorePhase(phase))
-            return;
+    getPhaseIndex(phase) {
+        return Progress.getPhaseIndex(phase);
+    }
 
+    goToNextPhase() {
+        unlockGUI();
+        unlockAnimatedObject();
+        this._hideFinger();
+        this.phaseIndex = this.getPhaseIndex(this.phase + 1);
+        this.preparePhase(this.phase, this.phaseIndex);
+    }
+
+    goToNextStep() {
+        unlockGUI();
+        unlockAnimatedObject();
+        this._hideFinger();
+        // console.log("goToNextStep ");
+        // // console.log("MOVE to " + this.phase);
+        // gameAnalytics.sendEvent("Tutorial", {
+        //     "phase": this.phase
+        // });
+
+        const data = GameData.getTutorialConfig();
+        const d = data[++this.phaseIndex];
+
+        if (gameInit.progress.getTutorialPhase() !== d.stepNumber)
+            gameInit.progress.setTutorialPhase(d.stepNumber);
+
+        this.preparePhase(d.stepNumber, this.phaseIndex);
+    }
+
+    preparePhase(phase, phaseIndex) {
         this.phase = phase;
+        this.phaseIndex = phaseIndex;
         this.lastWindow = guiManager.getWinTypeAtTheTop();
         this.lastTab = 0;
-        guiManager.setTutorialPhrase(this.getPhaseLocalization());
 
-        switch (this.phase) {
-            case TutPhases.BuildSlot1:
+        const data = GameData.getTutorialConfig();
+        const phaseData = data[this.phaseIndex];
+
+        this.phaseData = phaseData;
+
+        //close last dialog
+        if (this._isWindow(WindowType.QuestBubble)) {
+            const win = guiManager.getActiveWindow();
+            win.closeWindow();
+        }
+
+        // console.log("preparePhase " + phase + " > " + phaseIndex + " = " + phaseData.actionType);
+        switch (phaseData.actionType) {
+            case "ShowDialog":
+                guiManager.showQuestMessage(LocalizationManager.getLocalizization(phaseData.localizationKey), phaseData.parameter, this.dialogCallback);
+                break;
+            case "ClickSlot":
                 if (this._isWindow(WindowType.WinMain)) {
-                    this._lockAtButton(buildingsGUI.getPurchaseButton(1), true);
-                    guiManager.getActiveWindow().hideAllButtonsForTutorial();
-                } else {
-                    if (this._isWindow(WindowType.WinConstruct)) {
-                        this._lockAtButton(guiManager.getActiveWindow().getTutorialButton());
+                    if (!VisualData.getGameSettings().slot_purchase_as_buttons) {
+                        this.pointAtPosition(this._getFirstSlotPosition());
+                        lockGuiEverything();
+                    } else {
+                        this._lockAtButton(buildingsGUI.getPurchaseButton(1, 1), true);
                     }
+                } else {
+                    if (this._isWindow(WindowType.WinConstruct))
+                        this._lockAtButton(guiManager.getActiveWindow().getTutorialButton());
                 }
+                guiManager.getWindowByType(WindowType.WinMain).hideAllButtonsForTutorial();
                 break;
-            case TutPhases.Collect1:
-                this._hideFinger();
-                lockGuiEverything();
-                break;
-            case TutPhases.UpgradeBuilding:
-            case TutPhases.UpgradeBuilding5:
+            case "ChangeGameModeToUpgrade":
                 if (this._isWindow(WindowType.WinMain)) {
                     const win = guiManager.getActiveWindow();
                     win.showUpgradeButton();
                     lockAtOneAnimatedObject(win);
                     this._lockAtButton(win.getUpgradeButton(), true);
-                } else {
+                }
+                break;
+            case "UpgradeSlot":
+                if (phaseData.fingerType !== FINGER_TYPE.NONE) {
                     if (this._isWindow(WindowType.WinUpgrade)) {
                         lockGuiEverything();
                         unlockAnimatedObject();
                         this.pointAtPosition(this._getFirstSlotPosition(), null, null, false, 0.5);
                     }
+                } else {
+                    const win = guiManager.getWindowByType(WindowType.WinMain);
+                    win.showUpgradeButton();
                 }
                 break;
-            case TutPhases.Collect1k:
-            case TutPhases.Collect10k:
-                unlockAnimatedObject();
-                this._hideFinger();
-                unlockGUI();
+            case "ChangeGameModeToNormal":
+            case "CloseGirlListWindow":
+                this._lockAtButton(guiManager.getActiveWindow().getExitButton(), true);
                 break;
-            case TutPhases.BuyAutoCollect:
+            case "ClickGirlMenuButton": {
+                if (this._isWindow(WindowType.WinMain)) {
+                    const win = guiManager.getWindowByType(WindowType.WinMain);
+                    win.showGirlsMenuButton();
+                    this._lockAtButton(win.getGirlsMenuButton(), true);
+                } else if (this._isWindow(WindowType.WinPhotosMainMenu))
+                    this.goToNextStep();
+                break;
+            }
+            case "OpenGirlListWindow":
+            case "ClickBioButton":
+            case "OpenBioWindow":
+            case "OpenUpgradeMarketWindow":
+            case "OpenDoublingsWindow":
+            case "StartSuperDoubling":
+            case "OpenPuzzlesWindow":
+            case "ClickOpenBoxItem":
+                this.goToNextStep();
+                break;
+            case "OpenGirlQuestWindow": {
+                if (this._isWindow(WindowType.WinPhotosMainMenu)) {
+                    const win = guiManager.getWindowByType(WindowType.WinPhotosMainMenu);
+                    win.scroll.setScrollerEnable(false);
+                    const btn = win.getButtonByTag("Peristera");
+                    this._lockAtButton(btn, true, win.getButtonPosByTag());
+                }
+                break;
+            }
+            case "ClickUnlockPhotoButton": {
+                const win = guiManager.getWindowByType(WindowType.WinPhotosQuest);
+                this._lockAtButton(win.actionButton, true);
+                break;
+            }
+            case "ClickUpgradeMarketButton": {
                 if (this._isWindow(WindowType.WinMain)) {
                     GlobalInputLocked = true;
                     const win = guiManager.getActiveWindow();
                     win.showStoreButton();
                     this._lockAtButton(win.getStoreButton(), true);
-                } else {
-                    if (this._isWindow(WindowType.WinStore)) {
-                        GlobalInputLocked = false;
-                        const win = guiManager.getActiveWindow();
-                        this._lockAtButton(win.getFirstUpgradeSlot(), true);
-                        win.scroll.setScrollerEnable(false);
-                    }
-                }
-                break;
-            case TutPhases.Boost4h:
-                if (this._isWindow(WindowType.WinMain)) {
-                    if (this.guardShown)
-                        this.moveToNextPhase();
-                    else {
-                        lockAtOneAnimatedObject(visualGame.getGuard());
-                        GlobalInputLocked = false;
-                        lockGuiEverything();
-                        visualGame.showGuard();
-                        this.pointAtPosition(visualGame.getGuard().obj, true, true);
-                    }
-                } else {
-                    if (this._isWindow(WindowType.WinGuard) || this._isWindow(WindowType.WinNoAdd)) {
-                        this._lockAtButton(guiManager.getActiveWindow().getTutorialButton());
-                        this.guardShown = true;
-                    }
-                }
-                break;
-            case TutPhases.Boost6s:
-                if (this._isWindow(WindowType.WinMain)) {
-                    if (this.supervisorShown)
-                        this.moveToNextPhase();
-                    else {
-                        unlockAnimatedObject();
-                        GlobalInputLocked = true;
-                        const win = guiManager.getActiveWindow();
-                        win.showSuperVisorButton();
-                        this._lockAtButton(win.getSuperVisorButton(), true);
-                    }
-                } else {
-                    if (this._isWindow(WindowType.WinSupervisor) || this._isWindow(WindowType.WinNoAdd)) {
-                        this._lockAtButton(guiManager.getActiveWindow().getTutorialButton());
-                        this.supervisorShown = true;
-                    }
-                }
-                break;
-            case TutPhases.FortuneWheel:
-                if (this._isWindow(WindowType.WinMain)) {
-                    if (this.fortuneShown) {
-                        this.moveToNextPhase();
-                    }
-                    else {
-                        unlockAnimatedObject();
-                        GlobalInputLocked = true;
-                        const win = guiManager.getActiveWindow();
-                        this._lockAtButton(win.getFortuneWheelButton(), true);
-                    }
-                } else {
-                    if (this._isWindow(WindowType.WinFortuneWheel) || this._isWindow(WindowType.WinNoAdd)) {
-                        this._lockAtButton(guiManager.getActiveWindow().getTutorialButton());
-                        this.fortuneShown = true;
-                    }
-                }
-                break;
-            case TutPhases.FortuneWheelEnded: {
-                if (this._isWindow(WindowType.WinMain))
-                    this.moveToNextPhase();
+                } else if (this._isWindow(WindowType.WinStore))
+                    this.goToNextStep();
                 break;
             }
-            case TutPhases.BuildSlots6:
-            case TutPhases.BuildSlots9:
-                this._hideFinger();
-                unlockAnimatedObject();
-                unlockGUI();
-                break;
-            case TutPhases.SummonBoss:
-                const win = guiManager.getActiveWindow();
-                if (this._isWindow(WindowType.WinMain)) {
-                    win.showBossButton();
-                    this._lockAtButton(win.getBossButton(), true);
-                } else {
-                    if (this._isWindow(WindowType.WinBossSummon)) {
-                        this._lockAtButton(guiManager.getActiveWindow().getTutorialButton());
-                    } else {
-                        if (this._isWindow(WindowType.WinBossProccess)) {
-                            this._hideFinger();
-                            unlockGUI();
-                            unlockAnimatedObject();
-                        }
-                    }
+            case "BuyAutoClickUpgrade": {
+                if (this._isWindow(WindowType.WinStore)) {
+                    GlobalInputLocked = false;
+                    const win = guiManager.getActiveWindow();
+                    this._lockAtButton(win.getFirstUpgradeSlot(), true);
+                    win.scroll.setScrollerEnable(false);
                 }
                 break;
-            case TutPhases.WaitForSummonToEnd:
-                unlockAnimatedObject();
-                unlockGUI();
-                guiManager.getWindowByType(WindowType.WinMain).showAllButtonsFromTutorial();
+            }
+            case "ClickManagerButton": {
+                if (this._isWindow(WindowType.WinMain)) {
+                    GlobalInputLocked = true;
+                    const win = guiManager.getActiveWindow();
+                    win.showSuperVisorButton();
+                    this._lockAtButton(win.getSuperVisorButton(), true);
+                } else if (this._isWindow(WindowType.WinManagerDoubling))
+                    this.goToNextStep();
                 break;
-            case TutPhases.PuzzlesAvailable:
+            }
+            case "BuySlots": {
+                if (gameInit.progress.getConstructedBuildingsCount() >= 6)
+                    this.goToNextStep();
+                break;
+            }
+            case "ClickPrestigeButton": {
+                if (gameInit.progress.getHarvestsCount() >= 1)
+                    this.goToNextStep();
+                else {
+                    lockGuiEverything();
+                    lockAtOneAnimatedObject(visualGame.getBoss());
+                    if (this._isWindow(WindowType.WinMain)) {
+                        const win = guiManager.getActiveWindow();
+                        win.showBossButton();
+                        this._lockAtButton(win.getBossButton(), true);
+                    } else {
+                        if (this._isWindow(WindowType.WinBossSummon))
+                            this.goToNextStep();
+                    }
+                    break;
+                }
+                break;
+            }
+            case "OpenPrestigeWindow":
+                if (this._isWindow(WindowType.WinBossSummon))
+                    this._lockAtButton(guiManager.getActiveWindow().getTutorialButton());
+                else {
+                    if (this._isWindow(WindowType.WinBossProccess))
+                        this.goToNextStep();
+                }
+                break;
+            case "StartPrestige": {
+                if (this._isWindow(WindowType.WinHarvested))
+                    this.goToNextStep();
+                break;
+            }
+            case "CompletePrestige": {
+                if (guiManager.getWinTypeAtTheTop() == WindowType.WinMain) {
+                    this.goToNextStep();
+                    guiManager.getWindowByType(WindowType.WinMain).showAllButtonsFromTutorial();
+                }
+                break;
+            }
+            case "ClickPuzzlesButton": {
                 GlobalInputLocked = true;
                 if (this._isWindow(WindowType.WinMain)) {
                     const win = guiManager.getActiveWindow();
                     this._lockAtButton(win.getPuzzlesButton(), true);
-                } else {
-                    if (this._isWindow(WindowType.WinPuzzle)) {
-                        const win = guiManager.getActiveWindow();
-                        this.lastTab = win.getSelectedTab();
-                        if (this.lastTab === 0)
-                            this._lockAtButton(win.getBoxesTab(), true);
-                        else
-                            this._lockAtButton(win.getPuzzleOpenBox(), true);
+                } else if (this._isWindow(WindowType.WinPuzzle))
+                    this.goToNextStep();
 
-                        win.scroll[1].setScrollerEnable(false);
+                break;
+            }
+            case "ClickBoxTab": {
+                if (this._isWindow(WindowType.WinPuzzle)) {
+                    const win = guiManager.getActiveWindow();
+                    this.lastTab = win.getSelectedTab();
+                    if (this.lastTab === 0)
+                        this._lockAtButton(win.getBoxesTab(), true);
+                    else
+                        this._lockAtButton(win.getPuzzleOpenBox(), true);
+
+                    win.getBoxesScroll().setScrollerEnable(false);
+                } else {
+                    if (gameInit.progress.getOpenedBoxes() > 0) {
+                        this._hideFinger();
+                        this.goToNextStep();
+
+                        const win = guiManager.getWindowByType(WindowType.WinPuzzle);
+                        if (win.scroll)
+                            win.getBoxesScroll().setScrollerEnable(true);
                     }
                 }
                 break;
-            case TutPhases.TutorialEnd:
-                GlobalInputLocked = false;
-                this.stopTutorial();
-                break;
-        }
-    }
-    
-    getPhaseLocalization() {
-        let local = null;
-        switch (this.phase) {
-            case TutPhases.Collect20:
-            case TutPhases.Collect1k:
-            case TutPhases.Collect10k:
-                return LocalizationManager.getLocalizization("CollectGold").format(this._getRequiredResourcesForUI());
-            case TutPhases.Boost4h:
-                local = "Step9";
-                break;
-            case TutPhases.PuzzlesAvailable:
-            case TutPhases.BuildSlots9:
-                local = "Step" + (this.phase);
-                break;
-            case TutPhases.WaitForSummonToEnd:
-            case TutPhases.FortuneWheel:
-            case TutPhases.FortuneWheelEnded:
-                return null;
-            default:
-                local = "Step" + (this.phase + 1);
-                break;
+            }
         }
 
-        return LocalizationManager.getLocalizization(local);
+        if (phaseData.showHint) {
+            guiManager.setTutorialPhrase(LocalizationManager.getLocalizization(phaseData.localizationKey));
+        } else
+            guiManager.setTutorialPhrase(null);
     }
 
     onCreated(engine) {
         this.engine = engine;
-        PrepareAndCreateObject(CommonVisualData.FINGER, null, this.engine, this.depth, (finger)=> {
+        PrepareAndCreateObject(CommonVisualData.FINGER, null, this.engine, this.depth, (finger) => {
             this.finger = finger;
         });
         this.circle = this.engine.add.sprite(0, 0, "Tut_Circle").setDepth(this.depth - 1);
         this._hideFinger();
     }
 
-    shallIgnorePhase(phase) {
-        switch (phase) {
-            case TutPhases.Boost4h:
-            case TutPhases.Boost6s:
-                return true;
-        }
-        return false;
-    }
-
-    moveToNextPhase() {
-        switch (this.phase) {
-            case TutPhases.FortuneWheelEnded:
-                this.phase = TutPhases.PuzzlesAvailable;
-                break;
-            // case TutPhases.WaitForSummonToEnd:
-            //     this.phase = TutPhases.FortuneWheel;
-            //     break;
-            case TutPhases.BuyAutoCollect:
-                this.phase = TutPhases.Collect10k;
-                break;
-            case TutPhases.Collect10k:
-                this.phase = TutPhases.BuildSlots6;
-                break;
-            default:
-                this.phase++;
-                break;
-        }
-
-        gameInit.progress.setTutorialPhase(this.phase);
-        // console.log("MOVE to " + this.phase);
-        gameAnalytics.sendEvent("Tutorial", {
-            "phase": this.phase
-        });
-        this.preparePhase(this.phase);
-    }
-
     _getRequiredResourcesForUI() {
         switch (this.phase) {
-            case TutPhases.Collect1: return 1;
-            case TutPhases.Collect20: return 20;
-            case TutPhases.Collect1k: return 1000;
-            case TutPhases.Collect10k: return 10000;
+            case TutPhases.Collect1:
+                return 1;
+            case TutPhases.Collect20:
+                return 20;
+            case TutPhases.Collect1k:
+                return 1000;
+            case TutPhases.Collect10k:
+                return 10000;
         }
         return 0;
     }
@@ -17362,8 +17627,10 @@ class Tutorial {
 
     _getRequiredUpgrades() {
         switch (this.phase) {
-            case TutPhases.UpgradeBuilding: return 1;
-            case TutPhases.UpgradeBuilding5: return 4;
+            case TutPhases.UpgradeBuilding:
+                return 1;
+            case TutPhases.UpgradeBuilding5:
+                return 4;
         }
         return 0;
     }
@@ -17371,108 +17638,53 @@ class Tutorial {
     update() {
         const win = guiManager.getActiveWindow();
         if (this.lastWindow != guiManager.getWinTypeAtTheTop() || (win.selectedTab && win.selectedTab !== this.lastTab)) {
-            if (this.phase !== TutPhases.WaitForSummonToEnd)
-                this.preparePhase(this.phase);
+                this.preparePhase(this.phase, this.phaseIndex);
         }
 
-        switch (this.phase) {
-            case TutPhases.BuildSlot1:
+        switch (this.phaseData.actionType) {
+            case "ClickSlot":
                 if (gameInit.progress.isBuildingConstructed(1, 1))
-                    this.moveToNextPhase();
+                    this.goToNextPhase();
                 break;
-            case TutPhases.Collect1:
-            case TutPhases.Collect20:
-                if (!this.fingerAnimation && gameInit.getBuildingById(1, 1).anyResources) {
-                    this.pointAtPosition(this._getFirstSlotPosition(), null, null, true);
-                    this.fingerAnimation = this.playSwipeAnimation();
-                    // this.fingerAnimation = animManager.swipeInfinite(this.finger.obj, 1);
-                    this.circle.setVisible(false);
-                }
-                if (gameInit.progress.getTotalResources().compare(this._getRequiredResources()) >= 0) {
-                    if (this.phase === TutPhases.Collect20) {
-                        if (this.fingerAnimation) {
-                            clearInterval(this.fingerAnimation);
-                            this.fingerAnimation = null;
-                        }
-                        this._hideFinger();
-                    }
-                    this.moveToNextPhase();
-                }
+            case "ChangeGameModeToUpgrade":
+                if (this._isWindow(WindowType.WinUpgrade))
+                    this.goToNextStep();
                 break;
-            case TutPhases.Collect1k:
-            case TutPhases.Collect10k:
-                if (gameInit.progress.getTotalResources().compare(this._getRequiredResources()) >= 0)
-                    this.moveToNextPhase();
-                break;
-            case TutPhases.UpgradeBuilding:
-            case TutPhases.UpgradeBuilding5:
+            case "UpgradeSlot":
                 const b = gameInit.getBuildingById(1, 1);
-                if (b.getLevel() > this._getRequiredUpgrades()) {
-                    if (this.phase === TutPhases.UpgradeBuilding5) {
-                        this._hideFinger();
-                    }
-                    this.moveToNextPhase();
-                }
+                if (b.getLevel() >= this.phaseData.parameter)
+                    this.goToNextStep();
                 break;
-            case TutPhases.BuyAutoCollect:
-                 const id = VisualData.getAutoClickSlot1Id();
-                 if (gameInit.progress.isUpgradePurchased(id)) {
-                     const win = guiManager.getWindowByType(WindowType.WinStore);
-                     win.scroll.setScrollerEnable(true);
-                     unlockGUI();
-                     this._hideFinger();
-                     this.moveToNextPhase();
-                 }
+            case "ChangeGameModeToNormal":
+            case "CloseGirlListWindow":
+                if (this._isWindow(WindowType.WinMain))
+                    this.goToNextStep();
                 break;
-            case TutPhases.Boost4h:
-                if (gameInit.progress.isGuardActive()) {
-                    this._hideFinger();
-                    this.moveToNextPhase();
-                }
-                break;
-            case TutPhases.Boost6s:
-                if (gameInit.progress.isSupervisorActive()) {
-                    GlobalInputLocked = false;
-                    this._hideFinger();
-                    this.moveToNextPhase();
-                }
-                break;
-            case TutPhases.BuildSlots6:
-                if (gameInit.progress.getConstructedBuildingsCount() >= 6) {
-                    this._hideFinger();
-                    this.moveToNextPhase();
-                }
-                break;
-            case TutPhases.BuildSlots9:
-                if (gameInit.progress.getConstructedBuildingsCount() >= 7) {
-                    this._hideFinger();
-                    this.moveToNextPhase();
-                }
-                break;
-            case TutPhases.SummonBoss: {
-                if (gameInit.progress.getHarvestsCount() >= 1) {
-                    this._hideFinger();
-                    this.moveToNextPhase();
-                }
+            case "ClickPeristeraBar": {
+                const win = guiManager.getWindowByType(WindowType.WinPhotosMainMenu);
+                const btn = win.getButtonByTag("Peristera");
+                if (btn)
+                    this.goToNextStep();
                 break;
             }
-            case TutPhases.WaitForSummonToEnd: {
-                if (guiManager.getWinTypeAtTheTop() == WindowType.WinMain)
-                    this.moveToNextPhase();
+            case "OpenGirlQuestWindow":
+                if (this._isWindow(WindowType.WinPhotosQuest))
+                    this.goToNextStep();
                 break;
-            }
-            case TutPhases.PuzzlesAvailable: {
-                if (gameInit.progress.getOpenedBoxes() > 0) {
+            case "ClickUnlockPhotoButton":
+                if (gameInit.progress.haveAnyPhotos())
+                    this.goToNextStep();
+                break;
+            case "BuyAutoClickUpgrade":
+                const id = VisualData.getAutoClickSlot1Id();
+                if (gameInit.progress.isUpgradePurchased(id)) {
+                    const win = guiManager.getWindowByType(WindowType.WinStore);
+                    win.scroll.setScrollerEnable(true);
+                    unlockGUI();
                     this._hideFinger();
-                    this.moveToNextPhase();
-
-                    const win = guiManager.getWindowByType(WindowType.WinPuzzle);
-                    if (win.scroll)
-                        win.scroll[1].setScrollerEnable(true);
+                    this.goToNextStep();
                 }
                 break;
-            }
-
         }
     }
 
@@ -17480,7 +17692,7 @@ class Tutorial {
         switch (this.phase) {
             case TutPhases.FortuneWheel:
                 this._hideFinger();
-                this.moveToNextPhase();
+                this.goToNextStep();
                 break;
         }
     }
@@ -17661,7 +17873,12 @@ function SocialVK() {
                     authorizing = false;
                     if (err)
                         gameAnalytics.sendServerError(err, "authWebVk");
-                    callback();
+
+                    UnnyNet.UnnyNet.Vkontakte.authorize((response)=>{
+                        console.info("UnnyNet auth", response);
+
+                        callback();
+                    });
                 });
             }
         },
@@ -18102,12 +18319,12 @@ function SocialNutaku() {
     let user_id = null;
 
     function _checkPurchases(consumeCallback) {
-        console.warn("_CHECK? " + user_id);
+        // console.warn("_CHECK? " + user_id);
         if (!user_id)
             return null;
 
         UnnyNet.UnnyNet.getPurchases(UnnyNet.PurchaseStatusFilter.COMPLETED, (response) => {
-            console.info("COMPLETED", response);
+            // console.info("COMPLETED", response);
             if (response.success) {
                 const list = response.data;
                 for (let i in list) {
@@ -18204,7 +18421,7 @@ function SocialNutaku() {
 
         authorize(callback) {
             const resp = (response) => {
-                console.info("AUTH>", response);
+                // console.info("AUTH>", response);
                 if (response.success)
                     callback();
                 else
@@ -18397,7 +18614,8 @@ if (!AllGetParams.hasOwnProperty('game_env')) {
 
 const CURRENT_ENVIRONMENT = GAME_ENVIRONMENTS[AllGetParams.game_env];
 
-const TEST_MODE = true;//AllGetParams.test_mode;
+const TEST_MODE = AllGetParams.test_mode;
+const DEBUG_MODE = AllGetParams.debug_mode;
 
 {
     switch (AllGetParams.game_platform) {
@@ -18672,7 +18890,7 @@ class ButtonWithText extends BasicButton {
 
         const iconSize = 100 * GlobalScale;
         const borderSize = 100 * GlobalScale;
-        const maxWidth = config.minWidth * GlobalScale / imagesDeltaScale - borderSize;
+        const maxWidth = config.minWidth * GlobalScale - borderSize;
         const maxHeight = this.height * (VisualData.getGameSettings().btn_text_height || 1);
 
         if (config.icon) {
@@ -19687,8 +19905,8 @@ class EventManager {
         this.onQuestCompleted.callListeners();
     }
 
-    photoTokensEarnedFromBuilding(building) {
-        this.onPhotoTokensEarnedFromBuilding.callListeners(building);
+    photoTokensEarnedFromBuilding(building, token) {
+        this.onPhotoTokensEarnedFromBuilding.callListeners(building, token);
     }
 
     likesReseted() {
@@ -19716,10 +19934,6 @@ class EventManager {
 
     harvestClicked() {
         this.onHarvestClicked.callListeners();
-    }
-
-    photoTokensEarnedFromBuilding(building) {
-        this.onPhotoTokensEarnedFromBuilding.callListeners(building);
     }
 
     guardLeveledUp(guard) {
@@ -20129,6 +20343,8 @@ class Building {
 
         this.onUpgraded.callListeners(this);
 
+        achsManager.slotWasUpgraded(this);
+
         if (this.unlocked) {
             this.unlocked = false;
             this.onUnlockChanged.callListeners(this);
@@ -20349,27 +20565,6 @@ class World {
     };
 }
 
-const TutPhases = {
-    BuildSlot1: 0,
-    Collect1: 1,
-    Collect20: 2,
-    UpgradeBuilding: 3,
-    UpgradeBuilding5: 4,
-    Collect1k: 5,
-    BuyAutoCollect: 6,
-    Boost4h: 7,
-    Collect10k: 8,
-    Boost6s: 9,
-    BuildSlots6: 10,
-    SummonBoss: 11,
-    WaitForSummonToEnd: 12,
-    PuzzlesAvailable: 13,
-    BuildSlots9: 14,
-    TutorialEnd: 15,
-    FortuneWheel: 100,
-    FortuneWheelEnded: 101,
-};
-
 const BanjoDuration = 7;
 const GuardDurationHours = 4;
 const SpinsResporeTime = 8 * 3600 * 1000;
@@ -20479,9 +20674,13 @@ class PlayerInfo {
         this.expByOneCollecting = data.expByOneCollecting;
         this.expCollectDelay = data.expCollectDelay * 1000;
         this.gemsLevelUpReward = data.gemsLevelUpReward * RESOURCES_SCALE;
+        this.boxReward = data.boxReward;
+        this.prestigeExpPercent = data.prestigeExpPercent;
         this.lastClickedTime = 0;
 
-        clickController.onBuildingClicked.addListener(this.buildingWasClicked.bind(this));
+        //clickController.onBuildingClicked.addListener(this.buildingWasClicked.bind(this));
+        eventManager.onBuildingUpgraded.addListener(this.buildingUpgraded.bind(this));
+        eventManager.onHarvestCompleted.addListener(this.harvestCompleted.bind(this));
 
         if (!this.profile.level) {
             this.profile.level = 1;
@@ -20496,8 +20695,17 @@ class PlayerInfo {
             this.profile.experience -= this.profile.expToNextLevel;
             this.profile.expToNextLevel *= this.nextLevelMultiplier;
             this.profile.level++;
-            this.progress.gotGems(this.gemsLevelUpReward);//save here
+            this.progress.giveChests(BoxType.GoldBox, this.boxReward);//save is here
         }
+        this.progress.onExperienceChanges.callListeners();
+    }
+
+    harvestCompleted() {
+        this._addExperience(Math.trunc(this.prestigeExpPercent * this.profile.expToNextLevel));
+    }
+
+    buildingUpgraded() {
+        this._addExperience(this.expByOneCollecting);
     }
 
     buildingWasClicked() {
@@ -20507,6 +20715,14 @@ class PlayerInfo {
 
             this._addExperience(this.expByOneCollecting);
         }
+    }
+
+    getExpProgress() {
+        return this.profile.experience / this.profile.expToNextLevel;
+    }
+
+    getLevel() {
+        return this.profile.level;
     }
 }
 
@@ -20519,9 +20735,11 @@ class Progress {
         gameInit.onBuildingLiked.addListener(this.buildingLiked.bind(this));
         gameInit.update.addListener(this.update.bind(this));
         this.onResourcesChanges = new UnnyAction();
+        this.onExperienceChanges = new UnnyAction();
         this.onUpgradePurchased = new UnnyAction();
 
-        const localProgress = useGoblin ? this.loadProgress() : null;
+        //const localProgress = useGoblin ? this.loadProgress() : null;
+        const localProgress = this.loadProgress();
         let save = progress;
         let localSaveUsed = false;
         if (!progress) {
@@ -20565,7 +20783,7 @@ class Progress {
                     goldSpent: "0",
                     seedsStrength: 2,
                     firstTimeInGame: Progress.getTimeNow(),
-                    tutorialPhase: 0,
+                    tutorialPhase: TutStartPhase,
                     maxGoldModifier: 0,
                     gameLanguage: "English",
                     sessionNumber: 1,
@@ -20648,9 +20866,9 @@ class Progress {
 
         // this.savedProgress = getCheatSave();
         this.savedProgress.puzzle.goods = fixArray(this.savedProgress.puzzle.goods);
-        // this.savedProgress.profile.tutorialPhase = TutPhases.TutorialEnd;
         // this._resetConstructions();
         // this._setResourceByName("tokenCommon", "99999900");
+        // this._setResourceByName("gold", "99999900");
 
         // this._setResourceByName("gems", "20000");
         // this._setResourceByName("seeds", "0");
@@ -21195,6 +21413,7 @@ class Progress {
             this.savedProgress.puzzle.boxes[BoxType.GemsBox]--;
 
         this.savedProgress.puzzle.openedBox += 1;
+        achsManager.boxWasOpened(this.savedProgress.puzzle.openedBox);
 
         const puzzle = this.getPuzzleInfo();
         this.openGeneralChest(puzzle,
@@ -21320,6 +21539,9 @@ class Progress {
         if (this.savedProgress.puzzle.boxes[BoxType.SuperBox] <= 0 || this.areAllPuzzlesCollected())
             return false;
         this.savedProgress.puzzle.boxes[BoxType.SuperBox] -= 1;
+
+        this.savedProgress.puzzle.openedBox += 1;
+        achsManager.boxWasOpened(this.savedProgress.puzzle.openedBox);
 
         const puzzle = this.getPuzzleInfo();
 
@@ -21605,6 +21827,8 @@ class Progress {
 
         this.seedsEarned(seeds);
 
+        achsManager.reportPrestige(seeds);
+
         //give tokens
         const tokensForPrestige = GameData.getTokensForPrestige(this.savedProgress.profile.harvestsCount);
         if (tokensForPrestige) {
@@ -21648,6 +21872,9 @@ class Progress {
     }
 
     _writeToStorage() {
+        const v = this.savedProgress.profile.savedVersion || 0;
+        this.savedProgress.profile.savedVersion = v + 1;
+
         if (this.useGoblin)
         {
             if (socialManager.isAuthorizing()) {
@@ -21655,20 +21882,15 @@ class Progress {
                 return;
             }
 
-            const v = this.savedProgress.profile.savedVersion || 0;
-            this.savedProgress.profile.savedVersion = v + 1;
             window.localStorage.setItem("allProgress", JSON.stringify(this.savedProgress));
-            this.timerId = null;
-
             const deltaSave = this._getDeltaSave();
-
             this._sendDataToServer(deltaSave);
         }
 
         {
-            const v = this.savedProgress.profile.savedVersion || 0;
-            this.savedProgress.profile.savedVersion = v + 1;
+            // console.log("Saving... " + this.savedProgress.profile.savedVersion);
             UnnyNet.UnnyNet.save(COLLECTION_NAME, COLLECTION_KEY_NAME, JSON.stringify(this.savedProgress), 0, (response) => {
+                // console.log("RESP", response);
                 if (!response.success)
                     console.error("couldn't save", response.error);
             });
@@ -21749,6 +21971,8 @@ class Progress {
     }
 
     loadProgress() {
+        if (!this.useGoblin)
+            return null;
         const value = window.localStorage.getItem("allProgress");
         // console.log("load " + value);
         return value ? JSON.parse(value) : null;
@@ -21785,21 +22009,41 @@ class Progress {
         return this.savedProgress.worlds[worldId].buildings[buildingId];
     }
 
+    static getPhaseIndex(phase) {
+        const data = GameData.getTutorialConfig();
+        for (let i = 0; i < data.length; i++) {
+            if (data[i].stepNumber === phase)
+                return i;
+        }
+        return -1;
+    }
+
     canCheckStore() {
+        if (typeof TutPhases !== 'undefined')
+            return this.getTutorialPhase() >= TutPhases.BuildSlots9 && this.getTutorialPhase() < TutPhases.FortuneWheel;
         return true;
-        return this.getTutorialPhase() >= TutPhases.BuildSlots9 && this.getTutorialPhase() < TutPhases.FortuneWheel;
     }
 
     isTutorialCompleted() {
-        return (this.getTutorialPhase() >= TutPhases.BuildSlots6 && this.getTutorialPhase() < TutPhases.FortuneWheel) || VisualData.getGameSettings().no_tutorial;
+        if (typeof TutPhases !== 'undefined')
+            return (this.getTutorialPhase() >= TutPhases.BuildSlots6 && this.getTutorialPhase() < TutPhases.FortuneWheel) || VisualData.getGameSettings().no_tutorial;
+
+        const data = GameData.getTutorialConfig();
+        const phaseIndex = Progress.getPhaseIndex(this.getTutorialPhase());
+
+        return phaseIndex < 0 || data[phaseIndex].actionType === 'Completed';
     }
 
     canShowBoss(worldId) {
-        return (this.getTutorialPhase() >= TutPhases.SummonBoss || VisualData.getGameSettings().no_tutorial) && this.getConstructedBuildingsCount(worldId) >= 6;
+        if (typeof TutPhases !== 'undefined')
+            return (this.getTutorialPhase() >= TutPhases.SummonBoss || VisualData.getGameSettings().no_tutorial) && this.getConstructedBuildingsCount(worldId) >= 6;
+        return this.getConstructedBuildingsCount(worldId) >= 6;
     }
 
     canShowGuard() {
-        return ((this.getTutorialPhase() >= TutPhases.Boost4h || VisualData.getGameSettings().no_tutorial) && !VisualData.getGameSettings().no_guard);
+        if (typeof TutPhases !== 'undefined')
+            return ((this.getTutorialPhase() >= TutPhases.Boost4h || VisualData.getGameSettings().no_tutorial) && !VisualData.getGameSettings().no_guard);
+        return !VisualData.getGameSettings().no_guard;
     }
 
     getConstructedBuildingsCount(worldId) {
@@ -22008,7 +22252,7 @@ class Progress {
     savePhotoQuestsProgress(quest) {
         this._checkPhotoQuests();
 
-        console.info("savePhotoQuestsProgress", quest);
+        // console.info("savePhotoQuestsProgress", quest);
         const pq = this.savedProgress.photo_quests;
 
         const id = quest.info.id;
@@ -22074,6 +22318,7 @@ let GameData = (function () {
     ATLAS_SPRITES = {};
 
     IN_APP_DATA = {};
+    TUTORIAL_CONFIG = {};
 
     PHOTO_DATA = null;
     PHOTOS_BY_MAINTAG_ARR = null;
@@ -22140,6 +22385,10 @@ let GameData = (function () {
 
         getInAppData() {
             return IN_APP_DATA;
+        },
+
+        getTutorialConfig() {
+            return TUTORIAL_CONFIG;
         },
 
         getMarketPurchaseById(id) {
@@ -22314,6 +22563,10 @@ let GameData = (function () {
             return PHOTOS_BY_FILTER_ARR;
         },
 
+        getPhotoById(id) {
+            return PHOTO_DATA_DICT[id];
+        },
+
         getPhotoDataBySlotId(id) {
             for (let i in PHOTO_DATA) {
                 if (PHOTO_DATA[i].goodsId == id)
@@ -22337,6 +22590,18 @@ let GameData = (function () {
             return ATLAS_SPRITES.hasOwnProperty(objInfo.file) ? "AtlasJson" : null;
         },
 
+        getTokensForNextSlotLevelUp(level) {
+            if (!TOKENS_DATA)
+                return 0;
+
+            const tl = TOKENS_DATA.slotLevelTokens;
+            for (let i = 0; i < tl.length; i++) {
+                if (tl[i].parameter > level)
+                    return tl[i];
+            }
+            return 0;
+        },
+
         getTokensForSlotLevelUp(level) {
             return TOKENS_DATA ? TOKENS_DATA.tokensForLevel[level] : null;
         },
@@ -22357,6 +22622,8 @@ let GameData = (function () {
             const questsData = data.QuestsData;
             const loginData = data.LoginData;
             const inAppData = data.InAppLots;
+
+            TUTORIAL_CONFIG = data.TutorialConfig;
 
             QUESTS_DATA = questsData;
             inAppData.sort(_compareFunctionOrder);
@@ -22436,8 +22703,10 @@ let GameData = (function () {
                         MARKET_GEMS.push(val);
                         break;
                 }
-                if (!val.slotNumber)
-                    val.slotNumber = val.upgradeTier - 1;
+                if (!val.hasOwnProperty('slotNumber')) {
+                    if (val.hasOwnProperty('upgradeTier'))
+                        val.slotNumber = val.upgradeTier - 1;
+                }
                 val.bigInt = bigInt(val.price).multiply(RESOURCES_SCALE);
                 MARKET_DATA[val.id] = val;
             }
@@ -23460,6 +23729,16 @@ class GuardManager {
         return this.guardsByID[id];
     }
 
+    getGuardIcon(id) {
+        const guard = this.getGuardById(id);
+        if (!guard)
+            console.error("no guard found " + id);
+        else {
+            return guard.title;
+        }
+        return null;
+    }
+
     setProgress(progress) {
         const allPuzzles = progress.savedProgress.puzzle;
         const puzzles = allPuzzles.guards ? allPuzzles.guards : allPuzzles.guards = [];
@@ -23586,6 +23865,51 @@ class GuardManager {
     // MultiProfitLow - + производительность для апгрейд тиров 1-Х (Х определяется где то в гейм конфиге, вроде бы)
     // SeedProc - + к бонусу от престиж валюты
 }
+
+class AchsManager {
+    constructor() {
+        this.delayTimers = {};
+    }
+
+    callWithDelay(key, action, delay = 5000) {
+        if (this.delayTimers[key])
+            clearInterval(this.delayTimers[key]);
+
+        this.delayTimers[key] = setTimeout(() => {
+            action();
+            this.delayTimers[key] = null;
+        }, delay);
+    }
+
+    reportPrestige(revenue) {
+        console.info("==> PRESTIGE", revenue);
+        UnnyNet.UnnyNet.reportAchievements(1, 1);
+        UnnyNet.UnnyNet.reportAchievements(2, 1);
+        UnnyNet.UnnyNet.reportAchievements(3, 1);
+
+        const length = revenue.toString().length - 2;//because of RESOURCES_SCALE
+        UnnyNet.UnnyNet.reportLeaderboards("bb340b93-11b0-4ce7-8ebb-ba5dcaa672dd", length);
+    }
+
+    slotWasUpgraded(building) {
+        this.callWithDelay('slot_' + building.slot, () => {
+            const intSlot = parseInt(building.slot);
+            if (intSlot >= 1 && intSlot <= 9) {
+                UnnyNet.UnnyNet.reportAchievements(intSlot + 3, building.getLevel(), (response)=>{
+                    console.error("response", response);
+                });
+            }
+        });
+    }
+
+    boxWasOpened(total) {
+        this.callWithDelay('boxes', () => {
+            UnnyNet.UnnyNet.reportLeaderboards("a332f1d7-80fd-40de-97a8-f8a3948ebad7", total);
+        }, 10000);
+    }
+}
+
+const achsManager = new AchsManager();
 
 class GameInit{
     constructor() {
@@ -23718,13 +24042,25 @@ class GameInit{
             console.error(e);
         }
 
+        let platform;
+        switch (AllGetParams.game_platform) {
+            case "vk":
+                platform = UnnyNet.Platform.VKONTAKTE;
+                break;
+            case "nutaku":
+                platform = UnnyNet.Platform.NUTAKU;
+                break;
+        }
+
         UnnyNet.UnnyNet.initialize({
             game_id: CURRENT_ENVIRONMENT.un_game_id,
             public_key: CURRENT_ENVIRONMENT.un_key,
             default_channel: "0",
             open_animation: UnnyNet.ViewOpenDirection.RIGHT_TO_LEFT,
             game_login: false,
-            load_dictionaries: !oldSystem
+            platform: platform,
+            load_dictionaries: !oldSystem,
+            debug: DEBUG_MODE
         }, ()=> {
 
             UnnyNet.UnnyNet.setFrame({
@@ -23732,7 +24068,7 @@ class GameInit{
                 right: 0,
                 left: '',
                 bottom: 0,
-                width: '50%',
+                width: '37%',
                 height: '100%'
             });
 
@@ -23744,6 +24080,7 @@ class GameInit{
                 data.BoxData = rgc.getDictionary("boxes");
                 data.LoginData = rgc.getDictionary("loginBonuses");
                 data.QuestsData = rgc.getDictionary("dailyQuests");
+                data.TutorialConfig = rgc.getDictionary("tutorialConfig");
 
                 if (VisualData.getGameSettings().photos) {
                     data.PhotoData = rgc.getDictionary("photos");
@@ -24114,7 +24451,9 @@ class Loader {
                 this.value = value;
                 this.progressBar.setScale(value * this.scale, this.scale);
             }
+            return true;
         }
+        return false;
     }
 
     _makeFast() {
@@ -24137,6 +24476,14 @@ class Loader {
 
         if (this.parent.visible !== false || !fast)
             this.fastBar.obj.setVisible(fast);
+    }
+
+    getOriginX() {
+        return this.progressBar.x / localScale;
+    }
+
+    getWidth() {
+        return this.progressBar.width;
     }
 }
 
@@ -24871,7 +25218,9 @@ class VisualInit {
                     };
                     loader.spritesheet(key, obj.file, newParams);
                     break;
-                case UnnyObjectType.Spine: loader.spine(key, obj.json, obj.atlas);
+                case UnnyObjectType.Spine:
+                    if (loader.spine)
+                        loader.spine(key, obj.json, obj.atlas);
                     break;
                 // case UnnyObjectType.NineSlice:
                 //     loader.nineSlice(key, obj.file, obj.paddingY, obj.paddingX, obj.paddingX, obj.paddingY);
@@ -25206,7 +25555,7 @@ class GUIScroll {
 let mainResourceIcon = null;
 let cansResourceIcon = null;
 let hudResources;
-let photoTokensCommon = null;
+let photoTokensCommon = {};
 
 class HUDResources {
     /***
@@ -25242,6 +25591,23 @@ class HUDResources {
         const info = VisualData.GUI_HUDResources;
 
         let image;
+
+        if (VisualData.getGameSettings().player_level) {
+            this.playerExpLoader = new Loader(this.group, 'PlayerExpLoaderBack', 'PlayerExpLoader', x + 300 * GlobalScale, y);
+            image = engine.add.sprite(x, y, 'PlayerIcon').setOrigin(0, 0.5);
+            this.group.add(image);
+
+            this.playerStar = engine.add.sprite(x, y, 'PlayerExpStar');
+            this.group.add(this.playerStar);
+
+            this.playerStarLabel = engine.add.text(x, y, null, PlayerLevelFont).setOrigin(0.5, 0.5);
+            this.group.add(this.playerStarLabel);
+
+            y += Distance;
+
+            this.setPlayersData();
+        }
+
         image = engine.add.sprite(x, y, info.singleImage ? info.singleImage : 'HudResBack1').setOrigin(0, 0.5);
         if (info.hudBackScale)
             image.setScale(info.hudBackScale, 1);
@@ -25298,7 +25664,7 @@ class HUDResources {
                 if (info.hudBackScale)
                     image.setScale(info.hudBackScale, 1);
                 this.group.add(image);
-                photoTokensCommon = this.group.create(x + IconOffset, y, GameData.getIconByType(token)).setScale(0.6);
+                photoTokensCommon[token] = this.group.create(x + IconOffset, y, GameData.getIconByType(token));
                 this.photo_tokens[i] = engine.add.text(x + LabelOffset, y + info.labelOffsetY * GlobalScale, '123456', font).setOrigin(0, 0.5);
                 this.group.add(this.photo_tokens[i]);
             }
@@ -25313,6 +25679,7 @@ class HUDResources {
      */
     gameLoaded(progress) {
         progress.onResourcesChanges.addListener(this.updateResources.bind(this));
+        progress.onExperienceChanges.addListener(this.updateExperience.bind(this));
         this.updateResources(progress);
     }
 
@@ -25335,6 +25702,25 @@ class HUDResources {
 
     udpateResourcesHelp() {
         this.resourcesHelp.setVisible(this.visible && gameInit.progress.getTotalResources().compare("100000000000000000") >= 0);
+    }
+
+    setPlayersData() {
+        const prog = gameInit.playerInfo.getExpProgress();
+        if (this.playerExpLoader.setProgress(prog)) {
+            const x = this.playerExpLoader.getOriginX() + this.playerExpLoader.getWidth() * prog;
+            this.playerStarLabel.setPosition(x, this.playerStarLabel.y / localScale);
+            this.playerStar.setPositionX(x);
+        }
+
+        const level = gameInit.playerInfo.getLevel();
+        if (level !== this.playerLevel) {
+            this.playerLevel = level;
+            this.playerStarLabel.setText(level);
+        }
+    }
+
+    updateExperience() {
+        this.setPlayersData();
     }
 }
 
@@ -25359,9 +25745,11 @@ function getFont2(size) {
 function getStroke(size) {
     return Math.max(1, Math.trunc(size * localScale / dpi));
 }
+
 //ElectraMedium
 //ArchivoBlack
-let DefaultFontVeryBig, DefaultFontBig, DefaultFont, DefaultFontSmall, DefaultFontSmall2, DefaultFontSmallPuzzleBonus, DefaultFontBlack, DefaultFontSmallBlack, DefaultFontVerySmall, DefaultFontVerySmall2;
+let DefaultFontVeryBig, DefaultFontBig, DefaultFont, DefaultFontSmall, DefaultFontSmall2, DefaultFontSmallPuzzleBonus,
+    DefaultFontBlack, DefaultFontSmallBlack, DefaultFontVerySmall, DefaultFontVerySmall2;
 let DefaultFontWheel;
 
 function createFont(obj) {
@@ -25378,9 +25766,10 @@ class ToogleButton {
         const offset = (winInfo && winInfo.activeOffset) || 0;
         this.button = new BasicButton(group, {
                 'scene': engine,
-                'key':'Tab_Close',
-                'x': x,
-                'y': y},
+                'key': winInfo.tabClose || 'Tab_Close',
+                'x': x + (winInfo.tabCloseOffsetX || 0) * GlobalScale,
+                'y': y
+            },
             callback)
             .setOrigin(0.5, 1)
             .setDepth(WinDefaultDepth - 250);
@@ -25388,14 +25777,19 @@ class ToogleButton {
         this.y = y;
         this.selected = new BasicButton(group, {
                 'scene': engine,
-                'key':'Tab_Open',
+                'key': winInfo.tabOpen || 'Tab_Open',
                 'x': x,
-                'y': y + offset},
+                'y': y + offset
+            },
             callback)
             .setOrigin(0.5, 1)
             .setDepth(WinDefaultDepth - 120);
         this.icon = group.create(x, y - 70, icon).setDepth(WinDefaultDepth - 50);
-        this.icon.setScale(100 * GlobalScale / this.icon.width / imagesDeltaScale);
+        this._setScale(false);
+    }
+
+    _setScale(selected) {
+        this.icon.setScale((100 * GlobalScale / this.icon.width / imagesDeltaScale) * (selected ? ((this.winInfo && this.winInfo.iconScaleActive) || 1) : 1));
     }
 
     addSale(group, icon) {
@@ -25407,6 +25801,7 @@ class ToogleButton {
         this.button.setVisible(!selected);
         const posY = this.y - (selected ? ((this.winInfo && this.winInfo.iconOffsetActive) || 100) * GlobalScale : ((this.winInfo && this.winInfo.iconOffset) || 70) * GlobalScale);
         this.icon.setPositionY(posY);
+        this._setScale(selected);
         if (this.icon2) {
             if (selected)
                 this.icon2.setScale(1).setPositionY(posY - 50);
@@ -25418,8 +25813,15 @@ class ToogleButton {
 
 function setStoreCellLocked(group, locked) {
     const color = locked ? LockTint : NormalTint;
-    group.unny_btn.setButtonLocked(locked);
-    group.priceText.tint = color;
+
+    const storeGUI = VisualData.GUI_WinStore;
+    if (storeGUI.btnSpriteInactive)
+        group.unny_btn.setTexture(locked ? storeGUI.btnSpriteInactive : storeGUI.btnSpriteNormal);
+    else {
+        group.unny_btn.setButtonLocked(locked);
+        group.priceText.tint = color;
+    }
+
     if (group.priceIcon)
         group.priceIcon.tint = color;
 }
@@ -25434,25 +25836,29 @@ function createStoreCell(engine, group, cellCenterX, cellCenterY, title, imageNa
     const storeGUI = VisualData.GUI_WinStore;
 
     group.unny_back = engine.add.sprite(cellCenterX, cellCenterY, "Store_Slot").setDepth(depth);
+    if (storeGUI.store_back_scale)
+        group.unny_back.setScale(storeGUI.store_back_scale);
     group.add(group.unny_back);
 
     if (storeGUI.headerImg) {
-        const headerImg = engine.add.sprite(cellCenterX, cellCenterY + storeGUI.headerOffsetY * GlobalScale , storeGUI.headerImg).setDepth(depth);
+        const headerImg = engine.add.sprite(cellCenterX, cellCenterY + storeGUI.headerOffsetY * GlobalScale, storeGUI.headerImg).setDepth(depth);
         group.add(headerImg);
     }
 
-    group.unny_text = engine.add.textOld(cellCenterX, cellCenterY + storeGUI.headerOffsetY * GlobalScale, title, DefaultFontVerySmall).setOrigin(0.5, 0.5).setDepth(depth);
+    group.unny_text = engine.add.textOld(cellCenterX, cellCenterY + storeGUI.headerOffsetY * GlobalScale, title, storeGUI.headerFont ? DefaultFontPurchaseSlot : DefaultFontVerySmall).setOrigin(0.5, 0.5).setDepth(depth);
     group.add(group.unny_text);
-    group.unny_text.setWordWrapWidth(400 * GlobalScale);
+    group.unny_text.setWordWrapWidth((storeGUI.header_wrap || 400) * GlobalScale);
 
     const btnCenterY = cellCenterY + storeGUI.btnOffsetY * GlobalScale;
     group.unny_container = engine.add.container(cellCenterX, btnCenterY);
     group.unny_btn = new BasicButton(group.unny_container, {
         'scene': engine,
-        'key': 'DefaultButton',
+        'key': (GameData.getIconByType("Gems") === priceImg && storeGUI.btnSpriteGems) || storeGUI.btnSpriteNormal || 'DefaultButton',
         'x': 0,
         'y': 0,
-        'scale_parent': true
+        'scale_parent': true,
+        // 'minWidth': storeGUI.btnMinWidth,
+        'scale': storeGUI.btnScale || 1
     }, purchaseCallback);
 
     // group.add(group.unny_btn.setDepth(depth));
@@ -25486,11 +25892,11 @@ function createStoreCell(engine, group, cellCenterX, cellCenterY, title, imageNa
 
     let priceText;
     if (priceImg) {
-        const priceIcon = engine.add.sprite(- 120 * GlobalScale, 0, priceImg);
+        const priceIcon = engine.add.sprite(-120 * GlobalScale, 0, priceImg);
         priceIcon.setScale(70 / priceIcon.width * GlobalScale / imagesDeltaScale).setDepth(depth);
         group.unny_container.add(priceIcon);
         group.priceIcon = priceIcon;
-        priceText = engine.add.textOld(- 70 * GlobalScale, 0, price, DefaultFontVerySmall2).setOrigin(0, 0.5).setDepth(depth);
+        priceText = engine.add.textOld(-70 * GlobalScale, 0, price, DefaultFontVerySmall2).setOrigin(0, 0.5).setDepth(depth);
     } else {
         priceText = engine.add.textOld(0, 0, price, DefaultFontVerySmall2).setOrigin(0.5, 0.5).setDepth(depth);
     }
@@ -25498,14 +25904,14 @@ function createStoreCell(engine, group, cellCenterX, cellCenterY, title, imageNa
     group.unny_container.add(priceText);
 
     if (addSecondLabel) {
-        group.priceText2 = engine.add.textOld(0, 50 * GlobalScale, "Hdhsadsa", DefaultFontVerySmall).setOrigin(0.5, 0.5).setDepth(depth);
+        group.priceText2 = engine.add.textOld(0, 50 * GlobalScale, null, DefaultFontVerySmall).setOrigin(0.5, 0.5).setDepth(depth);
         group.unny_container.add(group.priceText2);
     }
     return priceText;
 }
 
 class WinBase {
-    constructor(gui, gameInit){
+    constructor(gui, gameInit) {
         gui.onCreate.addListener(this.createGame.bind(this));
         this.onClose = new UnnyAction();
         this.gui = gui;
@@ -25603,7 +26009,7 @@ class WinBase {
         }
     }
 
-    localize(){
+    localize() {
 
     }
 
@@ -25629,8 +26035,17 @@ class WinBase {
         return def * GlobalScale;
     }
 
+    _getHeaderFont() {
+        return DefaultFontBig;
+    }
+
     createHeader(engine) {
-        this.header = engine.add.text(0, this.getWinInfoValue('headerOffset', -600), null, DefaultFontBig)
+        const y = this.getWinInfoValue('headerOffset', -600);
+        if (this.winInfo.header_image) {
+            const img = engine.add.sprite(0, y, this.winInfo.header_image).setDepth(WinDefaultDepth);
+            this.group.add(img);
+        }
+        this.header = engine.add.text(0, y, null, this._getHeaderFont())
             .setOrigin(0.5, 0.5)
             .setDepth(WinDefaultDepth);
         this.group.add(this.header);
@@ -25702,7 +26117,7 @@ class WinBase {
             }
         }
 
-        setTimeout(()=>{
+        setTimeout(() => {
             this._showAllButtonsBack();
         }, duration * 1000);
     }
@@ -25715,6 +26130,10 @@ class WinBase {
             if (callback)
                 callback(image);
         });
+    }
+
+    getExitButton() {
+        return this.exitButton;
     }
 }
 
@@ -25785,7 +26204,7 @@ class WinWithBack extends WinWithExit {
         if (!this.nineSlice) {
             this.createBack();
         } else {
-            if (!staticBackgrounds.hasOwnProperty(this.nineSlice)) {
+            if (!staticBackgrounds.hasOwnProperty(this.nineSlice) && this.nineSlice !== 'none') {
                 const container = this.engine.add.container(this.centerX, this.centerY).setDepth(WinDefaultDepth - 1);
                 const back = engine.add.myNineSlice(0, 0, VisualData.WINDOW_NINE_SLICE[this.nineSlice]).setOrigin(0.5);
                 container.add(back);
@@ -25825,7 +26244,8 @@ class WinWithBack extends WinWithExit {
 
     setWindowVisible(visible) {
         super.setWindowVisible(visible);
-        this.showBackOrNineSlice(visible);
+        if (this.nineSlice !== 'none')
+            this.showBackOrNineSlice(visible);
         this.setBlackBackVisible(visible);
 
         if (visible)
@@ -25985,31 +26405,45 @@ class WinDailyBonus extends WinWithBrownBack {
 
                 CreateImageInGroup(engine, group, 'Daily_Opened', (image) => {
                     image.setDepth(WinDefaultDepth);
+                    if (this.winInfo.btnsScale)
+                        image.setScale(this.winInfo.btnsScale);
                 });
 
                 CreateImageInGroup(engine, group, 'Daily_Active', (image) => {
                     group.img_active = image.setDepth(WinDefaultDepth + 10);
+                    if (this.winInfo.btnsScale)
+                        group.img_active.setScale(this.winInfo.btnsScale);
                     this._applyVisibilityActive(group);
                 });
 
                 if (dayInfo) {
                     LoadFile(engine, dayInfo.getIconName(), dayInfo.getIconPath(), () => {
-                        const img = engine.add.sprite(0, 0, dayInfo.getIconName());
-                        group.add(img);
-                        img.setDepth(WinDefaultDepth + 15);
+                        const addImg = () => {
+                            const img = engine.add.sprite(0, 0, dayInfo.getIconName());
+                            group.add(img);
+                            img.setDepth(WinDefaultDepth + 15);
 
-                        group.parameter = engine.add.text(110 * GlobalScale, 30 * GlobalScale, dayInfo.getText(), DefaultFont)
-                            .setOrigin(1, 0)
-                            .setDepth(WinDefaultDepth + 18);
-                        group.add(group.parameter);
+                            group.parameter = engine.add.text((this.winInfo.text_x || 110) * GlobalScale, (this.winInfo.text_y || 30) * GlobalScale, dayInfo.getText(), this.winInfo.font ? DefaultFontDailyBonus : DefaultFont)
+                                .setOrigin(1, 0)
+                                .setDepth(WinDefaultDepth + 18);
+                            group.add(group.parameter);
+                        };
+
+                        if (!this.winInfo.dailyClosedDepth)
+                            addImg();
 
                         CreateImageInGroup(engine, group, 'Daily_Closed', (image) => {
                             group.img_closed = image.setDepth(WinDefaultDepth + 20);
+                            if (this.winInfo.btnsScale)
+                                group.img_closed.setScale(this.winInfo.btnsScale);
+
+                            if (this.winInfo.dailyClosedDepth)
+                                addImg();
                             this._applyVisibilityClosed(group);
 
                             CreateImageInGroup(engine, group, 'Daily_Check', (image) => {
                                 image.x += 90 * GlobalScale * localScale;
-                                image.y -= 90 * GlobalScale * localScale;
+                                image.y += (this.winInfo.check_y || -90) * GlobalScale * localScale;
                                 group.img_check = image.setDepth(WinDefaultDepth + 30);
                                 this._applyVisibilityCheck(group);
                             });
@@ -26101,6 +26535,15 @@ class WinWithLargeBack extends WinWithBack {
         }
     }
 }
+
+const PuzzleColorsPerLevel = [
+    0x979797,
+    0x9e501f,
+    0x7ba3ae,
+    0xe8b92a,
+    0x147e97,
+    0x90cef5
+];
 
 class WinDropPuzzle extends WinWithBrownBack {
     constructor(gui, gameInit) {
@@ -26254,9 +26697,9 @@ class WinDropPuzzle extends WinWithBrownBack {
 
         // console.log("imageId " + imageId + " > " + drop);
         //Image
-        const ImageName = GameData.getPuzzleIcon(imageId + 1);//TODO myth
+        const ImageName = guard ? gameInit.guardManager.getGuardIcon(imageId) : GameData.getPuzzleIcon(imageId + 1);
 
-        LoadFile(engine, ImageName, VisualData.getPuzzleFolder() + ImageName + ".png", () => {
+        LoadFile(engine, ImageName, (guard ? VisualData.getManagerPuzzleFolder() : VisualData.getPuzzleFolder()) + ImageName + ".png", () => {
 
             animManager.moveToPointExtra(box, this.dropPoint, 0.05, 0.3, ()=>{
                 audioManager.playChestSound(0);
@@ -26275,10 +26718,14 @@ class WinDropPuzzle extends WinWithBrownBack {
                         if (newImageInfo.pieces & (1 << (drop)))
                             realLevel++;
 
-                        const backImg = engine.add.sprite(0, 0, GameData.getPuzzleBackNamePerLevel(realLevel));
-                        backImg.setScale(puzzleImg.width / backImg.width * scale);
+                        if (VisualData.getGameSettings().puzzle_top) {
+                            puzzleImg.tint = PuzzleColorsPerLevel[realLevel-1];
+                        } else {
+                            const backImg = engine.add.sprite(0, 0, GameData.getPuzzleBackNamePerLevel(realLevel));
+                            backImg.setScale(puzzleImg.width / backImg.width * scale);
+                            puzzleCont.add(backImg);
+                        }
 
-                        puzzleCont.add(backImg);
                         puzzleCont.add(puzzleImg);
                         puzzleCont.setDepth(WinDefaultDepth + 100);
                         puzzleCont.angle = 180;
@@ -26307,7 +26754,7 @@ class WinDropPuzzle extends WinWithBrownBack {
                                 openedBox.setVisible(false);
                                 openedBox.alpha = 1;
 
-                                const collectedPuzzle = winPuzzleInstance.getCell({item: imageInfo, index: imageId, realLevel: newImageInfo.level}, true);
+                                const collectedPuzzle = winPuzzleInstance.getCell({item: imageInfo, index: imageId, realLevel: newImageInfo.level}, true, false, null, guard);
                                 this.itemsToDestroy.push(collectedPuzzle);
                                 collectedPuzzle.setPosition(this.collectedPoint2.x * localScale, RealScreenHeight * 1.1 * localScale);
                                 const moveUpDuration = 0.5;
@@ -26329,15 +26776,25 @@ class WinDropPuzzle extends WinWithBrownBack {
                                             const backSize = winPuzzleInstance.winInfo.partSize * GlobalScale;
                                             const partSize = backSize / puzzleSize;
 
-                                            const x = collectedPuzzle.x / localScale + (i - puzzleSize * 0.5) * partSize;
-                                            const y = collectedPuzzle.y / localScale + (j - puzzleSize * 0.5) * partSize;
+                                            let x = collectedPuzzle.x / localScale;
+                                            let y = collectedPuzzle.y / localScale;
 
-                                            const newBack = engine.add.sprite(x, y, GameData.getPuzzleBackNamePerLevel(realLevel))
-                                                .setOrigin(0, 0)
-                                                .setDepth(WinDefaultDepth + 100 - 10);
+                                            let newBack;
+                                            if (VisualData.getGameSettings().puzzle_top) {
+                                                newBack = engine.add.sprite(x, y, ImageName)
+                                                    .setDepth(WinDefaultDepth + 100 - 10);
+                                                newBack.setCrop(i*partSize, j*partSize, partSize, partSize);
+                                                newBack.tint = PuzzleColorsPerLevel[realLevel - 1];
+                                            } else {
+                                                x += (i - puzzleSize * 0.5) * partSize;
+                                                y += (j - puzzleSize * 0.5) * partSize;
 
-                                            newBack.setScale(partSize / newBack.width / imagesDeltaScale);
+                                                newBack = engine.add.sprite(x, y, GameData.getPuzzleBackNamePerLevel(realLevel))
+                                                    .setOrigin(0, 0)
+                                                    .setDepth(WinDefaultDepth + 100 - 10);
 
+                                                newBack.setScale(partSize / newBack.width / imagesDeltaScale);
+                                            }
                                             collectedPuzzle.add(newBack);
                                         }
 
@@ -26438,8 +26895,6 @@ class WinPuzzle extends WinWithBrownBack {
         this.createSummary(engine);
         // this.createStore(engine);
 
-        this.updateNumbers();
-
         for (let i in this.groups)
             SetGroupVisible(this.groups[i], false);
         SetGroupVisible(this.group, false);
@@ -26479,8 +26934,8 @@ class WinPuzzle extends WinWithBrownBack {
                 const cellCenterX = center ? 0 : config.cellWidth / 2 * GlobalScale;
                 const cellCenterY = center ? 0 : config.cellHeight / 2 * GlobalScale;
 
-                const offsetX = 80 * GlobalScale;
-                const offsetY = -180 * GlobalScale;
+                const offsetX = (this.winInfo.popup_x || 80) * GlobalScale;
+                const offsetY = (this.winInfo.popup_y || -180) * GlobalScale;
 
                 const px = group.x / localScale + cellCenterX + offsetX;
                 const py = group.y / localScale + cellCenterY + offsetY;
@@ -26516,7 +26971,7 @@ class WinPuzzle extends WinWithBrownBack {
         const distanceY = 120 * GlobalScale;
 
         const cx = this.centerX + distanceX / 4;
-        const cy = RealScreenHeight - distanceY * 3 - 50 * GlobalScale;
+        const cy = RealScreenHeight - distanceY * 3 - 20 * GlobalScale;
 
         this.puzzleNumbers = [];
         this.puzzleNames = [];
@@ -26528,7 +26983,7 @@ class WinPuzzle extends WinWithBrownBack {
                 .setOrigin(0, 0)
                 .setDepth(WinDefaultDepth);
 
-            const number = engine.add.text(x + 130 * GlobalScale, y - 10 * GlobalScale, null, DefaultFontSmall).setDepth(WinDefaultDepth);
+            const number = engine.add.text(x + 130 * GlobalScale, y - 10 * GlobalScale, null, this.winInfo.puzzleNumberFont ? PuzzleNumberFont : DefaultFontSmall).setDepth(WinDefaultDepth);
             const name = engine.add.text(x + 130 * GlobalScale, y + 50 * GlobalScale, null, DefaultFontSmall2).setDepth(WinDefaultDepth);
             this.puzzleNumbers.push(number);
             this.puzzleNames.push(name);
@@ -26556,6 +27011,7 @@ class WinPuzzle extends WinWithBrownBack {
             SetGroupVisible(this.groups[1], true);
             SetGroupVisible(this.groups[0], false);
         } else {
+            this.updateNumbers();
             this.scroll[this.selectedTab].table.setItems(this.getItems());
             SetGroupVisible(this.groups[0], true);
             SetGroupVisible(this.groups[1], false);
@@ -26591,10 +27047,9 @@ class WinPuzzle extends WinWithBrownBack {
         if (visible) {
             this._prepareWindow();
             this.tabWasSwitched(this.tabs[this.selectedTab]);
-            this.updateNumbers();
             this.updateChestsNumber();
             this.boxShakeTimer = setInterval(() => {
-                if (gameInit.progress.getChestsCount() > 0 && this.availableBoxes && this.availableBoxes.active && this.availableBoxes.unny_sprite)
+                if (gameInit.progress.getChestsCount() > 0 && this.availableBoxes && this.availableBoxes.active && this.availableBoxes.unny_sprite) {
                     if (!this.availableBoxesPos)
                         this.availableBoxesPos = {
                             x: (this.availableBoxes.unny_sprite.x - this.availableBoxes.x) / localScale,
@@ -26604,6 +27059,7 @@ class WinPuzzle extends WinWithBrownBack {
                     if (this.boxShakeAnimation)
                         this.boxShakeAnimation.stopAnimation();
                     this.boxShakeAnimation = animManager.shakeBox(this.availableBoxes.unny_sprite, 7, 20 * GlobalScale, 0.6, 2);
+                }
             }, 2000);
         } else {
             for (let i in this.scroll)
@@ -26637,8 +27093,8 @@ class WinPuzzle extends WinWithBrownBack {
         const guardBox = GameData.getBoxByType("Guard");
         const superGuardBox = GameData.getBoxByType("GuardSuper");
 
-        const offsetX = 80 * GlobalScale;
-        const offsetY = -180 * GlobalScale;
+        const offsetX = (this.winInfo.popup_x || 80) * GlobalScale;
+        const offsetY = (this.winInfo.popup_y || -180) * GlobalScale;
 
         let group = engine.rexUI.add.container(0,0);
         const depth = WinDefaultDepth + 200;
@@ -26785,7 +27241,7 @@ class WinPuzzle extends WinWithBrownBack {
         group.puzzle = this.getCell(cell, true, true, () => {
             this.gameInit.guardManager.switchGuard(this.gameInit.selectedWorld, guard);
             this.scroll[this.selectedTab].table.setItems(this.getItems());
-        });
+        }, true);
 
         group.puzzle.setPosition(100 * localScale, 100 * localScale);
         group.add(group.puzzle);
@@ -26814,7 +27270,7 @@ class WinPuzzle extends WinWithBrownBack {
                         text = pb;
                         break;
                 }
-                group.passive = engine.add.textOld(400 * GlobalScale, y, text, DefaultFontBlack)
+                group.passive = engine.add.textOld(400 * GlobalScale, y, text, DefaultFontSmall)
                     .setOrigin(0, 0.5)
                     .setDepth(WinDefaultDepth + 100);
                 group.add(group.passive);
@@ -26823,7 +27279,7 @@ class WinPuzzle extends WinWithBrownBack {
             }
 
             y+= 50 * GlobalScale;
-            group.passive = engine.add.textOld(400 * GlobalScale, y, "ACTIVATION: x" + guard.getActiveBonusValueMinumum(), DefaultFontBlack)
+            group.passive = engine.add.textOld(400 * GlobalScale, y, "ACTIVATION: x" + guard.getActiveBonusValueMinumum(), DefaultFontSmall)
                 .setOrigin(0, 0.5)
                 .setDepth(WinDefaultDepth + 100);
             group.add(group.passive);
@@ -26837,7 +27293,7 @@ class WinPuzzle extends WinWithBrownBack {
         return group;
     }
 
-    getCell(cell, center, button, callback) {
+    getCell(cell, center, button, callback, manager) {
         const config = this.configs[this.slotsPuzzleTab];
 
         const puzzle = cell.item;
@@ -26856,26 +27312,97 @@ class WinPuzzle extends WinWithBrownBack {
         const depth = WinDefaultDepth + 100;
 
         //Image
-        const ImageName = GameData.getPuzzleIcon(cell.index + 1);
+        const ImageName = manager ? gameInit.guardManager.getGuardIcon(puzzle.id) : GameData.getPuzzleIcon(cell.index + 1);
+
+        const set = VisualData.getGameSettings();
 
         let loading = true;
         if (ImageName) {
-            LoadFile(engine, ImageName, VisualData.getPuzzleFolder() + ImageName + ".png", () => {
+            LoadFile(engine, ImageName, (manager ? VisualData.getManagerPuzzleFolder() : VisualData.getPuzzleFolder()) + ImageName + ".png", () => {
                 if (group && group.active) {
+                    const x0 = group.x / localScale;
+                    const y0 = group.y / localScale;
+                    // if (button) {
+                    //     group.unny_button = new BasicButton(group, {
+                    //         'scene': engine,
+                    //         'key': ImageName,
+                    //         'x': x0 + cellCenterX,
+                    //         'y': y0 + cellCenterY,
+                    //         'scale_parent': true
+                    //     }, callback).setDepth(depth - 7);
+                    //     group.add(group.unny_button);
+                    // } else {
+                    //TODO fix button for managers
+                    if (!set.puzzle_top) {
+                        const sprite = engine.add.sprite(x0 + cellCenterX, y0 + cellCenterY, ImageName)
+                            .setDepth(depth - 7);
+                        group.add(sprite);
+                    }
+                    // }
 
-                    if (button) {
-                        group.unny_button = new BasicButton(group, {
-                            'scene': engine,
-                            'key': ImageName,
-                            'x': group.x / localScale + cellCenterX,
-                            'y': group.y / localScale + cellCenterY,
-                            'scale_parent': true
-                        }, callback).setDepth(depth - 7);
-                        group.add(group.unny_button);
-                    } else
-                    group.add(
-                        engine.add.sprite(group.x / localScale + cellCenterX, group.y / localScale + cellCenterY, ImageName)
-                            .setDepth(depth - 7));
+                    //Background
+                    const puzzleSize = GameData.getPuzzleSizePerLevel(puzzle.level);
+                    const backSize = this.winInfo.partSize * GlobalScale;
+                    const partSize2 = this.winInfo.frontPartSize * GlobalScale / puzzleSize;
+                    const partSize = backSize / puzzleSize;
+
+                    const backDepth = depth - 10;
+                    let index = 0;
+
+                    for (let i = 0; i < puzzleSize; i++) {
+                        for (let j = 0; j < puzzleSize; j++) {
+                            let realLevel = puzzle.level;
+                            if ((puzzle.pieces & (1 << (index++))) !== 0)
+                                realLevel++;
+
+                            let backImg = null;
+                            if (realLevel === 0) {
+                                let puzzleImg = null;
+                                switch (index) {
+                                    case 1:
+                                        puzzleImg = 'PuzzleItemLockUL';
+                                        break;
+                                    case 2:
+                                        puzzleImg = 'PuzzleItemLockDL';
+                                        break;
+                                    case 3:
+                                        puzzleImg = 'PuzzleItemLockUR';
+                                        break;
+                                    case 4:
+                                        puzzleImg = 'PuzzleItemLockDR';
+                                        break;
+                                }
+
+                                if (this.winInfo.centerBlock) {
+                                    backImg = engine.add.sprite(x0 + cellCenterX, y0 + cellCenterY, puzzleImg)
+                                        .setDepth(depth - 2);
+                                } else {
+                                    const x = cellCenterX + (i - puzzleSize * 0.5) * partSize2;
+                                    const y = cellCenterY + (j - puzzleSize * 0.5) * partSize2;
+                                    backImg = engine.add.sprite(x0 + x, y0 + y, puzzleImg).setDepth(depth - 2).setOrigin(0, 0);
+                                }
+                            } else {
+                                if (set.puzzle_top) {
+                                    backImg = engine.add.sprite(x0 + cellCenterX, y0 + cellCenterY, ImageName)
+                                        .setDepth(depth - 7);
+                                    backImg.setCrop(i*partSize, j*partSize, partSize, partSize);
+                                    backImg.tint = PuzzleColorsPerLevel[realLevel - 1];
+                                } else {
+                                    const x = cellCenterX + (i - puzzleSize * 0.5) * partSize;
+                                    const y = cellCenterY + (j - puzzleSize * 0.5) * partSize;
+
+                                    backImg = engine.add.sprite(x0 + x, y0 + y, GameData.getPuzzleBackNamePerLevel(realLevel))
+                                        .setOrigin(0, 0)
+                                        .setDepth(backDepth);
+
+                                    backImg.setScale(partSize / backImg.width / imagesDeltaScale);
+                                }
+                            }
+
+                            group.add(backImg);
+                            group.images.push(backImg);
+                        }
+                    }
 
                     if (!loading && this.scroll)
                         this.scroll[this.slotsPuzzleTab].fakeMove();
@@ -26885,64 +27412,10 @@ class WinPuzzle extends WinWithBrownBack {
         loading = false;
         //
 
-        //Background
-        const puzzleSize = GameData.getPuzzleSizePerLevel(puzzle.level);
-        const backSize = this.winInfo.partSize * GlobalScale;
-        const partSize2 = this.winInfo.frontPartSize * GlobalScale / puzzleSize;
-        const partSize = backSize / puzzleSize;
-
-        const backDepth = depth - 10;
-        let index = 0;
-        for (let i = 0;i < puzzleSize;i++) {
-            for (let j = 0;j < puzzleSize;j++) {
-                let realLevel = puzzle.level;
-                if ((puzzle.pieces & (1 << (index++))) !== 0)
-                    realLevel++;
-
-                let backImg;
-                if (realLevel === 0) {
-                    let puzzleImg = null;
-                    switch (index) {
-                        case 1: puzzleImg = 'PuzzleItemLockUL';
-                            break;
-                        case 2: puzzleImg = 'PuzzleItemLockDL';
-                            break;
-                        case 3: puzzleImg = 'PuzzleItemLockUR';
-                            break;
-                        case 4: puzzleImg = 'PuzzleItemLockDR';
-                            break;
-                    }
-
-                    if (this.winInfo.centerBlock) {
-                        backImg = engine.add.sprite(cellCenterX, cellCenterY, puzzleImg)
-                            .setDepth(depth - 2);
-                    } else {
-                        const x = cellCenterX + (i - puzzleSize * 0.5) * partSize2;
-                        const y = cellCenterY + (j - puzzleSize * 0.5) * partSize2;
-                        backImg = engine.add.sprite(x, y, puzzleImg).setDepth(depth - 2).setOrigin(0, 0);
-                    }
-
-                    const scale = VisualData.getGameSettings().locked_puzzle_scale;
-                    if (scale)
-                        backImg.setScale(scale);
-                } else {
-                    const x = cellCenterX + (i - puzzleSize * 0.5) * partSize;
-                    const y = cellCenterY + (j - puzzleSize * 0.5) * partSize;
-
-                    backImg = engine.add.sprite(x, y, GameData.getPuzzleBackNamePerLevel(realLevel))
-                        .setOrigin(0, 0)
-                        .setDepth(backDepth);
-
-                    backImg.setScale(partSize / backImg.width / imagesDeltaScale);
-                }
-
-                group.add(backImg);
-                group.images.push(backImg);
-            }
+        if (!this.winInfo.no_frame) {
+            const frame = engine.add.sprite(cellCenterX, cellCenterY, "PuzzleItemFrame").setDepth(depth - 5);
+            group.add(frame);
         }
-
-        const frame = engine.add.sprite(cellCenterX, cellCenterY, "PuzzleItemFrame").setDepth(depth - 5);
-        group.add(frame);
 
         if (puzzle.level > 0 && puzzle.level < 5 && this.winInfo.showGrid) {
             const bonusBack = engine.add.sprite(cellCenterX, cellCenterY, "Grid" + puzzleSize)
@@ -26990,6 +27463,10 @@ class WinPuzzle extends WinWithBrownBack {
 
     getBoxesTab() {
         return this.tabs[this.storeTab].button;
+    }
+
+    getBoxesScroll() {
+        return this.scroll[this.storeTab];
     }
 
     getPuzzleOpenBox() {
@@ -27188,17 +27665,17 @@ class WinStore extends WinWithLargeBack {
 
     _getStoreCellButtonCaption(item) {
         if (item.price)
-            return LocalizationManager.getLocalizedNumber(gameInit.progress.getPurchasePrice(item))
-
-        const price = socialManager.getPriceLabel(item.id);
-        if (price)
-            return price;
+            return LocalizationManager.getLocalizedNumber(gameInit.progress.getPurchasePrice(item));
 
         switch (item.id) {
             case GEMS_VIDEO_REWARD_ID: {
                 return gameInit.progress.getAdsWatchedToday() + "/" + AdsAvailableToWatchADay;
             }
         }
+
+        const price = socialManager.getPriceLabel(item.id);
+        if (price)
+            return price;
 
         return "Unknown";
     }
@@ -27284,7 +27761,8 @@ class WinStore extends WinWithLargeBack {
                 locked = group.item.priceType !== "Gems" && !gameInit.progress.isResourcesWithTypeEnoughForPurchase(group.item);
                 break;
         }
-        setStoreCellLocked(group, locked);
+        if (group.item.priceType !== "Gems")
+            setStoreCellLocked(group, locked);
     }
 
     static getImageName(item) {
@@ -27338,7 +27816,6 @@ class WinStore extends WinWithLargeBack {
         this.scroll.setVisible(visible);
         this.removeTimer();
 
-        console.warn(">>> " + visible + " <> " + gameInit.progress.canCheckStore());
         if (visible) {
             if (this.forceGems) {
                 this.selectedTab = 4;
@@ -28589,7 +29066,7 @@ class WinBossProccess extends WinBase {
 }
 
 class WinWithPicture extends WinWithBack {
-    constructor(gui, gameInit, info){
+    constructor(gui, gameInit, info) {
         super(gui, gameInit);
         this.info = info;
     }
@@ -28616,15 +29093,19 @@ class WinWithPicture extends WinWithBack {
             super.createExitButton();
     }
 
+    createButton() {
+        if (this.info.button)
+            this.createActionButton(this.engine, this.actionClicked.bind(this), this.info.buttonY || this.winInfo.buttonY, true, null, null, this.info.btn_min_width, this.info.icon, this.winInfo.btnImage);
+    }
+
     createGame(engine) {
         super.createGame(engine);
 
-        if (this.info.button)
-            this.createActionButton(engine, this.actionClicked.bind(this), this.info.buttonY, true, null, null, this.info.btn_min_width, this.info.icon);
+        this.createButton();
         if (this.info.header)
             this.createHeader(engine);
 
-        if (this.info.description || this.info.getDescription) {
+        if ((this.info.description || this.info.getDescription) && !this.winInfo.no_description) {
             this.description = engine.add.text(this.getWinInfoValue("descriptionX", 0), this.getWinInfoValue("descriptionY", -300), null, this.info.smallFont ? DefaultFontSmallBlack : DefaultFontBlack)
                 .setWordWrapWidth((this.info.wordWrapWidth || 900) * GlobalScale)
                 .setOrigin(0.5, 0.5)
@@ -28652,8 +29133,7 @@ class WinWithPicture extends WinWithBack {
                     y += this.winInfo.imageY;
             }
             this.loadImage(this.info.image, x * GlobalScale, y * GlobalScale);
-        }
-        else
+        } else
             this.destroyImage();
     }
 }
@@ -28661,13 +29141,25 @@ class WinWithPicture extends WinWithBack {
 
 class WinBossSummon extends WinWithPicture {
 
+    _getHeaderFont() {
+        return this.winInfo.headerFont ? BossSummonHeaderFont : super._getHeaderFont();
+    }
+
+    createButton() {
+        if (this.winInfo.mystButtons) {
+            this.createActionButton(this.engine, this.actionClicked.bind(this), this.winInfo.buttonY2, true, null, null, this.info.btn_min_width, this.info.icon, this.winInfo.btnImage2);
+        }
+        super.createButton();
+    }
+
     setWindowVisible(visible) {
         super.setWindowVisible(visible);
 
         if (visible) {
             const seeds = LocalizationManager.getLocalizedNumber(this.gameInit.progress.getSeedsForSoulsCount());
-            this.description.setText(LocalizationManager.removeCodes(LocalizationManager.getLocalizization(this.info.description)
-                .format(seeds)));
+            if (this.description)
+                this.description.setText(LocalizationManager.removeCodes(LocalizationManager.getLocalizization(this.info.description)
+                    .format(seeds)));
         }
     }
 }
@@ -28750,7 +29242,7 @@ class WinBanjoPreEnd extends WinWithPicture {
 
             let amplitudeDesc = animManager.scaleSinInfinite(this.description2, 0.6, 0.8, 0.2);
 
-            let timer = setInterval(()=>{
+            let timer = setInterval(() => {
                 curStep++;
                 if (curStep === steps) {
                     this.description2.setText(LocalizationManager.getLocalizedNumber(max));
@@ -28762,7 +29254,7 @@ class WinBanjoPreEnd extends WinWithPicture {
                         this.amplitudeImage = null;
                     }
 
-                    setTimeout(()=>{
+                    setTimeout(() => {
                         guiManager.getWindowByType(WindowType.WinBanjoEnd).setNumber(gameInit.progress.getSupervisorResourcesCollected());
                         guiManager.openNewWindow(WindowType.WinBanjoEnd, true);
                     }, 2000);
@@ -28888,6 +29380,69 @@ class WinWelcomeBack extends WinWithUnlockedExitButton {
         this.offlineResources = resources;
         this.description.setText(LocalizationManager.getLocalizization(this.info.description)
             .format(LocalizationManager.getLocalizedNumber(resources)));
+    }
+}
+
+class QuestBubble extends WinBase {
+
+    setData(text, image, callback) {
+        this.text.setText(text);
+        const name = "Tutorial_" + image;
+        const path = "Tutorial/" + image + ".png";
+        LoadFile(this.engine, name, path, () => {
+            if (this.visible) {
+                this.destroyImage();
+                this.image = this.engine.add.sprite(500 * GlobalScale, RealScreenHeight / 2 - 50 * GlobalScale, name)
+                    .setOrigin(0.5, 1)
+                    .setDepth(WinDefaultDepth + 10);
+                this.group.add(this.image);
+            }
+        });
+
+        this.callback = callback;
+        this.showTime = Progress.getTimeNow();
+    }
+
+    createGame(engine) {
+        super.createGame(engine);
+
+        const y = RealScreenHeight / 2 - 200 * GlobalScale;
+        const textW = 700 * GlobalScale;
+        const textH = 160 * GlobalScale;
+        const tOffset = -100 * GlobalScale;
+
+        const depth = WinDefaultDepth + 200;
+        {
+            const size = 32 * GlobalScale;
+            this.blackBg = engine.add.sprite(this.centerX - size * 10, this.centerY, 'BlackPixel')
+                .setScale(RealScreenWidth / size + 10, RealScreenHeight / size + 10)
+                .setDepth(depth);
+            this.group.add(this.blackBg);
+            this.group.setDepth(depth);
+        }
+
+        new BasicButton(this.group, {
+            'scene': this.engine,
+            'key': 'QuestBack',
+            'x': 0,
+            'y': y
+        }, () => {
+            if (Progress.getTimeNow() - this.showTime >= 1000) {
+                this.closeWindow();
+                if (this.callback)
+                    this.callback();
+            }
+        }).setDepth(depth + 10);
+
+        this.text = engine.add.text(tOffset - textW / 2, y - textH / 2, "Hello World", QuestFont).setOrigin(0, 0).setWordWrapWidth(textW).setDepth(depth + 20);
+        this.group.add(this.text);
+    }
+
+    setWindowVisible(visible) {
+        super.setWindowVisible(visible);
+
+        if (visible)
+            audioManager.playWindowOpen();
     }
 }
 
@@ -29056,11 +29611,8 @@ class WinMain extends WinBase {
 
         const centerX = this.centerX;
 
-        if (VisualData.ALL_OBJECTS.MM_Btn_Bread && !gameSettings.no_supervisor)
-            this.superVisorButton = this.createButton('MM_Btn_Bread', 4.5 * padding, padding, () => this.gui.openNewWindow(WindowType.WinSupervisor));
-
         if (gameSettings.photos) {
-            this.createButton('MM_Btn_GirlMenu', centerX, bottomButtons - 24 * GlobalScale, () => {
+            this.girlsMenu = this.createButton('MM_Btn_GirlMenu', centerX, bottomButtons - 24 * GlobalScale, () => {
                 guiManager.openNewWindow(WindowType.WinPhotosMainMenu);
                 // guiManager.openNewWindow(WindowType.WinPhotosList);
             });
@@ -29073,14 +29625,14 @@ class WinMain extends WinBase {
         this.upgradeButton = this.createButton('MM_Btn_Upgrade', centerX - distance * 2, bottomButtons, () => this.gui.changeMode(GUIMode.UpgradeBuildings));
         this.storeButton = this.createButton('MM_Btn_Store', centerX - distance, bottomButtons, () => this.gui.openNewWindow(WindowType.WinStore));
         this.puzzlesButton = this.createButton('MM_Btn_Chests', centerX + distance, bottomButtons, () => this.gui.openNewWindow(WindowType.WinPuzzle));
-        this.createButton('MM_Btn_PhotoAlbum', centerX + distance * 2, bottomButtons, () => this.gui.openNewWindow(WindowType.WinPuzzle));
+        this.createButton('MM_Btn_PhotoAlbum', centerX + distance * 2, bottomButtons, () => this.gui.openNewWindow(WindowType.WinPhotosList));
 
         this.createButton('MM_Btn_Worlds', RealScreenWidth - paddingX, padding, () => gameInit.switchToTheNextWorld());
-        this.createButton('MM_Btn_ManagerDoubling', RealScreenWidth - paddingX * 3, padding, () => this.gui.openNewWindow(WindowType.WinManagerDoubling));
+        this.superVisorButton = this.createButton('MM_Btn_ManagerDoubling', RealScreenWidth - paddingX * 3, padding, () => this.gui.openNewWindow(WindowType.WinManagerDoubling));
 
         this.factoryButton = this.createButton('MM_Btn_Prestige', centerX, padding, () => this.gui.openNewWindow(WindowType.WinBossSummon));
 
-        this.zoomIns = this.createButton('MM_Btn_Likes', centerX + 400 * GlobalScale, padding, () => this.gui.openNewWindow(WindowType.WinZoomIn));
+        this.zoom = this.createButton('MM_Btn_Zoom', padding, padding + 700 * GlobalScale, () => this.gui.openNewWindow(WindowType.WinZoomIn));
 
         let y = padding + distance;
         this.questsButton = this.createButton('QuestsHUDButton', RealScreenWidth - padding2, y, () => this.gui.openNewWindow(WindowType.WinQuests));
@@ -29396,6 +29948,10 @@ class WinMain extends WinBase {
         this.showButtonFromTutorial(this.superVisorButton);
     }
 
+    showGirlsMenuButton() {
+        this.showButtonFromTutorial(this.girlsMenu);
+    }
+
     getUpgradeButton() {
         return this.upgradeButton;
     }
@@ -29458,6 +30014,10 @@ class WinMain extends WinBase {
     _showAllButtonsBack() {
         super._showAllButtonsBack();
         this._updateAllNotifications();
+    }
+
+    getGirlsMenuButton() {
+        return this.girlsMenu;
     }
 }
 
@@ -29528,17 +30088,24 @@ class BuildingsGUI extends WinBase{
             resName = resName || 'PriceIcon';
             const groupInfo = production[buildingId];
 
+            let x,y;
             if (groupInfo.icon) {
-                const icon = this.engine.add.sprite(groupInfo.icon.x / localScale, groupInfo.icon.y / localScale, resName).setScale(VisualData.ANIMATIONS.flyingResourcesScale).setDepth(OverlayDepth);
-                const p = {
-                    x: destination.x / localScale,
-                    y: destination.y / localScale
-                };
-                animManager.moveToPointSin(icon, p, VisualData.ANIMATIONS.flyingResources, () => {
-                    icon.destroy(true);
-                    animManager.changeShapeOfSouls(destination);
-                });
+                x = groupInfo.icon.x;
+                y = groupInfo.icon.y;
+            } else {
+                x = groupInfo.resources.x;
+                y = groupInfo.resources.y;
             }
+
+            const icon = this.engine.add.sprite(x / localScale, y / localScale, resName).setScale(VisualData.ANIMATIONS.flyingResourcesScale).setDepth(OverlayDepth);
+            const p = {
+                x: destination.x / localScale,
+                y: destination.y / localScale
+            };
+            animManager.moveToPointSin(icon, p, VisualData.ANIMATIONS.flyingResources, () => {
+                icon.destroy(true);
+                animManager.changeShapeOfSouls(destination);
+            });
 
             if (!dontPlaySound)
                 audioManager.playBuildingClick();
@@ -29584,7 +30151,7 @@ class BuildingsGUI extends WinBase{
         }
     }
 
-    _tokensWereEarned(building) {
+    _tokensWereEarned(building, tokenType) {
         if (building.getLevel() === 0)
             return;
 
@@ -29593,7 +30160,7 @@ class BuildingsGUI extends WinBase{
             if (!worldsData.visible)
                 continue;
 
-            this._sendFlyingResources(worldsData, building.id, photoTokensCommon, 'PuzzlesOpened');
+            this._sendFlyingResources(worldsData, building.id, photoTokensCommon[tokenType], GameData.getIconByType(tokenType));
         }
     }
 
@@ -29832,8 +30399,8 @@ class BuildingsGUI extends WinBase{
         }
     }
 
-    getPurchaseButton(slot_id) {
-        const purchase = this.worldsData[1].purchase;
+    getPurchaseButton(world_id, slot_id) {
+        const purchase = this.worldsData[world_id].purchase;
         return purchase.hasOwnProperty(slot_id) ? purchase[slot_id].button : null;
     }
 
@@ -30019,6 +30586,21 @@ class BuildingsGUI extends WinBase{
             available: true
         };
 
+        if (set.shields && set.shields.rewards) {
+            const info = GameData.getTokensInfoForWorld(world.id);
+            if (info) {
+                const xx = upX + set.shields.reward_x * GlobalScale;
+                const yy = upY + set.shields.reward_y * GlobalScale;
+                visUpgradeGroup.create(xx, yy, GameData.getIconByType(info.tokenType)).setScale(0.5);
+                const tokensInfo = GameData.getTokensForNextSlotLevelUp(building.level);
+                const t = engine.add.text(xx + 30 * GlobalScale, yy, tokensInfo.amount + " at lvl " + tokensInfo.parameter, ShieldRewardFont).setOrigin(0, 0.5);
+                visUpgradeGroup.add(t);
+
+                upgradeInfo.upgrade_reward_count = tokensInfo.parameter;
+                upgradeInfo.upgrade_reward = t;
+            }
+        }
+
         table.on('pointerdown', () => {
             if (!upgradeInfo.available)// not enough resources
                 return;
@@ -30171,6 +30753,18 @@ class BuildingsGUI extends WinBase{
         groupInfo.level.setText(text);
         groupInfo.price.setText(this.getBuildingUpgradePrice(building));
         groupInfo.loader.setProgress(building.getUpgradeProgress());
+
+        if (set.shields && set.shields.rewards) {
+            const info = GameData.getTokensInfoForWorld(world.id);
+            if (info) {
+                const tokensInfo = GameData.getTokensForNextSlotLevelUp(building.level);
+
+                if (groupInfo.upgrade_reward_count !== tokensInfo.parameter) {
+                    groupInfo.upgrade_reward.setText(tokensInfo.amount + " at lvl " + tokensInfo.parameter);
+                    groupInfo.upgrade_reward_count = tokensInfo.parameter;
+                }
+            }
+        }
     }
 
     resourcesUpdate(world, building) {
@@ -30203,20 +30797,15 @@ class BuildingsGUI extends WinBase{
 
 
 
-class WinPhotosMainMenu extends WinWithBrownBack{
+class WinPhotosMainMenu extends WinWithBrownBack {
     constructor(gui, gameInit) {
         super(gui, gameInit);
+        this.allCells = {};
     }
 
     localize() {
         super.localize();
         // this.description.setText(LocalizationManager.getLocalizization("CollectCropTipText"));
-    }
-
-    createGame(engine) {
-        super.createGame(engine);
-
-        this.photosButton = this.createButton('BigBlueButton', this.centerX -400 * GlobalScale, this.centerY -750 * GlobalScale, () => this.gui.openNewWindow(WindowType.WinPhotosList));
     }
 
     setWindowVisible(visible) {
@@ -30259,40 +30848,50 @@ class WinPhotosMainMenu extends WinWithBrownBack{
                 completedQuests++;
         }
 
-        let group = engine.rexUI.add.container(0,0);
+        let group = engine.rexUI.add.container(0, 0);
         group.unny_container = engine.add.container(cellCenterX, cellCenterY);
         group.add(group.unny_container);
-        new BasicButton(group.unny_container, {
-            'scene': engine,
-            'key': 'QuestBack',
-            'x': 0,
-            'y': 0,
-        }, ()=> {
-            const win = guiManager.openNewWindow(WindowType.WinPhotosQuest);
-            win.selectQuest(item);
-        });
 
-        const imageName = GameData.getPuzzleIcon(item.array[0].goodsId);
-        const path = VisualData.getPuzzleFolder() + imageName + ".png";
 
-        LoadFile(engine, imageName, path, () => {
+        const girlName = item.tag.toLowerCase() + "_menu";
+        const icon = "GirlIconMenu_" + girlName;
+        const girlPath = VisualData.getGirlsImagesFolder() + girlName + ".png";
+
+        LoadFile(this.engine, icon, girlPath, () => {
             if (this.visible && group.active) {
-                group.icon = engine.add.sprite(group.x / localScale + cellCenterX - 370 * GlobalScale, group.y / localScale + cellCenterY, imageName).setDepth(WinDefaultDepth + 100);
-                group.add(group.icon.setScale(0.7));
-                // this.scroll.fakeMove();
+
+                group.unny_button = new BasicButton(group.unny_container, {
+                    'scene': engine,
+                    'key': icon,
+                    'x': 0,
+                    'y': 0,
+                }, () => {
+                    const win = guiManager.openNewWindow(WindowType.WinPhotosQuest);
+                    win.selectQuest(item);
+                });
+
+                const levelDesc = engine.add.textOld(40 * GlobalScale, -80 * GlobalScale, "PHOTOS " + completedQuests + "/" + photosGroup.length, GirlsMenuHeaderFont).setOrigin(0);
+                group.unny_container.add(levelDesc.setDepth(WinDefaultDepth + 200));
+
+                const photoDesc = engine.add.textOld(40 * GlobalScale, -20 * GlobalScale, 'some description of the photo. short and concise!', GirlsMenuDescFont).setOrigin(0).setWordWrapWidth(320 * GlobalScale);
+                group.unny_container.add(photoDesc);
             }
         });
 
-        const photoName = engine.add.textOld(cellCenterX + 80 * GlobalScale, cellCenterY - 120 * GlobalScale, item.tag, DefaultFont).setOrigin(0.5);
-        group.add(photoName);
-
-        const photoDesc = engine.add.textOld(cellCenterX + 80 * GlobalScale, cellCenterY + 40 * GlobalScale, 'some description of the photo. short and concise!', DefaultFontBlack).setOrigin(0.5).setWordWrapWidth(600 * GlobalScale);
-        group.add(photoDesc);
-
-        const levelDesc = engine.add.textOld(cellCenterX + 400 * GlobalScale, cellCenterY - 120 * GlobalScale, completedQuests + "/" + photosGroup.length, DefaultFontBlack).setOrigin(0.5);
-        group.add(levelDesc);
-
+        this.allCells[item.tag] = group;
         return group.setOrigin(0).setDepth(WinDefaultDepth + 100);
+    }
+
+    getButtonByTag(tag) {
+        const group = this.allCells[tag];
+        return group ? group.unny_button : null;
+    }
+
+    getButtonPosByTag() {
+        return  {
+            x: 0,
+            y: - 400 * GlobalScale
+        }
     }
 }
 
@@ -30301,12 +30900,6 @@ class WinPhotosQuest extends WinWithBrownBack {
         super(gui, gameInit);
         this.resourcesModules = {};
         this.collectedPuzzle = [];
-    }
-
-    localize() {
-        super.localize();
-        if (this.buttonLabel)
-            this.buttonLabel.setText(LocalizationManager.getLocalizization("UNLOCK"));//TODO localize
     }
 
     createGame(engine) {
@@ -30340,16 +30933,28 @@ class WinPhotosQuest extends WinWithBrownBack {
 
                 startY += 300 * GlobalScale;
 
-                this.photoName = engine.add.text(centerX, startY, null, DefaultFont).setOrigin(0.5);
-                this.group.add(this.photoName);
+                // this.photoName = engine.add.text(centerX, startY, null, DefaultFont).setOrigin(0.5);
+                // this.group.add(this.photoName);
 
-                startY += 50 * GlobalScale;
-                this.photoDesc = engine.add.text(centerX, startY, null, DefaultFontBlack).setOrigin(0.5, 0).setWordWrapWidth(1000 * GlobalScale);
+                // startY += 50 * GlobalScale;
+                this.photoDesc = engine.add.text(centerX, startY, null, PhotoQuestDescFont).setOrigin(0.5, 0).setWordWrapWidth(900 * GlobalScale);
                 this.group.add(this.photoDesc);
 
 
                 const btnY = this.centerY + 700 * GlobalScale;
                 this.createActionButton(engine, () => {
+                    const pq = gameInit.progress.getPhotoQuestById(this.selectedQuest.id);
+                    const quest = gameInit.photoManager.getQuestById(this.selectedQuest.id);
+
+                    if (pq.isComplete) {
+                        const photoImage = GameData.getPhotoById(pq.photoId);
+                        if (photoImage) {
+                            const win = guiManager.openNewWindow(WindowType.WinPhotosPreview);
+                            win.setImage(photoImage);
+                        }
+                        return;
+                    }
+
                     if (!this._isResourcesEnough())
                         return;
 
@@ -30368,7 +30973,6 @@ class WinPhotosQuest extends WinWithBrownBack {
                         gameInit.progress.spendResourcesByTypeAndAmount(type, requiredResources);
                     }
 
-                    const quest = gameInit.photoManager.getQuestById(this.selectedQuest.id);
                     if (quest) {
                         quest.claimReward();
                         this.selectSpecificQuest(this.selectedQuest);
@@ -30382,6 +30986,10 @@ class WinPhotosQuest extends WinWithBrownBack {
                 this.group.add(this.photoLockIcon);
 
                 this.localize();
+            }
+            else {
+                if (this.selectedQuest)
+                    this.selectSpecificQuest(this.selectedQuest);
             }
         } else {
             if (this.collectedPuzzle.length > 0) {
@@ -30411,7 +31019,7 @@ class WinPhotosQuest extends WinWithBrownBack {
     }
 
     selectSpecificQuest(quest) {
-        this.photoName.setText("Photo name");
+        // this.photoName.setText("Photo name");
         this.photoDesc.setText("You immediately stands up to take of your toga. Dryad jumps away gracefully and start running around you on all fours\n");
 
         this.selectedQuest = quest;
@@ -30425,19 +31033,19 @@ class WinPhotosQuest extends WinWithBrownBack {
             this.questProgress.setVisible(false);
             this.loader.setVisible(false);
             this.photoLockIcon.setVisible(false);
-            this.buttonLabel.setVisible(false);
-            this.actionButton.setVisible(false);
+            this.buttonLabel.setVisible(true);
 
             this.questDesc.setText("PICTURE UNLOCKED");
+            this.buttonLabel.setText(LocalizationManager.getLocalizization("VIEW"));//TODO localize
             return;
         } else {
-            this.actionButton.setVisible(true);
+            this.buttonLabel.setText(LocalizationManager.getLocalizization("UNLOCK"));//TODO localize
         }
         const questProgress = gameInit.photoManager.getQuestById(quest.id);
         let visible;
         let lockVisible;
         if (questProgress) {
-            const qText = LocalizationManager.getLocalizization(questProgress.info.info).format(questProgress.count);
+            const qText = LocalizationManager.getLocalizization("Daily" + questProgress.info.questType + "Info").format(questProgress.count);
             this.questDesc.setText(qText);
             this.loader.setProgress(questProgress.progress / questProgress.count);
             this.questProgress.setText(questProgress.progress + '/' + questProgress.count);
@@ -30472,7 +31080,9 @@ class WinPhotosQuest extends WinWithBrownBack {
                 const frame = this.engine.add.sprite(0, 0, 'PhotoQuestFrame').setScale(0.75, 1);
                 pGroup.add(frame);
                 const sprite = this.engine.add.sprite(0, -30 * GlobalScale, GameData.getIconByType(type));
-                pGroup.unny_text = this.engine.add.text(0, 40 * GlobalScale, null, DefaultFontBlack).setOrigin(0.5);
+                if (type.toLowerCase().startsWith('token'))
+                    sprite.setScale(0.65);
+                pGroup.unny_text = this.engine.add.text(0, 40 * GlobalScale, null, PhotoQuestPrice).setOrigin(0.5);
                 pGroup.unny_done_icon = this.engine.add.sprite(-80 * GlobalScale, -50 * GlobalScale, 'PhotoQuestDoneIcon');
 
                 pGroup.add(sprite);
@@ -30508,39 +31118,48 @@ class WinPhotosQuest extends WinWithBrownBack {
     selectQuest(item) {
         const slot = item.array[0].goodsId;
 
-        this.loadImage('PhotoQuest_Aphrodite', this.centerX - 26 * GlobalScale, this.centerY - 600 * GlobalScale);
+        const girlName = item.tag.toLowerCase();
+        const icon = "GirlIcon_" + girlName;
+        const girlPath = VisualData.getGirlsImagesFolder() + girlName + ".png";
 
-        //Draw puzzle
-        const puzzle = gameInit.progress.getPuzzleInfo();
-        const image = slot - 1;
+        LoadFile(this.engine, icon, girlPath, () => {
+            if (this.visible) {
+                this.destroyImage();
+                this.image = this.group.create(this.centerX - 26 * GlobalScale, this.centerY - 600 * GlobalScale, icon).setDepth(WinDefaultDepth + 1);
 
-        const info = puzzle[image];
+                //Draw puzzle
+                const puzzle = gameInit.progress.getPuzzleInfo();
+                const image = slot - 1;
 
-        const distance = 360 * GlobalScale;
-        const puzzlesY = this.centerY - 250 * GlobalScale;
-        let posX = this.centerX - (item.array.length - 1) / 2 * distance;
-        let selected = false;
-        for (let i in item.array) {
-            const collectedPuzzle = winPuzzleInstance.getCell({item: info, index: image}, true, true, () => {
-                this.selectSpecificQuest(item.array[i]);
-            });
-            collectedPuzzle.setPosition(posX * localScale, puzzlesY * localScale);
-            this.collectedPuzzle.push(collectedPuzzle);
-            this.group.add(collectedPuzzle);
+                const info = puzzle[image];
 
-            posX += distance;
+                const distance = 360 * GlobalScale;
+                const puzzlesY = this.centerY - 250 * GlobalScale;
+                let posX = this.centerX - (item.array.length - 1) / 2 * distance;
+                let selected = false;
+                for (let i in item.array) {
+                    const collectedPuzzle = winPuzzleInstance.getCell({item: info, index: image}, true, true, () => {
+                        this.selectSpecificQuest(item.array[i]);
+                    });
+                    collectedPuzzle.setPosition(posX * localScale, puzzlesY * localScale);
+                    this.collectedPuzzle.push(collectedPuzzle);
+                    this.group.add(collectedPuzzle);
 
-            if (!selected) {
-                const pq = gameInit.progress.getPhotoQuestById(item.array[i].id);
-                if (!pq.isComplete) {
-                    selected = true;
-                    this.selectSpecificQuest(item.array[i])
+                    posX += distance;
+
+                    if (!selected) {
+                        const pq = gameInit.progress.getPhotoQuestById(item.array[i].id);
+                        if (!pq.isComplete) {
+                            selected = true;
+                            this.selectSpecificQuest(item.array[i])
+                        }
+                    }
                 }
-            }
-        }
 
-        if (!selected)
-            this.selectSpecificQuest(item.array[0]);
+                if (!selected)
+                    this.selectSpecificQuest(item.array[0]);
+            }
+        });
     }
 }
 
@@ -30578,7 +31197,7 @@ class WinManagerDoubling extends WinWithBrownBack {
             if (!info)
                 console.error("puzzle info wasn't found", guard);
             else {
-                this.collectedPuzzle = winPuzzleInstance.getCell({item: info, index: guard.id});
+                this.collectedPuzzle = winPuzzleInstance.getCell({item: info, index: guard.id}, false, false, null, true);
                 this.group.add(this.collectedPuzzle);
 
                 let y = 50 * GlobalScale;
@@ -30605,7 +31224,7 @@ class WinManagerDoubling extends WinWithBrownBack {
                             text = pb;
                             break;
                     }
-                    const passive = engine.add.textOld(400 * GlobalScale, y, text, DefaultFontBlack)
+                    const passive = engine.add.textOld(400 * GlobalScale, y, text, DefaultFontSmall)
                         .setOrigin(0, 0.5)
                         .setDepth(WinDefaultDepth + 100);
                     this.collectedPuzzle.add(passive);
@@ -30614,7 +31233,7 @@ class WinManagerDoubling extends WinWithBrownBack {
                 }
 
                 y+= 50 * GlobalScale;
-                let active = engine.add.textOld(400 * GlobalScale, y, "ACTIVATION: x" + guard.getActiveBonusValueMinumum(), DefaultFontBlack)
+                let active = engine.add.textOld(400 * GlobalScale, y, "ACTIVATION: x" + guard.getActiveBonusValueMinumum(), DefaultFontSmall)
                     .setOrigin(0, 0.5)
                     .setDepth(WinDefaultDepth + 100);
                 this.collectedPuzzle.add(active);
@@ -30636,7 +31255,7 @@ class WinManagerDoubling extends WinWithBrownBack {
         const back = engine.add.sprite(this.centerX, y, 'QuestBack').setDepth(WinDefaultDepth);
         this.group.add(back);
 
-        this.doubleForeverLabel = engine.add.text(this.centerX, y, "Double your profits forever", DefaultFontBlack)
+        this.doubleForeverLabel = engine.add.text(this.centerX, y, "Double your profits forever", DefaultFontSmall)
             .setOrigin(0.5, 0.5)
             .setWordWrapWidth(1000 * GlobalScale)
             .setDepth(WinDefaultDepth + 100);
@@ -30648,19 +31267,20 @@ class WinManagerDoubling extends WinWithBrownBack {
         let name = engine.add.text(this.centerX, y, "SUPER DOUBLING", DefaultFont).setOrigin(0.5, 0.5).setDepth(WinDefaultDepth + 100);
         this.group.add(name);
 
-        y += 200 * GlobalScale;
+        y += 240 * GlobalScale;
         const button = new ButtonWithText(this.group, {
             'scene': engine,
-            'key': 'DefaultButton',
+            // 'key': 'DefaultButton',
+            'key': 'ButtonPink',
             'x': this.centerX,
             'y': y,
-            'scale_parent': true,
-            'minWidth': 1000 * GlobalScale
+            // 'scale_parent': true,
+            // 'minWidth': 1000 * GlobalScale
         }).setDepth(WinDefaultDepth + 100);
         button.caption.setText("BUY FOR $5");
 
         //top
-        this.guardDescription = engine.add.text(this.centerX, this.centerY + 100 * GlobalScale, "She likes very dirty sex and different toys", DefaultFontBlack)
+        this.guardDescription = engine.add.text(this.centerX, this.centerY + 100 * GlobalScale, "She likes very dirty sex and different toys", DefaultFontSmall)
             .setOrigin(0.5, 0.5)
             .setWordWrapWidth(1000 * GlobalScale)
             .setDepth(WinDefaultDepth + 100);
@@ -30678,7 +31298,7 @@ class WinManagerDoubling extends WinWithBrownBack {
             win.setGuardsTab();
         }).setDepth(WinDefaultDepth + 100);
 
-        let btnText = engine.add.textOld(x, y, "CHANGE", DefaultFontBlack)
+        let btnText = engine.add.textOld(x, y, "CHANGE", DefaultFontVerySmall2)
             .setOrigin(0.5, 0.5)
             .setDepth(WinDefaultDepth + 100);
         this.group.add(btnText);
@@ -30688,7 +31308,7 @@ class WinManagerDoubling extends WinWithBrownBack {
             'key': 'ButtonBlue',
             'x': this.centerX,
             'y': this.centerY + 300 * GlobalScale,
-            'font': DefaultFontSmall
+            'font': DefaultFont
         }, ()=>{
             gameInit.progress.activateSupervisor();
             this.gui.getWindowByType(WindowType.WinMain).playBreadAnimation();
@@ -30697,6 +31317,7 @@ class WinManagerDoubling extends WinWithBrownBack {
         doubleButton.caption.setText('X2 profit for 15 seconds');
     }
 }
+
 class WinPhotosPreview extends WinBase {
     constructor(gui, gameInit) {
         super(gui, gameInit);
@@ -30842,7 +31463,7 @@ class WinPhotosList extends WinWithBrownBack {
             win.setPhotos(item.array, name);
         });
 
-        const photoName = engine.add.textOld(cellCenterX, y - distance, name, DefaultFontBlack).setOrigin(0.5);
+        const photoName = engine.add.textOld(cellCenterX, y - distance, name, DefaultFontSmall).setOrigin(0.5);
         group.add(photoName);
 
         let completedQuests = 0;
@@ -30852,7 +31473,7 @@ class WinPhotosList extends WinWithBrownBack {
                 completedQuests++;
         }
 
-        const photoCount = engine.add.textOld(cellCenterX, y + distance, completedQuests + "/" + array.length, DefaultFontBlack).setOrigin(0.5);
+        const photoCount = engine.add.textOld(cellCenterX, y + distance, "PHOTOS " + completedQuests + "/" + array.length, PhotosCountInListFont).setOrigin(0.5);
         group.add(photoCount);
 
         //Image
@@ -30976,14 +31597,14 @@ class WinPhotosListSingleImages extends WinWithBrownBack {
 
         const y = cellCenterY - 50 * GlobalScale;
         const distance = 30 * GlobalScale;
-        const photoName = engine.add.textOld(cellCenterX, y - distance, item.name, DefaultFont).setOrigin(0.5);
+        const photoName = engine.add.textOld(cellCenterX, y - distance, item.mainTag, DefaultFont).setOrigin(0.5);
         group.add(photoName);
 
-        const photoCount = engine.add.textOld(cellCenterX, y + distance, item.mainTag, DefaultFontSmall).setOrigin(0.5);
-        group.add(photoCount);
+        // const photoCount = engine.add.textOld(cellCenterX, y + distance, item.mainTag, DefaultFontSmall).setOrigin(0.5);
+        // group.add(photoCount);
 
         if (!pq.isComplete) {
-            const lock = engine.add.sprite(cellCenterX, cellCenterY + 100 * GlobalScale, 'PhotoLock');
+            const lock = engine.add.sprite(cellCenterX, cellCenterY + 40 * GlobalScale, 'PhotoLock');
             group.add(lock);
         }
 
@@ -31229,6 +31850,7 @@ const WindowType = {
     WinPhotosListSingleImages: 34,
     WinManagerDoubling: 35,
     WinZoomIn: 36,
+    QuestBubble: 37,
 };
 
 class GUIManager {
@@ -31435,6 +32057,7 @@ class GUIManager {
             this.allWindows[WindowType.WinPhotosListSingleImages] = new WinPhotosListSingleImages(this, gameInit);
             this.allWindows[WindowType.WinManagerDoubling] = new WinManagerDoubling(this, gameInit);
             this.allWindows[WindowType.WinZoomIn] = new WinZoomIn(this, gameInit);
+            this.allWindows[WindowType.QuestBubble] = new QuestBubble(this, gameInit);
         }
 
         this.activeWindows = [];
@@ -31469,6 +32092,11 @@ class GUIManager {
         //         }, 1000);
         //     }
         // })
+    }
+
+    showQuestMessage(text, image, callback) {
+        const win = this.openNewWindow(WindowType.QuestBubble, false, true);
+        win.setData(text, image, callback);
     }
 
     _getResourcesInfoDescription() {
@@ -31556,7 +32184,9 @@ class GUIManager {
                     text = LocalizationManager.getLocalizization("PopupMultiprofitMacro").format(bonus.parameter);
                     break;
             }
-            this.showPopup(text, building.getSmallIcon());
+            LoadFile(this.engine, building.getSmallIcon(), building.getSmallIconPath(), () => {
+                this.showPopup(text, building.getSmallIcon());
+            });
         });
     }
 
@@ -31622,7 +32252,7 @@ class GUIManager {
         return this.allWindows[windowType];
     }
 
-    openNewWindow(windowType, closePrevious) {
+    openNewWindow(windowType, closePrevious, preserveWindow) {
         const wins = this.activeWindows;
         const win = this.allWindows[windowType];
 
@@ -31633,8 +32263,10 @@ class GUIManager {
             wins[wins.length - 1].closeWindow();
             return this.openNewWindow(windowType, false);
         }
-        else
-            wins[wins.length - 1].setWindowVisible(false);
+        else {
+            if (!preserveWindow)
+                wins[wins.length - 1].setWindowVisible(false);
+        }
 
         win.setWindowVisible(true);
         wins.push(win);
@@ -31670,6 +32302,9 @@ class GUIManager {
     }
 
     createHarvestAnimation() {
+        if (!VisualData.FACTORY_WORKING)
+            return;
+
         PrepareAndCreateObject(VisualData.FACTORY_WORKING, null, this.engine, OverlayDepth + WinDefaultDepth, (splitAnimation) => {
             this.harvesting = splitAnimation;
             if (this.guiMode !== GUIMode.Boss)
@@ -31703,7 +32338,9 @@ class GUIManager {
         gameInit.progress.onPuzzlePeaceReceived.addListener(this.puzzleReceived.bind(this));
         gameInit.progress.onUpgradePurchased.addListener(this.upgradePurchased.bind(this));
 
-        this.tutorialLabel = engine.add.text(VisualData.MAP_PARAMS.center.x, RealScreenHeight - 240 * GlobalScale, null, DefaultFontBig).setOrigin(0.5, 1).setDepth(WinDefaultDepth - 2000);
+        const set = VisualData.getGameSettings();
+
+        this.tutorialLabel = engine.add.text(VisualData.MAP_PARAMS.center.x, RealScreenHeight - (set.tut_phrase_y || 0) * GlobalScale, null, (typeof TutorialFont !== 'undefined') ? TutorialFont : DefaultFontBig).setOrigin(0.5, 1).setDepth(WinDefaultDepth - 2000);
         this.hideTutorialText();
 
         this.createPopup(engine);
