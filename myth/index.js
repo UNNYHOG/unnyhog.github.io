@@ -16195,7 +16195,8 @@ var VisualData = (function () {
             STORE_IMAGES_FOLDER,
             QUEST_ICONS_FOLDER,
             DAILY_ICONS_FOLDER,
-            GUARD_PUZZLE_IMAGES_FOLDER
+            GUARD_PUZZLE_IMAGES_FOLDER,
+            GIRLS_ICONS_FOLDER
             // '../Audio/'
         ],
 
@@ -16495,14 +16496,14 @@ var VisualData = (function () {
             building1w1: {
                 objects: [
                     {
-                        scale: 0.11 * totalScale,
+                        scale: 0.1 * totalScale,
                     }
                 ]
             },
             building2w1: {
                 objects: [
                     {
-                        scale: 0.07 * totalScale,
+                        scale: 0.06 * totalScale,
                         scaleSize: {x: 1, y: 0.5}
                     }
                 ]
@@ -16510,42 +16511,42 @@ var VisualData = (function () {
             building3w1: {
                 objects: [
                     {
-                        scale: 0.1 * totalScale,
+                        scale: 0.09 * totalScale,
                     }
                 ]
             },
             building4w1: {
                 objects: [
                     {
-                        scale: 0.09 * totalScale,
+                        scale: 0.08 * totalScale,
                     }
                 ]
             },
             building5w1: {
                 objects: [
                     {
-                        scale: 0.13 * totalScale,
+                        scale: 0.12 * totalScale,
                     }
                 ]
             },
             building6w1: {
                 objects: [
                     {
-                        scale: 0.11 * totalScale,
+                        scale: 0.1 * totalScale,
                     }
                 ]
             },
             building7w1: {
                 objects: [
                     {
-                        scale: 0.12 * totalScale,
+                        scale: 0.11 * totalScale,
                     }
                 ]
             },
             building8w1: {
                 objects: [
                     {
-                        scale: 0.1 * totalScale,
+                        scale: 0.095 * totalScale,
                     }
                 ]
             },
@@ -20588,7 +20589,7 @@ const BoxType = {
 const MUSIC_STATE = "MUSIC_STATE";
 const SOUNDS_STATE = "SOUNDS_STATE";
 const CURRENT_LANGUAGE = "CURRENT_LANGUAGE";
-const GAME_VERSION = "0.9.26";
+const GAME_VERSION = "0.9.27";
 
 let LockAllSounds = false;
 
@@ -24916,8 +24917,8 @@ function LoadFile(engine, name, path, callback, type, secondPath) {
         return;
     }
 
-    path += "?v=10";
-    secondPath += "?v=10";
+    path += "?v=11";
+    secondPath += "?v=11";
 
     if (!loadingImages.hasOwnProperty(name)) {
         switch (type) {
@@ -25732,7 +25733,7 @@ let TextScale = 1;
 let TextScale2 = 1;
 
 function getFont(size) {
-    return Math.trunc(size * GlobalScale * localScale * TextScale * 1.2) + 'px';
+    return Math.trunc(size * GlobalScale * localScale * TextScale * 1.2 * 2) + 'px';
 }
 
 function getLineSpacing(spacing) {
@@ -25984,7 +25985,7 @@ class WinBase {
     _createBlackBackground() {
         const size = 32 * GlobalScale;
         this.group.create(size * 5, size * 3, 'BlackPixel')
-            .setScale(RealScreenWidth / size + 10, RealScreenHeight / size + 10)
+            .setScale(RealScreenWidth / size + 10, RealScreenHeight / size + 20)
             .setDepth(WinDefaultDepth - 2).setInteractive();
     }
 
@@ -26198,7 +26199,7 @@ class WinWithBack extends WinWithExit {
         if (!staticWinBlackBack) {
             const size = 32 * GlobalScale;
             staticWinBlackBack = engine.add.sprite(this.centerX + size * 5, this.centerY + size * 3, 'BlackPixel')
-                .setScale(RealScreenWidth / size + 10, RealScreenHeight / size + 10)
+                .setScale(RealScreenWidth / size + 20, RealScreenHeight / size + 20)
                 .setDepth(WinDefaultDepth - 200);
             staticWinBlackBack.setVisible(false);
         }
@@ -28868,7 +28869,7 @@ class WinSettings extends WinWithExit {
 
             this.group.add(version);
 
-            if (TEST_MODE)
+            // if (TEST_MODE)
                 this.createButton('MM_Btn_Worlds', RealScreenWidth / 2 - 100, 0, () => gameInit.progress.resetProgress());
         } else {
             this.setButtonVisible("Sounds_On", !GameSettings.soundsOff);
@@ -29417,7 +29418,7 @@ class QuestBubble extends WinBase {
         {
             const size = 32 * GlobalScale;
             this.blackBg = engine.add.sprite(this.centerX - size * 10, this.centerY, 'BlackPixel')
-                .setScale(RealScreenWidth / size + 10, RealScreenHeight / size + 10)
+                .setScale(RealScreenWidth / size + 20, RealScreenHeight / size + 20)
                 .setDepth(depth);
             this.group.add(this.blackBg);
             this.group.setDepth(depth);
@@ -29634,7 +29635,7 @@ class WinMain extends WinBase {
 
         this.factoryButton = this.createButton('MM_Btn_Prestige', centerX, padding, () => this.gui.openNewWindow(WindowType.WinBossSummon));
 
-        this.zoom = this.createButton('MM_Btn_Zoom', padding, padding + 700 * GlobalScale, () => this.gui.openNewWindow(WindowType.WinZoomIn));
+        this.zoom = this.createButton('MM_Btn_Zoom', padding, padding + 820 * GlobalScale, () => this.gui.openNewWindow(WindowType.WinZoomIn));
 
         let y = padding + distance;
         this.questsButton = this.createButton('QuestsHUDButton', RealScreenWidth - padding2, y, () => this.gui.openNewWindow(WindowType.WinQuests));
@@ -32810,7 +32811,12 @@ function prepareTextToHtml(engine) {
         return (width || this.newText.clientWidth || this.width) * dpi / localScale;
     };
     Phaser.GameObjects.Text.prototype.isVisible = newIsVisible;
-    engine.add.textOld = oldTest.bind(engine.add);
+
+
+    function newTextOld(x, y, text, font) {
+        return oldTest.call(this, x, y, text, font).setScale(0.5, 0.5);
+    }
+    engine.add.textOld = newTextOld.bind(engine.add);
 
     Phaser.GameObjects.Text.prototype.fitText = function() {
         if (this.newText && (this.newText.style.visibility === 'hidden' || divElementForLabels.style.display === 'none')) {

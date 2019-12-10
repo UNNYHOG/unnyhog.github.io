@@ -1,328 +1,328 @@
 
 Slot8w1.png
-size: 1024,1024
+size: 256,256
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 ankle_left
   rotate: false
-  xy: 280, 507
-  size: 50, 177
-  orig: 50, 177
+  xy: 111, 86
+  size: 12, 42
+  orig: 12, 42
   offset: 0, 0
   index: -1
 ankle_left_c
   rotate: false
-  xy: 280, 359
-  size: 77, 147
-  orig: 77, 147
+  xy: 154, 131
+  size: 18, 35
+  orig: 18, 35
   offset: 0, 0
   index: -1
 ankle_right_2
   rotate: false
-  xy: 240, 60
-  size: 85, 162
-  orig: 85, 162
+  xy: 103, 3
+  size: 20, 39
+  orig: 20, 39
   offset: 0, 0
   index: -1
 ankle_right_c
   rotate: false
-  xy: 825, 400
-  size: 151, 137
-  orig: 151, 137
+  xy: 172, 167
+  size: 36, 33
+  orig: 36, 33
   offset: 0, 0
   index: -1
 arm_left
   rotate: false
-  xy: 469, 138
-  size: 45, 142
-  orig: 45, 142
+  xy: 229, 182
+  size: 11, 34
+  orig: 11, 34
   offset: 0, 0
   index: -1
 arm_right
   rotate: false
-  xy: 692, 538
-  size: 96, 126
-  orig: 96, 126
+  xy: 147, 100
+  size: 23, 30
+  orig: 23, 30
   offset: 0, 0
   index: -1
 body
-  rotate: false
-  xy: 686, 368
-  size: 138, 167
-  orig: 138, 167
+  rotate: true
+  xy: 113, 133
+  size: 33, 40
+  orig: 33, 40
   offset: 0, 0
   index: -1
 book
-  rotate: true
-  xy: 825, 274
-  size: 125, 156
-  orig: 125, 156
+  rotate: false
+  xy: 173, 129
+  size: 30, 37
+  orig: 30, 37
   offset: 0, 0
   index: -1
 dick_c
   rotate: false
-  xy: 1, 685
-  size: 295, 336
-  orig: 295, 336
+  xy: 1, 175
+  size: 70, 80
+  orig: 70, 80
   offset: 0, 0
   index: -1
 face_1
   rotate: false
-  xy: 513, 536
-  size: 178, 176
-  orig: 178, 176
+  xy: 68, 86
+  size: 42, 42
+  orig: 42, 42
   offset: 0, 0
   index: -1
 face_2
   rotate: false
-  xy: 331, 512
-  size: 176, 175
-  orig: 176, 175
+  xy: 68, 43
+  size: 42, 42
+  orig: 42, 42
   offset: 0, 0
   index: -1
 face_3
   rotate: false
-  xy: 508, 363
-  size: 177, 172
-  orig: 177, 172
+  xy: 60, 1
+  size: 42, 41
+  orig: 42, 41
   offset: 0, 0
   index: -1
 face_4
-  rotate: true
-  xy: 806, 837
-  size: 184, 189
-  orig: 184, 189
+  rotate: false
+  xy: 68, 129
+  size: 44, 45
+  orig: 44, 45
   offset: 0, 0
   index: -1
 face_5
   rotate: false
-  xy: 797, 538
-  size: 187, 160
-  orig: 187, 160
+  xy: 195, 217
+  size: 45, 38
+  orig: 45, 38
   offset: 0, 0
   index: -1
 feet_left
   rotate: false
-  xy: 326, 39
-  size: 63, 47
-  orig: 63, 47
+  xy: 124, 86
+  size: 15, 11
+  orig: 15, 11
   offset: 0, 0
   index: -1
 feet_left_c
   rotate: false
-  xy: 515, 121
-  size: 74, 53
-  orig: 74, 53
+  xy: 196, 89
+  size: 18, 13
+  orig: 18, 13
   offset: 0, 0
   index: -1
 feet_right
   rotate: true
-  xy: 665, 100
-  size: 68, 50
-  orig: 68, 50
+  xy: 215, 86
+  size: 16, 12
+  orig: 16, 12
   offset: 0, 0
   index: -1
 feet_right_c
   rotate: false
-  xy: 597, 169
-  size: 100, 40
-  orig: 100, 40
+  xy: 171, 94
+  size: 24, 10
+  orig: 24, 10
   offset: 0, 0
   index: -1
 forearm_left
   rotate: true
-  xy: 985, 580
-  size: 118, 37
-  orig: 118, 37
+  xy: 131, 57
+  size: 28, 9
+  orig: 28, 9
   offset: 0, 0
   index: -1
 forearm_right
-  rotate: true
-  xy: 515, 175
-  size: 105, 81
-  orig: 105, 81
+  rotate: false
+  xy: 230, 157
+  size: 25, 19
+  orig: 25, 19
   offset: 0, 0
   index: -1
 forearm_right_2
   rotate: false
-  xy: 736, 665
-  size: 60, 118
-  orig: 60, 118
+  xy: 241, 177
+  size: 14, 28
+  orig: 14, 28
   offset: 0, 0
   index: -1
 glasses
   rotate: false
-  xy: 554, 784
-  size: 242, 86
-  orig: 242, 86
+  xy: 1, 5
+  size: 58, 20
+  orig: 58, 20
   offset: 0, 0
   index: -1
 hair_1 Copy
   rotate: false
-  xy: 1, 223
-  size: 276, 175
-  orig: 276, 175
+  xy: 1, 63
+  size: 66, 42
+  orig: 66, 42
   offset: 0, 0
   index: -1
 hair_2 Copy
   rotate: true
-  xy: 554, 871
-  size: 150, 251
-  orig: 150, 251
+  xy: 134, 219
+  size: 36, 60
+  orig: 36, 60
   offset: 0, 0
   index: -1
 hair_3 Copy
   rotate: false
-  xy: 297, 821
-  size: 256, 200
-  orig: 256, 200
+  xy: 72, 207
+  size: 61, 48
+  orig: 61, 48
   offset: 0, 0
   index: -1
 hair_4 Copy
   rotate: true
-  xy: 513, 713
-  size: 70, 222
-  orig: 70, 222
+  xy: 134, 201
+  size: 17, 53
+  orig: 17, 53
   offset: 0, 0
   index: -1
 hand_left
   rotate: false
-  xy: 390, 48
-  size: 72, 69
-  orig: 72, 69
+  xy: 147, 82
+  size: 17, 17
+  orig: 17, 17
   offset: 0, 0
   index: -1
 hand_right
   rotate: true
-  xy: 683, 210
-  size: 67, 42
-  orig: 67, 42
+  xy: 244, 96
+  size: 16, 10
+  orig: 16, 10
   offset: 0, 0
   index: -1
 hand_right_2
-  rotate: false
-  xy: 603, 278
-  size: 80, 84
-  orig: 80, 84
+  rotate: true
+  xy: 202, 103
+  size: 19, 20
+  orig: 19, 20
   offset: 0, 0
   index: -1
 head_2
   rotate: false
-  xy: 1, 399
-  size: 278, 285
-  orig: 278, 285
+  xy: 1, 106
+  size: 66, 68
+  orig: 66, 68
   offset: 0, 0
   index: -1
 hips
   rotate: false
-  xy: 797, 699
-  size: 196, 137
-  orig: 196, 137
+  xy: 124, 167
+  size: 47, 33
+  orig: 47, 33
   offset: 0, 0
   index: -1
 leanta_Copy
-  rotate: true
-  xy: 326, 87
-  size: 143, 63
-  orig: 143, 63
+  rotate: false
+  xy: 188, 201
+  size: 34, 15
+  orig: 34, 15
   offset: 0, 0
   index: -1
 leg_left
-  rotate: false
-  xy: 465, 281
-  size: 137, 81
-  orig: 137, 81
+  rotate: true
+  xy: 209, 167
+  size: 33, 19
+  orig: 33, 19
   offset: 0, 0
   index: -1
 leg_left_c
-  rotate: false
-  xy: 1, 10
-  size: 205, 58
-  orig: 205, 58
+  rotate: true
+  xy: 241, 206
+  size: 49, 14
+  orig: 49, 14
   offset: 0, 0
   index: -1
 leg_right
-  rotate: false
-  xy: 358, 406
-  size: 136, 105
-  orig: 136, 105
+  rotate: true
+  xy: 204, 134
+  size: 32, 25
+  orig: 32, 25
   offset: 0, 0
   index: -1
 leg_right_c
-  rotate: false
-  xy: 278, 231
-  size: 95, 127
-  orig: 95, 127
+  rotate: true
+  xy: 171, 105
+  size: 23, 30
+  orig: 23, 30
   offset: 0, 0
   index: -1
 neck
-  rotate: false
-  xy: 692, 665
-  size: 37, 47
-  orig: 37, 47
+  rotate: true
+  xy: 244, 113
+  size: 9, 11
+  orig: 9, 11
   offset: 0, 0
   index: -1
 plant_1
   rotate: false
-  xy: 597, 210
-  size: 85, 67
-  orig: 85, 67
+  xy: 223, 106
+  size: 20, 16
+  orig: 20, 16
   offset: 0, 0
   index: -1
 plant_1_back
-  rotate: true
-  xy: 686, 288
-  size: 79, 138
-  orig: 79, 138
+  rotate: false
+  xy: 230, 123
+  size: 19, 33
+  orig: 19, 33
   offset: 0, 0
   index: -1
 plant_2
-  rotate: false
-  xy: 590, 106
-  size: 74, 62
-  orig: 74, 62
+  rotate: true
+  xy: 228, 87
+  size: 18, 15
+  orig: 18, 15
   offset: 0, 0
   index: -1
 plant_2 back
   rotate: true
-  xy: 390, 118
-  size: 142, 78
-  orig: 142, 78
+  xy: 111, 51
+  size: 34, 19
+  orig: 34, 19
   offset: 0, 0
   index: -1
 skirt_back
   rotate: true
-  xy: 374, 261
-  size: 144, 90
-  orig: 144, 90
+  xy: 124, 98
+  size: 34, 22
+  orig: 34, 22
   offset: 0, 0
   index: -1
 skirt_back_c
   rotate: false
-  xy: 297, 688
-  size: 215, 132
-  orig: 215, 132
+  xy: 72, 175
+  size: 51, 31
+  orig: 51, 31
   offset: 0, 0
   index: -1
 skirt_c
   rotate: false
-  xy: 1, 69
-  size: 238, 153
-  orig: 238, 153
+  xy: 1, 26
+  size: 57, 36
+  orig: 57, 36
   offset: 0, 0
   index: -1
 waist
   rotate: false
-  xy: 207, 15
-  size: 102, 44
-  orig: 102, 44
+  xy: 204, 123
+  size: 24, 10
+  orig: 24, 10
   offset: 0, 0
   index: -1
 waist_c
   rotate: false
-  xy: 207, 15
-  size: 102, 44
-  orig: 102, 44
+  xy: 204, 123
+  size: 24, 10
+  orig: 24, 10
   offset: 0, 0
   index: -1
