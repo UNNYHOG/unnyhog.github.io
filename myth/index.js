@@ -17490,13 +17490,14 @@ class Tutorial {
                 break;
             }
             case "ClickUpgradeMarketButton": {
+                const win = guiManager.getWindowByType(WindowType.WinMain);
+                win.showStoreButton();
                 if (this._isWindow(WindowType.WinMain)) {
                     GlobalInputLocked = true;
-                    const win = guiManager.getActiveWindow();
-                    win.showStoreButton();
                     this._lockAtButton(win.getStoreButton(), true);
-                } else if (this._isWindow(WindowType.WinStore))
-                    this.goToNextStep();
+                } else
+                    if (this._isWindow(WindowType.WinStore))
+                        this.goToNextStep();
                 break;
             }
             case "BuyAutoClickUpgrade": {
@@ -17678,6 +17679,7 @@ class Tutorial {
                 if (gameInit.progress.haveAnyPhotos())
                     this.goToNextStep();
                 break;
+            case "ClickUpgradeMarketButton":
             case "BuyAutoClickUpgrade":
                 const id = VisualData.getAutoClickSlot1Id();
                 if (gameInit.progress.isUpgradePurchased(id)) {
@@ -18617,7 +18619,7 @@ if (!AllGetParams.hasOwnProperty('game_env')) {
 
 const CURRENT_ENVIRONMENT = GAME_ENVIRONMENTS[AllGetParams.game_env];
 
-const TEST_MODE = AllGetParams.test_mode;
+const TEST_MODE = true;//AllGetParams.test_mode;
 const DEBUG_MODE = AllGetParams.debug_mode;
 
 {
@@ -24033,10 +24035,13 @@ class GameInit{
                 InAppLots: cache.json.get('InAppLots')
             };
 
-        const localization = 'Localization_' + GameSettings.language;
-        const json = cache.json.get(localization);
-        GameSettings.allLanguages[GameSettings.language] = json;
-        LocalizationManager.initWithJson(json);
+        // if (oldSystem)
+        {
+            const localization = 'Localization_' + GameSettings.language;
+            const json = cache.json.get(localization);
+            GameSettings.allLanguages[GameSettings.language] = json;
+            LocalizationManager.initWithJson(json);
+        }
 
         socialManager.setAllGetParams(parseGetParams());
         try {
@@ -24094,6 +24099,8 @@ class GameInit{
 
                 if (VisualData.getGameSettings().guards)
                     this.guardManager = new GuardManager(rgc.getDictionary("managers"));
+
+                // LocalizationManager.initWithJson(rgc.getDictionary("localizationEnglish"));
             }
 
             GameData.prepareGameData(data);
@@ -32719,6 +32726,8 @@ function prepareTextToHtml(engine) {
     function newTextWrap(width) {
         if (this.newText)
             this.newText.style.maxWidth = (width * localScale / dpi) + "px";
+        else
+            width *= 2;
         return oldTextWrap.call(this, width * localScale);
     }
 
