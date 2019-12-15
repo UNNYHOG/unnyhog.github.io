@@ -15157,6 +15157,7 @@ var VisualData = (function () {
     let QUEST_ICONS_FOLDER = 'UI/Windows/DailyQuests/DailyQuests Icons/';
     let DAILY_ICONS_FOLDER = 'UI/Windows/LoginBonus/BonusTypes/';
     let GIRLS_ICONS_FOLDER = 'UI/Windows/GirlsMenu/girls/';
+    let GIRLS_PREVIEW_FOLDER = 'UI/Windows/GirlsMenu/Thumbs/';
 
     if (typeof exports !== 'undefined') {
         CommonData = require('../../../CommonVisualData');
@@ -15270,12 +15271,32 @@ var VisualData = (function () {
         'CollectCrop': {
             file: 'UI/Windows/Prestige/prestige_icon.png',
         },
+        'NotEnoughGems' : {
+            file :'UI/Windows/Prestige/prestige_pict.png',
+        },
+
+        'collectCropSplash': {
+            file: 'UI/Windows/Prestige/prestige_pict.png',
+        },
+        'MultiplyOnStart': {
+            file: 'UI/Windows/Prestige/prestige_pict.png',
+        },
+        'BanjoEnd': {
+            file: 'UI/Windows/Prestige/prestige_pict.png',
+        },
         //overrides...
 
-        'CollectCrop': {
+        'PriceDoublingToken': {
+            file: 'UI/HUD_and_common/HUD/superDoubling_coin.png',
+        },
+
+        'PrestigeLoading': {
             file: 'UI/Windows/Prestige/loading_stripe.png',
         },
 
+        'PrestigeLoadingBack': {
+            file: 'UI/Windows/Prestige/loading_back.png',
+        },
 
         'PlayerIcon': {
             file: 'UI/HUD_and_common/HUD/pleer_lvl_avatar.png'
@@ -15330,6 +15351,10 @@ var VisualData = (function () {
         },
         'PhotoLock': {
             file: 'UI/Windows/GirlsMenu/lock.png',
+        },
+
+        'GirlDescription': {
+            file: 'UI/Windows/GirlsMenu/person.png',
         },
 
         'PhotoQuestBar': {
@@ -15559,27 +15584,17 @@ var VisualData = (function () {
             file: 'UI/Windows/Common/blue_head.png'
         },
 
-//TODO remove it later
-        'bread_1': {
-            file: 'bread/bread_1.png'
+        'ChestGuard' : {
+            file :'UI/Windows/GetPuzzlePart/ChestGuard.png',
         },
-        'bread_2': {
-            file: 'bread/bread_2.png'
+        'ChestGuardOpen' : {
+            file :'UI/Windows/GetPuzzlePart/ChestGuardOpen.png',
         },
-        'bread_3': {
-            file: 'bread/bread_3.png'
+        'ChestGuardSuper' : {
+            file :'UI/Windows/GetPuzzlePart/ChestGuardSuper.png',
         },
-        'bread_4': {
-            file: 'bread/bread_4.png'
-        },
-        'bread_5': {
-            file: 'bread/bread_5.png'
-        },
-        'bread_6': {
-            file: 'bread/bread_6.png'
-        },
-        'bread_7': {
-            file: 'bread/bread_7.png'
+        'ChestGuardSuperOpen' : {
+            file :'UI/Windows/GetPuzzlePart/ChestGuardSuperOpen.png',
         },
     };
 
@@ -15602,6 +15617,7 @@ var VisualData = (function () {
         'Album_Frame',
         'StripeText',
         'PhotoLock',
+        'GirlDescription',
         'PhotoQuestBar',
         'PhotoQuestBarFull',
         'PhotoQuestFrame',
@@ -15629,10 +15645,19 @@ var VisualData = (function () {
         'PlayerIcon',
         'PlayerExpLoader',
         'PlayerExpLoaderBack',
-        'PlayerExpStar'
+        'PlayerExpStar',
+        'Daily_Check',
+        'ChestGuard',
+        'ChestGuardOpen',
+        'ChestGuardSuper',
+        'ChestGuardSuperOpen',
+        'PriceDoublingToken'
     ];
 
     const GameSettings = {
+        dont_double: true,
+        save_version: 9,
+        banjo_duration: 16,
         fb_app_id: 2077329288999958,//hz
         vk_app_id: 6955719,//fish
         player_level: true,
@@ -15687,7 +15712,8 @@ var VisualData = (function () {
             reward_y: 95
         },
         tut_phrase_y: 240,
-        puzzle_top: true
+        puzzle_top: true,
+        no_buttons_tint: true
     };
 
     return {
@@ -15728,6 +15754,18 @@ var VisualData = (function () {
         ANIMATIONS: {
             flyingResources: 1.5,
             flyingResourcesScale: 1,
+        },
+
+        GUI_Common: {
+            notification_scale: 0.7,
+            playBreadAnimation: false
+        },
+
+        GUI_WinHarvested: {
+            font: true,
+            imageY: -500 * GlobalScale,
+            headerY: 0,
+            descY: 200 * GlobalScale
         },
 
         GUI_WinSettings: {
@@ -15771,8 +15809,8 @@ var VisualData = (function () {
             btnImage: 'PrestigeBtnPink',
             btnImage2: 'PrestigeBtnGrey',
             header_image: 'PrestigeBlueHead',
-            buttonY: 550 * GlobalScale,
-            buttonY2: 400 * GlobalScale,
+            buttonY2: 550 * GlobalScale,
+            buttonY: 400 * GlobalScale,
             headerOffset: -450
         },
 
@@ -15852,6 +15890,10 @@ var VisualData = (function () {
         },
 
         GUI_WinPhotosQuest: {
+            nineSlice: "photo_quest",
+        },
+
+        GUI_WinGirlBio: {
             nineSlice: "photo_quest",
         },
 
@@ -16010,6 +16052,10 @@ var VisualData = (function () {
 
         getGirlsImagesFolder: function () {
             return GIRLS_ICONS_FOLDER;
+        },
+
+        getGirlsPreviewFolder: function () {
+            return GIRLS_PREVIEW_FOLDER;
         },
 
         getDataFolder() {
@@ -16193,11 +16239,13 @@ var VisualData = (function () {
             'GoodsDrops',
             'GoodsPuzzleIcons',
             'Tutorial',
+            'UI/Windows/GetPuzzlePart',
             STORE_IMAGES_FOLDER,
             QUEST_ICONS_FOLDER,
             DAILY_ICONS_FOLDER,
             GUARD_PUZZLE_IMAGES_FOLDER,
-            GIRLS_ICONS_FOLDER
+            GIRLS_ICONS_FOLDER,
+            GIRLS_PREVIEW_FOLDER
             // '../Audio/'
         ],
 
@@ -16965,18 +17013,19 @@ let DefaultFontProduction;
 let ShieldFontPrice, ShieldFontLevel, DefaultFontDailyBonus, PuzzleNumberFont, ShieldRewardFont;
 let GirlsMenuHeaderFont, GirlsMenuDescFont, PhotoQuestDescFont, PhotoQuestPrice, PhotosCountInListFont,
     BossSummonHeaderFont, QuestFont;
-let TutorialFont;
+let TutorialFont, PlayerLevelFont;
+let PrestigeFontHeader, PrestigeFontDescription, FontManagerWindow;
 
 function CalculateFonts() {
     TextScale = 0.7;
     TextScale2 = 0.6;
     DefaultFontVeryBig = createFont({
-        font: getFont(150),
-        font2: getFont2(150),
+        font: getFont(100),
+        font2: getFont2(100),
         fill: DefaultFontColor,
         align: 'center',
         stroke: DefaultStrokeColor,
-        strokeThickness: getStroke(6)
+        strokeThickness: getStroke(15)
     });
     DefaultFontBig = createFont({//headers
         font: getFont(70),
@@ -17040,8 +17089,8 @@ function CalculateFonts() {
         lineSpacing: getLineSpacing(-5)
     });//store desc
     DefaultFontVerySmall2 = createFont({
-        font: getFont(45),
-        font2: getFont2(45),
+        font: getFont(40),
+        font2: getFont2(40),
         fill: DefaultFontColor,
         align: 'center',
     });//store btn
@@ -17061,12 +17110,12 @@ function CalculateFonts() {
     });
 
     DefaultFontProduction = createFont({
-        font: getFont(45),
-        font2: getFont2(45),
+        font: getFont(55),
+        font2: getFont2(55),
         fill: DefaultFontColor,
         align: 'center',
         stroke: DefaultStrokeColor,
-        strokeThickness: getStroke(6)
+        strokeThickness: getStroke(8)
     });
 
     ShieldFontPrice = createFont({
@@ -17149,12 +17198,12 @@ function CalculateFonts() {
     });
 
     TutorialFont = createFont({
-        font: getFont(40),
-        font2: getFont2(40),
+        font: getFont(60),
+        font2: getFont2(60),
         fill: DefaultFontColor,
         align: 'center',
         stroke: DefaultStrokeColor,
-        strokeThickness: getStroke(5)
+        strokeThickness: getStroke(10)
     });
 
     PlayerLevelFont = createFont({
@@ -17164,6 +17213,36 @@ function CalculateFonts() {
         align: 'center',
         stroke: DefaultStrokeColor,
         strokeThickness: getStroke(5)
+    });
+
+    DefaultFontNotifications = createFont({
+        font: getFont(50),
+        font2: getFont2(50),
+        fill: DefaultFontColor,
+        align: 'center',
+        stroke: DefaultStrokeColor,
+        strokeThickness: getStroke(16),
+    });
+
+    PrestigeFontHeader = createFont({
+        font: getFont(70),
+        font2: getFont2(70),
+        fill: DefaultFontColor,
+        align: 'center',
+    });
+
+    PrestigeFontDescription = createFont({
+        font: getFont(50),
+        font2: getFont2(50),
+        fill: DefaultFontColor,
+        align: 'center',
+    });
+
+    FontManagerWindow = createFont({
+        font: getFont(35),
+        font2: getFont2(35),
+        fill: DefaultStrokeColor,
+        align: 'center',
     });
 }
 
@@ -17202,8 +17281,13 @@ class Tutorial {
         switch (this.phaseData.actionType) {
             case 'CollectGold':
                 // console.log("IS " + this.phaseData.parameter + " ? " + gameInit.progress.getTotalResources().compare(this.phaseData.parameter * RESOURCES_SCALE));
-                if (gameInit.progress.getTotalResources().compare(this.phaseData.parameter * RESOURCES_SCALE) >= 0)
+                if (gameInit.progress.getTotalResources().compare(this.phaseData.parameter * RESOURCES_SCALE) >= 0) {
+                    if (this.fingerAnimation) {
+                        clearInterval(this.fingerAnimation);
+                        this.fingerAnimation = null;
+                    }
                     this.goToNextStep();
+                }
                 break;
         }
     }
@@ -17211,11 +17295,11 @@ class Tutorial {
     loaded(progress) {
         const phase = progress.getTutorialPhase();
 
-        // console.error("loaded " + phase);
         const data = GameData.getTutorialConfig();
         const phaseIndex = this.getPhaseIndex(phase);
 
         if (phaseIndex >= 0) {
+            // console.error("loaded " + phase, data[phaseIndex]);
             if (data[phaseIndex].actionType !== 'Completed') {
 
                 gameInit.progress.onResourcesChanges.addListener(this.resourcesCallback);
@@ -17414,10 +17498,16 @@ class Tutorial {
             win.closeWindow();
         }
 
-        // console.log("preparePhase " + phase + " > " + phaseIndex + " = " + phaseData.actionType);
+        // console.log("preparePhase " + phase + " > " + phaseIndex + " = " + phaseData.actionType + " win = " + this.lastWindow);
+
+        if (phaseData.showHint) {
+            guiManager.setTutorialPhrase(LocalizationManager.getTutorialLocalizization(phaseData.localizationKey));
+        } else
+            guiManager.setTutorialPhrase(null);
+
         switch (phaseData.actionType) {
             case "ShowDialog":
-                guiManager.showQuestMessage(LocalizationManager.getLocalizization(phaseData.localizationKey), phaseData.parameter, this.dialogCallback);
+                guiManager.showQuestMessage(LocalizationManager.getTutorialLocalizization(phaseData.localizationKey), phaseData.parameter, this.dialogCallback);
                 break;
             case "ClickSlot":
                 if (this._isWindow(WindowType.WinMain)) {
@@ -17434,9 +17524,9 @@ class Tutorial {
                 guiManager.getWindowByType(WindowType.WinMain).hideAllButtonsForTutorial();
                 break;
             case "ChangeGameModeToUpgrade":
+                const win = guiManager.getWindowByType(WindowType.WinMain);
+                win.showUpgradeButton();
                 if (this._isWindow(WindowType.WinMain)) {
-                    const win = guiManager.getActiveWindow();
-                    win.showUpgradeButton();
                     lockAtOneAnimatedObject(win);
                     this._lockAtButton(win.getUpgradeButton(), true);
                 }
@@ -17447,6 +17537,7 @@ class Tutorial {
                         lockGuiEverything();
                         unlockAnimatedObject();
                         this.pointAtPosition(this._getFirstSlotPosition(), null, null, false, 0.5);
+                        buildingsGUI.hideSomeLabelsForTutorial();
                     }
                 } else {
                     const win = guiManager.getWindowByType(WindowType.WinMain);
@@ -17454,24 +17545,29 @@ class Tutorial {
                 }
                 break;
             case "ChangeGameModeToNormal":
-            case "CloseGirlListWindow":
                 this._lockAtButton(guiManager.getActiveWindow().getExitButton(), true);
                 break;
+            case "CloseGirlListWindow": {
+                this._lockAtButton(guiManager.getActiveWindow().getExitButton(), true);
+                const win = guiManager.getWindowByType(WindowType.WinPhotosMainMenu);
+                if (win.scroll)
+                    win.scroll.setScrollerEnable(true);
+                break;
+            }
             case "ClickGirlMenuButton": {
+                const win = guiManager.getWindowByType(WindowType.WinMain);
+                win.showGirlsMenuButton();
                 if (this._isWindow(WindowType.WinMain)) {
-                    const win = guiManager.getWindowByType(WindowType.WinMain);
-                    win.showGirlsMenuButton();
                     this._lockAtButton(win.getGirlsMenuButton(), true);
                 } else if (this._isWindow(WindowType.WinPhotosMainMenu))
                     this.goToNextStep();
                 break;
             }
             case "OpenGirlListWindow":
-            case "ClickBioButton":
             case "OpenBioWindow":
             case "OpenUpgradeMarketWindow":
             case "OpenDoublingsWindow":
-            case "StartSuperDoubling":
+
             case "OpenPuzzlesWindow":
             case "ClickOpenBoxItem":
                 this.goToNextStep();
@@ -17482,6 +17578,15 @@ class Tutorial {
                     win.scroll.setScrollerEnable(false);
                     const btn = win.getButtonByTag("Peristera");
                     this._lockAtButton(btn, true, win.getButtonPosByTag());
+                }
+                break;
+            }
+            case "ClickBioButton": {
+                if (this._isWindow(WindowType.WinGirlBio))
+                    this.goToNextStep();
+                else {
+                    const win = guiManager.getWindowByType(WindowType.WinPhotosQuest);
+                    this._lockAtButton(win.GirlDescription, true);
                 }
                 break;
             }
@@ -17496,13 +17601,14 @@ class Tutorial {
                 if (this._isWindow(WindowType.WinMain)) {
                     GlobalInputLocked = true;
                     this._lockAtButton(win.getStoreButton(), true);
-                } else
-                    if (this._isWindow(WindowType.WinStore))
-                        this.goToNextStep();
+                } else if (this._isWindow(WindowType.WinStore))
+                    this.goToNextStep();
                 break;
             }
             case "BuyAutoClickUpgrade": {
-                if (this._isWindow(WindowType.WinStore)) {
+                const id = VisualData.getAutoClickSlot1Id();
+                console.info("gameInit.progress.isUpgradePurchased(id) " + gameInit.progress.isUpgradePurchased(id));
+                if (!gameInit.progress.isUpgradePurchased(id) && this._isWindow(WindowType.WinStore)) {
                     GlobalInputLocked = false;
                     const win = guiManager.getActiveWindow();
                     this._lockAtButton(win.getFirstUpgradeSlot(), true);
@@ -17518,6 +17624,29 @@ class Tutorial {
                     this._lockAtButton(win.getSuperVisorButton(), true);
                 } else if (this._isWindow(WindowType.WinManagerDoubling))
                     this.goToNextStep();
+                break;
+            }
+            case "StartSuperDoubling": {
+                if (this._isWindow(WindowType.WinMain)) {
+                    if (this.supervisorShown)
+                        this.goToNextStep();
+                    else {
+                        this._hideFinger();
+                        unlockAnimatedObject();
+                    }
+                } else {
+                    if (this._isWindow(WindowType.WinBanjoEnd)) {
+                        this._lockAtButton(guiManager.getActiveWindow().getTutorialButton());
+                        this.supervisorShown = true;
+                    } else {
+                        if (this._isWindow(WindowType.WinManagerDoubling)) {
+                            if (!gameInit.progress.haveAnySuperDoublingTokens())
+                                this.goToNextStep();
+                            else
+                                this._lockAtButton(guiManager.getActiveWindow().getTutorialButton(), true);
+                        }
+                    }
+                }
                 break;
             }
             case "BuySlots": {
@@ -17596,11 +17725,6 @@ class Tutorial {
                 break;
             }
         }
-
-        if (phaseData.showHint) {
-            guiManager.setTutorialPhrase(LocalizationManager.getLocalizization(phaseData.localizationKey));
-        } else
-            guiManager.setTutorialPhrase(null);
     }
 
     onCreated(engine) {
@@ -17612,38 +17736,10 @@ class Tutorial {
         this._hideFinger();
     }
 
-    _getRequiredResourcesForUI() {
-        switch (this.phase) {
-            case TutPhases.Collect1:
-                return 1;
-            case TutPhases.Collect20:
-                return 20;
-            case TutPhases.Collect1k:
-                return 1000;
-            case TutPhases.Collect10k:
-                return 10000;
-        }
-        return 0;
-    }
-
-    _getRequiredResources() {
-        return this._getRequiredResourcesForUI() * RESOURCES_SCALE;
-    }
-
-    _getRequiredUpgrades() {
-        switch (this.phase) {
-            case TutPhases.UpgradeBuilding:
-                return 1;
-            case TutPhases.UpgradeBuilding5:
-                return 4;
-        }
-        return 0;
-    }
-
     update() {
         const win = guiManager.getActiveWindow();
-        if (this.lastWindow != guiManager.getWinTypeAtTheTop() || (win.selectedTab && win.selectedTab !== this.lastTab)) {
-                this.preparePhase(this.phase, this.phaseIndex);
+        if (win.winType != WindowType.QuestBubble && (this.lastWindow != guiManager.getWinTypeAtTheTop() || (win.selectedTab && win.selectedTab !== this.lastTab))) {
+            this.preparePhase(this.phase, this.phaseIndex);
         }
 
         switch (this.phaseData.actionType) {
@@ -17661,10 +17757,11 @@ class Tutorial {
                     this.goToNextStep();
                 break;
             case "ChangeGameModeToNormal":
-            case "CloseGirlListWindow":
+            case "CloseGirlListWindow": {
                 if (this._isWindow(WindowType.WinMain))
                     this.goToNextStep();
                 break;
+            }
             case "ClickPeristeraBar": {
                 const win = guiManager.getWindowByType(WindowType.WinPhotosMainMenu);
                 const btn = win.getButtonByTag("Peristera");
@@ -17677,8 +17774,11 @@ class Tutorial {
                     this.goToNextStep();
                 break;
             case "ClickUnlockPhotoButton":
-                if (gameInit.progress.haveAnyPhotos())
+                if (gameInit.progress.haveAnyPhotos()) {
+                    const win = guiManager.getWindowByType(WindowType.WinMain);
+                    win.showPhotoAlbum();
                     this.goToNextStep();
+                }
                 break;
             case "ClickUpgradeMarketButton":
             case "BuyAutoClickUpgrade":
@@ -17691,6 +17791,15 @@ class Tutorial {
                     this.goToNextStep();
                 }
                 break;
+            case "CollectGold": {
+                if (!this.fingerAnimation && gameInit.getBuildingById(1, 1).anyResources && this.phaseData.parameter <= 100) {
+                    this.pointAtPosition(this._getFirstSlotPosition(), null, null, true);
+                    this.fingerAnimation = this.playSwipeAnimation();
+                    // this.fingerAnimation = animManager.swipeInfinite(this.finger.obj, 1);
+                    this.circle.setVisible(false);
+                }
+                break;
+            }
         }
     }
 
@@ -18417,10 +18526,15 @@ function SocialNutaku() {
         },
 
         purchase(productId) {
+            if (typeof gadgets === "undefined") {
+                gameInit.progress.publicConfirmedPayment(productId);
+                return;
+            }
+
             UnnyNet.UnnyNet.purchaseProduct("test", (response) => {
                 console.warn("Go check now", response);
                 _checkPurchases((id) => {
-                    gameInit.progress.publicConfirmedPayment("hellprodgems200");
+                    gameInit.progress.publicConfirmedPayment(productId);
                 });
             });
         },
@@ -18824,7 +18938,8 @@ class BasicButton extends Phaser.GameObjects.Sprite {
 
     setButtonLocked(locked) {
         this.locked = locked;
-        setLockedColor(this.clickable, locked);
+        if (!VisualData.getGameSettings().no_buttons_tint)
+            setLockedColor(this.clickable, locked);
     }
 
     onDown()
@@ -18835,7 +18950,8 @@ class BasicButton extends Phaser.GameObjects.Sprite {
         this.down = true;
         // this.setFrame(this.config.down);
         if (this.callback) {
-            this.setScale(0.95 * this.config.scale);
+            if (!this.config.dont_scale)
+                this.setScale(0.95 * this.config.scale);
             audioManager.playButtonClick();
         }
     }
@@ -18870,6 +18986,11 @@ class BasicButton extends Phaser.GameObjects.Sprite {
             this.group.setScale(x * this.extraXScale, y || x);
         } else
             this._defaultScale(x, y);
+    }
+
+    setExternalScale(value) {
+        this.config.scale = value;
+        this.setScale(this.config.scale);
     }
 
     onUp()
@@ -19308,7 +19429,7 @@ class AnimationFallingBread extends AnimationBase {
 
         this.timer = Math.trunc(duration - 0.5);
 
-        const number = this.engine.add.textOld(RealScreenWidth / 2, RealScreenHeight * 0.1, LocalizationManager.getLocalizization("BanjoManTipStart"), DefaultFontBig)
+        const number = this.engine.add.textOld(RealScreenWidth / 2, RealScreenHeight * 0.1, LocalizationManager.getLocalizization("BanjoManTipStart"), DefaultFontVeryBig)
             .setDepth(WinDefaultDepth)
             .setOrigin(0.5);
         animManager.applyWinOpenAnimation(number, ()=>{
@@ -19352,6 +19473,9 @@ class AnimationFallingBread extends AnimationBase {
                 setTimeout(()=>number.destroy(true), 500);
             });
         }
+
+        if (!VisualData.GUI_Common.playBreadAnimation)
+            return;
 
         const count = Math.trunc(this.time / this.period);
         if (count > this.breads.length) {
@@ -19840,6 +19964,7 @@ class EventManager {
         this.onPhotoQuestClaimed = new UnnyAction();
         this.onPhotoTokensEarnedFromBuilding = new UnnyAction();
         this.onGuardLeveledUp = new UnnyAction();
+        this.onBubbleAppeared = new UnnyAction();
     }
 
     soulsCollected(slot, amount) {
@@ -19944,6 +20069,10 @@ class EventManager {
 
     guardLeveledUp(guard) {
         this.onGuardLeveledUp.callListeners(guard);
+    }
+
+    bubbleAppeared() {
+        this.onBubbleAppeared.callListeners();
     }
 }
 
@@ -20456,6 +20585,8 @@ class Building {
     }
 
     getLocalizationKey() {
+        if (this.info.name)
+            return this.info.name;
         return this.info.visual.icon.substring(0, this.info.visual.icon.length - 5);
     }
 }
@@ -20571,7 +20702,7 @@ class World {
     };
 }
 
-const BanjoDuration = 7;
+const BanjoDuration = VisualData.getGameSettings().banjo_duration || 7;
 const GuardDurationHours = 4;
 const SpinsResporeTime = 8 * 3600 * 1000;
 const AdsAvailableToWatchADay = 5;
@@ -20592,7 +20723,9 @@ const BoxType = {
 const MUSIC_STATE = "MUSIC_STATE";
 const SOUNDS_STATE = "SOUNDS_STATE";
 const CURRENT_LANGUAGE = "CURRENT_LANGUAGE";
-const GAME_VERSION = "0.9.28";
+const GAME_VERSION = "0.9.29";
+
+console.log("game version: " + GAME_VERSION);
 
 let LockAllSounds = false;
 
@@ -20768,7 +20901,8 @@ class Progress {
             }
         }
 
-        if (save && save.profile && save.profile.version >= 8) {
+        // console.info("SAVE: " + save.profile.tutorialPhase, save);
+        if (save && save.profile && save.profile.version >= VisualData.getGameSettings().save_version) {
             this.savedProgress = save;
             this.savedProgress.profile.sessionNumber++;
             if (!localSaveUsed)
@@ -20779,13 +20913,14 @@ class Progress {
 
             this.savedProgress = {
                 profile: {
-                    version: 8,
+                    version: VisualData.getGameSettings().save_version,
                     gold: startRes ? startRes.gold.toString() + "00" : "0",//"00" = RESOURCES_SCALE
                     gems: startRes ? startRes.gems.toString() + "00" : "27500",
                     seeds: startRes ? startRes.prestige.toString() + "00" : "0",//prestige==seeds==cans==apples
                     tokenCommon: startRes ? startRes.tokenCommon.toString() + "00" : "0",
                     tokenRare: startRes ? startRes.tokenRare.toString() + "00" : "0",
                     tokenEpic: startRes ? startRes.tokenEpic.toString() + "00" : "0",
+                    superDoublingToken: startRes ? startRes.superDoublingToken.toString() + "00" : "0",
                     goldSpent: "0",
                     seedsStrength: 2,
                     firstTimeInGame: Progress.getTimeNow(),
@@ -20874,10 +21009,10 @@ class Progress {
         this.savedProgress.puzzle.goods = fixArray(this.savedProgress.puzzle.goods);
         // this._resetConstructions();
         // this._setResourceByName("tokenCommon", "99999900");
-        // this._setResourceByName("gold", "99999900");
+        // this._setResourceByName("gold", "999900");
 
-        // this._setResourceByName("gems", "20000");
-        // this._setResourceByName("seeds", "0");
+        // this._setResourceByName("gems", "2000000");
+        // this._setResourceByName("superDoublingToken", "1000");
 
         for (let i = 1; i <= VisualData.getWorldsCount(); i++) {
             if (!this.savedProgress.worlds.hasOwnProperty(i))
@@ -20894,6 +21029,7 @@ class Progress {
             tokenCommon: bigInt(this._getResourceByName("tokenCommon")),
             tokenRare: bigInt(this._getResourceByName("tokenRare")),
             tokenEpic: bigInt(this._getResourceByName("tokenEpic")),
+            superDoublingToken: bigInt(this._getResourceByName("superDoublingToken")),
             boxPrice: bigInt(this.savedProgress.puzzle.goldBoxPrice),
         };
 
@@ -20916,7 +21052,7 @@ class Progress {
     }
 
     _getResourceByName(name) {
-        return this.savedProgress.profile[name];
+        return this.savedProgress.profile[name] || 0;
     }
 
     getResourceByName(name) {
@@ -21181,12 +21317,25 @@ class Progress {
             case "tokencommon":
             case "tokenrare":
             case "tokenepic":
+            case "superdoublingtoken":
                 return this.tokensSpent(type, amount);
             case "seeds":
                 return this.seedsSpent(amount);
             case "gems":
                 return this.gemsSpent(amount);
         }
+    }
+
+    spendSuperDoublingToken() {
+        this.spendResourcesByTypeAndAmount("superDoublingToken", 1 * RESOURCES_SCALE);
+    }
+
+    getSuperDoublingTokens() {
+        return this.getTokens("superDoublingToken");
+    }
+
+    haveAnySuperDoublingTokens() {
+        return this.getSuperDoublingTokens().compare(0) > 0;
     }
 
     isResourcesWithTypeEnough(data) {
@@ -21256,6 +21405,29 @@ class Progress {
                 this.seedsSpent(price);
                 break;
             case "IN_APP":
+                if (data.currency) {
+                    for (let i in data.currency) {
+                        const amount = data.currency[i].value;
+                        const type = data.currency[i].resourceType;
+                        switch (type.toLowerCase()) {
+                            case "gold":
+                                this.addResources(amount);
+                                break;
+                            case "tokencommon":
+                            case "tokenrare":
+                            case "tokenepic":
+                            case "superdoublingtoken":
+                                this.tokensEarned(type, amount);
+                                break;
+                            case "seeds":
+                                this.seedsEarned(amount);
+                                break;
+                            case "gems":
+                                this.gotGems(amount);
+                                break;
+                        }
+                    }
+                }
                 if (data.gems)
                     this.gotGems(data.gems);
                 if (data.getFishCount)
@@ -21292,10 +21464,11 @@ class Progress {
                 break;
         }
 
-        if (!this._isPurchasePriceIncreasing(data))
-            this.savedProgress.purchases[id] = 1;
-        else {
-            this.savedProgress.purchases[id] = price ? price.multiply(mult).toString() : 1;
+        if (data.priceType !== "IN_APP") {
+            if (!this._isPurchasePriceIncreasing(data))
+                this.savedProgress.purchases[id] = 1;
+            else
+                this.savedProgress.purchases[id] = price ? price.multiply(mult).toString() : 1;
         }
 
         this.onUpgradePurchased.callListeners(data);
@@ -22238,7 +22411,6 @@ class Progress {
     savePhotoQuestsCompleted(quest) {
         this._checkPhotoQuests();
 
-        console.info("savePhotoQuestsCompleted", quest);
         const id = quest.info.id;
         const pq = this.savedProgress.photo_quests;
         if (!pq.unlocked.includes(id))
@@ -22667,6 +22839,7 @@ let GameData = (function () {
 
                 const newKey = BUILDINGS_INFO[(val.slotNumber + 1 + add)] = {};
 
+                newKey.name = val.name;
                 newKey.construct = {
                     price: bigInt(val.createPrice).multiply(RESOURCES_SCALE)
                 };
@@ -22720,12 +22893,20 @@ let GameData = (function () {
             IN_APP_DATA = inAppData;
             for (let i in inAppData) {
                 const val = inAppData[i];
-                val.id = val.itemIdprod;
+                if (!val.hasOwnProperty("id"))
+                    val.id = val.itemIdprod;
                 val.priceType = "IN_APP";
                 val.repeatable = true;
                 val.originalGems = val.gems;
                 val.gems *= RESOURCES_SCALE;
-                MARKET_DATA[val.itemIdprod] = val;
+                MARKET_DATA[val.id] = val;
+
+                if (val.hasOwnProperty("currency")) {
+                    const cur = val.currency;
+                    for (let i in cur) {
+                        cur[i].value += "00";
+                    }
+                }
             }
 
             MARKET_GOLD.sort(_compareFunction);
@@ -23888,7 +24069,6 @@ class AchsManager {
     }
 
     reportPrestige(revenue) {
-        console.info("==> PRESTIGE", revenue);
         UnnyNet.UnnyNet.reportAchievements(1, 1);
         UnnyNet.UnnyNet.reportAchievements(2, 1);
         UnnyNet.UnnyNet.reportAchievements(3, 1);
@@ -23953,7 +24133,7 @@ class GameInit{
             load.json('QuestsData', 'dailyquests_data.json');
             load.json('LoginData', 'loginbonus_data.json');
         }
-        load.json('InAppLots', 'in_app_lots.json');
+        load.json('InAppLots', 'in_app_lots.json?v=3');
 
         // if (VisualData.getGameSettings().photos)
         //     load.json('PhotoData', 'photo_data.json');
@@ -24036,7 +24216,7 @@ class GameInit{
                 InAppLots: cache.json.get('InAppLots')
             };
 
-        // if (oldSystem)
+        if (oldSystem)
         {
             const localization = 'Localization_' + GameSettings.language;
             const json = cache.json.get(localization);
@@ -24101,7 +24281,7 @@ class GameInit{
                 if (VisualData.getGameSettings().guards)
                     this.guardManager = new GuardManager(rgc.getDictionary("managers"));
 
-                // LocalizationManager.initWithJson(rgc.getDictionary("localizationEnglish"));
+                LocalizationManager.initWithJson(rgc.getDictionary("localizationEnglish"));
             }
 
             GameData.prepareGameData(data);
@@ -24287,10 +24467,16 @@ let LocalizationManager = (function() {
             ALL_WORDS = json;
         },
 
-        getLocalizization(text){
+        getLocalizization(text, defaultText){
             if (ALL_WORDS.hasOwnProperty(text))
                 return ALL_WORDS[text];
+            if (defaultText)
+                return defaultText;
             return "!!!" + text;
+        },
+
+        getTutorialLocalizization(text){
+            return text;
         },
 
         removeCodes(text) {
@@ -24925,8 +25111,8 @@ function LoadFile(engine, name, path, callback, type, secondPath) {
         return;
     }
 
-    path += "?v=11";
-    secondPath += "?v=11";
+    path += "?v=12";
+    secondPath += "?v=12";
 
     if (!loadingImages.hasOwnProperty(name)) {
         switch (type) {
@@ -25440,7 +25626,7 @@ class GUINotification extends Phaser.GameObjects.Container {
 
         const scale = VisualData.GUI_Common ? VisualData.GUI_Common.notification_scale : 0.4;
         this.image = config.scene.add.sprite(0, 0, 'Notification').setScale(scale);
-        this.text = config.scene.add.textOld(0, 0, config.getText(), DefaultFontWheel).setOrigin(0.5).setScale(scale);
+        this.text = config.scene.add.textOld(0, 0, config.getText(), DefaultFontNotifications).setOrigin(0.5);
         this.add(this.image);
         this.add(this.text);
         animManager.jumpFishAnimation(this, {
@@ -25761,7 +25947,7 @@ function getStroke(size) {
 //ArchivoBlack
 let DefaultFontVeryBig, DefaultFontBig, DefaultFont, DefaultFontSmall, DefaultFontSmall2, DefaultFontSmallPuzzleBonus,
     DefaultFontBlack, DefaultFontSmallBlack, DefaultFontVerySmall, DefaultFontVerySmall2;
-let DefaultFontWheel;
+let DefaultFontWheel, DefaultFontNotifications;
 
 function createFont(obj) {
     //obj.fontFamily = "PT Sans Narrow";
@@ -25828,10 +26014,10 @@ function setStoreCellLocked(group, locked) {
     const storeGUI = VisualData.GUI_WinStore;
     if (storeGUI.btnSpriteInactive)
         group.unny_btn.setTexture(locked ? storeGUI.btnSpriteInactive : storeGUI.btnSpriteNormal);
-    else {
-        group.unny_btn.setButtonLocked(locked);
+    else
         group.priceText.tint = color;
-    }
+
+    group.unny_btn.setButtonLocked(locked);
 
     if (group.priceIcon)
         group.priceIcon.tint = color;
@@ -26008,6 +26194,8 @@ class WinBase {
     }
 
     setWindowVisible(visible) {
+        // console.error("setWindowVisible " + visible + " of " + this.constructor.name);
+
         this.visible = visible;
         SetGroupVisible(this.group, visible);
 
@@ -26590,10 +26778,10 @@ class WinDropPuzzle extends WinWithBrownBack {
         this.giftBoxSuper = this.engine.add.sprite(0, 0, "GiftBoxSuper").setScale(boxScale).setOrigin(0.5, 1);
         this.group.add(this.giftBoxSuper);
 
-        this.giftGuardBox = this.engine.add.sprite(0, 0, "GiftBox").setScale(boxScale).setOrigin(0.5, 1);
+        this.giftGuardBox = this.engine.add.sprite(0, 0, "ChestGuard").setScale(boxScale).setOrigin(0.5, 1);
         this.group.add(this.giftGuardBox);
 
-        this.giftGuardBoxSuper = this.engine.add.sprite(0, 0, "GiftBoxSuper").setScale(boxScale).setOrigin(0.5, 1);
+        this.giftGuardBoxSuper = this.engine.add.sprite(0, 0, "ChestGuardSuper").setScale(boxScale).setOrigin(0.5, 1);
         this.group.add(this.giftGuardBoxSuper);
 
         this.giftBoxOpen = this.engine.add.sprite(0, 0, "GiftBoxOpen").setScale(boxScale).setPosition(this.dropPoint.x - 60 * GlobalScale, this.dropPoint.y - 40 * GlobalScale).setOrigin(0.5, 1);
@@ -26602,10 +26790,10 @@ class WinDropPuzzle extends WinWithBrownBack {
         this.giftBoxSuperOpen = this.engine.add.sprite(0, 0, "GiftBoxSuperOpen").setScale(boxScale * 1.2).setPosition(this.dropPoint.x - 70 * GlobalScale, this.dropPoint.y + 10 * GlobalScale).setOrigin(0.5, 1);
         this.group.add(this.giftBoxSuperOpen);
 
-        this.giftGuardBoxOpen = this.engine.add.sprite(0, 0, "GiftBoxOpen").setScale(boxScale).setPosition(this.dropPoint.x - 60 * GlobalScale, this.dropPoint.y - 40 * GlobalScale).setOrigin(0.5, 1);
+        this.giftGuardBoxOpen = this.engine.add.sprite(0, 0, "ChestGuardOpen").setScale(boxScale).setPosition(this.dropPoint.x - 60 * GlobalScale, this.dropPoint.y - 40 * GlobalScale).setOrigin(0.5, 1);
         this.group.add(this.giftGuardBoxOpen);
 
-        this.giftGuardBoxSuperOpen = this.engine.add.sprite(0, 0, "GiftBoxSuperOpen").setScale(boxScale * 1.2).setPosition(this.dropPoint.x - 70 * GlobalScale, this.dropPoint.y + 10 * GlobalScale).setOrigin(0.5, 1);
+        this.giftGuardBoxSuperOpen = this.engine.add.sprite(0, 0, "ChestGuardSuperOpen").setScale(boxScale * 1.2).setPosition(this.dropPoint.x - 70 * GlobalScale, this.dropPoint.y + 10 * GlobalScale).setOrigin(0.5, 1);
         this.group.add(this.giftGuardBoxSuperOpen);
 
         this.header = this.engine.add.text(this.centerX, 300 * GlobalScale, "", DefaultFont).setOrigin(0.5);
@@ -27125,7 +27313,7 @@ class WinPuzzle extends WinWithBrownBack {
                     VisualData.getPuzzleUIFolder() + "OpenedBox.png",
                     LocalizationManager.getLocalizization("BoxOpenDesc"),
                     null,
-                    LocalizationManager.getLocalizization("BoxOpenButtonText"),
+                    LocalizationManager.getLocalizization("BoxOpenButtonText", "OPEN"),
                     () => {
                         if (progress.getChestsCount() > 0) {
                             progress.openChest();
@@ -27203,10 +27391,10 @@ class WinPuzzle extends WinWithBrownBack {
                 break;
             case 4:
                 createStoreCell(engine, group, cellCenterX, cellCenterY,
-                    LocalizationManager.getLocalizization("GUARD_BOX"),
-                    chestImage,//TODO replace icon
-                    chestImagePath,
-                    LocalizationManager.getLocalizization("BoxGemDesc"),
+                    LocalizationManager.getLocalizization("BoxGuardTitle"),
+                    "ChestGuard",
+                    "UI/Windows/GetPuzzlePart/ChestGuard.png",
+                    LocalizationManager.getLocalizization("BoxGuardDesc"),
                     GameData.getIconByType(guardBox.priceType),
                     guardBox.priceGems,
                     () => {
@@ -27223,10 +27411,10 @@ class WinPuzzle extends WinWithBrownBack {
                 break;
             case 5:
                 createStoreCell(engine, group, cellCenterX, cellCenterY,
-                    LocalizationManager.getLocalizization("GUARD_BOX SUPER"),
-                    "GiftBoxSuper",//TODO replace icon
-                    VisualData.getStoreFolder() + "GiftBoxSuper.png",
-                    LocalizationManager.getLocalizization("BoxGemSuperDesc"),
+                    LocalizationManager.getLocalizization("BoxGuardSuperTitle"),
+                    "ChestGuardSuper",
+                    "UI/Windows/GetPuzzlePart/ChestGuardSuper.png",
+                    LocalizationManager.getLocalizization("BoxGuardSuperDesc"),
                     GameData.getIconByType(superGuardBox.priceType),
                     superGuardBox.priceGems,
                     () => {
@@ -27706,7 +27894,7 @@ class WinStore extends WinWithLargeBack {
 
         const imageName = WinStore.getImageName(item);
 
-        const isInApp = item.priceType === "IN_APP" && item.id !== GEMS_VIDEO_REWARD_ID;
+        const isInApp = item.priceType === "IN_APP" && item.id !== GEMS_VIDEO_REWARD_ID && !VisualData.getGameSettings().dont_double;
         createStoreCell(engine, group, cellCenterX, cellCenterY,
             LocalizationManager.getStoreItemTitle(item),
             imageName,
@@ -27777,6 +27965,9 @@ class WinStore extends WinWithLargeBack {
     }
 
     static getImageName(item) {
+        if (item.icon)
+            return item.icon;
+
         if (item.title) {
             return item.title.replace("Name","");
         }
@@ -28675,16 +28866,16 @@ class WinHarvested extends WinBase {
                 LoadPreparedFile(this.engine, icon, () => {
                     this.destroyImage();
                     if (this.visible) {
-                        this.group.create(0, 0, icon).setDepth(WinDefaultDepth - 10);
+                        this.group.create(0, this.getWinInfoValue('imageY', 0), icon).setDepth(WinDefaultDepth - 10);
 
                         if (!this.header) {
-                            this.header = this.engine.add.text(0, -600 * GlobalScale, null, DefaultFontBig)
+                            this.header = this.engine.add.text(0, this.getWinInfoValue('headerY', -600), null, this.winInfo.font ? PrestigeFontHeader : DefaultFontBig)
                                 .setOrigin(0.5, 0.5)
                                 .setWordWrapWidth(1200 * GlobalScale)
                                 .setDepth(WinDefaultDepth);
                             this.group.add(this.header);
 
-                            this.description = this.engine.add.text(0, RealScreenHeight / 2 - 400 * GlobalScale, this.seeds ? this._getDescription() : null, DefaultFontBig)
+                            this.description = this.engine.add.text(0, this.getWinInfoValue('descY', 500), this.seeds ? this._getDescription() : null,  this.winInfo.font ? PrestigeFontDescription : DefaultFontBig)
                                 .setOrigin(0.5, 0.5)
                                 .setWordWrapWidth(1200 * GlobalScale)
                                 .setDepth(WinDefaultDepth);
@@ -29117,7 +29308,8 @@ class WinWithPicture extends WinWithBack {
             this.createHeader(engine);
 
         if ((this.info.description || this.info.getDescription) && !this.winInfo.no_description) {
-            this.description = engine.add.text(this.getWinInfoValue("descriptionX", 0), this.getWinInfoValue("descriptionY", -300), null, this.info.smallFont ? DefaultFontSmallBlack : DefaultFontBlack)
+            const func = this.info.oldText ? engine.add.textOld : engine.add.text;
+            this.description = func(this.getWinInfoValue("descriptionX", 0), this.getWinInfoValue("descriptionY", -300), null, this.info.smallFont ? DefaultFontSmallBlack : DefaultFontBlack)
                 .setWordWrapWidth((this.info.wordWrapWidth || 900) * GlobalScale)
                 .setOrigin(0.5, 0.5)
                 .setDepth(WinDefaultDepth);
@@ -29156,9 +29348,16 @@ class WinBossSummon extends WinWithPicture {
         return this.winInfo.headerFont ? BossSummonHeaderFont : super._getHeaderFont();
     }
 
+    localize() {
+        super.localize();
+        this.mythButtonLabel.setText(LocalizationManager.getLocalizization("Prestige_start_hard").format(50));
+    }
+
     createButton() {
         if (this.winInfo.mystButtons) {
-            this.createActionButton(this.engine, this.actionClicked.bind(this), this.winInfo.buttonY2, true, null, null, this.info.btn_min_width, this.info.icon, this.winInfo.btnImage2);
+            this.mythButtonLabel = this.createActionButton(this.engine, this.actionClicked.bind(this), this.winInfo.buttonY2, true, null, null, this.info.btn_min_width, this.info.icon, this.winInfo.btnImage2);
+            this.mythButton = this.actionButton;
+            this.mythButton.setButtonLocked(true);
         }
         super.createButton();
     }
@@ -29394,16 +29593,18 @@ class WinWelcomeBack extends WinWithUnlockedExitButton {
     }
 }
 
-class QuestBubble extends WinBase {
+class WinQuestBubble extends WinBase {
 
     setData(text, image, callback) {
-        this.text.setText(text);
+        this.finalText = text;
+        this.lettersCount = 0;
+        this.text.setText("");
         const name = "Tutorial_" + image;
         const path = "Tutorial/" + image + ".png";
         LoadFile(this.engine, name, path, () => {
             if (this.visible) {
                 this.destroyImage();
-                this.image = this.engine.add.sprite(500 * GlobalScale, RealScreenHeight / 2 - 50 * GlobalScale, name)
+                this.image = this.engine.add.sprite(this.mainX + 320 * GlobalScale, RealScreenHeight / 2 - 80 * GlobalScale, name)
                     .setOrigin(0.5, 1)
                     .setDepth(WinDefaultDepth + 10);
                 this.group.add(this.image);
@@ -29412,6 +29613,22 @@ class QuestBubble extends WinBase {
 
         this.callback = callback;
         this.showTime = Progress.getTimeNow();
+
+        this.clearTimer();
+
+        this.timer = setInterval(()=>{
+            this.lettersCount++;
+            if (this.lettersCount >= this.finalText.length)
+                this.clearTimer();
+            this.text.setText(this.finalText.substring(0, this.lettersCount));
+        }, 20);
+    }
+
+    clearTimer() {
+        if (this.timer) {
+            clearInterval(this.timer);
+            this.timer = null;
+        }
     }
 
     createGame(engine) {
@@ -29422,38 +29639,55 @@ class QuestBubble extends WinBase {
         const textH = 160 * GlobalScale;
         const tOffset = -100 * GlobalScale;
 
-        const depth = WinDefaultDepth + 200;
-        {
-            const size = 32 * GlobalScale;
-            this.blackBg = engine.add.sprite(this.centerX - size * 10, this.centerY, 'BlackPixel')
-                .setScale(RealScreenWidth / size + 20, RealScreenHeight / size + 20)
-                .setDepth(depth);
-            this.group.add(this.blackBg);
-            this.group.setDepth(depth);
-        }
-
-        new BasicButton(this.group, {
-            'scene': this.engine,
-            'key': 'QuestBack',
-            'x': 0,
-            'y': y
-        }, () => {
+        const clicked = () => {
             if (Progress.getTimeNow() - this.showTime >= 1000) {
                 this.closeWindow();
                 if (this.callback)
                     this.callback();
             }
-        }).setDepth(depth + 10);
+        };
 
-        this.text = engine.add.text(tOffset - textW / 2, y - textH / 2, "Hello World", QuestFont).setOrigin(0, 0).setWordWrapWidth(textW).setDepth(depth + 20);
+        const depth = WinDefaultDepth + 200;
+        {
+            const size = 32 * GlobalScale;
+            new BasicButton(this.group, {
+                'scene': engine,
+                'key': 'BlackPixel',
+                'x': this.centerX - size * 10,
+                'y': this.centerY,
+                dont_scale: true,
+                scale: Math.max(RealScreenWidth, RealScreenHeight) / size + 20
+            }, clicked);
+
+            this.group.setDepth(depth);
+        }
+
+        const x = this.mainX = 300 * GlobalScale;
+
+        const back = engine.add.sprite(x, y, 'QuestBack').setDepth(depth + 10);
+        this.group.add(back);
+
+        new BasicButton(this.group, {
+            'scene': engine,
+            'key': 'Daily_Check',
+            'x': x + 510 * GlobalScale,
+            'y': y + 110 * GlobalScale,
+            scale: 1.2
+        }, clicked).setDepth(depth + 11);
+
+        this.text = engine.add.text(x + tOffset - textW / 2, y - textH / 2, null, QuestFont).setOrigin(0, 0).setWordWrapWidth(textW).setDepth(depth + 20);
         this.group.add(this.text);
     }
 
     setWindowVisible(visible) {
         super.setWindowVisible(visible);
 
-        if (visible)
+        if (visible) {
             audioManager.playWindowOpen();
+            eventManager.bubbleAppeared();
+        }
+        else
+            this.clearTimer();
     }
 }
 
@@ -29636,7 +29870,7 @@ class WinMain extends WinBase {
         this.upgradeButton = this.createButton('MM_Btn_Upgrade', centerX - distance * 2, bottomButtons, () => this.gui.changeMode(GUIMode.UpgradeBuildings));
         this.storeButton = this.createButton('MM_Btn_Store', centerX - distance, bottomButtons, () => this.gui.openNewWindow(WindowType.WinStore));
         this.puzzlesButton = this.createButton('MM_Btn_Chests', centerX + distance, bottomButtons, () => this.gui.openNewWindow(WindowType.WinPuzzle));
-        this.createButton('MM_Btn_PhotoAlbum', centerX + distance * 2, bottomButtons, () => this.gui.openNewWindow(WindowType.WinPhotosList));
+        this.photoAlbum = this.createButton('MM_Btn_PhotoAlbum', centerX + distance * 2, bottomButtons, () => this.gui.openNewWindow(WindowType.WinPhotosList));
 
         this.createButton('MM_Btn_Worlds', RealScreenWidth - paddingX, padding, () => gameInit.switchToTheNextWorld());
         this.superVisorButton = this.createButton('MM_Btn_ManagerDoubling', RealScreenWidth - paddingX * 3, padding, () => this.gui.openNewWindow(WindowType.WinManagerDoubling));
@@ -29963,6 +30197,10 @@ class WinMain extends WinBase {
         this.showButtonFromTutorial(this.girlsMenu);
     }
 
+    showPhotoAlbum() {
+        this.showButtonFromTutorial(this.photoAlbum);
+    }
+
     getUpgradeButton() {
         return this.upgradeButton;
     }
@@ -30160,6 +30398,15 @@ class BuildingsGUI extends WinBase{
                 }
             }
         }
+    }
+
+    hideSomeLabelsForTutorial() {
+        const worldId = 1;
+        const buildingId = 1;
+
+        const worldsData = this.worldsData[worldId];
+        const upgradeInfo = worldsData.upgrade[buildingId];
+        upgradeInfo.upgrade_reward.setVisible(false);
     }
 
     _tokensWereEarned(building, tokenType) {
@@ -30475,6 +30722,7 @@ class BuildingsGUI extends WinBase{
                     'y': y
                 }, () => clickController.buildingWasClicked(building));
                 font = DefaultFontPurchaseSlot;
+                button.setButtonLocked(true);
             } else {
                 iconPos = {x: -17 * GlobalScale, y: 10 * GlobalScale};
                 pricePos = {x: 0, y: 10 * GlobalScale};
@@ -30527,8 +30775,10 @@ class BuildingsGUI extends WinBase{
                 }
 
                 if (settings.slot_purchase_as_buttons) {
-                    if (purchaseInfo.button)
+                    if (purchaseInfo.button) {
                         purchaseInfo.button.setTexture(settings.slot_purchase_as_buttons.available);
+                        purchaseInfo.button.setButtonLocked(false);
+                    }
                 }
             } else {
                 if (purchaseInfo.jumpAnimation) {
@@ -30537,8 +30787,10 @@ class BuildingsGUI extends WinBase{
                 }
 
                 if (settings.slot_purchase_as_buttons) {
-                    if (purchaseInfo.button)
+                    if (purchaseInfo.button) {
                         purchaseInfo.button.setTexture(settings.slot_purchase_as_buttons.locked);
+                        purchaseInfo.button.setButtonLocked(true);
+                    }
                 }
             }
         }
@@ -30884,7 +31136,7 @@ class WinPhotosMainMenu extends WinWithBrownBack {
                 const levelDesc = engine.add.textOld(40 * GlobalScale, -80 * GlobalScale, "PHOTOS " + completedQuests + "/" + photosGroup.length, GirlsMenuHeaderFont).setOrigin(0);
                 group.unny_container.add(levelDesc.setDepth(WinDefaultDepth + 200));
 
-                const photoDesc = engine.add.textOld(40 * GlobalScale, -20 * GlobalScale, 'some description of the photo. short and concise!', GirlsMenuDescFont).setOrigin(0).setWordWrapWidth(320 * GlobalScale);
+                const photoDesc = engine.add.textOld(40 * GlobalScale, -20 * GlobalScale, item.tag.toLowerCase() + ' description', GirlsMenuDescFont).setOrigin(0).setWordWrapWidth(320 * GlobalScale);
                 group.unny_container.add(photoDesc);
             }
         });
@@ -30906,15 +31158,64 @@ class WinPhotosMainMenu extends WinWithBrownBack {
     }
 }
 
+class WinGirlBio extends WinWithBrownBack {
+    constructor(gui, gameInit) {
+        super(gui, gameInit);
+        // eventManager.onBubbleAppeared.addListener(this.bubbleAppeared.bind(this));
+    }
+
+    // bubbleAppeared() {
+    //     if (this.visible && this.photoDesc)
+    //         this.photoDesc.setVisible(false);
+    // }
+
+    setWindowVisible(visible) {
+        super.setWindowVisible(visible);
+
+        if (visible) {
+            if (!this.prepared) {
+                this.prepared = true;
+                const engine = this.engine;
+
+                this.photoDesc = engine.add.text(this.centerX, this.centerY - 240 * GlobalScale, null, PhotoQuestDescFont).setOrigin(0.5, 0).setWordWrapWidth(1000 * GlobalScale);//.setDepth(WinDefaultDepth + 100);
+                this.group.add(this.photoDesc);
+            }
+        }
+    }
+
+    selectGirl(girlName) {
+
+        this.photoDesc.setText('\'\'There is something for you there\'\' - Peristera said.\n' +
+            '\n' +
+            'You ‘ve walked through the forest. \n' +
+            '\'\'I don’t know what I am looking for exactly.. But Peri is so tender and caring, I am sure that she hide something amazing here.\'\'\n' +
+            '\n' +
+            'From the forest noises you starting to hear the quiet dog whining. You start looking for the sourse. In the roots of the old tree you find her. \n' +
+            '\n' +
+            '\'\'Oh, that wasn’t a dog, that was a Dryad, the spirit of nature! Looks like this one chose to take the appearance of a fox-girl. And a naked one at that! Not that I mind. Foxy ears and tail are so cute\'\' \n' +
+            '\n' +
+            'Dryad sits there with knees up to her chin frightened, but interested. \n' +
+            '\n' +
+            '\'\'She’s absolutely amazing - her gentle lines, her clear mind, her naive look - oh, that is SO incredibly sexy!\'\'');
+
+        const icon = "GirlIcon_" + girlName;
+        const girlPath = VisualData.getGirlsImagesFolder() + girlName + ".png";
+
+        LoadFile(this.engine, icon, girlPath, () => {
+            if (this.visible) {
+                this.destroyImage();
+                this.image = this.group.create(this.centerX - 26 * GlobalScale, this.centerY - 600 * GlobalScale, icon).setDepth(WinDefaultDepth + 1);
+            }
+        });
+    }
+}
+
 class WinPhotosQuest extends WinWithBrownBack {
     constructor(gui, gameInit) {
         super(gui, gameInit);
         this.resourcesModules = {};
         this.collectedPuzzle = [];
-    }
-
-    createGame(engine) {
-        super.createGame(engine);
+        this.nonSelectedScale = 0.7;
     }
 
     setWindowVisible(visible) {
@@ -30925,21 +31226,33 @@ class WinPhotosQuest extends WinWithBrownBack {
                 this.prepared = true;
                 const engine = this.engine;
 
+                this.GirlDescription = new BasicButton(this.group, {
+                    'scene': engine,
+                    'key': 'GirlDescription',
+                    'x': RealScreenWidth - 180 * GlobalScale,
+                    'y': RealScreenHeight - 150 * GlobalScale,
+                    'scale': 0.3
+                }, () => {
+                    const win = guiManager.openNewWindow(WindowType.WinGirlBio);
+                    win.selectGirl(this.girlName);
+                });
+
                 const centerX = this.centerX;
-                let startY = this.centerY + 20 * GlobalScale;
+                let startY = this.centerY + 120 * GlobalScale;
 
                 //quest
-                const questFrame = engine.add.sprite(centerX, startY, 'PhotoQuestFrame').setScale(2.4, 1);
+                const questCenterX = centerX + 160 * GlobalScale;
+                const questFrame = engine.add.sprite(questCenterX, startY, 'PhotoQuestFrame').setScale(1.8, 1.2);
                 this.group.add(questFrame);
-                this.questDesc = engine.add.text(centerX, startY + 10 * GlobalScale, null, DefaultFontSmallBlack).setOrigin(0.5, 1).setWordWrapWidth(800 * GlobalScale);
+                this.questDesc = engine.add.text(questCenterX, startY - 30 * GlobalScale, null, DefaultFontSmallBlack).setOrigin(0.5, 0.5).setWordWrapWidth(600 * GlobalScale);
                 this.group.add(this.questDesc);
 
                 const progressY = startY + 30 * GlobalScale;
-                this.loader = new Loader(this.group, 'PhotoQuestBar', 'PhotoQuestBarFull', centerX - 60 * GlobalScale, progressY);
-                this.questProgress = engine.add.text(centerX + 150 * GlobalScale, progressY, null, DefaultFontSmallBlack).setOrigin(0, 0.5);
+                this.loader = new Loader(this.group, 'PhotoQuestBar', 'PhotoQuestBarFull', questCenterX - 60 * GlobalScale, progressY);
+                this.questProgress = engine.add.text(questCenterX + 150 * GlobalScale, progressY, null, DefaultFontSmallBlack).setOrigin(0, 0.5);
                 this.group.add(this.questProgress);
 
-                this.quest_done_icon = this.engine.add.sprite(centerX - 380 * GlobalScale, startY - 50 * GlobalScale, 'PhotoQuestDoneIcon');
+                this.quest_done_icon = this.engine.add.sprite(questCenterX - 280 * GlobalScale, startY - 100 * GlobalScale, 'PhotoQuestDoneIcon');
                 this.group.add(this.quest_done_icon);
 
                 startY += 300 * GlobalScale;
@@ -30947,7 +31260,7 @@ class WinPhotosQuest extends WinWithBrownBack {
                 // this.photoName = engine.add.text(centerX, startY, null, DefaultFont).setOrigin(0.5);
                 // this.group.add(this.photoName);
 
-                // startY += 50 * GlobalScale;
+                startY += 50 * GlobalScale;
                 this.photoDesc = engine.add.text(centerX, startY, null, PhotoQuestDescFont).setOrigin(0.5, 0).setWordWrapWidth(900 * GlobalScale);
                 this.group.add(this.photoDesc);
 
@@ -31002,12 +31315,6 @@ class WinPhotosQuest extends WinWithBrownBack {
                 if (this.selectedQuest)
                     this.selectSpecificQuest(this.selectedQuest);
             }
-        } else {
-            if (this.collectedPuzzle.length > 0) {
-                for (let i in this.collectedPuzzle)
-                    this.collectedPuzzle[i].destroy();
-                this.collectedPuzzle = [];
-            }
         }
 
         hudResources.setVisible(visible);
@@ -31029,11 +31336,43 @@ class WinPhotosQuest extends WinWithBrownBack {
         return true;
     }
 
+    loadPuzzle() {
+        const slot = this.selectedQuest.goodsId;
+        const image = slot - 1;
+
+        if (this.puzzleImage) {
+            this.puzzleImage.destroy();
+        }
+
+        this.puzzleImage = winPuzzleInstance.getCell({
+            item: {
+                id: slot,
+                level: this.selectedQuest.level,
+                pieces: 0,
+            },
+            index: image
+        }, true);
+
+        const x = this.centerX - 340 * GlobalScale;
+        const y = this.centerY + 100 * GlobalScale;
+        this.puzzleImage.setPosition(x * localScale, y * localScale);
+        this.group.add(this.puzzleImage);
+    }
+
     selectSpecificQuest(quest) {
         // this.photoName.setText("Photo name");
         this.photoDesc.setText("You immediately stands up to take of your toga. Dryad jumps away gracefully and start running around you on all fours\n");
 
         this.selectedQuest = quest;
+
+        for (let i in this.collectedPuzzle) {
+            const p = this.collectedPuzzle[i];
+            if (p) {
+                p.setExternalScale(p.itemArr === quest ? 1 : this.nonSelectedScale);
+            }
+        }
+
+        this.loadPuzzle();
 
         for (let i in this.resourcesModules)
             this.resourcesModules[i].setVisible(false);
@@ -31047,10 +31386,10 @@ class WinPhotosQuest extends WinWithBrownBack {
             this.buttonLabel.setVisible(true);
 
             this.questDesc.setText("PICTURE UNLOCKED");
-            this.buttonLabel.setText(LocalizationManager.getLocalizization("VIEW"));//TODO localize
+            this.buttonLabel.setText(LocalizationManager.getTutorialLocalizization("VIEW"));//TODO localize
             return;
         } else {
-            this.buttonLabel.setText(LocalizationManager.getLocalizization("UNLOCK"));//TODO localize
+            this.buttonLabel.setText(LocalizationManager.getTutorialLocalizization("UNLOCK"));//TODO localize
         }
         const questProgress = gameInit.photoManager.getQuestById(quest.id);
         let visible;
@@ -31094,7 +31433,7 @@ class WinPhotosQuest extends WinWithBrownBack {
                 if (type.toLowerCase().startsWith('token'))
                     sprite.setScale(0.65);
                 pGroup.unny_text = this.engine.add.text(0, 40 * GlobalScale, null, PhotoQuestPrice).setOrigin(0.5);
-                pGroup.unny_done_icon = this.engine.add.sprite(-80 * GlobalScale, -50 * GlobalScale, 'PhotoQuestDoneIcon');
+                pGroup.unny_done_icon = this.engine.add.sprite(-80 * GlobalScale, -80 * GlobalScale, 'PhotoQuestDoneIcon');
 
                 pGroup.add(sprite);
                 pGroup.add(pGroup.unny_text);
@@ -31118,7 +31457,7 @@ class WinPhotosQuest extends WinWithBrownBack {
         let x = this.centerX - distance * (this.activeResources.length - 1) / 2;
 
         for (let i in this.activeResources) {
-            this.activeResources[i].setPosition(x, this.centerY + 200 * GlobalScale);
+            this.activeResources[i].setPosition(x, this.centerY + 350 * GlobalScale);
             x += distance;
         }
 
@@ -31127,9 +31466,8 @@ class WinPhotosQuest extends WinWithBrownBack {
     }
 
     selectQuest(item) {
-        const slot = item.array[0].goodsId;
-
         const girlName = item.tag.toLowerCase();
+        this.girlName = girlName;
         const icon = "GirlIcon_" + girlName;
         const girlPath = VisualData.getGirlsImagesFolder() + girlName + ".png";
 
@@ -31138,37 +31476,39 @@ class WinPhotosQuest extends WinWithBrownBack {
                 this.destroyImage();
                 this.image = this.group.create(this.centerX - 26 * GlobalScale, this.centerY - 600 * GlobalScale, icon).setDepth(WinDefaultDepth + 1);
 
-                //Draw puzzle
-                const puzzle = gameInit.progress.getPuzzleInfo();
-                const image = slot - 1;
-
-                const info = puzzle[image];
-
-                const distance = 360 * GlobalScale;
+                const distance = 260 * GlobalScale;
                 const puzzlesY = this.centerY - 250 * GlobalScale;
                 let posX = this.centerX - (item.array.length - 1) / 2 * distance;
-                let selected = false;
+
+                this.selectSpecificQuest(item.array[0]);
+
                 for (let i in item.array) {
-                    const collectedPuzzle = winPuzzleInstance.getCell({item: info, index: image}, true, true, () => {
-                        this.selectSpecificQuest(item.array[i]);
-                    });
-                    collectedPuzzle.setPosition(posX * localScale, puzzlesY * localScale);
-                    this.collectedPuzzle.push(collectedPuzzle);
-                    this.group.add(collectedPuzzle);
-
+                    const arr = item.array[i];
+                    const previewName = arr.id;
+                    const px = posX;
                     posX += distance;
+                    const iconNamePreview = "Preview_" + previewName;
+                    LoadFile(this.engine, iconNamePreview, VisualData.getGirlsPreviewFolder() + previewName + ".png", () => {
+                        if (this.visible && this.girlName === girlName) {
+                            const previewBtn = new BasicButton(this.group, {
+                                'scene': this.engine,
+                                'key': iconNamePreview,
+                                'x': px,
+                                'y': puzzlesY
+                            }, () => {
+                                this.selectSpecificQuest(arr);
+                            });
 
-                    if (!selected) {
-                        const pq = gameInit.progress.getPhotoQuestById(item.array[i].id);
-                        if (!pq.isComplete) {
-                            selected = true;
-                            this.selectSpecificQuest(item.array[i])
+                            previewBtn.itemArr = arr;
+
+                            if (this.collectedPuzzle[i])
+                                this.collectedPuzzle[i].destroy();
+                            this.collectedPuzzle[i] = previewBtn;
+
+                            previewBtn.setExternalScale(this.selectedQuest === arr ? 1 : this.nonSelectedScale);
                         }
-                    }
+                    });
                 }
-
-                if (!selected)
-                    this.selectSpecificQuest(item.array[0]);
             }
         });
     }
@@ -31178,6 +31518,12 @@ class WinManagerDoubling extends WinWithBrownBack {
 
     createGame(engine) {
         super.createGame(engine);
+        eventManager.onBubbleAppeared.addListener(this.bubbleAppeared.bind(this));
+    }
+
+    bubbleAppeared() {
+        if (this.visible && this.superDouble)
+            this.superDouble.setVisible(false);
     }
 
     setWindowVisible(visible) {
@@ -31192,6 +31538,8 @@ class WinManagerDoubling extends WinWithBrownBack {
         const engine = this.engine;
         if (this.collectedPuzzle)
             this.collectedPuzzle.destroy();
+
+        this.resources.setText(LocalizationManager.getLocalizedNumber(gameInit.progress.getSuperDoublingTokens()));
 
         const guard = this.gameInit.guardManager.getGuardForWorld(this.gameInit.selectedWorld);
         if (!guard)
@@ -31208,13 +31556,16 @@ class WinManagerDoubling extends WinWithBrownBack {
             if (!info)
                 console.error("puzzle info wasn't found", guard);
             else {
-                this.collectedPuzzle = winPuzzleInstance.getCell({item: info, index: guard.id}, false, false, null, true);
+                this.collectedPuzzle = winPuzzleInstance.getCell({
+                    item: info,
+                    index: guard.id
+                }, false, false, null, true);
                 this.group.add(this.collectedPuzzle);
 
                 let y = 50 * GlobalScale;
                 const nameBack = engine.add.sprite(650 * GlobalScale, y, 'Managers_UnderText_1').setDepth(WinDefaultDepth + 100).setScale(1.5, 1);
                 this.collectedPuzzle.add(nameBack);
-                let name = engine.add.textOld(650 * GlobalScale, y, "GUARD NAME", DefaultFont).setOrigin(0.5, 0.5).setDepth(WinDefaultDepth + 100);
+                let name = engine.add.textOld(650 * GlobalScale, y, guard.title, DefaultFont).setOrigin(0.5, 0.5).setDepth(WinDefaultDepth + 100);
                 this.collectedPuzzle.add(name);
                 y += 70;
 
@@ -31235,16 +31586,16 @@ class WinManagerDoubling extends WinWithBrownBack {
                             text = pb;
                             break;
                     }
-                    const passive = engine.add.textOld(400 * GlobalScale, y, text, DefaultFontSmall)
+                    const passive = engine.add.textOld(400 * GlobalScale, y, text, FontManagerWindow)
                         .setOrigin(0, 0.5)
                         .setDepth(WinDefaultDepth + 100);
                     this.collectedPuzzle.add(passive);
 
-                    y+= 60 * GlobalScale;
+                    y += 60 * GlobalScale;
                 }
 
-                y+= 50 * GlobalScale;
-                let active = engine.add.textOld(400 * GlobalScale, y, "ACTIVATION: x" + guard.getActiveBonusValueMinumum(), DefaultFontSmall)
+                y += 50 * GlobalScale;
+                let active = engine.add.textOld(400 * GlobalScale, y, "ACTIVATION: x" + guard.getActiveBonusValueMinumum(), FontManagerWindow)
                     .setOrigin(0, 0.5)
                     .setDepth(WinDefaultDepth + 100);
                 this.collectedPuzzle.add(active);
@@ -31255,6 +31606,10 @@ class WinManagerDoubling extends WinWithBrownBack {
         }
     }
 
+    getTutorialButton() {
+        return this.doubleButton;
+    }
+
     prepareWindow() {
         if (this.prepared)
             return;
@@ -31263,27 +31618,30 @@ class WinManagerDoubling extends WinWithBrownBack {
         const engine = this.engine;
 
         let y = this.centerY + 600 * GlobalScale;
-        const back = engine.add.sprite(this.centerX, y, 'QuestBack').setDepth(WinDefaultDepth);
-        this.group.add(back);
+        this.superDouble = engine.add.container(this.centerX, y);
+        y = 0;
+        this.group.add(this.superDouble);
+        const back = engine.add.sprite(0, 0, 'QuestBack').setDepth(WinDefaultDepth);
+        this.superDouble.add(back);
 
-        this.doubleForeverLabel = engine.add.text(this.centerX, y, "Double your profits forever", DefaultFontSmall)
+        this.doubleForeverLabel = engine.add.text(0, y, LocalizationManager.getLocalizization("RainDesc").format(4), FontManagerWindow)
             .setOrigin(0.5, 0.5)
             .setWordWrapWidth(1000 * GlobalScale)
             .setDepth(WinDefaultDepth + 100);
-        this.group.add(this.doubleForeverLabel);
+        this.superDouble.add(this.doubleForeverLabel);
 
         y -= 100 * GlobalScale;
-        const nameBack = engine.add.sprite(this.centerX, y, 'Managers_UnderText_2').setDepth(WinDefaultDepth + 100);
-        this.group.add(nameBack);
-        let name = engine.add.text(this.centerX, y, "SUPER DOUBLING", DefaultFont).setOrigin(0.5, 0.5).setDepth(WinDefaultDepth + 100);
-        this.group.add(name);
+        const nameBack = engine.add.sprite(0, y, 'Managers_UnderText_2').setDepth(WinDefaultDepth + 100);
+        this.superDouble.add(nameBack);
+        let name = engine.add.text(0, y, "SUPER DOUBLING", DefaultFont).setOrigin(0.5, 0.5).setDepth(WinDefaultDepth + 100);
+        this.superDouble.add(name);
 
         y += 240 * GlobalScale;
-        const button = new ButtonWithText(this.group, {
+        const button = new ButtonWithText(this.superDouble, {
             'scene': engine,
             // 'key': 'DefaultButton',
             'key': 'ButtonPink',
-            'x': this.centerX,
+            'x': 0,
             'y': y,
             // 'scale_parent': true,
             // 'minWidth': 1000 * GlobalScale
@@ -31291,7 +31649,7 @@ class WinManagerDoubling extends WinWithBrownBack {
         button.caption.setText("BUY FOR $5");
 
         //top
-        this.guardDescription = engine.add.text(this.centerX, this.centerY + 100 * GlobalScale, "She likes very dirty sex and different toys", DefaultFontSmall)
+        this.guardDescription = engine.add.text(this.centerX, this.centerY + 100 * GlobalScale, "She likes very dirty sex and different toys", FontManagerWindow)
             .setOrigin(0.5, 0.5)
             .setWordWrapWidth(1000 * GlobalScale)
             .setDepth(WinDefaultDepth + 100);
@@ -31304,7 +31662,7 @@ class WinManagerDoubling extends WinWithBrownBack {
             'key': 'ButtonGreen',
             'x': x,
             'y': y,
-        }, ()=>{
+        }, () => {
             const win = this.gui.openNewWindow(WindowType.WinPuzzle);
             win.setGuardsTab();
         }).setDepth(WinDefaultDepth + 100);
@@ -31314,24 +31672,46 @@ class WinManagerDoubling extends WinWithBrownBack {
             .setDepth(WinDefaultDepth + 100);
         this.group.add(btnText);
 
-        const doubleButton = new ButtonWithText(this.group, {
+        this.doubleButton = new ButtonWithText(this.group, {
             'scene': engine,
             'key': 'ButtonBlue',
             'x': this.centerX,
             'y': this.centerY + 300 * GlobalScale,
             'font': DefaultFont
-        }, ()=>{
-            gameInit.progress.activateSupervisor();
-            this.gui.getWindowByType(WindowType.WinMain).playBreadAnimation();
-            this.closeWindow();
+        }, () => {
+            if (gameInit.progress.haveAnySuperDoublingTokens()) {
+                gameInit.progress.spendSuperDoublingToken();
+                gameInit.progress.activateSupervisor();
+                this.gui.getWindowByType(WindowType.WinMain).playBreadAnimation();
+                this.closeWindow();
+            } else
+                guiManager.openGemsStore();
         }).setDepth(WinDefaultDepth + 100);
-        doubleButton.caption.setText('X2 profit for 15 seconds');
+        this.doubleButton.caption.setText('X2 profit for 15 seconds');
+
+
+        y = 120 * GlobalScale;
+        x = this.centerX - 500 * GlobalScale;
+        const info = VisualData.GUI_HUDResources;
+        const image = engine.add.sprite(x, y, 'HudResBack').setOrigin(0, 0.5);
+        if (info.hudBackScale)
+            image.setScale(info.hudBackScale, 1);
+        this.group.add(image);
+        this.group.create(x + 30 * GlobalScale, y, 'PriceDoublingToken').setScale(0.85, 0.9);
+        this.resources = engine.add.text(x + 80 * GlobalScale, y + info.labelOffsetY * GlobalScale, null, DefaultFontSmall).setOrigin(0, 0.5);
+        this.group.add(this.resources);
+        new BasicButton(this.group, {
+            'scene': engine,
+            'key': 'SeedsQuestIcon',
+            'x': x + info.greenButtonOffsetX1 * GlobalScale,
+            'y': y,
+        }, () => guiManager.openGemsStore());
     }
 }
 
-class WinPhotosPreview extends WinBase {
-    constructor(gui, gameInit) {
-        super(gui, gameInit);
+class WinPhotosPreview extends WinWithPicture {
+    constructor(gui, gameInit, config) {
+        super(gui, gameInit, config);
     }
 
     setWindowVisible(visible) {
@@ -31340,7 +31720,6 @@ class WinPhotosPreview extends WinBase {
     }
 
     setImage(item) {
-        console.error("OPEN");
         this.photo.src = item.name;
     }
 
@@ -31862,6 +32241,7 @@ const WindowType = {
     WinManagerDoubling: 35,
     WinZoomIn: 36,
     QuestBubble: 37,
+    WinGirlBio: 38,
 };
 
 class GUIManager {
@@ -32063,12 +32443,19 @@ class GUIManager {
         if (VisualData.getGameSettings().photos) {
             this.allWindows[WindowType.WinPhotosMainMenu] = new WinPhotosMainMenu(this, gameInit);
             this.allWindows[WindowType.WinPhotosQuest] = new WinPhotosQuest(this, gameInit);
-            this.allWindows[WindowType.WinPhotosPreview] = new WinPhotosPreview(this, gameInit);
+            this.allWindows[WindowType.WinGirlBio] = new WinGirlBio(this, gameInit);
+            this.allWindows[WindowType.WinPhotosPreview] = new WinPhotosPreview(this, gameInit,  {
+                description: "GiftWindowGettingInfo",
+                image: "collectCropSplash",
+                no_exit: true,
+                imageX: 100,
+                oldText: true
+            });
             this.allWindows[WindowType.WinPhotosList] = new WinPhotosList(this, gameInit);
             this.allWindows[WindowType.WinPhotosListSingleImages] = new WinPhotosListSingleImages(this, gameInit);
             this.allWindows[WindowType.WinManagerDoubling] = new WinManagerDoubling(this, gameInit);
             this.allWindows[WindowType.WinZoomIn] = new WinZoomIn(this, gameInit);
-            this.allWindows[WindowType.QuestBubble] = new QuestBubble(this, gameInit);
+            this.allWindows[WindowType.QuestBubble] = new WinQuestBubble(this, gameInit);
         }
 
         this.activeWindows = [];
@@ -32228,7 +32615,7 @@ class GUIManager {
         visualGame.setBuildingsProductionVisible(gameInit.selectedWorld, show);
         visualGame.setGameObjectsVisible(showGUI);
 
-        if (type != WindowType.WinUpgrade)
+        if (type != WindowType.WinUpgrade && (type != WindowType.QuestBubble || this.guiMode !== GUIMode.UpgradeBuildings))
             this.allWindows[WindowType.WinBuildings].showNormal(showGUI, false, false, gameInit.selectedWorld);
 
         if (type === WindowType.WinMain) {
@@ -32351,7 +32738,10 @@ class GUIManager {
 
         const set = VisualData.getGameSettings();
 
-        this.tutorialLabel = engine.add.text(VisualData.MAP_PARAMS.center.x, RealScreenHeight - (set.tut_phrase_y || 0) * GlobalScale, null, (typeof TutorialFont !== 'undefined') ? TutorialFont : DefaultFontBig).setOrigin(0.5, 1).setDepth(WinDefaultDepth - 2000);
+        this.tutorialLabel = engine.add.text(VisualData.MAP_PARAMS.center.x, RealScreenHeight - (set.tut_phrase_y || 0) * GlobalScale, null, (typeof TutorialFont !== 'undefined') ? TutorialFont : DefaultFontBig)
+            .setOrigin(0.5, 1)
+            .setWordWrapWidth(2000 * GlobalScale)
+            .setDepth(WinDefaultDepth - 2000);
         this.hideTutorialText();
 
         this.createPopup(engine);

@@ -1,42 +1,74 @@
 [
   {
-    "itemId": "gems100",
-    "itemIdprod": "hellprodgems100",
-    "title": "InApp1Name",
-    "description": "InApp1Desc",
-    "gems": 300,
-    "order": 2
+    "id": "hellprodgems100",
+    "title": "gems100_name",
+    "description": "gems100_desc",
+    "type": "Regular",
+    "currency": [
+      {
+        "resourceType": "gems",
+        "value": "100"
+      }
+    ],
+    "boxesAmount": 0,
+    "puzzles": [],
+    "icon": "InApp1"
   },
   {
-    "itemId": "gems200",
-    "itemIdprod": "hellprodgems200",
-    "title": "InApp2Name",
-    "description": "InApp2Desc",
-    "gems": 800,
-    "order": 3
+    "id": "hellprodgems200",
+    "title": "gems200_name",
+    "description": "gems200_desc",
+    "type": "Regular",
+    "currency": [
+      {
+        "resourceType": "gems",
+        "value": "200"
+      }
+    ],
+    "boxesAmount": 0,
+    "puzzles": [],
+    "icon": "InApp2"
   },
   {
-    "itemId": "gems300",
-    "itemIdprod": "hellprodgems300",
-    "title": "InApp3Name",
-    "description": "InApp3Desc",
-    "gems": 2000,
-    "order": 4
+    "id": "superDoublingTokens",
+    "title": "superDoublingTokensTitle",
+    "description": "superDoublingTokensDesc",
+    "type": "Regular",
+    "currency": [
+      {
+        "resourceType": "superDoublingToken",
+        "value": "3"
+      }
+    ],
+    "boxesAmount": 0,
+    "puzzles": [],
+    "icon": "super_doubling_coin_inap"
   },
   {
-    "itemId": "gems400",
-    "itemIdprod": "hellprodgems400",
-    "title": "InApp4Name",
-    "description": "InApp4Desc",
-    "gems": 5000,
-    "order": 5
-  },
-  {
-    "itemId": "gems500",
-    "itemIdprod": "hellprodgems500",
-    "title": "InApp5Name",
-    "description": "InApp5Desc",
-    "gems": 15500,
-    "order": 6
+    "id": "com.un.test.1",
+    "title": "unTestTitle",
+    "description": "unTestDesc",
+    "type": "Regular",
+    "currency": [
+      {
+        "resourceType": "gems",
+        "value": "100"
+      },
+      {
+        "resourceType": "tokenCommon",
+        "value": "100"
+      },
+      {
+        "resourceType": "tokenRare",
+        "value": "100"
+      },
+      {
+        "resourceType": "tokenEpic",
+        "value": "100"
+      }
+    ],
+    "boxesAmount": 0,
+    "puzzles": [],
+    "icon": "all_res_inap"
   }
 ]
