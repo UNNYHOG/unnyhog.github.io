@@ -15288,6 +15288,16 @@ var VisualData = (function () {
         },
         //overrides...
 
+        'ScrollLine': {
+            file: 'UI/Windows/Common/scroll line.png',
+        },
+        'ScrollLineWhite': {
+            file: 'UI/Windows/Common/scroll_line_white.png',
+        },
+        'ScrollPart': {
+            file: 'UI/Windows/Common/scroll.png',
+        },
+
         'PriceDoublingToken': {
             file: 'UI/HUD_and_common/HUD/superDoubling_coin.png',
         },
@@ -15354,6 +15364,9 @@ var VisualData = (function () {
         'PhotoLock': {
             file: 'UI/Windows/GirlsMenu/lock.png',
         },
+        'WhiteSpace': {
+            file: 'UI/Windows/PhotoAlbum/white place.png',
+        },
 
         'GirlDescription': {
             file: 'UI/Windows/GirlsMenu/person.png',
@@ -15365,9 +15378,9 @@ var VisualData = (function () {
         'PhotoQuestBarFull': {
             file: 'UI/Windows/GirlsMenu/bar_full.png',
         },
-        'PhotoQuestFrame': {
-            file: 'UI/Windows/GirlsMenu/frame.png',
-        },
+        // 'PhotoQuestFrame': {
+        //     file: 'UI/Windows/GirlsMenu/frame.png',
+        // },
         'PhotoQuestUnlockButton': {
             file: 'UI/Windows/GirlsMenu/unlock.png',
         },
@@ -15638,10 +15651,11 @@ var VisualData = (function () {
         'Album_Frame',
         'StripeText',
         'PhotoLock',
+        'WhiteSpace',
         'GirlDescription',
         'PhotoQuestBar',
         'PhotoQuestBarFull',
-        'PhotoQuestFrame',
+        // 'PhotoQuestFrame',
         'PhotoQuestUnlockButton',
         'PhotoQuestDoneIcon',
         'BigBlueButton',
@@ -15674,12 +15688,18 @@ var VisualData = (function () {
         'ChestGuardSuperOpen',
         'PriceDoublingToken',
         'LocationsBtnGreen',
-        'LocationsBtnGrey'
+        'LocationsBtnGrey',
+        'ScrollLine',
+        'ScrollLineWhite',
+        'ScrollPart'
     ];
 
     const GameSettings = {
+        drop_image_scale: 0.8,
+        popup_image_scale: 0.6,
+        popup_images_from_drop: true,
         dont_double: true,
-        save_version: 9,
+        save_version: 10,
         banjo_duration: 16,
         fb_app_id: 2077329288999958,//hz
         vk_app_id: 6955719,//fish
@@ -15772,6 +15792,10 @@ var VisualData = (function () {
 
         getPaymentInfoById(id) {
             return PaymentInfo.hasOwnProperty(id) ? PaymentInfo[id] : null;
+        },
+
+        getChestIconPath() {
+            return VisualData.getPuzzleUIFolder() + "GoldBox.png";
         },
 
         ANIMATIONS: {
@@ -16221,8 +16245,10 @@ var VisualData = (function () {
             cellHeight: 350,
             offsetX: 0,
             offsetY: 0,
-            width: 1600,
+            width: 1200,
             height: 900,
+            // track: "ScrollLine",
+            // thumb: "ScrollPart",
         },
 
         PHOTOS_MENU_SCROLL_CONFIG: {
@@ -16233,6 +16259,8 @@ var VisualData = (function () {
             offsetY: 100,
             width: 1300,
             height: 1380,
+            track: "ScrollLineWhite",
+            thumb: "ScrollPart",
         },
 
         LOCATIONS_MENU_SCROLL_CONFIG: {
@@ -16243,6 +16271,8 @@ var VisualData = (function () {
             offsetY: 100,
             width: 1300,
             height: 1380,
+            track: "ScrollLineWhite",
+            thumb: "ScrollPart",
         },
 
         PHOTOS_LIST_SCROLL_CONFIG: {
@@ -17338,9 +17368,6 @@ class Tutorial {
                         this.fingerAnimation = null;
                     }
 
-                    if (this.phaseData.parameter >= 100)
-                        hudResources.showGems();
-
                     this.goToNextStep();
                 }
                 break;
@@ -17598,6 +17625,9 @@ class Tutorial {
                     }
                 }
             {
+                if (this.phaseData.parameter >= 20)
+                    hudResources.showTokens();
+
                 const win = guiManager.getWindowByType(WindowType.WinMain);
                 win.showUpgradeButton();
             }
@@ -17782,6 +17812,11 @@ class Tutorial {
                 }
                 break;
             }
+            case "CollectGold": {
+                if (this.phaseData.parameter >= 100)
+                    hudResources.showGems();
+                break;
+            }
         }
     }
 
@@ -17812,8 +17847,6 @@ class Tutorial {
             case "UpgradeSlot":
                 const b = gameInit.getBuildingById(1, 1);
                 if (b.getLevel() >= this.phaseData.parameter) {
-                    if (this.phaseData.parameter >= 20)
-                        hudResources.showTokens();
                     this.goToNextStep();
                 }
                 break;
@@ -20627,10 +20660,14 @@ class Building {
     }
 
     getSmallIcon() {
+        if (VisualData.getGameSettings().popup_images_from_drop)
+            return this.getDropIcon();
         return this.info.visual.icon + "_small";
     }
 
     getSmallIconPath() {
+        if (VisualData.getGameSettings().popup_images_from_drop)
+            return this.getDropIconPath();
         return "GoodsSmallIcons/" + this.info.visual.icon + ".png";
     }
 
@@ -20785,7 +20822,7 @@ const BoxType = {
 const MUSIC_STATE = "MUSIC_STATE";
 const SOUNDS_STATE = "SOUNDS_STATE";
 const CURRENT_LANGUAGE = "CURRENT_LANGUAGE";
-const GAME_VERSION = "0.9.30";
+const GAME_VERSION = "0.9.31";
 
 console.log("game version: " + GAME_VERSION);
 
@@ -20998,6 +21035,10 @@ class Progress {
                         update: 0
                     },
                     lastDoubleTime: 0
+                },
+                tutorial: {
+                    stepNumber: 0,
+                    actionIndex: 0
                 },
                 purchases: {
                     //Id:key
@@ -22230,11 +22271,16 @@ class Progress {
     }
 
     getTutorialPhase() {
+        if (this.savedProgress.tutorial)
+            return this.savedProgress.tutorial.stepNumber;
         return this.savedProgress.profile.tutorialPhase || 0;
     }
 
     setTutorialPhase(phase) {
-        this.savedProgress.profile.tutorialPhase = phase;
+        if (this.savedProgress.tutorial)
+            this.savedProgress.tutorial.stepNumber = phase;
+        else
+            this.savedProgress.profile.tutorialPhase = phase;
         this.saveProgress();
     }
 
@@ -24707,8 +24753,8 @@ class Loader {
                 loadBar.strokePath();
                 loadBar.closePath();
             } else {
-                this.value = value;
-                this.progressBar.setScale(value * this.scale, this.scale);
+                this.value = Math.min(value, 1);
+                this.progressBar.setScale(this.value * this.scale, this.scale);
             }
             return true;
         }
@@ -25742,8 +25788,8 @@ class GUIScroll {
             },
 
             // slider: {
-            //     track: engine.rexUI.add.roundRectangle(0, 0, 20, 10, 10, 0x260e04),
-            //     thumb: engine.rexUI.add.roundRectangle(0, 0, 0, 0, 13, 0x7b5e57),
+            //track: engine.rexUI.add.roundRectangle(0, 0, 20, 10, 10, 0x260e04),
+            //thumb: engine.rexUI.add.roundRectangle(0, 0, 0, 0, 13, 0xff0000),
             // },
 
             scroller: {
@@ -25766,6 +25812,13 @@ class GUIScroll {
 
             name: '',
         };
+
+        if (config.track && config.thumb) {
+            conf.slider = {
+                track: engine.add.sprite(0, 0, config.track),
+                thumb: engine.add.sprite(0, 0, config.thumb)
+            }
+        }
 
         // this.table = engine.rexUI.add.gridTable(conf).setInteractive().setDepth(WinDefaultDepth).layout();
         this.table = new RexPlugins.UI.GridTable(engine, conf).setInteractive().setDepth(WinDefaultDepth).layout();
@@ -27417,8 +27470,8 @@ class WinPuzzle extends WinWithBrownBack {
 
         let group = engine.rexUI.add.container(0, 0);
         const depth = WinDefaultDepth + 200;
-        const chestImage = "GiftBox";
-        const chestImagePath = VisualData.getStoreFolder() + "GiftBox.png";
+        const chestImage = "GiftBoxStore";
+        const chestImagePath = VisualData.getChestIconPath();
 
         this.allCells[cell.index] = group;
 
@@ -30666,6 +30719,9 @@ class BuildingsGUI extends WinBase{
                             const x = upgrade.x + rnd * 160 * GlobalScale;
                             const vx = -rnd * 50 * GlobalScale;
                             const sprite = this.engine.add.sprite(x, upgrade.y - 75 * GlobalScale, smallIcon).setDepth(upgrade.depth - 100);
+                            const scale = VisualData.getGameSettings().drop_image_scale;
+                            if (scale)
+                                sprite.setScale(scale);
                             animManager.randomJumpRotation(sprite, {vx: vx,
                                 vy: -200 * GlobalScale,
                                 g: 70 * GlobalScale,
@@ -31458,8 +31514,8 @@ class WinPhotosQuest extends WinWithBrownBack {
 
                 //quest
                 const questCenterX = centerX + 160 * GlobalScale;
-                const questFrame = engine.add.sprite(questCenterX, startY, 'PhotoQuestFrame').setScale(1.8, 1.2);
-                this.group.add(questFrame);
+                // const questFrame = engine.add.sprite(questCenterX, startY, 'PhotoQuestFrame').setScale(1.8, 1.2);
+                // this.group.add(questFrame);
                 this.questDesc = engine.add.text(questCenterX, startY - 30 * GlobalScale, null, DefaultFontSmallBlack).setOrigin(0.5, 0.5).setWordWrapWidth(600 * GlobalScale);
                 this.group.add(this.questDesc);
 
@@ -31643,8 +31699,8 @@ class WinPhotosQuest extends WinWithBrownBack {
                 pGroup = this.resourcesModules[type] = this.engine.add.container(0, 0).setDepth(WinDefaultDepth + 1000);
                 this.group.add(pGroup);
 
-                const frame = this.engine.add.sprite(0, 0, 'PhotoQuestFrame').setScale(0.75, 1);
-                pGroup.add(frame);
+                // const frame = this.engine.add.sprite(0, 0, 'PhotoQuestFrame').setScale(0.75, 1);
+                // pGroup.add(frame);
                 const sprite = this.engine.add.sprite(0, -30 * GlobalScale, GameData.getIconByType(type));
                 if (type.toLowerCase().startsWith('token'))
                     sprite.setScale(0.65);
@@ -31687,6 +31743,12 @@ class WinPhotosQuest extends WinWithBrownBack {
         const icon = "GirlIcon_" + girlName;
         const girlPath = VisualData.getGirlsImagesFolder() + girlName + ".png";
 
+        for (let i in this.collectedPuzzle) {
+            if (this.collectedPuzzle[i])
+                this.collectedPuzzle[i].destroy();
+        }
+        this.collectedPuzzle = [];
+
         LoadFile(this.engine, icon, girlPath, () => {
             if (this.visible) {
                 this.destroyImage();
@@ -31717,8 +31779,6 @@ class WinPhotosQuest extends WinWithBrownBack {
 
                             previewBtn.itemArr = arr;
 
-                            if (this.collectedPuzzle[i])
-                                this.collectedPuzzle[i].destroy();
                             this.collectedPuzzle[i] = previewBtn;
 
                             previewBtn.setExternalScale(this.selectedQuest === arr ? 1 : this.nonSelectedScale);
@@ -32185,6 +32245,7 @@ class WinPhotosListSingleImages extends WinWithBrownBack {
         const cellCenterX = config.cellWidth / 2 * GlobalScale;
         const cellCenterY = config.cellHeight / 2 * GlobalScale;
         let group = engine.rexUI.add.container(0, 0);
+        const depth = WinDefaultDepth + 100;
 
         const item = cell.item;
         const pq = gameInit.progress.getPhotoQuestById(item.id);
@@ -32205,17 +32266,32 @@ class WinPhotosListSingleImages extends WinWithBrownBack {
             }
         });
 
-        const y = cellCenterY - 50 * GlobalScale;
-        const distance = 30 * GlobalScale;
-        const photoName = engine.add.textOld(cellCenterX, y - distance, item.mainTag, DefaultFont).setOrigin(0.5);
-        group.add(photoName);
-
-        // const photoCount = engine.add.textOld(cellCenterX, y + distance, item.mainTag, DefaultFontSmall).setOrigin(0.5);
-        // group.add(photoCount);
+        //Image
+        const imageName = "PHOTO_PLACEHOLDER";
+        const imagePath = "UI/Windows/PhotoAlbum/picture.png";
+        let loading = true;
+        if (imageName) {
+            LoadFile(engine, imageName, imagePath, () => {
+                if (group && group.active) {
+                    const sprite = engine.add.sprite((group.x / localScale || 0) + cellCenterX, (group.y / localScale || 0) + cellCenterY, imageName)
+                        .setDepth(depth);
+                    group.add(sprite);
+                    group.unny_sprite = sprite;
+                    if (this.scroll && !loading)
+                        this.scroll.fakeMove();
+                }
+            });
+        }
+        loading = false;
 
         if (!pq.isComplete) {
-            const lock = engine.add.sprite(cellCenterX, cellCenterY + 40 * GlobalScale, 'PhotoLock');
+            const y = cellCenterY + 200 * GlobalScale;
+
+            const lock = engine.add.sprite(cellCenterX, y, 'WhiteSpace');
             group.add(lock);
+
+            const photoName = engine.add.textOld(cellCenterX, y, "Photo is Locked", DefaultFontVerySmall).setOrigin(0.5);
+            group.add(photoName);
         }
 
         return group.setOrigin(0).setDepth(WinDefaultDepth + 100);
@@ -32746,6 +32822,9 @@ class GUIManager {
             let iconToDestroy = null;
             if (info.icon) {
                 iconToDestroy = this.engine.add.sprite(this.popup.thumb.x, this.popup.thumb.y, info.icon);
+                const scale = VisualData.getGameSettings().popup_image_scale;
+                if (scale)
+                    iconToDestroy.setScale(scale);
                 this.popup.add(iconToDestroy);
                 this.popup.thumb.setVisible(false);
             } else
