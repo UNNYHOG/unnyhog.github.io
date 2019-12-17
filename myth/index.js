@@ -15158,6 +15158,8 @@ var VisualData = (function () {
     let DAILY_ICONS_FOLDER = 'UI/Windows/LoginBonus/BonusTypes/';
     let GIRLS_ICONS_FOLDER = 'UI/Windows/GirlsMenu/girls/';
     let GIRLS_PREVIEW_FOLDER = 'UI/Windows/GirlsMenu/Thumbs/';
+    let LOCATIONS_FOLDER = 'UI/Windows/ChangeLocations/';
+
 
     if (typeof exports !== 'undefined') {
         CommonData = require('../../../CommonVisualData');
@@ -15467,6 +15469,14 @@ var VisualData = (function () {
             file: 'UI/HUD_and_common/HUD/HudResBack.png',
         },
 
+        'HudTokensBack': {
+            file: 'UI/HUD_and_common/HUD/Hud_Photo_Res.png',
+        },
+
+        'HudTokensOpen': {
+            file: 'UI/HUD_and_common/HUD/hud_res_button.png',
+        },
+
         'BackgroundMusic': {
             type: UnnyObjectType.Audio,
             file: '../Audio/Fishclicker - Music/MUS_Sea_Theme_Loop.ogg',
@@ -15596,6 +15606,15 @@ var VisualData = (function () {
         'ChestGuardSuperOpen' : {
             file :'UI/Windows/GetPuzzlePart/ChestGuardSuperOpen.png',
         },
+
+        'LocationsBtnGreen' : {
+            file :'UI/Windows/ChangeLocations/green back.png',
+        },
+
+        'LocationsBtnGrey' : {
+            file :'UI/Windows/ChangeLocations/grey back.png',
+        },
+
     };
 
     const PreloadObjects = [
@@ -15605,6 +15624,8 @@ var VisualData = (function () {
         'DefaultButton_Slice',
 
         'HudResBack',
+        'HudTokensBack',
+        'HudTokensOpen',
         'MM_Btn_GirlMenu',
         'MM_Btn_ManagerDoubling',
         'MM_Btn_Zoom',
@@ -15651,7 +15672,9 @@ var VisualData = (function () {
         'ChestGuardOpen',
         'ChestGuardSuper',
         'ChestGuardSuperOpen',
-        'PriceDoublingToken'
+        'PriceDoublingToken',
+        'LocationsBtnGreen',
+        'LocationsBtnGrey'
     ];
 
     const GameSettings = {
@@ -15798,6 +15821,7 @@ var VisualData = (function () {
             tabClose: "StoreTab_Inactive",
             tabOpen: "StoreTab_Active",
             tabCloseOffsetX: 20,
+            price_icon_right: true,
         },
 
         GUI_WinBossSummon: {
@@ -15886,6 +15910,10 @@ var VisualData = (function () {
         },
 
         GUI_WinPhotosMainMenu: {
+            nineSlice: "none",
+        },
+
+        GUI_WinLocationSelection: {
             nineSlice: "none",
         },
 
@@ -16058,6 +16086,10 @@ var VisualData = (function () {
             return GIRLS_PREVIEW_FOLDER;
         },
 
+        getLocationsFolder: function () {
+            return LOCATIONS_FOLDER;
+        },
+
         getDataFolder() {
             return DATA_FOLDER;
         },
@@ -16203,6 +16235,16 @@ var VisualData = (function () {
             height: 1380,
         },
 
+        LOCATIONS_MENU_SCROLL_CONFIG: {
+            columns: 1,
+            cellWidth: 1300,
+            cellHeight: 400,
+            offsetX: 0,
+            offsetY: 100,
+            width: 1300,
+            height: 1380,
+        },
+
         PHOTOS_LIST_SCROLL_CONFIG: {
             columns: 3,
             cellWidth: 450,
@@ -16245,7 +16287,8 @@ var VisualData = (function () {
             DAILY_ICONS_FOLDER,
             GUARD_PUZZLE_IMAGES_FOLDER,
             GIRLS_ICONS_FOLDER,
-            GIRLS_PREVIEW_FOLDER
+            GIRLS_PREVIEW_FOLDER,
+            LOCATIONS_FOLDER
             // '../Audio/'
         ],
 
@@ -17014,6 +17057,7 @@ let ShieldFontPrice, ShieldFontLevel, DefaultFontDailyBonus, PuzzleNumberFont, S
 let GirlsMenuHeaderFont, GirlsMenuDescFont, PhotoQuestDescFont, PhotoQuestPrice, PhotosCountInListFont,
     BossSummonHeaderFont, QuestFont;
 let TutorialFont, PlayerLevelFont;
+let DefaultFontSmallBtns;
 let PrestigeFontHeader, PrestigeFontDescription, FontManagerWindow;
 
 function CalculateFonts() {
@@ -17049,6 +17093,13 @@ function CalculateFonts() {
         align: 'center',
         // stroke: DefaultStrokeColor,
         // strokeThickness: getStroke(7)
+    });
+
+    DefaultFontSmallBtns = createFont({
+        font: getFont(35),
+        font2: getFont2(35),
+        fill: DefaultFontColor,
+        align: 'center',
     });
     DefaultFontSmall = createFont({//hud
         font: getFont(45),
@@ -17286,6 +17337,10 @@ class Tutorial {
                         clearInterval(this.fingerAnimation);
                         this.fingerAnimation = null;
                     }
+
+                    if (this.phaseData.parameter >= 100)
+                        hudResources.showGems();
+
                     this.goToNextStep();
                 }
                 break;
@@ -17305,6 +17360,9 @@ class Tutorial {
                 gameInit.progress.onResourcesChanges.addListener(this.resourcesCallback);
                 this.newMethod = tutorial.update.bind(tutorial);
                 gameInit.update.addListener(this.newMethod);
+
+                guiManager.getWindowByType(WindowType.WinMain).hideAllButtonsForTutorial();
+                hudResources.hideForTutorial();
 
                 for (let i = 0; i <= phaseIndex; i++)
                     this.preparePhase(data[i].stepNumber, i);
@@ -17521,7 +17579,6 @@ class Tutorial {
                     if (this._isWindow(WindowType.WinConstruct))
                         this._lockAtButton(guiManager.getActiveWindow().getTutorialButton());
                 }
-                guiManager.getWindowByType(WindowType.WinMain).hideAllButtonsForTutorial();
                 break;
             case "ChangeGameModeToUpgrade":
                 const win = guiManager.getWindowByType(WindowType.WinMain);
@@ -17539,10 +17596,11 @@ class Tutorial {
                         this.pointAtPosition(this._getFirstSlotPosition(), null, null, false, 0.5);
                         buildingsGUI.hideSomeLabelsForTutorial();
                     }
-                } else {
-                    const win = guiManager.getWindowByType(WindowType.WinMain);
-                    win.showUpgradeButton();
                 }
+            {
+                const win = guiManager.getWindowByType(WindowType.WinMain);
+                win.showUpgradeButton();
+            }
                 break;
             case "ChangeGameModeToNormal":
                 this._lockAtButton(guiManager.getActiveWindow().getExitButton(), true);
@@ -17607,7 +17665,6 @@ class Tutorial {
             }
             case "BuyAutoClickUpgrade": {
                 const id = VisualData.getAutoClickSlot1Id();
-                console.info("gameInit.progress.isUpgradePurchased(id) " + gameInit.progress.isUpgradePurchased(id));
                 if (!gameInit.progress.isUpgradePurchased(id) && this._isWindow(WindowType.WinStore)) {
                     GlobalInputLocked = false;
                     const win = guiManager.getActiveWindow();
@@ -17690,6 +17747,7 @@ class Tutorial {
                     this.goToNextStep();
                     guiManager.getWindowByType(WindowType.WinMain).showAllButtonsFromTutorial();
                 }
+                hudResources.showStars();
                 break;
             }
             case "ClickPuzzlesButton": {
@@ -17753,8 +17811,11 @@ class Tutorial {
                 break;
             case "UpgradeSlot":
                 const b = gameInit.getBuildingById(1, 1);
-                if (b.getLevel() >= this.phaseData.parameter)
+                if (b.getLevel() >= this.phaseData.parameter) {
+                    if (this.phaseData.parameter >= 20)
+                        hudResources.showTokens();
                     this.goToNextStep();
+                }
                 break;
             case "ChangeGameModeToNormal":
             case "CloseGirlListWindow": {
@@ -19029,7 +19090,8 @@ class ButtonWithText extends BasicButton {
 
             this.caption.setFitSize(maxWidth - iconSize * 2, maxHeight);
         } else {
-            this.caption = config.scene.add.text(this.x / localScale, this.y / localScale, config.caption, config.font || DefaultFont)
+            const x = this.x / localScale + (this.config.textOffsetX || 0);
+            this.caption = config.scene.add.text(x, this.y / localScale, config.caption, config.font || DefaultFont)
                 .setOrigin(0.5, 0.5)
                 .setDepth(WinDefaultDepth + 110);
 
@@ -20723,7 +20785,7 @@ const BoxType = {
 const MUSIC_STATE = "MUSIC_STATE";
 const SOUNDS_STATE = "SOUNDS_STATE";
 const CURRENT_LANGUAGE = "CURRENT_LANGUAGE";
-const GAME_VERSION = "0.9.29";
+const GAME_VERSION = "0.9.30";
 
 console.log("game version: " + GAME_VERSION);
 
@@ -25772,6 +25834,24 @@ class HUDResources {
             this.udpateResourcesHelp();
     }
 
+    hideForTutorial() {
+        this.gemsContainer.alpha = 0;
+        this.starsContainer.alpha = 0;
+        this.tokensButton.alpha = 0;
+    }
+
+    showGems(){
+        this.gemsContainer.alpha = 1;
+    }
+
+    showStars() {
+        this.starsContainer.alpha = 1;
+    }
+
+    showTokens() {
+        this.tokensButton.alpha = 1;
+    }
+
     createGame(engine) {
         this.group = engine.add.group();
 
@@ -25788,6 +25868,11 @@ class HUDResources {
         const info = VisualData.GUI_HUDResources;
 
         let image;
+
+        this.gemsContainer = engine.add.container(0, 0);
+        this.starsContainer = engine.add.container(0, 0);
+        this.group.add(this.gemsContainer);
+        this.group.add(this.starsContainer);
 
         if (VisualData.getGameSettings().player_level) {
             this.playerExpLoader = new Loader(this.group, 'PlayerExpLoaderBack', 'PlayerExpLoader', x + 300 * GlobalScale, y);
@@ -25823,11 +25908,12 @@ class HUDResources {
         image = engine.add.sprite(x, y, info.singleImage ? info.singleImage : 'HudResBack2').setOrigin(0, 0.5);
         if (info.hudBackScale)
             image.setScale(info.hudBackScale, 1);
-        this.group.add(image);
-        this.group.create(x + IconOffset, y, 'PriceGems');
+        this.gemsContainer.add(image);
+        const gemsIcon = engine.add.sprite(x + IconOffset, y, 'PriceGems');
+        this.gemsContainer.add(gemsIcon);
         this.gems = engine.add.text(x + LabelOffset, y + info.labelOffsetY * GlobalScale, '99999', font).setOrigin(0, 0.5);
-        this.group.add(this.gems);
-        new BasicButton(this.group, {
+        this.gemsContainer.add(this.gems);
+        new BasicButton(this.gemsContainer, {
             'scene': engine,
             'key': info.gemsPlusIcon || 'HudPlusButton',
             'x': x + info.greenButtonOffsetX1 * GlobalScale,
@@ -25838,11 +25924,12 @@ class HUDResources {
         image = engine.add.sprite(x, y, info.singleImage ? info.singleImage : 'HudResBack3').setOrigin(0, 0.5);
         if (info.hudBackScale)
             image.setScale(info.hudBackScale, 1);
-        this.group.add(image);
-        cansResourceIcon = this.group.create(x + IconOffset, y, 'PriceSeeds').setScale(0.9);
+        this.starsContainer.add(image);
+        cansResourceIcon = engine.add.sprite(x + IconOffset, y, 'PriceSeeds').setScale(0.9);
+        this.starsContainer.add(cansResourceIcon);
         this.seeds = engine.add.text(x + LabelOffset, y + info.labelOffsetY * GlobalScale, '99999', font).setOrigin(0, 0.5);
-        this.group.add(this.seeds);
-        new BasicButton(this.group, {
+        this.starsContainer.add(this.seeds);
+        new BasicButton(this.starsContainer, {
             'scene': engine,
             'key': 'SeedsQuestIcon',
             'x': x + info.greenButtonOffsetX1 * GlobalScale,
@@ -25850,24 +25937,42 @@ class HUDResources {
         }, () => guiManager.openNewWindow(WindowType.WinApples));
 
         if (VisualData.getGameSettings().photos) {
+            y += Distance;
+            this.tokesGroup = engine.add.container(0, 0);
+            this.group.add(this.tokesGroup);
             this.tokens = ['tokenCommon', 'tokenRare', 'tokenEpic'];
             this.photo_tokens = [];
+
+            this.tokensButton = new BasicButton(this.group, {
+                'scene': engine,
+                'key': 'HudTokensOpen',
+                'x': x + 120 * GlobalScale,
+                'y': y
+            }, () => {
+                this.setTokensVisible(!this.tokensVisible, false);
+            });
+
             for (let i in this.tokens) {
-                y += Distance;
+                y += Distance * 0.7;
 
                 const token = this.tokens[i];
-
-                image = engine.add.sprite(x, y, info.singleImage ? info.singleImage : 'HudResBack3').setOrigin(0, 0.5);
-                if (info.hudBackScale)
-                    image.setScale(info.hudBackScale, 1);
-                this.group.add(image);
-                photoTokensCommon[token] = this.group.create(x + IconOffset, y, GameData.getIconByType(token));
-                this.photo_tokens[i] = engine.add.text(x + LabelOffset, y + info.labelOffsetY * GlobalScale, '123456', font).setOrigin(0, 0.5);
-                this.group.add(this.photo_tokens[i]);
+                image = engine.add.sprite(x, y, 'HudTokensBack').setOrigin(0, 0.5);
+                this.tokesGroup.add(image);
+                photoTokensCommon[token] = engine.add.sprite(x + IconOffset, y, GameData.getIconByType(token));
+                this.tokesGroup.add(photoTokensCommon[token]);
+                this.photo_tokens[i] = engine.add.text(x + LabelOffset, y + info.labelOffsetY * GlobalScale, null, font).setOrigin(0, 0.5);
+                this.tokesGroup.add(this.photo_tokens[i]);
             }
         }
 
+        this.setTokensVisible(false, true);
         this.group.setDepth(WinDefaultDepth + 100);
+    }
+
+    setTokensVisible(visible, instant) {
+        this.tokensVisible = visible;
+        // if (instant)
+            this.tokesGroup.alpha = visible ? 1 : 0;
     }
 
     /***
@@ -25948,6 +26053,12 @@ function getStroke(size) {
 let DefaultFontVeryBig, DefaultFontBig, DefaultFont, DefaultFontSmall, DefaultFontSmall2, DefaultFontSmallPuzzleBonus,
     DefaultFontBlack, DefaultFontSmallBlack, DefaultFontVerySmall, DefaultFontVerySmall2;
 let DefaultFontWheel, DefaultFontNotifications;
+
+function SetIconToTheRightOfTheLabel(label, icon, distance) {
+    label.onTextPositionUpdated.addListener(() => {
+        icon.setPositionX(label.x / localScale + label.getInnerWidth() * (1 - label.originX) + distance * GlobalScale);
+    });
+}
 
 function createFont(obj) {
     //obj.fontFamily = "PT Sans Narrow";
@@ -26089,11 +26200,12 @@ function createStoreCell(engine, group, cellCenterX, cellCenterY, title, imageNa
 
     let priceText;
     if (priceImg) {
-        const priceIcon = engine.add.sprite(-120 * GlobalScale, 0, priceImg);
+        const sign = VisualData.GUI_WinStore.price_icon_right ? 1 : -1;
+        const priceIcon = engine.add.sprite(sign * 120 * GlobalScale, 0, priceImg);
         priceIcon.setScale(70 / priceIcon.width * GlobalScale / imagesDeltaScale).setDepth(depth);
         group.unny_container.add(priceIcon);
         group.priceIcon = priceIcon;
-        priceText = engine.add.textOld(-70 * GlobalScale, 0, price, DefaultFontVerySmall2).setOrigin(0, 0.5).setDepth(depth);
+        priceText = engine.add.textOld(sign * 70 * GlobalScale, 0, price, DefaultFontVerySmall2).setOrigin(0.5 + sign / 2, 0.5).setDepth(depth);
     } else {
         priceText = engine.add.textOld(0, 0, price, DefaultFontVerySmall2).setOrigin(0.5, 0.5).setDepth(depth);
     }
@@ -26250,7 +26362,7 @@ class WinBase {
         this.group.add(this.header);
     }
 
-    createActionButton(engine, action, y, visible, scale, x, minWidth, icon, image) {
+    createActionButton(engine, action, y, visible, scale, x, minWidth, icon, image, font, textOffsetX) {
         y = y || this.getWinInfoValue('buttonOffset', 500 * GlobalScale);
         x = x || this.getWinInfoValue('buttonOffsetX', 0);
         this.actionButton = new ButtonWithText(this.group, {
@@ -26260,7 +26372,9 @@ class WinBase {
             'y': y,
             'scale': scale,
             'minWidth': minWidth,//for nine slice
-            icon: icon
+            icon: icon,
+            font: font,
+            textOffsetX: textOffsetX,
         }, action)
             .setDepth(WinDefaultDepth + 100);
 
@@ -26736,11 +26850,11 @@ class WinWithLargeBack extends WinWithBack {
 }
 
 const PuzzleColorsPerLevel = [
-    0x979797,
-    0x9e501f,
-    0x7ba3ae,
-    0xe8b92a,
-    0x147e97,
+    0xF5CA98,
+    0xE59360,
+    0xCFCFCF,
+    0xFFCC45,
+    0x88DDFF,
     0x90cef5
 ];
 
@@ -26818,8 +26932,7 @@ class WinDropPuzzle extends WinWithBrownBack {
         this.buttonLabel.setText(LocalizationManager.getLocalizization("ButtonOk"));
     }
 
-    createMyExitButton()
-    {
+    createMyExitButton() {
         //Do nothing
     }
 
@@ -26900,10 +27013,10 @@ class WinDropPuzzle extends WinWithBrownBack {
 
         LoadFile(engine, ImageName, (guard ? VisualData.getManagerPuzzleFolder() : VisualData.getPuzzleFolder()) + ImageName + ".png", () => {
 
-            animManager.moveToPointExtra(box, this.dropPoint, 0.05, 0.3, ()=>{
+            animManager.moveToPointExtra(box, this.dropPoint, 0.05, 0.3, () => {
                 audioManager.playChestSound(0);
-                animManager.changeShape(box, 0.4, 0.5, 1, ()=>{
-                    animManager.rotationAnimation(box, 10, 0.7, 3, ()=>{
+                animManager.changeShape(box, 0.4, 0.5, 1, () => {
+                    animManager.rotationAnimation(box, 10, 0.7, 3, () => {
                         box.setVisible(false);
                         openedBox.setVisible(true);
 
@@ -26911,14 +27024,14 @@ class WinDropPuzzle extends WinWithBrownBack {
                         const puzzleCont = engine.add.container(this.puzzlePoint.x, this.puzzlePoint.y);
                         const puzzleImg = engine.add.sprite(0, 0, ImageName);
                         const step = puzzleImg.width / size;
-                        puzzleImg.setCrop(i*step, j*step, step, step).setScale(scale * size).setOrigin((i + 0.5) / size, (j + 0.5) / size);
+                        puzzleImg.setCrop(i * step, j * step, step, step).setScale(scale * size).setOrigin((i + 0.5) / size, (j + 0.5) / size);
 
                         let realLevel = newImageInfo.level;
                         if (newImageInfo.pieces & (1 << (drop)))
                             realLevel++;
 
                         if (VisualData.getGameSettings().puzzle_top) {
-                            puzzleImg.tint = PuzzleColorsPerLevel[realLevel-1];
+                            puzzleImg.tint = PuzzleColorsPerLevel[realLevel - 1];
                         } else {
                             const backImg = engine.add.sprite(0, 0, GameData.getPuzzleBackNamePerLevel(realLevel));
                             backImg.setScale(puzzleImg.width / backImg.width * scale);
@@ -26948,18 +27061,22 @@ class WinDropPuzzle extends WinWithBrownBack {
                         const upDuration = 0.3;
                         animManager.moveToPointExtra(puzzleCont, this.puzzleUpPoint, 0.1, upDuration);
                         animManager.scaleAnimation(puzzleCont, 2, upDuration);
-                        animManager.rotationAnimation(puzzleCont, 180, upDuration, 0.25, ()=>{
-                            animManager.animationChangeAlpha(openedBox, 0, 0.3, ()=> {
+                        animManager.rotationAnimation(puzzleCont, 180, upDuration, 0.25, () => {
+                            animManager.animationChangeAlpha(openedBox, 0, 0.3, () => {
                                 openedBox.setVisible(false);
                                 openedBox.alpha = 1;
 
-                                const collectedPuzzle = winPuzzleInstance.getCell({item: imageInfo, index: imageId, realLevel: newImageInfo.level}, true, false, null, guard);
+                                const collectedPuzzle = winPuzzleInstance.getCell({
+                                    item: imageInfo,
+                                    index: imageId,
+                                    realLevel: newImageInfo.level
+                                }, true, false, null, guard);
                                 this.itemsToDestroy.push(collectedPuzzle);
                                 collectedPuzzle.setPosition(this.collectedPoint2.x * localScale, RealScreenHeight * 1.1 * localScale);
                                 const moveUpDuration = 0.5;
                                 animManager.moveToPointExtra(collectedPuzzle, this.collectedPoint2, 0.05, moveUpDuration);
 
-                                animManager.waitAnimation(0.7 * moveUpDuration, ()=> {
+                                animManager.waitAnimation(0.7 * moveUpDuration, () => {
                                     const downDuration = 0.5;
                                     animManager.scaleAnimation(puzzleCont, 1, downDuration);
                                     animManager.rotationAnimation(puzzleCont, 90, downDuration, 0.25);
@@ -26982,7 +27099,7 @@ class WinDropPuzzle extends WinWithBrownBack {
                                             if (VisualData.getGameSettings().puzzle_top) {
                                                 newBack = engine.add.sprite(x, y, ImageName)
                                                     .setDepth(WinDefaultDepth + 100 - 10);
-                                                newBack.setCrop(i*partSize, j*partSize, partSize, partSize);
+                                                newBack.setCrop(i * partSize, j * partSize, partSize, partSize);
                                                 newBack.tint = PuzzleColorsPerLevel[realLevel - 1];
                                             } else {
                                                 x += (i - puzzleSize * 0.5) * partSize;
@@ -27029,8 +27146,8 @@ class WinPuzzle extends WinWithBrownBack {
 
         this.header.text = LocalizationManager.getLocalizization("PuzzlesWindowTitle");
 
-        for (let i = 0;i < 5;i++)
-            this.puzzleNames[i].text = LocalizationManager.getLocalizization(GameData.getPuzzlesTextPerLevel(i+1));
+        for (let i = 0; i < 5; i++)
+            this.puzzleNames[i].text = LocalizationManager.getLocalizization(GameData.getPuzzlesTextPerLevel(i + 1));
     }
 
     addTab(icon, x, y) {
@@ -27114,8 +27231,7 @@ class WinPuzzle extends WinWithBrownBack {
         this.scroll[index].setVisible(false);
     }
 
-    updateChestsNumber()
-    {
+    updateChestsNumber() {
         const group = this.allCells[0];
 
         if (!group || !group.active)
@@ -27175,7 +27291,7 @@ class WinPuzzle extends WinWithBrownBack {
         this.puzzleNumbers = [];
         this.puzzleNames = [];
 
-        for (let i = 1; i <= 5;i++) {
+        for (let i = 1; i <= 5; i++) {
             const x = cx - (i % 2) * distanceX;
             const y = cy + Math.trunc(((i - 1) / 2)) * distanceY;
             group.create(x, y, GameData.getPuzzlesIconNamePerLevel(i))
@@ -27192,7 +27308,7 @@ class WinPuzzle extends WinWithBrownBack {
     }
 
     tabWasSwitched(tab) {
-        for (let i = 0;i < this.tabs.length;i++) {
+        for (let i = 0; i < this.tabs.length; i++) {
             if (this.tabs[i] === tab) {
                 this.tabs[i].setSelected(true);
                 this.selectedTab = i;
@@ -27220,16 +27336,16 @@ class WinPuzzle extends WinWithBrownBack {
     updateNumbers() {
         const puzzles = this.getItems();
         const counts = [];
-        for (let i = 0;i < 5;i++)
+        for (let i = 0; i < 5; i++)
             counts.push(0);
 
-        for (let i = 0;i < puzzles.length;i++){
+        for (let i = 0; i < puzzles.length; i++) {
             if (puzzles[i].level > 0)
                 counts[puzzles[i].level - 1]++;
         }
 
         const max = "/" + puzzles.length;
-        for (let i = 0;i < 5;i++)
+        for (let i = 0; i < 5; i++)
             this.puzzleNumbers[i].text = counts[i] + max;
     }
 
@@ -27238,6 +27354,10 @@ class WinPuzzle extends WinWithBrownBack {
             clearInterval(this.boxShakeTimer);
             this.boxShakeTimer = null;
         }
+    }
+
+    setGuardsPage() {
+        this.selectedTab = this.guardsPuzzleTab;
     }
 
     setWindowVisible(visible) {
@@ -27295,7 +27415,7 @@ class WinPuzzle extends WinWithBrownBack {
         const offsetX = (this.winInfo.popup_x || 80) * GlobalScale;
         const offsetY = (this.winInfo.popup_y || -180) * GlobalScale;
 
-        let group = engine.rexUI.add.container(0,0);
+        let group = engine.rexUI.add.container(0, 0);
         const depth = WinDefaultDepth + 200;
         const chestImage = "GiftBox";
         const chestImagePath = VisualData.getStoreFolder() + "GiftBox.png";
@@ -27436,7 +27556,7 @@ class WinPuzzle extends WinWithBrownBack {
     getCellManager(cell, center, button) {
         const engine = this.engine;
 
-        let group = engine.rexUI.add.container(0,0);
+        let group = engine.rexUI.add.container(0, 0);
         group.puzzle = this.getCell(cell, true, true, () => {
             this.gameInit.guardManager.switchGuard(this.gameInit.selectedWorld, guard);
             this.scroll[this.selectedTab].table.setItems(this.getItems());
@@ -27452,36 +27572,53 @@ class WinPuzzle extends WinWithBrownBack {
             console.error("guard wasn't found ", cell.item);
         else {
             let y = 70 * GlobalScale;
+            const nameBack = engine.add.sprite(650 * GlobalScale, y, 'Managers_UnderText_1').setDepth(WinDefaultDepth + 100).setScale(1.5, 1);
+            group.add(nameBack);
+            let name = engine.add.textOld(650 * GlobalScale, y, guard.title, DefaultFont).setOrigin(0.5, 0.5).setDepth(WinDefaultDepth + 100);
+            group.add(name);
+            y += 90 * GlobalScale;
+
             const passives = guard.getPassiveBonusesType();
             for (let i in passives) {
                 const pb = passives[i];
 
                 let text = null;
-                switch (pb) {
-                    case 'MultiProfit':
-                    case 'MultiProfitLow':
-                        text = "Production +" + guard.getPassiveBonusValueMinimum() + "%";
-                        break;
-                    case 'SeedProc':
-                        text = "Seeds Bonus +" + guard.getPassiveBonusValueMinimum();
-                        break;
-                    default:
-                        text = pb;
-                        break;
+                if (guard.level > 0) {
+                    switch (pb) {
+                        case 'MultiProfit':
+                        case 'MultiProfitLow':
+                            if (guard.getPassiveBonusValueMinimum())
+                                text = "Profit: +" + guard.getPassiveBonusValueMinimum() + "%";
+                            else
+                                text = null;
+                            break;
+                        case 'SeedProc':
+                            text = "Seeds Bonus +" + guard.getPassiveBonusValueMinimum();
+                            break;
+                        default:
+                            text = pb;
+                            break;
+                    }
+                } else
+                    text = "???";
+
+                if (text) {
+                    group.passive = engine.add.textOld(400 * GlobalScale, y, text, DefaultFontSmallBlack)
+                        .setOrigin(0, 0.5)
+                        .setDepth(WinDefaultDepth + 100);
+                    group.add(group.passive);
                 }
-                group.passive = engine.add.textOld(400 * GlobalScale, y, text, DefaultFontSmall)
+
+                y += 40 * GlobalScale;
+            }
+
+            if (guard.level > 0) {
+                y += 30 * GlobalScale;
+                group.passive = engine.add.textOld(400 * GlobalScale, y, LocalizationManager.getLocalizization("Manager_super_doubling").format(guard.getActiveBonusValueMinumum()), DefaultFontSmallBlack)
                     .setOrigin(0, 0.5)
                     .setDepth(WinDefaultDepth + 100);
                 group.add(group.passive);
-
-                y+= 60 * GlobalScale;
             }
-
-            y+= 50 * GlobalScale;
-            group.passive = engine.add.textOld(400 * GlobalScale, y, "ACTIVATION: x" + guard.getActiveBonusValueMinumum(), DefaultFontSmall)
-                .setOrigin(0, 0.5)
-                .setDepth(WinDefaultDepth + 100);
-            group.add(group.passive);
 
             if (selectedGuard === guard) {
                 const doneIcon = engine.add.sprite(350 * GlobalScale, 50 * GlobalScale, 'PhotoQuestDoneIcon').setDepth(WinDefaultDepth + 1000);
@@ -27505,7 +27642,7 @@ class WinPuzzle extends WinWithBrownBack {
         const cellCenterX = center ? 0 : config.cellWidth / 2 * GlobalScale;
         const cellCenterY = center ? 0 : config.cellHeight / 2 * GlobalScale;
 
-        let group = engine.rexUI.add.container(0,0);
+        let group = engine.rexUI.add.container(0, 0);
         group.images = [];
 
         const depth = WinDefaultDepth + 100;
@@ -27584,7 +27721,7 @@ class WinPuzzle extends WinWithBrownBack {
                                 if (set.puzzle_top) {
                                     backImg = engine.add.sprite(x0 + cellCenterX, y0 + cellCenterY, ImageName)
                                         .setDepth(depth - 7);
-                                    backImg.setCrop(i*partSize, j*partSize, partSize, partSize);
+                                    backImg.setCrop(i * partSize, j * partSize, partSize, partSize);
                                     backImg.tint = PuzzleColorsPerLevel[realLevel - 1];
                                 } else {
                                     const x = cellCenterX + (i - puzzleSize * 0.5) * partSize;
@@ -27604,7 +27741,7 @@ class WinPuzzle extends WinWithBrownBack {
                     }
 
                     if (!loading && this.scroll)
-                        this.scroll[this.slotsPuzzleTab].fakeMove();
+                        this.scroll[this.selectedTab].fakeMove();
                 }
             });
         }
@@ -27643,7 +27780,7 @@ class WinPuzzle extends WinWithBrownBack {
 
         return group
             .setOrigin(0);
-            // .setDepth(depth);
+        // .setDepth(depth);
     }
 
     getItems() {
@@ -29201,6 +29338,82 @@ class WinUpgrade extends WinWithExit {
     }
 }
 
+class WinLocationSelection extends WinWithBrownBack {
+    constructor(gui, gameInit) {
+        super(gui, gameInit);
+        this.worlds = [];
+        for (let i = 1; i <= VisualData.getWorldsCount(); i++)
+            this.worlds.push(i);
+    }
+
+    setWindowVisible(visible) {
+        super.setWindowVisible(visible);
+
+        if (visible) {
+            if (!this.prepared) {
+                this.prepared = true;
+                this.config = VisualData.LOCATIONS_MENU_SCROLL_CONFIG;
+                this.config.x = this.centerX + this.config.offsetX * GlobalScale;
+                this.config.y = this.centerY + this.config.offsetY * GlobalScale;
+
+                this.scroll = new GUIScroll(this.engine, this.config, this.getCell.bind(this), this.getItems.bind(this));
+            }
+
+            this.scroll.table.setItems(this.getItems());
+        }
+
+        this.scroll.setVisible(visible);
+    }
+
+    getItems() {
+        return this.worlds;
+    }
+
+    getCell(cell) {
+        const engine = this.engine;
+        const config = this.config;
+        const cellCenterX = config.cellWidth / 2 * GlobalScale;
+        const cellCenterY = config.cellHeight / 2 * GlobalScale;
+        const item = cell.item;
+
+        let group = engine.rexUI.add.container(0, 0);
+        group.unny_container = engine.add.container(cellCenterX, cellCenterY);
+        group.add(group.unny_container);
+
+        const fileName = "location" + item;
+        const icon = "LocationWindow_" + fileName;
+        const locationPath = VisualData.getLocationsFolder() + fileName + ".png";
+
+        LoadFile(this.engine, icon, locationPath, () => {
+            if (this.visible && group.active) {
+                const canOpen = item === 1 || gameInit.progress.canOpenOtherWorld();
+                const callback = (gameInit.selectedWorld != item) ? () => {
+                    gameInit.switchWorld(item.toString());
+                    this.closeWindow();
+                } : null;
+
+                group.unny_button = new BasicButton(group.unny_container, {
+                    'scene': engine,
+                    'key': canOpen ? 'LocationsBtnGreen' : 'LocationsBtnGrey',
+                    'x': 0,
+                    'y': 0,
+                }, callback);
+
+                const img = engine.add.sprite(-340 * GlobalScale, 0, icon);
+                group.unny_container.add(img);
+
+                const levelDesc = engine.add.textOld(-110 * GlobalScale, -80 * GlobalScale, "Location " + item, GirlsMenuHeaderFont).setOrigin(0);
+                group.unny_container.add(levelDesc.setDepth(WinDefaultDepth + 200));
+
+                const photoDesc = engine.add.textOld(-110 * GlobalScale, -20 * GlobalScale, LocalizationManager.getLocalizization("Locations_location_" + item), GirlsMenuDescFont).setOrigin(0).setWordWrapWidth(460 * GlobalScale);
+                group.unny_container.add(photoDesc);
+            }
+        });
+
+        return group.setOrigin(0).setDepth(WinDefaultDepth + 100);
+    }
+}
+
 class WinBossProccess extends WinBase {
     constructor(gui, gameInit) {
         super(gui, gameInit);
@@ -29355,7 +29568,9 @@ class WinBossSummon extends WinWithPicture {
 
     createButton() {
         if (this.winInfo.mystButtons) {
-            this.mythButtonLabel = this.createActionButton(this.engine, this.actionClicked.bind(this), this.winInfo.buttonY2, true, null, null, this.info.btn_min_width, this.info.icon, this.winInfo.btnImage2);
+            this.mythButtonLabel = this.createActionButton(this.engine, this.actionClicked.bind(this), this.winInfo.buttonY2, true, 1, 0, this.info.btn_min_width, this.info.icon, this.winInfo.btnImage2, DefaultFontSmallBtns, -40 * GlobalScale);
+            this.summonGemsIcon = this.group.create(0, this.winInfo.buttonY2, 'PriceGems').setOrigin(0, 0.5);
+            SetIconToTheRightOfTheLabel(this.mythButtonLabel, this.summonGemsIcon, 20);
             this.mythButton = this.actionButton;
             this.mythButton.setButtonLocked(true);
         }
@@ -29872,18 +30087,19 @@ class WinMain extends WinBase {
         this.puzzlesButton = this.createButton('MM_Btn_Chests', centerX + distance, bottomButtons, () => this.gui.openNewWindow(WindowType.WinPuzzle));
         this.photoAlbum = this.createButton('MM_Btn_PhotoAlbum', centerX + distance * 2, bottomButtons, () => this.gui.openNewWindow(WindowType.WinPhotosList));
 
-        this.createButton('MM_Btn_Worlds', RealScreenWidth - paddingX, padding, () => gameInit.switchToTheNextWorld());
+        this.createButton('MM_Btn_Worlds', RealScreenWidth - paddingX, padding, () => this.gui.openNewWindow(WindowType.WinLocationSelection));
         this.superVisorButton = this.createButton('MM_Btn_ManagerDoubling', RealScreenWidth - paddingX * 3, padding, () => this.gui.openNewWindow(WindowType.WinManagerDoubling));
 
         this.factoryButton = this.createButton('MM_Btn_Prestige', centerX, padding, () => this.gui.openNewWindow(WindowType.WinBossSummon));
-
-        this.zoom = this.createButton('MM_Btn_Zoom', padding, padding + 820 * GlobalScale, () => this.gui.openNewWindow(WindowType.WinZoomIn));
 
         let y = padding + distance;
         this.questsButton = this.createButton('QuestsHUDButton', RealScreenWidth - padding2, y, () => this.gui.openNewWindow(WindowType.WinQuests));
         y += distance2;
         this.dailyBonus = this.createButton('Daily_HUDButton', RealScreenWidth - padding2, y, () => this.gui.openNewWindow(WindowType.WinDaily));
-        // y += distance2;
+
+        y += distance2;
+        this.zoom = this.createButton('MM_Btn_Zoom', RealScreenWidth - padding2, y, () => this.gui.openNewWindow(WindowType.WinZoomIn));
+
         // this.fortuneButton = this.createButton('FortuneHUDButton', RealScreenWidth - padding2, y, () => this.gui.openNewWindow(WindowType.WinFortuneWheel));
 
         // this._createOffersIfPossible();
@@ -31577,7 +31793,10 @@ class WinManagerDoubling extends WinWithBrownBack {
                     switch (pb) {
                         case 'MultiProfit':
                         case 'MultiProfitLow':
-                            text = "Production +" + guard.getPassiveBonusValueMinimum() + "%";
+                            if (guard.getPassiveBonusValueMinimum())
+                                text = "Profit: +" + guard.getPassiveBonusValueMinimum() + "%";
+                            else
+                                text = null;
                             break;
                         case 'SeedProc':
                             text = "Seeds Bonus +" + guard.getPassiveBonusValueMinimum();
@@ -31586,16 +31805,18 @@ class WinManagerDoubling extends WinWithBrownBack {
                             text = pb;
                             break;
                     }
-                    const passive = engine.add.textOld(400 * GlobalScale, y, text, FontManagerWindow)
-                        .setOrigin(0, 0.5)
-                        .setDepth(WinDefaultDepth + 100);
-                    this.collectedPuzzle.add(passive);
+                    if (text) {
+                        const passive = engine.add.textOld(400 * GlobalScale, y, text, FontManagerWindow)
+                            .setOrigin(0, 0.5)
+                            .setDepth(WinDefaultDepth + 100);
+                        this.collectedPuzzle.add(passive);
+                    }
 
                     y += 60 * GlobalScale;
                 }
 
                 y += 50 * GlobalScale;
-                let active = engine.add.textOld(400 * GlobalScale, y, "ACTIVATION: x" + guard.getActiveBonusValueMinumum(), FontManagerWindow)
+                let active = engine.add.textOld(400 * GlobalScale, y, LocalizationManager.getLocalizization("Manager_super_doubling").format(guard.getActiveBonusValueMinumum()), FontManagerWindow)
                     .setOrigin(0, 0.5)
                     .setDepth(WinDefaultDepth + 100);
                 this.collectedPuzzle.add(active);
@@ -31663,8 +31884,7 @@ class WinManagerDoubling extends WinWithBrownBack {
             'x': x,
             'y': y,
         }, () => {
-            const win = this.gui.openNewWindow(WindowType.WinPuzzle);
-            win.setGuardsTab();
+            this.gui.openGuardsTab();
         }).setDepth(WinDefaultDepth + 100);
 
         let btnText = engine.add.textOld(x, y, "CHANGE", DefaultFontVerySmall2)
@@ -32242,6 +32462,7 @@ const WindowType = {
     WinZoomIn: 36,
     QuestBubble: 37,
     WinGirlBio: 38,
+    WinLocationSelection: 39,
 };
 
 class GUIManager {
@@ -32456,6 +32677,7 @@ class GUIManager {
             this.allWindows[WindowType.WinManagerDoubling] = new WinManagerDoubling(this, gameInit);
             this.allWindows[WindowType.WinZoomIn] = new WinZoomIn(this, gameInit);
             this.allWindows[WindowType.QuestBubble] = new WinQuestBubble(this, gameInit);
+            this.allWindows[WindowType.WinLocationSelection] = new WinLocationSelection(this, gameInit);
         }
 
         this.activeWindows = [];
@@ -32635,6 +32857,13 @@ class GUIManager {
         const windowType = WindowType.WinStore;
         const win = this.allWindows[windowType];
         win.setGemsPage();
+        this.openNewWindow(windowType);
+    }
+
+    openGuardsTab() {
+        const windowType = WindowType.WinPuzzle;
+        const win = this.allWindows[windowType];
+        win.setGuardsPage();
         this.openNewWindow(windowType);
     }
 
@@ -33101,6 +33330,8 @@ function UpdateTextPosition(text) {
     }
     style.left = (x / dpi - text.newText.clientWidth * text.originX) + "px";
     style.top = (y / dpi - text.newText.clientHeight * (text.originY)) + "px";
+
+    text.onTextPositionUpdated.callListeners();
 }
 
 function prepareTextToHtml(engine) {
@@ -33175,6 +33406,8 @@ function prepareTextToHtml(engine) {
 
         t.newText = element;
         t.renderFlags = 0;
+
+        t.onTextPositionUpdated = new UnnyAction();
         UpdateTextPosition(t);
         return t;
     }
