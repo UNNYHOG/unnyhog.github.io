@@ -15247,9 +15247,6 @@ var VisualData = (function () {
         'PriceSeeds': {
             file: 'UI/HUD_and_common/PriceSeedsSmall.png',
         },
-        'SeedsQuestIcon': {
-            file: 'UI/HUD_and_common/HUD/HudResQuestion.png',
-        },
         'DefaultButton': {
             file: 'UI/Windows/DailyQuests/get_button.png',
             type: UnnyObjectType.NineSlice,
@@ -15288,6 +15285,9 @@ var VisualData = (function () {
         },
         //overrides...
 
+        'PrestigeStar': {
+            file: 'UI/Windows/Prestige/star.png',
+        },
         'ScrollLine': {
             file: 'UI/Windows/Common/scroll line.png',
         },
@@ -15628,6 +15628,9 @@ var VisualData = (function () {
             file :'UI/Windows/ChangeLocations/grey back.png',
         },
 
+        'PHOTO_PLACEHOLDER' : {
+            file :'UI/Windows/PhotoAlbum/picture.png',
+        },
     };
 
     const PreloadObjects = [
@@ -15691,7 +15694,9 @@ var VisualData = (function () {
         'LocationsBtnGrey',
         'ScrollLine',
         'ScrollLineWhite',
-        'ScrollPart'
+        'ScrollPart',
+        'CollectCrop',
+        'PrestigeStar'
     ];
 
     const GameSettings = {
@@ -15880,14 +15885,17 @@ var VisualData = (function () {
         },
 
         GUI_WinAppleDescription: {
-            nineSlice: "long",
+            nineSlice: "apples_desc",
             centerX: 350,
             distanceX: 430,
             startY: -150,
             distanceY: 75,
             imageX: -500,
             imageY: -200,
-            headerOffset: -370,
+            headerOffset: -470,
+            hardcoded_myth: true,
+            header_image: 'PrestigeBlueHead',
+            headerFont: true,
         },
 
         GUI_WinPuzzle: {
@@ -16082,8 +16090,7 @@ var VisualData = (function () {
             greenButtonOffsetX1: 390,
 
             singleImage: 'HudResBack',
-            hudBackScale: 1.7,
-            gemsPlusIcon: 'SeedsQuestIcon'
+            hudBackScale: 1.7
         },
 
         getFolderPath: function () {
@@ -16185,6 +16192,12 @@ var VisualData = (function () {
                 name: 'WinStandardBack',
                 width: 1800,
                 height: 1000,
+                y: 0
+            },
+            apples_desc: {
+                name: 'WinStandardBack',
+                width: 1100,
+                height: 1400,
                 y: 0
             },
             puzzle: {
@@ -16318,7 +16331,8 @@ var VisualData = (function () {
             GUARD_PUZZLE_IMAGES_FOLDER,
             GIRLS_ICONS_FOLDER,
             GIRLS_PREVIEW_FOLDER,
-            LOCATIONS_FOLDER
+            LOCATIONS_FOLDER,
+            PUZZLE_UI_FOLDER
             // '../Audio/'
         ],
 
@@ -17155,7 +17169,7 @@ function CalculateFonts() {
         stroke: DefaultStrokeColor,
         strokeThickness: getStroke(5)
     });
-    DefaultFontBlack = createFont({font: getFont(45), font2: getFont2(45), fill: '#333', align: 'center'});
+    DefaultFontBlack = createFont({font: getFont(45), font2: getFont2(45), fill: DefaultStrokeColor, align: 'center'});
     DefaultFontSmallBlack = createFont({
         font: getFont(35),
         font2: getFont2(35),
@@ -17237,7 +17251,7 @@ function CalculateFonts() {
     });
 
     PhotoQuestDescFont = createFont({
-        font: getFont(30),
+        font: getFont(20),
         font2: getFont2(30),
         fill: DefaultStrokeColor,
         align: 'center',
@@ -20822,7 +20836,7 @@ const BoxType = {
 const MUSIC_STATE = "MUSIC_STATE";
 const SOUNDS_STATE = "SOUNDS_STATE";
 const CURRENT_LANGUAGE = "CURRENT_LANGUAGE";
-const GAME_VERSION = "0.9.31";
+const GAME_VERSION = "0.9.32";
 
 console.log("game version: " + GAME_VERSION);
 
@@ -25864,6 +25878,111 @@ class GUIScroll {
     }
 }
 
+class GUITextArea {
+    constructor(engine, config, getContent) {
+        const COLOR_PRIMARY = 0xaea4ae;
+        const COLOR_LIGHT = 0x7b5e57;
+        const COLOR_DARK = 0x260e04;
+
+        const conf = {
+            x: config.x * localScale,
+            y: config.y * localScale,
+            // anchor: undefined,
+            width: config.width * GlobalScale * localScale,
+            height: config.height * GlobalScale * localScale,
+
+            // Elements
+            // background: engine.rexUI.add.roundRectangle(0, 0, 2, 2, 0, COLOR_PRIMARY),
+            // background: null,
+
+            text: engine.rexUI.add.BBCodeText(50, 50, null, PhotoQuestDescFont).setOrigin(0.5),
+            // text: text,
+            // textWidth: undefined,
+            // textHeight: undefined,
+
+            // slider: {
+            //     track: engine.rexUI.add.roundRectangle(0, 0, 20, 10, 10, COLOR_DARK),
+            //     thumb: engine.rexUI.add.roundRectangle(0, 0, 0, 0, 13, COLOR_LIGHT),
+            // },
+
+            scroller: {
+                threshold: 10,
+                slidingDeceleration: 5000,
+                backDeceleration: 2000,
+            },
+
+            clamplChildOY: false,
+
+            // header: headerGameObject,
+            // footer: footerGameObject,
+
+            space: {
+                left: 0,
+                right: 0,
+                top: 0,
+                bottom: 0,
+
+                text: 0,
+                // text: {
+                //    top: 0,
+                //    bottom: 0,
+                //    left: 0,
+                //    right: 0,
+                //},
+                header: 0,
+                footer: 0,
+            },
+
+            expand: {
+                header: true,
+                footer: true,
+            },
+
+            align: {
+                header: 'center',
+                footer: 'center',
+            },
+
+            content: getContent(),
+
+            // name: '',
+            // draggable: false
+        };
+
+        this.textArea = engine.rexUI.add.textArea(conf)
+            .setInteractive()
+            .setDepth(WinDefaultDepth)
+            .drawBounds(engine.add.graphics(), 0xff0000)
+            .layout();
+    }
+
+    _mouseWheel(x, y) {
+        let t = this.textArea.t + Math.sign(y) * Math.min(Math.abs(y), 30) * 0.01;
+        if (t) {
+            if (t < 0)
+                t = 0;
+            if (t > 1)
+                t = 1;
+            this.textArea.setT(t);
+        }
+    }
+
+    setVisible(visible) {
+        this.textArea.visible = visible;
+        if (this.textArea.visible) {
+            if (!this.wheel) {
+                this.wheel = this._mouseWheel.bind(this);
+                eventManager.onMouseWheel.addListener(this.wheel);
+            }
+        } else {
+            if (this.wheel) {
+                eventManager.onMouseWheel.removeListener(this.wheel);
+                this.wheel = null;
+            }
+        }
+    }
+}
+
 let mainResourceIcon = null;
 let cansResourceIcon = null;
 let hudResources;
@@ -25878,31 +25997,62 @@ class HUDResources {
     constructor(gameInit) {
         gameInit.loaded.addListener(this.gameLoaded.bind(this));
         hudResources = this;
+
+        this.gems_Visible = true;
+        this.stars_Visible = true;
+        this.tokens_Visible = true;
     }
 
     setVisible(visible) {
         this.visible = visible;
         SetGroupVisible(this.group, visible);
-        if (visible)
+        if (visible) {
             this.udpateResourcesHelp();
+
+            this.showGems(this.gems_Visible);
+            this.showStars(this.stars_Visible);
+            this.showTokens(this.tokens_Visible);
+            this.setTokensVisible(this.tokensVisible);
+        }
     }
 
     hideForTutorial() {
-        this.gemsContainer.alpha = 0;
-        this.starsContainer.alpha = 0;
-        this.tokensButton.alpha = 0;
+        this.showGems(false);
+        this.showStars(false);
+        this.showTokens(false);
     }
 
-    showGems(){
-        this.gemsContainer.alpha = 1;
+    showGems(visible = true) {
+        this.gems_Visible = visible;
+        this.gemsContainer.setVisible(visible);
+        this.updateStars();
+        this.updateTokens();
     }
 
-    showStars() {
-        this.starsContainer.alpha = 1;
+    showStars(visible = true) {
+        this.stars_Visible = visible;
+        this.starsContainer.setVisible(visible);
+        this.updateTokens();
     }
 
-    showTokens() {
-        this.tokensButton.alpha = 1;
+    showTokens(visible = true) {
+        this.tokens_Visible = visible;
+        this.tokensButton.setVisible(visible);
+    }
+
+    updateTokens() {
+        let count = 0;
+        if (!this.gems_Visible)
+            count++;
+        if (!this.stars_Visible)
+            count++;
+
+        this.tokesGroup.setPosition(0, -this.Distance * count);
+        this.tokensButton.setPosition(this.tokensButtonOriginal.x, this.tokensButtonOriginal.y - this.Distance * count);
+    }
+
+    updateStars() {
+        this.starsContainer.setPosition(0, this.gems_Visible ? 0 : -this.Distance);
     }
 
     createGame(engine) {
@@ -25913,6 +26063,8 @@ class HUDResources {
         const Distance = 120 * GlobalScale;
         const IconOffset = 30 * GlobalScale;
         const LabelOffset = 80 * GlobalScale;
+
+        this.Distance = Distance;
 
         let x = centerX - RealScreenWidth / 2 + 50 * GlobalScale;
         let y = centerY - RealScreenHeight / 2 + 80 * GlobalScale;
@@ -25968,7 +26120,7 @@ class HUDResources {
         this.gemsContainer.add(this.gems);
         new BasicButton(this.gemsContainer, {
             'scene': engine,
-            'key': info.gemsPlusIcon || 'HudPlusButton',
+            'key': 'HudPlusButton',
             'x': x + info.greenButtonOffsetX1 * GlobalScale,
             'y': y,
         }, () => guiManager.openGemsStore());
@@ -25996,14 +26148,17 @@ class HUDResources {
             this.tokens = ['tokenCommon', 'tokenRare', 'tokenEpic'];
             this.photo_tokens = [];
 
+            const bx = x + 120 * GlobalScale;
             this.tokensButton = new BasicButton(this.group, {
                 'scene': engine,
                 'key': 'HudTokensOpen',
-                'x': x + 120 * GlobalScale,
+                'x': bx,
                 'y': y
             }, () => {
                 this.setTokensVisible(!this.tokensVisible, false);
             });
+
+            this.tokensButtonOriginal = {x: bx, y: y};
 
             for (let i in this.tokens) {
                 y += Distance * 0.7;
@@ -26022,10 +26177,9 @@ class HUDResources {
         this.group.setDepth(WinDefaultDepth + 100);
     }
 
-    setTokensVisible(visible, instant) {
+    setTokensVisible(visible) {
         this.tokensVisible = visible;
-        // if (instant)
-            this.tokesGroup.alpha = visible ? 1 : 0;
+        this.tokesGroup.setVisible(visible);
     }
 
     /***
@@ -28931,7 +29085,10 @@ class WinQuests extends WinWithBrownBack {
         this._applyQuestButtonLocalization(group, quest);
 
         const completed = this._isQuestCompleted(group.index);
-        group.button.setButtonLocked(!completed && !quest.hasAction());
+        //group.button.setButtonLocked(!completed && !quest.hasAction());
+        const vis = completed || quest.hasAction();
+        group.button.setVisible(vis);
+        group.button.caption.setVisible(vis);
 
         group.refreshButton.setVisible(quest.canReplaceQuest() && !completed);
 
@@ -29569,9 +29726,10 @@ class WinWithPicture extends WinWithBack {
     createGame(engine) {
         super.createGame(engine);
 
-        this.createButton();
         if (this.info.header)
             this.createHeader(engine);
+
+        this.createButton();
 
         if ((this.info.description || this.info.getDescription) && !this.winInfo.no_description) {
             const func = this.info.oldText ? engine.add.textOld : engine.add.text;
@@ -29626,6 +29784,12 @@ class WinBossSummon extends WinWithPicture {
             SetIconToTheRightOfTheLabel(this.mythButtonLabel, this.summonGemsIcon, 20);
             this.mythButton = this.actionButton;
             this.mythButton.setButtonLocked(true);
+
+            const y = this.getWinInfoValue('headerOffset', -600);
+            const image = this.engine.add.sprite(-370 * GlobalScale, y, 'PrestigeStar')
+                .setOrigin(0.5, 0.5)
+                .setDepth(WinDefaultDepth + 20);
+            this.group.add(image);
         }
         super.createButton();
     }
@@ -29773,18 +29937,32 @@ class WinAppleDescription extends WinWithPicture {
     localize() {
         super.localize();
 
-        this.profitBonus.setText(LocalizationManager.getLocalizization("SeedInfoProfitBonus"));
-        this.totalBonus.setText(LocalizationManager.getLocalizization("SeedInfoTotalProfit"));
-        this.label1.setText(LocalizationManager.getLocalizization("SeedInfoBiggerFarm") + " " + LocalizationManager.getLocalizization("SeedInfoGetSeeds"));
-        // this.label2.text = LocalizationManager.getLocalizization("SeedInfoGetSeeds");
+        if (this.winInfo.hardcoded_myth) {
+            this.header.setText(LocalizationManager.getLocalizization("Prestige_info_title"));
+            this.prestigeDescription.setText(LocalizationManager.getLocalizization("Prestige_info_text"));
+            this.totalBonus.setText(LocalizationManager.getLocalizization("Prestige_info_text_2").format(this.gameInit.progress.getBonusPerSeed()));
+        } else {
+            this.profitBonus.setText(LocalizationManager.getLocalizization("SeedInfoProfitBonus"));
+            this.totalBonus.setText(LocalizationManager.getLocalizization("SeedInfoTotalProfit"));
+            this.label1.setText(LocalizationManager.getLocalizization("SeedInfoBiggerFarm") + " " + LocalizationManager.getLocalizization("SeedInfoGetSeeds"));
+            // this.label2.text = LocalizationManager.getLocalizization("SeedInfoGetSeeds");
+        }
+    }
+
+    _getHeaderFont() {
+        return this.winInfo.headerFont ? BossSummonHeaderFont : super._getHeaderFont();
     }
 
     setWindowVisible(visible) {
         super.setWindowVisible(visible);
 
         if (visible) {
-            this.profitNumber.setText(this.gameInit.progress.getBonusPerSeed() + '%');
-            this.totalNumber.setText(LocalizationManager.getLocalizedNumber(this.gameInit.progress.getTotalSeedsBonus().minus(1).multiply(100 * RESOURCES_SCALE)) + '%');
+            if (this.winInfo.hardcoded_myth) {
+                this.totalBonus.setText(LocalizationManager.getLocalizization("Prestige_info_text_2").format(this.gameInit.progress.getBonusPerSeed()));
+            } else {
+                this.profitNumber.setText(this.gameInit.progress.getBonusPerSeed() + '%');
+                this.totalNumber.setText(LocalizationManager.getLocalizedNumber(this.gameInit.progress.getTotalSeedsBonus().minus(1).multiply(100 * RESOURCES_SCALE)) + '%');
+            }
         }
     }
 
@@ -29793,45 +29971,80 @@ class WinAppleDescription extends WinWithPicture {
 
         const info = this.winInfo;
 
-        const distanceX = (info ? info.distanceX : 430) * GlobalScale;
-        const startY = (info ? info.startY : -300) * GlobalScale;
-        const centerX = (info ? info.centerX : 0) * GlobalScale;
-        const distanceY = (info ? info.distanceY : 75) * GlobalScale;
+        if (info.hardcoded_myth) {
+            this.info.image = null;
+            const startY = -200 * GlobalScale;
+            const centerX = 0;
+            const width = 900 * GlobalScale;
 
-        let y = startY;
-        this.profitBonus = engine.add.text(centerX - distanceX, y, null, DefaultFontBlack)
-            .setOrigin(0, 0.5)
-            .setDepth(WinDefaultDepth);
-        this.group.add(this.profitBonus);
+            let y = startY;
+            this.prestigeDescription = engine.add.text(centerX, y, null, DefaultFontSmallBlack)
+                .setOrigin(0.5, 0.5)
+                .setWordWrapWidth(width)
+                .setDepth(WinDefaultDepth);
+            this.group.add(this.prestigeDescription);
 
-        this.profitNumber = engine.add.text(centerX + distanceX, y, null, DefaultFontBlack)
-            .setOrigin(1, 0.5)
-            .setDepth(WinDefaultDepth);
-        this.group.add(this.profitNumber);
+            y += 150 * GlobalScale;
 
-        y += distanceY;
-        this.totalBonus = engine.add.text(centerX - distanceX, y, null, DefaultFontBlack)
-            .setOrigin(0, 0.5)
-            .setDepth(WinDefaultDepth);
-        this.group.add(this.totalBonus);
+            this.totalBonus = engine.add.text(centerX, y, null, DefaultFontSmallBlack)
+                .setOrigin(0.5, 0.5)
+                .setWordWrapWidth(width)
+                .setDepth(WinDefaultDepth);
+            this.group.add(this.totalBonus);
 
-        this.totalNumber = engine.add.text(centerX + distanceX, y, null, DefaultFontBlack)
-            .setOrigin(1, 0.5)
-            .setDepth(WinDefaultDepth);
-        this.group.add(this.totalNumber);
+            y += 350 * GlobalScale;
+            const imageView = this.engine.add.sprite(centerX, y, 'CollectCrop')
+                .setOrigin(0.5, 0.5)
+                .setDepth(WinDefaultDepth + 10);
+            this.group.add(imageView);
 
-        y += 1 * distanceY;
-        this.label1 = engine.add.text(centerX, y, null, DefaultFontSmallBlack)
-            .setOrigin(0.5, 0)
-            .setWordWrapWidth(900 * GlobalScale)
-            .setDepth(WinDefaultDepth);
-        this.group.add(this.label1);
+            y = this.getWinInfoValue('headerOffset', -600);
+            const image = this.engine.add.sprite(-370 * GlobalScale, y, 'PrestigeStar')
+                .setOrigin(0.5, 0.5)
+                .setDepth(WinDefaultDepth + 20);
+            this.group.add(image);
 
-        // y += distanceY;
-        // this.label2 = engine.add.text(centerX, y, null, DefaultFontBlack)
-        //     .setOrigin(0.5, 0.5)
-        //     .setDepth(WinDefaultDepth);
-        // this.group.add(this.label2);
+        } else {
+            const distanceX = (info ? info.distanceX : 430) * GlobalScale;
+            const startY = (info ? info.startY : -300) * GlobalScale;
+            const centerX = (info ? info.centerX : 0) * GlobalScale;
+            const distanceY = (info ? info.distanceY : 75) * GlobalScale;
+
+            let y = startY;
+            this.profitBonus = engine.add.text(centerX - distanceX, y, null, DefaultFontBlack)
+                .setOrigin(0, 0.5)
+                .setDepth(WinDefaultDepth);
+            this.group.add(this.profitBonus);
+
+            this.profitNumber = engine.add.text(centerX + distanceX, y, null, DefaultFontBlack)
+                .setOrigin(1, 0.5)
+                .setDepth(WinDefaultDepth);
+            this.group.add(this.profitNumber);
+
+            y += distanceY;
+            this.totalBonus = engine.add.text(centerX - distanceX, y, null, DefaultFontBlack)
+                .setOrigin(0, 0.5)
+                .setDepth(WinDefaultDepth);
+            this.group.add(this.totalBonus);
+
+            this.totalNumber = engine.add.text(centerX + distanceX, y, null, DefaultFontBlack)
+                .setOrigin(1, 0.5)
+                .setDepth(WinDefaultDepth);
+            this.group.add(this.totalNumber);
+
+            y += 1 * distanceY;
+            this.label1 = engine.add.text(centerX, y, null, DefaultFontSmallBlack)
+                .setOrigin(0.5, 0)
+                .setWordWrapWidth(900 * GlobalScale)
+                .setDepth(WinDefaultDepth);
+            this.group.add(this.label1);
+
+            // y += distanceY;
+            // this.label2 = engine.add.text(centerX, y, null, DefaultFontBlack)
+            //     .setOrigin(0.5, 0.5)
+            //     .setDepth(WinDefaultDepth);
+            // this.group.add(this.label2);
+        }
     }
 }
 
@@ -31490,6 +31703,28 @@ class WinPhotosQuest extends WinWithBrownBack {
         this.nonSelectedScale = 0.7;
     }
 
+    prepareScrollWithDescription() {
+        this.textArea = new GUITextArea(this.engine, {
+            x: this.centerX,
+            y: this.centerY + 250 * GlobalScale,
+            width: 900,
+            height: 600,
+        }, ()=> { return '\'\'There is something for you there\'\' - Peristera said.\n' +
+            '\n' +
+            'You ‘ve walked through the forest. \n' +
+            '\'\'I don’t know what I am looking for exactly.. But Peri is so tender and caring, I am sure that she hide something amazing here.\'\'\n' +
+            '\n' +
+            'From the forest noises you starting to hear the quiet dog whining. You start looking for the sourse. In the roots of the old tree you find her. \n' +
+            '\n' +
+            '\'\'Oh, that wasn’t a dog, that was a Dryad, the spirit of nature! Looks like this one chose to take the appearance of a fox-girl. And a naked one at that! Not that I mind. Foxy ears and tail are so cute\'\' \n' +
+            '\n' +
+            'Dryad sits there with knees up to her chin frightened, but interested. \n' +
+            '\n' +
+            '\'\'She’s absolutely amazing - her gentle lines, her clear mind, her naive look - oh, that is SO incredibly sexy!\'\''});
+
+        this.group.add(this.textArea.textArea.setDepth(20000).setOrigin(0.5));
+    }
+
     setWindowVisible(visible) {
         super.setWindowVisible(visible);
 
@@ -31510,13 +31745,13 @@ class WinPhotosQuest extends WinWithBrownBack {
                 });
 
                 const centerX = this.centerX;
-                let startY = this.centerY + 120 * GlobalScale;
+                let startY = this.centerY + 200 * GlobalScale;
 
                 //quest
-                const questCenterX = centerX + 160 * GlobalScale;
+                const questCenterX = centerX + 200 * GlobalScale;
                 // const questFrame = engine.add.sprite(questCenterX, startY, 'PhotoQuestFrame').setScale(1.8, 1.2);
                 // this.group.add(questFrame);
-                this.questDesc = engine.add.text(questCenterX, startY - 30 * GlobalScale, null, DefaultFontSmallBlack).setOrigin(0.5, 0.5).setWordWrapWidth(600 * GlobalScale);
+                this.questDesc = engine.add.text(questCenterX, startY - 30 * GlobalScale, null, DefaultFontSmallBlack).setOrigin(0.5, 0.5).setWordWrapWidth(560 * GlobalScale);
                 this.group.add(this.questDesc);
 
                 const progressY = startY + 30 * GlobalScale;
@@ -31524,7 +31759,7 @@ class WinPhotosQuest extends WinWithBrownBack {
                 this.questProgress = engine.add.text(questCenterX + 150 * GlobalScale, progressY, null, DefaultFontSmallBlack).setOrigin(0, 0.5);
                 this.group.add(this.questProgress);
 
-                this.quest_done_icon = this.engine.add.sprite(questCenterX - 280 * GlobalScale, startY - 100 * GlobalScale, 'PhotoQuestDoneIcon');
+                this.quest_done_icon = this.engine.add.sprite(questCenterX - 250 * GlobalScale, startY - 120 * GlobalScale, 'PhotoQuestDoneIcon');
                 this.group.add(this.quest_done_icon);
 
                 startY += 300 * GlobalScale;
@@ -31532,9 +31767,9 @@ class WinPhotosQuest extends WinWithBrownBack {
                 // this.photoName = engine.add.text(centerX, startY, null, DefaultFont).setOrigin(0.5);
                 // this.group.add(this.photoName);
 
-                startY += 50 * GlobalScale;
-                this.photoDesc = engine.add.text(centerX, startY, null, PhotoQuestDescFont).setOrigin(0.5, 0).setWordWrapWidth(900 * GlobalScale);
-                this.group.add(this.photoDesc);
+                // startY += 50 * GlobalScale;
+                // this.photoDesc = engine.add.text(centerX, startY, null, PhotoQuestDescFont).setOrigin(0.5, 0).setWordWrapWidth(900 * GlobalScale);
+                // this.group.add(this.photoDesc);
 
 
                 const btnY = this.centerY + 700 * GlobalScale;
@@ -31581,6 +31816,8 @@ class WinPhotosQuest extends WinWithBrownBack {
                 this.photoLockIcon = engine.add.sprite(centerX, btnY, 'PhotoLock').setDepth(WinDefaultDepth + 200);
                 this.group.add(this.photoLockIcon);
 
+                this.prepareScrollWithDescription();
+
                 this.localize();
             }
             else {
@@ -31625,15 +31862,21 @@ class WinPhotosQuest extends WinWithBrownBack {
             index: image
         }, true);
 
-        const x = this.centerX - 340 * GlobalScale;
-        const y = this.centerY + 100 * GlobalScale;
+        const x = this.centerX - 300 * GlobalScale;
+        const y = this.centerY + 170 * GlobalScale;
         this.puzzleImage.setPosition(x * localScale, y * localScale);
         this.group.add(this.puzzleImage);
+
+        const puzzleText = this.engine.add.textOld(x, y - 180 * GlobalScale, "Collect Puzzle", DefaultFontSmallBlack).setOrigin(0.5, 0.5).setWordWrapWidth(600 * GlobalScale).setDepth(WinDefaultDepth + 100);
+        this.puzzleImage.add(puzzleText);
+
+        this.puzzle_done_icon = this.engine.add.sprite(x - 100 * GlobalScale, y - 100 * GlobalScale, 'PhotoQuestDoneIcon').setDepth(WinDefaultDepth + 200);
+        this.puzzleImage.add(this.puzzle_done_icon);
     }
 
     selectSpecificQuest(quest) {
         // this.photoName.setText("Photo name");
-        this.photoDesc.setText("You immediately stands up to take of your toga. Dryad jumps away gracefully and start running around you on all fours\n");
+        // this.photoDesc.setText("You immediately stands up to take of your toga. Dryad jumps away gracefully and start running around you on all fours\n");
 
         this.selectedQuest = quest;
 
@@ -31643,8 +31886,6 @@ class WinPhotosQuest extends WinWithBrownBack {
                 p.setExternalScale(p.itemArr === quest ? 1 : this.nonSelectedScale);
             }
         }
-
-        this.loadPuzzle();
 
         for (let i in this.resourcesModules)
             this.resourcesModules[i].setVisible(false);
@@ -31657,11 +31898,17 @@ class WinPhotosQuest extends WinWithBrownBack {
             this.photoLockIcon.setVisible(false);
             this.buttonLabel.setVisible(true);
 
-            this.questDesc.setText("PICTURE UNLOCKED");
+            this.questDesc.setVisible(false);
             this.buttonLabel.setText(LocalizationManager.getTutorialLocalizization("VIEW"));//TODO localize
+            this.textArea.setVisible(true);
+            if (this.puzzleImage)
+                this.puzzleImage.destroy();
             return;
         } else {
+            this.loadPuzzle();
+            this.questDesc.setVisible(true);
             this.buttonLabel.setText(LocalizationManager.getTutorialLocalizization("UNLOCK"));//TODO localize
+            this.textArea.setVisible(false);
         }
         const questProgress = gameInit.photoManager.getQuestById(quest.id);
         let visible;
@@ -31701,11 +31948,11 @@ class WinPhotosQuest extends WinWithBrownBack {
 
                 // const frame = this.engine.add.sprite(0, 0, 'PhotoQuestFrame').setScale(0.75, 1);
                 // pGroup.add(frame);
-                const sprite = this.engine.add.sprite(0, -30 * GlobalScale, GameData.getIconByType(type));
+                const sprite = this.engine.add.sprite(-120 * GlobalScale, 0, GameData.getIconByType(type));
                 if (type.toLowerCase().startsWith('token'))
                     sprite.setScale(0.65);
-                pGroup.unny_text = this.engine.add.text(0, 40 * GlobalScale, null, PhotoQuestPrice).setOrigin(0.5);
-                pGroup.unny_done_icon = this.engine.add.sprite(-80 * GlobalScale, -80 * GlobalScale, 'PhotoQuestDoneIcon');
+                pGroup.unny_text = this.engine.add.textOld(-80 * GlobalScale, 0, null, PhotoQuestPrice).setOrigin(0, 0.5);
+                pGroup.unny_done_icon = this.engine.add.sprite(0, 0, 'PhotoQuestDoneIcon');
 
                 pGroup.add(sprite);
                 pGroup.add(pGroup.unny_text);
@@ -31729,7 +31976,7 @@ class WinPhotosQuest extends WinWithBrownBack {
         let x = this.centerX - distance * (this.activeResources.length - 1) / 2;
 
         for (let i in this.activeResources) {
-            this.activeResources[i].setPosition(x, this.centerY + 350 * GlobalScale);
+            this.activeResources[i].setPosition(x, this.centerY + 450 * GlobalScale);
             x += distance;
         }
 
@@ -31777,6 +32024,7 @@ class WinPhotosQuest extends WinWithBrownBack {
                                 this.selectSpecificQuest(arr);
                             });
 
+                            previewBtn.tint = PuzzleColorsPerLevel[0];
                             previewBtn.itemArr = arr;
 
                             this.collectedPuzzle[i] = previewBtn;
@@ -31982,7 +32230,7 @@ class WinManagerDoubling extends WinWithBrownBack {
         this.group.add(this.resources);
         new BasicButton(this.group, {
             'scene': engine,
-            'key': 'SeedsQuestIcon',
+            'key': 'HudPlusButton',
             'x': x + info.greenButtonOffsetX1 * GlobalScale,
             'y': y,
         }, () => guiManager.openGemsStore());
@@ -32106,7 +32354,7 @@ class WinPhotosList extends WinWithBrownBack {
         const config = this.config;
 
         if (this.selectedTab === 0)
-            return WinPhotosListSingleImages.createCell(cell, engine, config);
+            return WinPhotosListSingleImages.createCell(cell, engine, config, this);
 
         const cellCenterX = config.cellWidth / 2 * GlobalScale;
         const cellCenterY = config.cellHeight / 2 * GlobalScale;
@@ -32163,24 +32411,6 @@ class WinPhotosList extends WinWithBrownBack {
             });
         }
         loading = false;
-        //
-        //
-        // group.unny_container = engine.add.container(cellCenterX, cellCenterY + 100);
-        // group.add(group.unny_container);
-        //
-        // group.unny_btn = new BasicButton(group.unny_container, {
-        //     'scene': engine,
-        //     'key': 'DefaultButton',
-        //     'x': 0,
-        //     'y': 0,
-        //     'scale_parent': true
-        // }, ()=>{
-        //     const win = guiManager.openNewWindow(WindowType.WinPhotosMenu);
-        //     win.setImage(item);
-        // });
-        //
-        // group.label = engine.add.textOld(0, 0, "SHOW", DefaultFontVerySmall2).setOrigin(0.5, 0.5).setDepth(depth);
-        // group.unny_container.add(group.label);
 
         return group.setOrigin(0).setDepth(WinDefaultDepth + 100);
     }
@@ -32238,10 +32468,10 @@ class WinPhotosListSingleImages extends WinWithBrownBack {
     }
 
     getCell(cell) {
-        return WinPhotosListSingleImages.createCell(cell, this.engine, this.config);
+        return WinPhotosListSingleImages.createCell(cell, this.engine, this.config, this);
     }
 
-    static createCell(cell, engine, config) {
+    static createCell(cell, engine, config, scrollParent) {
         const cellCenterX = config.cellWidth / 2 * GlobalScale;
         const cellCenterY = config.cellHeight / 2 * GlobalScale;
         let group = engine.rexUI.add.container(0, 0);
@@ -32266,23 +32496,9 @@ class WinPhotosListSingleImages extends WinWithBrownBack {
             }
         });
 
-        //Image
-        const imageName = "PHOTO_PLACEHOLDER";
-        const imagePath = "UI/Windows/PhotoAlbum/picture.png";
-        let loading = true;
-        if (imageName) {
-            LoadFile(engine, imageName, imagePath, () => {
-                if (group && group.active) {
-                    const sprite = engine.add.sprite((group.x / localScale || 0) + cellCenterX, (group.y / localScale || 0) + cellCenterY, imageName)
-                        .setDepth(depth);
-                    group.add(sprite);
-                    group.unny_sprite = sprite;
-                    if (this.scroll && !loading)
-                        this.scroll.fakeMove();
-                }
-            });
-        }
-        loading = false;
+        let imageName;
+        let imagePath;
+        let fit = false;
 
         if (!pq.isComplete) {
             const y = cellCenterY + 200 * GlobalScale;
@@ -32292,7 +32508,38 @@ class WinPhotosListSingleImages extends WinWithBrownBack {
 
             const photoName = engine.add.textOld(cellCenterX, y, "Photo is Locked", DefaultFontVerySmall).setOrigin(0.5);
             group.add(photoName);
+
+            imageName = "PHOTO_PLACEHOLDER";
+            imagePath = "UI/Windows/PhotoAlbum/picture.png";
+
+            engine.load.setPath(VisualData.getFolderPath());
+        } else {
+            imageName = "PHOTO_" + item.id;
+            imagePath = item.name;
+            fit = true;
+            engine.load.setPath("");
         }
+
+        //Image
+        let loading = true;
+        if (imageName) {
+            LoadFile(engine, imageName, imagePath, () => {
+                if (group && group.active) {
+                    const sprite = engine.add.sprite((group.x / localScale || 0) + cellCenterX, (group.y / localScale || 0) + cellCenterY, imageName)
+                        .setDepth(depth);
+
+                    if (fit)
+                        sprite.setScale(Math.min(332 / sprite.width * GlobalScale, 239 / sprite.height * GlobalScale));
+
+                    group.add(sprite);
+                    group.unny_sprite = sprite;
+
+                    if (scrollParent.scroll && !loading)
+                        scrollParent.scroll.fakeMove();
+                }
+            });
+        }
+        loading = false;
 
         return group.setOrigin(0).setDepth(WinDefaultDepth + 100);
     }
