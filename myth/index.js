@@ -20834,7 +20834,7 @@ const BoxType = {
 const MUSIC_STATE = "MUSIC_STATE";
 const SOUNDS_STATE = "SOUNDS_STATE";
 const CURRENT_LANGUAGE = "CURRENT_LANGUAGE";
-const GAME_VERSION = "0.9.33";
+const GAME_VERSION = "0.9.34";
 
 console.log("game version: " + GAME_VERSION);
 
@@ -27254,7 +27254,7 @@ class WinDropPuzzle extends WinWithBrownBack {
 
         // console.log("imageId " + imageId + " > " + drop);
         //Image
-        const ImageName = guard ? gameInit.guardManager.getGuardIcon(imageId) : GameData.getPuzzleIcon(imageId + 1);
+        const ImageName = guard ? gameInit.guardManager.getGuardIcon(imageId + 1) : GameData.getPuzzleIcon(imageId + 1);
 
         LoadFile(engine, ImageName, (guard ? VisualData.getManagerPuzzleFolder() : VisualData.getPuzzleFolder()) + ImageName + ".png", () => {
 
