@@ -17374,7 +17374,7 @@ class Tutorial {
 
     resourcesChanged() {
         switch (this.phaseData.actionType) {
-            case 'CollectGold':
+            case "CollectGold":
                 // console.log("IS " + this.phaseData.parameter + " ? " + gameInit.progress.getTotalResources().compare(this.phaseData.parameter * RESOURCES_SCALE));
                 if (gameInit.progress.getTotalResources().compare(this.phaseData.parameter * RESOURCES_SCALE) >= 0) {
                     if (this.fingerAnimation) {
@@ -17406,7 +17406,7 @@ class Tutorial {
                 hudResources.hideForTutorial();
 
                 for (let i = 0; i <= phaseIndex; i++)
-                    this.preparePhase(data[i].stepNumber, i);
+                    this.preparePhase(data[i].stepNumber, i, i < phaseIndex);
             } else
                 this.stopTutorial();
         }
@@ -17580,7 +17580,7 @@ class Tutorial {
         this.preparePhase(d.stepNumber, this.phaseIndex);
     }
 
-    preparePhase(phase, phaseIndex) {
+    preparePhase(phase, phaseIndex, fastComplete) {
         this.phase = phase;
         this.phaseIndex = phaseIndex;
         this.lastWindow = guiManager.getWinTypeAtTheTop();
@@ -17639,9 +17639,8 @@ class Tutorial {
                     }
                 }
             {
-                if (this.phaseData.parameter >= 20)
+                if (fastComplete)
                     hudResources.showTokens();
-
                 const win = guiManager.getWindowByType(WindowType.WinMain);
                 win.showUpgradeButton();
             }
@@ -17698,6 +17697,7 @@ class Tutorial {
                 break;
             }
             case "ClickUpgradeMarketButton": {
+                hudResources.showGems();
                 const win = guiManager.getWindowByType(WindowType.WinMain);
                 win.showStoreButton();
                 if (this._isWindow(WindowType.WinMain)) {
@@ -17826,11 +17826,6 @@ class Tutorial {
                 }
                 break;
             }
-            case "CollectGold": {
-                if (this.phaseData.parameter >= 100)
-                    hudResources.showGems();
-                break;
-            }
         }
     }
 
@@ -17861,6 +17856,9 @@ class Tutorial {
             case "UpgradeSlot":
                 const b = gameInit.getBuildingById(1, 1);
                 if (b.getLevel() >= this.phaseData.parameter) {
+                    if (this.phaseData.parameter >= 20)
+                        hudResources.showTokens();
+
                     this.goToNextStep();
                 }
                 break;
@@ -20836,7 +20834,7 @@ const BoxType = {
 const MUSIC_STATE = "MUSIC_STATE";
 const SOUNDS_STATE = "SOUNDS_STATE";
 const CURRENT_LANGUAGE = "CURRENT_LANGUAGE";
-const GAME_VERSION = "0.9.32";
+const GAME_VERSION = "0.9.33";
 
 console.log("game version: " + GAME_VERSION);
 
@@ -22530,6 +22528,17 @@ class Progress {
         };
     }
 
+    addPhotoForPrestige(photo) {
+        this._checkPhotoQuests();
+
+        const id = photo.id;
+        const pq = this.savedProgress.photo_quests;
+        if (!pq.unlocked.includes(id))
+            pq.unlocked.push(id);
+
+        this.saveProgress();
+    }
+
     savePhotoQuestsCompleted(quest) {
         this._checkPhotoQuests();
 
@@ -22623,6 +22632,7 @@ let GameData = (function () {
     PHOTO_DATA = null;
     PHOTOS_BY_MAINTAG_ARR = null;
     PHOTO_DATA_DICT = null;
+    PHOTOS_FOR_PRESTIGE = null;
 
     TOKENS_DATA = null;
 
@@ -22851,6 +22861,10 @@ let GameData = (function () {
             return PHOTO_DATA;
         },
 
+        getPrestigePhotos() {
+            return PHOTOS_FOR_PRESTIGE;
+        },
+
         getPhotosByMainTagArray() {
             return PHOTOS_BY_MAINTAG_ARR;
         },
@@ -23044,115 +23058,122 @@ let GameData = (function () {
 
             LOGIN_DATA = loginData;
 
-            PHOTO_DATA = data.PhotoData;
-            PHOTOS_BY_MAINTAG_ARR = [];
-            PHOTOS_BY_TAG_ARR = [];
-            PHOTOS_BY_FILTER_ARR = [];
-            PHOTO_DATA_DICT = {};
-            let photosByMainTag = {};
-            let photosByTag = {};
-            let photosByFilters = {};
-            for (let i in PHOTO_DATA) {
-                const pd = PHOTO_DATA[i];
-                PHOTO_DATA_DICT[pd.id] = pd;
+            if (data.PhotoData) {
+                PHOTO_DATA = data.PhotoData;
+                PHOTOS_BY_MAINTAG_ARR = [];
+                PHOTOS_BY_TAG_ARR = [];
+                PHOTOS_BY_FILTER_ARR = [];
+                PHOTO_DATA_DICT = {};
+                let photosByMainTag = {};
+                let photosByTag = {};
+                let photosByFilters = {};
+                for (let i in PHOTO_DATA) {
+                    const pd = PHOTO_DATA[i];
+                    PHOTO_DATA_DICT[pd.id] = pd;
 
-                for (let r in ALL_RESOURCES_TYPES) {
-                    const type = ALL_RESOURCES_TYPES[r];
-                    pd[type + "_bigInt"] = bigInt(pd[type]).multiply(RESOURCES_SCALE);
-                }
-                
-                switch (pd.puzzleLevel) {
-                    case "Simple":
-                        pd.level = 1;
-                        break;
-                    case "Bronze":
-                        pd.level = 2;
-                        break;
-                    case "Silver":
-                        pd.level = 3;
-                        break;
-                    case "Gold":
-                        pd.level = 4;
-                        break;
-                    case "Diamond":
-                        pd.level = 5;
-                        break;
-                }
+                    for (let r in ALL_RESOURCES_TYPES) {
+                        const type = ALL_RESOURCES_TYPES[r];
+                        pd[type + "_bigInt"] = bigInt(pd[type]).multiply(RESOURCES_SCALE);
+                    }
 
-                let arr = !photosByMainTag.hasOwnProperty(pd.mainTag) ? photosByMainTag[pd.mainTag] = [] : photosByMainTag[pd.mainTag];
-                arr.push(pd);
+                    switch (pd.puzzleLevel) {
+                        case "Simple":
+                            pd.level = 1;
+                            break;
+                        case "Bronze":
+                            pd.level = 2;
+                            break;
+                        case "Silver":
+                            pd.level = 3;
+                            break;
+                        case "Gold":
+                            pd.level = 4;
+                            break;
+                        case "Diamond":
+                            pd.level = 5;
+                            break;
+                    }
 
-                const tags = pd.tags;
-                const filters = pd.filters;
-
-                for (let i in tags) {
-                    const s = tags[i];
-                    arr = !photosByTag.hasOwnProperty(s) ? photosByTag[s] = [] : photosByTag[s];
+                    let arr = !photosByMainTag.hasOwnProperty(pd.mainTag) ? photosByMainTag[pd.mainTag] = [] : photosByMainTag[pd.mainTag];
                     arr.push(pd);
+
+                    const tags = pd.tags;
+                    const filters = pd.filters;
+
+                    for (let i in tags) {
+                        const s = tags[i];
+                        arr = !photosByTag.hasOwnProperty(s) ? photosByTag[s] = [] : photosByTag[s];
+                        arr.push(pd);
+                    }
+
+                    for (let i in filters) {
+                        const s = filters[i];
+                        arr = !photosByFilters.hasOwnProperty(s) ? photosByFilters[s] = [] : photosByFilters[s];
+                        arr.push(pd);
+                    }
                 }
 
-                for (let i in filters) {
-                    const s = filters[i];
-                    arr = !photosByFilters.hasOwnProperty(s) ? photosByFilters[s] = [] : photosByFilters[s];
-                    arr.push(pd);
-                }
-            }
-
-            for (let i in photosByTag) {
-                const arr = photosByTag[i];
-                PHOTOS_BY_TAG_ARR.push({
-                    tag: i,
-                    array: arr
-                });
-            }
-
-            for (let i in photosByFilters) {
-                const arr = photosByFilters[i];
-                PHOTOS_BY_FILTER_ARR.push({
-                    filter: i,
-                    array: arr
-                });
-            }
-
-            function compareLevels(a, b) {
-                return a.level - b.level;
-            }
-
-            //sort photos by level
-            for (let i in photosByMainTag) {
-                const arr = photosByMainTag[i];
-                arr.sort(compareLevels);
-                PHOTOS_BY_MAINTAG_ARR.push({
-                    tag: arr[0].mainTag,
-                    array: arr
-                });
-            }
-
-            if (data.TokenData) {
-                TOKENS_DATA = data.TokenData;
-                const tl = TOKENS_DATA.slotLevelTokens;
-                const d = TOKENS_DATA.tokensForLevel = {};
-                for (let i in tl) {
-                    const t = tl[i];
-                    d[t.parameter] = t.amount * RESOURCES_SCALE;
+                for (let i in photosByTag) {
+                    const arr = photosByTag[i];
+                    PHOTOS_BY_TAG_ARR.push({
+                        tag: i,
+                        array: arr
+                    });
                 }
 
-                const tp = TOKENS_DATA.prestigeTokens;
-                const d2 = TOKENS_DATA.tokensForPrestige = {};
-
-                for (let i in tp) {
-                    const t = tp[i];
-                    d2[t.parameter] = {
-                        tokenType: t.tokenType,
-                        amount: t.amount * RESOURCES_SCALE
-                    };
+                for (let i in photosByFilters) {
+                    const arr = photosByFilters[i];
+                    PHOTOS_BY_FILTER_ARR.push({
+                        filter: i,
+                        array: arr
+                    });
                 }
 
-                for (let i in TOKENS_DATA.locations) {
-                    const l = TOKENS_DATA.locations[i];
-                    l.tokenDropAmount *= RESOURCES_SCALE;
-                    l.duplicatePuzzleAmount *= RESOURCES_SCALE;
-                    l.tokenDropLimit *= RESOURCES_SCALE;
+                function compareLevels(a, b) {
+                    return a.level - b.level;
+                }
+
+                //sort photos by level
+                for (let i in photosByMainTag) {
+                    const arr = photosByMainTag[i];
+                    arr.sort(compareLevels);
+                    PHOTOS_BY_MAINTAG_ARR.push({
+                        tag: arr[0].mainTag,
+                        array: arr
+                    });
+                }
+
+                if (data.TokenData) {
+                    TOKENS_DATA = data.TokenData;
+                    const tl = TOKENS_DATA.slotLevelTokens;
+                    const d = TOKENS_DATA.tokensForLevel = {};
+                    for (let i in tl) {
+                        const t = tl[i];
+                        d[t.parameter] = t.amount * RESOURCES_SCALE;
+                    }
+
+                    const tp = TOKENS_DATA.prestigeTokens;
+                    const d2 = TOKENS_DATA.tokensForPrestige = {};
+
+                    for (let i in tp) {
+                        const t = tp[i];
+                        d2[t.parameter] = {
+                            tokenType: t.tokenType,
+                            amount: t.amount * RESOURCES_SCALE
+                        };
+                    }
+
+                    for (let i in TOKENS_DATA.locations) {
+                        const l = TOKENS_DATA.locations[i];
+                        l.tokenDropAmount *= RESOURCES_SCALE;
+                        l.duplicatePuzzleAmount *= RESOURCES_SCALE;
+                        l.tokenDropLimit *= RESOURCES_SCALE;
+                    }
+
+
+                    PHOTOS_FOR_PRESTIGE = data.PrestigePhotos;
+                    for (let pr of PHOTOS_FOR_PRESTIGE)
+                        PHOTO_DATA.push(pr);
                 }
             }
         }
@@ -23907,8 +23928,7 @@ class WheelOfFortune
     }
 }
 
-class PhotoManager
-{
+class PhotoManager {
     constructor(progress) {
         this.activeQuests = {};
 
@@ -23918,6 +23938,19 @@ class PhotoManager
         for (let i = 0; i < photoData.length; i++) {
             const p = photoData[i];
             this._addPhotoQuest(p);
+        }
+
+        eventManager.onHarvestCompleted.addListener(this._harvestCompleted.bind(this));
+    }
+
+    _harvestCompleted() {
+        const count = gameInit.progress.getHarvestsCount();
+        const photos = GameData.getPrestigePhotos();
+        for (let v of photos) {
+            if (v.prestigeCount == count) {
+                gameInit.progress.addPhotoForPrestige(v);
+                break;
+            }
         }
     }
 
@@ -24396,6 +24429,7 @@ class GameInit{
                 if (VisualData.getGameSettings().photos) {
                     data.PhotoData = rgc.getDictionary("photos");
                     data.TokenData = rgc.getDictionary("tokensConfig");
+                    data.PrestigePhotos = rgc.getDictionary("prestigePhotos");
                 }
 
                 this.gameConfig = rgc.getDictionary("gameConfig");
@@ -25965,6 +25999,10 @@ class GUITextArea {
                 t = 1;
             this.textArea.setT(t);
         }
+    }
+
+    setText(text) {
+        this.textArea.setText(text);
     }
 
     setVisible(visible) {
@@ -29254,6 +29292,19 @@ class WinHarvested extends WinBase {
                     this.actionButton.setVisible(true);
                     this.buttonLabel.setVisible(true);
                     animManager.applyButtonShowAnimation(this.actionButton);
+
+                    const count = gameInit.progress.getHarvestsCount();
+                    const photos = GameData.getPrestigePhotos();
+                    for (let v of photos) {
+                        if (v.prestigeCount == count) {
+                            setTimeout(() => {
+                                this._removeAllCans();
+                                const win = guiManager.openNewWindow(WindowType.WinPhotosPreview, true);
+                                win.setImage(v);
+                            }, 100);
+                            break;
+                        }
+                    }
                 });
             })
         });
@@ -29268,6 +29319,14 @@ class WinHarvested extends WinBase {
 
     timeout(ms) {
         return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    _removeAllCans() {
+        if (this.cans) {
+            for (let i in this.cans)
+                this.cans[i].destroy(true);
+        }
+        this.cans = null;
     }
 
     async _sendCansToResoruces() {
@@ -29285,16 +29344,21 @@ class WinHarvested extends WinBase {
     }
 
     async _startAnimation() {
+        if (this.cans)
+            this._sendCansToResoruces();
+
         this.cans = [];
         const radius = 400 * GlobalScale;
         for (let i = 0; i < this.cansCount;i++) {
-            const angle = Math.PI * 2* Math.random();
-            const r = radius * (Math.random() * 0.7 + 0.3);
-            const can = this.engine.add.sprite(this.centerX + r * Math.sin(angle), this.centerY + r * Math.cos(angle), "PriceSeeds")
-                .setDepth(WinDefaultDepth + 100);
-            this.cans.push(can);
+            if (this.cans) {
+                const angle = Math.PI * 2 * Math.random();
+                const r = radius * (Math.random() * 0.7 + 0.3);
+                const can = this.engine.add.sprite(this.centerX + r * Math.sin(angle), this.centerY + r * Math.cos(angle), "PriceSeeds")
+                    .setDepth(WinDefaultDepth + 100);
+                this.cans.push(can);
 
-            await this.timeout(100);
+                await this.timeout(100);
+            }
         }
 
         return Promise.resolve(true);
@@ -31709,7 +31773,10 @@ class WinPhotosQuest extends WinWithBrownBack {
             y: this.centerY + 250 * GlobalScale,
             width: 900,
             height: 600,
-        }, ()=> { return '\'\'There is something for you there\'\' - Peristera said.\n' +
+        }, ()=> {
+            return "";
+
+            return '\'\'There is something for you there\'\' - Peristera said.\n' +
             '\n' +
             'You ‘ve walked through the forest. \n' +
             '\'\'I don’t know what I am looking for exactly.. But Peri is so tender and caring, I am sure that she hide something amazing here.\'\'\n' +
@@ -31901,6 +31968,7 @@ class WinPhotosQuest extends WinWithBrownBack {
             this.questDesc.setVisible(false);
             this.buttonLabel.setText(LocalizationManager.getTutorialLocalizization("VIEW"));//TODO localize
             this.textArea.setVisible(true);
+            this.textArea.setText(LocalizationManager.getLocalizization(quest.id));
             if (this.puzzleImage)
                 this.puzzleImage.destroy();
             return;
@@ -33133,6 +33201,10 @@ class GUIManager {
             LoadFile(this.engine, building.getSmallIcon(), building.getSmallIconPath(), () => {
                 this.showPopup(text, building.getSmallIcon());
             });
+        });
+
+        eventManager.onBoxReceived.addListener((amount) => {
+            this.showPopup(LocalizationManager.getLocalizization("PopupBox").format(amount));
         });
     }
 
