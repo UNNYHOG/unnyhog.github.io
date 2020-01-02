@@ -1,0 +1,209 @@
+
+slot2w2.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Effects/slot2_boil_1
+  rotate: false
+  xy: 1, 19
+  size: 41, 22
+  orig: 41, 22
+  offset: 0, 0
+  index: -1
+Effects/slot2_boil_2
+  rotate: true
+  xy: 478, 470
+  size: 41, 22
+  orig: 41, 22
+  offset: 0, 0
+  index: -1
+Effects/slot2_boil_3
+  rotate: false
+  xy: 91, 122
+  size: 41, 22
+  orig: 41, 22
+  offset: 0, 0
+  index: -1
+Effects/slot2_boil_4
+  rotate: false
+  xy: 91, 99
+  size: 41, 22
+  orig: 41, 22
+  offset: 0, 0
+  index: -1
+Effects/slot2_boil_5
+  rotate: false
+  xy: 91, 76
+  size: 41, 22
+  orig: 41, 22
+  offset: 0, 0
+  index: -1
+Effects/slot2_water3_1
+  rotate: false
+  xy: 91, 52
+  size: 36, 23
+  orig: 36, 23
+  offset: 0, 0
+  index: -1
+Effects/slot2_water3_2
+  rotate: false
+  xy: 91, 28
+  size: 36, 23
+  orig: 36, 23
+  offset: 0, 0
+  index: -1
+Effects/slot2_water3_3
+  rotate: true
+  xy: 478, 433
+  size: 36, 23
+  orig: 36, 23
+  offset: 0, 0
+  index: -1
+Effects/slot2_water3_4
+  rotate: false
+  xy: 130, 231
+  size: 36, 23
+  orig: 36, 23
+  offset: 0, 0
+  index: -1
+Effects/slot2_water3_5
+  rotate: false
+  xy: 167, 240
+  size: 36, 23
+  orig: 36, 23
+  offset: 0, 0
+  index: -1
+Effects/slot2_water3_6
+  rotate: false
+  xy: 130, 207
+  size: 36, 23
+  orig: 36, 23
+  offset: 0, 0
+  index: -1
+Hand
+  rotate: true
+  xy: 45, 1
+  size: 94, 45
+  orig: 94, 45
+  offset: 0, 0
+  index: -1
+Hole
+  rotate: true
+  xy: 1, 42
+  size: 206, 43
+  orig: 206, 43
+  offset: 0, 0
+  index: -1
+RearHand
+  rotate: false
+  xy: 324, 365
+  size: 94, 45
+  orig: 94, 45
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: true
+  xy: 45, 96
+  size: 152, 45
+  orig: 152, 45
+  offset: 0, 0
+  index: -1
+Shadow2
+  rotate: false
+  xy: 306, 443
+  size: 133, 68
+  orig: 133, 68
+  offset: 0, 0
+  index: -1
+Shadow3
+  rotate: false
+  xy: 306, 411
+  size: 126, 31
+  orig: 126, 31
+  offset: 0, 0
+  index: -1
+body
+  rotate: false
+  xy: 244, 319
+  size: 79, 83
+  orig: 79, 83
+  offset: 0, 0
+  index: -1
+buble
+  rotate: true
+  xy: 91, 1
+  size: 26, 27
+  orig: 26, 27
+  offset: 0, 0
+  index: -1
+face
+  rotate: false
+  xy: 167, 310
+  size: 76, 92
+  orig: 76, 92
+  offset: 0, 0
+  index: -1
+fish
+  rotate: true
+  xy: 324, 321
+  size: 43, 88
+  orig: 43, 88
+  offset: 0, 0
+  index: -1
+fishpile
+  rotate: true
+  xy: 110, 255
+  size: 139, 56
+  orig: 139, 56
+  offset: 0, 0
+  index: -1
+happyface
+  rotate: true
+  xy: 91, 197
+  size: 51, 38
+  orig: 51, 38
+  offset: 0, 0
+  index: -1
+heater
+  rotate: false
+  xy: 1, 249
+  size: 108, 145
+  orig: 108, 145
+  offset: 0, 0
+  index: -1
+heater2
+  rotate: true
+  xy: 160, 403
+  size: 108, 145
+  orig: 108, 145
+  offset: 0, 0
+  index: -1
+idleface
+  rotate: true
+  xy: 91, 145
+  size: 51, 43
+  orig: 51, 43
+  offset: 0, 0
+  index: -1
+legs
+  rotate: false
+  xy: 167, 264
+  size: 75, 45
+  orig: 75, 45
+  offset: 0, 0
+  index: -1
+power
+  rotate: false
+  xy: 1, 395
+  size: 158, 116
+  orig: 158, 116
+  offset: 0, 0
+  index: -1
+wirepart
+  rotate: false
+  xy: 440, 429
+  size: 37, 82
+  orig: 37, 82
+  offset: 0, 0
+  index: -1

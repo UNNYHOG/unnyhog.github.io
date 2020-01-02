@@ -1,0 +1,181 @@
+
+Slot6.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body
+  rotate: false
+  xy: 773, 579
+  size: 146, 183
+  orig: 146, 183
+  offset: 0, 0
+  index: -1
+BodyScary
+  rotate: false
+  xy: 510, 333
+  size: 146, 183
+  orig: 146, 183
+  offset: 0, 0
+  index: -1
+Face
+  rotate: false
+  xy: 920, 724
+  size: 44, 38
+  orig: 44, 38
+  offset: 0, 0
+  index: -1
+FaceScary
+  rotate: false
+  xy: 773, 522
+  size: 48, 56
+  orig: 48, 56
+  offset: 0, 0
+  index: -1
+Island
+  rotate: true
+  xy: 966, 779
+  size: 229, 43
+  orig: 229, 43
+  offset: 0, 0
+  index: -1
+Water
+  rotate: false
+  xy: 1, 869
+  size: 438, 139
+  orig: 438, 139
+  offset: 0, 0
+  index: -1
+Whale
+  rotate: false
+  xy: 1, 708
+  size: 403, 160
+  orig: 403, 160
+  offset: 0, 0
+  index: -1
+effect/splash1_1
+  rotate: false
+  xy: 440, 886
+  size: 262, 122
+  orig: 262, 122
+  offset: 0, 0
+  index: -1
+effect/splash1_10
+  rotate: true
+  xy: 387, 445
+  size: 262, 122
+  orig: 262, 122
+  offset: 0, 0
+  index: -1
+effect/splash1_11
+  rotate: true
+  xy: 387, 182
+  size: 262, 122
+  orig: 262, 122
+  offset: 0, 0
+  index: -1
+effect/splash1_12
+  rotate: false
+  xy: 264, 59
+  size: 262, 122
+  orig: 262, 122
+  offset: 0, 0
+  index: -1
+effect/splash1_13
+  rotate: false
+  xy: 440, 763
+  size: 262, 122
+  orig: 262, 122
+  offset: 0, 0
+  index: -1
+effect/splash1_14
+  rotate: false
+  xy: 703, 763
+  size: 262, 122
+  orig: 262, 122
+  offset: 0, 0
+  index: -1
+effect/splash1_15
+  rotate: false
+  xy: 510, 640
+  size: 262, 122
+  orig: 262, 122
+  offset: 0, 0
+  index: -1
+effect/splash1_16
+  rotate: false
+  xy: 510, 517
+  size: 262, 122
+  orig: 262, 122
+  offset: 0, 0
+  index: -1
+effect/splash1_2
+  rotate: false
+  xy: 1, 585
+  size: 262, 122
+  orig: 262, 122
+  offset: 0, 0
+  index: -1
+effect/splash1_3
+  rotate: false
+  xy: 703, 886
+  size: 262, 122
+  orig: 262, 122
+  offset: 0, 0
+  index: -1
+effect/splash1_4
+  rotate: false
+  xy: 1, 462
+  size: 262, 122
+  orig: 262, 122
+  offset: 0, 0
+  index: -1
+effect/splash1_5
+  rotate: false
+  xy: 1, 339
+  size: 262, 122
+  orig: 262, 122
+  offset: 0, 0
+  index: -1
+effect/splash1_6
+  rotate: true
+  xy: 264, 445
+  size: 262, 122
+  orig: 262, 122
+  offset: 0, 0
+  index: -1
+effect/splash1_7
+  rotate: false
+  xy: 1, 216
+  size: 262, 122
+  orig: 262, 122
+  offset: 0, 0
+  index: -1
+effect/splash1_8
+  rotate: false
+  xy: 1, 93
+  size: 262, 122
+  orig: 262, 122
+  offset: 0, 0
+  index: -1
+effect/splash1_9
+  rotate: true
+  xy: 264, 182
+  size: 262, 122
+  orig: 262, 122
+  offset: 0, 0
+  index: -1
+string
+  rotate: true
+  xy: 1, 89
+  size: 3, 213
+  orig: 3, 213
+  offset: 0, 0
+  index: -1
+stringup
+  rotate: true
+  xy: 405, 822
+  size: 46, 23
+  orig: 46, 23
+  offset: 0, 0
+  index: -1
