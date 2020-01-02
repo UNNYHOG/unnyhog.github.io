@@ -17716,6 +17716,7 @@ const GAME_ENVIRONMENTS = {
     },
 
     'hell_vk_dev': {
+        env: 'dev',
         un_game_id: "819ced8f-14c6-478d-85d2-0fa616f79fa5",
         un_key: "MDYxMWIyNGEtYjdhZS00",
     },
@@ -23199,7 +23200,7 @@ class GameInit{
 
         const load = engine.load;
         load.setPath(VisualData.getDataFolder());
-        const oldSystem = !!CURRENT_ENVIRONMENT.hmac;
+        const oldSystem = !!CURRENT_ENVIRONMENT.env;
         if (oldSystem) {
             load.json('GoodsData', 'goods_data.json');
             load.json('SlotsData', 'farm_slot_data.json');
@@ -23277,7 +23278,7 @@ class GameInit{
 
     GameCreate(engine, hideCallback) {
         const cache = engine.cache;
-        const oldSystem = !!CURRENT_ENVIRONMENT.hmac;
+        const oldSystem = !!CURRENT_ENVIRONMENT.env;
         const data = oldSystem ? {
                 SlotsData: cache.json.get('SlotsData'),
                 GoodsData: cache.json.get('GoodsData'),
@@ -23363,9 +23364,10 @@ class GameInit{
 
             GameData.prepareGameData(data);
 
+            const useGoblin = !!CURRENT_ENVIRONMENT.hmac;
             socialManager.authorize(() => {
                 Progress.loadProgressFromServer((progress) => {
-                    this.progress = new Progress(this, progress, this.gameConfig, oldSystem);
+                    this.progress = new Progress(this, progress, this.gameConfig, useGoblin);
                     if (this.gameConfig)
                         this.playerInfo = new PlayerInfo(this.gameConfig.playerLevels, this.progress);
                     if (this.guardManager)
@@ -23384,7 +23386,7 @@ class GameInit{
                     audioManager.load(engine);
 
                     hideCallback();
-                }, oldSystem);
+                }, useGoblin);
             });
         });
     }
