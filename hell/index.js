@@ -23279,6 +23279,7 @@ class GameInit{
     GameCreate(engine, hideCallback) {
         const cache = engine.cache;
         const oldSystem = !!CURRENT_ENVIRONMENT.env;
+        console.warn("oldSystem " + oldSystem);
         const data = oldSystem ? {
                 SlotsData: cache.json.get('SlotsData'),
                 GoodsData: cache.json.get('GoodsData'),
