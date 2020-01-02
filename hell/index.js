@@ -15959,7 +15959,7 @@ var VisualData = (function() {
     const GameSettings = {
         save_version: 8,
         fb_app_id: 2077329288999958,//hz
-        vk_app_id: 6955719,//fish
+        vk_app_id: 7267803,
         photos: false,
         show_best: false
     };
@@ -16900,6 +16900,7 @@ function SocialVK() {
     function _checkPurchases(consumeCallback, offset) {
         const request_limit = 20;
         offset = offset || 0;
+        if (gBase)
         gBase.social.vkListPurchases(offset, request_limit, (err, response) => {
             console.info("list  err ", err);
             console.info("response ", response);
@@ -16978,32 +16979,43 @@ function SocialVK() {
         reconnect(callback) {
             this.createGBase();
             this.authorize(()=> {
-                gBase.profile.getp((err) => {
-                    if (err)
-                        gameAnalytics.sendServerError(err, "getp");
-                    else
-                        callback();
-                });
+                if (gBase) {//legacy
+                    gBase.profile.getp((err) => {
+                        if (err)
+                            gameAnalytics.sendServerError(err, "getp");
+                        else
+                            callback();
+                    });
+                } else
+                    callback();
             });
         },
 
         authorize(callback) {
+            console.warn("AUTH " + getViewerId() + " <> " + getAuthKey());
             if (!getViewerId() || !getAuthKey())
                 callback();
             else {
                 authorizing = true;
                 console.log("Authorize: " + getViewerId());
-                gBase.account.authWebVk(getViewerId(), getAuthKey(), (err) => {
-                    authorizing = false;
-                    if (err)
-                        gameAnalytics.sendServerError(err, "authWebVk");
+                if (gBase) {//legacy
+                    gBase.account.authWebVk(getViewerId(), getAuthKey(), (err) => {
+                        authorizing = false;
+                        if (err)
+                            gameAnalytics.sendServerError(err, "authWebVk");
 
-                    UnnyNet.UnnyNet.Vkontakte.authorize((response)=>{
+                        UnnyNet.UnnyNet.Vkontakte.authorize((response) => {
+                            console.info("UnnyNet auth", response);
+
+                            callback();
+                        });
+                    });
+                } else {
+                    UnnyNet.UnnyNet.Vkontakte.authorize((response) => {
                         console.info("UnnyNet auth", response);
-
                         callback();
                     });
-                });
+                }
             }
         },
 
@@ -17704,11 +17716,6 @@ const GAME_ENVIRONMENTS = {
     },
 
     'hell_vk_dev': {
-        name: 'rmg-vkfish',
-        env: 'dev',
-        hmac: 'mE2ibFZ1tPCDOcdc6n0XB7I4',
-        platform: "webvk",
-        version: "0.0.1",
         un_game_id: "819ced8f-14c6-478d-85d2-0fa616f79fa5",
         un_key: "MDYxMWIyNGEtYjdhZS00",
     },
@@ -17813,7 +17820,8 @@ const DEBUG_MODE = AllGetParams.debug_mode;
 }
 
 socialManager.createGBase = function() {
-    gBase = new Gbase.GbaseApi(CURRENT_ENVIRONMENT.name, CURRENT_ENVIRONMENT.env, CURRENT_ENVIRONMENT.hmac, CURRENT_ENVIRONMENT.platform, CURRENT_ENVIRONMENT.version);
+    if (CURRENT_ENVIRONMENT.hmac)
+        gBase = new Gbase.GbaseApi(CURRENT_ENVIRONMENT.name, CURRENT_ENVIRONMENT.env, CURRENT_ENVIRONMENT.hmac, CURRENT_ENVIRONMENT.platform, CURRENT_ENVIRONMENT.version);
 };
 
 socialManager.reconnect = function (callback) {
