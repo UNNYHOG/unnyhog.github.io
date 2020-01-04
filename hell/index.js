@@ -17434,14 +17434,24 @@ function SocialFB() {
 
                 function onLogin(response) {
                     var accessToken = response.authResponse.accessToken;
+
+                    const resp = (response) => {
+                        // console.info("AUTH>", response);
+                        if (response.success)
+                            callback();
+                        else
+                            console.error("Couldnt' authorize ", response.error);
+                    };
+
                     if (gBase) {
                         gBase.account.authFb(accessToken, (err) => {
                             if (err)
                                 gameAnalytics.sendServerError(err, "authFb");
                             callback();
                         });
-                    } else
-                        callback();
+                    } else {
+                        UnnyNet.UnnyNet.authorize('test_user1', 'test_password', resp);
+                    }
                 }
 
                 FB.getLoginStatus(function(response) {
@@ -17821,12 +17831,12 @@ var socialManager;
 parseGetParams();
 
 if (!AllGetParams.hasOwnProperty('game_platform')) {
-    console.log("platform wasn't specified");
+    console.log("platform wasn't specified, use default: " + DEFAULT_PLATFORM);
     AllGetParams.game_platform = DEFAULT_PLATFORM;
 }
 
 if (!AllGetParams.hasOwnProperty('game_env')) {
-    console.log("game_env wasn't specified");
+    console.log("game_env wasn't specified, use default: " + DEFAULT_ENVIRONMENT);
     AllGetParams.game_env = DEFAULT_ENVIRONMENT;
 }
 
@@ -21217,7 +21227,9 @@ class Progress {
     static loadProgressFromServer(callback, useGoblin) {
 
         function AuthInUnnyNet(callback, goblinVersion) {
+            console.error("==>UNNY?");
             UnnyNet.UnnyNet.load(COLLECTION_NAME, COLLECTION_KEY_NAME, (response)=>{
+                console.error("UNNY?", response);
                 if (response.success) {
                     if (response.data && response.data.length) {
                         const json = JSON.parse(response.data[0].value);
@@ -21230,7 +21242,8 @@ class Progress {
                         if (callback)
                             callback(null);
                     }
-                }
+                } else
+                    console.error("Failed to load profile", response.error);
             });
         }
 
@@ -23282,7 +23295,6 @@ class GameInit{
         const oldSystem = !!CURRENT_ENVIRONMENT.env;
         if (oldSystem) {
             load.json('GoodsData', 'goods_data.json');
-            load.json('SlotsData', 'farm_slot_data.json');
             load.json('SlotsUpgrade', 'slots_upgrade_data.json');
             load.json('MarketData', 'market_upgrades.json');
             load.json('BoxData', 'box_data.json');
@@ -23358,7 +23370,6 @@ class GameInit{
         const cache = engine.cache;
         const oldSystem = !!CURRENT_ENVIRONMENT.env;
         const data = oldSystem ? {
-                SlotsData: cache.json.get('SlotsData'),
                 GoodsData: cache.json.get('GoodsData'),
                 SlotsUpgrade: cache.json.get('SlotsUpgrade'),
                 MarketData: cache.json.get('MarketData'),
@@ -23395,7 +23406,7 @@ class GameInit{
                 platform = UnnyNet.Platform.NUTAKU;
                 break;
         }
-
+        console.warn("GO INIT");
         UnnyNet.UnnyNet.initialize({
             game_id: CURRENT_ENVIRONMENT.un_game_id,
             public_key: CURRENT_ENVIRONMENT.un_key,
@@ -23407,6 +23418,7 @@ class GameInit{
             debug: DEBUG_MODE
         }, ()=> {
 
+            console.warn("INIT DOne: " + oldSystem);
             UnnyNet.UnnyNet.setFrame({
                 top: 0,
                 right: 0,
@@ -23444,6 +23456,7 @@ class GameInit{
 
             const useGoblin = !!CURRENT_ENVIRONMENT.hmac;
             socialManager.authorize(() => {
+                console.warn("auth done!");
                 Progress.loadProgressFromServer((progress) => {
                     this.progress = new Progress(this, progress, this.gameConfig, useGoblin);
                     if (this.gameConfig)
@@ -33078,6 +33091,7 @@ function create ()
     }
 
     gameInit.GameCreate(this, () => {
+        console.error("hIDE!");
         loadingSplash.style.display = 'none';
 
         setInterval(()=>{
