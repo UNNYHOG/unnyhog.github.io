@@ -15297,8 +15297,8 @@ class Tutorial {
         const key = VisualData.PLACED_BUILDINGS[1].levels[0].building;
         const offset = VisualData.VISUAL_BUILDINGS[key].objects[0];
         return {
-            x: pos.x + offset.x,
-            y: pos.y + offset.y,
+            x: pos.x + (offset.x || 0),
+            y: pos.y + (offset.y || 0),
         };
     }
 
@@ -15365,11 +15365,13 @@ class Tutorial {
                     if (this.guardShown)
                         this.moveToNextPhase();
                     else {
-                        lockAtOneAnimatedObject(visualGame.getGuard());
+                        const guard = visualGame.getGuard();
+                        lockAtOneAnimatedObject(guard);
                         GlobalInputLocked = false;
                         lockGuiEverything();
                         visualGame.showGuard();
-                        this.pointAtPosition(visualGame.getGuard().obj, true, true);
+                        if (guard)
+                            this.pointAtPosition(guard.obj, true, true);
                     }
                 } else {
                     if (this._isWindow(WindowType.WinGuard) || this._isWindow(WindowType.WinNoAdd)) {
@@ -15387,7 +15389,15 @@ class Tutorial {
                         GlobalInputLocked = true;
                         const win = guiManager.getActiveWindow();
                         win.showSuperVisorButton();
-                        this._lockAtButton(win.getSuperVisorButton(), true);
+                        const btn = win.getSuperVisorButton();
+
+                        if (btn)
+                            this._lockAtButton(btn, true);
+                        else {
+                            const visor = visualGame.getSuperVisor();
+                            lockAtOneAnimatedObject(visor);
+                            this.pointAtPosition(visor.obj, true, true);
+                        }
                     }
                 } else {
                     if (this._isWindow(WindowType.WinSupervisor) || this._isWindow(WindowType.WinNoAdd)) {
@@ -15907,6 +15917,9 @@ var VisualData = (function() {
     };
 
     const PreloadObjects = [
+        'Fabrika',
+        'Podkova',
+
         'Grid2',
         'Grid3',
         'Grid4',
@@ -15958,7 +15971,7 @@ var VisualData = (function() {
 
     const GameSettings = {
         save_version: 8,
-        fb_app_id: 2077329288999958,//hz
+        fb_app_id: 758844231303769,//hz
         vk_app_id: 7267803,
         photos: false,
         show_best: false
@@ -16079,6 +16092,7 @@ var VisualData = (function() {
             rotationX: -90,
             rotationY: -110,
             buttonHeaderDeltaY: 170,
+            buttonHeaderDeltaY2: 250,
             buttonY: 1000,
             heroX: 400,
             heroY: 100,
@@ -16741,7 +16755,7 @@ function CalculateFonts() {
         fill: DefaultFontColor,
         align: 'center',
         stroke: DefaultStrokeColor,
-        strokeThickness: getStroke(6)
+        strokeThickness: getStroke(10)
     });
     DefaultFontWheel = createFont({
         font: getFont(70),
@@ -16992,9 +17006,17 @@ function SocialVK() {
         },
 
         authorize(callback) {
-            console.warn("AUTH " + getViewerId() + " <> " + getAuthKey());
+
+            const resp = (response) => {
+                // console.info("AUTH>", response);
+                if (response.success)
+                    callback();
+                else
+                    console.error("Couldnt' authorize ", response.error);
+            };
+
             if (!getViewerId() || !getAuthKey())
-                callback();
+                UnnyNet.UnnyNet.authorize('test_user1', 'test_password', resp);
             else {
                 authorizing = true;
                 console.log("Authorize: " + getViewerId());
@@ -17005,9 +17027,7 @@ function SocialVK() {
                             gameAnalytics.sendServerError(err, "authWebVk");
 
                         UnnyNet.UnnyNet.Vkontakte.authorize((response) => {
-                            console.info("UnnyNet auth", response);
-
-                            callback();
+                            resp(response);
                         });
                     });
                 } else {
@@ -17385,7 +17405,7 @@ function SocialFB() {
     return {
         initFB: function (appId) {
             app_id = appId;
-            gBase = new Gbase.GbaseApi(CURRENT_ENVIRONMENT.name, CURRENT_ENVIRONMENT.env, CURRENT_ENVIRONMENT.hmac, CURRENT_ENVIRONMENT.platform, CURRENT_ENVIRONMENT.version);
+            this.createGBase();
         },
 
         setAllGetParams(prms) {
@@ -17414,11 +17434,14 @@ function SocialFB() {
 
                 function onLogin(response) {
                     var accessToken = response.authResponse.accessToken;
-                    gBase.account.authFb(accessToken, (err) => {
-                        if (err)
-                            gameAnalytics.sendServerError(err, "authFb");
+                    if (gBase) {
+                        gBase.account.authFb(accessToken, (err) => {
+                            if (err)
+                                gameAnalytics.sendServerError(err, "authFb");
+                            callback();
+                        });
+                    } else
                         callback();
-                    });
                 }
 
                 FB.getLoginStatus(function(response) {
@@ -17673,6 +17696,48 @@ function SocialFB_Instant() {
     };
 };
 
+const UN_DATA = {
+    //fish
+    "5c02bb6d-3afb-4ca5-8f91-ce69d2c5a28d" : {
+        leaderboards: {
+            boxes: "a332f1d7-80fd-40de-97a8-f8a3948ebad7",
+            factory: "bb340b93-11b0-4ce7-8ebb-ba5dcaa672dd"
+        },
+        achievements: {
+            factory: 1,
+            slot_1: 4,
+            slot_2: 5,
+            slot_3: 6,
+            slot_4: 7,
+            slot_5: 8,
+            slot_6: 9,
+            slot_7: 10,
+            slot_8: 11,
+            slot_9: 12,
+        }
+    },
+
+    //hell
+    "819ced8f-14c6-478d-85d2-0fa616f79fa5" : {
+        leaderboards: {
+            boxes: "058acf78-ef5a-4f0c-8074-a84cb0c06e09",
+            factory: "9db0b3ae-2877-48df-a1e1-ff89f0a196d5"
+        },
+        achievements: {
+            factory: 10,
+            slot_1: 1,
+            slot_2: 2,
+            slot_3: 3,
+            slot_4: 4,
+            slot_5: 5,
+            slot_6: 6,
+            slot_7: 7,
+            slot_8: 8,
+            slot_9: 9,
+        }
+    }
+};
+
 const GAME_ENVIRONMENTS = {
     'fish_vk_prod': {
         name: "rmg-vkfish",
@@ -17720,10 +17785,16 @@ const GAME_ENVIRONMENTS = {
         un_game_id: "819ced8f-14c6-478d-85d2-0fa616f79fa5",
         un_key: "MDYxMWIyNGEtYjdhZS00",
     },
+
+    'hell_fb_dev': {
+        env: 'dev',
+        un_game_id: "819ced8f-14c6-478d-85d2-0fa616f79fa5",
+        un_key: "MDYxMWIyNGEtYjdhZS00",
+    },
 };
 
-const DEFAULT_PLATFORM = null;
-const DEFAULT_ENVIRONMENT = null;
+const DEFAULT_PLATFORM = "fb";
+const DEFAULT_ENVIRONMENT = "hell_fb_dev";
 
 let AllGetParams = null;
 function parseGetParams() {
@@ -17760,6 +17831,8 @@ if (!AllGetParams.hasOwnProperty('game_env')) {
 }
 
 const CURRENT_ENVIRONMENT = GAME_ENVIRONMENTS[AllGetParams.game_env];
+
+const CURRENT_UN_DATA = UN_DATA[CURRENT_ENVIRONMENT.un_game_id];
 
 const TEST_MODE = true;//AllGetParams.test_mode;
 const DEBUG_MODE = AllGetParams.debug_mode;
@@ -23146,29 +23219,35 @@ class AchsManager {
     }
 
     reportPrestige(revenue) {
-        UnnyNet.UnnyNet.reportAchievements(1, 1);
-        UnnyNet.UnnyNet.reportAchievements(2, 1);
-        UnnyNet.UnnyNet.reportAchievements(3, 1);
+        if (!CURRENT_UN_DATA)
+            return;
+
+        UnnyNet.UnnyNet.reportAchievements(CURRENT_UN_DATA.achievements.factory, 1);
 
         const length = revenue.toString().length - 2;//because of RESOURCES_SCALE
-        UnnyNet.UnnyNet.reportLeaderboards("bb340b93-11b0-4ce7-8ebb-ba5dcaa672dd", length);
+        UnnyNet.UnnyNet.reportLeaderboards(CURRENT_UN_DATA.leaderboards.factory, length);
     }
 
     slotWasUpgraded(building) {
-        this.callWithDelay('slot_' + building.slot, () => {
-            const intSlot = parseInt(building.slot);
-            if (intSlot >= 1 && intSlot <= 9) {
-                UnnyNet.UnnyNet.reportAchievements(intSlot + 3, building.getLevel(), (response)=>{
-                    console.error("response", response);
+        if (!CURRENT_UN_DATA)
+            return;
+
+        const intSlot = parseInt(building.slot);
+        if (intSlot >= 1 && intSlot <= 9) {
+            this.callWithDelay('slot_' + building.slot, () => {
+                UnnyNet.UnnyNet.reportAchievements(CURRENT_UN_DATA.achievements["slot_" + intSlot], building.getLevel(), (response) => {
+                    if (!response.success)
+                        console.error("response", response);
                 });
-            }
-        });
+            });
+        }
     }
 
     boxWasOpened(total) {
-        this.callWithDelay('boxes', () => {
-            UnnyNet.UnnyNet.reportLeaderboards("a332f1d7-80fd-40de-97a8-f8a3948ebad7", total);
-        }, 10000);
+        if (CURRENT_UN_DATA)
+            this.callWithDelay('boxes', () => {
+                UnnyNet.UnnyNet.reportLeaderboards(CURRENT_UN_DATA.leaderboards.boxes, total);
+            }, 10000);
     }
 }
 
@@ -23249,7 +23328,6 @@ class GameInit{
         //     const data = GameData.getMarketPurchaseById(key);
         //     this.upgradePurchased(data);
         // }
-
         let offlineResourcesCollected = bigInt(0);
 
         eventManager.onLoadResourcesAdded.clear();
@@ -23279,7 +23357,6 @@ class GameInit{
     GameCreate(engine, hideCallback) {
         const cache = engine.cache;
         const oldSystem = !!CURRENT_ENVIRONMENT.env;
-        console.warn("oldSystem " + oldSystem);
         const data = oldSystem ? {
                 SlotsData: cache.json.get('SlotsData'),
                 GoodsData: cache.json.get('GoodsData'),
@@ -24634,8 +24711,17 @@ class VisualInit {
             this.podkova.setVisible(true);
     }
 
+    showSuperVisor() {
+        if (this.supervisor)
+            this.supervisor.setVisible(true);
+    }
+
     getGuard() {
         return this.podkova;
+    }
+
+    getSuperVisor() {
+        return this.supervisor;
     }
 
     reseted() {
@@ -25415,9 +25501,9 @@ class WinBase {
     }
 
     applyWinInfo(key) {
-        this.winInfo = VisualData[key];
+        this.winInfo = VisualData[key] || {};
 
-        if (this.winInfo && this.winInfo.nineSlice)
+        if (this.winInfo.nineSlice)
             this.nineSlice = this.winInfo.nineSlice;
     }
 
@@ -27531,12 +27617,12 @@ class WinFortuneWheel extends WinWithExit {
                             this.group.create(x + this.winInfo.heroX * GlobalScale, y + this.winInfo.heroY * GlobalScale, devil).setDepth(WinDefaultDepth + 120);
                         });
 
-                        this.spinsCounter = engine.add.text(0, btnY - (this.winInfo.buttonHeaderDeltaY || 125) * GlobalScale, null, DefaultFont)
+                        this.spinsCounter = engine.add.text(0, btnY - this.getWinInfoValue("buttonHeaderDeltaY", 125), null, DefaultFont)
                             .setOrigin(0.5, 0.5)
                             .setDepth(WinDefaultDepth + 200);
                         this.group.add(this.spinsCounter);
 
-                        this.spinsTimer = engine.add.text(0, btnY - 200 * GlobalScale, null, DefaultFont)
+                        this.spinsTimer = engine.add.text(0, btnY - this.getWinInfoValue("buttonHeaderDeltaY2", 200), null, DefaultFont)
                             .setOrigin(0.5, 0.5)
                             .setDepth(WinDefaultDepth + 200);
                         this.group.add(this.spinsTimer);
@@ -28697,7 +28783,7 @@ class WinWithPicture extends WinWithBack {
     applyWinInfo(key) {
         this.winInfo = Object.assign({}, VisualData.GUI_WinWithPicture, VisualData[key]);
 
-        if (this.winInfo && this.winInfo.nineSlice)
+        if (this.winInfo.nineSlice)
             this.nineSlice = this.winInfo.nineSlice;
     }
 
@@ -29298,9 +29384,9 @@ class WinMain extends WinBase {
         let posY = centerY + RealScreenHeight / 2 - 150 * GlobalScale;
         const delta = width / 4;
 
-        this.createButton('MM_Btn_Login', centerX - delta * 1.5, posY, () => this.gui.openNewWindow(WindowType.WinBossSummon));
+        this.createButton('MM_Btn_Login', centerX - delta * 1.5, posY, () => UnnyNet.UnnyNet.openUnnyNet());
         this.upgradeButton = this.createButton('MM_Btn_Upgrade', centerX - delta * 0.5, posY, () => this.gui.changeMode(GUIMode.UpgradeBuildings));
-        this.createButton('MM_Btn_Likes', centerX + delta * 0.5, posY, () => this.gui.openNewWindow(WindowType.WinDropPuzzle));
+        // this.createButton('MM_Btn_Likes', centerX + delta * 0.5, posY, () => this.gui.openNewWindow(WindowType.WinDropPuzzle));
         this.createButton('MM_Btn_Worlds', centerX + delta * 1.5, posY, () => {
             gameInit.switchToTheNextWorld();
         });
@@ -29310,21 +29396,22 @@ class WinMain extends WinBase {
 
         this.storeButton = this.createButton('MM_Btn_Store', posX, posY, () => this.gui.openNewWindow(WindowType.WinStore));
 
-        if (TEST_MODE)
-            this.createButton('MM_Btn_Worlds', posX, posY + 250 * GlobalScale, () => gameInit.progress.cheatResources());
-
         posX -= 250 * GlobalScale;
         this.puzzlesButton = this.createButton('MM_Btn_Chests', posX, posY, () => this.gui.openNewWindow(WindowType.WinPuzzle));
 
         posX = RealScreenWidth - 100 * GlobalScale;
         posY = RealScreenHeight - 800 * GlobalScale;
-        this.createButton('FortuneHUDButton', posX, posY, () => this.gui.openNewWindow(WindowType.WinFortuneWheel));
+        this.fortuneButton = this.createButton('FortuneHUDButton', posX, posY, () => this.gui.openNewWindow(WindowType.WinFortuneWheel));
 
         posY += 180 * GlobalScale;
         this.questsButton = this.createButton('QuestsHUDButton', posX, posY, () => this.gui.openNewWindow(WindowType.WinQuests));
 
         posY += 180 * GlobalScale;
         this.dailyBonus = this.createButton('Daily_HUDButton', posX, posY, () => this.gui.openNewWindow(WindowType.WinDaily));
+
+        if (TEST_MODE)
+            this.createButton('MM_Btn_Worlds', posX, posY + 250 * GlobalScale, () => gameInit.progress.cheatResources());
+        this.allButtons.pop();
     }
 
     createButtonsMyth() {
@@ -29675,7 +29762,10 @@ class WinMain extends WinBase {
     }
 
     showSuperVisorButton() {
-        this.showButtonFromTutorial(this.superVisorButton);
+        if (this.superVisorButton)
+            this.showButtonFromTutorial(this.superVisorButton);
+        else
+            visualGame.showSuperVisor()
     }
 
     showGirlsMenuButton() {
