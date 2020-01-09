@@ -31738,13 +31738,13 @@ let config = {
                     url: remotePluginPath + (renderType === Phaser.WEBGL ? 'plugins/SpineWebGLPlugin.js' : 'plugins/SpineCanvasPlugin.js'),
                     sceneKey: 'spine'
                 },
-                {
-                    type: 'scenePlugin',
-                    key: 'rexuiplugin',
-                    // url: 'plugins/rexuiplugin.min.js',
-                    url: 'https://raw.githubusercontent.com/rexrainbow/phaser3-rex-notes/master/plugins/dist/rexuiplugin.min.js',
-                    sceneKey: 'rexUI'
-                }
+                // {
+                //     type: 'scenePlugin',
+                //     key: 'rexuiplugin',
+                //     // url: 'plugins/rexuiplugin.min.js',
+                //     url: 'https://raw.githubusercontent.com/rexrainbow/phaser3-rex-notes/master/plugins/dist/rexuiplugin.min.js',
+                //     sceneKey: 'rexUI'
+                // }
             ]
         },
     }
