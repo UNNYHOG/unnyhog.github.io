@@ -20834,7 +20834,7 @@ const BoxType = {
 const MUSIC_STATE = "MUSIC_STATE";
 const SOUNDS_STATE = "SOUNDS_STATE";
 const CURRENT_LANGUAGE = "CURRENT_LANGUAGE";
-const GAME_VERSION = "0.9.34";
+const GAME_VERSION = "0.9.35";
 
 console.log("game version: " + GAME_VERSION);
 
@@ -33571,8 +33571,7 @@ let config = {
                 {
                     type: 'scenePlugin',
                     key: 'rexuiplugin',
-                    // url: 'plugins/rexuiplugin.min.js',
-                    url: 'https://raw.githubusercontent.com/rexrainbow/phaser3-rex-notes/master/plugins/dist/rexuiplugin.min.js',
+                    url: 'plugins/rexuiplugin.min.js',
                     sceneKey: 'rexUI'
                 }
             ]
