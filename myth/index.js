@@ -1,5 +1,5 @@
 var bigInt=function(undefined){"use strict";var BASE=1e7,LOG_BASE=7,MAX_INT=9007199254740992,MAX_INT_ARR=smallToArray(MAX_INT),DEFAULT_ALPHABET="0123456789abcdefghijklmnopqrstuvwxyz";var supportsNativeBigInt=typeof BigInt==="function";function Integer(v,radix,alphabet,caseSensitive){if(typeof v==="undefined")return Integer[0];if(typeof radix!=="undefined")return+radix===10&&!alphabet?parseValue(v):parseBase(v,radix,alphabet,caseSensitive);return parseValue(v)}function BigInteger(value,sign){this.value=value;this.sign=sign;this.isSmall=false}BigInteger.prototype=Object.create(Integer.prototype);function SmallInteger(value){this.value=value;this.sign=value<0;this.isSmall=true}SmallInteger.prototype=Object.create(Integer.prototype);function NativeBigInt(value){this.value=value}NativeBigInt.prototype=Object.create(Integer.prototype);function isPrecise(n){return-MAX_INT<n&&n<MAX_INT}function smallToArray(n){if(n<1e7)return[n];if(n<1e14)return[n%1e7,Math.floor(n/1e7)];return[n%1e7,Math.floor(n/1e7)%1e7,Math.floor(n/1e14)]}function arrayToSmall(arr){trim(arr);var length=arr.length;if(length<4&&compareAbs(arr,MAX_INT_ARR)<0){switch(length){case 0:return 0;case 1:return arr[0];case 2:return arr[0]+arr[1]*BASE;default:return arr[0]+(arr[1]+arr[2]*BASE)*BASE}}return arr}function trim(v){var i=v.length;while(v[--i]===0);v.length=i+1}function createArray(length){var x=new Array(length);var i=-1;while(++i<length){x[i]=0}return x}function truncate(n){if(n>0)return Math.floor(n);return Math.ceil(n)}function add(a,b){var l_a=a.length,l_b=b.length,r=new Array(l_a),carry=0,base=BASE,sum,i;for(i=0;i<l_b;i++){sum=a[i]+b[i]+carry;carry=sum>=base?1:0;r[i]=sum-carry*base}while(i<l_a){sum=a[i]+carry;carry=sum===base?1:0;r[i++]=sum-carry*base}if(carry>0)r.push(carry);return r}function addAny(a,b){if(a.length>=b.length)return add(a,b);return add(b,a)}function addSmall(a,carry){var l=a.length,r=new Array(l),base=BASE,sum,i;for(i=0;i<l;i++){sum=a[i]-base+carry;carry=Math.floor(sum/base);r[i]=sum-carry*base;carry+=1}while(carry>0){r[i++]=carry%base;carry=Math.floor(carry/base)}return r}BigInteger.prototype.add=function(v){var n=parseValue(v);if(this.sign!==n.sign){return this.subtract(n.negate())}var a=this.value,b=n.value;if(n.isSmall){return new BigInteger(addSmall(a,Math.abs(b)),this.sign)}return new BigInteger(addAny(a,b),this.sign)};BigInteger.prototype.plus=BigInteger.prototype.add;SmallInteger.prototype.add=function(v){var n=parseValue(v);var a=this.value;if(a<0!==n.sign){return this.subtract(n.negate())}var b=n.value;if(n.isSmall){if(isPrecise(a+b))return new SmallInteger(a+b);b=smallToArray(Math.abs(b))}return new BigInteger(addSmall(b,Math.abs(a)),a<0)};SmallInteger.prototype.plus=SmallInteger.prototype.add;NativeBigInt.prototype.add=function(v){return new NativeBigInt(this.value+parseValue(v).value)};NativeBigInt.prototype.plus=NativeBigInt.prototype.add;function subtract(a,b){var a_l=a.length,b_l=b.length,r=new Array(a_l),borrow=0,base=BASE,i,difference;for(i=0;i<b_l;i++){difference=a[i]-borrow-b[i];if(difference<0){difference+=base;borrow=1}else borrow=0;r[i]=difference}for(i=b_l;i<a_l;i++){difference=a[i]-borrow;if(difference<0)difference+=base;else{r[i++]=difference;break}r[i]=difference}for(;i<a_l;i++){r[i]=a[i]}trim(r);return r}function subtractAny(a,b,sign){var value;if(compareAbs(a,b)>=0){value=subtract(a,b)}else{value=subtract(b,a);sign=!sign}value=arrayToSmall(value);if(typeof value==="number"){if(sign)value=-value;return new SmallInteger(value)}return new BigInteger(value,sign)}function subtractSmall(a,b,sign){var l=a.length,r=new Array(l),carry=-b,base=BASE,i,difference;for(i=0;i<l;i++){difference=a[i]+carry;carry=Math.floor(difference/base);difference%=base;r[i]=difference<0?difference+base:difference}r=arrayToSmall(r);if(typeof r==="number"){if(sign)r=-r;return new SmallInteger(r)}return new BigInteger(r,sign)}BigInteger.prototype.subtract=function(v){var n=parseValue(v);if(this.sign!==n.sign){return this.add(n.negate())}var a=this.value,b=n.value;if(n.isSmall)return subtractSmall(a,Math.abs(b),this.sign);return subtractAny(a,b,this.sign)};BigInteger.prototype.minus=BigInteger.prototype.subtract;SmallInteger.prototype.subtract=function(v){var n=parseValue(v);var a=this.value;if(a<0!==n.sign){return this.add(n.negate())}var b=n.value;if(n.isSmall){return new SmallInteger(a-b)}return subtractSmall(b,Math.abs(a),a>=0)};SmallInteger.prototype.minus=SmallInteger.prototype.subtract;NativeBigInt.prototype.subtract=function(v){return new NativeBigInt(this.value-parseValue(v).value)};NativeBigInt.prototype.minus=NativeBigInt.prototype.subtract;BigInteger.prototype.negate=function(){return new BigInteger(this.value,!this.sign)};SmallInteger.prototype.negate=function(){var sign=this.sign;var small=new SmallInteger(-this.value);small.sign=!sign;return small};NativeBigInt.prototype.negate=function(){return new NativeBigInt(-this.value)};BigInteger.prototype.abs=function(){return new BigInteger(this.value,false)};SmallInteger.prototype.abs=function(){return new SmallInteger(Math.abs(this.value))};NativeBigInt.prototype.abs=function(){return new NativeBigInt(this.value>=0?this.value:-this.value)};function multiplyLong(a,b){var a_l=a.length,b_l=b.length,l=a_l+b_l,r=createArray(l),base=BASE,product,carry,i,a_i,b_j;for(i=0;i<a_l;++i){a_i=a[i];for(var j=0;j<b_l;++j){b_j=b[j];product=a_i*b_j+r[i+j];carry=Math.floor(product/base);r[i+j]=product-carry*base;r[i+j+1]+=carry}}trim(r);return r}function multiplySmall(a,b){var l=a.length,r=new Array(l),base=BASE,carry=0,product,i;for(i=0;i<l;i++){product=a[i]*b+carry;carry=Math.floor(product/base);r[i]=product-carry*base}while(carry>0){r[i++]=carry%base;carry=Math.floor(carry/base)}return r}function shiftLeft(x,n){var r=[];while(n-- >0)r.push(0);return r.concat(x)}function multiplyKaratsuba(x,y){var n=Math.max(x.length,y.length);if(n<=30)return multiplyLong(x,y);n=Math.ceil(n/2);var b=x.slice(n),a=x.slice(0,n),d=y.slice(n),c=y.slice(0,n);var ac=multiplyKaratsuba(a,c),bd=multiplyKaratsuba(b,d),abcd=multiplyKaratsuba(addAny(a,b),addAny(c,d));var product=addAny(addAny(ac,shiftLeft(subtract(subtract(abcd,ac),bd),n)),shiftLeft(bd,2*n));trim(product);return product}function useKaratsuba(l1,l2){return-.012*l1-.012*l2+15e-6*l1*l2>0}BigInteger.prototype.multiply=function(v){var n=parseValue(v),a=this.value,b=n.value,sign=this.sign!==n.sign,abs;if(n.isSmall){if(b===0)return Integer[0];if(b===1)return this;if(b===-1)return this.negate();abs=Math.abs(b);if(abs<BASE){return new BigInteger(multiplySmall(a,abs),sign)}b=smallToArray(abs)}if(useKaratsuba(a.length,b.length))return new BigInteger(multiplyKaratsuba(a,b),sign);return new BigInteger(multiplyLong(a,b),sign)};BigInteger.prototype.times=BigInteger.prototype.multiply;function multiplySmallAndArray(a,b,sign){if(a<BASE){return new BigInteger(multiplySmall(b,a),sign)}return new BigInteger(multiplyLong(b,smallToArray(a)),sign)}SmallInteger.prototype._multiplyBySmall=function(a){if(isPrecise(a.value*this.value)){return new SmallInteger(a.value*this.value)}return multiplySmallAndArray(Math.abs(a.value),smallToArray(Math.abs(this.value)),this.sign!==a.sign)};BigInteger.prototype._multiplyBySmall=function(a){if(a.value===0)return Integer[0];if(a.value===1)return this;if(a.value===-1)return this.negate();return multiplySmallAndArray(Math.abs(a.value),this.value,this.sign!==a.sign)};SmallInteger.prototype.multiply=function(v){return parseValue(v)._multiplyBySmall(this)};SmallInteger.prototype.times=SmallInteger.prototype.multiply;NativeBigInt.prototype.multiply=function(v){return new NativeBigInt(this.value*parseValue(v).value)};NativeBigInt.prototype.times=NativeBigInt.prototype.multiply;function square(a){var l=a.length,r=createArray(l+l),base=BASE,product,carry,i,a_i,a_j;for(i=0;i<l;i++){a_i=a[i];carry=0-a_i*a_i;for(var j=i;j<l;j++){a_j=a[j];product=2*(a_i*a_j)+r[i+j]+carry;carry=Math.floor(product/base);r[i+j]=product-carry*base}r[i+l]=carry}trim(r);return r}BigInteger.prototype.square=function(){return new BigInteger(square(this.value),false)};SmallInteger.prototype.square=function(){var value=this.value*this.value;if(isPrecise(value))return new SmallInteger(value);return new BigInteger(square(smallToArray(Math.abs(this.value))),false)};NativeBigInt.prototype.square=function(v){return new NativeBigInt(this.value*this.value)};function divMod1(a,b){var a_l=a.length,b_l=b.length,base=BASE,result=createArray(b.length),divisorMostSignificantDigit=b[b_l-1],lambda=Math.ceil(base/(2*divisorMostSignificantDigit)),remainder=multiplySmall(a,lambda),divisor=multiplySmall(b,lambda),quotientDigit,shift,carry,borrow,i,l,q;if(remainder.length<=a_l)remainder.push(0);divisor.push(0);divisorMostSignificantDigit=divisor[b_l-1];for(shift=a_l-b_l;shift>=0;shift--){quotientDigit=base-1;if(remainder[shift+b_l]!==divisorMostSignificantDigit){quotientDigit=Math.floor((remainder[shift+b_l]*base+remainder[shift+b_l-1])/divisorMostSignificantDigit)}carry=0;borrow=0;l=divisor.length;for(i=0;i<l;i++){carry+=quotientDigit*divisor[i];q=Math.floor(carry/base);borrow+=remainder[shift+i]-(carry-q*base);carry=q;if(borrow<0){remainder[shift+i]=borrow+base;borrow=-1}else{remainder[shift+i]=borrow;borrow=0}}while(borrow!==0){quotientDigit-=1;carry=0;for(i=0;i<l;i++){carry+=remainder[shift+i]-base+divisor[i];if(carry<0){remainder[shift+i]=carry+base;carry=0}else{remainder[shift+i]=carry;carry=1}}borrow+=carry}result[shift]=quotientDigit}remainder=divModSmall(remainder,lambda)[0];return[arrayToSmall(result),arrayToSmall(remainder)]}function divMod2(a,b){var a_l=a.length,b_l=b.length,result=[],part=[],base=BASE,guess,xlen,highx,highy,check;while(a_l){part.unshift(a[--a_l]);trim(part);if(compareAbs(part,b)<0){result.push(0);continue}xlen=part.length;highx=part[xlen-1]*base+part[xlen-2];highy=b[b_l-1]*base+b[b_l-2];if(xlen>b_l){highx=(highx+1)*base}guess=Math.ceil(highx/highy);do{check=multiplySmall(b,guess);if(compareAbs(check,part)<=0)break;guess--}while(guess);result.push(guess);part=subtract(part,check)}result.reverse();return[arrayToSmall(result),arrayToSmall(part)]}function divModSmall(value,lambda){var length=value.length,quotient=createArray(length),base=BASE,i,q,remainder,divisor;remainder=0;for(i=length-1;i>=0;--i){divisor=remainder*base+value[i];q=truncate(divisor/lambda);remainder=divisor-q*lambda;quotient[i]=q|0}return[quotient,remainder|0]}function divModAny(self,v){var value,n=parseValue(v);if(supportsNativeBigInt){return[new NativeBigInt(self.value/n.value),new NativeBigInt(self.value%n.value)]}var a=self.value,b=n.value;var quotient;if(b===0)throw new Error("Cannot divide by zero");if(self.isSmall){if(n.isSmall){return[new SmallInteger(truncate(a/b)),new SmallInteger(a%b)]}return[Integer[0],self]}if(n.isSmall){if(b===1)return[self,Integer[0]];if(b==-1)return[self.negate(),Integer[0]];var abs=Math.abs(b);if(abs<BASE){value=divModSmall(a,abs);quotient=arrayToSmall(value[0]);var remainder=value[1];if(self.sign)remainder=-remainder;if(typeof quotient==="number"){if(self.sign!==n.sign)quotient=-quotient;return[new SmallInteger(quotient),new SmallInteger(remainder)]}return[new BigInteger(quotient,self.sign!==n.sign),new SmallInteger(remainder)]}b=smallToArray(abs)}var comparison=compareAbs(a,b);if(comparison===-1)return[Integer[0],self];if(comparison===0)return[Integer[self.sign===n.sign?1:-1],Integer[0]];if(a.length+b.length<=200)value=divMod1(a,b);else value=divMod2(a,b);quotient=value[0];var qSign=self.sign!==n.sign,mod=value[1],mSign=self.sign;if(typeof quotient==="number"){if(qSign)quotient=-quotient;quotient=new SmallInteger(quotient)}else quotient=new BigInteger(quotient,qSign);if(typeof mod==="number"){if(mSign)mod=-mod;mod=new SmallInteger(mod)}else mod=new BigInteger(mod,mSign);return[quotient,mod]}BigInteger.prototype.divmod=function(v){var result=divModAny(this,v);return{quotient:result[0],remainder:result[1]}};NativeBigInt.prototype.divmod=SmallInteger.prototype.divmod=BigInteger.prototype.divmod;BigInteger.prototype.divide=function(v){return divModAny(this,v)[0]};NativeBigInt.prototype.over=NativeBigInt.prototype.divide=SmallInteger.prototype.over=SmallInteger.prototype.divide=BigInteger.prototype.over=BigInteger.prototype.divide;BigInteger.prototype.mod=function(v){return divModAny(this,v)[1]};NativeBigInt.prototype.mod=NativeBigInt.prototype.remainder=SmallInteger.prototype.remainder=SmallInteger.prototype.mod=BigInteger.prototype.remainder=BigInteger.prototype.mod;BigInteger.prototype.pow=function(v){var n=parseValue(v),a=this.value,b=n.value,value,x,y;if(b===0)return Integer[1];if(a===0)return Integer[0];if(a===1)return Integer[1];if(a===-1)return n.isEven()?Integer[1]:Integer[-1];if(n.sign){return Integer[0]}if(!n.isSmall)throw new Error("The exponent "+n.toString()+" is too large.");if(this.isSmall){if(isPrecise(value=Math.pow(a,b)))return new SmallInteger(truncate(value))}x=this;y=Integer[1];while(true){if(b&1===1){y=y.times(x);--b}if(b===0)break;b/=2;x=x.square()}return y};SmallInteger.prototype.pow=BigInteger.prototype.pow;var pow;if(supportsNativeBigInt){pow=eval("(a,b)=>a**b")}NativeBigInt.prototype.pow=function(v){var n=parseValue(v);var a=this.value,b=n.value;if(b===BigInt(0))return Integer[1];if(a===BigInt(0))return Integer[0];if(a===BigInt(1))return Integer[1];if(a===BigInt(-1))return n.isEven()?Integer[1]:Integer[-1];if(n.isNegative())return new NativeBigInt(BigInt(0));return new NativeBigInt(pow(a,b))};BigInteger.prototype.modPow=function(exp,mod){exp=parseValue(exp);mod=parseValue(mod);if(mod.isZero())throw new Error("Cannot take modPow with modulus 0");var r=Integer[1],base=this.mod(mod);while(exp.isPositive()){if(base.isZero())return Integer[0];if(exp.isOdd())r=r.multiply(base).mod(mod);exp=exp.divide(2);base=base.square().mod(mod)}return r};NativeBigInt.prototype.modPow=SmallInteger.prototype.modPow=BigInteger.prototype.modPow;function compareAbs(a,b){if(a.length!==b.length){return a.length>b.length?1:-1}for(var i=a.length-1;i>=0;i--){if(a[i]!==b[i])return a[i]>b[i]?1:-1}return 0}BigInteger.prototype.compareAbs=function(v){var n=parseValue(v),a=this.value,b=n.value;if(n.isSmall)return 1;return compareAbs(a,b)};SmallInteger.prototype.compareAbs=function(v){var n=parseValue(v),a=Math.abs(this.value),b=n.value;if(n.isSmall){b=Math.abs(b);return a===b?0:a>b?1:-1}return-1};NativeBigInt.prototype.compareAbs=function(v){var a=this.value;var b=parseValue(v).value;a=a>=0?a:-a;b=b>=0?b:-b;return a===b?0:a>b?1:-1};BigInteger.prototype.compare=function(v){if(v===Infinity){return-1}if(v===-Infinity){return 1}var n=parseValue(v),a=this.value,b=n.value;if(this.sign!==n.sign){return n.sign?1:-1}if(n.isSmall){return this.sign?-1:1}return compareAbs(a,b)*(this.sign?-1:1)};BigInteger.prototype.compareTo=BigInteger.prototype.compare;SmallInteger.prototype.compare=function(v){if(v===Infinity){return-1}if(v===-Infinity){return 1}var n=parseValue(v),a=this.value,b=n.value;if(n.isSmall){return a==b?0:a>b?1:-1}if(a<0!==n.sign){return a<0?-1:1}return a<0?1:-1};SmallInteger.prototype.compareTo=SmallInteger.prototype.compare;NativeBigInt.prototype.compare=function(v){if(v===Infinity){return-1}if(v===-Infinity){return 1}var a=this.value;var b=parseValue(v).value;return a===b?0:a>b?1:-1};NativeBigInt.prototype.compareTo=NativeBigInt.prototype.compare;BigInteger.prototype.equals=function(v){return this.compare(v)===0};NativeBigInt.prototype.eq=NativeBigInt.prototype.equals=SmallInteger.prototype.eq=SmallInteger.prototype.equals=BigInteger.prototype.eq=BigInteger.prototype.equals;BigInteger.prototype.notEquals=function(v){return this.compare(v)!==0};NativeBigInt.prototype.neq=NativeBigInt.prototype.notEquals=SmallInteger.prototype.neq=SmallInteger.prototype.notEquals=BigInteger.prototype.neq=BigInteger.prototype.notEquals;BigInteger.prototype.greater=function(v){return this.compare(v)>0};NativeBigInt.prototype.gt=NativeBigInt.prototype.greater=SmallInteger.prototype.gt=SmallInteger.prototype.greater=BigInteger.prototype.gt=BigInteger.prototype.greater;BigInteger.prototype.lesser=function(v){return this.compare(v)<0};NativeBigInt.prototype.lt=NativeBigInt.prototype.lesser=SmallInteger.prototype.lt=SmallInteger.prototype.lesser=BigInteger.prototype.lt=BigInteger.prototype.lesser;BigInteger.prototype.greaterOrEquals=function(v){return this.compare(v)>=0};NativeBigInt.prototype.geq=NativeBigInt.prototype.greaterOrEquals=SmallInteger.prototype.geq=SmallInteger.prototype.greaterOrEquals=BigInteger.prototype.geq=BigInteger.prototype.greaterOrEquals;BigInteger.prototype.lesserOrEquals=function(v){return this.compare(v)<=0};NativeBigInt.prototype.leq=NativeBigInt.prototype.lesserOrEquals=SmallInteger.prototype.leq=SmallInteger.prototype.lesserOrEquals=BigInteger.prototype.leq=BigInteger.prototype.lesserOrEquals;BigInteger.prototype.isEven=function(){return(this.value[0]&1)===0};SmallInteger.prototype.isEven=function(){return(this.value&1)===0};NativeBigInt.prototype.isEven=function(){return(this.value&BigInt(1))===BigInt(0)};BigInteger.prototype.isOdd=function(){return(this.value[0]&1)===1};SmallInteger.prototype.isOdd=function(){return(this.value&1)===1};NativeBigInt.prototype.isOdd=function(){return(this.value&BigInt(1))===BigInt(1)};BigInteger.prototype.isPositive=function(){return!this.sign};SmallInteger.prototype.isPositive=function(){return this.value>0};NativeBigInt.prototype.isPositive=SmallInteger.prototype.isPositive;BigInteger.prototype.isNegative=function(){return this.sign};SmallInteger.prototype.isNegative=function(){return this.value<0};NativeBigInt.prototype.isNegative=SmallInteger.prototype.isNegative;BigInteger.prototype.isUnit=function(){return false};SmallInteger.prototype.isUnit=function(){return Math.abs(this.value)===1};NativeBigInt.prototype.isUnit=function(){return this.abs().value===BigInt(1)};BigInteger.prototype.isZero=function(){return false};SmallInteger.prototype.isZero=function(){return this.value===0};NativeBigInt.prototype.isZero=function(){return this.value===BigInt(0)};BigInteger.prototype.isDivisibleBy=function(v){var n=parseValue(v);if(n.isZero())return false;if(n.isUnit())return true;if(n.compareAbs(2)===0)return this.isEven();return this.mod(n).isZero()};NativeBigInt.prototype.isDivisibleBy=SmallInteger.prototype.isDivisibleBy=BigInteger.prototype.isDivisibleBy;function isBasicPrime(v){var n=v.abs();if(n.isUnit())return false;if(n.equals(2)||n.equals(3)||n.equals(5))return true;if(n.isEven()||n.isDivisibleBy(3)||n.isDivisibleBy(5))return false;if(n.lesser(49))return true}function millerRabinTest(n,a){var nPrev=n.prev(),b=nPrev,r=0,d,t,i,x;while(b.isEven())b=b.divide(2),r++;next:for(i=0;i<a.length;i++){if(n.lesser(a[i]))continue;x=bigInt(a[i]).modPow(b,n);if(x.isUnit()||x.equals(nPrev))continue;for(d=r-1;d!=0;d--){x=x.square().mod(n);if(x.isUnit())return false;if(x.equals(nPrev))continue next}return false}return true}BigInteger.prototype.isPrime=function(strict){var isPrime=isBasicPrime(this);if(isPrime!==undefined)return isPrime;var n=this.abs();var bits=n.bitLength();if(bits<=64)return millerRabinTest(n,[2,3,5,7,11,13,17,19,23,29,31,37]);var logN=Math.log(2)*bits.toJSNumber();var t=Math.ceil(strict===true?2*Math.pow(logN,2):logN);for(var a=[],i=0;i<t;i++){a.push(bigInt(i+2))}return millerRabinTest(n,a)};NativeBigInt.prototype.isPrime=SmallInteger.prototype.isPrime=BigInteger.prototype.isPrime;BigInteger.prototype.isProbablePrime=function(iterations){var isPrime=isBasicPrime(this);if(isPrime!==undefined)return isPrime;var n=this.abs();var t=iterations===undefined?5:iterations;for(var a=[],i=0;i<t;i++){a.push(bigInt.randBetween(2,n.minus(2)))}return millerRabinTest(n,a)};NativeBigInt.prototype.isProbablePrime=SmallInteger.prototype.isProbablePrime=BigInteger.prototype.isProbablePrime;BigInteger.prototype.modInv=function(n){var t=bigInt.zero,newT=bigInt.one,r=parseValue(n),newR=this.abs(),q,lastT,lastR;while(!newR.isZero()){q=r.divide(newR);lastT=t;lastR=r;t=newT;r=newR;newT=lastT.subtract(q.multiply(newT));newR=lastR.subtract(q.multiply(newR))}if(!r.isUnit())throw new Error(this.toString()+" and "+n.toString()+" are not co-prime");if(t.compare(0)===-1){t=t.add(n)}if(this.isNegative()){return t.negate()}return t};NativeBigInt.prototype.modInv=SmallInteger.prototype.modInv=BigInteger.prototype.modInv;BigInteger.prototype.next=function(){var value=this.value;if(this.sign){return subtractSmall(value,1,this.sign)}return new BigInteger(addSmall(value,1),this.sign)};SmallInteger.prototype.next=function(){var value=this.value;if(value+1<MAX_INT)return new SmallInteger(value+1);return new BigInteger(MAX_INT_ARR,false)};NativeBigInt.prototype.next=function(){return new NativeBigInt(this.value+BigInt(1))};BigInteger.prototype.prev=function(){var value=this.value;if(this.sign){return new BigInteger(addSmall(value,1),true)}return subtractSmall(value,1,this.sign)};SmallInteger.prototype.prev=function(){var value=this.value;if(value-1>-MAX_INT)return new SmallInteger(value-1);return new BigInteger(MAX_INT_ARR,true)};NativeBigInt.prototype.prev=function(){return new NativeBigInt(this.value-BigInt(1))};var powersOfTwo=[1];while(2*powersOfTwo[powersOfTwo.length-1]<=BASE)powersOfTwo.push(2*powersOfTwo[powersOfTwo.length-1]);var powers2Length=powersOfTwo.length,highestPower2=powersOfTwo[powers2Length-1];function shift_isSmall(n){return Math.abs(n)<=BASE}BigInteger.prototype.shiftLeft=function(v){var n=parseValue(v).toJSNumber();if(!shift_isSmall(n)){throw new Error(String(n)+" is too large for shifting.")}if(n<0)return this.shiftRight(-n);var result=this;if(result.isZero())return result;while(n>=powers2Length){result=result.multiply(highestPower2);n-=powers2Length-1}return result.multiply(powersOfTwo[n])};NativeBigInt.prototype.shiftLeft=SmallInteger.prototype.shiftLeft=BigInteger.prototype.shiftLeft;BigInteger.prototype.shiftRight=function(v){var remQuo;var n=parseValue(v).toJSNumber();if(!shift_isSmall(n)){throw new Error(String(n)+" is too large for shifting.")}if(n<0)return this.shiftLeft(-n);var result=this;while(n>=powers2Length){if(result.isZero()||result.isNegative()&&result.isUnit())return result;remQuo=divModAny(result,highestPower2);result=remQuo[1].isNegative()?remQuo[0].prev():remQuo[0];n-=powers2Length-1}remQuo=divModAny(result,powersOfTwo[n]);return remQuo[1].isNegative()?remQuo[0].prev():remQuo[0]};NativeBigInt.prototype.shiftRight=SmallInteger.prototype.shiftRight=BigInteger.prototype.shiftRight;function bitwise(x,y,fn){y=parseValue(y);var xSign=x.isNegative(),ySign=y.isNegative();var xRem=xSign?x.not():x,yRem=ySign?y.not():y;var xDigit=0,yDigit=0;var xDivMod=null,yDivMod=null;var result=[];while(!xRem.isZero()||!yRem.isZero()){xDivMod=divModAny(xRem,highestPower2);xDigit=xDivMod[1].toJSNumber();if(xSign){xDigit=highestPower2-1-xDigit}yDivMod=divModAny(yRem,highestPower2);yDigit=yDivMod[1].toJSNumber();if(ySign){yDigit=highestPower2-1-yDigit}xRem=xDivMod[0];yRem=yDivMod[0];result.push(fn(xDigit,yDigit))}var sum=fn(xSign?1:0,ySign?1:0)!==0?bigInt(-1):bigInt(0);for(var i=result.length-1;i>=0;i-=1){sum=sum.multiply(highestPower2).add(bigInt(result[i]))}return sum}BigInteger.prototype.not=function(){return this.negate().prev()};NativeBigInt.prototype.not=SmallInteger.prototype.not=BigInteger.prototype.not;BigInteger.prototype.and=function(n){return bitwise(this,n,function(a,b){return a&b})};NativeBigInt.prototype.and=SmallInteger.prototype.and=BigInteger.prototype.and;BigInteger.prototype.or=function(n){return bitwise(this,n,function(a,b){return a|b})};NativeBigInt.prototype.or=SmallInteger.prototype.or=BigInteger.prototype.or;BigInteger.prototype.xor=function(n){return bitwise(this,n,function(a,b){return a^b})};NativeBigInt.prototype.xor=SmallInteger.prototype.xor=BigInteger.prototype.xor;var LOBMASK_I=1<<30,LOBMASK_BI=(BASE&-BASE)*(BASE&-BASE)|LOBMASK_I;function roughLOB(n){var v=n.value,x=typeof v==="number"?v|LOBMASK_I:typeof v==="bigint"?v|BigInt(LOBMASK_I):v[0]+v[1]*BASE|LOBMASK_BI;return x&-x}function integerLogarithm(value,base){if(base.compareTo(value)<=0){var tmp=integerLogarithm(value,base.square(base));var p=tmp.p;var e=tmp.e;var t=p.multiply(base);return t.compareTo(value)<=0?{p:t,e:e*2+1}:{p:p,e:e*2}}return{p:bigInt(1),e:0}}BigInteger.prototype.bitLength=function(){var n=this;if(n.compareTo(bigInt(0))<0){n=n.negate().subtract(bigInt(1))}if(n.compareTo(bigInt(0))===0){return bigInt(0)}return bigInt(integerLogarithm(n,bigInt(2)).e).add(bigInt(1))};NativeBigInt.prototype.bitLength=SmallInteger.prototype.bitLength=BigInteger.prototype.bitLength;function max(a,b){a=parseValue(a);b=parseValue(b);return a.greater(b)?a:b}function min(a,b){a=parseValue(a);b=parseValue(b);return a.lesser(b)?a:b}function gcd(a,b){a=parseValue(a).abs();b=parseValue(b).abs();if(a.equals(b))return a;if(a.isZero())return b;if(b.isZero())return a;var c=Integer[1],d,t;while(a.isEven()&&b.isEven()){d=min(roughLOB(a),roughLOB(b));a=a.divide(d);b=b.divide(d);c=c.multiply(d)}while(a.isEven()){a=a.divide(roughLOB(a))}do{while(b.isEven()){b=b.divide(roughLOB(b))}if(a.greater(b)){t=b;b=a;a=t}b=b.subtract(a)}while(!b.isZero());return c.isUnit()?a:a.multiply(c)}function lcm(a,b){a=parseValue(a).abs();b=parseValue(b).abs();return a.divide(gcd(a,b)).multiply(b)}function randBetween(a,b){a=parseValue(a);b=parseValue(b);var low=min(a,b),high=max(a,b);var range=high.subtract(low).add(1);if(range.isSmall)return low.add(Math.floor(Math.random()*range));var digits=toBase(range,BASE).value;var result=[],restricted=true;for(var i=0;i<digits.length;i++){var top=restricted?digits[i]:BASE;var digit=truncate(Math.random()*top);result.push(digit);if(digit<top)restricted=false}return low.add(Integer.fromArray(result,BASE,false))}var parseBase=function(text,base,alphabet,caseSensitive){alphabet=alphabet||DEFAULT_ALPHABET;text=String(text);if(!caseSensitive){text=text.toLowerCase();alphabet=alphabet.toLowerCase()}var length=text.length;var i;var absBase=Math.abs(base);var alphabetValues={};for(i=0;i<alphabet.length;i++){alphabetValues[alphabet[i]]=i}for(i=0;i<length;i++){var c=text[i];if(c==="-")continue;if(c in alphabetValues){if(alphabetValues[c]>=absBase){if(c==="1"&&absBase===1)continue;throw new Error(c+" is not a valid digit in base "+base+".")}}}base=parseValue(base);var digits=[];var isNegative=text[0]==="-";for(i=isNegative?1:0;i<text.length;i++){var c=text[i];if(c in alphabetValues)digits.push(parseValue(alphabetValues[c]));else if(c==="<"){var start=i;do{i++}while(text[i]!==">"&&i<text.length);digits.push(parseValue(text.slice(start+1,i)))}else throw new Error(c+" is not a valid character")}return parseBaseFromArray(digits,base,isNegative)};function parseBaseFromArray(digits,base,isNegative){var val=Integer[0],pow=Integer[1],i;for(i=digits.length-1;i>=0;i--){val=val.add(digits[i].times(pow));pow=pow.times(base)}return isNegative?val.negate():val}function stringify(digit,alphabet){alphabet=alphabet||DEFAULT_ALPHABET;if(digit<alphabet.length){return alphabet[digit]}return"<"+digit+">"}function toBase(n,base){base=bigInt(base);if(base.isZero()){if(n.isZero())return{value:[0],isNegative:false};throw new Error("Cannot convert nonzero numbers to base 0.")}if(base.equals(-1)){if(n.isZero())return{value:[0],isNegative:false};if(n.isNegative())return{value:[].concat.apply([],Array.apply(null,Array(-n.toJSNumber())).map(Array.prototype.valueOf,[1,0])),isNegative:false};var arr=Array.apply(null,Array(n.toJSNumber()-1)).map(Array.prototype.valueOf,[0,1]);arr.unshift([1]);return{value:[].concat.apply([],arr),isNegative:false}}var neg=false;if(n.isNegative()&&base.isPositive()){neg=true;n=n.abs()}if(base.isUnit()){if(n.isZero())return{value:[0],isNegative:false};return{value:Array.apply(null,Array(n.toJSNumber())).map(Number.prototype.valueOf,1),isNegative:neg}}var out=[];var left=n,divmod;while(left.isNegative()||left.compareAbs(base)>=0){divmod=left.divmod(base);left=divmod.quotient;var digit=divmod.remainder;if(digit.isNegative()){digit=base.minus(digit).abs();left=left.next()}out.push(digit.toJSNumber())}out.push(left.toJSNumber());return{value:out.reverse(),isNegative:neg}}function toBaseString(n,base,alphabet){var arr=toBase(n,base);return(arr.isNegative?"-":"")+arr.value.map(function(x){return stringify(x,alphabet)}).join("")}BigInteger.prototype.toArray=function(radix){return toBase(this,radix)};SmallInteger.prototype.toArray=function(radix){return toBase(this,radix)};NativeBigInt.prototype.toArray=function(radix){return toBase(this,radix)};BigInteger.prototype.toString=function(radix,alphabet){if(radix===undefined)radix=10;if(radix!==10)return toBaseString(this,radix,alphabet);var v=this.value,l=v.length,str=String(v[--l]),zeros="0000000",digit;while(--l>=0){digit=String(v[l]);str+=zeros.slice(digit.length)+digit}var sign=this.sign?"-":"";return sign+str};SmallInteger.prototype.toString=function(radix,alphabet){if(radix===undefined)radix=10;if(radix!=10)return toBaseString(this,radix,alphabet);return String(this.value)};NativeBigInt.prototype.toString=SmallInteger.prototype.toString;NativeBigInt.prototype.toJSON=BigInteger.prototype.toJSON=SmallInteger.prototype.toJSON=function(){return this.toString()};BigInteger.prototype.valueOf=function(){return parseInt(this.toString(),10)};BigInteger.prototype.toJSNumber=BigInteger.prototype.valueOf;SmallInteger.prototype.valueOf=function(){return this.value};SmallInteger.prototype.toJSNumber=SmallInteger.prototype.valueOf;NativeBigInt.prototype.valueOf=NativeBigInt.prototype.toJSNumber=function(){return parseInt(this.toString(),10)};function parseStringValue(v){if(isPrecise(+v)){var x=+v;if(x===truncate(x))return supportsNativeBigInt?new NativeBigInt(BigInt(x)):new SmallInteger(x);throw new Error("Invalid integer: "+v)}var sign=v[0]==="-";if(sign)v=v.slice(1);var split=v.split(/e/i);if(split.length>2)throw new Error("Invalid integer: "+split.join("e"));if(split.length===2){var exp=split[1];if(exp[0]==="+")exp=exp.slice(1);exp=+exp;if(exp!==truncate(exp)||!isPrecise(exp))throw new Error("Invalid integer: "+exp+" is not a valid exponent.");var text=split[0];var decimalPlace=text.indexOf(".");if(decimalPlace>=0){exp-=text.length-decimalPlace-1;text=text.slice(0,decimalPlace)+text.slice(decimalPlace+1)}if(exp<0)throw new Error("Cannot include negative exponent part for integers");text+=new Array(exp+1).join("0");v=text}var isValid=/^([0-9][0-9]*)$/.test(v);if(!isValid)throw new Error("Invalid integer: "+v);if(supportsNativeBigInt){return new NativeBigInt(BigInt(sign?"-"+v:v))}var r=[],max=v.length,l=LOG_BASE,min=max-l;while(max>0){r.push(+v.slice(min,max));min-=l;if(min<0)min=0;max-=l}trim(r);return new BigInteger(r,sign)}function parseNumberValue(v){if(supportsNativeBigInt){return new NativeBigInt(BigInt(v))}if(isPrecise(v)){if(v!==truncate(v))throw new Error(v+" is not an integer.");return new SmallInteger(v)}return parseStringValue(v.toString())}function parseValue(v){if(typeof v==="number"){return parseNumberValue(v)}if(typeof v==="string"){return parseStringValue(v)}if(typeof v==="bigint"){return new NativeBigInt(v)}return v}for(var i=0;i<1e3;i++){Integer[i]=parseValue(i);if(i>0)Integer[-i]=parseValue(-i)}Integer.one=Integer[1];Integer.zero=Integer[0];Integer.minusOne=Integer[-1];Integer.max=max;Integer.min=min;Integer.gcd=gcd;Integer.lcm=lcm;Integer.isInstance=function(x){return x instanceof BigInteger||x instanceof SmallInteger||x instanceof NativeBigInt};Integer.randBetween=randBetween;Integer.fromArray=function(digits,base,isNegative){return parseBaseFromArray(digits.map(parseValue),parseValue(base||10),isNegative)};return Integer}();if(typeof module!=="undefined"&&module.hasOwnProperty("exports")){module.exports=bigInt}if(typeof define==="function"&&define.amd){define("big-integer",[],function(){return bigInt})}
-(function(root,factory){"use strict";if(typeof define==="function"&&define.amd){define([],factory)}else if(typeof exports==="object"){module.exports=factory()}else{root.textFit=factory()}})(typeof global==="object"?global:this,function(){"use strict";var defaultSettings={alignVert:false,alignHoriz:false,multiLine:false,detectMultiLine:true,minFontSize:12,maxFontSize:30,reProcess:true,widthOnly:false,alignVertWithFlexbox:false};return function textFit(els,options){if(!options)options={};var settings={};for(var key in defaultSettings){if(options.hasOwnProperty(key)){settings[key]=options[key]}else{settings[key]=defaultSettings[key]}}if(typeof els.toArray==="function"){els=els.toArray()}var elType=Object.prototype.toString.call(els);if(elType!=="[object Array]"&&elType!=="[object NodeList]"&&elType!=="[object HTMLCollection]"){els=[els]}for(var i=0;i<els.length;i++){processItem(els[i],settings)}};function processItem(el,settings){if(!isElement(el)||!settings.reProcess&&el.getAttribute("textFitted")){return false}if(!settings.reProcess){el.setAttribute("textFitted",1)}var innerSpan,originalHeight,originalHTML,originalWidth;var low,mid,high;originalHTML=el.innerHTML;originalWidth=innerWidth(el);originalHeight=innerHeight(el);if(!originalWidth||!settings.widthOnly&&!originalHeight){if(!settings.widthOnly)throw new Error("Set a static height and width on the target element "+el.outerHTML+" before using textFit!");else throw new Error("Set a static width on the target element "+el.outerHTML+" before using textFit!")}if(originalHTML.indexOf("textFitted")===-1){innerSpan=document.createElement("span");innerSpan.className="textFitted";innerSpan.style["display"]="inline-block";innerSpan.innerHTML=originalHTML;el.innerHTML="";el.appendChild(innerSpan)}else{innerSpan=el.querySelector("span.textFitted");if(hasClass(innerSpan,"textFitAlignVert")){innerSpan.className=innerSpan.className.replace("textFitAlignVert","");innerSpan.style["height"]="";el.className.replace("textFitAlignVertFlex","")}}if(settings.alignHoriz){el.style["text-align"]="center";innerSpan.style["text-align"]="center"}var multiLine=settings.multiLine;if(settings.detectMultiLine&&!multiLine&&innerSpan.scrollHeight>=parseInt(window.getComputedStyle(innerSpan)["font-size"],10)*2){multiLine=true}if(!multiLine){el.style["white-space"]="nowrap"}low=settings.minFontSize;high=settings.maxFontSize;var size=low;while(low<=high){mid=high+low>>1;innerSpan.style.fontSize=mid+"px";if(innerSpan.scrollWidth<=originalWidth+2&&(settings.widthOnly||innerSpan.scrollHeight<=originalHeight)){size=mid;low=mid+1}else{high=mid-1}}if(innerSpan.style.fontSize!=size+"px")innerSpan.style.fontSize=size+"px";if(settings.alignVert){addStyleSheet();var height=innerSpan.scrollHeight;if(window.getComputedStyle(el)["position"]==="static"){el.style["position"]="relative"}if(!hasClass(innerSpan,"textFitAlignVert")){innerSpan.className=innerSpan.className+" textFitAlignVert"}innerSpan.style["height"]=height+"px";if(settings.alignVertWithFlexbox&&!hasClass(el,"textFitAlignVertFlex")){el.className=el.className+" textFitAlignVertFlex"}}}function innerHeight(el){var style=window.getComputedStyle(el,null);return el.clientHeight-parseInt(style.getPropertyValue("padding-top"),10)-parseInt(style.getPropertyValue("padding-bottom"),10)}function innerWidth(el){var style=window.getComputedStyle(el,null);return el.clientWidth-parseInt(style.getPropertyValue("padding-left"),10)-parseInt(style.getPropertyValue("padding-right"),10)}function isElement(o){return typeof HTMLElement==="object"?o instanceof HTMLElement:o&&typeof o==="object"&&o!==null&&o.nodeType===1&&typeof o.nodeName==="string"}function hasClass(element,cls){return(" "+element.className+" ").indexOf(" "+cls+" ")>-1}function addStyleSheet(){if(document.getElementById("textFitStyleSheet"))return;var style=[".textFitAlignVert{","position: absolute;","top: 0; right: 0; bottom: 0; left: 0;","margin: auto;","display: flex;","justify-content: center;","flex-direction: column;","}",".textFitAlignVertFlex{","display: flex;","}",".textFitAlignVertFlex .textFitAlignVert{","position: static;","}"].join("");var css=document.createElement("style");css.type="text/css";css.id="textFitStyleSheet";css.innerHTML=style;document.body.appendChild(css)}});
+(function(root,factory){"use strict";if(typeof define==="function"&&define.amd){define([],factory)}else if(typeof exports==="object"){module.exports=factory()}else{root.textFit=factory()}})(typeof global==="object"?global:this,function(){"use strict";var defaultSettings={alignVert:false,alignHoriz:false,multiLine:false,detectMultiLine:true,minFontSize:12,maxFontSize:30,reProcess:true,widthOnly:false,alignVertWithFlexbox:false};return function textFit(els,options){if(!options)options={};var settings={};for(var key in defaultSettings){if(options.hasOwnProperty(key)){settings[key]=options[key]}else{settings[key]=defaultSettings[key]}}if(typeof els.toArray==="function"){els=els.toArray()}var elType=Object.prototype.toString.call(els);if(elType!=="[object Array]"&&elType!=="[object NodeList]"&&elType!=="[object HTMLCollection]"){els=[els]}for(var i=0;i<els.length;i++){processItem(els[i],settings)}};function processItem(el,settings){if(!isElement(el)||!settings.reProcess&&el.getAttribute("textFitted")){return false}if(!settings.reProcess){el.setAttribute("textFitted",1)}var innerSpan,originalHeight,originalHTML,originalWidth;var low,mid,high;originalHTML=el.innerHTML;originalWidth=innerWidth(el);originalHeight=innerHeight(el);if(!originalWidth||!settings.widthOnly&&!originalHeight){if(!settings.widthOnly)throw new Error("Set a static height and width on the target element "+el.outerHTML+" before using textFit!");else throw new Error("Set a static width on the target element "+el.outerHTML+" before using textFit!")}if(originalHTML.indexOf("textFitted")===-1){innerSpan=document.createElement("span");innerSpan.className="textFitted";innerSpan.style["display"]="inline-block";innerSpan.innerHTML=originalHTML;el.innerHTML="";el.appendChild(innerSpan)}else{innerSpan=el.querySelector("span.textFitted");if(hasClass(innerSpan,"textFitAlignVert")){innerSpan.className=innerSpan.className.replace("textFitAlignVert","");innerSpan.style["height"]="";el.className.replace("textFitAlignVertFlex","")}}if(settings.alignHoriz){el.style["text-align"]="center";innerSpan.style["text-align"]="center"}var multiLine=settings.multiLine;if(settings.detectMultiLine&&!multiLine&&innerSpan.scrollHeight>=parseInt(window.getComputedStyle(innerSpan)["font-size"],10)*2){multiLine=true}if(!multiLine){el.style["white-space"]="nowrap"}low=settings.minFontSize;high=settings.maxFontSize;if (el.style.fontSize) high = el.style.fontSize.substring(0, el.style.fontSize.length - 2);var size=low;while(low<=high){mid=high+low>>1;innerSpan.style.fontSize=mid+"px";if(innerSpan.scrollWidth<=originalWidth+2&&(settings.widthOnly||innerSpan.scrollHeight<=originalHeight)){size=mid;low=mid+1}else{high=mid-1}}if(innerSpan.style.fontSize!=size+"px")innerSpan.style.fontSize=size+"px";if(settings.alignVert){addStyleSheet();var height=innerSpan.scrollHeight;if(window.getComputedStyle(el)["position"]==="static"){el.style["position"]="relative"}if(!hasClass(innerSpan,"textFitAlignVert")){innerSpan.className=innerSpan.className+" textFitAlignVert"}innerSpan.style["height"]=height+"px";if(settings.alignVertWithFlexbox&&!hasClass(el,"textFitAlignVertFlex")){el.className=el.className+" textFitAlignVertFlex"}}}function innerHeight(el){var style=window.getComputedStyle(el,null);return el.clientHeight-parseInt(style.getPropertyValue("padding-top"),10)-parseInt(style.getPropertyValue("padding-bottom"),10)}function innerWidth(el){var style=window.getComputedStyle(el,null);return el.clientWidth-parseInt(style.getPropertyValue("padding-left"),10)-parseInt(style.getPropertyValue("padding-right"),10)}function isElement(o){return typeof HTMLElement==="object"?o instanceof HTMLElement:o&&typeof o==="object"&&o!==null&&o.nodeType===1&&typeof o.nodeName==="string"}function hasClass(element,cls){return(" "+element.className+" ").indexOf(" "+cls+" ")>-1}function addStyleSheet(){if(document.getElementById("textFitStyleSheet"))return;var style=[".textFitAlignVert{","position: absolute;","top: 0; right: 0; bottom: 0; left: 0;","margin: auto;","display: flex;","justify-content: center;","flex-direction: column;","}",".textFitAlignVertFlex{","display: flex;","}",".textFitAlignVertFlex .textFitAlignVert{","position: static;","}"].join("");var css=document.createElement("style");css.type="text/css";css.id="textFitStyleSheet";css.innerHTML=style;document.body.appendChild(css)}});
 
 (function webpackUniversalModuleDefinition(root,factory){if(typeof exports==='object'&&typeof module==='object')
     module.exports=factory();else if(typeof define==='function'&&define.amd)
@@ -14216,8 +14216,7 @@ class GameAnalytics {
 
 const gameAnalytics = new GameAnalytics();
 
-!function(e,t){"object"==typeof exports&&"object"==typeof module?module.exports=t():"function"==typeof define&&define.amd?define([],t):"object"==typeof exports?exports.UnnyNet=t():e.UnnyNet=t()}(window,(function(){return function(e){var t=window.webpackHotUpdateUnnyNet;window.webpackHotUpdateUnnyNet=function(e,n){!function(e,t){if(_[e]&&g[e]){for(var n in g[e]=!1,t)Object.prototype.hasOwnProperty.call(t,n)&&(h[n]=t[n]);0==--m&&0===y&&O()}}(e,n),t&&t(e,n)};var n,a=!0,o="4e56fb4c32319596c8f6",r=1e4,i={},u=[],s=[];function l(e){var t=I[e];if(!t)return R;function a(a){return t.hot.active?(I[a]?-1===I[a].parents.indexOf(e)&&I[a].parents.push(e):(u=[e],n=a),-1===t.children.indexOf(a)&&t.children.push(a)):(console.warn("[HMR] unexpected require("+a+") from disposed module "+e),u=[]),R(a)}function o(e){return{configurable:!0,enumerable:!0,get:function(){return R[e]},set:function(t){R[e]=t}}}for(var r in R)Object.prototype.hasOwnProperty.call(R,r)&&"e"!==r&&"t"!==r&&Object.defineProperty(a,r,o(r));return a.e=function(e){return"ready"===d&&f("prepare"),y++,R.e(e).then(t,(function(e){throw t(),e}));function t(){y--,"prepare"===d&&(b[e]||C(e),0===y&&0===m&&O())}},a.t=function(e,t){return 1&t&&(e=a(e)),R.t(e,-2&t)},a}var c=[],d="idle";function f(e){d=e;for(var t=0;t<c.length;t++)c[t].call(null,e)}var p,h,v,m=0,y=0,b={},g={},_={};function k(e){return+e+""===e?+e:e}function w(e){if("idle"!==d)throw new Error("check() is only allowed in idle status");return a=e,f("check"),function(e){return e=e||1e4,new Promise((function(t,n){if("undefined"==typeof XMLHttpRequest)return n(new Error("No browser support"));try{var a=new XMLHttpRequest,r=R.p+""+o+".hot-update.json";a.open("GET",r,!0),a.timeout=e,a.send(null)}catch(e){return n(e)}a.onreadystatechange=function(){if(4===a.readyState)if(0===a.status)n(new Error("Manifest request to "+r+" timed out."));else if(404===a.status)t();else if(200!==a.status&&304!==a.status)n(new Error("Manifest request to "+r+" failed."));else{try{var e=JSON.parse(a.responseText)}catch(e){return void n(e)}t(e)}}}))}(r).then((function(e){if(!e)return f("idle"),null;g={},b={},_=e.c,v=e.h,f("prepare");var t=new Promise((function(e,t){p={resolve:e,reject:t}}));return h={},C(0),"prepare"===d&&0===y&&0===m&&O(),t}))}function C(e){_[e]?(g[e]=!0,m++,function(e){var t=document.createElement("script");t.charset="utf-8",t.src=R.p+""+e+"."+o+".hot-update.js",document.head.appendChild(t)}(e)):b[e]=!0}function O(){f("ready");var e=p;if(p=null,e)if(a)Promise.resolve().then((function(){return P(a)})).then((function(t){e.resolve(t)}),(function(t){e.reject(t)}));else{var t=[];for(var n in h)Object.prototype.hasOwnProperty.call(h,n)&&t.push(k(n));e.resolve(t)}}function P(t){if("ready"!==d)throw new Error("apply() is only allowed in ready status");var n,a,r,s,l;function c(e){for(var t=[e],n={},a=t.map((function(e){return{chain:[e],id:e}}));0<a.length;){var o=a.pop(),r=o.id,i=o.chain;if((s=I[r])&&!s.hot._selfAccepted){if(s.hot._selfDeclined)return{type:"self-declined",chain:i,moduleId:r};if(s.hot._main)return{type:"unaccepted",chain:i,moduleId:r};for(var u=0;u<s.parents.length;u++){var l=s.parents[u],c=I[l];if(c){if(c.hot._declinedDependencies[r])return{type:"declined",chain:i.concat([l]),moduleId:r,parentId:l};-1===t.indexOf(l)&&(c.hot._acceptedDependencies[r]?(n[l]||(n[l]=[]),p(n[l],[r])):(delete n[l],t.push(l),a.push({chain:i.concat([l]),id:l})))}}}}return{type:"accepted",moduleId:e,outdatedModules:t,outdatedDependencies:n}}function p(e,t){for(var n=0;n<t.length;n++){var a=t[n];-1===e.indexOf(a)&&e.push(a)}}function m(){console.warn("[HMR] unexpected require("+C.moduleId+") to disposed module")}t=t||{};var y={},b=[],g={};for(var w in h)if(Object.prototype.hasOwnProperty.call(h,w)){var C;l=k(w);var O=!1,P=!1,A=!1,S="";switch((C=h[w]?c(l):{type:"disposed",moduleId:w}).chain&&(S="\nUpdate propagation: "+C.chain.join(" -> ")),C.type){case"self-declined":t.onDeclined&&t.onDeclined(C),t.ignoreDeclined||(O=new Error("Aborted because of self decline: "+C.moduleId+S));break;case"declined":t.onDeclined&&t.onDeclined(C),t.ignoreDeclined||(O=new Error("Aborted because of declined dependency: "+C.moduleId+" in "+C.parentId+S));break;case"unaccepted":t.onUnaccepted&&t.onUnaccepted(C),t.ignoreUnaccepted||(O=new Error("Aborted because "+l+" is not accepted"+S));break;case"accepted":t.onAccepted&&t.onAccepted(C),P=!0;break;case"disposed":t.onDisposed&&t.onDisposed(C),A=!0;break;default:throw new Error("Unexception type "+C.type)}if(O)return f("abort"),Promise.reject(O);if(P)for(l in g[l]=h[l],p(b,C.outdatedModules),C.outdatedDependencies)Object.prototype.hasOwnProperty.call(C.outdatedDependencies,l)&&(y[l]||(y[l]=[]),p(y[l],C.outdatedDependencies[l]));A&&(p(b,[C.moduleId]),g[l]=m)}var E,T=[];for(a=0;a<b.length;a++)l=b[a],I[l]&&I[l].hot._selfAccepted&&g[l]!==m&&T.push({module:l,errorHandler:I[l].hot._selfAccepted});f("dispose"),Object.keys(_).forEach((function(e){!1===_[e]&&function(e){delete installedChunks[e]}(e)}));for(var N,D,q=b.slice();0<q.length;)if(l=q.pop(),s=I[l]){var G={},M=s.hot._disposeHandlers;for(r=0;r<M.length;r++)(n=M[r])(G);for(i[l]=G,s.hot.active=!1,delete I[l],delete y[l],r=0;r<s.children.length;r++){var j=I[s.children[r]];j&&0<=(E=j.parents.indexOf(l))&&j.parents.splice(E,1)}}for(l in y)if(Object.prototype.hasOwnProperty.call(y,l)&&(s=I[l]))for(D=y[l],r=0;r<D.length;r++)N=D[r],0<=(E=s.children.indexOf(N))&&s.children.splice(E,1);for(l in f("apply"),o=v,g)Object.prototype.hasOwnProperty.call(g,l)&&(e[l]=g[l]);var U=null;for(l in y)if(Object.prototype.hasOwnProperty.call(y,l)&&(s=I[l])){D=y[l];var F=[];for(a=0;a<D.length;a++)if(N=D[a],n=s.hot._acceptedDependencies[N]){if(-1!==F.indexOf(n))continue;F.push(n)}for(a=0;a<F.length;a++){n=F[a];try{n(D)}catch(n){t.onErrored&&t.onErrored({type:"accept-errored",moduleId:l,dependencyId:D[a],error:n}),t.ignoreErrored||(U=U||n)}}}for(a=0;a<T.length;a++){var L=T[a];l=L.module,u=[l];try{R(l)}catch(a){if("function"==typeof L.errorHandler)try{L.errorHandler(a)}catch(n){t.onErrored&&t.onErrored({type:"self-accept-error-handler-errored",moduleId:l,error:n,originalError:a}),t.ignoreErrored||(U=U||n),U=U||a}else t.onErrored&&t.onErrored({type:"self-accept-errored",moduleId:l,error:a}),t.ignoreErrored||(U=U||a)}}return U?(f("fail"),Promise.reject(U)):(f("idle"),new Promise((function(e){e(b)})))}var I={};function R(t){if(I[t])return I[t].exports;var a=I[t]={i:t,l:!1,exports:{},hot:function(e){var t={_acceptedDependencies:{},_declinedDependencies:{},_selfAccepted:!1,_selfDeclined:!1,_disposeHandlers:[],_main:n!==e,active:!0,accept:function(e,n){if(void 0===e)t._selfAccepted=!0;else if("function"==typeof e)t._selfAccepted=e;else if("object"==typeof e)for(var a=0;a<e.length;a++)t._acceptedDependencies[e[a]]=n||function(){};else t._acceptedDependencies[e]=n||function(){}},decline:function(e){if(void 0===e)t._selfDeclined=!0;else if("object"==typeof e)for(var n=0;n<e.length;n++)t._declinedDependencies[e[n]]=!0;else t._declinedDependencies[e]=!0},dispose:function(e){t._disposeHandlers.push(e)},addDisposeHandler:function(e){t._disposeHandlers.push(e)},removeDisposeHandler:function(e){var n=t._disposeHandlers.indexOf(e);0<=n&&t._disposeHandlers.splice(n,1)},check:w,apply:P,status:function(e){if(!e)return d;c.push(e)},addStatusHandler:function(e){c.push(e)},removeStatusHandler:function(e){var t=c.indexOf(e);0<=t&&c.splice(t,1)},data:i[e]};return n=void 0,t}(t),parents:(s=u,u=[],s),children:[]};return e[t].call(a.exports,a,a.exports,l(t)),a.l=!0,a.exports}return R.m=e,R.c=I,R.d=function(e,t,n){R.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:n})},R.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},R.t=function(e,t){if(1&t&&(e=R(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var n=Object.create(null);if(R.r(n),Object.defineProperty(n,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var a in e)R.d(n,a,function(t){return e[t]}.bind(null,a));return n},R.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return R.d(t,"a",t),t},R.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},R.p="",R.h=function(){return o},l(9)(R.s=9)}([function(e,t,n){"use strict";var a;Object.defineProperty(t,"__esModule",{value:!0});function o(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}function r(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}t.Errors={NotInitialized:-1,Unknown:1,NotAuthorized:2,NoMessage:3,NoChannel:4,UnnynetNotReady:5,NoGameId:6,NoSuchLeaderboard:7,NoLeaderboardsForTheGame:8,NoAchievementsForTheGame:9,NoGuildsForTheGame:10,NotInGuild:11,NoSuchAchievement:12,WrongAchievementType:13,AchievementIsNotPublished:14,LeaderboardReportsTooOften:15,NoAccessToken:16};var i=(function(e,t,n){t&&o(e.prototype,t),n&&o(e,n)}(u,null,[{key:"GetCommand",value:function(e){return u.jsCommands[e]}},{key:"getResponceData",value:function(e){var t={};return e.error?(t.success=!1,t.error=JSON.parse(e.error)):t.success=!0,e.data&&(t.data=JSON.parse(e.data)),t}},{key:"getErrorResponse",value:function(e,t){return{success:!1,error:{code:e,message:1<arguments.length&&void 0!==t?t:""}}}},{key:"getSuccessResponse",value:function(e){var t=0<arguments.length&&void 0!==e?e:null,n={success:!0};return t&&(n.data=t),n}}]),u);function u(){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,u)}i.Command={OpenLeaderBoards:1,OpenAchievements:2,OpenFriends:3,OpenChannel:4,OpenGuilds:5,OpenMyGuild:6,SetSafeArea:7,SendMessage:20,UnnyNetWasOpened:30,ReportLeaderboardScoresAsync:40,ReportAchievementProgressAsync:41,AddGuildExperience:60,RequestFailed:70,RequestSucceeded:71,RequestReply:72,SetKeyboardOffset:80,SetConfig:81,SetDefaultChannel:82,AuthorizeWithCredentials:100,AuthorizeAsGuest:101,AuthorizeWithCustomId:102,ForceLogout:110,GetGuildInfo:120,GetAchievementsInfo:130,GetPlayerPublicInfo:140,GetLeaderboardScores:150},i.jsCommands=(r(a={},i.Command.OpenLeaderBoards,"window.globalReactFunctions.apiOpenLeaderboards();"),r(a,i.Command.OpenAchievements,"window.globalReactFunctions.apiOpenAchievements();"),r(a,i.Command.OpenFriends,"window.globalReactFunctions.apiOpenFriends();"),r(a,i.Command.OpenChannel,"window.globalReactFunctions.apiOpenChannel('{0}');"),r(a,i.Command.OpenGuilds,"window.globalReactFunctions.apiOpenGuilds();"),r(a,i.Command.OpenMyGuild,"window.globalReactFunctions.apiOpenMyGuild();"),r(a,i.Command.SendMessage,"window.globalReactFunctions.apiSendMessage('{0}', '{1}');"),r(a,i.Command.UnnyNetWasOpened,"window.globalReactFunctions.apiUnnyNetWasOpened();"),r(a,i.Command.ReportLeaderboardScoresAsync,"window.globalReactFunctions.apiReportLeaderboardScoresAsync(<*id*>, '{0}', {1}, '{2}');"),r(a,i.Command.ReportAchievementProgressAsync,"window.globalReactFunctions.apiReportAchievementProgressAsync(<*id*>, {0}, {1});"),r(a,i.Command.AddGuildExperience,"window.globalReactFunctions.apiAddGuildExperience('{0}');"),r(a,i.Command.RequestFailed,"window.globalReactFunctions.requestFailed('{0}', \"{1}\");"),r(a,i.Command.RequestSucceeded,"window.globalReactFunctions.requestSucceeded('{0}');"),r(a,i.Command.RequestReply,"window.globalReactFunctions.requestReply('{0}', '{1}');"),r(a,i.Command.SetKeyboardOffset,"window.globalReactFunctions.apiSetKeyboardOffset('{0}');"),r(a,i.Command.SetConfig,"window.globalReactFunctions.apiSetConfig('{0}');"),r(a,i.Command.SetDefaultChannel,"window.globalReactFunctions.apiSetDefaultChannel('{0}');"),r(a,i.Command.AuthorizeWithCredentials,"window.globalReactFunctions.apiAuthWithCredentials('{0}', '{1}', '{2}');"),r(a,i.Command.AuthorizeAsGuest,"window.globalReactFunctions.apiAuthAsGuest('{0}');"),r(a,i.Command.AuthorizeWithCustomId,"window.globalReactFunctions.apiAuthWithCustomId('{0}', '{1}');"),r(a,i.Command.ForceLogout,"window.globalReactFunctions.apiForceLogout();"),r(a,i.Command.GetGuildInfo,"window.globalReactFunctions.apiGetGuildInfo(<*id*>, {0});"),r(a,i.Command.SetSafeArea,"window.globalReactFunctions.apiSetSafeArea({0}, {1}, {2}, {3});"),r(a,i.Command.GetAchievementsInfo,"window.globalReactFunctions.apiGetAchievementsInfo(<*id*>);"),r(a,i.Command.GetPlayerPublicInfo,"window.globalReactFunctions.apiGetPlayerPublicInfo(<*id*>);"),r(a,i.Command.GetLeaderboardScores,"window.globalReactFunctions.apiGetLeaderboardScores(<*id*>, '{0}');"),a),t.default=i},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.NutakuPlatform={PCBrowser:1,SPBrowser:2,Android:3,ClientGames:4},t.default={GENERAL_CONSTANTS:{REMOTE_URL:"https://unnynet.com",VERSION:2,PLUGIN_VERSION:"2.9"},MAX_DELAYED_CONFIRMATIONS:10,REQUESTS_SAVE_TIME:60,CHECK_PERIOD:1,MAX_QUEUE_LENGTH:100,SEND_REQUEST_RETRY_DELAY:1,ANIMATIONS:{OPEN_DURATION:.5},Platform:{NUTAKU:2,VKONTAKTE:3},PurchaseStatusFilter:{ALL:0,PENDING:1,COMPLETED:2,CLAIMED:3}}},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});function a(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}var o=s(n(3)),r=s(n(0)),i=n(6),u=s(i);function s(e){return e&&e.__esModule?e:{default:e}}var l=(function(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}(c,o.default),function(e,t,n){t&&a(e.prototype,t),n&&a(e,n)}(c,null,[{key:"initialize",value:function(e,t){c.instance=new c(e,t)}},{key:"openLeaderboards",value:function(e){o.default.evaluateCommand(r.default.Command.OpenLeaderBoards,!0,e)}},{key:"openAchievements",value:function(e){o.default.evaluateCommand(r.default.Command.OpenAchievements,!0,e)}},{key:"openFriends",value:function(e){o.default.evaluateCommand(r.default.Command.OpenFriends,!0,e)}},{key:"openChannel",value:function(e,t){var n=r.default.GetCommand(r.default.Command.OpenChannel).format(e);o.default.evaluateCodeInJavaScript(new u.default(r.default.Command.OpenChannel,n,!0,t))}},{key:"openGuilds",value:function(e){o.default.evaluateCommand(r.default.Command.OpenGuilds,!0,e)}},{key:"openMyGuild",value:function(e){o.default.evaluateCommand(r.default.Command.OpenMyGuild,!0,e)}},{key:"authorizeWithCredentials",value:function(e,t,n,a){var i=r.default.GetCommand(r.default.Command.AuthorizeWithCredentials).format(e,t,n);o.default.evaluateCodeInJavaScript(new u.default(r.default.Command.AuthorizeWithCredentials,i,!1,a),!0)}},{key:"authorizeAsGuest",value:function(e,t){var n=r.default.GetCommand(r.default.Command.AuthorizeAsGuest).format(e);o.default.evaluateCodeInJavaScript(new u.default(r.default.Command.AuthorizeAsGuest,n,!1,t),!0)}},{key:"authorizeWithCustomId",value:function(e,t,n){var a=r.default.GetCommand(r.default.Command.AuthorizeWithCustomId).format(e,t);o.default.evaluateCodeInJavaScript(new u.default(r.default.Command.AuthorizeWithCustomId,a,!1,n),!0)}},{key:"forceLogout",value:function(e){o.default.evaluateCommand(r.default.Command.ForceLogout,!1,e)}},{key:"getGuildInfo",value:function(e,t){var n=r.default.GetCommand(r.default.Command.GetGuildInfo).format(e?1:0);o.default.evaluateCodeInJavaScript(new i.UnnyCommandInfoDelayed(r.default.Command.GetGuildInfo,n,t))}},{key:"getAchievementsInfo",value:function(e){var t=r.default.GetCommand(r.default.Command.GetAchievementsInfo);o.default.evaluateCodeInJavaScript(new i.UnnyCommandInfoDelayed(r.default.Command.GetAchievementsInfo,t,e))}},{key:"getPlayerPublicInfo",value:function(e){var t=r.default.GetCommand(r.default.Command.GetPlayerPublicInfo);o.default.evaluateCodeInJavaScript(new i.UnnyCommandInfoDelayed(r.default.Command.GetPlayerPublicInfo,t,e))}},{key:"getLeaderboardScores",value:function(e,t){var n=r.default.GetCommand(r.default.Command.GetLeaderboardScores).format(e);o.default.evaluateCodeInJavaScript(new i.UnnyCommandInfoDelayed(r.default.Command.GetLeaderboardScores,n,t))}},{key:"sendMessageToChannel",value:function(e,t,n){if(t){var a=r.default.GetCommand(r.default.Command.SendMessage).format(e,t);o.default.evaluateCodeInJavaScript(new u.default(r.default.Command.SendMessage,a,!1,n))}}},{key:"reportLeaderboards",value:function(e,t,n,a){n=n?encodeURIComponent(n):"";var u=r.default.GetCommand(r.default.Command.ReportLeaderboardScoresAsync).format(e,t,n);o.default.evaluateCodeInJavaScript(new i.UnnyCommandInfoDelayed(r.default.Command.ReportLeaderboardScoresAsync,u,a))}},{key:"reportAchievements",value:function(e,t,n){var a=r.default.GetCommand(r.default.Command.ReportAchievementProgressAsync).format(e,t);o.default.evaluateCodeInJavaScript(new i.UnnyCommandInfoDelayed(r.default.Command.ReportAchievementProgressAsync,a,n))}},{key:"addGuildExperience",value:function(e,t){var n=r.default.GetCommand(r.default.Command.AddGuildExperience).format(e);o.default.evaluateCodeInJavaScript(new u.default(r.default.Command.AddGuildExperience,n,!1,t))}},{key:"authorize",value:function(e,t,n){c.instance.API.authWithLogin(e,t,n)}},{key:"save",value:function(e,t,n,a,o){c.instance.API.save(e,t,n,a,o)}},{key:"load",value:function(e,t,n){c.instance.API.load(e,t,n)}},{key:"purchaseProduct",value:function(e,t){c.instance.API.purchaseProduct(e,t)}},{key:"completeNutakuPurchase",value:function(e,t,n,a){c.instance.API.completeNutakuPurchase(e,t,n,a)}},{key:"completeNutakuPurchase2",value:function(e,t,n,a){c.instance.API.completeNutakuPurchase2(e,t,n,a)}},{key:"getPurchases",value:function(e,t){c.instance.API.getPurchases(e,t)}},{key:"claimPurchase",value:function(e,t,n,a){c.instance.API.claimPurchase(e,t,n,a)}},{key:"claimPurchase2",value:function(e,t,n,a){c.instance.API.claimPurchase2(e,t,n,a)}}]),c);function c(){return function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,c),function(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}(this,(c.__proto__||Object.getPrototypeOf(c)).apply(this,arguments))}l.instance=null,t.default=l},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});function a(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}var o=v(n(10)),r=v(n(6)),i=n(0),u=v(i),s=v(n(7)),l=v(n(11)),c=v(n(2)),d=v(n(1)),f=v(n(4)),p=v(n(12)),h=v(n(14));function v(e){return e&&e.__esModule?e:{default:e}}String.prototype.format||(String.prototype.format=function(){var e=arguments;return this.replace(/{(\d+)}/g,(function(t,n){return void 0!==e[n]?e[n]:t}))});var m=(function(e,t,n){t&&a(e.prototype,t),n&&a(e,n)}(y,[{key:"_setDebug",value:function(e){this.debug=e}},{key:"_getDeviceId",value:function(){switch(this.config.platform){case d.default.Platform.VKONTAKTE:return"vkontakte_"+this._getVkUserId()}return null}},{key:"_getVkUserId",value:function(){return this.allGetParams.viewer_id}},{key:"_receiveMessage",value:function(e){var t=e.path,n=e.args;switch(t){case"authorised":c.default.onPlayerAuthorized&&c.default.onPlayerAuthorized(n),this.config.default_channel&&y._setDefaultChannel(this.config.default_channel);break;case"logged_out":c.default.onPlayerLoggedOut&&c.default.onPlayerLoggedOut();break;case"renamed":c.default.onPlayerNameChanged&&c.default.onPlayerNameChanged(n.name);break;case"rank_changed":c.default.onRankChanged&&c.default.onRankChanged(n);break;case"new_guild":null!=c.default.onNewGuild&&c.default.onNewGuild(n);break;case"ask_new_guild":case"popup_appeared":l.default.create(t,n,y._sendRequestReply);break;case"popup_button_clicked":l.default.buttonClicked(n);break;case"ach_completed":null!=c.default.onAchievementCompleted&&c.default.onAchievementCompleted(n);break;case"new_message":null!=c.default.onNewMessageReceived&&c.default.onNewMessageReceived(n);break;case"game_login_request":null!=c.default.onGameLoginRequest&&c.default.onGameLoginRequest();break;case"request_reply":s.default.replyReceived(n);break;case"open_url":n.url&&window.open(n.url,"_blank");break;case"debug":this._setDebug(1==n.enable)}y.log("_receiveMessage",e)}},{key:"_update",value:function(){this._checkQueue(),(!this.last_save_time||Date.now()-this.last_save_time>=1e3*d.default.REQUESTS_SAVE_TIME)&&this._saveQueue()}},{key:"_getSaveKey",value:function(){return"UN_SAVE_"+this.config.game_id}},{key:"_saveQueue",value:function(){this.last_save_time=Date.now();var e=[];for(var t in this.queue){var n=this.queue[t];n.needToSave()&&e.push(n.getSaveData())}var a=this._getSaveKey();0===e.length?localStorage.removeItem(a):localStorage.setItem(a,JSON.stringify(e))}},{key:"_loadQueue",value:function(){var e=this._getSaveKey(),t=localStorage.getItem(e);if(t){var n=JSON.parse(t);for(var a in n){var o=r.default.loadData(n[a]);this.queue.push(o)}y.log("_loadQueue",this.queue),localStorage.removeItem(e)}}},{key:"_checkQueue",value:function(){var e=this;if(0!==this.queue.length&&y._checkWebView()){var t=null;for(var n in this.queue){var a=this.queue[n];if(!a.isWaiting()){t=a;break}if(!(a.startedTime&&Date.now()-a.startedTime<1e3*d.default.MAX_DELAYED_CONFIRMATIONS)){t=a;break}}if(t){t.startedTime=Date.now();try{y.log("evaluate",t.getCode()),this.webView.evaluateJavaScript(t.getCode(),(function(n){y.log("response",n);var a=!1;if(n.success)t.isDelayedRequestConfirm()?t.startWaiting():a=!0,t.info.openWindow&&y.openUnnyNet();else if(n.error)switch(n.error.code){case i.Errors.UnnynetNotReady:case i.Errors.NotAuthorized:y.log("Waiting...",n);break;default:a=!0}a&&(e.queue.shift(),null!=t&&t.invokeCallback(n),e._checkQueue())}))}catch(n){console.error("EVAL ERROR: ",n)}}}}},{key:"hideWebView",value:function(){null!=c.default.onUnnyNetClosed&&c.default.onUnnyNetClosed(),this.webView.hide(this.config)}},{key:"showWebView",value:function(){this.webView.show(this.config),y.evaluateCommand(u.default.Command.UnnyNetWasOpened,!1,null)}}],[{key:"log",value:function(e){for(var t,n=arguments.length,a=Array(1<n?n-1:0),o=1;o<n;o++)a[o-1]=arguments[o];y.staticUnnyNetInstance.debug&&(t=console).info.apply(t,["[UNNYNET_JS] "+e].concat(a))}},{key:"_setDefaultChannel",value:function(e){var t=u.default.GetCommand(u.default.Command.SetDefaultChannel).format(e);y.evaluateCodeInJavaScript(new r.default(u.default.Command.SetDefaultChannel,t,!1))}},{key:"_sendRequestReply",value:function(e,t){var n=u.default.GetCommand(u.default.Command.RequestReply).format(e,t);y.evaluateCodeInJavaScript(new r.default(u.default.Command.RequestReply,n,!1))}},{key:"_checkWebView",value:function(){return!!y.staticUnnyNetInstance||(console.error("UnnyNet wasn't properly initialized"),!1)}},{key:"evaluateCommand",value:function(e,t,n){y.evaluateCodeInJavaScript(new r.default(e,u.default.GetCommand(e),t,n))}},{key:"evaluateCodeInJavaScript",value:function(e,t){var n=1<arguments.length&&void 0!==t&&t;if(y._checkWebView()){for(var a=y.staticUnnyNetInstance.queue,o=-1,r=1;r<a.length;r++)if(a[r].couldBeReplaced(e.Command)){o=r;break}if(-1===o){if(n?a.unshift(e):a.push(e),1===a.length)y.staticUnnyNetInstance._checkQueue();else if(a.length>=d.default.MAX_QUEUE_LENGTH)for(var i=0;i<a.length;i++)if(a[i].isDelayedRequestConfirm()){a.splice(i,1);break}}else a[o]=e}}},{key:"openUnnyNet",value:function(){y._checkWebView()&&y.staticUnnyNetInstance.showWebView()}},{key:"closeUnnyNet",value:function(){null!=y.staticUnnyNetInstance&&y.staticUnnyNetInstance.hideWebView()}},{key:"delayedCommandWasConfirmed",value:function(e){var t=y.staticUnnyNetInstance.queue;for(var n in t)if(e===t[n]){t.splice(n,1);break}}},{key:"setFrame",value:function(e){y.staticUnnyNetInstance.webView.setFrame(e)}},{key:"setCloseButtonVisible",value:function(e){y.staticUnnyNetInstance.webView.setCloseButtonVisible(e)}}]),y);function y(e,t){var n=this;switch(function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,y),this.config=e,this.allGetParams=function(){var e={},t=window.location.search;if(t&&0<t.length)for(var n=(t=t.substring(1)).split("&"),a=0;a<n.length;a++){var o=n[a].split("=");o[0].startsWith("amp;")?e[o[0].substring(4)]=o[1]:e[o[0]]=o[1]}return e}(),this.webView=new o.default(e),this.queue=[],y.staticUnnyNetInstance=this,e.game_id||(e.game_id="8ff16d3c-ebcc-4582-a734-77ca6c14af29"),this.webView.openGameUrl(e,!!c.default.onGameLoginRequest,this._getDeviceId()),this.webView.onMessageReceived=this._receiveMessage.bind(this),setInterval(this._update.bind(this),1e3*d.default.CHECK_PERIOD),this.API=new p.default(e),this.apiRequests=new f.default(e),y.RGC=h.default.UnnyRGC.initialize({game_id:e.game_id},(function(){t&&t()})),y.Nutaku={authorize:function(e){y.staticUnnyNetInstance.API.authWithNutakuGadget(e)}},y.Vkontakte={authorize:function(e){y.staticUnnyNetInstance.API.authWithVK(n._getVkUserId(),n.allGetParams.access_token,e)}},this._setDebug(this.config.debug),this._loadQueue(),this.config.platform){case d.default.Platform.VKONTAKTE:c.default.authorizeAsGuest("")}}m.staticUnnyNetInstance=null,m.RGC=null,m.Nutaku=null,t.default=m},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});function a(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}var o,r=(o=n(3))&&o.__esModule?o:{default:o},i=(function(e,t,n){t&&a(e.prototype,t),n&&a(e,n)}(u,[{key:"_getSaveKey",value:function(){return"UN_API_SAVE_"+this.game_id}},{key:"_updateTokenForRequests",value:function(e){for(var t in this.requestsQueue){var n=this.requestsQueue[t].data.request;n.headers.hasOwnProperty("Authorization")&&(n.headers.Authorization="Bearer "+e)}}},{key:"_enqueueRequest",value:function(e,t,n,a,o){var r={data:{url:e,request:t},callback:o,retries:0,save:n};a?this.requestsQueue.unshift(r):this.requestsQueue.push(r),this.requests_were_updated=!0,1===this.requestsQueue.length&&this._sendNextRequest()}},{key:"_checkRequestToSave",value:function(){if(0<this.requestsQueue.length&&this.requests_were_updated){var e=Date.now();5e3<e-this.last_update_time&&(this.last_update_time=e,this.requests_were_updated=!1,this.saveRequests())}}},{key:"_removeFirstRequest",value:function(e){for(var t=0;t<this.requestsQueue.length;t++)this.requestsQueue[t]===e&&this.requestsQueue.splice(t,1);this._sendNextRequest(),this.last_update_time=Date.now()}},{key:"_sendNextRequest",value:function(){var e=this;if(0!==this.requestsQueue.length){var t=this.requestsQueue[0],n=t.data.url,a=t.data.request,o=t.callback;r.default.log("fetch",n,a.body),fetch(n,a).then((function(e){return r.default.log("fetch response",e),200<=e.status&&e.status<300?e.json():Promise.reject(e)})).then((function(n){o&&o(null,n),e._removeFirstRequest(t)})).catch((function(n){r.default.log("fetch failed",n),t.retries<3?(t.retries++,setTimeout((function(){return e._sendNextRequest()}),1e3)):(o&&o(n,null),e._removeFirstRequest(t))}))}}},{key:"loadRequests",value:function(){var e=localStorage.getItem(this._getSaveKey());if(e){var t=JSON.parse(e);if(t)for(var n in t){var a=t[n];this._enqueueRequest(a.url,a.request,!0,null)}localStorage.removeItem(this._getSaveKey())}}},{key:"saveRequests",value:function(){var e=Math.min(100,this.requestsQueue.length);if(0<e){for(var t=[],n=0;n<e;n++)this.requestsQueue[n].save&&t.push(this.requestsQueue[n].data);localStorage.setItem(this._getSaveKey(),JSON.stringify(t))}}}],[{key:"updateTokenForRequests",value:function(e){u.instance._updateTokenForRequests(e)}},{key:"enqueueRequest",value:function(e,t,n,a){u.instance._enqueueRequest(e,t,n,!1,a)}},{key:"enqueueImportantRequest",value:function(e,t,n,a){u.instance._enqueueRequest(e,t,n,!0,a)}}]),u);function u(e){var t=this;!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,u),this.game_id=e.game_id,this.requestsQueue=[],(u.instance=this).loadRequests(),this.last_update_time=Date.now(),this.requests_were_updated=!1,setInterval((function(){return t._checkRequestToSave()}),1e3)}t.default=i},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.ViewOpenDirection=void 0;function a(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}var o,r=(o=n(1))&&o.__esModule?o:{default:o},i=t.ViewOpenDirection={NONE:0,LEFT_TO_RIGHT:2,RIGHT_TO_LEFT:4,TOP_TO_BOTTOM:1,BOTTOM_TO_TOP:3},u=(function(e,t,n){t&&a(e.prototype,t),n&&a(e,n)}(s,[{key:"_receiveMessage",value:function(e){if(e.origin===r.default.GENERAL_CONSTANTS.REMOTE_URL&&e.data)if(e.data.reply){var t=e.data.id;if(this.evaluationsById.hasOwnProperty(t)){var n=e.data.reply,a=this.evaluationsById[t].callback;delete this.evaluationsById[t],a(n)}}else if(e.data&&e.data.message&&e.data.message.split){var o=decodeURIComponent(e.data.message).split("?"),i=void 0,u={};if(0<o.length&&(i=o[0],1<o.length))for(var s=o[1].split("&"),l=0;l<s.length;l++){var c=s[l].split("=");1<c.length&&(u[c[0]]=c[1])}this.onMessageReceived&&this.onMessageReceived({path:i,args:u})}}},{key:"openUrl",value:function(e){this.iFrame.src=e}},{key:"setFrame",value:function(e){this.cachedFrame=e,this._isVisible()?this._applyNormalPosition():this._applyHiddenPosition()}},{key:"_applyNormalPosition",value:function(){var e=this.cachedFrame,t=this.parent.style;t.left=e.left,t.right=e.right,t.top=e.top,t.bottom=e.bottom,t.width=e.width,t.height=e.height}},{key:"_applyHiddenPosition",value:function(){var e=this.parent.style;switch(this._applyNormalPosition(),this.config.open_animation){case i.LEFT_TO_RIGHT:e.left="-"+e.width,e.right=void 0;break;case i.RIGHT_TO_LEFT:e.left=void 0,e.right="-"+e.width;break;case i.TOP_TO_BOTTOM:e.top="-"+e.height,e.bottom=void 0;break;case i.BOTTOM_TO_TOP:e.top=void 0,e.bottom="-"+e.height}}},{key:"_isVisible",value:function(){return"visible"===this.parent.style.visibility}},{key:"_setAnimationActive",value:function(e){var t=this.parent.style;t["-webkit-transition"]=t.transition=e?"all "+r.default.ANIMATIONS.OPEN_DURATION+"s ease-in-out":void 0}},{key:"_clearTimer",value:function(){this.timer&&(clearTimeout(this.timer),this.timer=null)}},{key:"hide",value:function(){var e=this;this._clearTimer(),this._applyHiddenPosition(),this.timer=setTimeout((function(){e.parent.style.visibility="hidden",e.timer=null}),1e3*r.default.ANIMATIONS.OPEN_DURATION)}},{key:"show",value:function(){this._clearTimer(),this.parent.style.visibility="visible",this._applyNormalPosition()}},{key:"evaluateJavaScript",value:function(e,t){var n={eval_code:e,id:this.instanceId++};this.evaluationsById[n.id]={callback:t},this.window.postMessage(n,r.default.GENERAL_CONSTANTS.REMOTE_URL)}}]),s);function s(e){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,s);var t=document.createElement("div");this.parent=document.body.appendChild(t);var n=document.createElement("iframe");this.iFrame=this.parent.appendChild(n),this.window=this.iFrame.contentWindow;var a=this.iFrame.style;a.position="absolute",a.left=a.right="0",a.top=a.bottom="0",a.width=a.height="100%",a.border="none";var o=this.parent.style;o.zIndex="999999",o.position="fixed",o.visibility="hidden",this.config=e,this.evaluationsById={},this.instanceId=0,this.onMessageReceived=null,e.open_animation&&this._setAnimationActive(!0),this.setFrame({left:"0",top:"0",width:"50%",height:"100%"}),window.addEventListener("message",this._receiveMessage.bind(this),!1)}t.default=u},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.UnnyCommandInfoDelayed=void 0;var a=function(e,t,n){return t&&o(e.prototype,t),n&&o(e,n),e};function o(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}var r=u(n(0)),i=u(n(7));function u(e){return e&&e.__esModule?e:{default:e}}function s(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var l=(a(c,[{key:"getSaveData",value:function(){var e={command:this.info.command,code:this.info.code};return 0<=this.req_id&&(e.req_id=this.req_id),e}},{key:"getCode",value:function(){return this.info.code}},{key:"setCode",value:function(e){this.info.code=e}},{key:"getCommand",value:function(){return this.info.command}},{key:"invokeCallback",value:function(e){this.info.callback&&this.info.callback(e)}},{key:"invokeCallbackDelayed",value:function(e){var t=r.default.getResponceData(e);return this.info.callbackDelayed&&this.info.callbackDelayed(t),t}},{key:"needToSave",value:function(){switch(this.info.command){case r.default.Command.SendMessage:case r.default.Command.ReportLeaderboardScoresAsync:case r.default.Command.ReportAchievementProgressAsync:case r.default.Command.AddGuildExperience:return!0;default:return!1}}},{key:"couldBeReplaced",value:function(e){var t=this.getCommand();switch(e){case r.default.Command.OpenLeaderBoards:case r.default.Command.OpenAchievements:case r.default.Command.OpenFriends:case r.default.Command.OpenChannel:case r.default.Command.OpenGuilds:case r.default.Command.OpenMyGuild:return t===r.default.Command.OpenLeaderBoards||t===r.default.Command.OpenAchievements||t===r.default.Command.OpenFriends||t===r.default.Command.OpenChannel||t===r.default.Command.OpenGuilds||t===r.default.Command.OpenMyGuild;case r.default.Command.AuthorizeWithCredentials:case r.default.Command.AuthorizeAsGuest:case r.default.Command.AuthorizeWithCustomId:case r.default.Command.ForceLogout:case r.default.Command.GetGuildInfo:case r.default.Command.GetAchievementsInfo:case r.default.Command.GetPlayerPublicInfo:case r.default.Command.GetLeaderboardScores:case r.default.Command.SetSafeArea:case r.default.Command.UnnyNetWasOpened:return t===e;default:return!1}}},{key:"_isOpenCommand",value:function(e){switch(e){case r.default.Command.OpenLeaderBoards:case r.default.Command.OpenAchievements:case r.default.Command.OpenFriends:case r.default.Command.OpenChannel:case r.default.Command.OpenGuilds:case r.default.Command.OpenMyGuild:return!0;default:return!1}}},{key:"sameType",value:function(e){var t=this.getCommand();return!(!this._isOpenCommand(e)||!this._isOpenCommand(t))||e===t}},{key:"isDelayedRequestConfirm",value:function(){return c.isDelayedRequestConfirm(this.getCommand())}},{key:"startWaiting",value:function(){this.delayedRequestWaiting=!0}},{key:"isWaiting",value:function(){return this.delayedRequestWaiting}}],[{key:"loadData",value:function(e){var t=null;return e.hasOwnProperty("req_id")?((t=new d(e.command,e.code)).setRequestId(e.req_id),i.default.addLoadedRequest(t)):t=new c(e.command,e.code),t}},{key:"isDelayedRequestConfirm",value:function(e){switch(e){case r.default.Command.ReportLeaderboardScoresAsync:case r.default.Command.ReportAchievementProgressAsync:return!0}return!1}}]),c);function c(e,t){var n=2<arguments.length&&void 0!==arguments[2]&&arguments[2],a=3<arguments.length&&void 0!==arguments[3]?arguments[3]:null;s(this,c),this.info={command:e,code:t,openWindow:n,callback:a},this.startedTime=null,this.req_id=-1,this.delayedRequestWaiting=!1}t.default=l;var d=t.UnnyCommandInfoDelayed=(function(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}(f,l),a(f,[{key:"setRequestId",value:function(e){this.req_id=e}}]),f);function f(e,t){var n=2<arguments.length&&void 0!==arguments[2]?arguments[2]:null;s(this,f);var a=function(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}(this,(f.__proto__||Object.getPrototypeOf(f)).call(this,e,t,!1,null));return a.info.callbackDelayed=n,i.default.addRequest(a),a}},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});function a(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}var o,r=(o=n(3))&&o.__esModule?o:{default:o},i=n(0),u=(function(e,t,n){t&&a(e.prototype,t),n&&a(e,n)}(s,[{key:"_requestId",value:function(){return this.uniqueIds===Number.MAX_SAFE_INTEGER?this.uniqueIds=0:this.uniqueIds++,this.uniqueIds}}],[{key:"getInstance",value:function(){return s.staticRequestsManagerInstance||(s.staticRequestsManagerInstance=new s),s.staticRequestsManagerInstance}},{key:"addRequest",value:function(e){var t=s.getInstance(),n=t._requestId();if((t.allRequests[n]=e).getCode()){var a=e.getCode().replace("<*id*>",n);e.setRequestId(n),e.setCode(a)}}},{key:"addLoadedRequest",value:function(e){if(0<=e.req_id){var t=s.getInstance(),n=e.req_id;t.allRequests[n]=e,n>=t.uniqueIds&&(t.uniqueIds=n===Number.MAX_SAFE_INTEGER?0:n+1)}}},{key:"replyReceived",value:function(e){var t=s.getInstance(),n=e.id;if(t.allRequests.hasOwnProperty(n)){var a=t.allRequests[n],o=a.invokeCallbackDelayed(e);if(a.isDelayedRequestConfirm()){var u=o.success;if(!u)switch(o.error.code){case i.Errors.NoSuchLeaderboard:case i.Errors.NoSuchAchievement:case i.Errors.WrongAchievementType:case i.Errors.AchievementIsNotPublished:u=!0}u&&(r.default.delayedCommandWasConfirmed(a),delete t.allRequests[n])}else delete t.allRequests[n]}}}]),s);function s(){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,s),this.uniqueIds=0,this.allRequests={}}u.staticRequestsManagerInstance=null,t.default=u},function(e,t,n){"use strict";function a(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}Object.defineProperty(t,"__esModule",{value:!0});var o="un_token",r="un_refresh_token",i=(function(e,t,n){n&&a(e,n)}(u,0,[{key:"_saveValue",value:function(e,t){localStorage.setItem(e,t)}},{key:"_getValue",value:function(e){return localStorage.getItem(e)}},{key:"_removeItem",value:function(e){localStorage.removeItem(e)}},{key:"setToken",value:function(e){u._saveValue(o,e)}},{key:"getToken",value:function(){return u._getValue(o)}},{key:"setRefreshToken",value:function(e){u._saveValue(r,e)}},{key:"getRefreshToken",value:function(){u._getValue(r)}},{key:"clearTokens",value:function(){u._removeItem(o),u._removeItem(r)}}]),u);function u(){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,u)}t.default=i},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var a=c(n(2)),o=n(16),r=c(o),i=n(5),u=n(0),s=n(1),l=c(s);function c(e){return e&&e.__esModule?e:{default:e}}t.default={UnnyNet:a.default,PopupButtons:r.default,ButtonType:o.ButtonType,ViewOpenDirection:i.ViewOpenDirection,Errors:u.Errors,NutakuPlatform:s.NutakuPlatform,Platform:l.default.Platform,PurchaseStatusFilter:l.default.PurchaseStatusFilter}},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});function a(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}var o=u(n(5)),r=u(n(1)),i=u(n(2));function u(e){return e&&e.__esModule?e:{default:e}}var s=(function(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}(l,o.default),function(e,t,n){t&&a(e.prototype,t),n&&a(e,n)}(l,[{key:"openGameUrl",value:function(e,t,n){var a={game_id:e.game_id,public_key:e.public_key,version:r.default.GENERAL_CONSTANTS.VERSION,device:"web",location_origin:window.location.origin};t&&(a.game_login=1),n&&(a.device_id=n),e.platform&&(a.platform=e.platform);var o=encodeURIComponent(JSON.stringify(a)),i=r.default.GENERAL_CONSTANTS.REMOTE_URL+"/#/plugin/?data="+o;this.openUrl(i)}},{key:"setCloseButtonVisible",value:function(e){this.closeBtn.style.visibility=e?"visible":"hidden"}}]),l);function l(e){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,l);var t=function(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}(this,(l.__proto__||Object.getPrototypeOf(l)).call(this,e)),n=document.createElement("button");t.closeBtn=t.parent.appendChild(n);var a=t.closeBtn.style;return a.position="absolute",a.top=a.right="7px",a.outline="none",a.background="none",a.border="none",t.closeBtn.innerHTML='<img src="https://unnynet.azureedge.net/users/attachments/b246adbe-c1af-4532-88ca-f1d1709b0211/09b47e40-e61b-11e9-b83d-a5adea23c281.png" />',t.closeBtn.onclick=i.default.closeUnnyNet,t}t.default=s},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});function a(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}var o,r=n(0),i=(o=n(2))&&o.__esModule?o:{default:o},u=(function(e,t,n){t&&a(e.prototype,t),n&&a(e,n)}(s,null,[{key:"create",value:function(e,t,n){switch(e){case"ask_new_guild":s._askNewGuildRequest(t,n);break;case"popup_appeared":s._playerPopupAppearedRequest(t,n)}}},{key:"sendFailed",value:function(e,t,n,a){var o=2<arguments.length&&void 0!==n?n:"";t(e,'{"success": 0, "error": {"code":'+(3<arguments.length&&void 0!==a?a:r.Errors.Unknown)+', "message": "'+o+'"}}')}},{key:"sendSuccess",value:function(e,t){t(e,'{"success": 1}')}},{key:"sendSuccessWithData",value:function(e,t,n){n(e,'{"success": 1, "data":'+t+"}")}},{key:"_askNewGuildRequest",value:function(e,t){var n=e.sys_id,a=null;i.default.onNewGuildRequest&&(a=i.default.onNewGuildRequest(e)),a?s.sendFailed(n,t,a):s.sendSuccess(n,t)}},{key:"_playerPopupAppearedRequest",value:function(e,t){var n=e.sys_id;if(null!=i.default.onPopupOpened){var a=i.default.onPopupOpened(e);if(null!=a)return void s.sendSuccessWithData(n,a.parse(),t)}s.sendSuccess(n,t)}},{key:"buttonClicked",value:function(e){if(PopupButtons.activePopup){var t=e.button_id;if(t){var n=parseInt(t);PopupButtons.activePopup.buttonClicked(n)}}}}]),s);function s(){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,s)}t.default=u},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});function a(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}var o=l(n(8)),r=l(n(13)),i=n(0),u=l(i),s=l(n(4));function l(e){return e&&e.__esModule?e:{default:e}}function c(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}l(n(1));var d="https://un-api.unnynet.com",f=(function(e,t,n){t&&a(e.prototype,t),n&&a(e,n)}(p,[{key:"_onAuth",value:function(e){var t=e?e.accessToken:null,n=e?e.refreshToken:null;t&&(o.default.setToken(t),s.default.updateTokenForRequests(t)),n&&o.default.setRefreshToken(n)}},{key:"_onAuthCallback",value:function(e,t,n){var a=void 0;e?a=u.default.getErrorResponse(i.Errors.Unknown,e.status+":"+e.statusText):(a=u.default.getSuccessResponse(t),this._onAuth(t)),n&&n(a)}},{key:"_onCallback",value:function(e,t,n){var a;a=e?u.default.getErrorResponse(i.Errors.Unknown,e.status+":"+e.statusText):u.default.getSuccessResponse(t),n&&n(a)}},{key:"authWithLogin",value:function(e,t,n){var a=this;o.default.clearTokens(),new r.default(d+"/v1/auth/name",{name:e,password:t,game_id:this.config.game_id,public_key:this.config.public_key},(function(e,t){return a._onAuthCallback(e,t,n)})).markAsAuth().post()}},{key:"authWithVK",value:function(e,t,n){var a=this;return e?t?(o.default.clearTokens(),void new r.default(d+"/v1/auth/vk",{user_id:e,token:t,game_id:this.config.game_id,public_key:this.config.public_key},(function(e,t){return a._onAuthCallback(e,t,n)})).markAsAuth().post()):console.error("[VK]: no auth_key provided"):console.error("[VK]: no viewer_id provided")}},{key:"authWithNutaku",value:function(e,t,n,a,i,u){var s=this;o.default.clearTokens(),new r.default(d+"/v1/auth/nutaku",{user_id:e,platform:t.toString(),oauth_token:n,oauth_token_secret:a,autologin_token:i,game_id:this.config.game_id,public_key:this.config.public_key},(function(e,t){return s._onAuthCallback(e,t,u)})).markAsAuth().post()}},{key:"authWithNutakuGadget",value:function(e){var t=this;if("undefined"!=typeof gadgets){var n;o.default.clearTokens();var a=(c(n={},gadgets.io.RequestParameters.METHOD,gadgets.io.MethodType.POST),c(n,gadgets.io.RequestParameters.CONTENT_TYPE,gadgets.io.ContentType.JSON),c(n,gadgets.io.RequestParameters.POST_DATA,gadgets.io.encodeValues({game_id:this.config.game_id,public_key:this.config.public_key})),c(n,gadgets.io.RequestParameters.AUTHORIZATION,gadgets.io.AuthorizationType.SIGNED),n);console.error("SENDING...",a),gadgets.io.makeRequest(d+"/v1/auth/nutaku_pc",(function(n){console.info("NUTAKU REPLY",n),n.errors&&n.errors.length&&console.error("AUTH ERROR",n.errors),t._onAuthCallback(null,n.data,e)}),a)}}},{key:"purchaseProduct",value:function(e,t){var n=this,a={};a[opensocial.BillingItem.Field.SKU_ID]="com.un.test.1",a[opensocial.BillingItem.Field.PRICE]=1e3,a[opensocial.BillingItem.Field.COUNT]=1,a[opensocial.BillingItem.Field.DESCRIPTION]="item 001",a[nutaku.BillingItem.Field.NAME]="Much Doge1",a[nutaku.BillingItem.Field.IMAGE_URL]="http://i.imgur.com/cBAPCQ4.png";var o=opensocial.newBillingItem(a),r={};r[opensocial.Payment.Field.ITEMS]=[o],r[opensocial.Payment.Field.MESSAGE]="Optional message to show alongside the items",r[opensocial.Payment.Field.PAYMENT_TYPE]=opensocial.Payment.PaymentType.PAYMENT;var i=opensocial.newPayment(r);console.info("MAKE_PURCHASE",i),opensocial.requestPayment(i,(function(e){if(e.hadError())console.error("ERROR",e),n._onCallback(e,null,t);else{var a=e.getData(),o=a.getField(nutaku.Payment.Field.PAYMENT_ID);console.info("INFO> "+o,a),n._onCallback(null,e,t)}}))}},{key:"getPurchases",value:function(e,t){var n=this;return console.log("1 getPurchases = "+e),new r.default(d+"/v1/payments/purchases?status="+e,null,(function(e,a){return n._onCallback(e,a,t)})).setToken(o.default.getToken()).get()}},{key:"completeNutakuPurchase",value:function(e,t,n,a){var i=this;return new r.default(d+"/v1/payments/nutaku/complete",{platform:t,order_id:n,user_id:e},(function(e,t){return i._onCallback(e,t,a)})).setToken(o.default.getToken()).post()}},{key:"completeNutakuPurchase2",value:function(e,t,n,a){var i=this;return new r.default(d+"/v1/payments/nutaku/complete",{platform:t,un_order_id:n,user_id:e},(function(e,t){return i._onCallback(e,t,a)})).setToken(o.default.getToken()).post()}},{key:"claimPurchase",value:function(e,t,n,a){var i=this;return new r.default(d+"/v1/payments/all/claim",{platform:t,order_id:n,user_id:e},(function(e,t){return i._onCallback(e,t,a)})).setToken(o.default.getToken()).post()}},{key:"claimPurchase2",value:function(e,t,n,a){var i=this;return new r.default(d+"/v1/payments/all/claim",{platform:t,un_order_id:n,user_id:e},(function(e,t){return i._onCallback(e,t,a)})).setToken(o.default.getToken()).post()}},{key:"_save",value:function(e,t,n,a,i){var u=this;a=a||-1,new r.default(d+"/v1/saves",{collection:e,key:t,value:n},(function(e,t){return u._onCallback(e,t,i)})).setToken(o.default.getToken()).setHeader("data-version",a.toString()).post()}},{key:"save",value:function(e,t,n,a,r){o.default.getToken()?this._save(e,t,n,a,r):r&&r(u.default.getErrorResponse(i.Errors.NoAccessToken))}},{key:"_load",value:function(e,t,n){var a=this;new r.default(d+"/v1/saves?collection="+e+(t?"&key="+t:""),null,(function(e,t){return a._onCallback(e,t,n)})).setToken(o.default.getToken()).get()}},{key:"load",value:function(e,t,n){o.default.getToken()?this._load(e,t,n):n&&n(u.default.getErrorResponse(i.Errors.NoAccessToken))}}]),p);function p(e){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,p),this.config=e}t.default=f},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});function a(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}var o=r(n(4));function r(e){return e&&e.__esModule?e:{default:e}}r(n(8));var i=(function(e,t,n){t&&a(e.prototype,t),n&&a(e,n)}(u,[{key:"setHeaders",value:function(e){return this.headers=e,this}},{key:"setHeader",value:function(e,t){return this.headers||(this.headers={}),this.headers[e]=t,this}},{key:"setToken",value:function(e){return this.setHeader("Authorization","Bearer "+e)}},{key:"_sendRequest",value:function(e,t){this.important?o.default.enqueueImportantRequest(this.url,e,t,this.callback):o.default.enqueueRequest(this.url,e,t,this.callback)}},{key:"_send",value:function(e,t){if(e.headers={"Content-Type":"application/json"},this.headers)for(var n in this.headers)e.headers[n]=this.headers[n];this._sendRequest(e,t)}},{key:"markAsAuth",value:function(){return this.markAsUnsavable().markImportant()}},{key:"markAsUnsavable",value:function(){return this.savePost=!1,this}},{key:"markImportant",value:function(){return this.important=!0,this}},{key:"get",value:function(){this._send({method:"GET"},!1)}},{key:"post",value:function(){var e={method:"POST"};this.data&&(e.body=JSON.stringify(this.data)),this._send(e,this.savePost)}}]),u);function u(e,t){var n=2<arguments.length&&void 0!==arguments[2]?arguments[2]:null;!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,u),this.url=e,this.data=t,this.callback=n,this.retry=0,this.savePost=!0,this.important=!1}t.default=i},function(e,t,n){"use strict";(function(e){var n,a,o,r,i="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};window,r=function(){return function(e){var t=window.webpackHotUpdateUnnyAdmin;window.webpackHotUpdateUnnyAdmin=function(e,n){!function(e,t){if(k[e]&&_[e]){for(var n in _[e]=!1,t)Object.prototype.hasOwnProperty.call(t,n)&&(v[n]=t[n]);0==--y&&0===b&&P()}}(e,n),t&&t(e,n)};var n,a=!0,o="222703fd7b689a678937",r=1e4,u={},s=[],l=[];function c(e){var t=R[e];if(!t)return A;function a(a){return t.hot.active?(R[a]?-1===R[a].parents.indexOf(e)&&R[a].parents.push(e):(s=[e],n=a),-1===t.children.indexOf(a)&&t.children.push(a)):(console.warn("[HMR] unexpected require("+a+") from disposed module "+e),s=[]),A(a)}function o(e){return{configurable:!0,enumerable:!0,get:function(){return A[e]},set:function(t){A[e]=t}}}for(var r in A)Object.prototype.hasOwnProperty.call(A,r)&&"e"!==r&&"t"!==r&&Object.defineProperty(a,r,o(r));return a.e=function(e){return"ready"===f&&p("prepare"),b++,A.e(e).then(t,(function(e){throw t(),e}));function t(){b--,"prepare"===f&&(g[e]||O(e),0===b&&0===y&&P())}},a.t=function(e,t){return 1&t&&(e=a(e)),A.t(e,-2&t)},a}var d=[],f="idle";function p(e){f=e;for(var t=0;t<d.length;t++)d[t].call(null,e)}var h,v,m,y=0,b=0,g={},_={},k={};function w(e){return+e+""===e?+e:e}function C(e){if("idle"!==f)throw new Error("check() is only allowed in idle status");return a=e,p("check"),(t=(t=r)||1e4,new Promise((function(e,n){if("undefined"==typeof XMLHttpRequest)return n(new Error("No browser support"));try{var a=new XMLHttpRequest,r=A.p+""+o+".hot-update.json";a.open("GET",r,!0),a.timeout=t,a.send(null)}catch(e){return n(e)}a.onreadystatechange=function(){if(4===a.readyState)if(0===a.status)n(new Error("Manifest request to "+r+" timed out."));else if(404===a.status)e();else if(200!==a.status&&304!==a.status)n(new Error("Manifest request to "+r+" failed."));else{try{var t=JSON.parse(a.responseText)}catch(t){return void n(t)}e(t)}}}))).then((function(e){if(!e)return p("idle"),null;_={},g={},k=e.c,m=e.h,p("prepare");var t=new Promise((function(e,t){h={resolve:e,reject:t}}));return v={},O(0),"prepare"===f&&0===b&&0===y&&P(),t}));var t}function O(e){var t,n;k[e]?(_[e]=!0,y++,t=e,(n=document.createElement("script")).charset="utf-8",n.src=A.p+""+t+"."+o+".hot-update.js",document.head.appendChild(n)):g[e]=!0}function P(){p("ready");var e=h;if(h=null,e)if(a)Promise.resolve().then((function(){return I(a)})).then((function(t){e.resolve(t)}),(function(t){e.reject(t)}));else{var t=[];for(var n in v)Object.prototype.hasOwnProperty.call(v,n)&&t.push(w(n));e.resolve(t)}}function I(t){if("ready"!==f)throw new Error("apply() is only allowed in ready status");var n,a,r,i,l;function c(e){for(var t=[e],n={},a=t.map((function(e){return{chain:[e],id:e}}));0<a.length;){var o=a.pop(),r=o.id,u=o.chain;if((i=R[r])&&!i.hot._selfAccepted){if(i.hot._selfDeclined)return{type:"self-declined",chain:u,moduleId:r};if(i.hot._main)return{type:"unaccepted",chain:u,moduleId:r};for(var s=0;s<i.parents.length;s++){var l=i.parents[s],c=R[l];if(c){if(c.hot._declinedDependencies[r])return{type:"declined",chain:u.concat([l]),moduleId:r,parentId:l};-1===t.indexOf(l)&&(c.hot._acceptedDependencies[r]?(n[l]||(n[l]=[]),d(n[l],[r])):(delete n[l],t.push(l),a.push({chain:u.concat([l]),id:l})))}}}}return{type:"accepted",moduleId:e,outdatedModules:t,outdatedDependencies:n}}function d(e,t){for(var n=0;n<t.length;n++){var a=t[n];-1===e.indexOf(a)&&e.push(a)}}function h(){console.warn("[HMR] unexpected require("+C.moduleId+") to disposed module")}t=t||{};var y={},b=[],g={};for(var _ in v)if(Object.prototype.hasOwnProperty.call(v,_)){var C;l=w(_);var O=!1,P=!1,I=!1,S="";switch((C=v[_]?c(l):{type:"disposed",moduleId:_}).chain&&(S="\nUpdate propagation: "+C.chain.join(" -> ")),C.type){case"self-declined":t.onDeclined&&t.onDeclined(C),t.ignoreDeclined||(O=new Error("Aborted because of self decline: "+C.moduleId+S));break;case"declined":t.onDeclined&&t.onDeclined(C),t.ignoreDeclined||(O=new Error("Aborted because of declined dependency: "+C.moduleId+" in "+C.parentId+S));break;case"unaccepted":t.onUnaccepted&&t.onUnaccepted(C),t.ignoreUnaccepted||(O=new Error("Aborted because "+l+" is not accepted"+S));break;case"accepted":t.onAccepted&&t.onAccepted(C),P=!0;break;case"disposed":t.onDisposed&&t.onDisposed(C),I=!0;break;default:throw new Error("Unexception type "+C.type)}if(O)return p("abort"),Promise.reject(O);if(P)for(l in g[l]=v[l],d(b,C.outdatedModules),C.outdatedDependencies)Object.prototype.hasOwnProperty.call(C.outdatedDependencies,l)&&(y[l]||(y[l]=[]),d(y[l],C.outdatedDependencies[l]));I&&(d(b,[C.moduleId]),g[l]=h)}var E,T=[];for(a=0;a<b.length;a++)l=b[a],R[l]&&R[l].hot._selfAccepted&&g[l]!==h&&T.push({module:l,errorHandler:R[l].hot._selfAccepted});p("dispose"),Object.keys(k).forEach((function(e){!1===k[e]&&delete installedChunks[e]}));for(var N,D,q=b.slice();0<q.length;)if(l=q.pop(),i=R[l]){var G={},M=i.hot._disposeHandlers;for(r=0;r<M.length;r++)(n=M[r])(G);for(u[l]=G,i.hot.active=!1,delete R[l],delete y[l],r=0;r<i.children.length;r++){var j=R[i.children[r]];j&&0<=(E=j.parents.indexOf(l))&&j.parents.splice(E,1)}}for(l in y)if(Object.prototype.hasOwnProperty.call(y,l)&&(i=R[l]))for(D=y[l],r=0;r<D.length;r++)N=D[r],0<=(E=i.children.indexOf(N))&&i.children.splice(E,1);for(l in p("apply"),o=m,g)Object.prototype.hasOwnProperty.call(g,l)&&(e[l]=g[l]);var U=null;for(l in y)if(Object.prototype.hasOwnProperty.call(y,l)&&(i=R[l])){D=y[l];var F=[];for(a=0;a<D.length;a++)if(N=D[a],n=i.hot._acceptedDependencies[N]){if(-1!==F.indexOf(n))continue;F.push(n)}for(a=0;a<F.length;a++){n=F[a];try{n(D)}catch(n){t.onErrored&&t.onErrored({type:"accept-errored",moduleId:l,dependencyId:D[a],error:n}),t.ignoreErrored||(U=U||n)}}}for(a=0;a<T.length;a++){var L=T[a];l=L.module,s=[l];try{A(l)}catch(a){if("function"==typeof L.errorHandler)try{L.errorHandler(a)}catch(n){t.onErrored&&t.onErrored({type:"self-accept-error-handler-errored",moduleId:l,error:n,originalError:a}),t.ignoreErrored||(U=U||n),U=U||a}else t.onErrored&&t.onErrored({type:"self-accept-errored",moduleId:l,error:a}),t.ignoreErrored||(U=U||a)}}return U?(p("fail"),Promise.reject(U)):(p("idle"),new Promise((function(e){e(b)})))}var R={};function A(t){if(R[t])return R[t].exports;var a,o=R[t]={i:t,l:!1,exports:{},hot:(a={_acceptedDependencies:{},_declinedDependencies:{},_selfAccepted:!1,_selfDeclined:!1,_disposeHandlers:[],_main:n!==t,active:!0,accept:function(e,t){if(void 0===e)a._selfAccepted=!0;else if("function"==typeof e)a._selfAccepted=e;else if("object"==(void 0===e?"undefined":i(e)))for(var n=0;n<e.length;n++)a._acceptedDependencies[e[n]]=t||function(){};else a._acceptedDependencies[e]=t||function(){}},decline:function(e){if(void 0===e)a._selfDeclined=!0;else if("object"==(void 0===e?"undefined":i(e)))for(var t=0;t<e.length;t++)a._declinedDependencies[e[t]]=!0;else a._declinedDependencies[e]=!0},dispose:function(e){a._disposeHandlers.push(e)},addDisposeHandler:function(e){a._disposeHandlers.push(e)},removeDisposeHandler:function(e){var t=a._disposeHandlers.indexOf(e);0<=t&&a._disposeHandlers.splice(t,1)},check:C,apply:I,status:function(e){if(!e)return f;d.push(e)},addStatusHandler:function(e){d.push(e)},removeStatusHandler:function(e){var t=d.indexOf(e);0<=t&&d.splice(t,1)},data:u[t]},n=void 0,a),parents:(l=s,s=[],l),children:[]};return e[t].call(o.exports,o,o.exports,c(t)),o.l=!0,o.exports}return A.m=e,A.c=R,A.d=function(e,t,n){A.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:n})},A.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},A.t=function(e,t){if(1&t&&(e=A(e)),8&t)return e;if(4&t&&"object"==(void 0===e?"undefined":i(e))&&e&&e.__esModule)return e;var n=Object.create(null);if(A.r(n),Object.defineProperty(n,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var a in e)A.d(n,a,function(t){return e[t]}.bind(null,a));return n},A.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return A.d(t,"a",t),t},A.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},A.p="",A.h=function(){return o},c(0)(A.s=0)}([function(e,t,n){Object.defineProperty(t,"__esModule",{value:!0});var a,o=(a=n(1))&&a.__esModule?a:{default:a};t.default={UnnyRGC:o.default}},function(e,t,n){Object.defineProperty(t,"__esModule",{value:!0}),t.Errors=void 0;var a="function"==typeof Symbol&&"symbol"==i(Symbol.iterator)?function(e){return void 0===e?"undefined":i(e)}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":void 0===e?"undefined":i(e)};function o(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}var r=s(n(2)),u=s(n(3));function s(e){return e&&e.__esModule?e:{default:e}}var l,c,d="name",f="version",p=t.Errors={FAILED_DOWNLOAD_VERSIONS:1e3,FAILED_DOWNLOAD_DICTIONARY:1001,PARSING_ERROR:1002},h=(c=[{key:"_sendFailedCallback",value:function(e,t,n){e({success:!1,error:{code:t,message:n}})}},{key:"initialize",value:function(e,t){return(v.instance=new v)._initialize(e.game_id,t),v.instance}}],o((l=v).prototype,[{key:"_getFileExtension",value:function(){return".json"}},{key:"_downloadNextDictionary",value:function(){function e(e){var n=t.allDictionaries[e];if(1===n.status){var a=t.downloadUrl+n[d]+(n.version?"_v"+n.version:"")+t._getFileExtension();return v.instance.downloader.loadJson(a,(function(e){e.success?(n.value=e.data,n.status=0,t.db.saveDictionary(n[d],n.value,n[f]),t._downloadNextDictionary()):(e.error.code=p.FAILED_DOWNLOAD_DICTIONARY,t.callback(e))})),{v:void 0}}}var t=this;for(var n in this.allDictionaries){var o=e(n);if("object"===(void 0===o?"undefined":a(o)))return o.v}this.callback&&(this.callback({success:!0}),this.callback=null)}},{key:"_initialize",value:function(e,t){var n=this;this.callback=t,this.db=new u.default("UNNY_RGC_"+e,2),this.downloadUrl="https://dictionaries-unnynet.fra1.cdn.digitaloceanspaces.com/dictionaries/"+e+"/";var a="https://dictionaries-unnynet.fra1.digitaloceanspaces.com/dictionaries/"+e+"/versions"+this._getFileExtension()+"?timestamp="+Math.trunc((new Date).getTime());v.instance.downloader.loadJson(a,(function(e){if(e.success){var a=e.data.dictionaries;a?n.db.waitForTheConnection((function(){for(var e=a.length,t=function(t){var o=a[t],r=o[d];n.db.loadDictionary(r,(function(t){o[f]<=(t?t.version:-1)&&t.value?(o.status=0,o.value=t.value):o.status=1,n.allDictionaries[o.name]=o,0==--e&&n._downloadNextDictionary()}))},o=0;o<a.length;o++)t(o)})):v._sendFailedCallback(t,p.PARSING_ERROR,e.data.toString())}else e.error.code=p.FAILED_DOWNLOAD_VERSIONS,t(e)}))}},{key:"getDictionary",value:function(e){return this.allDictionaries.hasOwnProperty(e)?this.allDictionaries[e].value:null}}]),o(l,c),v);function v(){!function(e){if(!(e instanceof v))throw new TypeError("Cannot call a class as a function")}(this),this.downloader=new r.default,this.allDictionaries=[]}t.default=h},function(e,t,n){Object.defineProperty(t,"__esModule",{value:!0});var a=(function(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}(o.prototype,[{key:"loadJson",value:function(e,t){fetch(e).then((function(e){return e.json()})).then((function(e){return t({success:!0,data:e})})).catch((function(e){return t({success:!1,error:{message:e.toString()}})}))}}]),o);function o(){!function(e){if(!(e instanceof o))throw new TypeError("Cannot call a class as a function")}(this)}t.default=a},function(e,t,n){Object.defineProperty(t,"__esModule",{value:!0});var a=0,o=-1,r=2,i=3,u="all_dictionaries",s=(function(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}(l.prototype,[{key:"_callCallback",value:function(){this.callback&&(this.callback(this.isActive()),this.callback=null)}},{key:"waitForTheConnection",value:function(e){this.callback=e,this.dbState!==r&&this._callCallback()}},{key:"saveDictionary",value:function(e,t,n){if(this.isActive())try{this.db.transaction([u],"readwrite").objectStore(u).put({name:e,value:t,version:n}).onerror=function(t){console.error("Failed to save "+e,t)}}catch(t){console.error("Something went wrong during saving",t)}}},{key:"loadDictionary",value:function(e,t){if(this.isActive())try{var n=this.db.transaction([u],"readonly").objectStore(u).get(e);n.onerror=function(n){console.error("couldn't load dictionary "+e,n),t(null)},n.onsuccess=function(){t(n.result)}}catch(n){console.error("Something went wrong during loading",n),t(null)}}},{key:"isActive",value:function(){return this.dbState===i}}]),l);function l(e,t){var n=this;if(function(e){if(!(e instanceof l))throw new TypeError("Cannot call a class as a function")}(this),this.dbSupport=!!window.indexedDB,this.dbSupport){this.dbState=r;var s=window.indexedDB.open(e,t);s.onerror=function(e){console.error("Couldn't connect to DB",s.errorCode),n.dbState=a,n._callCallback()},s.onsuccess=function(e){n.db=e.target.result,n.dbState=i,n._callCallback()},s.onupgradeneeded=function(e){n.db=e.target.result,n.db.createObjectStore(u,{keyPath:"name"})}}else console.error("IndexedDB isn't supported"),this.dbState=o}t.default=s}]).default},"object"==i(t)&&"object"==i(e)?e.exports=r():(a=[],void 0===(o="function"==typeof(n=r)?n.apply(t,a):n)||(e.exports=o))}).call(this,n(15)(e))},function(e,t){e.exports=function(e){return e.webpackPolyfill||(e.deprecate=function(){},e.paths=[],e.children||(e.children=[]),Object.defineProperty(e,"loaded",{enumerable:!0,get:function(){return e.l}}),Object.defineProperty(e,"id",{enumerable:!0,get:function(){return e.i}}),e.webpackPolyfill=1),e}},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});function a(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}var o=t.ButtonType={Primary:"Primary",Secondary:"Secondary",Success:"Success",Info:"Info",Warning:"Warning",Danger:"Danger"},r=(function(e,t,n){t&&a(e.prototype,t),n&&a(e,n)}(i,[{key:"addButton",value:function(e,t,n){var a=2<arguments.length&&void 0!==n?n:o.Primary;this.allButtons.push({id:i._buttonInstance++,title:e,type:a}),this.allButtonsAction.push(t)}},{key:"parse",value:function(){var e=JSON.stringify(this.allButtons);return console.log("> "+e),'{"buttons": '+e+"}"}},{key:"buttonClicked",value:function(e){for(var t=0;t<this.allButtons.length;t++)if(this.allButtons[t].id===e){var n=this.allButtonsAction[t];n&&n();break}}}]),i);function i(){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,i),(i.activePopup=this).allButtons=[],this.allButtonsAction=[]}r._buttonInstance=0,t.default=r}]).default}));
-
+!function(e,t){"object"==typeof exports&&"object"==typeof module?module.exports=t():"function"==typeof define&&define.amd?define([],t):"object"==typeof exports?exports.UnnyNet=t():e.UnnyNet=t()}(window,(function(){return function(e){var t=window.webpackHotUpdateUnnyNet;window.webpackHotUpdateUnnyNet=function(e,n){!function(e,t){if(g[e]&&_[e]){for(var n in _[e]=!1,t)Object.prototype.hasOwnProperty.call(t,n)&&(h[n]=t[n]);0==--m&&0===y&&C()}}(e,n),t&&t(e,n)};var n,a=!0,o="8688e9a3d162a8561dc2",r=1e4,i={},u=[],s=[];function l(e){var t=I[e];if(!t)return A;function a(a){return t.hot.active?(I[a]?-1===I[a].parents.indexOf(e)&&I[a].parents.push(e):(u=[e],n=a),-1===t.children.indexOf(a)&&t.children.push(a)):(console.warn("[HMR] unexpected require("+a+") from disposed module "+e),u=[]),A(a)}function o(e){return{configurable:!0,enumerable:!0,get:function(){return A[e]},set:function(t){A[e]=t}}}for(var r in A)Object.prototype.hasOwnProperty.call(A,r)&&"e"!==r&&"t"!==r&&Object.defineProperty(a,r,o(r));return a.e=function(e){return"ready"===d&&f("prepare"),y++,A.e(e).then(t,(function(e){throw t(),e}));function t(){y--,"prepare"===d&&(b[e]||O(e),0===y&&0===m&&C())}},a.t=function(e,t){return 1&t&&(e=a(e)),A.t(e,-2&t)},a}var c=[],d="idle";function f(e){d=e;for(var t=0;t<c.length;t++)c[t].call(null,e)}var p,h,v,m=0,y=0,b={},_={},g={};function k(e){return+e+""===e?+e:e}function w(e){if("idle"!==d)throw new Error("check() is only allowed in idle status");return a=e,f("check"),function(e){return e=e||1e4,new Promise((function(t,n){if("undefined"==typeof XMLHttpRequest)return n(new Error("No browser support"));try{var a=new XMLHttpRequest,r=A.p+""+o+".hot-update.json";a.open("GET",r,!0),a.timeout=e,a.send(null)}catch(e){return n(e)}a.onreadystatechange=function(){if(4===a.readyState)if(0===a.status)n(new Error("Manifest request to "+r+" timed out."));else if(404===a.status)t();else if(200!==a.status&&304!==a.status)n(new Error("Manifest request to "+r+" failed."));else{try{var e=JSON.parse(a.responseText)}catch(e){return void n(e)}t(e)}}}))}(r).then((function(e){if(!e)return f("idle"),null;_={},b={},g=e.c,v=e.h,f("prepare");var t=new Promise((function(e,t){p={resolve:e,reject:t}}));return h={},O(0),"prepare"===d&&0===y&&0===m&&C(),t}))}function O(e){g[e]?(_[e]=!0,m++,function(e){var t=document.createElement("script");t.charset="utf-8",t.src=A.p+""+e+"."+o+".hot-update.js",document.head.appendChild(t)}(e)):b[e]=!0}function C(){f("ready");var e=p;if(p=null,e)if(a)Promise.resolve().then((function(){return P(a)})).then((function(t){e.resolve(t)}),(function(t){e.reject(t)}));else{var t=[];for(var n in h)Object.prototype.hasOwnProperty.call(h,n)&&t.push(k(n));e.resolve(t)}}function P(t){if("ready"!==d)throw new Error("apply() is only allowed in ready status");var n,a,r,s,l;function c(e){for(var t=[e],n={},a=t.map((function(e){return{chain:[e],id:e}}));0<a.length;){var o=a.pop(),r=o.id,i=o.chain;if((s=I[r])&&!s.hot._selfAccepted){if(s.hot._selfDeclined)return{type:"self-declined",chain:i,moduleId:r};if(s.hot._main)return{type:"unaccepted",chain:i,moduleId:r};for(var u=0;u<s.parents.length;u++){var l=s.parents[u],c=I[l];if(c){if(c.hot._declinedDependencies[r])return{type:"declined",chain:i.concat([l]),moduleId:r,parentId:l};-1===t.indexOf(l)&&(c.hot._acceptedDependencies[r]?(n[l]||(n[l]=[]),p(n[l],[r])):(delete n[l],t.push(l),a.push({chain:i.concat([l]),id:l})))}}}}return{type:"accepted",moduleId:e,outdatedModules:t,outdatedDependencies:n}}function p(e,t){for(var n=0;n<t.length;n++){var a=t[n];-1===e.indexOf(a)&&e.push(a)}}function m(){console.warn("[HMR] unexpected require("+O.moduleId+") to disposed module")}t=t||{};var y={},b=[],_={};for(var w in h)if(Object.prototype.hasOwnProperty.call(h,w)){var O;l=k(w);var C=!1,P=!1,E=!1,R="";switch((O=h[w]?c(l):{type:"disposed",moduleId:w}).chain&&(R="\nUpdate propagation: "+O.chain.join(" -> ")),O.type){case"self-declined":t.onDeclined&&t.onDeclined(O),t.ignoreDeclined||(C=new Error("Aborted because of self decline: "+O.moduleId+R));break;case"declined":t.onDeclined&&t.onDeclined(O),t.ignoreDeclined||(C=new Error("Aborted because of declined dependency: "+O.moduleId+" in "+O.parentId+R));break;case"unaccepted":t.onUnaccepted&&t.onUnaccepted(O),t.ignoreUnaccepted||(C=new Error("Aborted because "+l+" is not accepted"+R));break;case"accepted":t.onAccepted&&t.onAccepted(O),P=!0;break;case"disposed":t.onDisposed&&t.onDisposed(O),E=!0;break;default:throw new Error("Unexception type "+O.type)}if(C)return f("abort"),Promise.reject(C);if(P)for(l in _[l]=h[l],p(b,O.outdatedModules),O.outdatedDependencies)Object.prototype.hasOwnProperty.call(O.outdatedDependencies,l)&&(y[l]||(y[l]=[]),p(y[l],O.outdatedDependencies[l]));E&&(p(b,[O.moduleId]),_[l]=m)}var S,T=[];for(a=0;a<b.length;a++)l=b[a],I[l]&&I[l].hot._selfAccepted&&_[l]!==m&&T.push({module:l,errorHandler:I[l].hot._selfAccepted});f("dispose"),Object.keys(g).forEach((function(e){!1===g[e]&&function(e){delete installedChunks[e]}(e)}));for(var N,D,j=b.slice();0<j.length;)if(l=j.pop(),s=I[l]){var q={},M=s.hot._disposeHandlers;for(r=0;r<M.length;r++)(n=M[r])(q);for(i[l]=q,s.hot.active=!1,delete I[l],delete y[l],r=0;r<s.children.length;r++){var F=I[s.children[r]];F&&0<=(S=F.parents.indexOf(l))&&F.parents.splice(S,1)}}for(l in y)if(Object.prototype.hasOwnProperty.call(y,l)&&(s=I[l]))for(D=y[l],r=0;r<D.length;r++)N=D[r],0<=(S=s.children.indexOf(N))&&s.children.splice(S,1);for(l in f("apply"),o=v,_)Object.prototype.hasOwnProperty.call(_,l)&&(e[l]=_[l]);var G=null;for(l in y)if(Object.prototype.hasOwnProperty.call(y,l)&&(s=I[l])){D=y[l];var U=[];for(a=0;a<D.length;a++)if(N=D[a],n=s.hot._acceptedDependencies[N]){if(-1!==U.indexOf(n))continue;U.push(n)}for(a=0;a<U.length;a++){n=U[a];try{n(D)}catch(n){t.onErrored&&t.onErrored({type:"accept-errored",moduleId:l,dependencyId:D[a],error:n}),t.ignoreErrored||(G=G||n)}}}for(a=0;a<T.length;a++){var L=T[a];l=L.module,u=[l];try{A(l)}catch(a){if("function"==typeof L.errorHandler)try{L.errorHandler(a)}catch(n){t.onErrored&&t.onErrored({type:"self-accept-error-handler-errored",moduleId:l,error:n,originalError:a}),t.ignoreErrored||(G=G||n),G=G||a}else t.onErrored&&t.onErrored({type:"self-accept-errored",moduleId:l,error:a}),t.ignoreErrored||(G=G||a)}}return G?(f("fail"),Promise.reject(G)):(f("idle"),new Promise((function(e){e(b)})))}var I={};function A(t){if(I[t])return I[t].exports;var a=I[t]={i:t,l:!1,exports:{},hot:function(e){var t={_acceptedDependencies:{},_declinedDependencies:{},_selfAccepted:!1,_selfDeclined:!1,_disposeHandlers:[],_main:n!==e,active:!0,accept:function(e,n){if(void 0===e)t._selfAccepted=!0;else if("function"==typeof e)t._selfAccepted=e;else if("object"==typeof e)for(var a=0;a<e.length;a++)t._acceptedDependencies[e[a]]=n||function(){};else t._acceptedDependencies[e]=n||function(){}},decline:function(e){if(void 0===e)t._selfDeclined=!0;else if("object"==typeof e)for(var n=0;n<e.length;n++)t._declinedDependencies[e[n]]=!0;else t._declinedDependencies[e]=!0},dispose:function(e){t._disposeHandlers.push(e)},addDisposeHandler:function(e){t._disposeHandlers.push(e)},removeDisposeHandler:function(e){var n=t._disposeHandlers.indexOf(e);0<=n&&t._disposeHandlers.splice(n,1)},check:w,apply:P,status:function(e){if(!e)return d;c.push(e)},addStatusHandler:function(e){c.push(e)},removeStatusHandler:function(e){var t=c.indexOf(e);0<=t&&c.splice(t,1)},data:i[e]};return n=void 0,t}(t),parents:(s=u,u=[],s),children:[]};return e[t].call(a.exports,a,a.exports,l(t)),a.l=!0,a.exports}return A.m=e,A.c=I,A.d=function(e,t,n){A.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:n})},A.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},A.t=function(e,t){if(1&t&&(e=A(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var n=Object.create(null);if(A.r(n),Object.defineProperty(n,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var a in e)A.d(n,a,function(t){return e[t]}.bind(null,a));return n},A.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return A.d(t,"a",t),t},A.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},A.p="",A.h=function(){return o},l(10)(A.s=10)}([function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});function a(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}var o=s(n(4)),r=s(n(1)),i=n(6),u=s(i);function s(e){return e&&e.__esModule?e:{default:e}}var l=(function(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}(c,o.default),function(e,t,n){t&&a(e.prototype,t),n&&a(e,n)}(c,null,[{key:"initialize",value:function(e,t){c.instance=new c(e,t)}},{key:"openLeaderboards",value:function(e){o.default.evaluateCommand(r.default.Command.OpenLeaderBoards,!0,e)}},{key:"openAchievements",value:function(e){o.default.evaluateCommand(r.default.Command.OpenAchievements,!0,e)}},{key:"openFriends",value:function(e){o.default.evaluateCommand(r.default.Command.OpenFriends,!0,e)}},{key:"openChannel",value:function(e,t){var n=r.default.GetCommand(r.default.Command.OpenChannel).format(e);o.default.evaluateCodeInJavaScript(new u.default(r.default.Command.OpenChannel,n,!0,t))}},{key:"openGuilds",value:function(e){o.default.evaluateCommand(r.default.Command.OpenGuilds,!0,e)}},{key:"openMyGuild",value:function(e){o.default.evaluateCommand(r.default.Command.OpenMyGuild,!0,e)}},{key:"authorizeWithCredentials",value:function(e,t,n,a){var i=r.default.GetCommand(r.default.Command.AuthorizeWithCredentials).format(e,t,n);o.default.evaluateCodeInJavaScript(new u.default(r.default.Command.AuthorizeWithCredentials,i,!1,a),!0)}},{key:"authorizeAsGuest",value:function(e,t){var n=r.default.GetCommand(r.default.Command.AuthorizeAsGuest).format(e);o.default.evaluateCodeInJavaScript(new u.default(r.default.Command.AuthorizeAsGuest,n,!1,t),!0)}},{key:"authorizeWithCustomId",value:function(e,t,n){var a=r.default.GetCommand(r.default.Command.AuthorizeWithCustomId).format(e,t);o.default.evaluateCodeInJavaScript(new u.default(r.default.Command.AuthorizeWithCustomId,a,!1,n),!0)}},{key:"forceLogout",value:function(e){o.default.evaluateCommand(r.default.Command.ForceLogout,!1,e)}},{key:"getGuildInfo",value:function(e,t){var n=r.default.GetCommand(r.default.Command.GetGuildInfo).format(e?1:0);o.default.evaluateCodeInJavaScript(new i.UnnyCommandInfoDelayed(r.default.Command.GetGuildInfo,n,t))}},{key:"getAchievementsInfo",value:function(e){var t=r.default.GetCommand(r.default.Command.GetAchievementsInfo);o.default.evaluateCodeInJavaScript(new i.UnnyCommandInfoDelayed(r.default.Command.GetAchievementsInfo,t,e))}},{key:"getPlayerPublicInfo",value:function(e){var t=r.default.GetCommand(r.default.Command.GetPlayerPublicInfo);o.default.evaluateCodeInJavaScript(new i.UnnyCommandInfoDelayed(r.default.Command.GetPlayerPublicInfo,t,e))}},{key:"getLeaderboardScores",value:function(e,t){var n=r.default.GetCommand(r.default.Command.GetLeaderboardScores).format(e);o.default.evaluateCodeInJavaScript(new i.UnnyCommandInfoDelayed(r.default.Command.GetLeaderboardScores,n,t))}},{key:"sendMessageToChannel",value:function(e,t,n){if(t){var a=r.default.GetCommand(r.default.Command.SendMessage).format(e,t);o.default.evaluateCodeInJavaScript(new u.default(r.default.Command.SendMessage,a,!1,n))}}},{key:"reportLeaderboards",value:function(e,t,n,a){n=n?encodeURIComponent(n):"";var u=r.default.GetCommand(r.default.Command.ReportLeaderboardScoresAsync).format(e,t,n);o.default.evaluateCodeInJavaScript(new i.UnnyCommandInfoDelayed(r.default.Command.ReportLeaderboardScoresAsync,u,a))}},{key:"reportAchievements",value:function(e,t,n){var a=r.default.GetCommand(r.default.Command.ReportAchievementProgressAsync).format(e,t);o.default.evaluateCodeInJavaScript(new i.UnnyCommandInfoDelayed(r.default.Command.ReportAchievementProgressAsync,a,n))}},{key:"addGuildExperience",value:function(e,t){var n=r.default.GetCommand(r.default.Command.AddGuildExperience).format(e);o.default.evaluateCodeInJavaScript(new u.default(r.default.Command.AddGuildExperience,n,!1,t))}},{key:"authorize",value:function(e,t,n){c.instance.API.authWithLogin(e,t,n)}},{key:"save",value:function(e,t,n,a,o){c.instance.API.save(e,t,n,a,o)}},{key:"load",value:function(e,t,n){c.instance.API.load(e,t,n)}},{key:"purchaseProduct",value:function(e,t){c.instance.API.purchaseProduct(e,t)}},{key:"completeNutakuPurchase",value:function(e,t,n,a){c.instance.API.completeNutakuPurchase(e,t,n,a)}},{key:"completeNutakuPurchase2",value:function(e,t,n,a){c.instance.API.completeNutakuPurchase2(e,t,n,a)}},{key:"getPurchases",value:function(e,t){c.instance.API.getPurchases(e,t)}},{key:"claimPurchase",value:function(e,t,n,a){c.instance.API.claimPurchase(e,t,n,a)}},{key:"claimPurchase2",value:function(e,t,n,a){c.instance.API.claimPurchase2(e,t,n,a)}}]),c);function c(){return function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,c),function(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}(this,(c.__proto__||Object.getPrototypeOf(c)).apply(this,arguments))}l.instance=null,t.default=l},function(e,t,n){"use strict";var a;Object.defineProperty(t,"__esModule",{value:!0});function o(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}function r(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}t.Errors={NotInitialized:-1,Unknown:1,NotAuthorized:2,NoMessage:3,NoChannel:4,UnnynetNotReady:5,NoGameId:6,NoSuchLeaderboard:7,NoLeaderboardsForTheGame:8,NoAchievementsForTheGame:9,NoGuildsForTheGame:10,NotInGuild:11,NoSuchAchievement:12,WrongAchievementType:13,AchievementIsNotPublished:14,LeaderboardReportsTooOften:15,NoAccessToken:16};var i=(function(e,t,n){t&&o(e.prototype,t),n&&o(e,n)}(u,null,[{key:"GetCommand",value:function(e){return u.jsCommands[e]}},{key:"getResponceData",value:function(e){var t={};return e.error?(t.success=!1,t.error=JSON.parse(e.error)):t.success=!0,e.data&&(t.data=JSON.parse(e.data)),t}},{key:"getErrorResponse",value:function(e,t){return{success:!1,error:{code:e,message:1<arguments.length&&void 0!==t?t:""}}}},{key:"getSuccessResponse",value:function(e){var t=0<arguments.length&&void 0!==e?e:null,n={success:!0};return t&&(n.data=t),n}}]),u);function u(){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,u)}i.Command={OpenLeaderBoards:1,OpenAchievements:2,OpenFriends:3,OpenChannel:4,OpenGuilds:5,OpenMyGuild:6,SetSafeArea:7,SendMessage:20,UnnyNetWasOpened:30,ReportLeaderboardScoresAsync:40,ReportAchievementProgressAsync:41,AddGuildExperience:60,RequestFailed:70,RequestSucceeded:71,RequestReply:72,SetKeyboardOffset:80,SetConfig:81,SetDefaultChannel:82,AuthorizeWithCredentials:100,AuthorizeAsGuest:101,AuthorizeWithCustomId:102,ForceLogout:110,GetGuildInfo:120,GetAchievementsInfo:130,GetPlayerPublicInfo:140,GetLeaderboardScores:150},i.jsCommands=(r(a={},i.Command.OpenLeaderBoards,"window.globalReactFunctions.apiOpenLeaderboards();"),r(a,i.Command.OpenAchievements,"window.globalReactFunctions.apiOpenAchievements();"),r(a,i.Command.OpenFriends,"window.globalReactFunctions.apiOpenFriends();"),r(a,i.Command.OpenChannel,"window.globalReactFunctions.apiOpenChannel('{0}');"),r(a,i.Command.OpenGuilds,"window.globalReactFunctions.apiOpenGuilds();"),r(a,i.Command.OpenMyGuild,"window.globalReactFunctions.apiOpenMyGuild();"),r(a,i.Command.SendMessage,"window.globalReactFunctions.apiSendMessage('{0}', '{1}');"),r(a,i.Command.UnnyNetWasOpened,"window.globalReactFunctions.apiUnnyNetWasOpened();"),r(a,i.Command.ReportLeaderboardScoresAsync,"window.globalReactFunctions.apiReportLeaderboardScoresAsync(<*id*>, '{0}', {1}, '{2}');"),r(a,i.Command.ReportAchievementProgressAsync,"window.globalReactFunctions.apiReportAchievementProgressAsync(<*id*>, {0}, {1});"),r(a,i.Command.AddGuildExperience,"window.globalReactFunctions.apiAddGuildExperience('{0}');"),r(a,i.Command.RequestFailed,"window.globalReactFunctions.requestFailed('{0}', \"{1}\");"),r(a,i.Command.RequestSucceeded,"window.globalReactFunctions.requestSucceeded('{0}');"),r(a,i.Command.RequestReply,"window.globalReactFunctions.requestReply('{0}', '{1}');"),r(a,i.Command.SetKeyboardOffset,"window.globalReactFunctions.apiSetKeyboardOffset('{0}');"),r(a,i.Command.SetConfig,"window.globalReactFunctions.apiSetConfig('{0}');"),r(a,i.Command.SetDefaultChannel,"window.globalReactFunctions.apiSetDefaultChannel('{0}');"),r(a,i.Command.AuthorizeWithCredentials,"window.globalReactFunctions.apiAuthWithCredentials('{0}', '{1}', '{2}');"),r(a,i.Command.AuthorizeAsGuest,"window.globalReactFunctions.apiAuthAsGuest('{0}');"),r(a,i.Command.AuthorizeWithCustomId,"window.globalReactFunctions.apiAuthWithCustomId('{0}', '{1}');"),r(a,i.Command.ForceLogout,"window.globalReactFunctions.apiForceLogout();"),r(a,i.Command.GetGuildInfo,"window.globalReactFunctions.apiGetGuildInfo(<*id*>, {0});"),r(a,i.Command.SetSafeArea,"window.globalReactFunctions.apiSetSafeArea({0}, {1}, {2}, {3});"),r(a,i.Command.GetAchievementsInfo,"window.globalReactFunctions.apiGetAchievementsInfo(<*id*>);"),r(a,i.Command.GetPlayerPublicInfo,"window.globalReactFunctions.apiGetPlayerPublicInfo(<*id*>);"),r(a,i.Command.GetLeaderboardScores,"window.globalReactFunctions.apiGetLeaderboardScores(<*id*>, '{0}');"),a),t.default=i},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.NutakuPlatform={PCBrowser:1,SPBrowser:2,Android:3,ClientGames:4},t.default={GENERAL_CONSTANTS:{REMOTE_URL:"https://unnynet.com",VERSION:2,PLUGIN_VERSION:"2.9"},MAX_DELAYED_CONFIRMATIONS:10,REQUESTS_SAVE_TIME:60,CHECK_PERIOD:1,MAX_QUEUE_LENGTH:100,SEND_REQUEST_RETRY_DELAY:1,ANIMATIONS:{OPEN_DURATION:.5},Platform:{NUTAKU:2,VKONTAKTE:3,FACEBOOK:4,ODNOKLASSNIKI:5,FB_INSTANT:6},PurchaseStatusFilter:{ALL:0,PENDING:1,COMPLETED:2,CLAIMED:3},Environment:{Development:0,Stage:1,Production:2}}},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});function a(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}var o,r=n(1),i=(o=r)&&o.__esModule?o:{default:o},u=(function(e,t,n){t&&a(e.prototype,t),n&&a(e,n)}(s,[{key:"authorize",value:function(e){console.error("authorize isn't implemented for this platform"),e&&e(i.default.getErrorResponse(r.Errors.Unknown,"authorize isn't implemented for this platform"))}},{key:"_autoAuthInNakama",value:function(){console.error("No nakama auth for current platform")}},{key:"getDeviceIdForNakama",value:function(){return null}}]),s);function s(e){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,s),this.environment=e.environment,this.API=e.API,this.allGetParams=e.allGetParams}t.default=u},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});function a(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}var o=v(n(11)),r=v(n(6)),i=n(1),u=v(i),s=v(n(7)),l=v(n(12)),c=v(n(0)),d=v(n(2)),f=v(n(13)),p=v(n(15)),h=v(n(17));function v(e){return e&&e.__esModule?e:{default:e}}String.prototype.format||(String.prototype.format=function(){var e=arguments;return this.replace(/{(\d+)}/g,(function(t,n){return void 0!==e[n]?e[n]:t}))});var m=d.default.Environment.Development,y=(function(e,t,n){t&&a(e.prototype,t),n&&a(e,n)}(b,[{key:"_prepareConfig",value:function(e){return e.game_id||(e.game_id="8ff16d3c-ebcc-4582-a734-77ca6c14af29"),c.default.onGameLoginRequest&&(e.game_login=1),e.platform===d.default.Platform.FB_INSTANT&&(e.lite_version||(e.lite_version=!0,console.warn("FB Instant can use only lite version of UnnyNet: Forced Lite"))),e}},{key:"_initServices",value:function(){this.API=new f.default(this.config),this.socialPlatform=h.default.createSocialPlatform(this,this.config.platform)}},{key:"_prepareWebView",value:function(){this.config.lite_version||(this.webView=new o.default(this.config),this.webView.openGameUrl(this.config,this.socialPlatform.getDeviceIdForNakama()),this.webView.onMessageReceived=this._receiveMessage.bind(this),this._loadQueue())}},{key:"_setDebug",value:function(e){this.debug=e}},{key:"_receiveMessage",value:function(e){var t=e.path,n=e.args;switch(t){case"authorised":c.default.onPlayerAuthorized&&c.default.onPlayerAuthorized(n),this.config.default_channel&&b._setDefaultChannel(this.config.default_channel);break;case"logged_out":c.default.onPlayerLoggedOut&&c.default.onPlayerLoggedOut();break;case"renamed":c.default.onPlayerNameChanged&&c.default.onPlayerNameChanged(n.name);break;case"rank_changed":c.default.onRankChanged&&c.default.onRankChanged(n);break;case"new_guild":null!=c.default.onNewGuild&&c.default.onNewGuild(n);break;case"ask_new_guild":case"popup_appeared":l.default.create(t,n,b._sendRequestReply);break;case"popup_button_clicked":l.default.buttonClicked(n);break;case"ach_completed":null!=c.default.onAchievementCompleted&&c.default.onAchievementCompleted(n);break;case"new_message":null!=c.default.onNewMessageReceived&&c.default.onNewMessageReceived(n);break;case"game_login_request":null!=c.default.onGameLoginRequest&&c.default.onGameLoginRequest();break;case"request_reply":s.default.replyReceived(n);break;case"open_url":n.url&&window.open(n.url,"_blank");break;case"debug":this._setDebug(1==n.enable)}b.log("_receiveMessage",e)}},{key:"_update",value:function(){this._checkQueue(),(!this.last_save_time||Date.now()-this.last_save_time>=1e3*d.default.REQUESTS_SAVE_TIME)&&this._saveQueue()}},{key:"_getSaveKey",value:function(){return"UN_SAVE_"+this.config.game_id}},{key:"_saveQueue",value:function(){this.last_save_time=Date.now();var e=[];for(var t in this.queue){var n=this.queue[t];n.needToSave()&&e.push(n.getSaveData())}var a=this._getSaveKey();0===e.length?localStorage.removeItem(a):localStorage.setItem(a,JSON.stringify(e))}},{key:"_loadQueue",value:function(){var e=this._getSaveKey(),t=localStorage.getItem(e);if(t){var n=JSON.parse(t);for(var a in n){var o=r.default.loadData(n[a]);this.queue.push(o)}b.log("_loadQueue",this.queue),localStorage.removeItem(e)}}},{key:"_checkQueue",value:function(){var e=this;if(0!==this.queue.length&&b._checkWebView()){var t=null,n=!1;for(var a in this.queue){var o=this.queue[a];if(!n||!o.isRequestWithFixedOrder()){if(!o.isWaiting()){t=o;break}if(o.isRequestWithFixedOrder()&&(n=!0),o.startedTime&&Date.now()-o.startedTime<1e3*d.default.MAX_DELAYED_CONFIRMATIONS)continue;t=o;break}}if(t){t.startedTime=Date.now();try{b.log("evaluate",t.getCode()),this.webView.evaluateJavaScript(t.getCode(),(function(n){b.log("response",n);var a=!1;if(n.success)t.isDelayedRequestConfirm()?t.startWaiting():a=!0,t.info.openWindow&&b.openUnnyNet();else if(n.error)switch(n.error.code){case i.Errors.UnnynetNotReady:case i.Errors.NotAuthorized:b.log("Waiting...",n);break;default:a=!0}a&&(e.queue.shift(),null!=t&&t.invokeCallback(n),e._checkQueue())}))}catch(n){console.error("EVAL ERROR: ",n)}}}}},{key:"hideWebView",value:function(){this.webView&&(null!=c.default.onUnnyNetClosed&&c.default.onUnnyNetClosed(),this.webView.hide(this.config))}},{key:"showWebView",value:function(){this.webView&&(this.webView.show(this.config),b.evaluateCommand(u.default.Command.UnnyNetWasOpened,!1,null))}}],[{key:"log",value:function(e){for(var t,n=arguments.length,a=Array(1<n?n-1:0),o=1;o<n;o++)a[o-1]=arguments[o];b.staticUnnyNetInstance.debug&&(t=console).info.apply(t,["[UNNYNET_JS] "+e].concat(a))}},{key:"_setDefaultChannel",value:function(e){var t=u.default.GetCommand(u.default.Command.SetDefaultChannel).format(e);b.evaluateCodeInJavaScript(new r.default(u.default.Command.SetDefaultChannel,t,!1))}},{key:"_sendRequestReply",value:function(e,t){var n=u.default.GetCommand(u.default.Command.RequestReply).format(e,t);b.evaluateCodeInJavaScript(new r.default(u.default.Command.RequestReply,n,!1))}},{key:"_checkWebView",value:function(){return!!b.staticUnnyNetInstance||(console.error("UnnyNet wasn't properly initialized"),!1)}},{key:"evaluateCommand",value:function(e,t,n){b.evaluateCodeInJavaScript(new r.default(e,u.default.GetCommand(e),t,n))}},{key:"evaluateCodeInJavaScript",value:function(e,t){var n=1<arguments.length&&void 0!==t&&t;if(b._checkWebView())if(b.staticUnnyNetInstance.config.lite_version)console.warn("You can't use this method in Lite Mode");else{for(var a=b.staticUnnyNetInstance.queue,o=-1,r=1;r<a.length;r++)if(a[r].couldBeReplaced(e.Command)){o=r;break}if(-1===o){if(n?a.unshift(e):a.push(e),1===a.length)b.staticUnnyNetInstance._checkQueue();else if(a.length>=d.default.MAX_QUEUE_LENGTH)for(var i=0;i<a.length;i++)if(a[i].isDelayedRequestConfirm()){a.splice(i,1);break}}else a[o]=e}}},{key:"openUnnyNet",value:function(){b._checkWebView()&&b.staticUnnyNetInstance.showWebView()}},{key:"closeUnnyNet",value:function(){null!=b.staticUnnyNetInstance&&b.staticUnnyNetInstance.hideWebView()}},{key:"delayedCommandWasConfirmed",value:function(e){var t=b.staticUnnyNetInstance.queue;for(var n in t)if(e===t[n]){t.splice(n,1);break}}},{key:"setFrame",value:function(e){b.staticUnnyNetInstance.webView&&b.staticUnnyNetInstance.webView.setFrame(e)}},{key:"setCloseButtonVisible",value:function(e){b.staticUnnyNetInstance.webView&&b.staticUnnyNetInstance.webView.setCloseButtonVisible(e)}}]),b);function b(e,t){var n=this;!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,b),(b.staticUnnyNetInstance=this).config=this._prepareConfig(e),this.allGetParams=function(){var e={},t=window.location.search;if(t&&0<t.length)for(var n=(t=t.substring(1)).split("&"),a=0;a<n.length;a++){var o=n[a].split("=");o[0].startsWith("amp;")?e[o[0].substring(4)]=o[1]:e[o[0]]=o[1]}return e}(),this.queue=[],this.environment=this.config.hasOwnProperty("environment")?this.config.environment:m,console.info("PRMS",this.allGetParams),this._initServices(),this._prepareWebView(),this._setDebug(this.config.debug),b.RGC=p.default.UnnyRGC.initialize({game_id:this.config.game_id},(function(){b.log("RGC was initialized"),n.socialPlatform.authorize(t)})),setInterval(this._update.bind(this),1e3*d.default.CHECK_PERIOD)}y.staticUnnyNetInstance=null,y.RGC=null,t.default=y},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.ViewOpenDirection=void 0;function a(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}var o,r=(o=n(2))&&o.__esModule?o:{default:o},i=t.ViewOpenDirection={NONE:0,LEFT_TO_RIGHT:2,RIGHT_TO_LEFT:4,TOP_TO_BOTTOM:1,BOTTOM_TO_TOP:3},u=(function(e,t,n){t&&a(e.prototype,t),n&&a(e,n)}(s,[{key:"_receiveMessage",value:function(e){if(e.origin===r.default.GENERAL_CONSTANTS.REMOTE_URL&&e.data)if(e.data.reply){var t=e.data.id;if(this.evaluationsById.hasOwnProperty(t)){var n=e.data.reply,a=this.evaluationsById[t].callback;delete this.evaluationsById[t],a(n)}}else if(e.data&&e.data.message&&e.data.message.split){var o=decodeURIComponent(e.data.message).split("?"),i=void 0,u={};if(0<o.length&&(i=o[0],1<o.length))for(var s=o[1].split("&"),l=0;l<s.length;l++){var c=s[l].split("=");1<c.length&&(u[c[0]]=c[1])}this.onMessageReceived&&this.onMessageReceived({path:i,args:u})}}},{key:"openUrl",value:function(e){this.iFrame.src=e}},{key:"setFrame",value:function(e){this.cachedFrame=e,this._isVisible()?this._applyNormalPosition():this._applyHiddenPosition()}},{key:"_applyNormalPosition",value:function(){var e=this.cachedFrame,t=this.parent.style;t.left=e.left,t.right=e.right,t.top=e.top,t.bottom=e.bottom,t.width=e.width,t.height=e.height}},{key:"_applyHiddenPosition",value:function(){var e=this.parent.style;switch(this._applyNormalPosition(),this.config.open_animation){case i.LEFT_TO_RIGHT:e.left="-"+e.width,e.right=void 0;break;case i.RIGHT_TO_LEFT:e.left=void 0,e.right="-"+e.width;break;case i.TOP_TO_BOTTOM:e.top="-"+e.height,e.bottom=void 0;break;case i.BOTTOM_TO_TOP:e.top=void 0,e.bottom="-"+e.height}}},{key:"_isVisible",value:function(){return"visible"===this.parent.style.visibility}},{key:"_setAnimationActive",value:function(e){var t=this.parent.style;t["-webkit-transition"]=t.transition=e?"all "+r.default.ANIMATIONS.OPEN_DURATION+"s ease-in-out":void 0}},{key:"_clearTimer",value:function(){this.timer&&(clearTimeout(this.timer),this.timer=null)}},{key:"hide",value:function(){var e=this;this._clearTimer(),this._applyHiddenPosition(),this.timer=setTimeout((function(){e.parent.style.visibility="hidden",e.timer=null}),1e3*r.default.ANIMATIONS.OPEN_DURATION)}},{key:"show",value:function(){this._clearTimer(),this.parent.style.visibility="visible",this._applyNormalPosition()}},{key:"evaluateJavaScript",value:function(e,t){var n={eval_code:e,id:this.instanceId++};this.evaluationsById[n.id]={callback:t},this.window.postMessage(n,r.default.GENERAL_CONSTANTS.REMOTE_URL)}}]),s);function s(e){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,s);var t=document.createElement("div");this.parent=document.body.appendChild(t);var n=document.createElement("iframe");this.iFrame=this.parent.appendChild(n),this.window=this.iFrame.contentWindow;var a=this.iFrame.style;a.position="absolute",a.left=a.right="0",a.top=a.bottom="0",a.width=a.height="100%",a.border="none";var o=this.parent.style;o.zIndex="999999",o.position="fixed",o.visibility="hidden",this.config=e,this.evaluationsById={},this.instanceId=0,this.onMessageReceived=null,e.open_animation&&this._setAnimationActive(!0),this.setFrame({top:0,right:0,left:"",bottom:0,width:"50%",height:"100%"}),window.addEventListener("message",this._receiveMessage.bind(this),!1)}t.default=u},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.UnnyCommandInfoDelayed=void 0;var a=function(e,t,n){return t&&o(e.prototype,t),n&&o(e,n),e};function o(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}var r=u(n(1)),i=u(n(7));function u(e){return e&&e.__esModule?e:{default:e}}function s(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var l=(a(c,[{key:"getSaveData",value:function(){var e={command:this.info.command,code:this.info.code};return 0<=this.req_id&&(e.req_id=this.req_id),e}},{key:"getCode",value:function(){return this.info.code}},{key:"setCode",value:function(e){this.info.code=e}},{key:"getCommand",value:function(){return this.info.command}},{key:"invokeCallback",value:function(e){this.info.callback&&this.info.callback(e)}},{key:"invokeCallbackDelayed",value:function(e){var t=r.default.getResponceData(e);return this.info.callbackDelayed&&this.info.callbackDelayed(t),t}},{key:"needToSave",value:function(){switch(this.info.command){case r.default.Command.SendMessage:case r.default.Command.ReportLeaderboardScoresAsync:case r.default.Command.ReportAchievementProgressAsync:case r.default.Command.AddGuildExperience:return!0;default:return!1}}},{key:"couldBeReplaced",value:function(e){var t=this.getCommand();switch(e){case r.default.Command.OpenLeaderBoards:case r.default.Command.OpenAchievements:case r.default.Command.OpenFriends:case r.default.Command.OpenChannel:case r.default.Command.OpenGuilds:case r.default.Command.OpenMyGuild:return t===r.default.Command.OpenLeaderBoards||t===r.default.Command.OpenAchievements||t===r.default.Command.OpenFriends||t===r.default.Command.OpenChannel||t===r.default.Command.OpenGuilds||t===r.default.Command.OpenMyGuild;case r.default.Command.AuthorizeWithCredentials:case r.default.Command.AuthorizeAsGuest:case r.default.Command.AuthorizeWithCustomId:case r.default.Command.ForceLogout:case r.default.Command.GetGuildInfo:case r.default.Command.GetAchievementsInfo:case r.default.Command.GetPlayerPublicInfo:case r.default.Command.GetLeaderboardScores:case r.default.Command.SetSafeArea:case r.default.Command.UnnyNetWasOpened:return t===e;default:return!1}}},{key:"_isOpenCommand",value:function(e){switch(e){case r.default.Command.OpenLeaderBoards:case r.default.Command.OpenAchievements:case r.default.Command.OpenFriends:case r.default.Command.OpenChannel:case r.default.Command.OpenGuilds:case r.default.Command.OpenMyGuild:return!0;default:return!1}}},{key:"sameType",value:function(e){var t=this.getCommand();return!(!this._isOpenCommand(e)||!this._isOpenCommand(t))||e===t}},{key:"isDelayedRequestConfirm",value:function(){return c.isDelayedRequestConfirm(this.getCommand())}},{key:"isRequestWithFixedOrder",value:function(){return c.isRequestWithFixedOrder(this.getCommand())}},{key:"startWaiting",value:function(){this.delayedRequestWaiting=!0}},{key:"isWaiting",value:function(){return this.delayedRequestWaiting}}],[{key:"loadData",value:function(e){var t=null;return e.hasOwnProperty("req_id")?((t=new d(e.command,e.code)).setRequestId(e.req_id),i.default.addLoadedRequest(t)):t=new c(e.command,e.code),t}},{key:"isDelayedRequestConfirm",value:function(e){switch(e){case r.default.Command.ReportLeaderboardScoresAsync:case r.default.Command.ReportAchievementProgressAsync:return!0}return!1}},{key:"isRequestWithFixedOrder",value:function(e){switch(e){case r.default.Command.ReportLeaderboardScoresAsync:return!0}return!1}}]),c);function c(e,t){var n=2<arguments.length&&void 0!==arguments[2]&&arguments[2],a=3<arguments.length&&void 0!==arguments[3]?arguments[3]:null;s(this,c),this.info={command:e,code:t,openWindow:n,callback:a},this.startedTime=null,this.req_id=-1,this.delayedRequestWaiting=!1}t.default=l;var d=t.UnnyCommandInfoDelayed=(function(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}(f,l),a(f,[{key:"setRequestId",value:function(e){this.req_id=e}}]),f);function f(e,t){var n=2<arguments.length&&void 0!==arguments[2]?arguments[2]:null;s(this,f);var a=function(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}(this,(f.__proto__||Object.getPrototypeOf(f)).call(this,e,t,!1,null));return a.info.callbackDelayed=n,i.default.addRequest(a),a}},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});function a(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}var o,r=(o=n(4))&&o.__esModule?o:{default:o},i=n(1),u=(function(e,t,n){t&&a(e.prototype,t),n&&a(e,n)}(s,[{key:"_requestId",value:function(){return this.uniqueIds===Number.MAX_SAFE_INTEGER?this.uniqueIds=0:this.uniqueIds++,this.uniqueIds}}],[{key:"getInstance",value:function(){return s.staticRequestsManagerInstance||(s.staticRequestsManagerInstance=new s),s.staticRequestsManagerInstance}},{key:"addRequest",value:function(e){var t=s.getInstance(),n=t._requestId();if((t.allRequests[n]=e).getCode()){var a=e.getCode().replace("<*id*>",n);e.setRequestId(n),e.setCode(a)}}},{key:"addLoadedRequest",value:function(e){if(0<=e.req_id){var t=s.getInstance(),n=e.req_id;t.allRequests[n]=e,n>=t.uniqueIds&&(t.uniqueIds=n===Number.MAX_SAFE_INTEGER?0:n+1)}}},{key:"replyReceived",value:function(e){var t=s.getInstance(),n=e.id;if(t.allRequests.hasOwnProperty(n)){var a=t.allRequests[n],o=a.invokeCallbackDelayed(e);if(a.isDelayedRequestConfirm()){var u=o.success;if(!u)switch(o.error.code){case i.Errors.NoSuchLeaderboard:case i.Errors.NoSuchAchievement:case i.Errors.WrongAchievementType:case i.Errors.AchievementIsNotPublished:u=!0}u&&(r.default.delayedCommandWasConfirmed(a),delete t.allRequests[n])}else delete t.allRequests[n]}}}]),s);function s(){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,s),this.uniqueIds=0,this.allRequests={}}u.staticRequestsManagerInstance=null,t.default=u},function(e,t,n){"use strict";function a(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}Object.defineProperty(t,"__esModule",{value:!0});var o="un_token",r="un_refresh_token",i=(function(e,t,n){n&&a(e,n)}(u,0,[{key:"_saveValue",value:function(e,t){localStorage.setItem(e,t)}},{key:"_getValue",value:function(e){return localStorage.getItem(e)}},{key:"_removeItem",value:function(e){localStorage.removeItem(e)}},{key:"setToken",value:function(e){u._saveValue(o,e)}},{key:"getToken",value:function(){return u._getValue(o)}},{key:"setRefreshToken",value:function(e){u._saveValue(r,e)}},{key:"getRefreshToken",value:function(){u._getValue(r)}},{key:"clearTokens",value:function(){u._removeItem(o),u._removeItem(r)}}]),u);function u(){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,u)}t.default=i},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});function a(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}var o,r=(o=n(4))&&o.__esModule?o:{default:o},i=(function(e,t,n){t&&a(e.prototype,t),n&&a(e,n)}(u,[{key:"_getSaveKey",value:function(){return"UN_API_SAVE_"+this.game_id}},{key:"_updateTokenForRequests",value:function(e){for(var t in this.requestsQueue){var n=this.requestsQueue[t].data.request;n.headers.hasOwnProperty("Authorization")&&(n.headers.Authorization="Bearer "+e)}}},{key:"_enqueueRequest",value:function(e,t,n,a,o){var r={data:{url:e,request:t},callback:o,retries:0,save:n};a?this.requestsQueue.unshift(r):this.requestsQueue.push(r),this.requests_were_updated=!0,1===this.requestsQueue.length&&this._sendNextRequest()}},{key:"_checkRequestToSave",value:function(){if(0<this.requestsQueue.length&&this.requests_were_updated){var e=Date.now();5e3<e-this.last_update_time&&(this.last_update_time=e,this.requests_were_updated=!1,this.saveRequests())}}},{key:"_removeFirstRequest",value:function(e){for(var t=0;t<this.requestsQueue.length;t++)this.requestsQueue[t]===e&&this.requestsQueue.splice(t,1);this._sendNextRequest(),this.last_update_time=Date.now()}},{key:"_sendNextRequest",value:function(){var e=this;if(0!==this.requestsQueue.length){var t=this.requestsQueue[0],n=t.data.url,a=t.data.request,o=t.callback;r.default.log("fetch",n,a.body),fetch(n,a).then((function(e){return r.default.log("fetch response",e),200<=e.status&&e.status<300?e.json():Promise.reject(e)})).then((function(n){o&&o(null,n),e._removeFirstRequest(t)})).catch((function(n){r.default.log("fetch failed",n),t.retries<3?(t.retries++,setTimeout((function(){return e._sendNextRequest()}),1e3)):(o&&o(n,null),e._removeFirstRequest(t))}))}}},{key:"loadRequests",value:function(){var e=localStorage.getItem(this._getSaveKey());if(e){var t=JSON.parse(e);if(t)for(var n in t){var a=t[n];this._enqueueRequest(a.url,a.request,!0,null)}localStorage.removeItem(this._getSaveKey())}}},{key:"saveRequests",value:function(){var e=Math.min(100,this.requestsQueue.length);if(0<e){for(var t=[],n=0;n<e;n++)this.requestsQueue[n].save&&t.push(this.requestsQueue[n].data);localStorage.setItem(this._getSaveKey(),JSON.stringify(t))}}}],[{key:"updateTokenForRequests",value:function(e){u.instance._updateTokenForRequests(e)}},{key:"enqueueRequest",value:function(e,t,n,a){u.instance._enqueueRequest(e,t,n,!1,a)}},{key:"enqueueImportantRequest",value:function(e,t,n,a){u.instance._enqueueRequest(e,t,n,!0,a)}}]),u);function u(e){var t=this;!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,u),this.game_id=e.game_id,this.requestsQueue=[],(u.instance=this).loadRequests(),this.last_update_time=Date.now(),this.requests_were_updated=!1,setInterval((function(){return t._checkRequestToSave()}),1e3)}t.default=i},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var a=c(n(0)),o=n(23),r=c(o),i=n(5),u=n(1),s=n(2),l=c(s);function c(e){return e&&e.__esModule?e:{default:e}}t.default={UnnyNet:a.default,PopupButtons:r.default,ButtonType:o.ButtonType,ViewOpenDirection:i.ViewOpenDirection,Errors:u.Errors,NutakuPlatform:s.NutakuPlatform,Platform:l.default.Platform,Environment:l.default.Environment,PurchaseStatusFilter:l.default.PurchaseStatusFilter}},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});function a(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}var o=u(n(5)),r=u(n(2)),i=u(n(0));function u(e){return e&&e.__esModule?e:{default:e}}var s=(function(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}(l,o.default),function(e,t,n){t&&a(e.prototype,t),n&&a(e,n)}(l,[{key:"openGameUrl",value:function(e,t){var n={game_id:e.game_id,public_key:e.public_key,version:r.default.GENERAL_CONSTANTS.VERSION,device:"web",location_origin:window.location.origin};e.game_login&&(n.game_login=1),t&&(n.device_id=t),e.platform&&(n.platform=e.platform);var a=encodeURIComponent(JSON.stringify(n)),o=r.default.GENERAL_CONSTANTS.REMOTE_URL+"/#/plugin/?data="+a;this.openUrl(o)}},{key:"setCloseButtonVisible",value:function(e){this.closeBtn.style.visibility=e?"visible":"hidden"}}]),l);function l(e){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,l);var t=function(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}(this,(l.__proto__||Object.getPrototypeOf(l)).call(this,e)),n=document.createElement("button");t.closeBtn=t.parent.appendChild(n);var a=t.closeBtn.style;return a.position="absolute",a.top=a.right="7px",a.outline="none",a.background="none",a.border="none",t.closeBtn.innerHTML='<img src="https://unnynet.azureedge.net/users/attachments/b246adbe-c1af-4532-88ca-f1d1709b0211/09b47e40-e61b-11e9-b83d-a5adea23c281.png" />',t.closeBtn.onclick=i.default.closeUnnyNet,t}t.default=s},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});function a(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}var o,r=n(1),i=(o=n(0))&&o.__esModule?o:{default:o},u=(function(e,t,n){t&&a(e.prototype,t),n&&a(e,n)}(s,null,[{key:"create",value:function(e,t,n){switch(e){case"ask_new_guild":s._askNewGuildRequest(t,n);break;case"popup_appeared":s._playerPopupAppearedRequest(t,n)}}},{key:"sendFailed",value:function(e,t,n,a){var o=2<arguments.length&&void 0!==n?n:"";t(e,'{"success": 0, "error": {"code":'+(3<arguments.length&&void 0!==a?a:r.Errors.Unknown)+', "message": "'+o+'"}}')}},{key:"sendSuccess",value:function(e,t){t(e,'{"success": 1}')}},{key:"sendSuccessWithData",value:function(e,t,n){n(e,'{"success": 1, "data":'+t+"}")}},{key:"_askNewGuildRequest",value:function(e,t){var n=e.sys_id,a=null;i.default.onNewGuildRequest&&(a=i.default.onNewGuildRequest(e)),a?s.sendFailed(n,t,a):s.sendSuccess(n,t)}},{key:"_playerPopupAppearedRequest",value:function(e,t){var n=e.sys_id;if(null!=i.default.onPopupOpened){var a=i.default.onPopupOpened(e);if(null!=a)return void s.sendSuccessWithData(n,a.parse(),t)}s.sendSuccess(n,t)}},{key:"buttonClicked",value:function(e){if(PopupButtons.activePopup){var t=e.button_id;if(t){var n=parseInt(t);PopupButtons.activePopup.buttonClicked(n)}}}}]),s);function s(){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,s)}t.default=u},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});function a(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}var o=l(n(8)),r=l(n(14)),i=n(1),u=l(i),s=l(n(9));function l(e){return e&&e.__esModule?e:{default:e}}function c(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}l(n(2)),l(n(0));var d="https://un-api.unnynet.com",f=(function(e,t,n){t&&a(e.prototype,t),n&&a(e,n)}(p,[{key:"_onAuth",value:function(e){var t=e?e.accessToken:null,n=e?e.refreshToken:null;t&&(o.default.setToken(t),s.default.updateTokenForRequests(t)),n&&o.default.setRefreshToken(n)}},{key:"_onAuthCallback",value:function(e,t,n){var a=void 0;e?a=u.default.getErrorResponse(i.Errors.Unknown,e.status+":"+e.statusText):(a=u.default.getSuccessResponse(t),this._onAuth(t)),n&&n(a)}},{key:"_onCallback",value:function(e,t,n){var a;a=e?u.default.getErrorResponse(i.Errors.Unknown,e.status+":"+e.statusText):u.default.getSuccessResponse(t),n&&n(a)}},{key:"_sendDefaultError",value:function(e,t){t&&t(u.default.getErrorResponse(i.Errors.Unknown,e)),console.error(e)}},{key:"authWithLogin",value:function(e,t,n){var a=this;o.default.clearTokens(),new r.default(d+"/v1/auth/name",{name:e,password:t,game_id:this.config.game_id,public_key:this.config.public_key},(function(e,t){return a._onAuthCallback(e,t,n)})).markAsAuth().post()}},{key:"authWithVK",value:function(e,t,n,a){var i=this;return e||0===e?t?n?(o.default.clearTokens(),void new r.default(d+"/v1/auth/vk",{env:e,user_id:t,token:n,game_id:this.config.game_id,public_key:this.config.public_key},(function(e,t){return i._onAuthCallback(e,t,a)})).markAsAuth().post()):this._sendDefaultError("[VK]: no auth_key provided",a):this._sendDefaultError("[VK]: no viewer_id provided",a):this._sendDefaultError("[VK]: no environment provided",a)}},{key:"authWithOK",value:function(e,t,n,a){var i=this;return e||0===e?t?n?(o.default.clearTokens(),void new r.default(d+"/v1/auth/ok",{env:e,access_token:t,session_secret_key:n,game_id:this.config.game_id,public_key:this.config.public_key},(function(e,t){return i._onAuthCallback(e,t,a)})).markAsAuth().post()):this._sendDefaultError("[OK]: no session_secret_key provided",a):this._sendDefaultError("[OK]: no access_token provided",a):this._sendDefaultError("[OK]: no environment provided",a)}},{key:"authWithFB",value:function(e,t,n){var a=this;return e||0===e?t?(o.default.clearTokens(),void new r.default(d+"/v1/auth/fb",{env:e,token:t,game_id:this.config.game_id,public_key:this.config.public_key},(function(e,t){return a._onAuthCallback(e,t,n)})).markAsAuth().post()):this._sendDefaultError("[FB]: no auth_key provided",n):this._sendDefaultError("[FB]: no environment provided",n)}},{key:"authWithNutaku",value:function(e,t,n,a,i,u){var s=this;o.default.clearTokens(),new r.default(d+"/v1/auth/nutaku",{user_id:e,platform:t.toString(),oauth_token:n,oauth_token_secret:a,autologin_token:i,game_id:this.config.game_id,public_key:this.config.public_key},(function(e,t){return s._onAuthCallback(e,t,u)})).markAsAuth().post()}},{key:"authWithNutakuGadget",value:function(e){var t=this;if("undefined"!=typeof gadgets){var n;o.default.clearTokens();var a=(c(n={},gadgets.io.RequestParameters.METHOD,gadgets.io.MethodType.POST),c(n,gadgets.io.RequestParameters.CONTENT_TYPE,gadgets.io.ContentType.JSON),c(n,gadgets.io.RequestParameters.POST_DATA,gadgets.io.encodeValues({game_id:this.config.game_id,public_key:this.config.public_key})),c(n,gadgets.io.RequestParameters.AUTHORIZATION,gadgets.io.AuthorizationType.SIGNED),n);console.error("SENDING...",a),gadgets.io.makeRequest(d+"/v1/auth/nutaku_pc",(function(n){console.info("NUTAKU REPLY",n),n.errors&&n.errors.length&&console.error("AUTH ERROR",n.errors),t._onAuthCallback(null,n.data,e)}),a)}else console.warn("AUTH with login"),this.authWithLogin("test_user1","test_password",e)}},{key:"purchaseProduct",value:function(e,t){var n=this,a={};a[opensocial.BillingItem.Field.SKU_ID]="com.un.test.1",a[opensocial.BillingItem.Field.PRICE]=1e3,a[opensocial.BillingItem.Field.COUNT]=1,a[opensocial.BillingItem.Field.DESCRIPTION]="item 001",a[nutaku.BillingItem.Field.NAME]="Much Doge1",a[nutaku.BillingItem.Field.IMAGE_URL]="http://i.imgur.com/cBAPCQ4.png";var o=opensocial.newBillingItem(a),r={};r[opensocial.Payment.Field.ITEMS]=[o],r[opensocial.Payment.Field.MESSAGE]="Optional message to show alongside the items",r[opensocial.Payment.Field.PAYMENT_TYPE]=opensocial.Payment.PaymentType.PAYMENT;var i=opensocial.newPayment(r);console.info("MAKE_PURCHASE",i),opensocial.requestPayment(i,(function(e){if(e.hadError())console.error("ERROR",e),n._onCallback(e,null,t);else{var a=e.getData(),o=a.getField(nutaku.Payment.Field.PAYMENT_ID);console.info("INFO> "+o,a),n._onCallback(null,e,t)}}))}},{key:"getPurchases",value:function(e,t){var n=this;return console.log("1 getPurchases = "+e),new r.default(d+"/v1/payments/purchases?status="+e,null,(function(e,a){return n._onCallback(e,a,t)})).setToken(o.default.getToken()).get()}},{key:"completeNutakuPurchase",value:function(e,t,n,a){var i=this;return new r.default(d+"/v1/payments/nutaku/complete",{platform:t,order_id:n,user_id:e},(function(e,t){return i._onCallback(e,t,a)})).setToken(o.default.getToken()).post()}},{key:"completeNutakuPurchase2",value:function(e,t,n,a){var i=this;return new r.default(d+"/v1/payments/nutaku/complete",{platform:t,un_order_id:n,user_id:e},(function(e,t){return i._onCallback(e,t,a)})).setToken(o.default.getToken()).post()}},{key:"claimPurchase",value:function(e,t,n,a){var i=this;return new r.default(d+"/v1/payments/all/claim",{platform:t,order_id:n,user_id:e},(function(e,t){return i._onCallback(e,t,a)})).setToken(o.default.getToken()).post()}},{key:"claimPurchase2",value:function(e,t,n,a){var i=this;return new r.default(d+"/v1/payments/all/claim",{platform:t,un_order_id:n,user_id:e},(function(e,t){return i._onCallback(e,t,a)})).setToken(o.default.getToken()).post()}},{key:"_save",value:function(e,t,n,a,i){var u=this;a=a||-1,new r.default(d+"/v1/saves",{collection:e,key:t,value:n},(function(e,t){return u._onCallback(e,t,i)})).setToken(o.default.getToken()).setHeader("data-version",a.toString()).post()}},{key:"save",value:function(e,t,n,a,r){o.default.getToken()?this._save(e,t,n,a,r):r&&r(u.default.getErrorResponse(i.Errors.NoAccessToken))}},{key:"_load",value:function(e,t,n){var a=this;new r.default(d+"/v1/saves?collection="+e+(t?"&key="+t:""),null,(function(e,t){return a._onCallback(e,t,n)})).setToken(o.default.getToken()).get()}},{key:"load",value:function(e,t,n){o.default.getToken()?this._load(e,t,n):n&&n(u.default.getErrorResponse(i.Errors.NoAccessToken))}}]),p);function p(e){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,p),this.config=e,this.apiRequests=new s.default(this.config)}t.default=f},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});function a(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}var o=r(n(9));function r(e){return e&&e.__esModule?e:{default:e}}r(n(8));var i=(function(e,t,n){t&&a(e.prototype,t),n&&a(e,n)}(u,[{key:"setHeaders",value:function(e){return this.headers=e,this}},{key:"setHeader",value:function(e,t){return this.headers||(this.headers={}),this.headers[e]=t,this}},{key:"setToken",value:function(e){return this.setHeader("Authorization","Bearer "+e)}},{key:"_sendRequest",value:function(e,t){this.important?o.default.enqueueImportantRequest(this.url,e,t,this.callback):o.default.enqueueRequest(this.url,e,t,this.callback)}},{key:"_send",value:function(e,t){if(e.headers={"Content-Type":"application/json"},this.headers)for(var n in this.headers)e.headers[n]=this.headers[n];this._sendRequest(e,t)}},{key:"markAsAuth",value:function(){return this.markAsUnsavable().markImportant()}},{key:"markAsUnsavable",value:function(){return this.savePost=!1,this}},{key:"markImportant",value:function(){return this.important=!0,this}},{key:"get",value:function(){this._send({method:"GET"},!1)}},{key:"post",value:function(){var e={method:"POST"};this.data&&(e.body=JSON.stringify(this.data)),this._send(e,this.savePost)}}]),u);function u(e,t){var n=2<arguments.length&&void 0!==arguments[2]?arguments[2]:null;!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,u),this.url=e,this.data=t,this.callback=n,this.retry=0,this.savePost=!0,this.important=!1}t.default=i},function(e,t,n){"use strict";(function(e){var n,a,o,r,i="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};window,r=function(){return function(e){var t=window.webpackHotUpdateUnnyAdmin;window.webpackHotUpdateUnnyAdmin=function(e,n){!function(e,t){if(k[e]&&g[e]){for(var n in g[e]=!1,t)Object.prototype.hasOwnProperty.call(t,n)&&(v[n]=t[n]);0==--y&&0===b&&P()}}(e,n),t&&t(e,n)};var n,a=!0,o="222703fd7b689a678937",r=1e4,u={},s=[],l=[];function c(e){var t=A[e];if(!t)return E;function a(a){return t.hot.active?(A[a]?-1===A[a].parents.indexOf(e)&&A[a].parents.push(e):(s=[e],n=a),-1===t.children.indexOf(a)&&t.children.push(a)):(console.warn("[HMR] unexpected require("+a+") from disposed module "+e),s=[]),E(a)}function o(e){return{configurable:!0,enumerable:!0,get:function(){return E[e]},set:function(t){E[e]=t}}}for(var r in E)Object.prototype.hasOwnProperty.call(E,r)&&"e"!==r&&"t"!==r&&Object.defineProperty(a,r,o(r));return a.e=function(e){return"ready"===f&&p("prepare"),b++,E.e(e).then(t,(function(e){throw t(),e}));function t(){b--,"prepare"===f&&(_[e]||C(e),0===b&&0===y&&P())}},a.t=function(e,t){return 1&t&&(e=a(e)),E.t(e,-2&t)},a}var d=[],f="idle";function p(e){f=e;for(var t=0;t<d.length;t++)d[t].call(null,e)}var h,v,m,y=0,b=0,_={},g={},k={};function w(e){return+e+""===e?+e:e}function O(e){if("idle"!==f)throw new Error("check() is only allowed in idle status");return a=e,p("check"),(t=(t=r)||1e4,new Promise((function(e,n){if("undefined"==typeof XMLHttpRequest)return n(new Error("No browser support"));try{var a=new XMLHttpRequest,r=E.p+""+o+".hot-update.json";a.open("GET",r,!0),a.timeout=t,a.send(null)}catch(e){return n(e)}a.onreadystatechange=function(){if(4===a.readyState)if(0===a.status)n(new Error("Manifest request to "+r+" timed out."));else if(404===a.status)e();else if(200!==a.status&&304!==a.status)n(new Error("Manifest request to "+r+" failed."));else{try{var t=JSON.parse(a.responseText)}catch(t){return void n(t)}e(t)}}}))).then((function(e){if(!e)return p("idle"),null;g={},_={},k=e.c,m=e.h,p("prepare");var t=new Promise((function(e,t){h={resolve:e,reject:t}}));return v={},C(0),"prepare"===f&&0===b&&0===y&&P(),t}));var t}function C(e){var t,n;k[e]?(g[e]=!0,y++,t=e,(n=document.createElement("script")).charset="utf-8",n.src=E.p+""+t+"."+o+".hot-update.js",document.head.appendChild(n)):_[e]=!0}function P(){p("ready");var e=h;if(h=null,e)if(a)Promise.resolve().then((function(){return I(a)})).then((function(t){e.resolve(t)}),(function(t){e.reject(t)}));else{var t=[];for(var n in v)Object.prototype.hasOwnProperty.call(v,n)&&t.push(w(n));e.resolve(t)}}function I(t){if("ready"!==f)throw new Error("apply() is only allowed in ready status");var n,a,r,i,l;function c(e){for(var t=[e],n={},a=t.map((function(e){return{chain:[e],id:e}}));0<a.length;){var o=a.pop(),r=o.id,u=o.chain;if((i=A[r])&&!i.hot._selfAccepted){if(i.hot._selfDeclined)return{type:"self-declined",chain:u,moduleId:r};if(i.hot._main)return{type:"unaccepted",chain:u,moduleId:r};for(var s=0;s<i.parents.length;s++){var l=i.parents[s],c=A[l];if(c){if(c.hot._declinedDependencies[r])return{type:"declined",chain:u.concat([l]),moduleId:r,parentId:l};-1===t.indexOf(l)&&(c.hot._acceptedDependencies[r]?(n[l]||(n[l]=[]),d(n[l],[r])):(delete n[l],t.push(l),a.push({chain:u.concat([l]),id:l})))}}}}return{type:"accepted",moduleId:e,outdatedModules:t,outdatedDependencies:n}}function d(e,t){for(var n=0;n<t.length;n++){var a=t[n];-1===e.indexOf(a)&&e.push(a)}}function h(){console.warn("[HMR] unexpected require("+O.moduleId+") to disposed module")}t=t||{};var y={},b=[],_={};for(var g in v)if(Object.prototype.hasOwnProperty.call(v,g)){var O;l=w(g);var C=!1,P=!1,I=!1,R="";switch((O=v[g]?c(l):{type:"disposed",moduleId:g}).chain&&(R="\nUpdate propagation: "+O.chain.join(" -> ")),O.type){case"self-declined":t.onDeclined&&t.onDeclined(O),t.ignoreDeclined||(C=new Error("Aborted because of self decline: "+O.moduleId+R));break;case"declined":t.onDeclined&&t.onDeclined(O),t.ignoreDeclined||(C=new Error("Aborted because of declined dependency: "+O.moduleId+" in "+O.parentId+R));break;case"unaccepted":t.onUnaccepted&&t.onUnaccepted(O),t.ignoreUnaccepted||(C=new Error("Aborted because "+l+" is not accepted"+R));break;case"accepted":t.onAccepted&&t.onAccepted(O),P=!0;break;case"disposed":t.onDisposed&&t.onDisposed(O),I=!0;break;default:throw new Error("Unexception type "+O.type)}if(C)return p("abort"),Promise.reject(C);if(P)for(l in _[l]=v[l],d(b,O.outdatedModules),O.outdatedDependencies)Object.prototype.hasOwnProperty.call(O.outdatedDependencies,l)&&(y[l]||(y[l]=[]),d(y[l],O.outdatedDependencies[l]));I&&(d(b,[O.moduleId]),_[l]=h)}var S,T=[];for(a=0;a<b.length;a++)l=b[a],A[l]&&A[l].hot._selfAccepted&&_[l]!==h&&T.push({module:l,errorHandler:A[l].hot._selfAccepted});p("dispose"),Object.keys(k).forEach((function(e){!1===k[e]&&delete installedChunks[e]}));for(var N,D,j=b.slice();0<j.length;)if(l=j.pop(),i=A[l]){var q={},M=i.hot._disposeHandlers;for(r=0;r<M.length;r++)(n=M[r])(q);for(u[l]=q,i.hot.active=!1,delete A[l],delete y[l],r=0;r<i.children.length;r++){var F=A[i.children[r]];F&&0<=(S=F.parents.indexOf(l))&&F.parents.splice(S,1)}}for(l in y)if(Object.prototype.hasOwnProperty.call(y,l)&&(i=A[l]))for(D=y[l],r=0;r<D.length;r++)N=D[r],0<=(S=i.children.indexOf(N))&&i.children.splice(S,1);for(l in p("apply"),o=m,_)Object.prototype.hasOwnProperty.call(_,l)&&(e[l]=_[l]);var G=null;for(l in y)if(Object.prototype.hasOwnProperty.call(y,l)&&(i=A[l])){D=y[l];var U=[];for(a=0;a<D.length;a++)if(N=D[a],n=i.hot._acceptedDependencies[N]){if(-1!==U.indexOf(n))continue;U.push(n)}for(a=0;a<U.length;a++){n=U[a];try{n(D)}catch(n){t.onErrored&&t.onErrored({type:"accept-errored",moduleId:l,dependencyId:D[a],error:n}),t.ignoreErrored||(G=G||n)}}}for(a=0;a<T.length;a++){var L=T[a];l=L.module,s=[l];try{E(l)}catch(a){if("function"==typeof L.errorHandler)try{L.errorHandler(a)}catch(n){t.onErrored&&t.onErrored({type:"self-accept-error-handler-errored",moduleId:l,error:n,originalError:a}),t.ignoreErrored||(G=G||n),G=G||a}else t.onErrored&&t.onErrored({type:"self-accept-errored",moduleId:l,error:a}),t.ignoreErrored||(G=G||a)}}return G?(p("fail"),Promise.reject(G)):(p("idle"),new Promise((function(e){e(b)})))}var A={};function E(t){if(A[t])return A[t].exports;var a,o=A[t]={i:t,l:!1,exports:{},hot:(a={_acceptedDependencies:{},_declinedDependencies:{},_selfAccepted:!1,_selfDeclined:!1,_disposeHandlers:[],_main:n!==t,active:!0,accept:function(e,t){if(void 0===e)a._selfAccepted=!0;else if("function"==typeof e)a._selfAccepted=e;else if("object"==(void 0===e?"undefined":i(e)))for(var n=0;n<e.length;n++)a._acceptedDependencies[e[n]]=t||function(){};else a._acceptedDependencies[e]=t||function(){}},decline:function(e){if(void 0===e)a._selfDeclined=!0;else if("object"==(void 0===e?"undefined":i(e)))for(var t=0;t<e.length;t++)a._declinedDependencies[e[t]]=!0;else a._declinedDependencies[e]=!0},dispose:function(e){a._disposeHandlers.push(e)},addDisposeHandler:function(e){a._disposeHandlers.push(e)},removeDisposeHandler:function(e){var t=a._disposeHandlers.indexOf(e);0<=t&&a._disposeHandlers.splice(t,1)},check:O,apply:I,status:function(e){if(!e)return f;d.push(e)},addStatusHandler:function(e){d.push(e)},removeStatusHandler:function(e){var t=d.indexOf(e);0<=t&&d.splice(t,1)},data:u[t]},n=void 0,a),parents:(l=s,s=[],l),children:[]};return e[t].call(o.exports,o,o.exports,c(t)),o.l=!0,o.exports}return E.m=e,E.c=A,E.d=function(e,t,n){E.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:n})},E.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},E.t=function(e,t){if(1&t&&(e=E(e)),8&t)return e;if(4&t&&"object"==(void 0===e?"undefined":i(e))&&e&&e.__esModule)return e;var n=Object.create(null);if(E.r(n),Object.defineProperty(n,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var a in e)E.d(n,a,function(t){return e[t]}.bind(null,a));return n},E.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return E.d(t,"a",t),t},E.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},E.p="",E.h=function(){return o},c(0)(E.s=0)}([function(e,t,n){Object.defineProperty(t,"__esModule",{value:!0});var a,o=(a=n(1))&&a.__esModule?a:{default:a};t.default={UnnyRGC:o.default}},function(e,t,n){Object.defineProperty(t,"__esModule",{value:!0}),t.Errors=void 0;var a="function"==typeof Symbol&&"symbol"==i(Symbol.iterator)?function(e){return void 0===e?"undefined":i(e)}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":void 0===e?"undefined":i(e)};function o(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}var r=s(n(2)),u=s(n(3));function s(e){return e&&e.__esModule?e:{default:e}}var l,c,d="name",f="version",p=t.Errors={FAILED_DOWNLOAD_VERSIONS:1e3,FAILED_DOWNLOAD_DICTIONARY:1001,PARSING_ERROR:1002},h=(c=[{key:"_sendFailedCallback",value:function(e,t,n){e({success:!1,error:{code:t,message:n}})}},{key:"initialize",value:function(e,t){return(v.instance=new v)._initialize(e.game_id,t),v.instance}}],o((l=v).prototype,[{key:"_getFileExtension",value:function(){return".json"}},{key:"_downloadNextDictionary",value:function(){function e(e){var n=t.allDictionaries[e];if(1===n.status){var a=t.downloadUrl+n[d]+(n.version?"_v"+n.version:"")+t._getFileExtension();return v.instance.downloader.loadJson(a,(function(e){e.success?(n.value=e.data,n.status=0,t.db.saveDictionary(n[d],n.value,n[f]),t._downloadNextDictionary()):(e.error.code=p.FAILED_DOWNLOAD_DICTIONARY,t.callback(e))})),{v:void 0}}}var t=this;for(var n in this.allDictionaries){var o=e(n);if("object"===(void 0===o?"undefined":a(o)))return o.v}this.callback&&(this.callback({success:!0}),this.callback=null)}},{key:"_initialize",value:function(e,t){var n=this;this.callback=t,this.db=new u.default("UNNY_RGC_"+e,2),this.downloadUrl="https://dictionaries-unnynet.fra1.cdn.digitaloceanspaces.com/dictionaries/"+e+"/";var a="https://dictionaries-unnynet.fra1.digitaloceanspaces.com/dictionaries/"+e+"/versions"+this._getFileExtension()+"?timestamp="+Math.trunc((new Date).getTime());v.instance.downloader.loadJson(a,(function(e){if(e.success){var a=e.data.dictionaries;a?n.db.waitForTheConnection((function(){for(var e=a.length,t=function(t){var o=a[t],r=o[d];n.db.loadDictionary(r,(function(t){o[f]<=(t?t.version:-1)&&t.value?(o.status=0,o.value=t.value):o.status=1,n.allDictionaries[o.name]=o,0==--e&&n._downloadNextDictionary()}))},o=0;o<a.length;o++)t(o)})):v._sendFailedCallback(t,p.PARSING_ERROR,e.data.toString())}else e.error.code=p.FAILED_DOWNLOAD_VERSIONS,t(e)}))}},{key:"getDictionary",value:function(e){return this.allDictionaries.hasOwnProperty(e)?this.allDictionaries[e].value:null}}]),o(l,c),v);function v(){!function(e){if(!(e instanceof v))throw new TypeError("Cannot call a class as a function")}(this),this.downloader=new r.default,this.allDictionaries=[]}t.default=h},function(e,t,n){Object.defineProperty(t,"__esModule",{value:!0});var a=(function(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}(o.prototype,[{key:"loadJson",value:function(e,t){fetch(e).then((function(e){return e.json()})).then((function(e){return t({success:!0,data:e})})).catch((function(e){return t({success:!1,error:{message:e.toString()}})}))}}]),o);function o(){!function(e){if(!(e instanceof o))throw new TypeError("Cannot call a class as a function")}(this)}t.default=a},function(e,t,n){Object.defineProperty(t,"__esModule",{value:!0});var a=0,o=-1,r=2,i=3,u="all_dictionaries",s=(function(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}(l.prototype,[{key:"_callCallback",value:function(){this.callback&&(this.callback(this.isActive()),this.callback=null)}},{key:"waitForTheConnection",value:function(e){this.callback=e,this.dbState!==r&&this._callCallback()}},{key:"saveDictionary",value:function(e,t,n){if(this.isActive())try{this.db.transaction([u],"readwrite").objectStore(u).put({name:e,value:t,version:n}).onerror=function(t){console.error("Failed to save "+e,t)}}catch(t){console.error("Something went wrong during saving",t)}}},{key:"loadDictionary",value:function(e,t){if(this.isActive())try{var n=this.db.transaction([u],"readonly").objectStore(u).get(e);n.onerror=function(n){console.error("couldn't load dictionary "+e,n),t(null)},n.onsuccess=function(){t(n.result)}}catch(n){console.error("Something went wrong during loading",n),t(null)}}},{key:"isActive",value:function(){return this.dbState===i}}]),l);function l(e,t){var n=this;if(function(e){if(!(e instanceof l))throw new TypeError("Cannot call a class as a function")}(this),this.dbSupport=!!window.indexedDB,this.dbSupport){this.dbState=r;var s=window.indexedDB.open(e,t);s.onerror=function(e){console.error("Couldn't connect to DB",s.errorCode),n.dbState=a,n._callCallback()},s.onsuccess=function(e){n.db=e.target.result,n.dbState=i,n._callCallback()},s.onupgradeneeded=function(e){n.db=e.target.result,n.db.createObjectStore(u,{keyPath:"name"})}}else console.error("IndexedDB isn't supported"),this.dbState=o}t.default=s}]).default},"object"==i(t)&&"object"==i(e)?e.exports=r():(a=[],void 0===(o="function"==typeof(n=r)?n.apply(t,a):n)||(e.exports=o))}).call(this,n(16)(e))},function(e,t){e.exports=function(e){return e.webpackPolyfill||(e.deprecate=function(){},e.paths=[],e.children||(e.children=[]),Object.defineProperty(e,"loaded",{enumerable:!0,get:function(){return e.l}}),Object.defineProperty(e,"id",{enumerable:!0,get:function(){return e.i}}),e.webpackPolyfill=1),e}},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});function a(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}var o=d(n(2)),r=d(n(18)),i=d(n(19)),u=d(n(20)),s=d(n(21)),l=d(n(3)),c=d(n(22));function d(e){return e&&e.__esModule?e:{default:e}}var f=(function(e,t,n){t&&a(e.prototype,t),n&&a(e,n)}(p,null,[{key:"createSocialPlatform",value:function(e,t){switch(t){case o.default.Platform.NUTAKU:return new r.default(e);case o.default.Platform.VKONTAKTE:return new i.default(e);case o.default.Platform.ODNOKLASSNIKI:return new u.default(e);case o.default.Platform.FACEBOOK:return new s.default(e);case o.default.Platform.FB_INSTANT:return new c.default(e);default:return new l.default(e)}}}]),p);function p(){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,p)}t.default=f},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});function a(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}var o,r=(function(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}(i,((o=n(3))&&o.__esModule?o:{default:o}).default),function(e,t,n){t&&a(e.prototype,t),n&&a(e,n)}(i,[{key:"authorize",value:function(e){this.API.authWithNutakuGadget(e)}},{key:"getDeviceIdForNakama",value:function(){return null}}]),i);function i(e){return function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,i),function(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}(this,(i.__proto__||Object.getPrototypeOf(i)).call(this,e))}t.default=r},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});function a(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}var o=i(n(3)),r=i(n(0));function i(e){return e&&e.__esModule?e:{default:e}}var u=(function(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}(s,o.default),function(e,t,n){t&&a(e.prototype,t),n&&a(e,n)}(s,[{key:"authorize",value:function(e){this.API.authWithVK(this.environment,this._getVkUserId(),this._getVkAccessToken(),e),this._autoAuthInNakama()}},{key:"_getVkUserId",value:function(){return this.allGetParams.viewer_id}},{key:"_getVkAccessToken",value:function(){return this.allGetParams.access_token}},{key:"_autoAuthInNakama",value:function(){r.default.authorizeAsGuest("")}},{key:"getDeviceIdForNakama",value:function(){return"vkontakte_"+this._getVkUserId()}}]),s);function s(){return function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,s),function(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}(this,(s.__proto__||Object.getPrototypeOf(s)).apply(this,arguments))}t.default=u},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});function a(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}var o=i(n(3)),r=i(n(0));function i(e){return e&&e.__esModule?e:{default:e}}var u=(function(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}(s,o.default),function(e,t,n){t&&a(e.prototype,t),n&&a(e,n)}(s,[{key:"authorize",value:function(e){this.API.authWithOK(e),this._autoAuthInNakama()}},{key:"_autoAuthInNakama",value:function(){r.default.authorizeAsGuest("")}},{key:"getDeviceIdForNakama",value:function(){return"odnoklassniki_user_id"}}]),s);function s(){return function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,s),function(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}(this,(s.__proto__||Object.getPrototypeOf(s)).apply(this,arguments))}t.default=u},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});function a(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}var o=i(n(3)),r=i(n(0));function i(e){return e&&e.__esModule?e:{default:e}}var u=(function(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}(s,o.default),function(e,t,n){t&&a(e.prototype,t),n&&a(e,n)}(s,[{key:"authorize",value:function(e){this._initializeFacebook((function(){console.warn("INITIALIZED -> auth"),r.default.authorize("test_user1","test_password",e)}))}},{key:"_autoAuthInNakama",value:function(){r.default.authorizeAsGuest("")}},{key:"_initializeFacebook",value:function(e){var t,n,a,o,r=this;window!==top?(window.fbAsyncInit=function(){FB.init({appId:r.fb_app_id,cookie:!0,xfbml:!0,version:"v3.3"}),FB.AppEvents.logPageView();var t=function(e){var t={scope:"email"};e&&(t.auth_type="rerequest"),FB.login((function(e){n(e)}),t)},n=function(n){console.info("FB STATUS",n),"connected"===n.status?function(n){r.accessToken=n.authResponse.accessToken,r.fbUserID=n.authResponse.userID,FB.api("/me",{locale:"en_US",fields:"name, picture, email"},(function(n){console.info(n),n.hasOwnProperty("email")?(r.fbUserEmail=n.email,r.fbUserName=n.name,e&&e()):t(!0)}))}(n):t()};FB.getLoginStatus((function(e){n(e)}))},n="facebook-jssdk",a=void 0,o=(t=document).getElementsByTagName("script")[0],t.getElementById(n)||((a=t.createElement("script")).id=n,a.src="https://connect.facebook.net/en_US/sdk.js",o.parentNode.insertBefore(a,o))):e&&e()}}]),s);function s(e){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,s);var t=function(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}(this,(s.__proto__||Object.getPrototypeOf(s)).call(this,e));return t.fb_app_id=e.config.fb_app_id,t}t.default=u},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});function a(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}var o=u(n(3)),r=u(n(0)),i=u(n(4));function u(e){return e&&e.__esModule?e:{default:e}}var s=(function(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}(l,o.default),function(e,t,n){t&&a(e.prototype,t),n&&a(e,n)}(l,[{key:"authorize",value:function(e){this._initializeFacebook((function(){console.warn("INITIALIZED -> auth"),r.default.authorize("test_user1","test_password",e)}))}},{key:"_initializeFacebook",value:function(e){var t,n,a,o;window===top?e&&e():(n="facebook-jssdk",a=void 0,o=(t=document).getElementsByTagName("script")[0],t.getElementById(n)||((a=t.createElement("script")).id=n,a.src="https://connect.facebook.net/en_US/fbinstant.6.3.js",a.onload=function(){"undefined"!=typeof FBInstant?FBInstant.initializeAsync().then((function(){function t(){FBInstant.startGameAsync().then((function(){FBInstant.context.getID(),FBInstant.context.getType();var t=FBInstant.player.getPhoto();this.fbUserID=FBInstant.player.getID(),this.fbUserName=FBInstant.player.getName(),console.info("PLAYERID "+this.fbUserID+" <> "+this.fbUserName,t),e&&e()})).catch((function(e){console.error("Failed to startGameAsync",e)}))}i.default.onLoadingProgress?i.default.onLoadingProgress((function(e){FBInstant.setLoadingProgress(e)}),t):t()})).catch((function(e){console.error("Failed to initializeAsync",e)})):e&&e()},o.parentNode.insertBefore(a,o)))}}]),l);function l(){return function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,l),function(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}(this,(l.__proto__||Object.getPrototypeOf(l)).apply(this,arguments))}t.default=s},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});function a(e,t){for(var n=0;n<t.length;n++){var a=t[n];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}var o=t.ButtonType={Primary:"Primary",Secondary:"Secondary",Success:"Success",Info:"Info",Warning:"Warning",Danger:"Danger"},r=(function(e,t,n){t&&a(e.prototype,t),n&&a(e,n)}(i,[{key:"addButton",value:function(e,t,n){var a=2<arguments.length&&void 0!==n?n:o.Primary;this.allButtons.push({id:i._buttonInstance++,title:e,type:a}),this.allButtonsAction.push(t)}},{key:"parse",value:function(){var e=JSON.stringify(this.allButtons);return console.log("> "+e),'{"buttons": '+e+"}"}},{key:"buttonClicked",value:function(e){for(var t=0;t<this.allButtons.length;t++)if(this.allButtons[t].id===e){var n=this.allButtonsAction[t];n&&n();break}}}]),i);function i(){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,i),(i.activePopup=this).allButtons=[],this.allButtonsAction=[]}r._buttonInstance=0,t.default=r}]).default}));
 window.onerror = function myErrorHandler(errorMsg, url, lineNumber) {
     console.info("[ERROR]: ", errorMsg, url, lineNumber);
     if (typeof ga != 'undefined') {
@@ -15127,13 +15126,1778 @@ class GameTrail {
 
 let gameTrail;
 
+function SocialVK() {
+
+    let app_id;
+    let loadedAds = [];
+    let _getParams = null;
+    const PURCHASE_SUFFIX = ".vk";
+    let authorizing = false;
+
+    function _preloadAd(callbacks, playMethod) {
+        if (typeof admanInit === 'undefined') {
+            if (callbacks && callbacks.onAdBlock)
+                callbacks.onAdBlock();
+            return;
+        }
+        console.log("preloadAdFor app " + app_id);
+        admanInit({
+            user_id: null,
+            app_id: app_id,
+            type: 'rewarded',         // 'preloader' или 'rewarded' (по умолчанию - 'preloader')
+            // params: {preview: 1}   // для проверки корректности работы рекламы
+        }, onAdsReady, onNoAds);
+
+        function onAdsReady(adman) {
+            loadedAds.push(adman);
+            if (playMethod)
+                playMethod(callbacks);
+        }
+
+        function onNoAds() {
+            console.error("onNoAds");
+            if (callbacks && callbacks.onNoAds)
+                callbacks.onNoAds();
+        }
+    }
+
+    function _playRewardedAd(callbacks) {
+        if (loadedAds.length > 0) {
+            adman = loadedAds.pop();
+            if (callbacks.onStarted) {
+                adman.onStarted(function () {
+                    callbacks.onStarted();
+                });
+            }
+
+            if (callbacks.onCompleted) {
+                adman.onCompleted(function () {
+                    callbacks.onCompleted();
+                });
+            }
+            if (callbacks.onSkipped) {
+                adman.onSkipped(function () {
+                    callbacks.onSkipped();
+                });
+            }
+            if (callbacks.onClicked) {
+                adman.onClicked(function () {
+                    callbacks.onClicked();
+                });
+            }
+            adman.start('preroll');
+            _preloadAd();
+        } else
+            _preloadAd(callbacks, _playRewardedAd);
+    }
+
+    function getAuthKey() {
+        // return "a7aeecb9cf5b60cfba66225716e7395d";
+        return _getParams['auth_key'];
+    }
+
+    function getViewerId() {
+        // return "539955786";
+        return _getParams['viewer_id'];
+    }
+
+    function _checkPurchases(consumeCallback, offset) {
+        const request_limit = 20;
+        offset = offset || 0;
+        if (gBase)
+        gBase.social.vkListPurchases(offset, request_limit, (err, response) => {
+            console.info("list  err ", err);
+            console.info("response ", response);
+            if (err) {
+                gameAnalytics.sendServerError(err, "vkListPurchases");
+                socialManager.checkAuthStatus(err, () => _checkPurchases(consumeCallback, 0));
+            } else {
+                if (response) {
+                    let stopped = false;
+                    const arr = response.details.originalResponse;
+                    for (let i = 0;i < arr.length; i++) {
+                        const a = arr[i];
+                        if (!a.isConsumed) {
+                            console.warn("CONSUME " + a.purchaseNum);
+                            gBase.social.vkConsumePurchase(a.purchaseNum, (err, response) => {
+                                console.info("consume err ", err);
+                                console.info("response ", response);
+
+                                if (err) {
+                                    gameAnalytics.sendServerError(err, "vkConsumePurchase");
+                                    socialManager.checkAuthStatus(err, () => _checkPurchases(consumeCallback, 0));
+                                    stopped = true;
+                                }
+                                else {
+                                    const itemId = a.itemId ? a.itemId : a.productCode;
+                                    consumeCallback(itemId.substring(0, itemId.length - PURCHASE_SUFFIX.length));
+                                }
+                            });
+                        }
+
+                        if (stopped)
+                            return;
+                    }
+
+                    if (arr.length === request_limit)
+                        _checkPurchases(consumeCallback, offset + request_limit);
+                }
+            }
+        });
+    }
+
+    return {
+        initVK: function (appId) {
+            app_id = appId;
+            this.createGBase();
+            if (typeof VK !== 'undefined')
+            VK.init(function() {
+                // API initialization succeeded
+                // console.info("INIT2 ", window.location);
+                // Your code here
+                // VK.callMethod("showInviteBox");
+
+                var callbacksResults = document.getElementById('callbacks');
+
+                VK.addCallback('onOrderSuccess', (order_id) => {
+                    _checkPurchases((id)=>{
+                       gameInit.progress.publicConfirmedPayment(id);
+                    });
+                });
+            });
+            _preloadAd();
+        },
+
+        setAllGetParams(prms) {
+            _getParams = prms;
+        },
+
+        playRewardedAd: function (callbacks) {
+            _playRewardedAd(callbacks);
+        },
+
+        isAuthorizing() {
+            return authorizing;
+        },
+
+        reconnect(callback) {
+            this.createGBase();
+            this.authorize(()=> {
+                if (gBase) {//legacy
+                    gBase.profile.getp((err) => {
+                        if (err)
+                            gameAnalytics.sendServerError(err, "getp");
+                        else
+                            callback();
+                    });
+                } else
+                    callback();
+            });
+        },
+
+        authorize(callback) {
+
+            const resp = (response) => {
+                // console.info("AUTH>", response);
+                if (response.success)
+                    callback();
+                else
+                    console.error("Couldnt' authorize ", response.error);
+            };
+
+            if (!getViewerId() || !getAuthKey())
+                UnnyNet.UnnyNet.authorize('test_user1', 'test_password', resp);
+            else {
+                authorizing = true;
+                console.log("Authorize: " + getViewerId());
+                if (gBase) {//legacy
+                    gBase.account.authWebVk(getViewerId(), getAuthKey(), (err) => {
+                        authorizing = false;
+                        if (err)
+                            gameAnalytics.sendServerError(err, "authWebVk");
+                    });
+                }
+            }
+        },
+
+        checkPurchases(consumeCallback) {
+            _checkPurchases(consumeCallback);
+        },
+
+        purchase(productId) {
+            var params = {
+                type: 'item',
+                item: productId + PURCHASE_SUFFIX
+            };
+
+            VK.callMethod('showOrderBox', params);
+        },
+
+        getDisplayPrice(price) {
+            return price + " Руб.";
+        },
+
+        getPriceLabel(productId) {
+            return this.getDisplayPrice(this.getPrice(productId));
+        },
+
+        getPrice(productId) {
+            const info = VisualData.getPaymentInfoById(productId);
+            return info ? info.vk_price * 7 : 0;
+        }
+    };
+}
+
+function SocialOK() {
+
+    let app_id;
+    let loadedAds = [];
+    let _getParams = null;
+    const PURCHASE_SUFFIX = ".ok";
+    let authorizing = false;
+
+    let callbackOnNoAds = null;
+    let callbackAdIsReady = null;
+    let callbackAdStarted = null;
+    let callbackAdCompleted = null;
+
+    let callbackPostMessage = null;
+
+    let authData;
+    let authCallback;
+
+    function _applyCallbacks() {
+
+    }
+
+    function _preloadAd(callbacks, playMethod) {
+        // if (typeof admanInit === 'undefined') {
+        //     if (callbacks && callbacks.onAdBlock)
+        //         callbacks.onAdBlock();
+        //     return;
+        // }
+        callbackAdIsReady = function onAdsReady() {
+            loadedAds.push(1);
+            if (playMethod)
+                playMethod(callbacks);
+            callbackAdIsReady = null;
+        };
+
+        callbackOnNoAds = function onNoAds() {
+            console.warn("onNoAds");
+            if (callbacks && callbacks.onNoAds)
+                callbacks.onNoAds();
+            callbackOnNoAds = null;
+        };
+
+        FAPI.invokeUIMethod("prepareMidroll");
+    }
+
+    function _playRewardedAd(callbacks) {
+        if (callbacks.onStarted) {
+            callbackAdStarted = function () {
+                callbacks.onStarted();
+                callbackAdStarted = null;
+            }
+        }
+
+        if (callbacks.onCompleted) {
+            callbackAdCompleted = function () {
+                callbacks.onCompleted();
+                callbackAdCompleted = null;
+            }
+        }
+
+        if (loadedAds.length > 0) {
+            loadedAds.pop();
+
+            // if (callbacks.onCompleted) {//TODO
+            //     adman.onCompleted(function () {
+            //         callbacks.onCompleted();
+            //     });
+            // }
+
+            FAPI.invokeUIMethod("showMidroll");
+            _preloadAd();
+        } else
+            _preloadAd(callbacks, _playRewardedAd);
+    }
+
+    function _checkPurchases(consumeCallback, offset) {
+        const request_limit = 20;
+        offset = offset || 0;
+        gBase.social.okListPurchases(offset, request_limit, (err, response) => {
+            console.info("list  err ", err);
+            console.info("response ", response);
+            if (err) {
+                gameAnalytics.sendServerError(err, "okListPurchases");
+                socialManager.checkAuthStatus(err, () => _checkPurchases(consumeCallback, 0));
+            } else {
+                if (response) {
+                    let stopped = false;
+                    const arr = response.details.originalResponse;
+                    for (let i = 0; i < arr.length; i++) {
+                        const a = arr[i];
+                        if (!a.isConsumed) {
+                            console.warn("CONSUME " + a.purchaseNum);
+                            gBase.social.okConsumePurchase(a.purchaseNum, (err, response) => {
+                                console.info("consume err ", err);
+                                console.info("response ", response);
+
+                                if (err) {
+                                    gameAnalytics.sendServerError(err, "okConsumePurchase");
+                                    socialManager.checkAuthStatus(err, () => _checkPurchases(consumeCallback, 0));
+                                    stopped = true;
+                                }
+                                else {
+                                    const itemId = a.itemId ? a.itemId : a.productCode;
+                                    consumeCallback(itemId.substring(0, itemId.length - PURCHASE_SUFFIX.length));
+                                }
+                            });
+                        }
+
+                        if (stopped)
+                            return;
+                    }
+
+                    if (arr.length === request_limit)
+                        _checkPurchases(consumeCallback, offset + request_limit);
+                }
+            }
+        });
+    }
+
+    return {
+        initOK: function (appId) {
+            app_id = appId;
+            this.createGBase();
+            // gBase = new Gbase.GbaseApi(CURRENT_ENVIRONMENT.name, CURRENT_ENVIRONMENT.env, CURRENT_ENVIRONMENT.hmac, CURRENT_ENVIRONMENT.platform, CURRENT_ENVIRONMENT.version);
+            if (typeof FAPI !== 'undefined') {
+                var rParams = FAPI.Util.getRequestParameters();
+                console.info("rParams", rParams);
+                authData = rParams;
+                FAPI.init(rParams["api_server"], rParams["apiconnection"],
+                    /*
+                    * Первый параметр:
+                    * функция, которая будет вызвана после успешной инициализации.
+                    */
+                    function () {
+                        window.API_callback = function (method, result, data) {
+                            console.warn("method " + method + " > " + result + " data = ", data);
+                            switch (method) {
+                                case "postMediatopic":
+                                    if (result === "ok") {
+                                        if (callbackPostMessage) {
+                                            callbackPostMessage();
+                                            callbackPostMessage = null;
+                                        }
+                                    }
+                                    break;
+                                case "showInvite":
+                                    if (result === "ok" && data) {
+                                        const ids = data.split(",");
+                                        if (ids && ids.length > 0)
+                                            gameInit.likedSuccessfull(ids);
+                                    }
+                                    break;
+                                case "showPayment":
+                                    if (result === "ok") {
+                                        _checkPurchases((id) => {
+                                            gameInit.progress.publicConfirmedPayment(id);
+                                        });
+                                    }
+                                    break;
+                                case "prepareMidroll":
+                                    switch (data) {
+                                        case "ready":
+                                            if (callbackAdIsReady)
+                                                callbackAdIsReady();
+                                            break;
+                                        case "in_use":
+                                            if (callbackAdStarted)
+                                                callbackAdStarted();
+                                            break;
+                                        default:
+                                            if (callbackOnNoAds)
+                                                callbackOnNoAds();
+                                            break;
+                                    }
+                                    break;
+                                case "showMidroll":
+                                    if (result === "ok") {
+                                        switch (data) {
+                                            case "complete":
+                                                if (callbackAdCompleted)
+                                                    callbackAdCompleted();
+                                                break;
+                                        }
+                                    } else {
+                                        if (callbackOnNoAds)
+                                            callbackOnNoAds();
+                                    }
+                                    break;
+                            }
+                        }
+                    },
+                    /*
+                    * Второй параметр:
+                    * функция, которая будет вызвана, если инициализация не удалась.
+                    */
+                    function (error) {
+                        alert("Ошибка инициализации");
+                    }
+                );
+            }
+
+            _preloadAd();
+        },
+
+        openLikes() {
+            FAPI.UI.showInvite("Поиграй в мою игру!");
+        },
+
+        setAllGetParams(prms) {
+            _getParams = prms;
+        },
+
+        playRewardedAd: function (callbacks) {
+            _playRewardedAd(callbacks);
+        },
+
+        isAuthorizing() {
+            return authorizing;
+        },
+
+        authorize(callback) {
+            if (!authData) {
+                console.log("Waiting for auth data");
+                authCallback = callback;
+            }
+            else {
+                authorizing = true;
+                // okId, okSecret, okSessionKey
+                gBase.account.authWebOk(authData.logged_user_id, authData.auth_sig, authData.session_key, (err) => {//TODO
+                    authorizing = false;
+                    console.info("auth!!", err);
+                    if (err)
+                        gameAnalytics.sendServerError(err, "authWebOk");
+                    callback();
+                });
+            }
+        },
+
+        checkPurchases(consumeCallback) {
+            _checkPurchases(consumeCallback);
+        },
+
+        purchase(productId) {
+            FAPI.UI.showPayment("Кристаллы", "С ними быстрее качаться!", productId + PURCHASE_SUFFIX, this.getPrice(productId), null, null, "ok", "true");//TODO
+        },
+
+        getPrice(productId) {
+            const info = VisualData.getPaymentInfoById(productId);
+            return info ? info.ok_price : 0;
+        },
+
+        getDisplayPrice(price) {
+            return price + " ОК";
+        },
+
+        getPriceLabel(productId) {
+            return this.getDisplayPrice(this.getPrice(productId));
+        },
+
+        postMessage(callback) {
+            callbackPostMessage = callback;
+            FAPI.UI.postMediatopic({
+                "media":[
+                    {
+                        "type": "text",
+                        "text": "Давай играть вместе!"
+                    }
+                ]
+            }, false);
+        }
+    };
+}
+
+function SocialFB() {
+
+    let app_id;
+    let loadedAds = [];
+    let _getParams = null;
+
+    function _preloadAd(callbacks, playMethod) {
+        if (typeof admanInit === 'undefined') {
+            if (callbacks && callbacks.onAdBlock)
+                callbacks.onAdBlock();
+            return;
+        }
+        admanInit({
+            user_id: null,
+            app_id: app_id,
+            type: 'rewarded',         // 'preloader' или 'rewarded' (по умолчанию - 'preloader')
+            // params: {preview: 1}   // для проверки корректности работы рекламы
+        }, onAdsReady, onNoAds);
+
+        function onAdsReady(adman) {
+            loadedAds.push(adman);
+            if (playMethod)
+                playMethod(callbacks);
+        }
+
+        function onNoAds() {
+            console.warn("onNoAds");
+            if (callbacks && callbacks.onNoAds)
+                callbacks.onNoAds();
+        }
+    }
+
+    function _playRewardedAd(callbacks) {
+        if (loadedAds.length > 0) {
+            adman = loadedAds.pop();
+            if (callbacks.onStarted) {
+                adman.onStarted(function () {
+                    callbacks.onStarted();
+                });
+            }
+
+            if (callbacks.onCompleted) {
+                adman.onCompleted(function () {
+                    callbacks.onCompleted();
+                });
+            }
+            if (callbacks.onSkipped) {
+                adman.onSkipped(function () {
+                    callbacks.onSkipped();
+                });
+            }
+            if (callbacks.onClicked) {
+                adman.onClicked(function () {
+                    callbacks.onClicked();
+                });
+            }
+            adman.start('preroll');
+            _preloadAd();
+        } else
+            _preloadAd(callbacks, _playRewardedAd);
+    }
+
+    function _checkPurchases(consumeCallback, offset) {
+        console.error("_checkPurchases NOT implemented");
+    }
+
+    return {
+        initFB: function (appId) {
+            app_id = appId;
+            this.createGBase();
+        },
+
+        setAllGetParams(prms) {
+            _getParams = prms;
+        },
+
+        playRewardedAd: function (callbacks) {
+            // _playRewardedAd(callbacks);
+            console.error("not implemented");
+        },
+
+        authorize(callback) {
+            if (window.fbAsyncInit) {
+                callback();
+                return;
+            }
+            window.fbAsyncInit = function() {
+                FB.init({
+                    appId      : app_id,
+                    cookie     : true,
+                    xfbml      : true,
+                    version    : 'v3.3'
+                });
+
+                FB.AppEvents.logPageView();
+
+                function onLogin(response) {
+                    var accessToken = response.authResponse.accessToken;
+
+                    const resp = (response) => {
+                        // console.info("AUTH>", response);
+                        if (response.success)
+                            callback();
+                        else
+                            console.error("Couldnt' authorize ", response.error);
+                    };
+
+                    if (gBase) {
+                        gBase.account.authFb(accessToken, (err) => {
+                            if (err)
+                                gameAnalytics.sendServerError(err, "authFb");
+                            callback();
+                        });
+                    } else {
+                        UnnyNet.UnnyNet.authorize('test_user1', 'test_password', resp);
+                    }
+                }
+
+                FB.getLoginStatus(function(response) {
+                    if (response.status === 'connected') {
+                        // the user is logged in and has authenticated your
+                        // app, and response.authResponse supplies
+                        // the user's ID, a valid access token, a signed
+                        // request, and the time the access token
+                        // and signed request each expire
+                        // var uid = response.authResponse.userID;
+                        onLogin(response);
+                    } else {
+                        FB.login(function (response) {
+                            onLogin(response);
+                        }, {scope: 'email'});
+                    }
+                });
+            };
+
+            (function(d, s, id){
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) {return;}
+                js = d.createElement(s); js.id = id;
+                js.src = "https://connect.facebook.net/en_US/sdk.js";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        },
+
+        checkPurchases(consumeCallback) {
+            console.error("checkPurchases(consumeCallback) not implemented!");
+        },
+
+        getDisplayPrice(price) {
+            return price + " ЮНЕК";
+        },
+
+        getPriceLabel(productId) {
+            return this.getDisplayPrice(this.getPrice(productId));
+        },
+
+        getPrice(productId) {
+            const info = VisualData.getPaymentInfoById(productId);
+            return info ? info.vk_price * 7 : 0;
+        }
+    };
+};
+
+function SocialNutaku() {
+
+    let _getParams = null;
+    let user_id = null;
+
+    function _checkPurchases(consumeCallback) {
+        // console.warn("_CHECK? " + user_id);
+        if (!user_id)
+            return null;
+
+        UnnyNet.UnnyNet.getPurchases(UnnyNet.PurchaseStatusFilter.COMPLETED, (response) => {
+            // console.info("COMPLETED", response);
+            if (response.success) {
+                const list = response.data;
+                for (let i in list) {
+                    const id = list[i].id;
+                    if (id)
+                        UnnyNet.UnnyNet.claimPurchase2(user_id, 2, id, (response2) => {//TODO fix it
+                            if (response2.success) {
+                                console.info("claim2", response2);
+                                if (consumeCallback)
+                                    consumeCallback();
+                            } else {
+                                console.error("[ERROR]completeNutakuPurchase2: ", response2);
+                            }
+                        });
+                }
+            } else {
+                console.error("[ERROR]getPurchases: ", response);
+            }
+        });
+
+        UnnyNet.UnnyNet.getPurchases(UnnyNet.PurchaseStatusFilter.PENDING, (response) => {
+            console.info("RESPINSE", response);
+            if (response.success) {
+                const list = response.data;
+                for (let i in list) {
+                    const id = list[i].id;
+                    if (id)
+                        UnnyNet.UnnyNet.completeNutakuPurchase2(user_id, UnnyNet.NutakuPlatform.PCBrowser, id, (response2) => {
+                            if (response2.success) {
+                                console.info("COMPLETE..", response2);
+                                UnnyNet.UnnyNet.claimPurchase2(user_id, 2, response2.data.id, (response3) => {//TODO fix it
+                                    console.info("CLAIMED..", response3);
+                                    if (consumeCallback)
+                                        consumeCallback();
+                                });
+                            } else {
+                                console.error("[ERROR]completeNutakuPurchase2: ", response2);
+                            }
+                        });
+                }
+            } else {
+                console.error("[ERROR]getPurchases: ", response);
+            }
+        });
+    }
+
+    return {
+        initNutaku: function (appId) {
+            if (typeof opensocial != "undefined") {
+                let req = opensocial.newDataRequest();
+                req.add(req.newFetchPersonRequest(opensocial.IdSpec.PersonId.VIEWER), "viewer");
+                req.send(function (response) {
+                    if (response.hadError()) {
+                        // error
+                    } else {
+                        let item = response.get("viewer");
+                        if (item.hadError()) {
+                            // error
+                        } else {
+                            let viewer = item.getData();
+                            user_id = viewer.getId();
+                            // var nickname = viewer.getDisplayName();
+                            console.info("USER", viewer);
+                            // ...
+                        }
+                    }
+                });
+            }
+        },
+
+        playRewardedAd: function (callbacks) {
+            if (callbacks)
+                callbacks.onCompleted();
+        },
+
+        setAllGetParams(prms) {
+            _getParams = prms;
+        },
+
+        checkPurchases(consumeCallback) {
+            _checkPurchases((id) => {
+                gameInit.progress.publicConfirmedPayment("hellprodgems200");
+            });
+        },
+
+        purchase(productId) {
+            if (typeof gadgets === "undefined") {
+                gameInit.progress.publicConfirmedPayment(productId);
+                return;
+            }
+
+            UnnyNet.UnnyNet.purchaseProduct("test", (response) => {
+                console.warn("Go check now", response);
+                _checkPurchases((id) => {
+                    gameInit.progress.publicConfirmedPayment(productId);
+                });
+            });
+        },
+
+        authorize(callback) {
+            const resp = (response) => {
+                // console.info("AUTH>", response);
+                if (response.success)
+                    callback();
+                else
+                    console.error("Couldnt' authorize ", response.error);
+            };
+
+            if (typeof gadgets != "undefined")
+                UnnyNet.UnnyNet.Nutaku.authorize(resp);
+            else
+                UnnyNet.UnnyNet.authorize('test_user1', 'test_password', resp);
+        },
+
+        getDisplayPrice(price) {
+            return 1000;
+        },
+
+        getPriceLabel(productId) {
+            return this.getDisplayPrice(this.getPrice(productId));
+        },
+
+        getPrice(productId) {
+            const info = VisualData.getPaymentInfoById(productId);
+            return info ? info.nutaku_price : 0;
+        }
+    }
+}
+
+function SocialFB_Instant() {
+
+    let app_id;
+    let loadedAds = [];
+    let _getParams = null;
+
+    function _preloadAd(callbacks, playMethod) {
+        if (typeof admanInit === 'undefined') {
+            if (callbacks && callbacks.onAdBlock)
+                callbacks.onAdBlock();
+            return;
+        }
+        admanInit({
+            user_id: null,
+            app_id: app_id,
+            type: 'rewarded',         // 'preloader' или 'rewarded' (по умолчанию - 'preloader')
+            // params: {preview: 1}   // для проверки корректности работы рекламы
+        }, onAdsReady, onNoAds);
+
+        function onAdsReady(adman) {
+            loadedAds.push(adman);
+            if (playMethod)
+                playMethod(callbacks);
+        }
+
+        function onNoAds() {
+            console.warn("onNoAds");
+            if (callbacks && callbacks.onNoAds)
+                callbacks.onNoAds();
+        }
+    }
+
+    function _playRewardedAd(callbacks) {
+        if (loadedAds.length > 0) {
+            adman = loadedAds.pop();
+            if (callbacks.onStarted) {
+                adman.onStarted(function () {
+                    callbacks.onStarted();
+                });
+            }
+
+            if (callbacks.onCompleted) {
+                adman.onCompleted(function () {
+                    callbacks.onCompleted();
+                });
+            }
+            if (callbacks.onSkipped) {
+                adman.onSkipped(function () {
+                    callbacks.onSkipped();
+                });
+            }
+            if (callbacks.onClicked) {
+                adman.onClicked(function () {
+                    callbacks.onClicked();
+                });
+            }
+            adman.start('preroll');
+            _preloadAd();
+        } else
+            _preloadAd(callbacks, _playRewardedAd);
+    }
+
+    return {
+        initFB: function (appId) {
+            app_id = appId;
+            this.createGBase();
+        },
+
+        setAllGetParams(prms) {
+            _getParams = prms;
+        },
+
+        playRewardedAd: function (callbacks) {
+            // _playRewardedAd(callbacks);
+            console.error("not implemented");
+        },
+
+        authorize(callback) {
+            callback();
+        },
+
+        checkPurchases(consumeCallback) {
+            console.error("checkPurchases(consumeCallback) not implemented!");
+        },
+
+        getDisplayPrice(price) {
+            return price + " ЮНЕК";
+        },
+
+        getPriceLabel(productId) {
+            return this.getDisplayPrice(this.getPrice(productId));
+        },
+
+        getPrice(productId) {
+            const info = VisualData.getPaymentInfoById(productId);
+            return info ? info.vk_price * 7 : 0;
+        }
+    };
+};
+
+const UN_DATA = {
+    //fish
+    "5c02bb6d-3afb-4ca5-8f91-ce69d2c5a28d" : {
+        leaderboards: {
+            boxes: "a332f1d7-80fd-40de-97a8-f8a3948ebad7",
+            factory: "bb340b93-11b0-4ce7-8ebb-ba5dcaa672dd"
+        },
+        achievements: {
+            factory: 1,
+            slot_1: 4,
+            slot_2: 5,
+            slot_3: 6,
+            slot_4: 7,
+            slot_5: 8,
+            slot_6: 9,
+            slot_7: 10,
+            slot_8: 11,
+            slot_9: 12,
+        }
+    },
+
+    //hell
+    "819ced8f-14c6-478d-85d2-0fa616f79fa5" : {
+        leaderboards: {
+            boxes: "058acf78-ef5a-4f0c-8074-a84cb0c06e09",
+            factory: "9db0b3ae-2877-48df-a1e1-ff89f0a196d5"
+        },
+        achievements: {
+            factory: 10,
+            slot_1: 1,
+            slot_2: 2,
+            slot_3: 3,
+            slot_4: 4,
+            slot_5: 5,
+            slot_6: 6,
+            slot_7: 7,
+            slot_8: 8,
+            slot_9: 9,
+        }
+    }
+};
+
+const GAME_ENVIRONMENTS = {
+    'fish_vk_prod': {
+        name: "rmg-vkfish",
+        env: "production",
+        hmac: 'bR2UBrFSHflMlXILNVENAoLR',
+        platform: "webvk",
+        version: "0.0.1",
+        un_game_id: "5c02bb6d-3afb-4ca5-8f91-ce69d2c5a28d",
+        un_key: "MTRhZjU5NTUtMzdmNS00",
+        environment: UnnyNet.Environment.Production,
+    },
+    'fish_vk_dev': {
+        name: 'rmg-vkfish',
+        env: 'dev',
+        hmac: 'mE2ibFZ1tPCDOcdc6n0XB7I4',
+        platform: "webvk",
+        version: "0.0.1",
+        un_game_id: "5c02bb6d-3afb-4ca5-8f91-ce69d2c5a28d",
+        un_key: "MTRhZjU5NTUtMzdmNS00",
+        environment: UnnyNet.Environment.Development,
+    },
+    'fish_ok_prod': {
+        name: "rmg-vkfish",
+        env: "production",
+        hmac: 'J8Bsh1KT2bt4gnUcSEJrjrep',
+        platform: "webok",
+        version: "0.0.1",
+        un_game_id: "5c02bb6d-3afb-4ca5-8f91-ce69d2c5a28d",
+        un_key: "MTRhZjU5NTUtMzdmNS00",
+        environment: UnnyNet.Environment.Production,
+    },
+    'fish_ok_dev': {
+        name: 'rmg-vkfish',
+        env: 'dev',
+        hmac: 'uwe6KwuCvFLCU5WuwXXU4pMW',
+        platform: "webok",
+        version: "0.0.1",
+        un_game_id: "5c02bb6d-3afb-4ca5-8f91-ce69d2c5a28d",
+        un_key: "MTRhZjU5NTUtMzdmNS00",
+        environment: UnnyNet.Environment.Development,
+    },
+    'myth_dev': {
+        un_game_id: "f6d3e8d9-e41b-4fde-bdf0-d30df9092672",
+        un_key: "YTNkYmQxZjktNTk0Ny00",
+        environment: UnnyNet.Environment.Development,
+    },
+
+    'hell_vk_dev': {
+        env: 'dev',
+        un_game_id: "819ced8f-14c6-478d-85d2-0fa616f79fa5",
+        un_key: "MDYxMWIyNGEtYjdhZS00",
+        environment: UnnyNet.Environment.Development,
+    },
+
+    'hell_fb_dev': {
+        env: 'dev',
+        un_game_id: "819ced8f-14c6-478d-85d2-0fa616f79fa5",
+        un_key: "MDYxMWIyNGEtYjdhZS00",
+        environment: UnnyNet.Environment.Development,
+    }
+};
+
+const DEFAULT_PLATFORM = "nutaku";
+const DEFAULT_ENVIRONMENT = "myth_dev";
+
+let AllGetParams = null;
+function parseGetParams() {
+    if (!AllGetParams) {
+        const prms = {};
+        var queryString = window.location.search;
+        if (queryString && queryString.length > 0) {
+            queryString = queryString.substring(1);
+            const queries = queryString.split("&");
+
+            for (let i = 0; i < queries.length; i++) {
+                const kvp = queries[i].split('=');
+                if (kvp[0].startsWith("amp;"))
+                    prms[kvp[0].substring(4)] = kvp[1];
+                else
+                    prms[kvp[0]] = kvp[1];
+            }
+        }
+        AllGetParams = prms;
+    }
+    return AllGetParams;
+}
+var socialManager;
+parseGetParams();
+
+if (!AllGetParams.hasOwnProperty('game_platform')) {
+    console.log("platform wasn't specified, use default: " + DEFAULT_PLATFORM);
+    AllGetParams.game_platform = DEFAULT_PLATFORM;
+}
+
+if (!AllGetParams.hasOwnProperty('game_env')) {
+    console.log("game_env wasn't specified, use default: " + DEFAULT_ENVIRONMENT);
+    AllGetParams.game_env = DEFAULT_ENVIRONMENT;
+}
+
+const CURRENT_ENVIRONMENT = GAME_ENVIRONMENTS[AllGetParams.game_env];
+
+const CURRENT_UN_DATA = UN_DATA[CURRENT_ENVIRONMENT.un_game_id];
+
+const TEST_MODE = true;//AllGetParams.test_mode;
+const DEBUG_MODE = AllGetParams.debug_mode;
+
+{
+    switch (AllGetParams.game_platform) {
+        case "vk":
+            socialManager = new SocialVK();
+            socialManager.initialize = function (gameSettings) {
+                socialManager.initVK(gameSettings.vk_app_id);
+            };
+            break;
+        case "ok":
+            socialManager = new SocialOK();
+            socialManager.initialize = function (gameSettings) {
+                socialManager.initOK(gameSettings.ok_app_id);
+            };
+            break;
+        case "fb":
+            socialManager = new SocialFB();
+            socialManager.initialize = function (gameSettings) {
+                socialManager.initFB(gameSettings.fb_app_id);
+            };
+            break;
+        case "nutaku":
+            socialManager = new SocialNutaku();
+            socialManager.initialize = function (gameSettings) {
+                socialManager.initNutaku();
+            };
+            break;
+        case "fb_instant":
+            socialManager = new SocialFB_Instant();
+            socialManager.initialize = function (gameSettings) {
+                socialManager.initFB(gameSettings.fb_app_id);
+            };
+            break;
+    }
+}
+
+socialManager.createGBase = function() {
+    if (CURRENT_ENVIRONMENT.hmac)
+        gBase = new Gbase.GbaseApi(CURRENT_ENVIRONMENT.name, CURRENT_ENVIRONMENT.env, CURRENT_ENVIRONMENT.hmac, CURRENT_ENVIRONMENT.platform, CURRENT_ENVIRONMENT.version);
+};
+
+socialManager.reconnect = function (callback) {
+    this.createGBase();
+    this.authorize(()=> {
+        gBase.profile.getp((err) => {
+            if (err)
+                gameAnalytics.sendServerError(err, "getp");
+            else
+                callback();
+        });
+    });
+};
+
+socialManager.checkAuthStatus = function(err, callback) {
+    if (err.code == 310 && !socialManager.isAuthorizing()) {
+        console.log("Re-auth");
+        socialManager.reconnect(callback);
+    }
+};
+
+const FINGER_TYPE = {
+    NONE: "None",
+    SOFT: "Soft",
+    HARD: "Hard"
+};
+
+const TutStartPhase = 0;
+
+class Tutorial {
+    constructor() {
+        this.depth = WinDefaultDepth + 900;
+        this.guardShown = false;
+        this.supervisorShown = false;
+        this.fortuneShown = false;
+        this.timers = [];
+
+        this.dialogCallback = this.dialogClicked.bind(this);
+        this.resourcesCallback = this.resourcesChanged.bind(this);
+    }
+
+    dialogClicked() {
+        this.goToNextStep();
+    }
+
+    resourcesChanged() {
+        switch (this.phaseData.actionType) {
+            case "CollectGold":
+                // console.log("IS " + this.phaseData.parameter + " ? " + gameInit.progress.getTotalResources().compare(this.phaseData.parameter * RESOURCES_SCALE));
+                if (gameInit.progress.getTotalResources().compare(this.phaseData.parameter * RESOURCES_SCALE) >= 0) {
+                    if (this.fingerAnimation) {
+                        clearInterval(this.fingerAnimation);
+                        this.fingerAnimation = null;
+                    }
+
+                    this.goToNextStep();
+                }
+                break;
+        }
+    }
+
+    loaded(progress) {
+        const phase = progress.getTutorialPhase();
+
+        const data = GameData.getTutorialConfig();
+        const phaseIndex = this.getPhaseIndex(phase);
+
+        if (phaseIndex >= 0) {
+            // console.error("loaded " + phase, data[phaseIndex]);
+            if (data[phaseIndex].actionType !== 'Completed') {
+
+                gameInit.progress.onResourcesChanges.addListener(this.resourcesCallback);
+                this.newMethod = tutorial.update.bind(tutorial);
+                gameInit.update.addListener(this.newMethod);
+
+                guiManager.getWindowByType(WindowType.WinMain).hideAllButtonsForTutorial();
+                hudResources.hideForTutorial();
+
+                for (let i = 0; i <= phaseIndex; i++)
+                    this.preparePhase(data[i].stepNumber, i, i < phaseIndex);
+            } else
+                this.stopTutorial();
+        }
+    }
+
+    stopTutorial() {
+        if (this.newMethod) {
+            gameInit.progress.onResourcesChanges.removeListener(this.resourcesCallback);
+            gameInit.update.removeListener(this.newMethod);
+        }
+        guiManager.setTutorialPhrase(null);
+        this._hideFinger();
+    }
+
+    playSwipeAnimation() {
+        const oxy = {
+            x: this.finger.obj.x / localScale,
+            y: this.finger.obj.y / localScale
+        };
+
+        const play = () => {
+            if (this.finger.visible) {
+                this.finger.playAppear(true);
+                this.timers[0] = setTimeout(() => {
+                    this.finger_move_animation = animManager.moveToPoint(this.finger.obj, {
+                        x: oxy.x + 200 * GlobalScale,
+                        y: oxy.y - 100 * GlobalScale
+                    }, 0.3, () => {
+                        this.finger.playDisappear(true);
+                        this.timers[1] = setTimeout(() => {
+                            this.finger_move_animation = animManager.moveToPoint(this.finger.obj, oxy, 0.7, () => {
+                                this.finger_move_animation = null;
+                            });
+                            this.timers[1] = null;
+                        }, 500);
+                        this.timers[0] = null;
+                    });
+                }, 500);
+            }
+        };
+        const intervalTimer = setInterval(() => {
+            play();
+        }, 2000);
+        play();
+
+        return intervalTimer;
+    }
+
+    pointAtPosition(pos, center, useScale, no_animation, hold_time) {
+        this.finger.setVisible(true);
+        const x = (useScale ? pos.x / localScale : pos.x) + (center ? 0 : VisualData.MAP_PARAMS.center.x);
+        const y = (useScale ? pos.y / localScale : pos.y) + (center ? 0 : VisualData.MAP_PARAMS.center.y);
+        this.finger.setPosition(x, y);
+        this.circle.setPosition(x, y);
+
+        if (this.intervalTimer)
+            clearInterval(this.intervalTimer);
+
+        if (this.finger_move_animation) {
+            this.finger_move_animation.stopAnimation();
+            this.finger_move_animation = null;
+        }
+
+        for (let i = 0; i <= 1; i++) {
+            if (this.timers[i]) {
+                clearTimeout(this.timers[i]);
+                this.timers[i] = null;
+            }
+        }
+
+        this.circle.setVisible(false);
+
+        if (no_animation)
+            return;
+
+        hold_time = hold_time ? hold_time * 1000 : 0;
+        const play = () => {
+            if (this.finger.visible) {
+                this.finger.playAppear(true);
+                this.timers[0] = setTimeout(() => {
+                    this.circle.setVisible(true);
+                    animManager.scaleAlphaOnce(this.circle, 0.5, null, 0.5);
+                    this.timers[0] = null;
+                }, 100);
+
+                this.timers[1] = setTimeout(() => {
+                    this.finger.playDisappear(true);
+                    this.timers[1] = null;
+                }, 500 + hold_time);
+            }
+        };
+        this.intervalTimer = setInterval(() => {
+            play();
+        }, 1200 + hold_time);
+        play();
+    }
+
+    _isWindow(winType) {
+        return this.lastWindow == winType;
+    }
+
+    _lockAtButton(btn, center, pos) {
+        if (!btn)
+            return;
+
+        lockGuiAtButton(btn);
+        if (pos) {
+            this.pointAtPosition(pos);
+            return;
+        }
+
+        if (btn.getParentObject) {
+            const p = btn.getParentObject();
+            this.pointAtPosition({
+                x: p.x / localScale,
+                y: p.y / localScale + (0.5 - btn.originY) * btn.height
+            }, center);
+        } else if (btn.originY && btn.originY !== 0.5) {
+            this.pointAtPosition({
+                x: btn.x,
+                y: btn.y + (0.5 - btn.originY) * btn.height
+            }, center);
+        } else {
+            this.pointAtPosition(btn, center);
+        }
+    }
+
+    _hideFinger() {
+        this.finger.setVisible(false);
+        this.circle.setVisible(false);
+    }
+
+    _getFirstSlotPosition() {
+        const pos = VisualData.PLACED_BUILDINGS[1].position;
+        const key = VisualData.PLACED_BUILDINGS[1].levels[0].building;
+        const offset = VisualData.VISUAL_BUILDINGS[key].objects[0];
+        return {
+            x: pos.x + offset.x,
+            y: pos.y + offset.y,
+        };
+    }
+
+    getPhaseIndex(phase) {
+        return Progress.getPhaseIndex(phase);
+    }
+
+    goToNextPhase() {
+        unlockGUI();
+        unlockAnimatedObject();
+        this._hideFinger();
+        this.phaseIndex = this.getPhaseIndex(this.phase + 1);
+        this.preparePhase(this.phase, this.phaseIndex);
+    }
+
+    goToNextStep() {
+        unlockGUI();
+        unlockAnimatedObject();
+        this._hideFinger();
+        // console.log("goToNextStep ");
+        // // console.log("MOVE to " + this.phase);
+        // gameAnalytics.sendEvent("Tutorial", {
+        //     "phase": this.phase
+        // });
+
+        const data = GameData.getTutorialConfig();
+        const d = data[++this.phaseIndex];
+
+        if (gameInit.progress.getTutorialPhase() < d.stepNumber)
+            gameInit.progress.setTutorialPhase(d.stepNumber);
+
+        this.preparePhase(d.stepNumber, this.phaseIndex);
+    }
+
+    preparePhase(phase, phaseIndex, fastComplete) {
+        this.phase = phase;
+        this.phaseIndex = phaseIndex;
+        this.lastWindow = guiManager.getWinTypeAtTheTop();
+        this.lastTab = 0;
+
+        const data = GameData.getTutorialConfig();
+        const phaseData = data[this.phaseIndex];
+
+        this.phaseData = phaseData;
+
+        //close last dialog
+        if (this._isWindow(WindowType.QuestBubble)) {
+            const win = guiManager.getActiveWindow();
+            win.closeWindow();
+        }
+
+        // console.log("preparePhase " + phase + " > " + phaseIndex + " = " + phaseData.actionType + " win = " + this.lastWindow);
+
+        if (phaseData.showHint) {
+            guiManager.setTutorialPhrase(LocalizationManager.getTutorialLocalizization(phaseData.localizationKey));
+        } else
+            guiManager.setTutorialPhrase(null);
+
+        switch (phaseData.actionType) {
+            case "ShowDialog":
+                guiManager.showQuestMessage(LocalizationManager.getTutorialLocalizization(phaseData.localizationKey), phaseData.parameter, this.dialogCallback);
+                break;
+            case "ClickSlot":
+                if (this._isWindow(WindowType.WinMain)) {
+                    if (!VisualData.getGameSettings().slot_purchase_as_buttons) {
+                        this.pointAtPosition(this._getFirstSlotPosition());
+                        lockGuiEverything();
+                    } else {
+                        this._lockAtButton(buildingsGUI.getPurchaseButton(1, 1), true);
+                    }
+                } else {
+                    if (this._isWindow(WindowType.WinConstruct))
+                        this._lockAtButton(guiManager.getActiveWindow().getTutorialButton());
+                }
+                break;
+            case "ChangeGameModeToUpgrade":
+                const win = guiManager.getWindowByType(WindowType.WinMain);
+                win.showUpgradeButton();
+                if (this._isWindow(WindowType.WinMain)) {
+                    lockAtOneAnimatedObject(win);
+                    this._lockAtButton(win.getUpgradeButton(), true);
+                }
+                break;
+            case "UpgradeSlot":
+                if (phaseData.fingerType !== FINGER_TYPE.NONE) {
+                    if (this._isWindow(WindowType.WinUpgrade)) {
+                        lockGuiEverything();
+                        unlockAnimatedObject();
+                        this.pointAtPosition(this._getFirstSlotPosition(), null, null, false, 0.5);
+                        buildingsGUI.hideSomeLabelsForTutorial();
+                    }
+                }
+            {
+                if (fastComplete)
+                    hudResources.showTokens();
+                const win = guiManager.getWindowByType(WindowType.WinMain);
+                win.showUpgradeButton();
+            }
+                break;
+            case "ChangeGameModeToNormal":
+                this._lockAtButton(guiManager.getActiveWindow().getExitButton(), true);
+                break;
+            case "CloseGirlListWindow": {
+                this._lockAtButton(guiManager.getActiveWindow().getExitButton(), true);
+                const win = guiManager.getWindowByType(WindowType.WinPhotosMainMenu);
+                if (win.scroll)
+                    win.scroll.setScrollerEnable(true);
+                break;
+            }
+            case "ClickGirlMenuButton": {
+                const win = guiManager.getWindowByType(WindowType.WinMain);
+                win.showGirlsMenuButton();
+                if (this._isWindow(WindowType.WinMain)) {
+                    this._lockAtButton(win.getGirlsMenuButton(), true);
+                } else if (this._isWindow(WindowType.WinPhotosMainMenu))
+                    this.goToNextStep();
+                break;
+            }
+            case "OpenGirlListWindow":
+            case "OpenBioWindow":
+            case "OpenUpgradeMarketWindow":
+            case "OpenDoublingsWindow":
+
+            case "OpenPuzzlesWindow":
+            case "ClickOpenBoxItem":
+                this.goToNextStep();
+                break;
+            case "OpenGirlQuestWindow": {
+                if (this._isWindow(WindowType.WinPhotosMainMenu)) {
+                    const win = guiManager.getWindowByType(WindowType.WinPhotosMainMenu);
+                    win.scroll.setScrollerEnable(false);
+                    const btn = win.getButtonByTag("Peristera");
+                    this._lockAtButton(btn, true, win.getButtonPosByTag());
+                }
+                break;
+            }
+            case "ClickBioButton": {
+                if (this._isWindow(WindowType.WinGirlBio))
+                    this.goToNextStep();
+                else {
+                    const win = guiManager.getWindowByType(WindowType.WinPhotosQuest);
+                    this._lockAtButton(win.GirlDescription, true);
+                }
+                break;
+            }
+            case "ClickUnlockPhotoButton": {
+                const win = guiManager.getWindowByType(WindowType.WinPhotosQuest);
+                this._lockAtButton(win.actionButton, true);
+                break;
+            }
+            case "ClickUpgradeMarketButton": {
+                hudResources.showGems();
+                const win = guiManager.getWindowByType(WindowType.WinMain);
+                win.showStoreButton();
+                if (this._isWindow(WindowType.WinMain)) {
+                    GlobalInputLocked = true;
+                    this._lockAtButton(win.getStoreButton(), true);
+                } else if (this._isWindow(WindowType.WinStore))
+                    this.goToNextStep();
+                break;
+            }
+            case "BuyAutoClickUpgrade": {
+                const id = VisualData.getAutoClickSlot1Id();
+                if (!gameInit.progress.isUpgradePurchased(id) && this._isWindow(WindowType.WinStore)) {
+                    GlobalInputLocked = false;
+                    const win = guiManager.getActiveWindow();
+                    this._lockAtButton(win.getFirstUpgradeSlot(), true);
+                    win.scroll.setScrollerEnable(false);
+                }
+                break;
+            }
+            case "ClickManagerButton": {
+                if (this._isWindow(WindowType.WinMain)) {
+                    GlobalInputLocked = true;
+                    const win = guiManager.getActiveWindow();
+                    win.showSuperVisorButton();
+                    this._lockAtButton(win.getSuperVisorButton(), true);
+                } else if (this._isWindow(WindowType.WinManagerDoubling))
+                    this.goToNextStep();
+                break;
+            }
+            case "StartSuperDoubling": {
+                if (this._isWindow(WindowType.WinMain)) {
+                    if (this.supervisorShown)
+                        this.goToNextStep();
+                    else {
+                        this._hideFinger();
+                        unlockAnimatedObject();
+                    }
+                } else {
+                    if (this._isWindow(WindowType.WinBanjoEnd)) {
+                        this._lockAtButton(guiManager.getActiveWindow().getTutorialButton());
+                        this.supervisorShown = true;
+                    } else {
+                        if (this._isWindow(WindowType.WinManagerDoubling)) {
+                            if (!gameInit.progress.haveAnySuperDoublingTokens())
+                                this.goToNextStep();
+                            else
+                                this._lockAtButton(guiManager.getActiveWindow().getTutorialButton(), true);
+                        }
+                    }
+                }
+                break;
+            }
+            case "BuySlots": {
+                if (gameInit.progress.getConstructedBuildingsCount() >= 6)
+                    this.goToNextStep();
+                break;
+            }
+            case "ClickPrestigeButton": {
+                if (gameInit.progress.getHarvestsCount() >= 1)
+                    this.goToNextStep();
+                else {
+                    lockGuiEverything();
+                    lockAtOneAnimatedObject(visualGame.getBoss());
+                    if (this._isWindow(WindowType.WinMain)) {
+                        const win = guiManager.getActiveWindow();
+                        win.showBossButton();
+                        this._lockAtButton(win.getBossButton(), true);
+                    } else {
+                        if (this._isWindow(WindowType.WinBossSummon))
+                            this.goToNextStep();
+                    }
+                    break;
+                }
+                break;
+            }
+            case "OpenPrestigeWindow":
+                if (this._isWindow(WindowType.WinBossSummon))
+                    this._lockAtButton(guiManager.getActiveWindow().getTutorialButton());
+                else {
+                    if (this._isWindow(WindowType.WinBossProccess))
+                        this.goToNextStep();
+                }
+                break;
+            case "StartPrestige": {
+                if (this._isWindow(WindowType.WinHarvested))
+                    this.goToNextStep();
+                break;
+            }
+            case "CompletePrestige": {
+                if (guiManager.getWinTypeAtTheTop() == WindowType.WinMain) {
+                    this.goToNextStep();
+                    guiManager.getWindowByType(WindowType.WinMain).showAllButtonsFromTutorial();
+                }
+                hudResources.showStars();
+                break;
+            }
+            case "ClickPuzzlesButton": {
+                GlobalInputLocked = true;
+                if (this._isWindow(WindowType.WinMain)) {
+                    const win = guiManager.getActiveWindow();
+                    this._lockAtButton(win.getPuzzlesButton(), true);
+                } else if (this._isWindow(WindowType.WinPuzzle))
+                    this.goToNextStep();
+
+                break;
+            }
+            case "ClickBoxTab": {
+                if (this._isWindow(WindowType.WinPuzzle)) {
+                    const win = guiManager.getActiveWindow();
+                    this.lastTab = win.getSelectedTab();
+                    if (this.lastTab === 0)
+                        this._lockAtButton(win.getBoxesTab(), true);
+                    else
+                        this._lockAtButton(win.getPuzzleOpenBox(), true);
+
+                    win.getBoxesScroll().setScrollerEnable(false);
+                } else {
+                    if (gameInit.progress.getOpenedBoxes() > 0) {
+                        this._hideFinger();
+                        this.goToNextStep();
+
+                        const win = guiManager.getWindowByType(WindowType.WinPuzzle);
+                        if (win.scroll)
+                            win.getBoxesScroll().setScrollerEnable(true);
+                    }
+                }
+                break;
+            }
+        }
+    }
+
+    onCreated(engine) {
+        this.engine = engine;
+        PrepareAndCreateObject(CommonVisualData.FINGER, null, this.engine, this.depth, (finger) => {
+            this.finger = finger;
+        });
+        this.circle = this.engine.add.sprite(0, 0, "Tut_Circle").setDepth(this.depth - 1);
+        this._hideFinger();
+    }
+
+    update() {
+        const win = guiManager.getActiveWindow();
+        if (win.winType != WindowType.QuestBubble && (this.lastWindow != guiManager.getWinTypeAtTheTop() || (win.selectedTab && win.selectedTab !== this.lastTab))) {
+            this.preparePhase(this.phase, this.phaseIndex);
+        }
+
+        switch (this.phaseData.actionType) {
+            case "ClickSlot":
+                if (gameInit.progress.isBuildingConstructed(1, 1))
+                    this.goToNextPhase();
+                break;
+            case "ChangeGameModeToUpgrade":
+                if (this._isWindow(WindowType.WinUpgrade))
+                    this.goToNextStep();
+                break;
+            case "UpgradeSlot":
+                const b = gameInit.getBuildingById(1, 1);
+                if (b.getLevel() >= this.phaseData.parameter) {
+                    if (this.phaseData.parameter >= 20)
+                        hudResources.showTokens();
+
+                    this.goToNextStep();
+                }
+                break;
+            case "ChangeGameModeToNormal":
+            case "CloseGirlListWindow": {
+                if (this._isWindow(WindowType.WinMain))
+                    this.goToNextStep();
+                break;
+            }
+            case "ClickPeristeraBar": {
+                const win = guiManager.getWindowByType(WindowType.WinPhotosMainMenu);
+                const btn = win.getButtonByTag("Peristera");
+                if (btn)
+                    this.goToNextStep();
+                break;
+            }
+            case "OpenGirlQuestWindow":
+                if (this._isWindow(WindowType.WinPhotosQuest))
+                    this.goToNextStep();
+                break;
+            case "ClickUnlockPhotoButton":
+                if (gameInit.progress.haveAnyPhotos()) {
+                    const win = guiManager.getWindowByType(WindowType.WinMain);
+                    win.showPhotoAlbum();
+                    this.goToNextStep();
+                }
+                break;
+            case "ClickUpgradeMarketButton":
+            case "BuyAutoClickUpgrade":
+                const id = VisualData.getAutoClickSlot1Id();
+                if (gameInit.progress.isUpgradePurchased(id)) {
+                    const win = guiManager.getWindowByType(WindowType.WinStore);
+                    win.scroll.setScrollerEnable(true);
+                    unlockGUI();
+                    this._hideFinger();
+                    this.goToNextStep();
+                }
+                break;
+            case "CollectGold": {
+                if (!this.fingerAnimation && gameInit.getBuildingById(1, 1).anyResources && this.phaseData.parameter <= 100) {
+                    this.pointAtPosition(this._getFirstSlotPosition(), null, null, true);
+                    this.fingerAnimation = this.playSwipeAnimation();
+                    // this.fingerAnimation = animManager.swipeInfinite(this.finger.obj, 1);
+                    this.circle.setVisible(false);
+                }
+                break;
+            }
+        }
+    }
+
+    onAdStarted() {
+        switch (this.phase) {
+            case TutPhases.FortuneWheel:
+                this._hideFinger();
+                this.goToNextStep();
+                break;
+        }
+    }
+}
+
+const GlobalScale = 0.703;
+let RealScreenWidth = 1536 * GlobalScale;//0.703 = 1080
+let RealScreenHeight = 2448 * GlobalScale;//0.784 = 1720
+
+var GameDataSettings = (function() {
+    return {
+        getGlobalScale() {
+            return GlobalScale
+        }
+    }
+})();
+
+if (typeof exports !== 'undefined') {
+    if (typeof module !== 'undefined' && module.exports) {
+        exports = module.exports = GameDataSettings;
+    }
+    exports.GameDataSettings = GameDataSettings;
+}
+
+const useNewScale = true;
+let mapScale = 1;
+
+let gameW, gameH;
+let dpi = useNewScale ? (window.devicePixelRatio || 1) : 1;
+let localScaleLimit = 1;
+
+if (AllGetParams.game_platform === 'fb_instant') {
+    dpi = 1;
+    localScaleLimit = 0.5;
+}
+
+function UpdateNumbers() {
+    if (useNewScale) {
+        const sw = window.innerWidth / RealScreenWidth;
+        const sh = window.innerHeight / RealScreenHeight;
+        localScale = Math.min(sw, sh);
+        localScale *= dpi;
+
+        // const minValue = 0.5;
+        // if (localScale < minValue) {
+        //     dpi *= minValue / localScale;
+        //     localScale = minValue;
+        // }
+
+        if (localScale > localScaleLimit) {
+            dpi *= localScaleLimit / localScale;
+            localScale = localScaleLimit;
+        }
+
+        if (localScale < 0.6) {
+            imagesDeltaScale = 2;
+            use2ximages = false;
+        } else {
+            imagesDeltaScale = 1;
+            use2ximages = true;
+        }
+        imageSizeLocalScale = imagesDeltaScale * localScale;
+
+        if (Math.abs(sw - sh) > 0.0001) {
+            if (sh > sw) {
+                if (GameDataSettings.getHeightMaxScale) {
+                    mapScale = Math.min(GameDataSettings.getHeightMaxScale(), sh / sw);
+                    RealScreenHeight *= mapScale;
+                }
+            } else {
+                if (GameDataSettings.getWidthMaxScale) {
+                    mapScale = Math.min(GameDataSettings.getWidthMaxScale(), sw / sh);
+                    RealScreenWidth *= mapScale;
+                }
+            }
+        }
+    } else
+        localScale = 1;
+
+    gameW = RealScreenWidth * localScale;
+    gameH = RealScreenHeight * localScale;
+}
+
+UpdateNumbers();
+
+
 let CommonData = null;
 
-const totalScale = 1;//temporary - it should be 1 in the release
+let globalScale;
+if (typeof exports !== 'undefined') {
+    let argv = require('minimist')(process.argv.slice(2));
+    const orientation = argv["orientation"];
+    const SettingsFileName = "GameDataSettings_" + orientation + ".js";
+    const pathToGameSettings = "./" + SettingsFileName;
+    GameDataSettings = require(pathToGameSettings);
+    globalScale = GameDataSettings.getGlobalScale();
+} else
+    globalScale = GlobalScale;
 
-let RealScreenWidth = 1920;
-let RealScreenHeight = 1080;
-const GlobalScale = 0.595;
+const totalScale = 1;//temporary - it should be 1 in the release
 
 const NormalTint = 0xffffff;
 const LockTint = 0xaaaaaa;
@@ -15184,19 +16948,19 @@ var VisualData = (function () {
 
     const PaymentInfo = {
         hellprodgems100: {
-            nutaku_price: 20
+            nutaku_price: 1000
         },
         hellprodgems200: {
-            nutaku_price: 50
+            nutaku_price: 1000
         },
         hellprodgems300: {
-            nutaku_price: 100
+            nutaku_price: 1000
         },
         hellprodgems400: {
-            nutaku_price: 200
+            nutaku_price: 1000
         },
         hellprodgems500: {
-            nutaku_price: 500
+            nutaku_price: 1000
         }
     };
 
@@ -15366,6 +17130,9 @@ var VisualData = (function () {
         },
         'WhiteSpace': {
             file: 'UI/Windows/PhotoAlbum/white place.png',
+        },
+        'InAppIcon': {
+            file: 'UI/Windows/Prestige/hard.png',
         },
 
         'GirlDescription': {
@@ -15665,6 +17432,7 @@ var VisualData = (function () {
         'TokenCommon',
         'TokenRare',
         'TokenEpic',
+        'InAppIcon',
         'Managers_UnderText_1',
         'Managers_UnderText_2',
         'ButtonGreen',
@@ -15704,6 +17472,7 @@ var VisualData = (function () {
         popup_image_scale: 0.6,
         popup_images_from_drop: true,
         dont_double: true,
+        display_hard_icon: true,
         save_version: 10,
         banjo_duration: 16,
         fb_app_id: 2077329288999958,//hz
@@ -15721,20 +17490,20 @@ var VisualData = (function () {
             'puzzle': 'LockIcon',
             'available': 'PlaceSlotButton',
             'icon_pos': {
-                x: -84 * GlobalScale,
+                x: -84 * globalScale,
                 y: 0,
             },
             'price_pos': {
-                x: -33 * GlobalScale,
+                x: -33 * globalScale,
                 y: 0,
             },
             'icon_pos_puzzle': {
-                x: 110 * GlobalScale,
-                y: 15 * GlobalScale,
+                x: 110 * globalScale,
+                y: 15 * globalScale,
             },
             'price_pos_puzzle': {
-                x: -6 * GlobalScale,
-                y: 15 * GlobalScale,
+                x: -6 * globalScale,
+                y: 15 * globalScale,
             }
         },
         circular_progress: true,
@@ -15761,7 +17530,9 @@ var VisualData = (function () {
         },
         tut_phrase_y: 240,
         puzzle_top: true,
-        no_buttons_tint: true
+        no_buttons_tint: true,
+        nameForLocalization: true,
+        show_best: false
     };
 
     return {
@@ -15781,10 +17552,6 @@ var VisualData = (function () {
 
         getAllLanguages() {
             return AllLanguages;
-        },
-
-        getGlobalScale() {
-            return GlobalScale;
         },
 
         IsVertical() {
@@ -15815,9 +17582,9 @@ var VisualData = (function () {
 
         GUI_WinHarvested: {
             font: true,
-            imageY: -500 * GlobalScale,
+            imageY: -500 * globalScale,
             headerY: 0,
-            descY: 200 * GlobalScale
+            descY: 200 * globalScale
         },
 
         GUI_WinSettings: {
@@ -15862,8 +17629,8 @@ var VisualData = (function () {
             btnImage: 'PrestigeBtnPink',
             btnImage2: 'PrestigeBtnGrey',
             header_image: 'PrestigeBlueHead',
-            buttonY2: 550 * GlobalScale,
-            buttonY: 400 * GlobalScale,
+            buttonY2: 550 * globalScale,
+            buttonY: 400 * globalScale,
             headerOffset: -450
         },
 
@@ -15875,11 +17642,11 @@ var VisualData = (function () {
 
         GUI_WinWithPicture: {
             nineSlice: "long",
-            imageX: -500,
+            imageX: 0,
             imageY: 0,
             headerOffset: -370,
             buttonOffset: 300,
-            buttonOffsetX: 350,
+            buttonOffsetX: 0,
             descriptionX: 350,
             descriptionY: 0,
         },
@@ -17348,1580 +19115,6 @@ if (typeof exports !== 'undefined') {
     exports.VisualData = VisualData;
 }
 
-const FINGER_TYPE = {
-    NONE: "None",
-    SOFT: "Soft",
-    HARD: "Hard"
-};
-
-const TutStartPhase = 0;
-
-class Tutorial {
-    constructor() {
-        this.depth = WinDefaultDepth + 900;
-        this.guardShown = false;
-        this.supervisorShown = false;
-        this.fortuneShown = false;
-        this.timers = [];
-
-        this.dialogCallback = this.dialogClicked.bind(this);
-        this.resourcesCallback = this.resourcesChanged.bind(this);
-    }
-
-    dialogClicked() {
-        this.goToNextStep();
-    }
-
-    resourcesChanged() {
-        switch (this.phaseData.actionType) {
-            case "CollectGold":
-                // console.log("IS " + this.phaseData.parameter + " ? " + gameInit.progress.getTotalResources().compare(this.phaseData.parameter * RESOURCES_SCALE));
-                if (gameInit.progress.getTotalResources().compare(this.phaseData.parameter * RESOURCES_SCALE) >= 0) {
-                    if (this.fingerAnimation) {
-                        clearInterval(this.fingerAnimation);
-                        this.fingerAnimation = null;
-                    }
-
-                    this.goToNextStep();
-                }
-                break;
-        }
-    }
-
-    loaded(progress) {
-        const phase = progress.getTutorialPhase();
-
-        const data = GameData.getTutorialConfig();
-        const phaseIndex = this.getPhaseIndex(phase);
-
-        if (phaseIndex >= 0) {
-            // console.error("loaded " + phase, data[phaseIndex]);
-            if (data[phaseIndex].actionType !== 'Completed') {
-
-                gameInit.progress.onResourcesChanges.addListener(this.resourcesCallback);
-                this.newMethod = tutorial.update.bind(tutorial);
-                gameInit.update.addListener(this.newMethod);
-
-                guiManager.getWindowByType(WindowType.WinMain).hideAllButtonsForTutorial();
-                hudResources.hideForTutorial();
-
-                for (let i = 0; i <= phaseIndex; i++)
-                    this.preparePhase(data[i].stepNumber, i, i < phaseIndex);
-            } else
-                this.stopTutorial();
-        }
-    }
-
-    stopTutorial() {
-        if (this.newMethod) {
-            gameInit.progress.onResourcesChanges.removeListener(this.resourcesCallback);
-            gameInit.update.removeListener(this.newMethod);
-        }
-        guiManager.setTutorialPhrase(null);
-        this._hideFinger();
-    }
-
-    playSwipeAnimation() {
-        const oxy = {
-            x: this.finger.obj.x / localScale,
-            y: this.finger.obj.y / localScale
-        };
-
-        const play = () => {
-            if (this.finger.visible) {
-                this.finger.playAppear(true);
-                this.timers[0] = setTimeout(() => {
-                    this.finger_move_animation = animManager.moveToPoint(this.finger.obj, {
-                        x: oxy.x + 200 * GlobalScale,
-                        y: oxy.y - 100 * GlobalScale
-                    }, 0.3, () => {
-                        this.finger.playDisappear(true);
-                        this.timers[1] = setTimeout(() => {
-                            this.finger_move_animation = animManager.moveToPoint(this.finger.obj, oxy, 0.7, () => {
-                                this.finger_move_animation = null;
-                            });
-                            this.timers[1] = null;
-                        }, 500);
-                        this.timers[0] = null;
-                    });
-                }, 500);
-            }
-        };
-        const intervalTimer = setInterval(() => {
-            play();
-        }, 2000);
-        play();
-
-        return intervalTimer;
-    }
-
-    pointAtPosition(pos, center, useScale, no_animation, hold_time) {
-        this.finger.setVisible(true);
-        const x = (useScale ? pos.x / localScale : pos.x) + (center ? 0 : VisualData.MAP_PARAMS.center.x);
-        const y = (useScale ? pos.y / localScale : pos.y) + (center ? 0 : VisualData.MAP_PARAMS.center.y);
-        this.finger.setPosition(x, y);
-        this.circle.setPosition(x, y);
-
-        if (this.intervalTimer)
-            clearInterval(this.intervalTimer);
-
-        if (this.finger_move_animation) {
-            this.finger_move_animation.stopAnimation();
-            this.finger_move_animation = null;
-        }
-
-        for (let i = 0; i <= 1; i++) {
-            if (this.timers[i]) {
-                clearTimeout(this.timers[i]);
-                this.timers[i] = null;
-            }
-        }
-
-        this.circle.setVisible(false);
-
-        if (no_animation)
-            return;
-
-        hold_time = hold_time ? hold_time * 1000 : 0;
-        const play = () => {
-            if (this.finger.visible) {
-                this.finger.playAppear(true);
-                this.timers[0] = setTimeout(() => {
-                    this.circle.setVisible(true);
-                    animManager.scaleAlphaOnce(this.circle, 0.5, null, 0.5);
-                    this.timers[0] = null;
-                }, 100);
-
-                this.timers[1] = setTimeout(() => {
-                    this.finger.playDisappear(true);
-                    this.timers[1] = null;
-                }, 500 + hold_time);
-            }
-        };
-        this.intervalTimer = setInterval(() => {
-            play();
-        }, 1200 + hold_time);
-        play();
-    }
-
-    _isWindow(winType) {
-        return this.lastWindow == winType;
-    }
-
-    _lockAtButton(btn, center, pos) {
-        if (!btn)
-            return;
-
-        lockGuiAtButton(btn);
-        if (pos) {
-            this.pointAtPosition(pos);
-            return;
-        }
-
-        if (btn.getParentObject) {
-            const p = btn.getParentObject();
-            this.pointAtPosition({
-                x: p.x / localScale,
-                y: p.y / localScale + (0.5 - btn.originY) * btn.height
-            }, center);
-        } else if (btn.originY && btn.originY !== 0.5) {
-            this.pointAtPosition({
-                x: btn.x,
-                y: btn.y + (0.5 - btn.originY) * btn.height
-            }, center);
-        } else {
-            this.pointAtPosition(btn, center);
-        }
-    }
-
-    _hideFinger() {
-        this.finger.setVisible(false);
-        this.circle.setVisible(false);
-    }
-
-    _getFirstSlotPosition() {
-        const pos = VisualData.PLACED_BUILDINGS[1].position;
-        const key = VisualData.PLACED_BUILDINGS[1].levels[0].building;
-        const offset = VisualData.VISUAL_BUILDINGS[key].objects[0];
-        return {
-            x: pos.x + offset.x,
-            y: pos.y + offset.y,
-        };
-    }
-
-    getPhaseIndex(phase) {
-        return Progress.getPhaseIndex(phase);
-    }
-
-    goToNextPhase() {
-        unlockGUI();
-        unlockAnimatedObject();
-        this._hideFinger();
-        this.phaseIndex = this.getPhaseIndex(this.phase + 1);
-        this.preparePhase(this.phase, this.phaseIndex);
-    }
-
-    goToNextStep() {
-        unlockGUI();
-        unlockAnimatedObject();
-        this._hideFinger();
-        // console.log("goToNextStep ");
-        // // console.log("MOVE to " + this.phase);
-        // gameAnalytics.sendEvent("Tutorial", {
-        //     "phase": this.phase
-        // });
-
-        const data = GameData.getTutorialConfig();
-        const d = data[++this.phaseIndex];
-
-        if (gameInit.progress.getTutorialPhase() !== d.stepNumber)
-            gameInit.progress.setTutorialPhase(d.stepNumber);
-
-        this.preparePhase(d.stepNumber, this.phaseIndex);
-    }
-
-    preparePhase(phase, phaseIndex, fastComplete) {
-        this.phase = phase;
-        this.phaseIndex = phaseIndex;
-        this.lastWindow = guiManager.getWinTypeAtTheTop();
-        this.lastTab = 0;
-
-        const data = GameData.getTutorialConfig();
-        const phaseData = data[this.phaseIndex];
-
-        this.phaseData = phaseData;
-
-        //close last dialog
-        if (this._isWindow(WindowType.QuestBubble)) {
-            const win = guiManager.getActiveWindow();
-            win.closeWindow();
-        }
-
-        // console.log("preparePhase " + phase + " > " + phaseIndex + " = " + phaseData.actionType + " win = " + this.lastWindow);
-
-        if (phaseData.showHint) {
-            guiManager.setTutorialPhrase(LocalizationManager.getTutorialLocalizization(phaseData.localizationKey));
-        } else
-            guiManager.setTutorialPhrase(null);
-
-        switch (phaseData.actionType) {
-            case "ShowDialog":
-                guiManager.showQuestMessage(LocalizationManager.getTutorialLocalizization(phaseData.localizationKey), phaseData.parameter, this.dialogCallback);
-                break;
-            case "ClickSlot":
-                if (this._isWindow(WindowType.WinMain)) {
-                    if (!VisualData.getGameSettings().slot_purchase_as_buttons) {
-                        this.pointAtPosition(this._getFirstSlotPosition());
-                        lockGuiEverything();
-                    } else {
-                        this._lockAtButton(buildingsGUI.getPurchaseButton(1, 1), true);
-                    }
-                } else {
-                    if (this._isWindow(WindowType.WinConstruct))
-                        this._lockAtButton(guiManager.getActiveWindow().getTutorialButton());
-                }
-                break;
-            case "ChangeGameModeToUpgrade":
-                const win = guiManager.getWindowByType(WindowType.WinMain);
-                win.showUpgradeButton();
-                if (this._isWindow(WindowType.WinMain)) {
-                    lockAtOneAnimatedObject(win);
-                    this._lockAtButton(win.getUpgradeButton(), true);
-                }
-                break;
-            case "UpgradeSlot":
-                if (phaseData.fingerType !== FINGER_TYPE.NONE) {
-                    if (this._isWindow(WindowType.WinUpgrade)) {
-                        lockGuiEverything();
-                        unlockAnimatedObject();
-                        this.pointAtPosition(this._getFirstSlotPosition(), null, null, false, 0.5);
-                        buildingsGUI.hideSomeLabelsForTutorial();
-                    }
-                }
-            {
-                if (fastComplete)
-                    hudResources.showTokens();
-                const win = guiManager.getWindowByType(WindowType.WinMain);
-                win.showUpgradeButton();
-            }
-                break;
-            case "ChangeGameModeToNormal":
-                this._lockAtButton(guiManager.getActiveWindow().getExitButton(), true);
-                break;
-            case "CloseGirlListWindow": {
-                this._lockAtButton(guiManager.getActiveWindow().getExitButton(), true);
-                const win = guiManager.getWindowByType(WindowType.WinPhotosMainMenu);
-                if (win.scroll)
-                    win.scroll.setScrollerEnable(true);
-                break;
-            }
-            case "ClickGirlMenuButton": {
-                const win = guiManager.getWindowByType(WindowType.WinMain);
-                win.showGirlsMenuButton();
-                if (this._isWindow(WindowType.WinMain)) {
-                    this._lockAtButton(win.getGirlsMenuButton(), true);
-                } else if (this._isWindow(WindowType.WinPhotosMainMenu))
-                    this.goToNextStep();
-                break;
-            }
-            case "OpenGirlListWindow":
-            case "OpenBioWindow":
-            case "OpenUpgradeMarketWindow":
-            case "OpenDoublingsWindow":
-
-            case "OpenPuzzlesWindow":
-            case "ClickOpenBoxItem":
-                this.goToNextStep();
-                break;
-            case "OpenGirlQuestWindow": {
-                if (this._isWindow(WindowType.WinPhotosMainMenu)) {
-                    const win = guiManager.getWindowByType(WindowType.WinPhotosMainMenu);
-                    win.scroll.setScrollerEnable(false);
-                    const btn = win.getButtonByTag("Peristera");
-                    this._lockAtButton(btn, true, win.getButtonPosByTag());
-                }
-                break;
-            }
-            case "ClickBioButton": {
-                if (this._isWindow(WindowType.WinGirlBio))
-                    this.goToNextStep();
-                else {
-                    const win = guiManager.getWindowByType(WindowType.WinPhotosQuest);
-                    this._lockAtButton(win.GirlDescription, true);
-                }
-                break;
-            }
-            case "ClickUnlockPhotoButton": {
-                const win = guiManager.getWindowByType(WindowType.WinPhotosQuest);
-                this._lockAtButton(win.actionButton, true);
-                break;
-            }
-            case "ClickUpgradeMarketButton": {
-                hudResources.showGems();
-                const win = guiManager.getWindowByType(WindowType.WinMain);
-                win.showStoreButton();
-                if (this._isWindow(WindowType.WinMain)) {
-                    GlobalInputLocked = true;
-                    this._lockAtButton(win.getStoreButton(), true);
-                } else if (this._isWindow(WindowType.WinStore))
-                    this.goToNextStep();
-                break;
-            }
-            case "BuyAutoClickUpgrade": {
-                const id = VisualData.getAutoClickSlot1Id();
-                if (!gameInit.progress.isUpgradePurchased(id) && this._isWindow(WindowType.WinStore)) {
-                    GlobalInputLocked = false;
-                    const win = guiManager.getActiveWindow();
-                    this._lockAtButton(win.getFirstUpgradeSlot(), true);
-                    win.scroll.setScrollerEnable(false);
-                }
-                break;
-            }
-            case "ClickManagerButton": {
-                if (this._isWindow(WindowType.WinMain)) {
-                    GlobalInputLocked = true;
-                    const win = guiManager.getActiveWindow();
-                    win.showSuperVisorButton();
-                    this._lockAtButton(win.getSuperVisorButton(), true);
-                } else if (this._isWindow(WindowType.WinManagerDoubling))
-                    this.goToNextStep();
-                break;
-            }
-            case "StartSuperDoubling": {
-                if (this._isWindow(WindowType.WinMain)) {
-                    if (this.supervisorShown)
-                        this.goToNextStep();
-                    else {
-                        this._hideFinger();
-                        unlockAnimatedObject();
-                    }
-                } else {
-                    if (this._isWindow(WindowType.WinBanjoEnd)) {
-                        this._lockAtButton(guiManager.getActiveWindow().getTutorialButton());
-                        this.supervisorShown = true;
-                    } else {
-                        if (this._isWindow(WindowType.WinManagerDoubling)) {
-                            if (!gameInit.progress.haveAnySuperDoublingTokens())
-                                this.goToNextStep();
-                            else
-                                this._lockAtButton(guiManager.getActiveWindow().getTutorialButton(), true);
-                        }
-                    }
-                }
-                break;
-            }
-            case "BuySlots": {
-                if (gameInit.progress.getConstructedBuildingsCount() >= 6)
-                    this.goToNextStep();
-                break;
-            }
-            case "ClickPrestigeButton": {
-                if (gameInit.progress.getHarvestsCount() >= 1)
-                    this.goToNextStep();
-                else {
-                    lockGuiEverything();
-                    lockAtOneAnimatedObject(visualGame.getBoss());
-                    if (this._isWindow(WindowType.WinMain)) {
-                        const win = guiManager.getActiveWindow();
-                        win.showBossButton();
-                        this._lockAtButton(win.getBossButton(), true);
-                    } else {
-                        if (this._isWindow(WindowType.WinBossSummon))
-                            this.goToNextStep();
-                    }
-                    break;
-                }
-                break;
-            }
-            case "OpenPrestigeWindow":
-                if (this._isWindow(WindowType.WinBossSummon))
-                    this._lockAtButton(guiManager.getActiveWindow().getTutorialButton());
-                else {
-                    if (this._isWindow(WindowType.WinBossProccess))
-                        this.goToNextStep();
-                }
-                break;
-            case "StartPrestige": {
-                if (this._isWindow(WindowType.WinHarvested))
-                    this.goToNextStep();
-                break;
-            }
-            case "CompletePrestige": {
-                if (guiManager.getWinTypeAtTheTop() == WindowType.WinMain) {
-                    this.goToNextStep();
-                    guiManager.getWindowByType(WindowType.WinMain).showAllButtonsFromTutorial();
-                }
-                hudResources.showStars();
-                break;
-            }
-            case "ClickPuzzlesButton": {
-                GlobalInputLocked = true;
-                if (this._isWindow(WindowType.WinMain)) {
-                    const win = guiManager.getActiveWindow();
-                    this._lockAtButton(win.getPuzzlesButton(), true);
-                } else if (this._isWindow(WindowType.WinPuzzle))
-                    this.goToNextStep();
-
-                break;
-            }
-            case "ClickBoxTab": {
-                if (this._isWindow(WindowType.WinPuzzle)) {
-                    const win = guiManager.getActiveWindow();
-                    this.lastTab = win.getSelectedTab();
-                    if (this.lastTab === 0)
-                        this._lockAtButton(win.getBoxesTab(), true);
-                    else
-                        this._lockAtButton(win.getPuzzleOpenBox(), true);
-
-                    win.getBoxesScroll().setScrollerEnable(false);
-                } else {
-                    if (gameInit.progress.getOpenedBoxes() > 0) {
-                        this._hideFinger();
-                        this.goToNextStep();
-
-                        const win = guiManager.getWindowByType(WindowType.WinPuzzle);
-                        if (win.scroll)
-                            win.getBoxesScroll().setScrollerEnable(true);
-                    }
-                }
-                break;
-            }
-        }
-    }
-
-    onCreated(engine) {
-        this.engine = engine;
-        PrepareAndCreateObject(CommonVisualData.FINGER, null, this.engine, this.depth, (finger) => {
-            this.finger = finger;
-        });
-        this.circle = this.engine.add.sprite(0, 0, "Tut_Circle").setDepth(this.depth - 1);
-        this._hideFinger();
-    }
-
-    update() {
-        const win = guiManager.getActiveWindow();
-        if (win.winType != WindowType.QuestBubble && (this.lastWindow != guiManager.getWinTypeAtTheTop() || (win.selectedTab && win.selectedTab !== this.lastTab))) {
-            this.preparePhase(this.phase, this.phaseIndex);
-        }
-
-        switch (this.phaseData.actionType) {
-            case "ClickSlot":
-                if (gameInit.progress.isBuildingConstructed(1, 1))
-                    this.goToNextPhase();
-                break;
-            case "ChangeGameModeToUpgrade":
-                if (this._isWindow(WindowType.WinUpgrade))
-                    this.goToNextStep();
-                break;
-            case "UpgradeSlot":
-                const b = gameInit.getBuildingById(1, 1);
-                if (b.getLevel() >= this.phaseData.parameter) {
-                    if (this.phaseData.parameter >= 20)
-                        hudResources.showTokens();
-
-                    this.goToNextStep();
-                }
-                break;
-            case "ChangeGameModeToNormal":
-            case "CloseGirlListWindow": {
-                if (this._isWindow(WindowType.WinMain))
-                    this.goToNextStep();
-                break;
-            }
-            case "ClickPeristeraBar": {
-                const win = guiManager.getWindowByType(WindowType.WinPhotosMainMenu);
-                const btn = win.getButtonByTag("Peristera");
-                if (btn)
-                    this.goToNextStep();
-                break;
-            }
-            case "OpenGirlQuestWindow":
-                if (this._isWindow(WindowType.WinPhotosQuest))
-                    this.goToNextStep();
-                break;
-            case "ClickUnlockPhotoButton":
-                if (gameInit.progress.haveAnyPhotos()) {
-                    const win = guiManager.getWindowByType(WindowType.WinMain);
-                    win.showPhotoAlbum();
-                    this.goToNextStep();
-                }
-                break;
-            case "ClickUpgradeMarketButton":
-            case "BuyAutoClickUpgrade":
-                const id = VisualData.getAutoClickSlot1Id();
-                if (gameInit.progress.isUpgradePurchased(id)) {
-                    const win = guiManager.getWindowByType(WindowType.WinStore);
-                    win.scroll.setScrollerEnable(true);
-                    unlockGUI();
-                    this._hideFinger();
-                    this.goToNextStep();
-                }
-                break;
-            case "CollectGold": {
-                if (!this.fingerAnimation && gameInit.getBuildingById(1, 1).anyResources && this.phaseData.parameter <= 100) {
-                    this.pointAtPosition(this._getFirstSlotPosition(), null, null, true);
-                    this.fingerAnimation = this.playSwipeAnimation();
-                    // this.fingerAnimation = animManager.swipeInfinite(this.finger.obj, 1);
-                    this.circle.setVisible(false);
-                }
-                break;
-            }
-        }
-    }
-
-    onAdStarted() {
-        switch (this.phase) {
-            case TutPhases.FortuneWheel:
-                this._hideFinger();
-                this.goToNextStep();
-                break;
-        }
-    }
-}
-
-function SocialVK() {
-
-    let app_id;
-    let loadedAds = [];
-    let _getParams = null;
-    const PURCHASE_SUFFIX = ".vk";
-    let authorizing = false;
-
-    function _preloadAd(callbacks, playMethod) {
-        if (typeof admanInit === 'undefined') {
-            if (callbacks && callbacks.onAdBlock)
-                callbacks.onAdBlock();
-            return;
-        }
-        console.log("preloadAdFor app " + app_id);
-        admanInit({
-            user_id: null,
-            app_id: app_id,
-            type: 'rewarded',         // 'preloader' или 'rewarded' (по умолчанию - 'preloader')
-            // params: {preview: 1}   // для проверки корректности работы рекламы
-        }, onAdsReady, onNoAds);
-
-        function onAdsReady(adman) {
-            loadedAds.push(adman);
-            if (playMethod)
-                playMethod(callbacks);
-        }
-
-        function onNoAds() {
-            console.error("onNoAds");
-            if (callbacks && callbacks.onNoAds)
-                callbacks.onNoAds();
-        }
-    }
-
-    function _playRewardedAd(callbacks) {
-        if (loadedAds.length > 0) {
-            adman = loadedAds.pop();
-            if (callbacks.onStarted) {
-                adman.onStarted(function () {
-                    callbacks.onStarted();
-                });
-            }
-
-            if (callbacks.onCompleted) {
-                adman.onCompleted(function () {
-                    callbacks.onCompleted();
-                });
-            }
-            if (callbacks.onSkipped) {
-                adman.onSkipped(function () {
-                    callbacks.onSkipped();
-                });
-            }
-            if (callbacks.onClicked) {
-                adman.onClicked(function () {
-                    callbacks.onClicked();
-                });
-            }
-            adman.start('preroll');
-            _preloadAd();
-        } else
-            _preloadAd(callbacks, _playRewardedAd);
-    }
-
-    function getAuthKey() {
-        // return "a7aeecb9cf5b60cfba66225716e7395d";
-        return _getParams['auth_key'];
-    }
-
-    function getViewerId() {
-        // return "539955786";
-        return _getParams['viewer_id'];
-    }
-
-    function _checkPurchases(consumeCallback, offset) {
-        const request_limit = 20;
-        offset = offset || 0;
-        gBase.social.vkListPurchases(offset, request_limit, (err, response) => {
-            console.info("list  err ", err);
-            console.info("response ", response);
-            if (err) {
-                gameAnalytics.sendServerError(err, "vkListPurchases");
-                socialManager.checkAuthStatus(err, () => _checkPurchases(consumeCallback, 0));
-            } else {
-                if (response) {
-                    let stopped = false;
-                    const arr = response.details.originalResponse;
-                    for (let i = 0;i < arr.length; i++) {
-                        const a = arr[i];
-                        if (!a.isConsumed) {
-                            console.warn("CONSUME " + a.purchaseNum);
-                            gBase.social.vkConsumePurchase(a.purchaseNum, (err, response) => {
-                                console.info("consume err ", err);
-                                console.info("response ", response);
-
-                                if (err) {
-                                    gameAnalytics.sendServerError(err, "vkConsumePurchase");
-                                    socialManager.checkAuthStatus(err, () => _checkPurchases(consumeCallback, 0));
-                                    stopped = true;
-                                }
-                                else {
-                                    const itemId = a.itemId ? a.itemId : a.productCode;
-                                    consumeCallback(itemId.substring(0, itemId.length - PURCHASE_SUFFIX.length));
-                                }
-                            });
-                        }
-
-                        if (stopped)
-                            return;
-                    }
-
-                    if (arr.length === request_limit)
-                        _checkPurchases(consumeCallback, offset + request_limit);
-                }
-            }
-        });
-    }
-
-    return {
-        initVK: function (appId) {
-            app_id = appId;
-            this.createGBase();
-            if (typeof VK !== 'undefined')
-            VK.init(function() {
-                // API initialization succeeded
-                // console.info("INIT2 ", window.location);
-                // Your code here
-                // VK.callMethod("showInviteBox");
-
-                var callbacksResults = document.getElementById('callbacks');
-
-                VK.addCallback('onOrderSuccess', (order_id) => {
-                    _checkPurchases((id)=>{
-                       gameInit.progress.publicConfirmedPayment(id);
-                    });
-                });
-            });
-            _preloadAd();
-        },
-
-        setAllGetParams(prms) {
-            _getParams = prms;
-        },
-
-        playRewardedAd: function (callbacks) {
-            _playRewardedAd(callbacks);
-        },
-
-        isAuthorizing() {
-            return authorizing;
-        },
-
-        reconnect(callback) {
-            this.createGBase();
-            this.authorize(()=> {
-                gBase.profile.getp((err) => {
-                    if (err)
-                        gameAnalytics.sendServerError(err, "getp");
-                    else
-                        callback();
-                });
-            });
-        },
-
-        authorize(callback) {
-            if (!getViewerId() || !getAuthKey())
-                callback();
-            else {
-                authorizing = true;
-                console.log("Authorize: " + getViewerId());
-                gBase.account.authWebVk(getViewerId(), getAuthKey(), (err) => {
-                    authorizing = false;
-                    if (err)
-                        gameAnalytics.sendServerError(err, "authWebVk");
-
-                    UnnyNet.UnnyNet.Vkontakte.authorize((response)=>{
-                        console.info("UnnyNet auth", response);
-
-                        callback();
-                    });
-                });
-            }
-        },
-
-        checkPurchases(consumeCallback) {
-            _checkPurchases(consumeCallback);
-        },
-
-        purchase(productId) {
-            var params = {
-                type: 'item',
-                item: productId + PURCHASE_SUFFIX
-            };
-
-            VK.callMethod('showOrderBox', params);
-        },
-
-        getDisplayPrice(price) {
-            return price + " Руб.";
-        },
-
-        getPriceLabel(productId) {
-            return this.getDisplayPrice(this.getPrice(productId));
-        },
-
-        getPrice(productId) {
-            const info = VisualData.getPaymentInfoById(productId);
-            return info ? info.vk_price * 7 : 0;
-        }
-    };
-}
-
-function SocialOK() {
-
-    let app_id;
-    let loadedAds = [];
-    let _getParams = null;
-    const PURCHASE_SUFFIX = ".ok";
-    let authorizing = false;
-
-    let callbackOnNoAds = null;
-    let callbackAdIsReady = null;
-    let callbackAdStarted = null;
-    let callbackAdCompleted = null;
-
-    let callbackPostMessage = null;
-
-    let authData;
-    let authCallback;
-
-    function _applyCallbacks() {
-
-    }
-
-    function _preloadAd(callbacks, playMethod) {
-        // if (typeof admanInit === 'undefined') {
-        //     if (callbacks && callbacks.onAdBlock)
-        //         callbacks.onAdBlock();
-        //     return;
-        // }
-        callbackAdIsReady = function onAdsReady() {
-            loadedAds.push(1);
-            if (playMethod)
-                playMethod(callbacks);
-            callbackAdIsReady = null;
-        };
-
-        callbackOnNoAds = function onNoAds() {
-            console.warn("onNoAds");
-            if (callbacks && callbacks.onNoAds)
-                callbacks.onNoAds();
-            callbackOnNoAds = null;
-        };
-
-        FAPI.invokeUIMethod("prepareMidroll");
-    }
-
-    function _playRewardedAd(callbacks) {
-        if (callbacks.onStarted) {
-            callbackAdStarted = function () {
-                callbacks.onStarted();
-                callbackAdStarted = null;
-            }
-        }
-
-        if (callbacks.onCompleted) {
-            callbackAdCompleted = function () {
-                callbacks.onCompleted();
-                callbackAdCompleted = null;
-            }
-        }
-
-        if (loadedAds.length > 0) {
-            loadedAds.pop();
-
-            // if (callbacks.onCompleted) {//TODO
-            //     adman.onCompleted(function () {
-            //         callbacks.onCompleted();
-            //     });
-            // }
-
-            FAPI.invokeUIMethod("showMidroll");
-            _preloadAd();
-        } else
-            _preloadAd(callbacks, _playRewardedAd);
-    }
-
-    function _checkPurchases(consumeCallback, offset) {
-        const request_limit = 20;
-        offset = offset || 0;
-        gBase.social.okListPurchases(offset, request_limit, (err, response) => {
-            console.info("list  err ", err);
-            console.info("response ", response);
-            if (err) {
-                gameAnalytics.sendServerError(err, "okListPurchases");
-                socialManager.checkAuthStatus(err, () => _checkPurchases(consumeCallback, 0));
-            } else {
-                if (response) {
-                    let stopped = false;
-                    const arr = response.details.originalResponse;
-                    for (let i = 0; i < arr.length; i++) {
-                        const a = arr[i];
-                        if (!a.isConsumed) {
-                            console.warn("CONSUME " + a.purchaseNum);
-                            gBase.social.okConsumePurchase(a.purchaseNum, (err, response) => {
-                                console.info("consume err ", err);
-                                console.info("response ", response);
-
-                                if (err) {
-                                    gameAnalytics.sendServerError(err, "okConsumePurchase");
-                                    socialManager.checkAuthStatus(err, () => _checkPurchases(consumeCallback, 0));
-                                    stopped = true;
-                                }
-                                else {
-                                    const itemId = a.itemId ? a.itemId : a.productCode;
-                                    consumeCallback(itemId.substring(0, itemId.length - PURCHASE_SUFFIX.length));
-                                }
-                            });
-                        }
-
-                        if (stopped)
-                            return;
-                    }
-
-                    if (arr.length === request_limit)
-                        _checkPurchases(consumeCallback, offset + request_limit);
-                }
-            }
-        });
-    }
-
-    return {
-        initOK: function (appId) {
-            app_id = appId;
-            this.createGBase();
-            // gBase = new Gbase.GbaseApi(CURRENT_ENVIRONMENT.name, CURRENT_ENVIRONMENT.env, CURRENT_ENVIRONMENT.hmac, CURRENT_ENVIRONMENT.platform, CURRENT_ENVIRONMENT.version);
-            if (typeof FAPI !== 'undefined') {
-                var rParams = FAPI.Util.getRequestParameters();
-                console.info("rParams", rParams);
-                authData = rParams;
-                FAPI.init(rParams["api_server"], rParams["apiconnection"],
-                    /*
-                    * Первый параметр:
-                    * функция, которая будет вызвана после успешной инициализации.
-                    */
-                    function () {
-                        window.API_callback = function (method, result, data) {
-                            console.warn("method " + method + " > " + result + " data = ", data);
-                            switch (method) {
-                                case "postMediatopic":
-                                    if (result === "ok") {
-                                        if (callbackPostMessage) {
-                                            callbackPostMessage();
-                                            callbackPostMessage = null;
-                                        }
-                                    }
-                                    break;
-                                case "showInvite":
-                                    if (result === "ok" && data) {
-                                        const ids = data.split(",");
-                                        if (ids && ids.length > 0)
-                                            gameInit.likedSuccessfull(ids);
-                                    }
-                                    break;
-                                case "showPayment":
-                                    if (result === "ok") {
-                                        _checkPurchases((id) => {
-                                            gameInit.progress.publicConfirmedPayment(id);
-                                        });
-                                    }
-                                    break;
-                                case "prepareMidroll":
-                                    switch (data) {
-                                        case "ready":
-                                            if (callbackAdIsReady)
-                                                callbackAdIsReady();
-                                            break;
-                                        case "in_use":
-                                            if (callbackAdStarted)
-                                                callbackAdStarted();
-                                            break;
-                                        default:
-                                            if (callbackOnNoAds)
-                                                callbackOnNoAds();
-                                            break;
-                                    }
-                                    break;
-                                case "showMidroll":
-                                    if (result === "ok") {
-                                        switch (data) {
-                                            case "complete":
-                                                if (callbackAdCompleted)
-                                                    callbackAdCompleted();
-                                                break;
-                                        }
-                                    } else {
-                                        if (callbackOnNoAds)
-                                            callbackOnNoAds();
-                                    }
-                                    break;
-                            }
-                        }
-                    },
-                    /*
-                    * Второй параметр:
-                    * функция, которая будет вызвана, если инициализация не удалась.
-                    */
-                    function (error) {
-                        alert("Ошибка инициализации");
-                    }
-                );
-            }
-
-            _preloadAd();
-        },
-
-        openLikes() {
-            FAPI.UI.showInvite("Поиграй в мою игру!");
-        },
-
-        setAllGetParams(prms) {
-            _getParams = prms;
-        },
-
-        playRewardedAd: function (callbacks) {
-            _playRewardedAd(callbacks);
-        },
-
-        isAuthorizing() {
-            return authorizing;
-        },
-
-        authorize(callback) {
-            if (!authData) {
-                console.log("Waiting for auth data");
-                authCallback = callback;
-            }
-            else {
-                authorizing = true;
-                // okId, okSecret, okSessionKey
-                gBase.account.authWebOk(authData.logged_user_id, authData.auth_sig, authData.session_key, (err) => {//TODO
-                    authorizing = false;
-                    console.info("auth!!", err);
-                    if (err)
-                        gameAnalytics.sendServerError(err, "authWebOk");
-                    callback();
-                });
-            }
-        },
-
-        checkPurchases(consumeCallback) {
-            _checkPurchases(consumeCallback);
-        },
-
-        purchase(productId) {
-            FAPI.UI.showPayment("Кристаллы", "С ними быстрее качаться!", productId + PURCHASE_SUFFIX, this.getPrice(productId), null, null, "ok", "true");//TODO
-        },
-
-        getPrice(productId) {
-            const info = VisualData.getPaymentInfoById(productId);
-            return info ? info.ok_price : 0;
-        },
-
-        getDisplayPrice(price) {
-            return price + " ОК";
-        },
-
-        getPriceLabel(productId) {
-            return this.getDisplayPrice(this.getPrice(productId));
-        },
-
-        postMessage(callback) {
-            callbackPostMessage = callback;
-            FAPI.UI.postMediatopic({
-                "media":[
-                    {
-                        "type": "text",
-                        "text": "Давай играть вместе!"
-                    }
-                ]
-            }, false);
-        }
-    };
-}
-
-function SocialFB() {
-
-    let app_id;
-    let loadedAds = [];
-    let _getParams = null;
-
-    function _preloadAd(callbacks, playMethod) {
-        if (typeof admanInit === 'undefined') {
-            if (callbacks && callbacks.onAdBlock)
-                callbacks.onAdBlock();
-            return;
-        }
-        admanInit({
-            user_id: null,
-            app_id: app_id,
-            type: 'rewarded',         // 'preloader' или 'rewarded' (по умолчанию - 'preloader')
-            // params: {preview: 1}   // для проверки корректности работы рекламы
-        }, onAdsReady, onNoAds);
-
-        function onAdsReady(adman) {
-            loadedAds.push(adman);
-            if (playMethod)
-                playMethod(callbacks);
-        }
-
-        function onNoAds() {
-            console.warn("onNoAds");
-            if (callbacks && callbacks.onNoAds)
-                callbacks.onNoAds();
-        }
-    }
-
-    function _playRewardedAd(callbacks) {
-        if (loadedAds.length > 0) {
-            adman = loadedAds.pop();
-            if (callbacks.onStarted) {
-                adman.onStarted(function () {
-                    callbacks.onStarted();
-                });
-            }
-
-            if (callbacks.onCompleted) {
-                adman.onCompleted(function () {
-                    callbacks.onCompleted();
-                });
-            }
-            if (callbacks.onSkipped) {
-                adman.onSkipped(function () {
-                    callbacks.onSkipped();
-                });
-            }
-            if (callbacks.onClicked) {
-                adman.onClicked(function () {
-                    callbacks.onClicked();
-                });
-            }
-            adman.start('preroll');
-            _preloadAd();
-        } else
-            _preloadAd(callbacks, _playRewardedAd);
-    }
-
-    return {
-        initFB: function (appId) {
-            app_id = appId;
-            gBase = new Gbase.GbaseApi(CURRENT_ENVIRONMENT.name, CURRENT_ENVIRONMENT.env, CURRENT_ENVIRONMENT.hmac, CURRENT_ENVIRONMENT.platform, CURRENT_ENVIRONMENT.version);
-        },
-
-        setAllGetParams(prms) {
-            _getParams = prms;
-        },
-
-        playRewardedAd: function (callbacks) {
-            // _playRewardedAd(callbacks);
-            console.error("not implemented");
-        },
-
-        authorize(callback) {
-            if (window.fbAsyncInit) {
-                callback();
-                return;
-            }
-            window.fbAsyncInit = function() {
-                FB.init({
-                    appId      : app_id,
-                    cookie     : true,
-                    xfbml      : true,
-                    version    : 'v3.3'
-                });
-
-                FB.AppEvents.logPageView();
-
-                function onLogin(response) {
-                    var accessToken = response.authResponse.accessToken;
-                    gBase.account.authFb(accessToken, (err) => {
-                        if (err)
-                            gameAnalytics.sendServerError(err, "authFb");
-                        callback();
-                    });
-                }
-
-                FB.getLoginStatus(function(response) {
-                    if (response.status === 'connected') {
-                        // the user is logged in and has authenticated your
-                        // app, and response.authResponse supplies
-                        // the user's ID, a valid access token, a signed
-                        // request, and the time the access token
-                        // and signed request each expire
-                        // var uid = response.authResponse.userID;
-                        onLogin(response);
-                    } else {
-                        FB.login(function (response) {
-                            onLogin(response);
-                        }, {scope: 'email'});
-                    }
-                });
-            };
-
-            (function(d, s, id){
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) {return;}
-                js = d.createElement(s); js.id = id;
-                js.src = "https://connect.facebook.net/en_US/sdk.js";
-                fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));
-        },
-    };
-};
-
-function SocialNutaku() {
-
-    let _getParams = null;
-    let user_id = null;
-
-    function _checkPurchases(consumeCallback) {
-        // console.warn("_CHECK? " + user_id);
-        if (!user_id)
-            return null;
-
-        UnnyNet.UnnyNet.getPurchases(UnnyNet.PurchaseStatusFilter.COMPLETED, (response) => {
-            // console.info("COMPLETED", response);
-            if (response.success) {
-                const list = response.data;
-                for (let i in list) {
-                    const id = list[i].id;
-                    if (id)
-                        UnnyNet.UnnyNet.claimPurchase2(user_id, 2, id, (response2) => {//TODO fix it
-                            if (response2.success) {
-                                console.info("claim2", response2);
-                                if (consumeCallback)
-                                    consumeCallback();
-                            } else {
-                                console.error("[ERROR]completeNutakuPurchase2: ", response2);
-                            }
-                        });
-                }
-            } else {
-                console.error("[ERROR]getPurchases: ", response);
-            }
-        });
-
-        UnnyNet.UnnyNet.getPurchases(UnnyNet.PurchaseStatusFilter.PENDING, (response) => {
-            console.info("RESPINSE", response);
-            if (response.success) {
-                const list = response.data;
-                for (let i in list) {
-                    const id = list[i].id;
-                    if (id)
-                        UnnyNet.UnnyNet.completeNutakuPurchase2(user_id, UnnyNet.NutakuPlatform.PCBrowser, id, (response2) => {
-                            if (response2.success) {
-                                console.info("COMPLETE..", response2);
-                                UnnyNet.UnnyNet.claimPurchase2(user_id, 2, response2.data.id, (response3) => {//TODO fix it
-                                    console.info("CLAIMED..", response3);
-                                    if (consumeCallback)
-                                        consumeCallback();
-                                });
-                            } else {
-                                console.error("[ERROR]completeNutakuPurchase2: ", response2);
-                            }
-                        });
-                }
-            } else {
-                console.error("[ERROR]getPurchases: ", response);
-            }
-        });
-    }
-
-    return {
-        initNutaku: function (appId) {
-            if (typeof opensocial != "undefined") {
-                let req = opensocial.newDataRequest();
-                req.add(req.newFetchPersonRequest(opensocial.IdSpec.PersonId.VIEWER), "viewer");
-                req.send(function (response) {
-                    if (response.hadError()) {
-                        // error
-                    } else {
-                        let item = response.get("viewer");
-                        if (item.hadError()) {
-                            // error
-                        } else {
-                            let viewer = item.getData();
-                            user_id = viewer.getId();
-                            // var nickname = viewer.getDisplayName();
-                            console.info("USER", viewer);
-                            // ...
-                        }
-                    }
-                });
-            }
-        },
-
-        playRewardedAd: function (callbacks) {
-            if (callbacks)
-                callbacks.onCompleted();
-        },
-
-        setAllGetParams(prms) {
-            _getParams = prms;
-        },
-
-        checkPurchases(consumeCallback) {
-            _checkPurchases((id) => {
-                gameInit.progress.publicConfirmedPayment("hellprodgems200");
-            });
-        },
-
-        purchase(productId) {
-            if (typeof gadgets === "undefined") {
-                gameInit.progress.publicConfirmedPayment(productId);
-                return;
-            }
-
-            UnnyNet.UnnyNet.purchaseProduct("test", (response) => {
-                console.warn("Go check now", response);
-                _checkPurchases((id) => {
-                    gameInit.progress.publicConfirmedPayment(productId);
-                });
-            });
-        },
-
-        authorize(callback) {
-            const resp = (response) => {
-                // console.info("AUTH>", response);
-                if (response.success)
-                    callback();
-                else
-                    console.error("Couldnt' authorize ", response.error);
-            };
-
-            if (typeof gadgets != "undefined")
-                UnnyNet.UnnyNet.Nutaku.authorize(resp);
-            else
-                UnnyNet.UnnyNet.authorize('test_user1', 'test_password', resp);
-        },
-
-        getDisplayPrice(price) {
-            return price + " Gold";
-        },
-
-        getPriceLabel(productId) {
-            return this.getDisplayPrice(this.getPrice(productId));
-        },
-
-        getPrice(productId) {
-            const info = VisualData.getPaymentInfoById(productId);
-            return info ? info.nutaku_price : 0;
-        }
-    }
-}
-
-function SocialFB_Instant() {
-
-    let app_id;
-    let loadedAds = [];
-    let _getParams = null;
-
-    function _preloadAd(callbacks, playMethod) {
-        if (typeof admanInit === 'undefined') {
-            if (callbacks && callbacks.onAdBlock)
-                callbacks.onAdBlock();
-            return;
-        }
-        admanInit({
-            user_id: null,
-            app_id: app_id,
-            type: 'rewarded',         // 'preloader' или 'rewarded' (по умолчанию - 'preloader')
-            // params: {preview: 1}   // для проверки корректности работы рекламы
-        }, onAdsReady, onNoAds);
-
-        function onAdsReady(adman) {
-            loadedAds.push(adman);
-            if (playMethod)
-                playMethod(callbacks);
-        }
-
-        function onNoAds() {
-            console.warn("onNoAds");
-            if (callbacks && callbacks.onNoAds)
-                callbacks.onNoAds();
-        }
-    }
-
-    function _playRewardedAd(callbacks) {
-        if (loadedAds.length > 0) {
-            adman = loadedAds.pop();
-            if (callbacks.onStarted) {
-                adman.onStarted(function () {
-                    callbacks.onStarted();
-                });
-            }
-
-            if (callbacks.onCompleted) {
-                adman.onCompleted(function () {
-                    callbacks.onCompleted();
-                });
-            }
-            if (callbacks.onSkipped) {
-                adman.onSkipped(function () {
-                    callbacks.onSkipped();
-                });
-            }
-            if (callbacks.onClicked) {
-                adman.onClicked(function () {
-                    callbacks.onClicked();
-                });
-            }
-            adman.start('preroll');
-            _preloadAd();
-        } else
-            _preloadAd(callbacks, _playRewardedAd);
-    }
-
-    return {
-        initFB: function (appId) {
-            app_id = appId;
-            gBase = new Gbase.GbaseApi(CURRENT_ENVIRONMENT.name, CURRENT_ENVIRONMENT.env, CURRENT_ENVIRONMENT.hmac, CURRENT_ENVIRONMENT.platform, CURRENT_ENVIRONMENT.version);
-        },
-
-        setAllGetParams(prms) {
-            _getParams = prms;
-        },
-
-        playRewardedAd: function (callbacks) {
-            // _playRewardedAd(callbacks);
-            console.error("not implemented");
-        },
-
-        authorize(callback) {
-            callback();
-        },
-    };
-};
-
-const GAME_ENVIRONMENTS = {
-    'vk_production': {
-        name: "rmg-vkfish",
-        env: "production",
-        hmac: 'bR2UBrFSHflMlXILNVENAoLR',
-        platform: "webvk",
-        version: "0.0.1",
-        un_game_id: "5c02bb6d-3afb-4ca5-8f91-ce69d2c5a28d",
-        un_key: "MTRhZjU5NTUtMzdmNS00",
-    },
-    'vk_dev': {
-        name: 'rmg-vkfish',
-        env: 'dev',
-        hmac: 'mE2ibFZ1tPCDOcdc6n0XB7I4',
-        platform: "webvk",
-        version: "0.0.1",
-        un_game_id: "5c02bb6d-3afb-4ca5-8f91-ce69d2c5a28d",
-        un_key: "MTRhZjU5NTUtMzdmNS00",
-    },
-    'ok_production': {
-        name: "rmg-vkfish",
-        env: "production",
-        hmac: 'J8Bsh1KT2bt4gnUcSEJrjrep',
-        platform: "webok",
-        version: "0.0.1",
-        un_game_id: "5c02bb6d-3afb-4ca5-8f91-ce69d2c5a28d",
-        un_key: "MTRhZjU5NTUtMzdmNS00",
-    },
-    'ok_dev': {
-        name: 'rmg-vkfish',
-        env: 'dev',
-        hmac: 'uwe6KwuCvFLCU5WuwXXU4pMW',
-        platform: "webok",
-        version: "0.0.1",
-        un_game_id: "5c02bb6d-3afb-4ca5-8f91-ce69d2c5a28d",
-        un_key: "MTRhZjU5NTUtMzdmNS00",
-    },
-    'myth_dev': {
-        un_game_id: "f6d3e8d9-e41b-4fde-bdf0-d30df9092672",
-        un_key: "YTNkYmQxZjktNTk0Ny00",
-    }
-};
-
-const DEFAULT_PLATFORM = "nutaku";
-const DEFAULT_ENVIRONMENT = "myth_dev";
-
-let AllGetParams = null;
-function parseGetParams() {
-    if (!AllGetParams) {
-        const prms = {};
-        var queryString = window.location.search;
-        if (queryString && queryString.length > 0) {
-            queryString = queryString.substring(1);
-            const queries = queryString.split("&");
-
-            for (let i = 0; i < queries.length; i++) {
-                const kvp = queries[i].split('=');
-                if (kvp[0].startsWith("amp;"))
-                    prms[kvp[0].substring(4)] = kvp[1];
-                else
-                    prms[kvp[0]] = kvp[1];
-            }
-        }
-        AllGetParams = prms;
-    }
-    return AllGetParams;
-}
-var socialManager;
-parseGetParams();
-
-if (!AllGetParams.hasOwnProperty('game_platform')) {
-    console.log("platform wasn't specified");
-    AllGetParams.game_platform = DEFAULT_PLATFORM;
-}
-
-if (!AllGetParams.hasOwnProperty('game_env')) {
-    console.log("game_env wasn't specified");
-    AllGetParams.game_env = DEFAULT_ENVIRONMENT;
-}
-
-const CURRENT_ENVIRONMENT = GAME_ENVIRONMENTS[AllGetParams.game_env];
-
-const TEST_MODE = true;//AllGetParams.test_mode;
-const DEBUG_MODE = AllGetParams.debug_mode;
-
-{
-    switch (AllGetParams.game_platform) {
-        case "vk":
-            socialManager = new SocialVK();
-            socialManager.initialize = function (gameSettings) {
-                socialManager.initVK(gameSettings.vk_app_id);
-            };
-            break;
-        case "ok":
-            socialManager = new SocialOK();
-            socialManager.initialize = function (gameSettings) {
-                socialManager.initOK(gameSettings.ok_app_id);
-            };
-            break;
-        case "fb":
-            socialManager = new SocialFB();
-            socialManager.initialize = function (gameSettings) {
-                socialManager.initFB(gameSettings.fb_app_id);
-            };
-            break;
-        case "nutaku":
-            socialManager = new SocialNutaku();
-            socialManager.initialize = function (gameSettings) {
-                socialManager.initNutaku();
-            };
-            break;
-        case "fb_instant":
-            socialManager = new SocialFB_Instant();
-            socialManager.initialize = function (gameSettings) {
-                socialManager.initFB(gameSettings.fb_app_id);
-            };
-            FBInstant.initializeAsync()
-                .then(function() {
-                        console.log("LOAD");
-
-                        FBInstant.startGameAsync()
-                            .then(function () {
-                                // Retrieving context and player information can only be done
-                                // once startGameAsync() resolves
-                                var contextId = FBInstant.context.getID();
-                                var contextType = FBInstant.context.getType();
-
-                                var playerName = FBInstant.player.getName();
-                                var playerPic = FBInstant.player.getPhoto();
-                                var playerId = FBInstant.player.getID();
-
-                                // Once startGameAsync() resolves it also means the loading view has
-                                // been removed and the user can see the game viewport
-                                console.log("PLAYERID " + playerId);
-                                game.start();
-                            });
-                    });
-            break;
-    }
-}
-
-socialManager.createGBase = function() {
-    gBase = new Gbase.GbaseApi(CURRENT_ENVIRONMENT.name, CURRENT_ENVIRONMENT.env, CURRENT_ENVIRONMENT.hmac, CURRENT_ENVIRONMENT.platform, CURRENT_ENVIRONMENT.version);
-};
-
-socialManager.reconnect = function (callback) {
-    this.createGBase();
-    this.authorize(()=> {
-        gBase.profile.getp((err) => {
-            if (err)
-                gameAnalytics.sendServerError(err, "getp");
-            else
-                callback();
-        });
-    });
-};
-
-socialManager.checkAuthStatus = function(err, callback) {
-    if (err.code == 310 && !socialManager.isAuthorizing()) {
-        console.log("Re-auth");
-        socialManager.reconnect(callback);
-    }
-};
-
 let activeButtonForTutorial = null;
 const invisibleButton = {};
 
@@ -19133,14 +19326,16 @@ class ButtonWithText extends BasicButton {
                 .setOrigin(0, 0.5)
                 .setDepth(WinDefaultDepth + 110);
 
-            this.caption.setFitSize(maxWidth - iconSize * 2, maxHeight);
+            if (config.minWidth)
+                this.caption.setFitSize(maxWidth - iconSize * 2, maxHeight);
         } else {
             const x = this.x / localScale + (this.config.textOffsetX || 0);
             this.caption = config.scene.add.text(x, this.y / localScale, config.caption, config.font || DefaultFont)
                 .setOrigin(0.5, 0.5)
                 .setDepth(WinDefaultDepth + 110);
 
-            this.caption.setFitSize(maxWidth, maxHeight);
+            if (config.minWidth)
+                this.caption.setFitSize(maxWidth, maxHeight);
         }
 
         group.add(this.caption);
@@ -20696,7 +20891,7 @@ class Building {
     }
 
     getLocalizationKey() {
-        if (this.info.name)
+        if (VisualData.getGameSettings().nameForLocalization)
             return this.info.name;
         return this.info.visual.icon.substring(0, this.info.visual.icon.length - 5);
     }
@@ -20834,7 +21029,7 @@ const BoxType = {
 const MUSIC_STATE = "MUSIC_STATE";
 const SOUNDS_STATE = "SOUNDS_STATE";
 const CURRENT_LANGUAGE = "CURRENT_LANGUAGE";
-const GAME_VERSION = "0.9.34.1";
+const GAME_VERSION = "0.9.35";
 
 console.log("game version: " + GAME_VERSION);
 
@@ -20900,7 +21095,8 @@ function SetCurrentLanguage(language) {
 }
 
 function getCheatSave() {
-    return JSON.parse("{\"adsWatched\":{\"count\":1,\"update\":1569247674763},\"dailyBonus\":{\"lastBonus\":3,\"seed\":0,\"update\":1569730763737},\"fortuneWheel\":{\"freeSpins\":3,\"jackpot\":1100,\"update\":1569441129919,\"windowOpened\":false},\"guard\":1569432762778,\"profile\":{\"adsWatched\":{\"count\":0,\"update\":0},\"firstTimeInGame\":1569247268842,\"gameLanguage\":\"English\",\"gems\":\"58900\",\"gemsMultiProfit\":\"1\",\"gold\":\"36657990917283939917387\",\"goldSpent\":\"27440626749785127227002781\",\"harvestsCount\":2,\"maxGoldModifier\":9,\"savedVersion\":131,\"seeds\":\"73900\",\"seedsStrength\":7,\"sessionNumber\":15,\"tutorialPhase\":15,\"version\":8},\"purchases\":{\"6\":1,\"7\":1,\"23\":1,\"24\":1,\"25\":1,\"26\":1,\"27\":1,\"28\":1,\"29\":1,\"30\":1,\"31\":1,\"32\":1,\"33\":1,\"34\":1,\"35\":1,\"36\":1,\"37\":1,\"38\":1,\"39\":1,\"40\":1,\"41\":1,\"42\":1,\"43\":1,\"44\":1,\"45\":1,\"47\":1,\"48\":1,\"49\":1,\"50\":1,\"51\":1,\"52\":1,\"53\":1,\"54\":1,\"55\":1,\"56\":1,\"57\":1,\"58\":1,\"60\":1,\"61\":1,\"62\":1},\"puzzle\":{\"boxes\":{\"0\":19,\"1\":0,\"2\":0,\"3\":0,\"4\":0},\"goldBoxPrice\":\"348678440100000000000000\",\"goods\":{\"0\":{\"id\":1,\"level\":1,\"pieces\":0},\"1\":{\"id\":2,\"level\":1,\"pieces\":0},\"2\":{\"id\":3,\"level\":1,\"pieces\":0},\"3\":{\"id\":4,\"level\":1,\"pieces\":0},\"4\":{\"id\":5,\"level\":1,\"pieces\":0},\"5\":{\"id\":6,\"level\":1,\"pieces\":0},\"6\":{\"id\":7,\"level\":1,\"pieces\":0},\"7\":{\"id\":8,\"level\":1,\"pieces\":0},\"8\":{\"id\":9,\"level\":1,\"pieces\":0},\"9\":{\"id\":10,\"level\":0,\"pieces\":0},\"10\":{\"id\":11,\"level\":0,\"pieces\":0},\"11\":{\"id\":12,\"level\":0,\"pieces\":0},\"12\":{\"id\":13,\"level\":0,\"pieces\":4},\"13\":{\"id\":14,\"level\":0,\"pieces\":0},\"14\":{\"id\":15,\"level\":0,\"pieces\":4},\"15\":{\"id\":16,\"level\":0,\"pieces\":0},\"16\":{\"id\":17,\"level\":0,\"pieces\":0},\"17\":{\"id\":18,\"level\":0,\"pieces\":0},\"18\":{\"id\":19,\"level\":0,\"pieces\":0},\"19\":{\"id\":20,\"level\":0,\"pieces\":0},\"20\":{\"id\":21,\"level\":0,\"pieces\":0},\"21\":{\"id\":22,\"level\":0,\"pieces\":0},\"22\":{\"id\":23,\"level\":0,\"pieces\":0},\"23\":{\"id\":24,\"level\":0,\"pieces\":0},\"24\":{\"id\":25,\"level\":0,\"pieces\":8},\"25\":{\"id\":26,\"level\":0,\"pieces\":8},\"26\":{\"id\":27,\"level\":0,\"pieces\":0}},\"openedBox\":5},\"quests\":{\"activeQuests\":{\"0\":{\"id\":6,\"level\":1,\"progress\":0,\"isRefreshed\":false,\"isComplete\":false},\"1\":{\"id\":7,\"level\":2,\"progress\":0,\"isRefreshed\":false,\"isComplete\":false},\"2\":{\"id\":9,\"level\":1,\"progress\":0,\"isRefreshed\":false,\"isComplete\":false}},\"update\":1569742270536},\"worlds\":{\"1\":{\"buildings\":{\"1\":{\"hasAutoClick\":true,\"level\":1,\"loading\":0.047000000018891264,\"multiProfitMultiplier\":\"1944\",\"resources\":\"54132300\",\"slot\":1,\"speedUpMultiplier\":8,\"update\":1569730785075,\"upgradePrice\":\"300\"},\"2\":{\"hasAutoClick\":true,\"level\":1,\"loading\":0.3490000000074218,\"multiProfitMultiplier\":\"5832\",\"resources\":\"387828000\",\"slot\":2,\"speedUpMultiplier\":8,\"update\":1569730785075,\"upgradePrice\":\"6000\"},\"3\":{\"hasAutoClick\":true,\"level\":1,\"loading\":0.8899999999967063,\"multiProfitMultiplier\":\"5832\",\"resources\":\"1994544000\",\"slot\":3,\"speedUpMultiplier\":8,\"update\":1569730785075,\"upgradePrice\":\"72000\"},\"4\":{\"hasAutoClick\":true,\"level\":1,\"loading\":4.904999999993551,\"multiProfitMultiplier\":\"5832\",\"resources\":\"10206000000\",\"slot\":4,\"speedUpMultiplier\":8,\"update\":1569730785275,\"upgradePrice\":\"4200000\"},\"5\":{\"hasAutoClick\":true,\"level\":1,\"loading\":22.024999999993895,\"multiProfitMultiplier\":\"1944\",\"resources\":\"123373530000000\",\"slot\":5,\"speedUpMultiplier\":8,\"update\":1569730785075,\"upgradePrice\":\"210000000\"},\"6\":{\"level\":71,\"loading\":2.5770000000000053,\"multiProfitMultiplier\":\"648\",\"resources\":\"1349019360000000\",\"slot\":6,\"speedUpMultiplier\":32,\"update\":1569730809917,\"upgradePrice\":\"609998032155439650965760\",\"hasAutoClick\":true},\"7\":{\"level\":65,\"loading\":1.024000000000001,\"multiProfitMultiplier\":\"648\",\"resources\":\"6943060800000000\",\"slot\":7,\"speedUpMultiplier\":32,\"update\":1569730800207,\"upgradePrice\":\"11157940587993629198663912\",\"hasAutoClick\":true},\"8\":{\"level\":0,\"loading\":0,\"multiProfitMultiplier\":\"72\",\"resources\":\"0\",\"slot\":8,\"speedUpMultiplier\":8,\"update\":1569730785075,\"upgradePrice\":\"0\"},\"9\":{\"level\":1,\"loading\":11.908999999999992,\"multiProfitMultiplier\":\"72\",\"resources\":\"0\",\"slot\":9,\"speedUpMultiplier\":8,\"update\":1569730785075,\"upgradePrice\":\"888000000000\",\"hasAutoClick\":true}}},\"2\":{\"buildings\":{\"1\":{\"hasAutoClick\":true,\"level\":0,\"loading\":0,\"multiProfitMultiplier\":\"1944\",\"resources\":\"0\",\"slot\":10,\"speedUpMultiplier\":8,\"update\":1569730785075,\"upgradePrice\":\"0\"},\"2\":{\"hasAutoClick\":true,\"level\":0,\"loading\":0,\"multiProfitMultiplier\":\"5832\",\"resources\":\"0\",\"slot\":11,\"speedUpMultiplier\":8,\"update\":1569730785075,\"upgradePrice\":\"0\"},\"3\":{\"hasAutoClick\":true,\"level\":0,\"loading\":0,\"multiProfitMultiplier\":\"5832\",\"resources\":\"0\",\"slot\":12,\"speedUpMultiplier\":8,\"update\":1569730785075,\"upgradePrice\":\"0\"},\"4\":{\"hasAutoClick\":true,\"level\":0,\"loading\":0,\"multiProfitMultiplier\":\"5832\",\"resources\":\"0\",\"slot\":13,\"speedUpMultiplier\":8,\"update\":1569730785275,\"upgradePrice\":\"0\"},\"5\":{\"hasAutoClick\":true,\"level\":0,\"loading\":0,\"multiProfitMultiplier\":\"1944\",\"resources\":\"0\",\"slot\":14,\"speedUpMultiplier\":8,\"update\":1569730785075,\"upgradePrice\":\"0\"},\"6\":{\"level\":0,\"loading\":0,\"multiProfitMultiplier\":\"648\",\"resources\":\"0\",\"slot\":15,\"speedUpMultiplier\":8,\"update\":1569730785075,\"upgradePrice\":\"0\",\"hasAutoClick\":true},\"7\":{\"level\":0,\"loading\":0,\"multiProfitMultiplier\":\"648\",\"resources\":\"0\",\"slot\":16,\"speedUpMultiplier\":8,\"update\":1569730785075,\"upgradePrice\":\"0\",\"hasAutoClick\":true},\"8\":{\"level\":0,\"loading\":0,\"multiProfitMultiplier\":\"72\",\"resources\":\"0\",\"slot\":17,\"speedUpMultiplier\":8,\"update\":1569730785075,\"upgradePrice\":\"0\"},\"9\":{\"level\":0,\"loading\":0,\"multiProfitMultiplier\":\"72\",\"resources\":\"0\",\"slot\":18,\"speedUpMultiplier\":8,\"update\":1569730785075,\"upgradePrice\":\"0\",\"hasAutoClick\":true}}},\"3\":{\"buildings\":{\"1\":{\"hasAutoClick\":true,\"level\":0,\"loading\":0,\"multiProfitMultiplier\":\"1944\",\"resources\":\"0\",\"slot\":19,\"speedUpMultiplier\":8,\"update\":1569730785075,\"upgradePrice\":\"0\"},\"2\":{\"hasAutoClick\":true,\"level\":0,\"loading\":0,\"multiProfitMultiplier\":\"5832\",\"resources\":\"0\",\"slot\":20,\"speedUpMultiplier\":8,\"update\":1569730785075,\"upgradePrice\":\"0\"},\"3\":{\"hasAutoClick\":true,\"level\":0,\"loading\":0,\"multiProfitMultiplier\":\"5832\",\"resources\":\"0\",\"slot\":21,\"speedUpMultiplier\":8,\"update\":1569730785075,\"upgradePrice\":\"0\"},\"4\":{\"hasAutoClick\":true,\"level\":0,\"loading\":0,\"multiProfitMultiplier\":\"5832\",\"resources\":\"0\",\"slot\":22,\"speedUpMultiplier\":8,\"update\":1569730785275,\"upgradePrice\":\"0\"},\"5\":{\"hasAutoClick\":true,\"level\":0,\"loading\":0,\"multiProfitMultiplier\":\"1944\",\"resources\":\"0\",\"slot\":23,\"speedUpMultiplier\":8,\"update\":1569730785075,\"upgradePrice\":\"0\"},\"6\":{\"level\":0,\"loading\":0,\"multiProfitMultiplier\":\"648\",\"resources\":\"0\",\"slot\":24,\"speedUpMultiplier\":8,\"update\":1569730785075,\"upgradePrice\":\"0\",\"hasAutoClick\":true},\"7\":{\"level\":0,\"loading\":0,\"multiProfitMultiplier\":\"648\",\"resources\":\"0\",\"slot\":25,\"speedUpMultiplier\":8,\"update\":1569730785075,\"upgradePrice\":\"0\",\"hasAutoClick\":true},\"8\":{\"level\":0,\"loading\":0,\"multiProfitMultiplier\":\"72\",\"resources\":\"0\",\"slot\":26,\"speedUpMultiplier\":8,\"update\":1569730785075,\"upgradePrice\":\"0\"},\"9\":{\"level\":0,\"loading\":0,\"multiProfitMultiplier\":\"72\",\"resources\":\"0\",\"slot\":27,\"speedUpMultiplier\":8,\"update\":1569730785075,\"upgradePrice\":\"0\",\"hasAutoClick\":true}}}}}");
+    //return JSON.parse("{\"adsWatched\":{\"count\":1,\"update\":1569247674763},\"dailyBonus\":{\"lastBonus\":3,\"seed\":0,\"update\":1569730763737},\"fortuneWheel\":{\"freeSpins\":3,\"jackpot\":1100,\"update\":1569441129919,\"windowOpened\":false},\"guard\":1569432762778,\"profile\":{\"adsWatched\":{\"count\":0,\"update\":0},\"firstTimeInGame\":1569247268842,\"gameLanguage\":\"English\",\"gems\":\"58900\",\"gemsMultiProfit\":\"1\",\"gold\":\"36657990917283939917387\",\"goldSpent\":\"27440626749785127227002781\",\"harvestsCount\":2,\"maxGoldModifier\":9,\"savedVersion\":131,\"seeds\":\"73900\",\"seedsStrength\":7,\"sessionNumber\":15,\"tutorialPhase\":15,\"version\":8},\"purchases\":{\"6\":1,\"7\":1,\"23\":1,\"24\":1,\"25\":1,\"26\":1,\"27\":1,\"28\":1,\"29\":1,\"30\":1,\"31\":1,\"32\":1,\"33\":1,\"34\":1,\"35\":1,\"36\":1,\"37\":1,\"38\":1,\"39\":1,\"40\":1,\"41\":1,\"42\":1,\"43\":1,\"44\":1,\"45\":1,\"47\":1,\"48\":1,\"49\":1,\"50\":1,\"51\":1,\"52\":1,\"53\":1,\"54\":1,\"55\":1,\"56\":1,\"57\":1,\"58\":1,\"60\":1,\"61\":1,\"62\":1},\"puzzle\":{\"boxes\":{\"0\":19,\"1\":0,\"2\":0,\"3\":0,\"4\":0},\"goldBoxPrice\":\"348678440100000000000000\",\"goods\":{\"0\":{\"id\":1,\"level\":1,\"pieces\":0},\"1\":{\"id\":2,\"level\":1,\"pieces\":0},\"2\":{\"id\":3,\"level\":1,\"pieces\":0},\"3\":{\"id\":4,\"level\":1,\"pieces\":0},\"4\":{\"id\":5,\"level\":1,\"pieces\":0},\"5\":{\"id\":6,\"level\":1,\"pieces\":0},\"6\":{\"id\":7,\"level\":1,\"pieces\":0},\"7\":{\"id\":8,\"level\":1,\"pieces\":0},\"8\":{\"id\":9,\"level\":1,\"pieces\":0},\"9\":{\"id\":10,\"level\":0,\"pieces\":0},\"10\":{\"id\":11,\"level\":0,\"pieces\":0},\"11\":{\"id\":12,\"level\":0,\"pieces\":0},\"12\":{\"id\":13,\"level\":0,\"pieces\":4},\"13\":{\"id\":14,\"level\":0,\"pieces\":0},\"14\":{\"id\":15,\"level\":0,\"pieces\":4},\"15\":{\"id\":16,\"level\":0,\"pieces\":0},\"16\":{\"id\":17,\"level\":0,\"pieces\":0},\"17\":{\"id\":18,\"level\":0,\"pieces\":0},\"18\":{\"id\":19,\"level\":0,\"pieces\":0},\"19\":{\"id\":20,\"level\":0,\"pieces\":0},\"20\":{\"id\":21,\"level\":0,\"pieces\":0},\"21\":{\"id\":22,\"level\":0,\"pieces\":0},\"22\":{\"id\":23,\"level\":0,\"pieces\":0},\"23\":{\"id\":24,\"level\":0,\"pieces\":0},\"24\":{\"id\":25,\"level\":0,\"pieces\":8},\"25\":{\"id\":26,\"level\":0,\"pieces\":8},\"26\":{\"id\":27,\"level\":0,\"pieces\":0}},\"openedBox\":5},\"quests\":{\"activeQuests\":{\"0\":{\"id\":6,\"level\":1,\"progress\":0,\"isRefreshed\":false,\"isComplete\":false},\"1\":{\"id\":7,\"level\":2,\"progress\":0,\"isRefreshed\":false,\"isComplete\":false},\"2\":{\"id\":9,\"level\":1,\"progress\":0,\"isRefreshed\":false,\"isComplete\":false}},\"update\":1569742270536},\"worlds\":{\"1\":{\"buildings\":{\"1\":{\"hasAutoClick\":true,\"level\":1,\"loading\":0.047000000018891264,\"multiProfitMultiplier\":\"1944\",\"resources\":\"54132300\",\"slot\":1,\"speedUpMultiplier\":8,\"update\":1569730785075,\"upgradePrice\":\"300\"},\"2\":{\"hasAutoClick\":true,\"level\":1,\"loading\":0.3490000000074218,\"multiProfitMultiplier\":\"5832\",\"resources\":\"387828000\",\"slot\":2,\"speedUpMultiplier\":8,\"update\":1569730785075,\"upgradePrice\":\"6000\"},\"3\":{\"hasAutoClick\":true,\"level\":1,\"loading\":0.8899999999967063,\"multiProfitMultiplier\":\"5832\",\"resources\":\"1994544000\",\"slot\":3,\"speedUpMultiplier\":8,\"update\":1569730785075,\"upgradePrice\":\"72000\"},\"4\":{\"hasAutoClick\":true,\"level\":1,\"loading\":4.904999999993551,\"multiProfitMultiplier\":\"5832\",\"resources\":\"10206000000\",\"slot\":4,\"speedUpMultiplier\":8,\"update\":1569730785275,\"upgradePrice\":\"4200000\"},\"5\":{\"hasAutoClick\":true,\"level\":1,\"loading\":22.024999999993895,\"multiProfitMultiplier\":\"1944\",\"resources\":\"123373530000000\",\"slot\":5,\"speedUpMultiplier\":8,\"update\":1569730785075,\"upgradePrice\":\"210000000\"},\"6\":{\"level\":71,\"loading\":2.5770000000000053,\"multiProfitMultiplier\":\"648\",\"resources\":\"1349019360000000\",\"slot\":6,\"speedUpMultiplier\":32,\"update\":1569730809917,\"upgradePrice\":\"609998032155439650965760\",\"hasAutoClick\":true},\"7\":{\"level\":65,\"loading\":1.024000000000001,\"multiProfitMultiplier\":\"648\",\"resources\":\"6943060800000000\",\"slot\":7,\"speedUpMultiplier\":32,\"update\":1569730800207,\"upgradePrice\":\"11157940587993629198663912\",\"hasAutoClick\":true},\"8\":{\"level\":0,\"loading\":0,\"multiProfitMultiplier\":\"72\",\"resources\":\"0\",\"slot\":8,\"speedUpMultiplier\":8,\"update\":1569730785075,\"upgradePrice\":\"0\"},\"9\":{\"level\":1,\"loading\":11.908999999999992,\"multiProfitMultiplier\":\"72\",\"resources\":\"0\",\"slot\":9,\"speedUpMultiplier\":8,\"update\":1569730785075,\"upgradePrice\":\"888000000000\",\"hasAutoClick\":true}}},\"2\":{\"buildings\":{\"1\":{\"hasAutoClick\":true,\"level\":0,\"loading\":0,\"multiProfitMultiplier\":\"1944\",\"resources\":\"0\",\"slot\":10,\"speedUpMultiplier\":8,\"update\":1569730785075,\"upgradePrice\":\"0\"},\"2\":{\"hasAutoClick\":true,\"level\":0,\"loading\":0,\"multiProfitMultiplier\":\"5832\",\"resources\":\"0\",\"slot\":11,\"speedUpMultiplier\":8,\"update\":1569730785075,\"upgradePrice\":\"0\"},\"3\":{\"hasAutoClick\":true,\"level\":0,\"loading\":0,\"multiProfitMultiplier\":\"5832\",\"resources\":\"0\",\"slot\":12,\"speedUpMultiplier\":8,\"update\":1569730785075,\"upgradePrice\":\"0\"},\"4\":{\"hasAutoClick\":true,\"level\":0,\"loading\":0,\"multiProfitMultiplier\":\"5832\",\"resources\":\"0\",\"slot\":13,\"speedUpMultiplier\":8,\"update\":1569730785275,\"upgradePrice\":\"0\"},\"5\":{\"hasAutoClick\":true,\"level\":0,\"loading\":0,\"multiProfitMultiplier\":\"1944\",\"resources\":\"0\",\"slot\":14,\"speedUpMultiplier\":8,\"update\":1569730785075,\"upgradePrice\":\"0\"},\"6\":{\"level\":0,\"loading\":0,\"multiProfitMultiplier\":\"648\",\"resources\":\"0\",\"slot\":15,\"speedUpMultiplier\":8,\"update\":1569730785075,\"upgradePrice\":\"0\",\"hasAutoClick\":true},\"7\":{\"level\":0,\"loading\":0,\"multiProfitMultiplier\":\"648\",\"resources\":\"0\",\"slot\":16,\"speedUpMultiplier\":8,\"update\":1569730785075,\"upgradePrice\":\"0\",\"hasAutoClick\":true},\"8\":{\"level\":0,\"loading\":0,\"multiProfitMultiplier\":\"72\",\"resources\":\"0\",\"slot\":17,\"speedUpMultiplier\":8,\"update\":1569730785075,\"upgradePrice\":\"0\"},\"9\":{\"level\":0,\"loading\":0,\"multiProfitMultiplier\":\"72\",\"resources\":\"0\",\"slot\":18,\"speedUpMultiplier\":8,\"update\":1569730785075,\"upgradePrice\":\"0\",\"hasAutoClick\":true}}},\"3\":{\"buildings\":{\"1\":{\"hasAutoClick\":true,\"level\":0,\"loading\":0,\"multiProfitMultiplier\":\"1944\",\"resources\":\"0\",\"slot\":19,\"speedUpMultiplier\":8,\"update\":1569730785075,\"upgradePrice\":\"0\"},\"2\":{\"hasAutoClick\":true,\"level\":0,\"loading\":0,\"multiProfitMultiplier\":\"5832\",\"resources\":\"0\",\"slot\":20,\"speedUpMultiplier\":8,\"update\":1569730785075,\"upgradePrice\":\"0\"},\"3\":{\"hasAutoClick\":true,\"level\":0,\"loading\":0,\"multiProfitMultiplier\":\"5832\",\"resources\":\"0\",\"slot\":21,\"speedUpMultiplier\":8,\"update\":1569730785075,\"upgradePrice\":\"0\"},\"4\":{\"hasAutoClick\":true,\"level\":0,\"loading\":0,\"multiProfitMultiplier\":\"5832\",\"resources\":\"0\",\"slot\":22,\"speedUpMultiplier\":8,\"update\":1569730785275,\"upgradePrice\":\"0\"},\"5\":{\"hasAutoClick\":true,\"level\":0,\"loading\":0,\"multiProfitMultiplier\":\"1944\",\"resources\":\"0\",\"slot\":23,\"speedUpMultiplier\":8,\"update\":1569730785075,\"upgradePrice\":\"0\"},\"6\":{\"level\":0,\"loading\":0,\"multiProfitMultiplier\":\"648\",\"resources\":\"0\",\"slot\":24,\"speedUpMultiplier\":8,\"update\":1569730785075,\"upgradePrice\":\"0\",\"hasAutoClick\":true},\"7\":{\"level\":0,\"loading\":0,\"multiProfitMultiplier\":\"648\",\"resources\":\"0\",\"slot\":25,\"speedUpMultiplier\":8,\"update\":1569730785075,\"upgradePrice\":\"0\",\"hasAutoClick\":true},\"8\":{\"level\":0,\"loading\":0,\"multiProfitMultiplier\":\"72\",\"resources\":\"0\",\"slot\":26,\"speedUpMultiplier\":8,\"update\":1569730785075,\"upgradePrice\":\"0\"},\"9\":{\"level\":0,\"loading\":0,\"multiProfitMultiplier\":\"72\",\"resources\":\"0\",\"slot\":27,\"speedUpMultiplier\":8,\"update\":1569730785075,\"upgradePrice\":\"0\",\"hasAutoClick\":true}}}}}");
+    return JSON.parse("{\"profile\":{\"version\":10,\"gold\":\"999999\",\"gems\":\"19134630360\",\"seeds\":\"4200\",\"tokenCommon\":\"0\",\"tokenRare\":\"000\",\"tokenEpic\":\"000\",\"goldSpent\":\"27542\",\"seedsStrength\":2,\"firstTimeInGame\":1575878313354,\"tutorialPhase\":22,\"maxGoldModifier\":4,\"gameLanguage\":\"English\",\"sessionNumber\":2,\"harvestsCount\":1,\"lastHarvestTime\":1575894384306,\"gemsMultiProfit\":\"1\",\"adsWatched\":{\"count\":0,\"update\":0},\"lastDoubleTime\":0,\"level\":2,\"experience\":82,\"expToNextLevel\":114.99999999999999,\"savedVersion\":109},\"purchases\":{\"6\":1},\"fortuneWheel\":{\"freeSpins\":1,\"windowOpened\":false,\"jackpot\":500,\"update\":0},\"puzzle\":{\"boxes\":{\"0\":4,\"1\":6,\"2\":0,\"3\":0,\"4\":0},\"goods\":[{\"id\":1,\"level\":1,\"pieces\":0},{\"id\":2,\"level\":1,\"pieces\":0},{\"id\":3,\"level\":1,\"pieces\":0},{\"id\":4,\"level\":1,\"pieces\":0},{\"id\":5,\"level\":1,\"pieces\":0},{\"id\":6,\"level\":1,\"pieces\":0},{\"id\":7,\"level\":1,\"pieces\":0},{\"id\":8,\"level\":1,\"pieces\":0},{\"id\":9,\"level\":1,\"pieces\":0},{\"id\":10,\"level\":0,\"pieces\":0},{\"id\":11,\"level\":0,\"pieces\":0},{\"id\":12,\"level\":0,\"pieces\":0},{\"id\":13,\"level\":0,\"pieces\":0},{\"id\":14,\"level\":0,\"pieces\":0},{\"id\":15,\"level\":0,\"pieces\":0},{\"id\":16,\"level\":0,\"pieces\":0},{\"id\":17,\"level\":0,\"pieces\":0},{\"id\":18,\"level\":0,\"pieces\":0},{\"id\":19,\"level\":0,\"pieces\":0},{\"id\":20,\"level\":0,\"pieces\":0},{\"id\":21,\"level\":0,\"pieces\":0},{\"id\":22,\"level\":0,\"pieces\":0},{\"id\":23,\"level\":0,\"pieces\":1},{\"id\":24,\"level\":0,\"pieces\":0},{\"id\":25,\"level\":0,\"pieces\":0},{\"id\":26,\"level\":0,\"pieces\":0},{\"id\":27,\"level\":0,\"pieces\":0}],\"guards\":[{\"id\":1,\"level\":1,\"pieces\":0},{\"id\":2,\"level\":0,\"pieces\":0},{\"id\":3,\"level\":0,\"pieces\":0},{\"id\":4,\"level\":0,\"pieces\":0},{\"id\":5,\"level\":0,\"pieces\":0},{\"id\":6,\"level\":0,\"pieces\":0}],\"openedBox\":1,\"goldBoxPrice\":\"100000000000000\"},\"worlds\":{\"1\":{\"buildings\":{\"1\":{\"slot\":1,\"level\":15,\"resources\":\"0\",\"multiProfitMultiplier\":\"3\",\"lastTokensGetLevel\":100,\"upgradePrice\":\"1128\",\"loading\":0,\"update\":1575898766336},\"2\":{\"slot\":2,\"level\":3,\"resources\":\"0\",\"multiProfitMultiplier\":\"3\",\"lastTokensGetLevel\":25,\"upgradePrice\":\"8640\",\"loading\":0,\"update\":1575898752021},\"3\":{\"slot\":3,\"level\":0,\"resources\":\"0\",\"multiProfitMultiplier\":\"3\",\"upgradePrice\":\"0\",\"loading\":0,\"update\":1575898735002},\"4\":{\"slot\":4,\"level\":0,\"resources\":\"0\",\"multiProfitMultiplier\":\"3\",\"upgradePrice\":\"0\",\"loading\":0,\"update\":1575898735002},\"5\":{\"slot\":5,\"level\":0,\"resources\":\"0\",\"multiProfitMultiplier\":\"3\",\"upgradePrice\":\"0\",\"loading\":0,\"update\":1575898735002},\"6\":{\"slot\":6,\"level\":0,\"resources\":\"0\",\"multiProfitMultiplier\":\"3\",\"upgradePrice\":\"0\",\"loading\":0,\"update\":1575898735002},\"7\":{\"slot\":7,\"level\":0,\"resources\":\"0\",\"multiProfitMultiplier\":\"3\",\"upgradePrice\":\"0\",\"loading\":0,\"update\":1575898735002},\"8\":{\"slot\":8,\"level\":0,\"resources\":\"0\",\"multiProfitMultiplier\":\"3\",\"upgradePrice\":\"0\",\"loading\":0,\"update\":1575898735002},\"9\":{\"slot\":9,\"level\":0,\"resources\":\"0\",\"multiProfitMultiplier\":\"3\",\"upgradePrice\":\"0\",\"loading\":0,\"update\":1575898735002}},\"guards\":{\"1\":{\"id\":1}}},\"2\":{\"buildings\":{\"1\":{\"slot\":10,\"level\":0,\"resources\":\"0\",\"multiProfitMultiplier\":\"3\",\"upgradePrice\":\"0\",\"loading\":0,\"update\":1575898735002},\"2\":{\"slot\":11,\"level\":0,\"resources\":\"0\",\"multiProfitMultiplier\":\"3\",\"upgradePrice\":\"0\",\"loading\":0,\"update\":1575898735002},\"3\":{\"slot\":12,\"level\":0,\"resources\":\"0\",\"multiProfitMultiplier\":\"3\",\"upgradePrice\":\"0\",\"loading\":0,\"update\":1575898735002},\"4\":{\"slot\":13,\"level\":0,\"resources\":\"0\",\"multiProfitMultiplier\":\"3\",\"upgradePrice\":\"0\",\"loading\":0,\"update\":1575898735002},\"5\":{\"slot\":14,\"level\":0,\"resources\":\"0\",\"multiProfitMultiplier\":\"3\",\"upgradePrice\":\"0\",\"loading\":0,\"update\":1575898735002},\"6\":{\"slot\":15,\"level\":0,\"resources\":\"0\",\"multiProfitMultiplier\":\"3\",\"upgradePrice\":\"0\",\"loading\":0,\"update\":1575898735002},\"7\":{\"slot\":16,\"level\":0,\"resources\":\"0\",\"multiProfitMultiplier\":\"3\",\"upgradePrice\":\"0\",\"loading\":0,\"update\":1575898735002},\"8\":{\"slot\":17,\"level\":0,\"resources\":\"0\",\"multiProfitMultiplier\":\"3\",\"upgradePrice\":\"0\",\"loading\":0,\"update\":1575898735002},\"9\":{\"slot\":18,\"level\":0,\"resources\":\"0\",\"multiProfitMultiplier\":\"3\",\"upgradePrice\":\"0\",\"loading\":0,\"update\":1575898735002}},\"guards\":{\"1\":{\"id\":1}}},\"3\":{\"buildings\":{\"1\":{\"slot\":19,\"level\":0,\"resources\":\"0\",\"multiProfitMultiplier\":\"3\",\"upgradePrice\":\"0\",\"loading\":0,\"update\":1575898735002},\"2\":{\"slot\":20,\"level\":0,\"resources\":\"0\",\"multiProfitMultiplier\":\"3\",\"upgradePrice\":\"0\",\"loading\":0,\"update\":1575898735002},\"3\":{\"slot\":21,\"level\":0,\"resources\":\"0\",\"multiProfitMultiplier\":\"3\",\"upgradePrice\":\"0\",\"loading\":0,\"update\":1575898735002},\"4\":{\"slot\":22,\"level\":0,\"resources\":\"0\",\"multiProfitMultiplier\":\"3\",\"upgradePrice\":\"0\",\"loading\":0,\"update\":1575898735002},\"5\":{\"slot\":23,\"level\":0,\"resources\":\"0\",\"multiProfitMultiplier\":\"3\",\"upgradePrice\":\"0\",\"loading\":0,\"update\":1575898735002},\"6\":{\"slot\":24,\"level\":0,\"resources\":\"0\",\"multiProfitMultiplier\":\"3\",\"upgradePrice\":\"0\",\"loading\":0,\"update\":1575898735002},\"7\":{\"slot\":25,\"level\":0,\"resources\":\"0\",\"multiProfitMultiplier\":\"3\",\"upgradePrice\":\"0\",\"loading\":0,\"update\":1575898735002},\"8\":{\"slot\":26,\"level\":0,\"resources\":\"0\",\"multiProfitMultiplier\":\"3\",\"upgradePrice\":\"0\",\"loading\":0,\"update\":1575898735002},\"9\":{\"slot\":27,\"level\":0,\"resources\":\"0\",\"multiProfitMultiplier\":\"3\",\"upgradePrice\":\"0\",\"loading\":0,\"update\":1575898735002}},\"guards\":{\"1\":{\"id\":1}}}},\"quests\":{\"activeQuests\":[{\"id\":9,\"level\":1,\"progress\":0,\"isRefreshed\":false,\"isComplete\":false},{\"id\":5,\"level\":1,\"progress\":0,\"isRefreshed\":false,\"isComplete\":false},{\"id\":3,\"level\":2,\"progress\":0,\"isRefreshed\":false,\"isComplete\":false}],\"update\":1576313933950},\"dailyBonus\":{\"seed\":0,\"update\":1575878408290,\"lastBonus\":1},\"photo_quests\":{\"unlocked\":[\"PeriSkirt1\",\"PeriSkirt2\"],\"quests\":[{\"photoId\":\"PeriSkirt3\",\"progress\":5,\"isComplete\":false},{\"photoId\":\"DryadTailPlay1\",\"progress\":5,\"isComplete\":false},{\"photoId\":\"DryadTailPlay2\",\"progress\":5,\"isComplete\":false},{\"photoId\":\"DryadTailPlay3\",\"progress\":5,\"isComplete\":false},{\"photoId\":\"AphroditeGrapes1\",\"progress\":5,\"isComplete\":false},{\"photoId\":\"AphroditeGrapes2\",\"progress\":5,\"isComplete\":false},{\"photoId\":\"AphroditeGrapes3\",\"progress\":5,\"isComplete\":false}]}}");
 }
 
 function fixArray(obj) {
@@ -21122,6 +21318,7 @@ class Progress {
 
         // this.savedProgress = getCheatSave();
         this.savedProgress.puzzle.goods = fixArray(this.savedProgress.puzzle.goods);
+        // this.savedProgress.tutorial.stepNumber = TutPhases.TutorialEnd;
         // this._resetConstructions();
         // this._setResourceByName("tokenCommon", "99999900");
         // this._setResourceByName("gold", "999900");
@@ -22182,9 +22379,9 @@ class Progress {
         }
 
         {
-            // console.log("Saving... " + this.savedProgress.profile.savedVersion);
+            console.log("Saving... " + this.savedProgress.profile.savedVersion);
             UnnyNet.UnnyNet.save(COLLECTION_NAME, COLLECTION_KEY_NAME, JSON.stringify(this.savedProgress), 0, (response) => {
-                // console.log("RESP", response);
+                console.log("RESP", response);
                 if (!response.success)
                     console.error("couldn't save", response.error);
             });
@@ -22226,6 +22423,7 @@ class Progress {
                 if (response.success) {
                     if (response.data && response.data.length) {
                         const json = JSON.parse(response.data[0].value);
+                        console.error("LOADED version: " + json.profile.savedVersion);
                         if (callback)
                             callback(json);
                         else {
@@ -22235,6 +22433,11 @@ class Progress {
                         if (callback)
                             callback(null);
                     }
+                } else {
+                    console.error("Failed to load profile", response.error);
+                    //TODO this is temporary:
+                    if (callback)
+                        callback(null);
                 }
             });
         }
@@ -24224,29 +24427,35 @@ class AchsManager {
     }
 
     reportPrestige(revenue) {
-        UnnyNet.UnnyNet.reportAchievements(1, 1);
-        UnnyNet.UnnyNet.reportAchievements(2, 1);
-        UnnyNet.UnnyNet.reportAchievements(3, 1);
+        if (!CURRENT_UN_DATA)
+            return;
+
+        UnnyNet.UnnyNet.reportAchievements(CURRENT_UN_DATA.achievements.factory, 1);
 
         const length = revenue.toString().length - 2;//because of RESOURCES_SCALE
-        UnnyNet.UnnyNet.reportLeaderboards("bb340b93-11b0-4ce7-8ebb-ba5dcaa672dd", length);
+        UnnyNet.UnnyNet.reportLeaderboards(CURRENT_UN_DATA.leaderboards.factory, length);
     }
 
     slotWasUpgraded(building) {
-        this.callWithDelay('slot_' + building.slot, () => {
-            const intSlot = parseInt(building.slot);
-            if (intSlot >= 1 && intSlot <= 9) {
-                UnnyNet.UnnyNet.reportAchievements(intSlot + 3, building.getLevel(), (response)=>{
-                    console.error("response", response);
+        if (!CURRENT_UN_DATA)
+            return;
+
+        const intSlot = parseInt(building.slot);
+        if (intSlot >= 1 && intSlot <= 9) {
+            this.callWithDelay('slot_' + building.slot, () => {
+                UnnyNet.UnnyNet.reportAchievements(CURRENT_UN_DATA.achievements["slot_" + intSlot], building.getLevel(), (response) => {
+                    if (!response.success)
+                        console.error("response", response);
                 });
-            }
-        });
+            });
+        }
     }
 
     boxWasOpened(total) {
-        this.callWithDelay('boxes', () => {
-            UnnyNet.UnnyNet.reportLeaderboards("a332f1d7-80fd-40de-97a8-f8a3948ebad7", total);
-        }, 10000);
+        if (CURRENT_UN_DATA)
+            this.callWithDelay('boxes', () => {
+                UnnyNet.UnnyNet.reportLeaderboards(CURRENT_UN_DATA.leaderboards.boxes, total);
+            }, 10000);
     }
 }
 
@@ -24278,10 +24487,9 @@ class GameInit{
 
         const load = engine.load;
         load.setPath(VisualData.getDataFolder());
-        const oldSystem = !!CURRENT_ENVIRONMENT.hmac;
+        const oldSystem = !!CURRENT_ENVIRONMENT.env;
         if (oldSystem) {
             load.json('GoodsData', 'goods_data.json');
-            load.json('SlotsData', 'farm_slot_data.json');
             load.json('SlotsUpgrade', 'slots_upgrade_data.json');
             load.json('MarketData', 'market_upgrades.json');
             load.json('BoxData', 'box_data.json');
@@ -24327,7 +24535,6 @@ class GameInit{
         //     const data = GameData.getMarketPurchaseById(key);
         //     this.upgradePurchased(data);
         // }
-
         let offlineResourcesCollected = bigInt(0);
 
         eventManager.onLoadResourcesAdded.clear();
@@ -24356,9 +24563,8 @@ class GameInit{
 
     GameCreate(engine, hideCallback) {
         const cache = engine.cache;
-        const oldSystem = !!CURRENT_ENVIRONMENT.hmac;
+        const oldSystem = !!CURRENT_ENVIRONMENT.env;
         const data = oldSystem ? {
-                SlotsData: cache.json.get('SlotsData'),
                 GoodsData: cache.json.get('GoodsData'),
                 SlotsUpgrade: cache.json.get('SlotsUpgrade'),
                 MarketData: cache.json.get('MarketData'),
@@ -24391,6 +24597,15 @@ class GameInit{
             case "vk":
                 platform = UnnyNet.Platform.VKONTAKTE;
                 break;
+            case "ok":
+                platform = UnnyNet.Platform.ODNOKLASSNIKI;
+                break;
+            case "fb":
+                platform = UnnyNet.Platform.FACEBOOK;
+                break;
+            case "fb_instant":
+                platform = UnnyNet.Platform.FB_INSTANT;
+                break;
             case "nutaku":
                 platform = UnnyNet.Platform.NUTAKU;
                 break;
@@ -24404,9 +24619,11 @@ class GameInit{
             game_login: false,
             platform: platform,
             load_dictionaries: !oldSystem,
-            debug: DEBUG_MODE
+            debug: DEBUG_MODE,
+            environment: CURRENT_ENVIRONMENT.environment,
+            fb_app_id: VisualData.getGameSettings().fb_app_id//TODO it's temporary here
         }, ()=> {
-
+            console.info("DONE");
             UnnyNet.UnnyNet.setFrame({
                 top: 0,
                 right: 0,
@@ -24442,9 +24659,11 @@ class GameInit{
 
             GameData.prepareGameData(data);
 
-            socialManager.authorize(() => {
+            const useGoblin = !!CURRENT_ENVIRONMENT.hmac;
+
+            const loadProgress = () => {
                 Progress.loadProgressFromServer((progress) => {
-                    this.progress = new Progress(this, progress, this.gameConfig, oldSystem);
+                    this.progress = new Progress(this, progress, this.gameConfig, useGoblin);
                     if (this.gameConfig)
                         this.playerInfo = new PlayerInfo(this.gameConfig.playerLevels, this.progress);
                     if (this.guardManager)
@@ -24463,8 +24682,15 @@ class GameInit{
                     audioManager.load(engine);
 
                     hideCallback();
-                }, oldSystem);
-            });
+                }, useGoblin);
+            };
+
+            if (useGoblin) {
+                socialManager.authorize(() => {
+                    loadProgress();
+                });
+            } else
+                loadProgress();
         });
     }
 
@@ -25267,8 +25493,8 @@ function LoadFile(engine, name, path, callback, type, secondPath) {
         return;
     }
 
-    path += "?v=12";
-    secondPath += "?v=12";
+    path += "?v=15";
+    secondPath += "?v=15";
 
     if (!loadingImages.hasOwnProperty(name)) {
         switch (type) {
@@ -25710,8 +25936,17 @@ class VisualInit {
             this.podkova.setVisible(true);
     }
 
+    showSuperVisor() {
+        if (this.supervisor)
+            this.supervisor.setVisible(true);
+    }
+
     getGuard() {
         return this.podkova;
+    }
+
+    getSuperVisor() {
+        return this.supervisor;
     }
 
     reseted() {
@@ -25780,7 +26015,7 @@ class GUINotification extends Phaser.GameObjects.Container {
 
         config.scene.add.existing(this);
 
-        const scale = VisualData.GUI_Common ? VisualData.GUI_Common.notification_scale : 0.4;
+        const scale = VisualData.GUI_Common.notification_scale;
         this.image = config.scene.add.sprite(0, 0, 'Notification').setScale(scale);
         this.text = config.scene.add.textOld(0, 0, config.getText(), DefaultFontNotifications).setOrigin(0.5);
         this.add(this.image);
@@ -26047,10 +26282,12 @@ class HUDResources {
         if (visible) {
             this.udpateResourcesHelp();
 
-            this.showGems(this.gems_Visible);
-            this.showStars(this.stars_Visible);
-            this.showTokens(this.tokens_Visible);
-            this.setTokensVisible(this.tokensVisible);
+            if (VisualData.getGameSettings().photos) {
+                this.showGems(this.gems_Visible);
+                this.showStars(this.stars_Visible);
+                this.showTokens(this.tokens_Visible);
+                this.setTokensVisible(this.tokensVisible);
+            }
         }
     }
 
@@ -26209,9 +26446,10 @@ class HUDResources {
                 this.photo_tokens[i] = engine.add.text(x + LabelOffset, y + info.labelOffsetY * GlobalScale, null, font).setOrigin(0, 0.5);
                 this.tokesGroup.add(this.photo_tokens[i]);
             }
+
+            this.setTokensVisible(false, true);
         }
 
-        this.setTokensVisible(false, true);
         this.group.setDepth(WinDefaultDepth + 100);
     }
 
@@ -26290,7 +26528,7 @@ function getFont2(size) {
 }
 
 function getStroke(size) {
-    return Math.max(1, Math.trunc(size * localScale / dpi));
+    return Math.max(1, Math.trunc(size * 1.8 * GlobalScale * localScale / dpi));
 }
 
 //ElectraMedium
@@ -26488,9 +26726,9 @@ class WinBase {
     }
 
     applyWinInfo(key) {
-        this.winInfo = VisualData[key];
+        this.winInfo = VisualData[key] || {};
 
-        if (this.winInfo && this.winInfo.nineSlice)
+        if (this.winInfo.nineSlice)
             this.nineSlice = this.winInfo.nineSlice;
     }
 
@@ -26578,8 +26816,10 @@ class WinBase {
             this.destroyImage();
             if (this.visible) {
                 this.image = this.group.create(x, y, icon).setDepth(WinDefaultDepth + 1);
-                if (this.info && this.info.scaleImage)
-                    this.image.setScale(this.info.scaleImage);
+                let scale = (this.info && this.info.scaleImage) || 1;
+                scale *= (this.winInfo && this.winInfo.scaleImage) || 1;
+                if (scale !== 1)
+                    this.image.setScale(scale);
                 this.imageWasLoaded();
             }
         });
@@ -26589,6 +26829,12 @@ class WinBase {
         if (this.winInfo && this.winInfo.hasOwnProperty(key))
             return this.winInfo[key] * GlobalScale;
         return def * GlobalScale;
+    }
+
+    getWinInfoValueNoScale(key, def) {
+        if (this.winInfo && this.winInfo.hasOwnProperty(key))
+            return this.winInfo[key];
+        return def;
     }
 
     _getHeaderFont() {
@@ -27014,7 +27260,7 @@ class WinDailyBonus extends WinWithBrownBack {
             }
         }
 
-        this.createActionButton(engine, this.buttonClicked.bind(this), RealScreenHeight - 200 * GlobalScale, true, 1, RealScreenWidth / 2, 1400 * GlobalScale);
+        this.createActionButton(engine, this.buttonClicked.bind(this), RealScreenHeight - 200 * GlobalScale, true, 1, RealScreenWidth / 2, 700);
     }
 
     _updateButtonState() {
@@ -27894,6 +28140,7 @@ class WinPuzzle extends WinWithBrownBack {
 
         //Image
         const ImageName = manager ? gameInit.guardManager.getGuardIcon(puzzle.id) : GameData.getPuzzleIcon(cell.index + 1);
+        const puzzleSize = GameData.getPuzzleSizePerLevel(puzzle.level);
 
         const set = VisualData.getGameSettings();
 
@@ -27922,7 +28169,6 @@ class WinPuzzle extends WinWithBrownBack {
                     // }
 
                     //Background
-                    const puzzleSize = GameData.getPuzzleSizePerLevel(puzzle.level);
                     const backSize = this.winInfo.partSize * GlobalScale;
                     const partSize2 = this.winInfo.frontPartSize * GlobalScale / puzzleSize;
                     const partSize = backSize / puzzleSize;
@@ -28112,7 +28358,7 @@ class WinStore extends WinWithLargeBack {
         xPos = -this.winInfo.togglesX * GlobalScale;
         const inAppTab = this.addTab('TabIcon_Money', xPos, yPos);
 
-        if (AllGetParams.game_platform === 'vk')
+        if (AllGetParams.game_env.startsWith("fish_vk_dev"))
             inAppTab.addSale(this.group, 'Sale_Banner');
 
         this.config = VisualData.STORE_SCROLL_CONFIG;
@@ -28276,20 +28522,25 @@ class WinStore extends WinWithLargeBack {
 
         const imageName = WinStore.getImageName(item);
 
-        const isInApp = item.priceType === "IN_APP" && item.id !== GEMS_VIDEO_REWARD_ID && !VisualData.getGameSettings().dont_double;
+        const isInApp = item.priceType === "IN_APP" && item.id !== GEMS_VIDEO_REWARD_ID;
+        const isDoubled = isInApp && !VisualData.getGameSettings().dont_double;
+        let priceIcon = GameData.getIconByType(item.priceType);
+        if (!priceIcon && isInApp && VisualData.getGameSettings().display_hard_icon)
+            priceIcon = 'InAppIcon';
+
         createStoreCell(engine, group, cellCenterX, cellCenterY,
             LocalizationManager.getStoreItemTitle(item),
             imageName,
             VisualData.getStoreFolder() + imageName + ".png",
             LocalizationManager.getStoreItemDescription(item),
-            GameData.getIconByType(item.priceType),
+            priceIcon,
             this._getStoreCellButtonCaption(item),
             () => this.tryToPurchaseUpgrade(item.id),
             true, this.scroll, item.id === GEMS_VIDEO_REWARD_ID && gameInit.progress.getAdsWatchedToday() >= AdsAvailableToWatchADay,
-            isInApp ? - 30 * GlobalScale : 0
+            isDoubled ? - 30 * GlobalScale : 0
         );
 
-        if (isInApp) {
+        if (isDoubled) {
             let x = group.unny_desc.x/localScale;
             let y = group.unny_desc.y/localScale;
             y += 60 * GlobalScale;
@@ -28310,13 +28561,15 @@ class WinStore extends WinWithLargeBack {
                     group.add(group.unny_like);
                     break;
                 case "hellprodgems500":
-                    group.unny_like = engine.add.sprite(x, y, "InappLike1").setDepth(WinDefaultDepth + 200);
-                    group.add(group.unny_like);
+                    if (VisualData.getGameSettings().show_best) {
+                        group.unny_like = engine.add.sprite(x, y, "InappLike1").setDepth(WinDefaultDepth + 200);
+                        group.add(group.unny_like);
 
-                    group.unny_best = engine.add.textOld(x, y, LocalizationManager.getLocalizization("Best"), DefaultFontSmallPuzzleBonus)
-                        .setOrigin(0.5, 0.5)
-                        .setDepth(WinDefaultDepth + 300);
-                    group.add(group.unny_best);
+                        group.unny_best = engine.add.textOld(x, y, LocalizationManager.getLocalizization("Best"), DefaultFontSmallPuzzleBonus)
+                            .setOrigin(0.5, 0.5)
+                            .setDepth(WinDefaultDepth + 300);
+                        group.add(group.unny_best);
+                    }
                     break;
             }
         }
@@ -28543,11 +28796,11 @@ class WinFortuneWheel extends WinWithExit {
 
                 const btnY = y + this.winInfo.buttonY * GlobalScale;
 
-                this.createActionButton(engine, this.spinWheel.bind(this), btnY, true, 1, 0, 1600 * GlobalScale, 'AdCam');
+                this.createActionButton(engine, this.spinWheel.bind(this), btnY, true, 1, 0, 800, 'AdCam');
                 this.actionButtonFree = this.actionButton;
                 this.buttonLabelFree = this.buttonLabel;
 
-                this.createActionButton(engine, this.spinWheel.bind(this), btnY, true, 1, 0, 1600 * GlobalScale);
+                this.createActionButton(engine, this.spinWheel.bind(this), btnY, true, 1, 0, 800);
 
                 this.buttonGems = this.group.create(0, btnY, 'PriceGems').setOrigin(0, 0.5);
 
@@ -28594,12 +28847,12 @@ class WinFortuneWheel extends WinWithExit {
                             this.group.create(x + this.winInfo.heroX * GlobalScale, y + this.winInfo.heroY * GlobalScale, devil).setDepth(WinDefaultDepth + 120);
                         });
 
-                        this.spinsCounter = engine.add.text(0, btnY - (this.winInfo.buttonHeaderDeltaY || 125) * GlobalScale, null, DefaultFont)
+                        this.spinsCounter = engine.add.text(0, btnY - this.getWinInfoValue("buttonHeaderDeltaY", 125), null, DefaultFont)
                             .setOrigin(0.5, 0.5)
                             .setDepth(WinDefaultDepth + 200);
                         this.group.add(this.spinsCounter);
 
-                        this.spinsTimer = engine.add.text(0, btnY - 200 * GlobalScale, null, DefaultFont)
+                        this.spinsTimer = engine.add.text(0, btnY - this.getWinInfoValue("buttonHeaderDeltaY2", 200), null, DefaultFont)
                             .setOrigin(0.5, 0.5)
                             .setDepth(WinDefaultDepth + 200);
                         this.group.add(this.spinsTimer);
@@ -28663,8 +28916,7 @@ class WinFortuneWheel extends WinWithExit {
 
             let x = 0;
             let y = 0;
-            let textScale = 0.45;
-            let wordWrap = 300;
+            let wordWrap = 150;
             let originX = 0;
 
             switch (type) {
@@ -28676,7 +28928,7 @@ class WinFortuneWheel extends WinWithExit {
                     labelAngle = angle;
                     imgScale = 0.8;
                     imgRadius *= 0.7;
-                    wordWrap = 800;
+                    wordWrap = 400;
                     originX = 0.5;
                     break;
                 }
@@ -28686,7 +28938,6 @@ class WinFortuneWheel extends WinWithExit {
 
                     label = items[i].getText();
                     labelAngle = imageAngle + 10;
-                    textScale = 0.5;
                     break;
                 }
                 case "TimeTravel": {
@@ -28715,7 +28966,6 @@ class WinFortuneWheel extends WinWithExit {
 
                     radius -= 50 * GlobalScale;
                     imgRadius = radius;
-                    textScale = 0.5;
 
                     if (this.winInfo.jackpotImage) {
                         const back = engine.add.sprite(x, y, "FortuneJackpot")
@@ -28742,7 +28992,7 @@ class WinFortuneWheel extends WinWithExit {
                 const text = engine.add.textOld(x + radius * Math.sin(labelAngle), y - radius * Math.cos(labelAngle), label, DefaultFontWheel)
                     .setOrigin(originX, 0.5)
                     .setWordWrapWidth(wordWrap * GlobalScale)
-                    .setDepth(depth).setScale(textScale);
+                    .setDepth(depth);
                 text.angle = angle;
                 this.allPrizesText[i] = text;
                 this.rotation.add(text)
@@ -28978,7 +29228,7 @@ class WinQuests extends WinWithBrownBack {
 
         this.group.add(this.header);
 
-        this.timerText = engine.add.text(50, RealScreenHeight - 100 * GlobalScale, null, DefaultFont)
+        this.timerText = engine.add.text(300 * GlobalScale, RealScreenHeight - 100 * GlobalScale, null, DefaultFont)
             .setOrigin(0, 0.5)
             .setDepth(WinDefaultDepth + 1);
         this.group.add(this.timerText);
@@ -29293,16 +29543,18 @@ class WinHarvested extends WinBase {
                     this.buttonLabel.setVisible(true);
                     animManager.applyButtonShowAnimation(this.actionButton);
 
-                    const count = gameInit.progress.getHarvestsCount();
-                    const photos = GameData.getPrestigePhotos();
-                    for (let v of photos) {
-                        if (v.prestigeCount == count) {
-                            setTimeout(() => {
-                                this._removeAllCans();
-                                const win = guiManager.openNewWindow(WindowType.WinPhotosPreview, true);
-                                win.setImage(v);
-                            }, 100);
-                            break;
+                    if (VisualData.getGameSettings().photos) {
+                        const count = gameInit.progress.getHarvestsCount();
+                        const photos = GameData.getPrestigePhotos();
+                        for (let v of photos) {
+                            if (v.prestigeCount == count) {
+                                setTimeout(() => {
+                                    this._removeAllCans();
+                                    const win = guiManager.openNewWindow(WindowType.WinPhotosPreview, true);
+                                    win.setImage(v);
+                                }, 100);
+                                break;
+                            }
                         }
                     }
                 });
@@ -29761,9 +30013,10 @@ class WinWithPicture extends WinWithBack {
     }
 
     applyWinInfo(key) {
-        super.applyWinInfo(key);
-        if (!this.winInfo)
-            super.applyWinInfo("GUI_WinWithPicture");
+        this.winInfo = Object.assign({}, VisualData.GUI_WinWithPicture, VisualData[key]);
+
+        if (this.winInfo.nineSlice)
+            this.nineSlice = this.winInfo.nineSlice;
     }
 
     localize() {
@@ -29799,7 +30052,7 @@ class WinWithPicture extends WinWithBack {
             const func = this.info.oldText ? engine.add.textOld : engine.add.text;
             this.description = func(this.getWinInfoValue("descriptionX", 0), this.getWinInfoValue("descriptionY", -300), null, this.info.smallFont ? DefaultFontSmallBlack : DefaultFontBlack)
                 .setWordWrapWidth((this.info.wordWrapWidth || 900) * GlobalScale)
-                .setOrigin(0.5, 0.5)
+                .setOrigin(0.5, this.getWinInfoValueNoScale("descriptionOY", 0.5))
                 .setDepth(WinDefaultDepth);
             this.group.add(this.description);
         }
@@ -29829,6 +30082,9 @@ class WinWithPicture extends WinWithBack {
     }
 }
 
+class WinOtherWorlds extends WinWithPicture {
+
+}
 
 class WinBossSummon extends WinWithPicture {
 
@@ -29838,7 +30094,8 @@ class WinBossSummon extends WinWithPicture {
 
     localize() {
         super.localize();
-        this.mythButtonLabel.setText(LocalizationManager.getLocalizization("Prestige_start_hard").format(50));
+        if (this.mythButtonLabel)
+            this.mythButtonLabel.setText(LocalizationManager.getLocalizization("Prestige_start_hard").format(50));
     }
 
     createButton() {
@@ -30359,9 +30616,9 @@ class WinMain extends WinBase {
         let posY = centerY + RealScreenHeight / 2 - 150 * GlobalScale;
         const delta = width / 4;
 
-        this.createButton('MM_Btn_Login', centerX - delta * 1.5, posY, () => this.gui.openNewWindow(WindowType.WinBossSummon));
+        this.createButton('MM_Btn_Login', centerX - delta * 1.5, posY, () => UnnyNet.UnnyNet.openUnnyNet());
         this.upgradeButton = this.createButton('MM_Btn_Upgrade', centerX - delta * 0.5, posY, () => this.gui.changeMode(GUIMode.UpgradeBuildings));
-        this.createButton('MM_Btn_Likes', centerX + delta * 0.5, posY, () => this.gui.openNewWindow(WindowType.WinDropPuzzle));
+        // this.createButton('MM_Btn_Likes', centerX + delta * 0.5, posY, () => this.gui.openNewWindow(WindowType.WinDropPuzzle));
         this.createButton('MM_Btn_Worlds', centerX + delta * 1.5, posY, () => {
             gameInit.switchToTheNextWorld();
         });
@@ -30371,21 +30628,22 @@ class WinMain extends WinBase {
 
         this.storeButton = this.createButton('MM_Btn_Store', posX, posY, () => this.gui.openNewWindow(WindowType.WinStore));
 
-        if (TEST_MODE)
-            this.createButton('MM_Btn_Worlds', posX, posY + 250 * GlobalScale, () => gameInit.progress.cheatResources());
-
         posX -= 250 * GlobalScale;
         this.puzzlesButton = this.createButton('MM_Btn_Chests', posX, posY, () => this.gui.openNewWindow(WindowType.WinPuzzle));
 
         posX = RealScreenWidth - 100 * GlobalScale;
         posY = RealScreenHeight - 800 * GlobalScale;
-        this.createButton('FortuneHUDButton', posX, posY, () => this.gui.openNewWindow(WindowType.WinFortuneWheel));
+        this.fortuneButton = this.createButton('FortuneHUDButton', posX, posY, () => this.gui.openNewWindow(WindowType.WinFortuneWheel));
 
         posY += 180 * GlobalScale;
         this.questsButton = this.createButton('QuestsHUDButton', posX, posY, () => this.gui.openNewWindow(WindowType.WinQuests));
 
         posY += 180 * GlobalScale;
         this.dailyBonus = this.createButton('Daily_HUDButton', posX, posY, () => this.gui.openNewWindow(WindowType.WinDaily));
+
+        if (TEST_MODE)
+            this.createButton('MM_Btn_Worlds', posX, posY + 250 * GlobalScale, () => gameInit.progress.cheatResources());
+        this.allButtons.pop();
     }
 
     createButtonsMyth() {
@@ -30736,7 +30994,10 @@ class WinMain extends WinBase {
     }
 
     showSuperVisorButton() {
-        this.showButtonFromTutorial(this.superVisorButton);
+        if (this.superVisorButton)
+            this.showButtonFromTutorial(this.superVisorButton);
+        else
+            visualGame.showSuperVisor()
     }
 
     showGirlsMenuButton() {
@@ -32663,7 +32924,7 @@ class WinSpecialOffer extends WinWithExit {
                         .setDepth(WinDefaultDepth + 40);
                     this.group.add(this.description);
 
-                    this.createActionButton(this.engine, this.buttonClicked.bind(this), 750 * GlobalScale, true, 1, 50 * GlobalScale, 800 * GlobalScale);
+                    this.createActionButton(this.engine, this.buttonClicked.bind(this), 750 * GlobalScale, true, 1, 50 * GlobalScale, 400);
                     this.buttonLabel.setText(socialManager.getPriceLabel(this._getPurchaseId()));
 
                     const oldPrice = socialManager.getDisplayPrice(socialManager.getPrice(this._getPurchaseId()) * 5);
@@ -32891,6 +33152,7 @@ class GUIManager {
             description: "CollectCropText",
             image: "CollectCrop",
             button: "CollectCropStartButton",
+            btn_min_width: 750,
             action: ()=>this.changeMode(GUIMode.Boss)
         });
         this.allWindows[WindowType.WinBossProccess] = new WinBossProccess(this, gameInit);
@@ -32902,7 +33164,7 @@ class GUIManager {
             description: "BanjoDesc",
             image: "Banjo",
             button: "BanjoButtonText",
-            btn_min_width: 1400 * GlobalScale,
+            btn_min_width: 800,
             icon: 'AdCam',
             action: ()=>{
                 PlayRewardedAd(()=> {
@@ -32917,7 +33179,7 @@ class GUIManager {
             description: "MultiplyOnStartDesc",
             image: "Banjo",
             button: "MultiplyOnStartButton",
-            btn_min_width: 1400 * GlobalScale,
+            btn_min_width: 800,
             icon: 'AdCam',
             action: ()=>{
                 PlayRewardedAd(() => {
@@ -32935,7 +33197,7 @@ class GUIManager {
             description: "RainDescFreeProSpecial",
             image: "Cloud",
             button: "RainButtonText",
-            btn_min_width: 1000 * GlobalScale,
+            btn_min_width: 600,
             icon: 'AdCam',
             action: ()=>{
                 PlayRewardedAd(()=> {
@@ -32954,7 +33216,7 @@ class GUIManager {
             button: GEMS_PRICE_FOR_ADS,
             dontLocalizeButton: true,
             icon: 'PriceGems',
-            btn_min_width: 500 * GlobalScale,
+            btn_min_width: 300,
         });
 
         this.allWindows[WindowType.WinAdBLock] = new WinGemsInsteadOfAds(this, gameInit, {
@@ -32964,13 +33226,14 @@ class GUIManager {
             button: GEMS_PRICE_FOR_ADS,
             dontLocalizeButton: true,
             icon: 'PriceGems',
-            btn_min_width: 500 * GlobalScale,
+            btn_min_width: 300,
         });
 
-        this.allWindows[WindowType.WinOtherWorlds] = new WinWithPicture(this, gameInit, {
+        this.allWindows[WindowType.WinOtherWorlds] = new WinOtherWorlds(this, gameInit, {
             header: "LocationsNotOpenedWindowTitle",
             description: "LocationsNotOpenedWindowDesc",
             image: "OtherWorldsLocked",
+            scaleImage: VisualData.IsVertical() ? 0.7 : 1,
             button: "ButtonOk",
             no_exit: true,
             smallFont: true,
@@ -33040,7 +33303,7 @@ class GUIManager {
 
         this.allWindows[WindowType.WinResourcesInfo] = new WinWithPicture(this, gameInit, {
             getDescription: ()=>this._getResourcesInfoDescription(),
-            image: "FortuneDevil",
+            image: VisualData.IsVertical() ? null : "FortuneDevil",
             button: "ButtonOk",
             imageX: 0,
             imageY: -10,
@@ -33485,37 +33748,6 @@ VisualData.MAP_PARAMS.center = {
     y: RealScreenHeight /2,
 };
 
-const useNewScale = true;
-
-let gameW, gameH;
-let dpi = useNewScale ? (window.devicePixelRatio || 1) : 1;
-
-function UpdateNumbers() {
-    if (useNewScale) {
-        localScale = Math.min(window.innerWidth / RealScreenWidth, window.innerHeight / RealScreenHeight);
-        localScale *= dpi;
-
-        const minValue = 0.5;
-        if (localScale < minValue) {
-            dpi *= minValue / localScale;
-            localScale = minValue;
-        }
-
-        if (localScale < 0.6) {
-            imagesDeltaScale = 2;
-            use2ximages = false;
-        } else {
-            imagesDeltaScale = 1;
-            use2ximages = true;
-        }
-        imageSizeLocalScale = imagesDeltaScale * localScale;
-    } else
-        localScale = 1;
-    gameW = RealScreenWidth * localScale;
-    gameH = RealScreenHeight * localScale;
-}
-UpdateNumbers();
-
 const renderType = Phaser.WEBGL;
 // const renderType = Phaser.CANVAS;
 
@@ -33857,7 +34089,9 @@ function prepareTextToHtml(engine) {
         if (this.newText && this.fittingWidth && this.newText.innerText) {
             this.newText.style.width = this.fittingWidth + "px";
             this.newText.style.height = this.fittingHeight + "px";
-            textFit(this.newText);
+
+            if (this.fittingWidth > 1)
+                textFit(this.newText);
         }
     };
 
