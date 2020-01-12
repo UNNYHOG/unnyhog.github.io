@@ -152,6 +152,7 @@ var bigInt=function(undefined){"use strict";var BASE=1e7,LOG_BASE=7,MAX_INT=9007
     low = settings.minFontSize;
     high = settings.maxFontSize;
 
+      console.warn("> " + innerSpan.innerText);
     // Binary search for highest best fit
     var size = low;
     while (low <= high) {
@@ -167,7 +168,6 @@ var bigInt=function(undefined){"use strict";var BASE=1e7,LOG_BASE=7,MAX_INT=9007
       }
       // await injection point
     }
-      console.warn("> " + innerSpan.innerText + " : " + low + " > " + size);
     // found, updating font if differs:
     if( innerSpan.style.fontSize != size + 'px' ) innerSpan.style.fontSize = size + 'px';
 
@@ -17068,7 +17068,7 @@ const useNewScale = true;
 let mapScale = 1;
 
 let gameW, gameH;
-let dpi = 1;//useNewScale ? (window.devicePixelRatio || 1) : 1;
+let dpi = useNewScale ? (window.devicePixelRatio || 1) : 1;
 let localScaleLimit = 1;
 
 if (AllGetParams.game_platform === 'fb_instant') {
@@ -17121,8 +17121,6 @@ function UpdateNumbers() {
 
     gameW = RealScreenWidth * localScale;
     gameH = RealScreenHeight * localScale;
-
-    console.warn("localScale " + localScale + " : " + dpi);
 }
 
 UpdateNumbers();
@@ -21278,7 +21276,7 @@ const BoxType = {
 const MUSIC_STATE = "MUSIC_STATE";
 const SOUNDS_STATE = "SOUNDS_STATE";
 const CURRENT_LANGUAGE = "CURRENT_LANGUAGE";
-const GAME_VERSION = "0.9.38";
+const GAME_VERSION = "0.9.39";
 
 console.log("game version: " + GAME_VERSION);
 
