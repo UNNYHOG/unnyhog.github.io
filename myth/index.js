@@ -17468,7 +17468,6 @@ var VisualData = (function () {
     ];
 
     const GameSettings = {
-        fontFamily: "'kid_kosmicregular', 'Arial Rounded MT Bold', sans-serif",
         drop_image_scale: 0.8,
         popup_image_scale: 0.6,
         popup_images_from_drop: true,
@@ -21035,7 +21034,7 @@ const BoxType = {
 const MUSIC_STATE = "MUSIC_STATE";
 const SOUNDS_STATE = "SOUNDS_STATE";
 const CURRENT_LANGUAGE = "CURRENT_LANGUAGE";
-const GAME_VERSION = "0.9.40";
+const GAME_VERSION = "0.9.41";
 
 console.log("game version: " + GAME_VERSION);
 
@@ -34027,7 +34026,6 @@ function prepareTextToHtml(engine) {
         const element = document.createElement("div");
         element.innerText = name;
         element.className = "myp";
-        element.style.fontFamily = VisualData.getGameSettings().fontFamily;
         element.style.fontSize = style.font2;
         element.style.color = style.fill;
         element.style.webkitTextStrokeColor = style.stroke;
