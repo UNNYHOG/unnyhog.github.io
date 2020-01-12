@@ -16803,9 +16803,9 @@ class Tutorial {
     }
 }
 
-const GlobalScale = 0.703;
-let RealScreenWidth = 1536 * GlobalScale;//0.703 = 1080
-let RealScreenHeight = 2448 * GlobalScale;//0.784 = 1720
+const GlobalScale = 0.595;
+let RealScreenWidth = 1920;
+let RealScreenHeight = 1080;
 
 var GameDataSettings = (function() {
     return {
@@ -21029,7 +21029,7 @@ const BoxType = {
 const MUSIC_STATE = "MUSIC_STATE";
 const SOUNDS_STATE = "SOUNDS_STATE";
 const CURRENT_LANGUAGE = "CURRENT_LANGUAGE";
-const GAME_VERSION = "0.9.35";
+const GAME_VERSION = "0.9.36";
 
 console.log("game version: " + GAME_VERSION);
 
