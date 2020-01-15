@@ -16171,7 +16171,7 @@ const CURRENT_ENVIRONMENT = GAME_ENVIRONMENTS[AllGetParams.game_env];
 const CURRENT_UN_DATA = UN_DATA[CURRENT_ENVIRONMENT.un_game_id];
 
 const TEST_MODE = true;//AllGetParams.test_mode;
-const DEBUG_MODE = AllGetParams.debug_mode;
+const DEBUG_MODE = true;//AllGetParams.debug_mode;
 
 {
     switch (AllGetParams.game_platform) {
