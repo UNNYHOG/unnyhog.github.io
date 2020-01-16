@@ -18182,7 +18182,7 @@ var VisualData = (function () {
         ALL_OBJECTS: Object.assign({}, CommonData.ALL_OBJECTS, LocalObjects),
 
         VISUAL_BUILDINGS: {
-            start1w1: {
+            start7w1: {
                 objects: [
                     {
                         x: 12,
@@ -18190,7 +18190,7 @@ var VisualData = (function () {
                     },
                 ]
             },
-            start2w1: {
+            start3w1: {
                 objects: [
                     {
                         x: 26,
@@ -18198,7 +18198,7 @@ var VisualData = (function () {
                     },
                 ]
             },
-            start3w1: {
+            start1w1: {
                 objects: [
                     {
                         x: 28,
@@ -18206,7 +18206,7 @@ var VisualData = (function () {
                     },
                 ]
             },
-            start4w1: {
+            start2w1: {
                 objects: [
                     {
                         x: 10,
@@ -18214,7 +18214,7 @@ var VisualData = (function () {
                     },
                 ]
             },
-            start5w1: {
+            start8w1: {
                 objects: [
                     {
                         x: 80,
@@ -18222,7 +18222,7 @@ var VisualData = (function () {
                     },
                 ]
             },
-            start6w1: {
+            start9w1: {
                 objects: [
                     {
                         x: 70,
@@ -18230,7 +18230,7 @@ var VisualData = (function () {
                     },
                 ]
             },
-            start7w1: {
+            start5w1: {
                 objects: [
                     {
                         x: 26,
@@ -18238,7 +18238,7 @@ var VisualData = (function () {
                     },
                 ]
             },
-            start8w1: {
+            start4w1: {
                 objects: [
                     {
                         x: 40,
@@ -18246,7 +18246,7 @@ var VisualData = (function () {
                     },
                 ]
             },
-            start9w1: {
+            start6w1: {
                 objects: [
                     {
                         x: 14,
@@ -18401,14 +18401,14 @@ var VisualData = (function () {
                 ]
             },
 
-            building1w1: {
+            building7w1: {
                 objects: [
                     {
                         scale: 0.1 * totalScale,
                     }
                 ]
             },
-            building2w1: {
+            building3w1: {
                 objects: [
                     {
                         scale: 0.06 * totalScale,
@@ -18416,49 +18416,49 @@ var VisualData = (function () {
                     }
                 ]
             },
-            building3w1: {
+            building1w1: {
                 objects: [
                     {
                         scale: 0.09 * totalScale,
                     }
                 ]
             },
-            building4w1: {
+            building2w1: {
                 objects: [
                     {
                         scale: 0.08 * totalScale,
                     }
                 ]
             },
-            building5w1: {
+            building8w1: {
                 objects: [
                     {
                         scale: 0.12 * totalScale,
                     }
                 ]
             },
-            building6w1: {
+            building9w1: {
                 objects: [
                     {
                         scale: 0.1 * totalScale,
                     }
                 ]
             },
-            building7w1: {
+            building5w1: {
                 objects: [
                     {
                         scale: 0.11 * totalScale,
                     }
                 ]
             },
-            building8w1: {
+            building4w1: {
                 objects: [
                     {
                         scale: 0.095 * totalScale,
                     }
                 ]
             },
-            building9w1: {
+            building6w1: {
                 objects: [
                     {
                         scale: 0.09 * totalScale,
@@ -18632,7 +18632,7 @@ var VisualData = (function () {
         },
 
         PLACED_BUILDINGS: {
-            1: {//pool
+            7: {//pool
                 position: {
                     x: -41 * totalScale,
                     y: 317 * totalScale,
@@ -18640,7 +18640,7 @@ var VisualData = (function () {
                     ly: 30
                 }
             },
-            2: {
+            3: {//
                 position: {
                     x: -23 * totalScale,
                     y: -119 * totalScale,
@@ -18648,7 +18648,7 @@ var VisualData = (function () {
                     ly: 50
                 }
             },
-            3: {//u'bka
+            1: {//u'bka
                 position: {
                     x: 118 * totalScale,
                     y: 191 * totalScale,
@@ -18656,7 +18656,7 @@ var VisualData = (function () {
                     ly: -190
                 }
             },
-            4: {//cat
+            2: {//cat
                 position: {
                     x: -56 * totalScale,
                     y: -225 * totalScale,
@@ -18664,7 +18664,7 @@ var VisualData = (function () {
                     ly: -160
                 }
             },
-            5: {//pike
+            8: {//pike
                 position: {
                     x: -253 * totalScale,
                     y: 156 * totalScale,
@@ -18672,7 +18672,7 @@ var VisualData = (function () {
                     ly: -20
                 }
             },
-            6: {//2 guys top right
+            9: {//2 guys top right
                 position: {
                     x: 127 * totalScale,
                     y: -111 * totalScale,
@@ -18680,7 +18680,7 @@ var VisualData = (function () {
                     ly: -150
                 }
             },
-            7: {//drums
+            5: {//drums
                 position: {
                     x: -53 * totalScale,
                     y: 128 * totalScale,
@@ -18688,7 +18688,7 @@ var VisualData = (function () {
                     ly: -190
                 }
             },
-            8: {//reading
+            4: {//reading
                 position: {
                     x: 222 * totalScale,
                     y: 304 * totalScale,
@@ -18696,7 +18696,7 @@ var VisualData = (function () {
                     ly: -170
                 }
             },
-            9: {//visit
+            6: {//visit
                 position: {
                     x: -207 * totalScale,
                     y: -102 * totalScale,
@@ -18819,13 +18819,25 @@ var VisualData = (function () {
 })();
 
 
+const oldBuildingsToNew = {
+    1: 7,
+    2: 3,
+    3: 1,
+    4: 2,
+    5: 8,
+    6: 9,
+    7: 5,
+    8: 4,
+    9: 6
+};
+
 for (let w = 1; w <= 3; w++) {
     const add = 'w' + w;
     for (let i = 1; i <= 9; i++) {
 
         const ww = i + 'w' + w;
-
-        VisualData.ALL_OBJECTS['Building_' + ww] = {
+        const newWW = oldBuildingsToNew[i] + 'w' + w;
+        VisualData.ALL_OBJECTS['Building_' + newWW] = {
             type: UnnyObjectType.Spine,
             json: 'Slot' + ww + '.json',
             atlas: 'Slot' + ww + '.atlas',
@@ -21034,7 +21046,7 @@ const BoxType = {
 const MUSIC_STATE = "MUSIC_STATE";
 const SOUNDS_STATE = "SOUNDS_STATE";
 const CURRENT_LANGUAGE = "CURRENT_LANGUAGE";
-const GAME_VERSION = "0.9.42";
+const GAME_VERSION = "0.9.43";
 
 console.log("game version: " + GAME_VERSION);
 
@@ -22427,9 +22439,14 @@ class Progress {
                         let json = response.data[0].value;
                         if (typeof json === "string")
                             json = JSON.parse(json);
-                        console.error("LOADED version: " + json.profile.savedVersion);
-                        if (callback)
-                            callback(json);
+                        
+                        if (callback) {
+                            if (json && json.profile && json.profile.savedVersion) {
+                                console.error("LOADED version: " + json.profile.savedVersion);
+                                callback(json);
+                            } else
+                                callback(null);
+                        }
                         else {
                             console.log("UnnyNet version " + (json && json.profile ? json.profile.savedVersion : 'none') + " vs " + goblinVersion);
                         }
