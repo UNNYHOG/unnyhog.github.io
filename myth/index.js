@@ -16242,7 +16242,7 @@ const TutStartPhase = 0;
 
 class Tutorial {
     constructor() {
-        this.depth = WinDefaultDepth + 900;
+        this.depth = WinDefaultDepth + 90000;
         this.guardShown = false;
         this.supervisorShown = false;
         this.fortuneShown = false;
@@ -16449,11 +16449,6 @@ class Tutorial {
         unlockGUI();
         unlockAnimatedObject();
         this._hideFinger();
-        // console.log("goToNextStep ");
-        // // console.log("MOVE to " + this.phase);
-        // gameAnalytics.sendEvent("Tutorial", {
-        //     "phase": this.phase
-        // });
 
         const data = GameData.getTutorialConfig();
         const d = data[++this.phaseIndex];
@@ -16481,8 +16476,6 @@ class Tutorial {
             win.closeWindow();
         }
 
-        // console.log("preparePhase " + phase + " > " + phaseIndex + " = " + phaseData.actionType + " win = " + this.lastWindow);
-
         if (phaseData.showHint) {
             guiManager.setTutorialPhrase(LocalizationManager.getTutorialLocalizization(phaseData.localizationKey));
         } else
@@ -16490,7 +16483,8 @@ class Tutorial {
 
         switch (phaseData.actionType) {
             case "ShowDialog":
-                guiManager.showQuestMessage(LocalizationManager.getTutorialLocalizization(phaseData.localizationKey), phaseData.parameter, this.dialogCallback);
+                const offset = phaseData.localizationKey === 'SatyrDialog2' ? {x: 500 * GlobalScale, y: 0} : null;
+                guiManager.showQuestMessage(LocalizationManager.getTutorialLocalizization(phaseData.localizationKey), phaseData.parameter, this.dialogCallback, offset);
                 break;
             case "ClickSlot":
                 if (this._isWindow(WindowType.WinMain)) {
@@ -16534,9 +16528,9 @@ class Tutorial {
                 break;
             case "CloseGirlListWindow": {
                 this._lockAtButton(guiManager.getActiveWindow().getExitButton(), true);
-                const win = guiManager.getWindowByType(WindowType.WinPhotosMainMenu);
-                if (win.scroll)
-                    win.scroll.setScrollerEnable(true);
+                // const win = guiManager.getWindowByType(WindowType.WinPhotosMainMenu);
+                // if (win.scroll)
+                //     win.scroll.setScrollerEnable(true);
                 break;
             }
             case "ClickGirlMenuButton": {
@@ -16555,24 +16549,27 @@ class Tutorial {
 
             case "OpenPuzzlesWindow":
             case "ClickOpenBoxItem":
+
+            case "StartTokenAnimation":
+            case "FinishTokenAnimation":
                 this.goToNextStep();
                 break;
             case "OpenGirlQuestWindow": {
                 if (this._isWindow(WindowType.WinPhotosMainMenu)) {
                     const win = guiManager.getWindowByType(WindowType.WinPhotosMainMenu);
-                    win.scroll.setScrollerEnable(false);
+                    // win.scroll.setScrollerEnable(false);
                     const btn = win.getButtonByTag("Peristera");
                     this._lockAtButton(btn, true, win.getButtonPosByTag());
                 }
                 break;
             }
             case "ClickBioButton": {
-                if (this._isWindow(WindowType.WinGirlBio))
+                // if (this._isWindow(WindowType.WinGirlBio))
                     this.goToNextStep();
-                else {
-                    const win = guiManager.getWindowByType(WindowType.WinPhotosQuest);
-                    this._lockAtButton(win.GirlDescription, true);
-                }
+                // else {
+                //     const win = guiManager.getWindowByType(WindowType.WinPhotosQuest);
+                //     this._lockAtButton(win.GirlDescription, true);
+                // }
                 break;
             }
             case "ClickUnlockPhotoButton": {
@@ -16748,14 +16745,14 @@ class Tutorial {
                 break;
             case "ChangeGameModeToNormal":
             case "CloseGirlListWindow": {
-                if (this._isWindow(WindowType.WinMain))
+                if (this._isWindow(WindowType.WinMain) && !LOCKED_BY_ANIMATION)
                     this.goToNextStep();
                 break;
             }
             case "ClickPeristeraBar": {
-                const win = guiManager.getWindowByType(WindowType.WinPhotosMainMenu);
-                const btn = win.getButtonByTag("Peristera");
-                if (btn)
+                // const win = guiManager.getWindowByType(WindowType.WinPhotosMainMenu);
+                // const btn = win.getButtonByTag("Peristera");
+                // if (btn)
                     this.goToNextStep();
                 break;
             }
@@ -16920,7 +16917,8 @@ var VisualData = (function () {
 
     let QUEST_ICONS_FOLDER = 'UI/Windows/DailyQuests/DailyQuests Icons/';
     let DAILY_ICONS_FOLDER = 'UI/Windows/LoginBonus/BonusTypes/';
-    let GIRLS_ICONS_FOLDER = 'UI/Windows/GirlsMenu/girls/';
+    let GIRLS_ICONS_FOLDER = 'UI/Windows/GirlsMenu/Girls name/';
+    let GIRLS_BIG_ICONS_FOLDER = 'UI/Windows/GirlsMenu/Girls_menu/';
     let GIRLS_PREVIEW_FOLDER = 'UI/Windows/GirlsMenu/Thumbs/';
     let LOCATIONS_FOLDER = 'UI/Windows/ChangeLocations/';
 
@@ -17047,8 +17045,42 @@ var VisualData = (function () {
         'BanjoEnd': {
             file: 'UI/Windows/Prestige/prestige_pict.png',
         },
+        'ExitButton': {
+            file: 'UI/Windows/GirlsMenu/New_windows/close.png',
+        },
         //overrides...
 
+        'QuestSeparator': {
+            file: 'UI/Windows/GirlsMenu/New_windows/rasdelitel.png'
+        },
+
+        'CheckBoxBack': {
+            file: 'UI/Windows/GirlsMenu/New_windows/check_box.png'
+        },
+
+        'CheckBoxMark': {
+            file: 'UI/Windows/GirlsMenu/New_windows/check_mark.png'
+        },
+
+        'SliderBack': {
+            file: 'UI/Windows/GirlsMenu/New_windows/slider_passiv_position.png'
+        },
+
+        'PhotoQuestMainBack': {
+            file: 'UI/Windows/GirlsMenu/New_windows/main_ramka.png'
+        },
+
+        'SliderButton': {
+            file: 'UI/Windows/GirlsMenu/New_windows/slider_button.png'
+        },
+
+        'ButtonQuest': {
+            file: 'UI/Windows/GirlsMenu/New_windows/button_qwest.png'
+        },
+
+        'ReadMoreButton' : {
+            file: 'UI/Windows/GirlsMenu/New_windows/read_more.png'
+        },
         'PrestigeStar': {
             file: 'UI/Windows/Prestige/star.png',
         },
@@ -17133,10 +17165,6 @@ var VisualData = (function () {
         },
         'InAppIcon': {
             file: 'UI/Windows/Prestige/hard.png',
-        },
-
-        'GirlDescription': {
-            file: 'UI/Windows/GirlsMenu/person.png',
         },
 
         'PhotoQuestBar': {
@@ -17422,7 +17450,6 @@ var VisualData = (function () {
         'StripeText',
         'PhotoLock',
         'WhiteSpace',
-        'GirlDescription',
         'PhotoQuestBar',
         'PhotoQuestBarFull',
         // 'PhotoQuestFrame',
@@ -17464,7 +17491,15 @@ var VisualData = (function () {
         'ScrollLineWhite',
         'ScrollPart',
         'CollectCrop',
-        'PrestigeStar'
+        'PrestigeStar',
+        'ReadMoreButton',
+        'SliderBack',
+        'PhotoQuestMainBack',
+        'SliderButton',
+        'ButtonQuest',
+        'CheckBoxBack',
+        'CheckBoxMark',
+        'QuestSeparator'
     ];
 
     const GameSettings = {
@@ -17535,7 +17570,8 @@ var VisualData = (function () {
         show_best: false,
         textFitSettings: {
             minFontSize:6
-        }
+        },
+        dailyBonusDaysCount: 27,
     };
 
     return {
@@ -17717,6 +17753,10 @@ var VisualData = (function () {
             nineSlice: "none",
         },
 
+        GUI_WinPhotosMainMenu2: {
+            nineSlice: "photo_quest",
+        },
+
         GUI_WinLocationSelection: {
             nineSlice: "none",
         },
@@ -17885,6 +17925,10 @@ var VisualData = (function () {
             return GIRLS_ICONS_FOLDER;
         },
 
+        getGirlsBigImagesFolder: function () {
+            return GIRLS_BIG_ICONS_FOLDER;
+        },
+
         getGirlsPreviewFolder: function () {
             return GIRLS_PREVIEW_FOLDER;
         },
@@ -17991,9 +18035,8 @@ var VisualData = (function () {
             },
             photo_quest: {
                 name: 'WinStandardBack',
-                width: 1100,
+                width: 1000,
                 height: 1500,
-                y: 100
             },
             manager_doubling: {
                 name: 'WinStandardBack',
@@ -18024,6 +18067,16 @@ var VisualData = (function () {
             height: 900,
         },
 
+        PHOTO_QUEST_SCROLL: {
+            columns: 4,
+            cellWidth: 350,
+            cellHeight: 350,
+            offsetX: 0,
+            offsetY: 0,
+            width: 1600,
+            height: 900,
+        },
+
         PUZZLE_SCROLL_CONFIG_MANAGERS: {
             columns: 1,
             cellWidth: 1000,
@@ -18037,6 +18090,18 @@ var VisualData = (function () {
         },
 
         PHOTOS_MENU_SCROLL_CONFIG: {
+            columns: 1,
+            cellWidth: 1300,
+            cellHeight: 400,
+            offsetX: 0,
+            offsetY: 100,
+            width: 1300,
+            height: 1380,
+            track: "ScrollLineWhite",
+            thumb: "ScrollPart",
+        },
+
+        PHOTOS_MENU_SCROLL_CONFIG2: {
             columns: 1,
             cellWidth: 1300,
             cellHeight: 400,
@@ -18102,6 +18167,7 @@ var VisualData = (function () {
             DAILY_ICONS_FOLDER,
             GUARD_PUZZLE_IMAGES_FOLDER,
             GIRLS_ICONS_FOLDER,
+            GIRLS_BIG_ICONS_FOLDER,
             GIRLS_PREVIEW_FOLDER,
             LOCATIONS_FOLDER,
             PUZZLE_UI_FOLDER
@@ -18887,6 +18953,7 @@ let GirlsMenuHeaderFont, GirlsMenuDescFont, PhotoQuestDescFont, PhotoQuestPrice,
 let TutorialFont, PlayerLevelFont;
 let DefaultFontSmallBtns;
 let PrestigeFontHeader, PrestigeFontDescription, FontManagerWindow;
+let ReadMoreFont;
 
 function CalculateFonts() {
     TextScale = 0.7;
@@ -19023,15 +19090,21 @@ function CalculateFonts() {
     });
 
     GirlsMenuHeaderFont = createFont({
-        font: getFont(35),
-        font2: getFont2(35),
-        fill: DefaultFontColor,
+        font: getFont(40),
+        font2: getFont2(40),
+        fill: DefaultStrokeColor,
     });
 
     GirlsMenuDescFont = createFont({
         font: getFont(25),
         font2: getFont2(25),
-        fill: DefaultFontColor,
+        fill: DefaultStrokeColor,
+    });
+
+    ReadMoreFont = createFont({
+        font: getFont(20),
+        font2: getFont2(20),
+        fill: DefaultStrokeColor,
     });
 
     PhotoQuestDescFont = createFont({
@@ -19145,6 +19218,186 @@ function lockGuiEverything() {
 
 function unlockGUI() {
     activeButtonForTutorial = null;
+}
+
+let LOCKED_BY_ANIMATION = false;
+
+class ButtonMesh extends Phaser.GameObjects.Mesh {
+    constructor(group, config, callback) {
+        config.x = config.x || 0;
+        config.y = config.y || 0;
+        //check if config contains a scene
+        if (!config.scene) {
+            console.log('missing scene');
+            return;
+        }
+        //check if config contains a key
+        if (!config.key) {
+            console.log("missing key!");
+            return;
+        }
+
+        //if there is no up property assume 0
+        if (!config.up) {
+            config.up = 0;
+        }
+        //if there is no down in config use up
+        if (!config.down) {
+            config.down = config.up;
+        }
+        //if there is no over in config use up
+        if (!config.over) {
+            config.over = config.up;
+        }
+
+        //super(config.scene, config.x, config.y, config.key, config.up);
+        super(config.scene, config.x * localScale, config.y * localScale, [
+            /*  X   |   Y  */
+            /* ----------- */
+            -100, -100,
+            -100, 100,
+            100, 100,
+
+            -100, -100,
+            100, 100,
+            100, -100
+        ], [
+                /*  U   |   V  */
+                /* ----------- */
+                0,      0,
+                0,      1,
+                1,      1,
+
+                0,      0,
+                1,      1,
+                1,      0
+            ],
+            [0xffffff, 0xffffff, 0xffffff, 0xffffff, 0xffffff, 0xffffff],
+            [1, 1, 1, 1, 1, 1],
+            config.key);
+        this.config = config;
+        this.callback = callback;
+
+        //add this to the scene
+        config.scene.add.existing(this);
+        this.group = group;
+        if (group)
+            group.add(this);
+
+        this.clickable = this;
+
+        this.extraXScale = 1;
+
+        if (!config.scale)
+            config.scale = 1;
+        if (this.config.scale_parent)
+            this._defaultScale(1);
+        this.setScale(config.scale);
+
+        //make interactive and set listeners
+        this.clickable.setInteractive();
+        this.clickable.on('pointerdown',this.onDown,this);
+        this.clickable.on('pointerup',this.onUp,this);
+        this.clickable.on('pointerover',this.onOver,this);
+        this.clickable.on('pointerout',this.onOut,this);
+    }
+
+    setAlpha() {
+
+    }
+
+    setVisible(visible) {
+        if (!this.nineActive)
+            super.setVisible(visible);
+        else
+            this.clickable.setVisible(visible);
+    }
+
+    getParentObject() {
+        return this.config.scale_parent ? this.group : this.clickable;
+    }
+
+    isLocked() {
+        return (activeButtonForTutorial && activeButtonForTutorial !== this && !this.ignoreTutorial) || this.locked;
+    }
+
+    setButtonLocked(locked) {
+        this.locked = locked;
+        if (!VisualData.getGameSettings().no_buttons_tint)
+            setLockedColor(this.clickable, locked);
+    }
+
+    setPositionX(x) {
+        return this.x = x * localScale;
+    }
+
+    onDown()
+    {
+        if (this.isLocked())
+            return;
+
+        this.down = true;
+        // this.setFrame(this.config.down);
+        if (this.callback) {
+            if (!this.config.dont_scale)
+                this.setScale(0.95 * this.config.scale);
+            audioManager.playButtonClick();
+        }
+    }
+    onOver()
+    {
+        if (this.isLocked())
+            return;
+
+        // this.setFrame(this.config.over);
+    }
+
+    onOut()
+    {
+        if (this.isLocked())
+            return;
+
+        this.down = false;
+        // this.setFrame(this.config.up);
+        if (this.callback)
+            this.setScale(this.config.scale);
+    }
+
+    _defaultScale(x, y) {
+        if (this.nineActive)
+            this.clickable.setScale(x * this.extraXScale, y || x);
+        else
+            super.setScale(x * this.extraXScale, y || x);
+    }
+
+    setScale(x, y) {
+        if (this.config.scale_parent) {
+            this.group.setScale(x * this.extraXScale, y || x);
+        } else
+            this._defaultScale(x, y);
+    }
+
+    setExternalScale(value) {
+        this.config.scale = value;
+        this.setScale(this.config.scale);
+    }
+
+    onUp()
+    {
+        if (this.isLocked())
+            return;
+
+        // this.setFrame(this.config.up);
+        if (this.down && this.callback) {
+            this.down = false;
+            this.setScale(this.config.scale);
+            this.callback();
+        }
+    }
+
+    setCallback(callback) {
+        this.callback = callback;
+    }
 }
 
 class BasicButton extends Phaser.GameObjects.Sprite {
@@ -19397,7 +19650,7 @@ class AnimationBase {
         this.stopped = true;
     }
 
-    playFrame(deltaTime){
+    playFrame(deltaTime) {
         if (this.stopped)
             return true;
 
@@ -19433,7 +19686,7 @@ class AnimationChangeAlpha extends AnimationBase {
 
     _playAnimation() {
         const dt = this.getTime();
-        this.group.alpha = this.alphaStart * (1-dt) + this.alphaFinish * dt;
+        this.group.alpha = this.alphaStart * (1 - dt) + this.alphaFinish * dt;
     }
 }
 
@@ -19601,7 +19854,14 @@ class ScaleAnimation extends AnimationBase {
 
     _playAnimation() {
         const dt = this.getTime();
-        this.group.setScale(this.scaleStart * (1-dt) + this.scaleEnd * dt);
+        this.group.setScale(this.scaleStart * (1 - dt) + this.scaleEnd * dt);
+    }
+}
+
+class ScaleAnimationWithReturn extends ScaleAnimation {
+    _playAnimation() {
+        const dt = Math.sin(this.getTime() * Math.PI);
+        this.group.setScale2(this.group.config.scale * (1 - dt) + this.scaleEnd * dt);
     }
 }
 
@@ -19670,7 +19930,7 @@ class MoveSinInfinite extends AnimationInfinite {
         this.group.setPosition(
             this.x + this.amplitudeX * Math.sin(dt * Math.PI * 2),
             this.y + this.amplitudeY * Math.sin(dt * Math.PI * 2)
-            );
+        );
     }
 }
 
@@ -19704,11 +19964,11 @@ class SwipeInfinite extends AnimationInfinite {
         let dt = this.getTime();
         if (dt <= this.part) {
             dt /= this.part;
-            this.group.setPosition(this.x * (1-dt) + this.endPoint.x * dt, this.y * (1-dt) + this.endPoint.y * dt);
+            this.group.setPosition(this.x * (1 - dt) + this.endPoint.x * dt, this.y * (1 - dt) + this.endPoint.y * dt);
         } else {
             dt = 1 - dt;
             dt /= (1 - this.part);
-            this.group.setPosition(this.x * (1-dt) + this.endPoint.x * dt, this.y * (1-dt) + this.endPoint.y * dt);
+            this.group.setPosition(this.x * (1 - dt) + this.endPoint.x * dt, this.y * (1 - dt) + this.endPoint.y * dt);
         }
     }
 }
@@ -19727,11 +19987,11 @@ class SwipeOnce extends AnimationBase {
         let dt = this.getTime();
         if (dt <= this.part) {
             dt /= this.part;
-            this.group.setPosition(this.x * (1-dt) + this.endPoint.x * dt, this.y * (1-dt) + this.endPoint.y * dt);
+            this.group.setPosition(this.x * (1 - dt) + this.endPoint.x * dt, this.y * (1 - dt) + this.endPoint.y * dt);
         } else {
             dt = 1 - dt;
             dt /= (1 - this.part);
-            this.group.setPosition(this.x * (1-dt) + this.endPoint.x * dt, this.y * (1-dt) + this.endPoint.y * dt);
+            this.group.setPosition(this.x * (1 - dt) + this.endPoint.x * dt, this.y * (1 - dt) + this.endPoint.y * dt);
         }
     }
 }
@@ -19751,14 +20011,14 @@ class AnimationFallingBread extends AnimationBase {
         const number = this.engine.add.textOld(RealScreenWidth / 2, RealScreenHeight * 0.1, LocalizationManager.getLocalizization("BanjoManTipStart"), DefaultFontVeryBig)
             .setDepth(WinDefaultDepth)
             .setOrigin(0.5);
-        animManager.applyWinOpenAnimation(number, ()=>{
-            setTimeout(()=>number.destroy(true), 500);
+        animManager.applyWinOpenAnimation(number, () => {
+            setTimeout(() => number.destroy(true), 500);
         });
 
         audioManager.playBanjoded();
     }
 
-    playFrame(deltaTime){
+    playFrame(deltaTime) {
         if (this.stopped)
             return true;
 
@@ -19788,8 +20048,8 @@ class AnimationFallingBread extends AnimationBase {
             const number = this.engine.add.textOld(RealScreenWidth / 2, RealScreenHeight * 0.1, timeLeft, DefaultFontVeryBig)
                 .setDepth(WinDefaultDepth)
                 .setOrigin(0.5);
-            animManager.applyWinOpenAnimation(number, ()=>{
-                setTimeout(()=>number.destroy(true), 500);
+            animManager.applyWinOpenAnimation(number, () => {
+                setTimeout(() => number.destroy(true), 500);
             });
         }
 
@@ -19803,7 +20063,7 @@ class AnimationFallingBread extends AnimationBase {
             for (let i = 0; i < newCount; i++) {
                 const obj = {};
                 this.breads.push(obj);
-                CreateImageInGroup(this.engine, this.group, 'bread_' + (Math.trunc(Math.random() * 7) + 1), (sprite)=>{
+                CreateImageInGroup(this.engine, this.group, 'bread_' + (Math.trunc(Math.random() * 7) + 1), (sprite) => {
                     obj.img = sprite;
                     obj.v = (3 + Math.random()) * 400;
                     obj.y = 0;
@@ -19824,7 +20084,7 @@ class AnimationFallingBread extends AnimationBase {
 
             if (img) {
                 obj.y += obj.v * this.deltaTime;
-                if (obj.y >= RealScreenHeight){
+                if (obj.y >= RealScreenHeight) {
                     this.destroyedCount++;
                     obj.img.destroy(true);
                     obj.img = null;
@@ -19919,6 +20179,12 @@ class AnimationsManager {
     fallFishAnimation(group, params, period, callback) {
         if (this._canAddAnimation(group))
             return this._addAnimation(new FallFishAnimation(group, params, period, callback));
+        return null;
+    }
+
+    scaleAnimationWithReturn(group, scale, duration, callback) {
+        if (this._canAddAnimation(group))
+            return this._addAnimation(new ScaleAnimationWithReturn(group, scale, duration, callback));
         return null;
     }
 
@@ -21334,6 +21600,7 @@ class Progress {
 
         // this.savedProgress = getCheatSave();
         this.savedProgress.puzzle.goods = fixArray(this.savedProgress.puzzle.goods);
+        this.savedProgress.tutorial.stepNumber = 23;
         // this._resetConstructions();
         // this._setResourceByName("tokenCommon", "99999900");
         // this._setResourceByName("gold", "999900");
@@ -22456,6 +22723,7 @@ class Progress {
                     }
                 } else {
                     console.error("Failed to load profile", response.error);
+                    callback(null);//don't commit
                 }
             });
         }
@@ -23066,7 +23334,6 @@ let GameData = (function () {
         },
 
         getRandomQuest() {
-            // return QUESTS_DATA[10];
             return QUESTS_DATA[Math.floor(Math.random() * QUESTS_DATA.length)];
         },
 
@@ -23088,6 +23355,14 @@ let GameData = (function () {
 
         getPhotosByMainTagArray() {
             return PHOTOS_BY_MAINTAG_ARR;
+        },
+
+        getPhotosByMainTagArrayByPhotoId(tag) {
+            for (let i in PHOTOS_BY_MAINTAG_ARR) {
+                if (PHOTOS_BY_MAINTAG_ARR[i].tag === tag)
+                    return PHOTOS_BY_MAINTAG_ARR[i];
+            }
+            return null;
         },
 
         getPhotosByTagArray() {
@@ -23478,6 +23753,27 @@ class QuestBase {
 
     isReadyToClaim() {
         return this.progress >= this.count;
+    }
+
+    isPhotoQuestReadyToCollect() {
+        return this._isResourcesEnoughForPhotoQuest() && this.progress >= this.count;
+    }
+
+    _isResourcesEnoughForPhotoQuest() {
+        const questInfo = this.info;
+        const all = GameData.getAllResourcesType();
+        for (let i in all) {
+            const type = all[i];
+            const count = questInfo[type];
+            if (!count || count === "0")
+                continue;
+
+            const myResources = gameInit.progress.getResourceByName(type);
+            const requiredResources = questInfo[type + '_bigInt'];
+            if (myResources.compare(requiredResources) < 0)
+                return false;
+        }
+        return true;
     }
 }
 
@@ -23871,6 +24167,14 @@ class BonusGems extends BonusBase {
     }
 }
 
+class BonusTokens extends BonusBase {
+
+    activateBonus() {
+        super.activateBonus();
+        gameInit.progress.tokensEarned(this.info.type, this.info.parameter * RESOURCES_SCALE);
+    }
+}
+
 class BonusSeeds extends BonusWithIndex {
 
     activateBonus() {
@@ -23944,7 +24248,7 @@ class DailyBonus
         this.goldIndex = 0;
         this.seedIndex = 0;
 
-        const totalDays = 30;
+        const totalDays = VisualData.getGameSettings().dailyBonusDaysCount || 30;
         const randomPrizes = [];
         let takenDays = 0;
 
@@ -23988,6 +24292,7 @@ class DailyBonus
             case "TimeTravel": return new BonusTimeTravel(info);
             case "Seed": return new BonusSeeds(info, this.seedIndex++);
             case "SeedStrength": return new BonusSeedsStrength(info);
+            case "DoublingToken": return new BonusTokens(Object.assign({type:'superDoublingToken'}, info));
             case "Crystal":
             case "MegaCrystal":
                 return new BonusGems(info);
@@ -24152,6 +24457,7 @@ class WheelOfFortune
 class PhotoManager {
     constructor(progress) {
         this.activeQuests = {};
+        this.allQuestsData = {};
 
         progress.onPuzzleCompleted.addListener(this.newPuzzleCompleted.bind(this));
         const photoData = GameData.getPhotoData();
@@ -24185,6 +24491,8 @@ class PhotoManager {
             const quest = this._initQuest(photoData, myQ);
             this.activeQuests[photoData.id] = quest;
         }
+
+        this.allQuestsData[photoData.id] = photoData;
     }
 
     newPuzzleCompleted(info) {
@@ -24220,6 +24528,43 @@ class PhotoManager {
 
     getQuestById(id) {
         return this.activeQuests.hasOwnProperty(id) ? this.activeQuests[id] : null;
+    }
+
+    getQuestDataById(id) {
+        return this.allQuestsData[id];
+    }
+
+    getAllActiveQuests() {
+        return this.activeQuests;
+    }
+
+    getCompletedAndNotClaimedQuests() {
+        const allQ = this.getAllActiveQuests();
+        let count = 0;
+        for (let i in allQ) {
+            const qInfo = allQ[i];
+            if (qInfo.isPhotoQuestReadyToCollect())
+                count++;
+        }
+        return count;
+    }
+
+    getCompletedAndNotClaimedQuestsByTag(mainTag) {
+        const allQ = this.getAllActiveQuests();
+        let count = 0;
+        for (let i in allQ) {
+            const qInfo = allQ[i];
+            if (qInfo.info.mainTag === mainTag && qInfo.isPhotoQuestReadyToCollect())
+                count++;
+        }
+        return count;
+    }
+
+    isQuestCompletedAndNotClaimed(questInfo) {
+        const quest = this.getQuestById(questInfo.id);
+        if (quest)
+            return quest.isPhotoQuestReadyToCollect();
+        return false;
     }
 }
 
@@ -24641,7 +24986,7 @@ class GameInit{
             environment: CURRENT_ENVIRONMENT.environment,
             fb_app_id: VisualData.getGameSettings().fb_app_id//TODO it's temporary here
         }, ()=> {
-            console.info("DONE");
+
             UnnyNet.UnnyNet.setFrame({
                 top: 0,
                 right: 0,
@@ -24659,7 +25004,7 @@ class GameInit{
                 data.BoxData = rgc.getDictionary("boxes");
                 data.LoginData = rgc.getDictionary("loginBonuses");
                 data.QuestsData = rgc.getDictionary("dailyQuests");
-                data.TutorialConfig = rgc.getDictionary("tutorialConfig");
+                data.TutorialConfig = rgc.getDictionary("tutorialConfigDEV");
 
                 if (VisualData.getGameSettings().photos) {
                     data.PhotoData = rgc.getDictionary("photos");
@@ -24681,6 +25026,7 @@ class GameInit{
 
             const loadProgress = () => {
                 Progress.loadProgressFromServer((progress) => {
+                    console.warn("done!");
                     this.progress = new Progress(this, progress, this.gameConfig, useGoblin);
                     if (this.gameConfig)
                         this.playerInfo = new PlayerInfo(this.gameConfig.playerLevels, this.progress);
@@ -24688,14 +25034,13 @@ class GameInit{
                         this.guardManager.setProgress(this.progress);
                     this.progress.onUpgradePurchased.addListener(this.upgradePurchased.bind(this));
 
-                    this.create.callListeners(engine);
-
-                    this.time = engine.time.now / 1000;
-                    this.LoadProgress();
-
                     this.questsManager = new QuestsManager(this.progress.getQuestsProgress());
                     if (VisualData.getGameSettings().photos)
                         this.photoManager = new PhotoManager(this.progress);
+
+                    this.create.callListeners(engine);
+                    this.time = engine.time.now / 1000;
+                    this.LoadProgress();
 
                     audioManager.load(engine);
 
@@ -24876,7 +25221,7 @@ let LocalizationManager = (function() {
         },
 
         getTutorialLocalizization(text){
-            return text;
+            return this.getLocalizization(text);
         },
 
         removeCodes(text) {
@@ -25511,8 +25856,9 @@ function LoadFile(engine, name, path, callback, type, secondPath) {
         return;
     }
 
-    path += "?v=15";
-    secondPath += "?v=15";
+    const version = 25;
+    path += "?v=" + version;
+    secondPath += "?v=" + version;
 
     if (!loadingImages.hasOwnProperty(name)) {
         switch (type) {
@@ -25902,9 +26248,11 @@ class VisualInit {
         }
 
         // //testing
-        // LoadFile(this.engine, "test_back", "test_back/test1.jpg", ()=>{
+        // LoadFile(this.engine, "test_back", "Backs/2.png", ()=>{
         //     console.log("loaded");
-        //     this.engine.add.sprite(RealScreenWidth / 2, RealScreenHeight / 2, "test_back").setScale(0.58).alpha = 0.8;
+        //     const img = this.engine.add.sprite(RealScreenWidth / 2, RealScreenHeight / 2, "test_back").setScale(0.5625);
+        //     img.alpha = 0.3;
+        //     img.depth = 9999999;
         // });
 
         for (let i in this.backgrounds)
@@ -26026,6 +26374,193 @@ class VisualInit {
 
 let visualGame = new VisualInit();
 
+class GUIPageScroller {
+    constructor(group, engine, config) {
+        this.group = group;
+        this.engine = engine;
+        this.x = config.x;
+        this.y = config.y;
+        this.distance = config.distance;
+        this.width = config.width;
+        this.height = config.height;
+        this._init();
+    }
+
+    _init() {
+        this.container = this.engine.rexUI.add.sizer({
+            x: 0,
+            y: 0,
+            width: 2000,
+            height: 200,
+
+            orientation: 0,
+        });
+
+        this.panel = this.engine.rexUI.add.scrollablePanel({
+            x: this.x * localScale,
+            y: this.y * localScale,
+            width: this.width * localScale,
+            height: this.height * localScale,
+
+            scrollMode: 1,
+
+            // background: this.engine.rexUI.add.roundRectangle(0, 0, 2, 2, 10, COLOR_PRIMARY),
+
+            panel: {
+                child: this.container,
+
+                // mask: {
+                //     padding: 1
+                // },
+            },
+
+            // slider: {
+            //     track: this.engine.rexUI.add.roundRectangle(0, 0, 20, 10, 10, COLOR_DARK),
+            //     thumb: this.engine.rexUI.add.roundRectangle(0, 0, 0, 0, 13, COLOR_LIGHT),
+            // },
+
+            scroller: false,
+
+            // space: {
+            //     left: 10,
+            //     right: 10,
+            //     top: 10,
+            //     bottom: 10,
+            //
+            //     panel: 10,
+            // }
+        }).setDepth(WinDefaultDepth + 500);
+
+        this.group.add(this.panel);
+    }
+
+    createPages(pagesCount, getElementCallback) {
+        this.elementsCount = pagesCount;
+        this.callback = getElementCallback;
+
+        this.container.minWidth = (this.width + (pagesCount - 1) * this.distance) * localScale;
+        this.panel.layout();
+
+        this.updatePages();
+    }
+
+    getCurrentPage() {
+        return this.selectedPage;
+    }
+
+    updatePages() {
+        if (this.elements) {
+            for (let el of this.elements)
+                el.destroy();
+        }
+
+        this.elements = [];
+        this.targetOffset = this.currentOffset = 0;
+        this.selectedPage = 0;
+        this.panel.t = 0;
+
+        for (let i = 0; i < this.elementsCount; i++) {
+            const el = this.callback(i);
+            el.setPosition((this.x + i * this.distance) * localScale, this.y * localScale);
+            el.setDepth(WinDefaultDepth + 300);
+            this.container.add(el);
+            this.elements.push(el);
+        }
+
+        this.fakeMove();
+    }
+
+    update(deltaTime) {
+        if (Math.abs(this.targetOffset - this.currentOffset) > Number.EPSILON) {
+            const speed = 1000 * GlobalScale * deltaTime;
+            const dd = this.targetOffset - this.currentOffset;
+            if (Math.abs(dd) < speed) {
+                this.currentOffset = this.targetOffset;
+            } else {
+                this.currentOffset += speed * Math.sign(dd);
+            }
+
+            this.panel.t = (this.currentOffset) / ((this.elementsCount - 1) * this.distance);
+
+            this._updatePositionsForQuestsImages();
+        }
+    }
+
+    _updatePositionsForQuestsImages() {
+        for (let i = 0; i < this.elements.length; i++) {
+            const element = this.elements[i];
+            const pos = i * this.distance;
+            const distance = Math.min(Math.abs(pos - this.currentOffset), this.distance);
+            element.setScale((this.distance - distance) / this.distance * 0.4 + 1);
+        }
+        // const maxOffset = 150 * GlobalScale;
+        // let offset = this.currentOffset;
+        // for (let i = 0; i < this.collectedPuzzle.length; i++) {
+        //     if (!this.collectedPuzzle[i])
+        //         continue;
+        //     this.collectedPuzzle[i].setPositionX(this.centerX + offset);
+        //
+        //     const distance = Math.min(1, Math.abs(offset) / maxOffset);
+        //     const sDistance = distance * Math.sign(offset);
+        //     const xSize = this.defaultQuestSize - distance * this.deltaXSize;
+        //     const leftY = this.defaultQuestSize - sDistance * this.deltaYSize;
+        //     const rightY = this.defaultQuestSize + sDistance * this.deltaYSize;
+        //
+        //     this.collectedPuzzle[i].vertices = [
+        //         -xSize, -leftY,
+        //         -xSize, leftY,
+        //         xSize, rightY,
+        //
+        //         -xSize, -leftY,
+        //         xSize, rightY,
+        //         xSize, -rightY
+        //     ];
+        //
+        //     if (this.selectedQuestIndex - 1 === i || this.selectedQuestIndex === i)
+        //         offset += this.distanceBetweenQuests;
+        //     offset += this.distanceBetweenQuests;
+        // }
+    }
+
+    moveLeft() {
+        this.selectedPage--;
+        if (this.selectedPage < 0)
+            this.selectedPage = 0;
+        this._updateOffset();
+        return this.selectedPage;
+    }
+
+    moveRight() {
+        this.selectedPage++;
+        if (this.selectedPage >= this.elementsCount)
+            this.selectedPage = this.elementsCount - 1;
+        this._updateOffset();
+        return this.selectedPage;
+    }
+
+    setPage(page) {
+        if (this.selectedPage !== page) {
+            this.selectedPage = page;
+            this._updateOffset();
+        }
+    }
+
+    _updateOffset() {
+        this.targetOffset = this.selectedPage * this.distance;
+    }
+
+    fakeMove() {
+        this.fakeUp = !this.fakeUp;
+        this.panel.t = this.panel.t + (this.fakeUp ? -1 : 1) * 0.001;
+        this._updatePositionsForQuestsImages();
+    }
+
+    smallFakeMove() {
+        this.fakeUp = !this.fakeUp;
+        this.panel.t = this.panel.t + (this.fakeUp ? -1 : 1) * 0.001;
+    }
+}
+
 class GUINotification extends Phaser.GameObjects.Container {
     constructor(config) {
         super(config.scene, config.x, config.y);
@@ -26038,10 +26573,12 @@ class GUINotification extends Phaser.GameObjects.Container {
         this.text = config.scene.add.textOld(0, 0, config.getText(), DefaultFontNotifications).setOrigin(0.5);
         this.add(this.image);
         this.add(this.text);
-        animManager.jumpFishAnimation(this, {
-            height: 20 * GlobalScale,
-            scale: 0.2
-        }, 0.6);
+        if (!this.config.no_animation) {
+            animManager.jumpFishAnimation(this, {
+                height: 20 * GlobalScale,
+                scale: 0.2
+            }, 0.6);
+        }
 
         if (config.group)
             config.group.add(this);
@@ -26720,6 +27257,79 @@ function createStoreCell(engine, group, cellCenterX, cellCenterY, title, imageNa
     return priceText;
 }
 
+class CheckMark {
+    constructor(engine, config) {
+        this.container = engine.add.container(config.x, config.y);
+        const backIcon = engine.add.sprite(0, 0, 'CheckBoxBack');
+        this.container.add(backIcon.setDepth(WinDefaultDepth + 1000));
+
+        this.markIcon = engine.add.sprite(0, 0, 'CheckBoxMark');
+        this.markIcon.setForceInvisible(true);
+        this.container.add(this.markIcon.setDepth(WinDefaultDepth + 1001));
+    }
+
+    setChecked(checked) {
+        if (this.checked !== checked) {
+            this.checked = checked;
+            this.markIcon.setForceInvisible(!checked);
+        }
+    }
+
+    getContainer() {
+        return this.container;
+    }
+
+    setPosition(x, y) {
+        this.container.setPosition(x, y);
+    }
+
+    setVisible(visible) {
+        this.container.setVisible(visible);
+    }
+
+    destroy(force) {
+        return this.container.destroy(force);
+    }
+}
+
+class CheckMarkWithText extends CheckMark {
+    constructor(engine, config) {
+        super(engine, config);
+
+        let captionX = 50 * GlobalScale, captionOriginX = 0;
+        if (config.icon) {
+            captionX += config.maxCaptionWidth / 2 * GlobalScale;
+            captionOriginX = 0.5;
+        }
+        this.caption = engine.add.textOld(captionX, 0, null, config.font)
+            .setOrigin(captionOriginX, 0.5)
+            .setWordWrapWidth(config.maxCaptionWidth * GlobalScale);
+        this.container.add(this.caption.setDepth(WinDefaultDepth + 1000));
+
+        this.container.setDepth(WinDefaultDepth + 100);
+    }
+
+    setCaption(text) {
+        this.caption.setText(text);
+    }
+
+    getCaption() {
+        return this.caption;
+    }
+}
+
+class CheckMarkWithTextAndIcon extends CheckMarkWithText {
+    constructor(engine, config) {
+        super(engine, config);
+
+        this.sprite = engine.add.sprite((100 + config.maxCaptionWidth) * GlobalScale, 0, config.icon);
+
+        if (config.icon_scale)
+            this.sprite.setScale(config.icon_scale);
+        this.container.add(this.sprite.setDepth(WinDefaultDepth + 100));
+    }
+}
+
 class WinBase {
     constructor(gui, gameInit) {
         gui.onCreate.addListener(this.createGame.bind(this));
@@ -26868,6 +27478,8 @@ class WinBase {
         this.header = engine.add.text(0, y, null, this._getHeaderFont())
             .setOrigin(0.5, 0.5)
             .setDepth(WinDefaultDepth);
+        if (this.winInfo.header_max_width)
+            this.header.setWordWrapWidth(this.winInfo.header_max_width * GlobalScale);
         this.group.add(this.header);
     }
 
@@ -27791,11 +28403,11 @@ class WinPuzzle extends WinWithBrownBack {
 
     createSummary(engine) {
         const group = this.groups[0];
-        const distanceX = (this.winInfo.icons_distanceX || 800) * GlobalScale;
+        const distanceX = this.getWinInfoValue('icons_distanceX', 800);
         const distanceY = 120 * GlobalScale;
 
         const cx = this.centerX + distanceX / 4;
-        const cy = RealScreenHeight - distanceY * 3 - 20 * GlobalScale;
+        const cy = RealScreenHeight - distanceY * 3 - this.getWinInfoValue('icons_distanceY', 20);
 
         this.puzzleNumbers = [];
         this.puzzleNames = [];
@@ -28143,6 +28755,7 @@ class WinPuzzle extends WinWithBrownBack {
 
         const puzzle = cell.item;
         const engine = this.engine;
+        const dontShowBonus = cell.dontShowBonus;
         // const item = cell.item;
         //
         // if (!item) {
@@ -28249,6 +28862,9 @@ class WinPuzzle extends WinWithBrownBack {
                         }
                     }
 
+                    if (cell.scale)
+                        group.setScale(cell.scale);
+
                     if (!loading && this.scroll)
                         this.scroll[this.selectedTab].fakeMove();
                 }
@@ -28262,29 +28878,31 @@ class WinPuzzle extends WinWithBrownBack {
             group.add(frame);
         }
 
-        if (puzzle.level > 0 && puzzle.level < 5 && this.winInfo.showGrid) {
-            const bonusBack = engine.add.sprite(cellCenterX, cellCenterY, "Grid" + puzzleSize)
-                .setDepth(depth - 6);
-            group.add(bonusBack);
-        }
+        if (!dontShowBonus) {
+            if (puzzle.level > 0 && puzzle.level < 5 && this.winInfo.showGrid) {
+                const bonusBack = engine.add.sprite(cellCenterX, cellCenterY, "Grid" + puzzleSize)
+                    .setDepth(depth - 6);
+                group.add(bonusBack);
+            }
 
-        const hintLevel = cell.realLevel ? cell.realLevel : puzzle.level;
-        if (hintLevel >= 2) {
-            const bonusBack = engine.add.sprite(cellCenterX + this.winInfo.BonusOffsetX * GlobalScale, cellCenterY - 140 * GlobalScale, "PuzzleBonusBack")
-                .setOrigin(1, 0.5)
-                .setScale(1.2, 1)
-                .setDepth(depth);
-            group.add(bonusBack);
+            const hintLevel = cell.realLevel ? cell.realLevel : puzzle.level;
+            if (hintLevel >= 2) {
+                const bonusBack = engine.add.sprite(cellCenterX + this.winInfo.BonusOffsetX * GlobalScale, cellCenterY - 140 * GlobalScale, "PuzzleBonusBack")
+                    .setOrigin(1, 0.5)
+                    .setScale(1.2, 1)
+                    .setDepth(depth);
+                group.add(bonusBack);
 
-            const resources = engine.add.sprite(cellCenterX - 95 * GlobalScale, cellCenterY - 140 * GlobalScale, "PriceIcon")
-                .setScale(0.7)
-                .setDepth(depth);
-            group.add(resources);
+                const resources = engine.add.sprite(cellCenterX - 95 * GlobalScale, cellCenterY - 140 * GlobalScale, "PriceIcon")
+                    .setScale(0.7)
+                    .setDepth(depth);
+                group.add(resources);
 
-            const bonusText = engine.add.textOld(cellCenterX - 50 * GlobalScale, cellCenterY - 140 * GlobalScale, "+" + (GameData.getPuzzleResourceBonusPerLevel(hintLevel) - 1) * 100 + "%", DefaultFontSmallPuzzleBonus)
-                .setOrigin(0, 0.5)
-                .setDepth(depth);
-            group.add(bonusText);
+                const bonusText = engine.add.textOld(cellCenterX - 50 * GlobalScale, cellCenterY - 140 * GlobalScale, "+" + (GameData.getPuzzleResourceBonusPerLevel(hintLevel) - 1) * 100 + "%", DefaultFontSmallPuzzleBonus)
+                    .setOrigin(0, 0.5)
+                    .setDepth(depth);
+                group.add(bonusText);
+            }
         }
 
         return group
@@ -29557,24 +30175,29 @@ class WinHarvested extends WinBase {
             animManager.applyWinOpenAnimation(this.header, ()=>{
                 this.description.setVisible(true);
                 animManager.applyWinOpenAnimation(this.description, ()=> {
-                    this.actionButton.setVisible(true);
-                    this.buttonLabel.setVisible(true);
-                    animManager.applyButtonShowAnimation(this.actionButton);
 
-                    if (VisualData.getGameSettings().photos) {
-                        const count = gameInit.progress.getHarvestsCount();
-                        const photos = GameData.getPrestigePhotos();
-                        for (let v of photos) {
-                            if (v.prestigeCount == count) {
-                                setTimeout(() => {
-                                    this._removeAllCans();
-                                    const win = guiManager.openNewWindow(WindowType.WinPhotosPreview, true);
-                                    win.setImage(v);
-                                }, 100);
-                                break;
+                    this._sendCansToResoruces();
+
+                    setTimeout(() => {
+                        this.actionButton.setVisible(true);
+                        this.buttonLabel.setVisible(true);
+                        animManager.applyButtonShowAnimation(this.actionButton);
+
+                        if (VisualData.getGameSettings().photos) {
+                            const count = gameInit.progress.getHarvestsCount();
+                            const photos = GameData.getPrestigePhotos();
+                            for (let v of photos) {
+                                if (v.prestigeCount == count) {
+                                    setTimeout(() => {
+                                        this._removeAllCans();
+                                        const win = guiManager.openNewWindow(WindowType.WinPhotosPreview, true);
+                                        win.setImage(v, true);
+                                    }, 100);
+                                    break;
+                                }
                             }
                         }
-                    }
+                    }, 3000);
                 });
             })
         });
@@ -30100,6 +30723,10 @@ class WinWithPicture extends WinWithBack {
     }
 }
 
+class WinNotEnoughGems extends WinWithPicture {
+
+}
+
 class WinOtherWorlds extends WinWithPicture {
 
 }
@@ -30415,16 +31042,18 @@ class WinWelcomeBack extends WinWithUnlockedExitButton {
 
 class WinQuestBubble extends WinBase {
 
-    setData(text, image, callback) {
+    setData(text, image, callback, offset) {
+        this._moveContainer(offset);
         this.finalText = text;
         this.lettersCount = 0;
         this.text.setText("");
         const name = "Tutorial_" + image;
-        const path = "Tutorial/" + image + ".png";
+        const path = VisualData.getGirlsBigImagesFolder() + image + ".png";
         LoadFile(this.engine, name, path, () => {
             if (this.visible) {
                 this.destroyImage();
                 this.image = this.engine.add.sprite(this.mainX + 320 * GlobalScale, RealScreenHeight / 2 - 80 * GlobalScale, name)
+                    .setScale(0.8)
                     .setOrigin(0.5, 1)
                     .setDepth(WinDefaultDepth + 10);
                 this.group.add(this.image);
@@ -30442,6 +31071,13 @@ class WinQuestBubble extends WinBase {
                 this.clearTimer();
             this.text.setText(this.finalText.substring(0, this.lettersCount));
         }, 20);
+    }
+
+    _moveContainer(offset) {
+        if (offset)
+            this.group.setPosition(this.centerX + offset.x, this.centerY + offset.y);
+        else
+            this.group.setPosition(this.centerX, this.centerY);
     }
 
     clearTimer() {
@@ -30467,7 +31103,7 @@ class WinQuestBubble extends WinBase {
             }
         };
 
-        const depth = WinDefaultDepth + 200;
+        const depth = WinDefaultDepth + 2000;
         {
             const size = 32 * GlobalScale;
             new BasicButton(this.group, {
@@ -30890,6 +31526,12 @@ class WinMain extends WinBase {
                 case 'MYTH':
                     this.createButtonsMyth();
                     return;
+                case 'FISH':
+                    if (VisualData.IsVertical())
+                        this.createButtonsVertical();
+                    else
+                        this.createButtonsHorizontal();
+                    return;
             }
         }
 
@@ -30993,6 +31635,22 @@ class WinMain extends WinBase {
                 return "!";
             }
         );
+
+        if (VisualData.getGameSettings().photos) {
+            this._createNotificationForButton(
+                engine,
+                this.girlsMenu,
+                function (func) {
+                    progress.onResourcesChanges.addListener(func);
+                },
+                () => {
+                    return gameInit.photoManager.getCompletedAndNotClaimedQuests() > 0;
+                },
+                function () {
+                    return gameInit.photoManager.getCompletedAndNotClaimedQuests().toString();
+                }
+            );
+        }
     }
 
     _createNotificationForButton(engine, btn, subscribe, isVisible, getText) {
@@ -31030,6 +31688,10 @@ class WinMain extends WinBase {
 
     showPhotoAlbum() {
         this.showButtonFromTutorial(this.photoAlbum);
+    }
+
+    getPhotoAlbumButton() {
+        return this.photoAlbum;
     }
 
     getUpgradeButton() {
@@ -31894,15 +32556,25 @@ class BuildingsGUI extends WinBase{
 
 
 
-class WinPhotosMainMenu extends WinWithBrownBack {
+class WinPhotosMainMenu2 extends WinWithLargeBack {
     constructor(gui, gameInit) {
         super(gui, gameInit);
         this.allCells = {};
+
+        this.textLeftBorder = -80 * GlobalScale;
+
+        gameInit.update.addListener(this.update.bind(this));
     }
 
     localize() {
         super.localize();
         // this.description.setText(LocalizationManager.getLocalizization("CollectCropTipText"));
+
+        if (this.readMoreButton)
+            this.readMoreButton.caption.setText(LocalizationManager.getLocalizization("Button_read_more"));
+
+        if (this.questButton)
+            this.questButton.caption.setText(LocalizationManager.getLocalizization("Quests_title"));
     }
 
     setWindowVisible(visible) {
@@ -31915,29 +32587,107 @@ class WinPhotosMainMenu extends WinWithBrownBack {
                 this.config.x = this.centerX + this.config.offsetX * GlobalScale;
                 this.config.y = this.centerY + this.config.offsetY * GlobalScale;
 
-                this.scroll = new GUIScroll(this.engine, this.config, this.getCell.bind(this), this.getItems.bind(this));
+                const sliderDeltaY = 470 * GlobalScale;
+                this.scroll = new GUIPageScroller(this.group, this.engine, {
+                    x: this.centerX,
+                    y: this.centerY + sliderDeltaY,
+                    width: 630 * GlobalScale,
+                    height: 400 * GlobalScale,
+                    distance: 230 * GlobalScale
+                });
+
+                this.scroll.createPages(GameData.getPhotosByMainTagArray().length, this.getCell.bind(this));
+
+                this.photosCount = this.engine.add.text(this.textLeftBorder, -350 * GlobalScale, null, GirlsMenuHeaderFont).setOrigin(0);
+                this.group.add(this.photosCount.setDepth(WinDefaultDepth + 200));
+
+                this.girlDescription = this.engine.add.text(this.textLeftBorder, -250 * GlobalScale, null, GirlsMenuDescFont).setOrigin(0);
+                this.group.add(this.girlDescription.setDepth(WinDefaultDepth + 200));
+
+                this.girlNumber = this.engine.add.text(0, sliderDeltaY + 160 * GlobalScale, null, DefaultFontSmall);
+                this.group.add(this.girlNumber.setDepth(WinDefaultDepth + 200).setOrigin(0.5));
+
+                this.readMoreButton = new ButtonWithText(this.group, {
+                    'scene': this.engine,
+                    'key': 'ReadMoreButton',
+                    'x': this.textLeftBorder + 80 * GlobalScale,
+                    'y': -30 * GlobalScale,
+                    'font': ReadMoreFont,
+                    'textOffsetX': 30 * GlobalScale
+                }, () => {
+                    const win = guiManager.openNewWindow(WindowType.WinGirlBio);
+                    win.selectGirl(this.girlName);
+                });
+
+                const qBtnScale = 0.7;
+                this.questButton = new ButtonWithText(this.group, {
+                    'scene': this.engine,
+                    'key': 'ButtonQuest',
+                    'x': this.textLeftBorder + 320 * GlobalScale * qBtnScale,
+                    'y': 130 * GlobalScale,
+                    'scale': qBtnScale
+                }, () => {
+                    const win = guiManager.openNewWindow(WindowType.WinPhotosQuest);
+                    win.selectQuest(this.selectedGirl);
+                });
+
+                const sliderButtonDistance = 380 * GlobalScale;
+                const buttonLeft = new BasicButton(this.group, {
+                    'scene': this.engine,
+                    'key': 'SliderButton',
+                    'x': -sliderButtonDistance,
+                    'y': sliderDeltaY,
+                }, () => {
+                    this.scroll.moveLeft();
+                    this._updatePage();
+                });
+
+                buttonLeft.extraXScale = -1;
+                buttonLeft.setScale(1);
+
+                const buttonRight = new BasicButton(this.group, {
+                    'scene': this.engine,
+                    'key': 'SliderButton',
+                    'x': sliderButtonDistance,
+                    'y': sliderDeltaY,
+                }, () => {
+                    this.scroll.moveRight();
+                    this._updatePage();
+                });
             }
 
-            this.scroll.table.setItems(this.getItems());
+            this.localize();
+            this._updatePage();
         }
-
-        this.scroll.setVisible(visible);
-        // this.photosButton.setVisible(visible && gameInit.progress.haveAnyPhotos());
     }
 
-    getItems() {
-        return GameData.getPhotosByMainTagArray();
+    _updatePage() {
+        const currentPage = this.scroll.getCurrentPage();
+        const totalCount = GameData.getPhotosByMainTagArray().length;
+        const currentGirl = this._getGirlAtIndex(currentPage);
+        this.setGirlSelected(currentGirl);
+
+        this.girlNumber.setText("{0}/{1}".format(currentPage + 1, totalCount));
     }
 
-    getCell(cell) {
-        const engine = this.engine;
-        const config = this.config;
-        const cellCenterX = config.cellWidth / 2 * GlobalScale;
-        const cellCenterY = config.cellHeight / 2 * GlobalScale;
-        const item = cell.item;
+    update(deltaTime) {
+        if (this.visible) {
+            this.scroll.update(deltaTime);
+        }
+    }
 
-        // const mySlotInfo = gameInit.progress.getPhotoQuestById(item.id);
-        const photosGroup = item.array;
+    _getGirlAtIndex(index) {
+        return GameData.getPhotosByMainTagArray()[index];
+    }
+
+    setGirlSelected(girlInfo) {
+        const image = girlInfo.tag;
+        this.selectedGirl = girlInfo;
+        this.girlName = image.toLowerCase();
+        this._updateGirlImage(image);
+        this._updateGirlName(image);
+
+        const photosGroup = girlInfo.array;
         let completedQuests = 0;
         for (let p in photosGroup) {
             const pq = gameInit.progress.getPhotoQuestById(photosGroup[p].id);
@@ -31945,49 +32695,112 @@ class WinPhotosMainMenu extends WinWithBrownBack {
                 completedQuests++;
         }
 
-        let group = engine.rexUI.add.container(0, 0);
-        group.unny_container = engine.add.container(cellCenterX, cellCenterY);
-        group.add(group.unny_container);
+        this.photosCount.setText("PHOTOS " + completedQuests + "/" + photosGroup.length);
+        this.girlDescription.setText("Lovely girl!");
+    }
 
+    _updateGirlImage(image) {
+        const name = "Tutorial_" + image;
+        const path = VisualData.getGirlsBigImagesFolder() + image + ".png";
 
-        const girlName = item.tag.toLowerCase() + "_menu";
-        const icon = "GirlIconMenu_" + girlName;
-        const girlPath = VisualData.getGirlsImagesFolder() + girlName + ".png";
-
-        LoadFile(this.engine, icon, girlPath, () => {
-            if (this.visible && group.active) {
-
-                group.unny_button = new BasicButton(group.unny_container, {
-                    'scene': engine,
-                    'key': icon,
-                    'x': 0,
-                    'y': 0,
-                }, () => {
-                    const win = guiManager.openNewWindow(WindowType.WinPhotosQuest);
-                    win.selectQuest(item);
-                });
-
-                const levelDesc = engine.add.textOld(40 * GlobalScale, -80 * GlobalScale, "PHOTOS " + completedQuests + "/" + photosGroup.length, GirlsMenuHeaderFont).setOrigin(0);
-                group.unny_container.add(levelDesc.setDepth(WinDefaultDepth + 200));
-
-                const photoDesc = engine.add.textOld(40 * GlobalScale, -20 * GlobalScale, item.tag.toLowerCase() + ' description', GirlsMenuDescFont).setOrigin(0).setWordWrapWidth(320 * GlobalScale);
-                group.unny_container.add(photoDesc);
+        LoadFile(this.engine, name, path, () => {
+            if (this.visible) {
+                this.destroyImage();
+                this.image = this.engine.add.sprite(-300 * GlobalScale, -250 * GlobalScale, name)
+                    .setDepth(WinDefaultDepth + 10);
+                this.group.add(this.image);
             }
         });
+    }
 
-        this.allCells[item.tag] = group;
-        return group.setOrigin(0).setDepth(WinDefaultDepth + 100);
+    _updateGirlName(image) {
+        const name = "GirlNameImage_" + image;
+        const path = VisualData.getGirlsImagesFolder() + image + ".png";
+
+        LoadFile(this.engine, name, path, () => {
+            if (this.visible) {
+                if (this.imageName)
+                    this.imageName.destroy(true);
+
+                this.imageName = this.engine.add.sprite(this.textLeftBorder, -600 * GlobalScale, name)
+                    .setOrigin(0)
+                    .setDepth(WinDefaultDepth + 10);
+                this.group.add(this.imageName);
+            }
+        });
+    }
+
+    getCell(index) {
+        const allElements = GameData.getPhotosByMainTagArray();
+        const item = allElements[index];
+        const group = this.engine.rexUI.add.container(0, 0);//this.engine.add.container(0,0);
+
+        const image = this.engine.add.sprite(0, 0, 'SliderBack')
+            .setDepth(WinDefaultDepth + 10);
+        group.add(image);
+
+        this.scroll.fakeMove();
+
+        const name = "Tutorial_" + item.tag;
+        const path = VisualData.getGirlsBigImagesFolder() + item.tag + ".png";
+
+        let loading = true;
+        LoadFile(this.engine, name, path, () => {
+            const img = this.engine.add.sprite(group.x / localScale, group.y / localScale + 50 * GlobalScale * group.scaleX, name)
+                .setScale(0.35 * group.scaleX)
+                .setDepth(WinDefaultDepth + 600);
+            const w = img.width * 1;
+            const h = img.height * 0.6;
+            img.setCrop((img.width - w) / 2, 0, w, h);
+            group.add(img);
+
+            if (this.scroll && !loading)
+                this.scroll.fakeMove();
+        });
+        loading = false;
+
+        this._createNotificationForButton(
+            this.engine,
+            group,
+            function (func) {
+                // guiManager.onWindowOpened.addListener((windowType)=>{
+                //     if (windowType === WindowType.WinPhotosMainMenu)
+                //         func();
+                // });
+            },
+            () => {
+                return gameInit.photoManager.getCompletedAndNotClaimedQuestsByTag(item.tag) > 0;
+            },
+            function () {
+                return "!";
+            }
+        );
+
+        return group;
+    }
+
+    _createNotificationForButton(engine, group, subscribe, isVisible, getText) {
+        return new GUINotification({
+            scene: engine,
+            parent: group,
+            group: group,
+            x: 80 * GlobalScale,
+            y: -80 * GlobalScale,
+            subscribe: subscribe,
+            isVisible: isVisible,
+            getText: getText,
+            no_animation: true
+        });
     }
 
     getButtonByTag(tag) {
-        const group = this.allCells[tag];
-        return group ? group.unny_button : null;
+        return this.questButton;
     }
 
     getButtonPosByTag() {
-        return  {
-            x: 0,
-            y: - 400 * GlobalScale
+        return {
+            x: this.questButton.x / localScale,
+            y: this.questButton.y / localScale
         }
     }
 }
@@ -32011,7 +32824,7 @@ class WinGirlBio extends WinWithBrownBack {
                 this.prepared = true;
                 const engine = this.engine;
 
-                this.photoDesc = engine.add.text(this.centerX, this.centerY - 240 * GlobalScale, null, PhotoQuestDescFont).setOrigin(0.5, 0).setWordWrapWidth(1000 * GlobalScale);//.setDepth(WinDefaultDepth + 100);
+                this.photoDesc = engine.add.text(this.centerX, this.centerY - 240 * GlobalScale, null, PhotoQuestDescFont).setOrigin(0.5, 0).setWordWrapWidth(800 * GlobalScale);//.setDepth(WinDefaultDepth + 100);
                 this.group.add(this.photoDesc);
             }
         }
@@ -32038,7 +32851,7 @@ class WinGirlBio extends WinWithBrownBack {
         LoadFile(this.engine, icon, girlPath, () => {
             if (this.visible) {
                 this.destroyImage();
-                this.image = this.group.create(this.centerX - 26 * GlobalScale, this.centerY - 600 * GlobalScale, icon).setDepth(WinDefaultDepth + 1);
+                this.image = this.group.create(this.centerX - 26 * GlobalScale, this.centerY - 500 * GlobalScale, icon).setDepth(WinDefaultDepth + 1);
             }
         });
     }
@@ -32047,35 +32860,38 @@ class WinGirlBio extends WinWithBrownBack {
 class WinPhotosQuest extends WinWithBrownBack {
     constructor(gui, gameInit) {
         super(gui, gameInit);
-        this.resourcesModules = {};
-        this.collectedPuzzle = [];
-        this.nonSelectedScale = 0.7;
+
+        this.cachedResources = {};
+        this.puzzle_objects = [];
+
+        gameInit.update.addListener(this.update.bind(this));
     }
 
-    prepareScrollWithDescription() {
-        this.textArea = new GUITextArea(this.engine, {
-            x: this.centerX,
-            y: this.centerY + 250 * GlobalScale,
-            width: 900,
-            height: 600,
-        }, ()=> {
-            return "";
-
-            return '\'\'There is something for you there\'\' - Peristera said.\n' +
-            '\n' +
-            'You ‘ve walked through the forest. \n' +
-            '\'\'I don’t know what I am looking for exactly.. But Peri is so tender and caring, I am sure that she hide something amazing here.\'\'\n' +
-            '\n' +
-            'From the forest noises you starting to hear the quiet dog whining. You start looking for the sourse. In the roots of the old tree you find her. \n' +
-            '\n' +
-            '\'\'Oh, that wasn’t a dog, that was a Dryad, the spirit of nature! Looks like this one chose to take the appearance of a fox-girl. And a naked one at that! Not that I mind. Foxy ears and tail are so cute\'\' \n' +
-            '\n' +
-            'Dryad sits there with knees up to her chin frightened, but interested. \n' +
-            '\n' +
-            '\'\'She’s absolutely amazing - her gentle lines, her clear mind, her naive look - oh, that is SO incredibly sexy!\'\''});
-
-        this.group.add(this.textArea.textArea.setDepth(20000).setOrigin(0.5));
-    }
+    // prepareScrollWithDescription() {
+    //     this.textArea = new GUITextArea(this.engine, {
+    //         x: this.centerX,
+    //         y: this.centerY + 250 * GlobalScale,
+    //         width: 900,
+    //         height: 600,
+    //     }, () => {
+    //         return "";
+    //
+    //         return '\'\'There is something for you there\'\' - Peristera said.\n' +
+    //             '\n' +
+    //             'You ‘ve walked through the forest. \n' +
+    //             '\'\'I don’t know what I am looking for exactly.. But Peri is so tender and caring, I am sure that she hide something amazing here.\'\'\n' +
+    //             '\n' +
+    //             'From the forest noises you starting to hear the quiet dog whining. You start looking for the sourse. In the roots of the old tree you find her. \n' +
+    //             '\n' +
+    //             '\'\'Oh, that wasn’t a dog, that was a Dryad, the spirit of nature! Looks like this one chose to take the appearance of a fox-girl. And a naked one at that! Not that I mind. Foxy ears and tail are so cute\'\' \n' +
+    //             '\n' +
+    //             'Dryad sits there with knees up to her chin frightened, but interested. \n' +
+    //             '\n' +
+    //             '\'\'She’s absolutely amazing - her gentle lines, her clear mind, her naive look - oh, that is SO incredibly sexy!\'\''
+    //     });
+    //
+    //     this.group.add(this.textArea.textArea.setDepth(20000).setOrigin(0.5));
+    // }
 
     setWindowVisible(visible) {
         super.setWindowVisible(visible);
@@ -32085,46 +32901,15 @@ class WinPhotosQuest extends WinWithBrownBack {
                 this.prepared = true;
                 const engine = this.engine;
 
-                this.GirlDescription = new BasicButton(this.group, {
-                    'scene': engine,
-                    'key': 'GirlDescription',
-                    'x': RealScreenWidth - 180 * GlobalScale,
-                    'y': RealScreenHeight - 150 * GlobalScale,
-                    'scale': 0.3
-                }, () => {
-                    const win = guiManager.openNewWindow(WindowType.WinGirlBio);
-                    win.selectGirl(this.girlName);
-                });
-
                 const centerX = this.centerX;
-                let startY = this.centerY + 200 * GlobalScale;
 
-                //quest
-                const questCenterX = centerX + 200 * GlobalScale;
-                // const questFrame = engine.add.sprite(questCenterX, startY, 'PhotoQuestFrame').setScale(1.8, 1.2);
-                // this.group.add(questFrame);
-                this.questDesc = engine.add.text(questCenterX, startY - 30 * GlobalScale, null, DefaultFontSmallBlack).setOrigin(0.5, 0.5).setWordWrapWidth(560 * GlobalScale);
-                this.group.add(this.questDesc);
+                this.topImageGroup = this.engine.add.container(this.centerX, this.centerY - 600 * GlobalScale);//this.centerX, this.centerY - 0 * GlobalScale);
+                const topImageBack = this.engine.add.sprite(0, 0, 'PhotoQuestMainBack');
+                this.topImageGroup.add(topImageBack);
+                this.group.add(this.topImageGroup);
+                this.topImageGroup.setDepth(WinDefaultDepth + 900);
 
-                const progressY = startY + 30 * GlobalScale;
-                this.loader = new Loader(this.group, 'PhotoQuestBar', 'PhotoQuestBarFull', questCenterX - 60 * GlobalScale, progressY);
-                this.questProgress = engine.add.text(questCenterX + 150 * GlobalScale, progressY, null, DefaultFontSmallBlack).setOrigin(0, 0.5);
-                this.group.add(this.questProgress);
-
-                this.quest_done_icon = this.engine.add.sprite(questCenterX - 250 * GlobalScale, startY - 120 * GlobalScale, 'PhotoQuestDoneIcon');
-                this.group.add(this.quest_done_icon);
-
-                startY += 300 * GlobalScale;
-
-                // this.photoName = engine.add.text(centerX, startY, null, DefaultFont).setOrigin(0.5);
-                // this.group.add(this.photoName);
-
-                // startY += 50 * GlobalScale;
-                // this.photoDesc = engine.add.text(centerX, startY, null, PhotoQuestDescFont).setOrigin(0.5, 0).setWordWrapWidth(900 * GlobalScale);
-                // this.group.add(this.photoDesc);
-
-
-                const btnY = this.centerY + 700 * GlobalScale;
+                const btnY = this.centerY - 250 * GlobalScale;
                 this.createActionButton(engine, () => {
                     const pq = gameInit.progress.getPhotoQuestById(this.selectedQuest.id);
                     const quest = gameInit.photoManager.getQuestById(this.selectedQuest.id);
@@ -32158,31 +32943,191 @@ class WinPhotosQuest extends WinWithBrownBack {
 
                     if (quest) {
                         quest.claimReward();
-                        this.selectSpecificQuest(this.selectedQuest);
+                        this.selectSpecificQuest(this.selectedQuest, this.selectedQuestIndex);
 
                         const win = guiManager.openNewWindow(WindowType.WinPhotosPreview);
-                        win.setImage(quest.info);
+                        win.setImage(quest.info, true);
                     }
-                }, btnY, true, 1, centerX, 800 * GlobalScale, null, 'PhotoQuestUnlockButton');
+                }, btnY, true, 0.7, centerX, 0 * GlobalScale, null, 'PhotoQuestUnlockButton');
 
                 this.photoLockIcon = engine.add.sprite(centerX, btnY, 'PhotoLock').setDepth(WinDefaultDepth + 200);
                 this.group.add(this.photoLockIcon);
 
-                this.prepareScrollWithDescription();
+                // this.prepareScrollWithDescription();
+
+                const separator = engine.add.sprite(centerX, this.centerY + 300 * GlobalScale, 'QuestSeparator').setDepth(WinDefaultDepth + 200);
+                this.group.add(separator);
+
+                //slider
+                const sliderDeltaY = 470 * GlobalScale;
+                this.scroll = new GUIPageScroller(this.group, this.engine, {
+                    x: this.centerX,
+                    y: this.centerY + sliderDeltaY,
+                    width: 630 * GlobalScale,
+                    height: 300 * GlobalScale,
+                    distance: 230 * GlobalScale
+                });
+
+                const sliderButtonDistance = 380 * GlobalScale;
+                const buttonLeft = new BasicButton(this.group, {
+                    'scene': this.engine,
+                    'key': 'SliderButton',
+                    'x': this.centerX - sliderButtonDistance,
+                    'y': this.centerY + sliderDeltaY,
+                }, () => {
+                    this.scroll.moveLeft();
+                    this._updatePage();
+                });
+
+                buttonLeft.extraXScale = -1;
+                buttonLeft.setScale(1);
+
+                const buttonRight = new BasicButton(this.group, {
+                    'scene': this.engine,
+                    'key': 'SliderButton',
+                    'x': this.centerX + sliderButtonDistance,
+                    'y': this.centerY + sliderDeltaY,
+                }, () => {
+                    this.scroll.moveRight();
+                    this._updatePage();
+                });
+
+                this.questNumber = this.engine.add.text(this.centerX, this.centerY + sliderDeltaY + 160 * GlobalScale, null, DefaultFontSmall);
+                this.group.add(this.questNumber.setDepth(WinDefaultDepth + 2000).setOrigin(0.5));
+
+                this._prepareCheckMarksAndTeaser();
 
                 this.localize();
             }
             else {
                 if (this.selectedQuest)
-                    this.selectSpecificQuest(this.selectedQuest);
+                    this.selectSpecificQuest(this.selectedQuest, this.selectedQuestIndex);
             }
         }
 
         hudResources.setVisible(visible);
     }
 
+    localize() {
+        super.localize();
+
+        if (this.check_previousQuest)
+            this.check_previousQuest.setCaption("Unlock previous photo");
+    }
+
+    _prepareCheckMarksAndTeaser() {
+        const textFont = DefaultFontSmallBlack;
+        const deltaY = 70 * GlobalScale;
+        const topCheckMarksOffsetX = -300 * GlobalScale;
+        let posY = this.centerY - 100 * GlobalScale;
+
+        this.check_previousQuest = new CheckMarkWithText(this.engine, {
+            x: this.centerX + topCheckMarksOffsetX,
+            y: posY,
+            maxCaptionWidth: 800,
+            font: textFont
+        });
+
+        this.group.add(this.check_previousQuest.getContainer());
+
+        posY += deltaY;
+        this.check_questDescription = new CheckMarkWithText(this.engine, {
+            x: this.centerX + topCheckMarksOffsetX,
+            y: posY,
+            maxCaptionWidth: 800,
+            font: textFont
+        });
+
+        this.group.add(this.check_questDescription.getContainer());
+
+        posY += deltaY;
+        this.shortTeaser = this.engine.add.text(this.centerX, posY, null, textFont)
+            .setOrigin(0.5, 0)
+            .setWordWrapWidth(800 * GlobalScale);
+        this.group.add(this.shortTeaser);
+    }
+
+    _deleteResourcesObjects() {
+        if (this.allObjectsToRemove)
+            for (let o of this.allObjectsToRemove) {
+                o.destroy(true);
+            }
+
+        this.allObjectsToRemove = [];
+
+        //resources
+        for (let r in this.cachedResources)
+            this.cachedResources[r].setVisible(false);
+    }
+
+    _createQuestPrice() {
+        const textFont = DefaultFontSmallBlack;
+        const deltaX = 300 * GlobalScale;
+        const deltaY = 70 * GlobalScale;
+
+        const initResourcesX = this.centerX - (this._needToShowPuzzle() ? 300 : 120) * GlobalScale;
+        let resourcesX = initResourcesX;
+        const initResourcesY = this.centerY + 100 * GlobalScale;
+        let resourcesY = initResourcesY;
+        let currentResourcesCount = 0;
+
+        let resourcesEnough = true;
+
+        const all = GameData.getAllResourcesType();
+        for (let i in all) {
+            const type = all[i];
+            const count = this.selectedQuest[type];
+            if (!count || count === "0")
+                continue;
+
+            currentResourcesCount++;
+
+            let pGroup;
+            if (this.cachedResources.hasOwnProperty(type)) {
+                pGroup = this.cachedResources[type];
+                pGroup.setPosition(resourcesX, resourcesY);
+                pGroup.setVisible(true);
+            } else {
+                pGroup = this.cachedResources[type] = new CheckMarkWithTextAndIcon(this.engine, {
+                    x: resourcesX,
+                    y: resourcesY,
+                    maxCaptionWidth: 200,
+                    font: textFont,
+                    icon: GameData.getIconByType(type),
+                    icon_scale: type.toLowerCase().startsWith('token') ? 0.65 : 1
+                });
+                this.group.add(pGroup.getContainer());
+            }
+
+            // this.allObjectsToRemove.push(pGroup.getContainer());
+
+            const myResources = gameInit.progress.getResourceByName(type);
+            const requiredResources = this.selectedQuest[type + '_bigInt'];
+            const enoughResoruces = myResources.compare(requiredResources) >= 0;
+            pGroup.setChecked(enoughResoruces);
+            pGroup.setCaption(LocalizationManager.getLocalizedNumber(myResources) + ' / ' + LocalizationManager.getLocalizedNumber(requiredResources));
+
+            if (currentResourcesCount === 3) {
+                resourcesY = 0;
+                resourcesX -= deltaX;
+            } else
+                resourcesY += deltaY;
+
+            if (!enoughResoruces)
+                resourcesEnough = false;
+        }
+
+        //puzzle
+        const x = initResourcesX + 600 * GlobalScale;
+        const y = initResourcesY + deltaY;
+        this.loadPuzzle(x, y);
+
+        return resourcesEnough;
+    }
+
     _isResourcesEnough() {
         const all = GameData.getAllResourcesType();
+        let result = true;
         for (let i in all) {
             const type = all[i];
             const count = this.selectedQuest[type];
@@ -32191,203 +33136,273 @@ class WinPhotosQuest extends WinWithBrownBack {
 
             const myResources = gameInit.progress.getResourceByName(type);
             const requiredResources = this.selectedQuest[type + '_bigInt'];
-            if (myResources.compare(requiredResources) < 0)
-                return false;
+            if (myResources.compare(requiredResources) < 0) {
+                const anim = this.cachedResources[type];
+                if (anim)
+                    animManager.shakeBox(anim.getCaption(), 7, 20 * GlobalScale, 0.6, 2);
+                result = false;
+            }
         }
-        return true;
+        return result;
     }
 
-    loadPuzzle() {
+    _needToShowPuzzle() {
+        const slot = this.selectedQuest.goodsId;
+        return slot > 9 || this.selectedQuest.level > 1;
+    }
+
+    loadPuzzle(x, y) {
         const slot = this.selectedQuest.goodsId;
         const image = slot - 1;
 
-        if (this.puzzleImage) {
-            this.puzzleImage.destroy();
+        this._destroyPuzzle();
+
+        if (!this._needToShowPuzzle()) {
+            if (this.collect_puzzle_text)
+                this.collect_puzzle_text.setVisible(false);
+            return;
         }
 
+        this.engine.load.setPath(VisualData.getFolderPath());
         this.puzzleImage = winPuzzleInstance.getCell({
             item: {
                 id: slot,
                 level: this.selectedQuest.level,
                 pieces: 0,
             },
+            dontShowBonus: true,
+            scale: 0.7,
             index: image
         }, true);
 
-        const x = this.centerX - 300 * GlobalScale;
-        const y = this.centerY + 170 * GlobalScale;
         this.puzzleImage.setPosition(x * localScale, y * localScale);
         this.group.add(this.puzzleImage);
 
-        const puzzleText = this.engine.add.textOld(x, y - 180 * GlobalScale, "Collect Puzzle", DefaultFontSmallBlack).setOrigin(0.5, 0.5).setWordWrapWidth(600 * GlobalScale).setDepth(WinDefaultDepth + 100);
-        this.puzzleImage.add(puzzleText);
-
-        this.puzzle_done_icon = this.engine.add.sprite(x - 100 * GlobalScale, y - 100 * GlobalScale, 'PhotoQuestDoneIcon').setDepth(WinDefaultDepth + 200);
-        this.puzzleImage.add(this.puzzle_done_icon);
-    }
-
-    selectSpecificQuest(quest) {
-        // this.photoName.setText("Photo name");
-        // this.photoDesc.setText("You immediately stands up to take of your toga. Dryad jumps away gracefully and start running around you on all fours\n");
-
-        this.selectedQuest = quest;
-
-        for (let i in this.collectedPuzzle) {
-            const p = this.collectedPuzzle[i];
-            if (p) {
-                p.setExternalScale(p.itemArr === quest ? 1 : this.nonSelectedScale);
-            }
+        if (!this.collect_puzzle_text) {
+            this.collect_puzzle_text = this.engine.add.text(x, y - 130 * GlobalScale, "Collect Puzzle", DefaultFontVerySmall).setOrigin(0.5, 0.5).setWordWrapWidth(600 * GlobalScale).setDepth(WinDefaultDepth + 100);
+            this.group.add(this.collect_puzzle_text);
+        } else {
+            this.collect_puzzle_text.setVisible(true);
         }
 
-        for (let i in this.resourcesModules)
-            this.resourcesModules[i].setVisible(false);
+        this.puzzle_done_icon = new CheckMark(this.engine, {
+            x: x - 150 * GlobalScale,
+            y: y
+        });
+        this.group.add(this.puzzle_done_icon.getContainer());
+        this.puzzle_objects.push(this.puzzle_done_icon);
+
+        const myPuzzles = gameInit.progress.getPuzzleInfo();
+        this.puzzle_done_icon.setChecked(myPuzzles[image].level >= this.selectedQuest.level);
+    }
+
+    _destroyPuzzle() {
+        if (this.puzzleImage) {
+            this.puzzleImage.destroy();
+            for (let o of this.puzzle_objects)
+                o.destroy(true);
+            this.puzzle_objects = [];
+            this.puzzleImage = null;
+        }
+    }
+
+    selectSpecificQuest(quest, index) {
+        this.selectedQuest = quest;
+        this.selectedQuestIndex = index;
+        this.scroll.setPage(index);
 
         const pq = gameInit.progress.getPhotoQuestById(quest.id);
+        const questProgress = gameInit.photoManager.getQuestById(quest.id);
+        const questData = gameInit.photoManager.getQuestDataById(quest.id);
+
+        //Quest
+        {
+            this.check_questDescription.setChecked(questProgress && questProgress.progress >= questProgress.count);
+            const qText = LocalizationManager.getLocalizization("Daily" + questData.questType + "Info").format(questData.questCount);
+            this.check_questDescription.setCaption(qText);
+        }
+
+        this.check_previousQuest.setVisible(index > 0);
+        this._deleteResourcesObjects();
+        let resourcesEnough = false;
+
+
+        if (this._isPreviousPhotoUnlocked(index)) {
+            this.check_questDescription.setVisible(true);
+            this.shortTeaser.setVisible(false);
+            resourcesEnough = this._createQuestPrice();
+        } else {
+            this._destroyPuzzle();
+            this.check_questDescription.setVisible(false);
+
+            this.shortTeaser.setText("Do you want to know what Aaros did to her? Do you want to know what Aaros did to her?");
+            this.shortTeaser.setVisible(true);
+        }
+
         if (pq.isComplete) {
-            this.quest_done_icon.setVisible(false);
-            this.questProgress.setVisible(false);
-            this.loader.setVisible(false);
             this.photoLockIcon.setVisible(false);
             this.buttonLabel.setVisible(true);
 
-            this.questDesc.setVisible(false);
             this.buttonLabel.setText(LocalizationManager.getTutorialLocalizization("VIEW"));//TODO localize
-            this.textArea.setVisible(true);
-            this.textArea.setText(LocalizationManager.getLocalizization(quest.id));
-            if (this.puzzleImage)
-                this.puzzleImage.destroy();
+            // this.textArea.setVisible(true);
+            // this.textArea.setText(LocalizationManager.getLocalizization(quest.id));
+            this._destroyPuzzle();
             return;
         } else {
-            this.loadPuzzle();
-            this.questDesc.setVisible(true);
             this.buttonLabel.setText(LocalizationManager.getTutorialLocalizization("UNLOCK"));//TODO localize
-            this.textArea.setVisible(false);
-        }
-        const questProgress = gameInit.photoManager.getQuestById(quest.id);
-        let visible;
-        let lockVisible;
-        if (questProgress) {
-            const qText = LocalizationManager.getLocalizization("Daily" + questProgress.info.questType + "Info").format(questProgress.count);
-            this.questDesc.setText(qText);
-            this.loader.setProgress(questProgress.progress / questProgress.count);
-            this.questProgress.setText(questProgress.progress + '/' + questProgress.count);
-            visible = true;
-            lockVisible = questProgress.progress < questProgress.count;
-        } else {
-            visible = false;
-            lockVisible = true;
-            this.questDesc.setText("COMPLETE THE PUZZLE TO UNLOCK THE QUEST");
-        }
-        this.quest_done_icon.setVisible(!lockVisible);
-        this.questProgress.setVisible(visible);
-        this.loader.setVisible(visible);
-
-        this.activeResources = [];
-
-        const all = GameData.getAllResourcesType();
-        for (let i in all) {
-            const type = all[i];
-            const count = quest[type];
-            if (!count || count === "0")
-                continue;
-
-            let pGroup;
-            if (this.resourcesModules.hasOwnProperty(type)) {
-                pGroup = this.resourcesModules[type];
-                pGroup.setVisible(true);
-            } else {
-                pGroup = this.resourcesModules[type] = this.engine.add.container(0, 0).setDepth(WinDefaultDepth + 1000);
-                this.group.add(pGroup);
-
-                // const frame = this.engine.add.sprite(0, 0, 'PhotoQuestFrame').setScale(0.75, 1);
-                // pGroup.add(frame);
-                const sprite = this.engine.add.sprite(-120 * GlobalScale, 0, GameData.getIconByType(type));
-                if (type.toLowerCase().startsWith('token'))
-                    sprite.setScale(0.65);
-                pGroup.unny_text = this.engine.add.textOld(-80 * GlobalScale, 0, null, PhotoQuestPrice).setOrigin(0, 0.5);
-                pGroup.unny_done_icon = this.engine.add.sprite(0, 0, 'PhotoQuestDoneIcon');
-
-                pGroup.add(sprite);
-                pGroup.add(pGroup.unny_text);
-                pGroup.add(pGroup.unny_done_icon);
-            }
-
-            const myResources = gameInit.progress.getResourceByName(type);
-            const requiredResources = quest[type + '_bigInt'];
-            const enoughResoruces = myResources.compare(requiredResources) >= 0;
-            pGroup.unny_done_icon.setVisible(enoughResoruces);
-            pGroup.unny_text.setText(LocalizationManager.getLocalizedNumber(myResources) + ' / ' + LocalizationManager.getLocalizedNumber(requiredResources))
-                .setWordWrapWidth(280 * GlobalScale);
-            this.activeResources.push(pGroup);
-
-            if (!enoughResoruces)
-                lockVisible = true;
+            // this.textArea.setVisible(false);
         }
 
-        const distance = 300 * GlobalScale;
-
-        let x = this.centerX - distance * (this.activeResources.length - 1) / 2;
-
-        for (let i in this.activeResources) {
-            this.activeResources[i].setPosition(x, this.centerY + 450 * GlobalScale);
-            x += distance;
-        }
+        let lockVisible = !resourcesEnough;
+        if (questProgress)
+            lockVisible = lockVisible && questProgress.progress < questProgress.count;
 
         this.photoLockIcon.setVisible(lockVisible);
         this.buttonLabel.setVisible(!lockVisible);
     }
 
-    selectQuest(item) {
-        const girlName = item.tag.toLowerCase();
-        this.girlName = girlName;
-        const icon = "GirlIcon_" + girlName;
-        const girlPath = VisualData.getGirlsImagesFolder() + girlName + ".png";
+    _isPreviousPhotoUnlocked(currentPage) {
+        if (currentPage <= 0)
+            return true;
+        const quest = this._getQuestAtIndex(currentPage - 1);
+        const pq = gameInit.progress.getPhotoQuestById(quest.id);
+        return pq && pq.isComplete;
+    }
 
-        for (let i in this.collectedPuzzle) {
-            if (this.collectedPuzzle[i])
-                this.collectedPuzzle[i].destroy();
-        }
-        this.collectedPuzzle = [];
+    _updatePage() {
+        const currentPage = this.scroll.getCurrentPage();
+        const totalCount = this.selectedGirl.array.length;
+        const currentQuest = this._getQuestAtIndex(currentPage);
+        this.setQuestSelected(currentQuest);
+        this.selectSpecificQuest(currentQuest, currentPage);
 
-        LoadFile(this.engine, icon, girlPath, () => {
-            if (this.visible) {
+        this.questNumber.setText("{0}/{1}".format(currentPage + 1, totalCount));
+    }
+
+    setQuestSelected(item) {
+        const imageName = "PHOTO_" + item.id;
+        const imagePath = item.name;
+
+        this.engine.load.setPath("");
+        const group = this.topImageGroup;
+        const depth = WinDefaultDepth + 10000;
+
+        LoadFile(this.engine, imageName, imagePath, () => {
+            if (group && group.active) {
                 this.destroyImage();
-                this.image = this.group.create(this.centerX - 26 * GlobalScale, this.centerY - 600 * GlobalScale, icon).setDepth(WinDefaultDepth + 1);
 
-                const distance = 260 * GlobalScale;
-                const puzzlesY = this.centerY - 250 * GlobalScale;
-                let posX = this.centerX - (item.array.length - 1) / 2 * distance;
+                const sprite = this.image = this.engine.add.sprite(0, 0, imageName)
+                    .setDepth(depth);
 
-                this.selectSpecificQuest(item.array[0]);
+                sprite.setScale(Math.min(560 / sprite.width * GlobalScale, 560 / sprite.height * GlobalScale));
 
-                for (let i in item.array) {
-                    const arr = item.array[i];
-                    const previewName = arr.id;
-                    const px = posX;
-                    posX += distance;
-                    const iconNamePreview = "Preview_" + previewName;
-                    LoadFile(this.engine, iconNamePreview, VisualData.getGirlsPreviewFolder() + previewName + ".png", () => {
-                        if (this.visible && this.girlName === girlName) {
-                            const previewBtn = new BasicButton(this.group, {
-                                'scene': this.engine,
-                                'key': iconNamePreview,
-                                'x': px,
-                                'y': puzzlesY
-                            }, () => {
-                                this.selectSpecificQuest(arr);
-                            });
+                group.add(sprite);
 
-                            previewBtn.tint = PuzzleColorsPerLevel[0];
-                            previewBtn.itemArr = arr;
-
-                            this.collectedPuzzle[i] = previewBtn;
-
-                            previewBtn.setExternalScale(this.selectedQuest === arr ? 1 : this.nonSelectedScale);
-                        }
-                    });
-                }
+                this.engine.load.setPath(VisualData.getFolderPath());
             }
         });
+    }
+
+    _getQuestAtIndex(index) {
+        return this.selectedGirl.array[index];
+    }
+
+    getCell(index) {
+        const allElements = this.selectedGirl.array;
+        const item = allElements[index];
+        const group = this.engine.rexUI.add.container(0, 0);
+
+        // const girlName = item.tag.toLowerCase() + "_menu";
+        const imageName = "PHOTO_" + item.id;
+        const imagePath = item.name;
+
+        const depth = WinDefaultDepth + 10000;
+
+        const image = this.engine.add.sprite(0, 0, 'SliderBack')
+            .setDepth(WinDefaultDepth + 10);
+        group.add(image);
+
+        let loading = true;
+        if (imageName) {
+            const cellCenterX = 0;
+            const cellCenterY = 0;
+            this.engine.load.setPath("");
+            LoadFile(this.engine, imageName, imagePath, () => {
+                if (group && group.active) {
+                    const sprite = this.engine.add.sprite((group.x / localScale || 0) + cellCenterX, (group.y / localScale || 0) + cellCenterY, imageName)
+                        .setDepth(depth);
+
+                    if (!loading)
+                        group.setScale(1);
+                    sprite.setScale(Math.min(170 / sprite.width * GlobalScale, 170 / sprite.height * GlobalScale));
+                    group.add(sprite);
+
+                    if (this.scroll && !loading)
+                        this.scroll.fakeMove();
+                    this.engine.load.setPath(VisualData.getFolderPath());
+                }
+            });
+        }
+        loading = false;
+
+        this._createNotificationForButton(
+            this.engine,
+            group,
+            function (func) {
+
+            },
+            () => {
+                return gameInit.photoManager.isQuestCompletedAndNotClaimed(item);
+            },
+            function () {
+                return "!";
+            }
+        );
+
+        return group;
+    }
+
+    _createNotificationForButton(engine, group, subscribe, isVisible, getText) {
+        return new GUINotification({
+            scene: engine,
+            parent: group,
+            group: group,
+            x: 80 * GlobalScale,
+            y: -80 * GlobalScale,
+            subscribe: subscribe,
+            isVisible: isVisible,
+            getText: getText,
+            no_animation: true
+        });
+    }
+
+    selectQuest(item, specificQuest = 0) {
+        this.selectedGirl = item;
+        this.scroll.createPages(item.array.length, this.getCell.bind(this));
+        this.selectSpecificQuest(item.array[specificQuest], specificQuest);
+        this._updatePage();
+    }
+
+    selectSpecificPhoto(photo) {
+        const item = GameData.getPhotosByMainTagArrayByPhotoId(photo.mainTag);
+        if (item) {
+            let index = 0;
+            for (let i = 0; i < item.array.length; i++) {
+                if (item.array[i] === photo) {
+                    index = i;
+                    break;
+                }
+            }
+            this.selectQuest(item, index);
+        }
+        else
+            console.error("no photo found");
+    }
+
+    update(deltaTime) {
+        if (this.visible) {
+            this.scroll.update(deltaTime);
+        }
     }
 }
 
@@ -32600,8 +33615,56 @@ class WinPhotosPreview extends WinWithPicture {
         this.button.style.display = this.photo.style.display = visible ? 'inherit' : 'none';
     }
 
-    setImage(item) {
+    _destroyAnimatedSprite() {
+        if (this.animatedSprite) {
+            this.animatedSprite.destroy();
+            this.animatedSprite = null;
+        }
+    }
+
+    setImage(item, unlock) {
+        this.photo.src = '';
         this.photo.src = item.name;
+        this._setDefaultStyle(unlock);
+
+        this._destroyAnimatedSprite();
+        this.button.style.display = 'none';
+        let prepareForTheFirstAnimation = false;
+        let timerDone = false;
+
+        const timerCompleted = () => {
+            if (timerDone) {
+                this.button.style.display = 'inherit';
+
+                if (prepareForTheFirstAnimation) {
+                    guiManager.closeAllWindowsButOne(this);
+                    super.setWindowVisible(false);
+                }
+            }
+        };
+
+        if (unlock) {
+            const imageName = "PHOTO_" + item.id;
+            const imagePath = item.name;
+
+            const depth = WinDefaultDepth + 10000;
+
+            if (imageName) {
+                this.engine.load.setPath("");
+                LoadFile(this.engine, imageName, imagePath, () => {
+                    prepareForTheFirstAnimation = true;
+                    timerCompleted();
+                    const sprite = this.engine.add.sprite(VisualData.MAP_PARAMS.center.x, VisualData.MAP_PARAMS.center.y, imageName).setDepth(depth);
+                    this.animatedSprite = sprite.setScale(0.05);
+                    this.engine.load.setPath(VisualData.getFolderPath());
+                });
+            }
+        }
+
+        setTimeout(() => {
+            timerDone = true;
+            timerCompleted();
+        }, 2000);
     }
 
     createGame(engine) {
@@ -32610,8 +33673,9 @@ class WinPhotosPreview extends WinWithPicture {
         const canvas = document.getElementById("phaser-app");
 
         const divElement = document.createElement("img");
-        divElement.className = "photo-image";
+
         canvas.appendChild(divElement);
+        this.divElement = divElement;
 
         this.photo = divElement;
 
@@ -32619,13 +33683,48 @@ class WinPhotosPreview extends WinWithPicture {
         this.button.className = "photo-exit";
         canvas.appendChild(this.button);
 
-        this.button.src = VisualData.getFolderPath() +  CommonVisualData.ALL_OBJECTS["ExitButton"].file;
+        this.button.src = VisualData.getFolderPath() + VisualData.ALL_OBJECTS["ExitButton"].file;
 
         this.button.onclick = () => {
-            this.closeWindow();
+            if (this.animatedSprite) {
+                if (!this.timer) {
+                    this._setReverseStyle();
+                    this.timer = setTimeout(() => {
+                        this._playFlyingAnimation();
+                        this.closeWindow();
+                        clearTimeout(this.timer);
+                        this.timer = null;
+                    }, 1000);
+                }
+            } else {
+                this.closeWindow();
+            }
         };
 
         this.setWindowVisible(false);
+    }
+
+    _playFlyingAnimation() {
+        LOCKED_BY_ANIMATION = true;
+        const button = guiManager.getWindowByType(WindowType.WinMain).getPhotoAlbumButton();
+        const destinationPoint = {
+            x: button.x / localScale,
+            y: button.y / localScale
+        };
+        animManager.moveToPoint(this.animatedSprite, destinationPoint, 1, () => {
+            this._destroyAnimatedSprite();
+            animManager.scaleAnimationWithReturn(button, 1.3, 0.3, ()=>{
+                LOCKED_BY_ANIMATION = false;
+            });
+        });
+    }
+
+    _setDefaultStyle(animated) {
+        this.divElement.className = animated ? "photo-image pop-image" : "photo-image";
+    }
+
+    _setReverseStyle() {
+        this.divElement.className = "photo-image pop-image-reverse";
     }
 }
 
@@ -32846,6 +33945,9 @@ class WinPhotosListSingleImages extends WinWithBrownBack {
             if (pq.isComplete) {
                 const win = guiManager.openNewWindow(WindowType.WinPhotosPreview);
                 win.setImage(item);
+            } else {
+                const win = guiManager.openNewWindow(WindowType.WinPhotosQuest);
+                win.selectSpecificPhoto(item);
             }
         });
 
@@ -33275,11 +34377,11 @@ class GUIManager {
             scaleImage: 0.9
         });
 
-        this.allWindows[WindowType.WinNotEnoughGems] = new WinWithPicture(this, gameInit, {
+        this.allWindows[WindowType.WinNotEnoughGems] = new WinNotEnoughGems(this, gameInit, {
             description: "NotEnoughGemsText",
             image: "NotEnoughGems",
             button: "ButtonOk",
-            imageX: 100,
+
             action: ()=>this.openGemsStore()
         });
 
@@ -33340,7 +34442,7 @@ class GUIManager {
         this.allWindows[WindowType.WinSettings] = new WinSettings(this, gameInit);
 
         if (VisualData.getGameSettings().photos) {
-            this.allWindows[WindowType.WinPhotosMainMenu] = new WinPhotosMainMenu(this, gameInit);
+            this.allWindows[WindowType.WinPhotosMainMenu] = new WinPhotosMainMenu2(this, gameInit);
             this.allWindows[WindowType.WinPhotosQuest] = new WinPhotosQuest(this, gameInit);
             this.allWindows[WindowType.WinGirlBio] = new WinGirlBio(this, gameInit);
             this.allWindows[WindowType.WinPhotosPreview] = new WinPhotosPreview(this, gameInit,  {
@@ -33382,6 +34484,8 @@ class GUIManager {
             win.setApplesAcount(seeds);
         });
 
+
+        this.onWindowOpened = new UnnyAction();
         // eventManager.onOfflineCollected.addListener((time, resources)=>{
         //     if (time > 3600000 && resources.compare(0) > 0 && gameInit.progress.isTutorialCompleted()) {
         //         setTimeout(() => {
@@ -33392,9 +34496,9 @@ class GUIManager {
         // })
     }
 
-    showQuestMessage(text, image, callback) {
+    showQuestMessage(text, image, callback, offset) {
         const win = this.openNewWindow(WindowType.QuestBubble, false, true);
-        win.setData(text, image, callback);
+        win.setData(text, image, callback, offset);
     }
 
     _getResourcesInfoDescription() {
@@ -33495,6 +34599,14 @@ class GUIManager {
         });
     }
 
+    closeAllWindowsButOne(windowNotToClose) {
+        const wins = this.activeWindows;
+        for (let i = wins.length - 1; i > 0; i--) {
+            if (wins[i] !== windowNotToClose)
+                wins[i].closeWindow();
+        }
+    }
+
     onWindowsClosed(window) {
         const wins = this.activeWindows;
         if (wins[wins.length - 1] === window) {
@@ -33584,6 +34696,7 @@ class GUIManager {
         wins.push(win);
 
         this._checkForProduction();
+        this.onWindowOpened.callListeners(windowType);
         return win;
     }
 
@@ -33622,7 +34735,7 @@ class GUIManager {
             if (this.guiMode !== GUIMode.Boss)
                 this.stopHarvestingAnimation();
             else
-                this.harvesting.obj.setPosition(this.harvesting.obj.x / localScale, this.harvesting.obj.y / localScale + 774 * GlobalScale);
+                this.harvesting.obj.setPosition(this.harvesting.obj.x / localScale, this.harvesting.obj.y / localScale + VisualData.getGameSettings().factory_pos_y * GlobalScale);
         });
     }
 
@@ -34081,7 +35194,9 @@ function prepareTextToHtml(engine) {
         UpdateTextPosition(this);
         return this;
     }
-
+    Phaser.GameObjects.Text.prototype.setPositionX = function(x) {
+        return this.x = x * localScale;
+    };
     engine.add.text = newText.bind(engine.add);
     Phaser.GameObjects.Text.prototype.setPosition = newTextPosition;
     Phaser.GameObjects.Text.prototype.setWordWrapWidth = newTextWrap;
@@ -34273,7 +35388,6 @@ function create ()
                     return oldSprite.call(cachedAdd, x, y, 'atlas_sprites', obj.file).setScale(1);
             }
             return oldSprite.call(cachedAdd, x, y, name).setScale(1);
-            // return oldSprite.call(cachedAdd, x, y, "MM_Btn_Login").setScale(1);
         }
 
         this.add.sprite = newSprite.bind(this.add);

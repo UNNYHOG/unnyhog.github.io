@@ -1,314 +1,314 @@
 
 Slot6w1.png
-size: 256,256
+size: 1024,1024
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 female_ankle_right
   rotate: false
-  xy: 68, 89
-  size: 23, 39
-  orig: 23, 39
+  xy: 549, 322
+  size: 116, 194
+  orig: 116, 194
   offset: 0, 0
   index: -1
 female_arm_left_1
-  rotate: true
-  xy: 120, 77
-  size: 16, 29
-  orig: 16, 29
+  rotate: false
+  xy: 944, 377
+  size: 79, 147
+  orig: 79, 147
   offset: 0, 0
   index: -1
 female_arm_left_2
   rotate: true
-  xy: 170, 153
-  size: 14, 26
-  orig: 14, 26
+  xy: 552, 33
+  size: 72, 128
+  orig: 72, 128
   offset: 0, 0
   index: -1
 female_arm_right
   rotate: false
-  xy: 34, 129
-  size: 48, 25
-  orig: 48, 25
+  xy: 162, 171
+  size: 239, 124
+  orig: 239, 124
   offset: 0, 0
   index: -1
 female_arm_right_2
-  rotate: false
-  xy: 153, 164
-  size: 16, 37
-  orig: 16, 37
+  rotate: true
+  xy: 666, 287
+  size: 81, 186
+  orig: 81, 186
   offset: 0, 0
   index: -1
 female_body
-  rotate: false
-  xy: 210, 158
-  size: 31, 27
-  orig: 31, 27
+  rotate: true
+  xy: 666, 369
+  size: 155, 133
+  orig: 155, 133
   offset: 0, 0
   index: -1
 female_face
-  rotate: true
-  xy: 92, 98
-  size: 30, 27
-  orig: 30, 27
+  rotate: false
+  xy: 400, 34
+  size: 151, 135
+  orig: 151, 135
   offset: 0, 0
   index: -1
 female_face_2
-  rotate: false
-  xy: 92, 79
-  size: 27, 18
-  orig: 27, 18
+  rotate: true
+  xy: 307, 34
+  size: 136, 92
+  orig: 136, 92
   offset: 0, 0
   index: -1
 female_fingers
-  rotate: true
-  xy: 187, 122
-  size: 11, 10
-  orig: 11, 10
+  rotate: false
+  xy: 825, 44
+  size: 54, 52
+  orig: 54, 52
   offset: 0, 0
   index: -1
 female_foream_left_1
-  rotate: true
-  xy: 98, 129
-  size: 23, 21
-  orig: 23, 21
+  rotate: false
+  xy: 549, 217
+  size: 116, 104
+  orig: 116, 104
   offset: 0, 0
   index: -1
 female_foream_left_2
-  rotate: false
-  xy: 83, 129
-  size: 14, 25
-  orig: 14, 25
+  rotate: true
+  xy: 803, 207
+  size: 71, 127
+  orig: 71, 127
   offset: 0, 0
   index: -1
 female_hand_left_2
-  rotate: false
-  xy: 173, 74
-  size: 12, 7
-  orig: 12, 7
+  rotate: true
+  xy: 887, 145
+  size: 61, 36
+  orig: 61, 36
   offset: 0, 0
   index: -1
 female_hand_right
   rotate: false
-  xy: 197, 157
-  size: 12, 13
-  orig: 12, 13
+  xy: 765, 31
+  size: 59, 65
+  orig: 59, 65
   offset: 0, 0
   index: -1
 female_head
   rotate: false
-  xy: 79, 201
-  size: 44, 53
-  orig: 44, 53
+  xy: 384, 756
+  size: 218, 267
+  orig: 218, 267
   offset: 0, 0
   index: -1
 female_hips
   rotate: false
-  xy: 1, 1
-  size: 32, 35
-  orig: 32, 35
+  xy: 1, 12
+  size: 158, 174
+  orig: 158, 174
   offset: 0, 0
   index: -1
 female_leg
-  rotate: true
-  xy: 84, 159
-  size: 41, 23
-  orig: 41, 23
+  rotate: false
+  xy: 807, 718
+  size: 204, 114
+  orig: 204, 114
   offset: 0, 0
   index: -1
 female_leg_left
   rotate: true
-  xy: 1, 86
-  size: 71, 32
-  orig: 71, 32
+  xy: 1, 187
+  size: 353, 160
+  orig: 353, 160
   offset: 0, 0
   index: -1
 female_mouth_back
   rotate: false
-  xy: 246, 192
-  size: 8, 12
-  orig: 8, 12
+  xy: 973, 612
+  size: 39, 61
+  orig: 39, 61
   offset: 0, 0
   index: -1
 female_mouth_forward
   rotate: true
-  xy: 42, 155
-  size: 32, 41
-  orig: 32, 41
+  xy: 201, 531
+  size: 162, 207
+  orig: 162, 207
   offset: 0, 0
   index: -1
 female_neck
-  rotate: false
-  xy: 246, 205
-  size: 9, 10
-  orig: 9, 10
+  rotate: true
+  xy: 973, 674
+  size: 43, 50
+  orig: 43, 50
   offset: 0, 0
   index: -1
 female_skirt
   rotate: false
-  xy: 211, 216
-  size: 42, 38
-  orig: 42, 38
+  xy: 807, 833
+  size: 208, 190
+  orig: 208, 190
   offset: 0, 0
   index: -1
 female_skirt_back
   rotate: false
-  xy: 34, 89
-  size: 33, 39
-  orig: 33, 39
+  xy: 381, 321
+  size: 167, 195
+  orig: 167, 195
   offset: 0, 0
   index: -1
 female_skirt_back_2
   rotate: false
-  xy: 124, 166
-  size: 28, 35
-  orig: 28, 35
+  xy: 640, 588
+  size: 140, 175
+  orig: 140, 175
   offset: 0, 0
   index: -1
 female_tail
   rotate: false
-  xy: 150, 97
-  size: 22, 22
-  orig: 22, 22
+  xy: 552, 106
+  size: 111, 110
+  orig: 111, 110
   offset: 0, 0
   index: -1
 female_vagina_
   rotate: false
-  xy: 153, 144
-  size: 16, 19
-  orig: 16, 19
+  xy: 942, 282
+  size: 78, 94
+  orig: 78, 94
   offset: 0, 0
   index: -1
 female_waist
-  rotate: false
-  xy: 172, 134
-  size: 22, 18
-  orig: 22, 18
+  rotate: true
+  xy: 853, 279
+  size: 111, 88
+  orig: 111, 88
   offset: 0, 0
   index: -1
 male_arm_man left
-  rotate: false
-  xy: 170, 168
-  size: 25, 38
-  orig: 25, 38
+  rotate: true
+  xy: 781, 593
+  size: 124, 191
+  orig: 124, 191
   offset: 0, 0
   index: -1
 male_arm_right man
   rotate: false
-  xy: 108, 154
-  size: 15, 46
-  orig: 15, 46
+  xy: 565, 527
+  size: 74, 228
+  orig: 74, 228
   offset: 0, 0
   index: -1
 male_balls
-  rotate: false
-  xy: 173, 82
-  size: 14, 18
-  orig: 14, 18
+  rotate: true
+  xy: 931, 210
+  size: 68, 92
+  orig: 68, 92
   offset: 0, 0
   index: -1
 male_body_man
   rotate: false
-  xy: 166, 207
-  size: 44, 47
-  orig: 44, 47
+  xy: 162, 296
+  size: 218, 234
+  orig: 218, 234
   offset: 0, 0
   index: -1
 male_dick
-  rotate: true
-  xy: 242, 158
-  size: 27, 13
-  orig: 27, 13
+  rotate: false
+  xy: 666, 220
+  size: 136, 66
+  orig: 136, 66
   offset: 0, 0
   index: -1
 male_down_body man
   rotate: false
-  xy: 1, 158
-  size: 40, 96
-  orig: 40, 96
+  xy: 1, 541
+  size: 199, 482
+  orig: 199, 482
   offset: 0, 0
   index: -1
 male_face_man_1
   rotate: false
-  xy: 150, 74
-  size: 22, 22
-  orig: 22, 22
+  xy: 774, 97
+  size: 112, 109
+  orig: 112, 109
   offset: 0, 0
   index: -1
 male_face_man_2
   rotate: false
-  xy: 150, 120
-  size: 21, 23
-  orig: 21, 23
+  xy: 666, 106
+  size: 107, 113
+  orig: 107, 113
   offset: 0, 0
   index: -1
 male_foream_left man
   rotate: false
-  xy: 120, 122
-  size: 29, 30
-  orig: 29, 30
+  xy: 402, 170
+  size: 145, 150
+  orig: 145, 150
   offset: 0, 0
   index: -1
 male_hair_1 man
   rotate: true
-  xy: 173, 101
-  size: 20, 17
-  orig: 20, 17
+  xy: 681, 3
+  size: 102, 83
+  orig: 102, 83
   offset: 0, 0
   index: -1
 male_head_man
   rotate: false
-  xy: 42, 188
-  size: 36, 66
-  orig: 36, 66
+  xy: 201, 694
+  size: 182, 329
+  orig: 182, 329
   offset: 0, 0
   index: -1
 male_hips_man
   rotate: false
-  xy: 124, 202
-  size: 41, 52
-  orig: 41, 52
+  xy: 603, 764
+  size: 203, 259
+  orig: 203, 259
   offset: 0, 0
   index: -1
 male_man_waist
   rotate: false
-  xy: 124, 153
-  size: 28, 12
-  orig: 28, 12
+  xy: 640, 525
+  size: 140, 62
+  orig: 140, 62
   offset: 0, 0
   index: -1
 male_neck_man
   rotate: false
-  xy: 172, 122
-  size: 14, 11
-  orig: 14, 11
+  xy: 955, 537
+  size: 68, 55
+  orig: 68, 55
   offset: 0, 0
   index: -1
 male_part_1
-  rotate: false
-  xy: 196, 171
-  size: 13, 35
-  orig: 13, 35
+  rotate: true
+  xy: 781, 525
+  size: 67, 173
+  orig: 67, 173
   offset: 0, 0
   index: -1
 male_part_2
   rotate: false
-  xy: 1, 37
-  size: 31, 48
-  orig: 31, 48
+  xy: 409, 517
+  size: 155, 238
+  orig: 155, 238
   offset: 0, 0
   index: -1
 male_skirt_back man
-  rotate: true
-  xy: 211, 186
-  size: 29, 34
-  orig: 29, 34
+  rotate: false
+  xy: 160, 1
+  size: 146, 169
+  orig: 146, 169
   offset: 0, 0
   index: -1
 male_tail_man
   rotate: false
-  xy: 120, 94
-  size: 29, 27
-  orig: 29, 27
+  xy: 800, 391
+  size: 143, 133
+  orig: 143, 133
   offset: 0, 0
   index: -1

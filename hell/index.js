@@ -17402,6 +17402,10 @@ function SocialFB() {
             _preloadAd(callbacks, _playRewardedAd);
     }
 
+    function _checkPurchases(consumeCallback, offset) {
+        console.error("_checkPurchases NOT implemented");
+    }
+
     return {
         initFB: function (appId) {
             app_id = appId;
@@ -17479,6 +17483,23 @@ function SocialFB() {
                 fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));
         },
+
+        checkPurchases(consumeCallback) {
+            console.error("checkPurchases(consumeCallback) not implemented!");
+        },
+
+        getDisplayPrice(price) {
+            return price + " ЮНЕК";
+        },
+
+        getPriceLabel(productId) {
+            return this.getDisplayPrice(this.getPrice(productId));
+        },
+
+        getPrice(productId) {
+            const info = VisualData.getPaymentInfoById(productId);
+            return info ? info.vk_price * 7 : 0;
+        }
     };
 };
 

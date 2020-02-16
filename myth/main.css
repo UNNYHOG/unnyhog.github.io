@@ -30,36 +30,10 @@ body {
     height: 4%;
 }
 
-/*@font-face {*/
-    /*font-family: 'pt_sans_narrowbold';*/
-    /*src: url('fonts/2220-webfont.woff2') format('woff2'),*/
-    /*url('fonts/2220-webfont.woff') format('woff');*/
-    /*font-weight: normal;*/
-    /*font-style: normal;*/
-/*}*/
-
-@font-face {
-    font-family: 'kid_kosmicregular';
-    src: url('fonts/kidkosmic-webfont.woff2') format('woff2'),
-    url('fonts/kidkosmic-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
 .textFitted {
     margin-top: auto;
     margin-bottom: auto;
     width: 100%;
-}
-
-.myp {
-    position: absolute;
-    margin: 0;
-    padding: 0;
-    /*font-weight: 600;*/
-    /*font-family: 'pt_sans_narrowbold', "Arial Rounded MT Bold", sans-serif;*/
-    font-family: 'kid_kosmicregular', "Arial Rounded MT Bold", sans-serif !important;
-    /*font-family: 'pt_sans_narrowbold', "Helvetica Neue", sans-serif;*/
 }
 
 span {
@@ -104,4 +78,28 @@ p {
     right: 10px;
     top: 10px;
     width: 5%;
+}
+
+@keyframes popImage {
+    0%   {transform: scale(0)  rotate(0deg);}
+    25%  {transform: scale(0.25) rotate(90deg);}
+    50%  {transform: scale(.5) rotate(180deg);}
+    75% {transform: scale(0.75) rotate(270deg);}
+    100% {transform: scale(1) rotate(360deg);}
+}
+
+@keyframes popImage2 {
+    0%   {transform: scale(0)  rotate(0deg);}
+    25%  {transform: scale(0.25) rotate(90deg);}
+    50%  {transform: scale(.5) rotate(180deg);}
+    75% {transform: scale(0.75) rotate(270deg);}
+    100% {transform: scale(1) rotate(360deg);}
+}
+
+.pop-image{
+    animation: popImage 1s normal linear;
+}
+
+.pop-image-reverse{
+    animation: popImage2 1s reverse linear;
 }
