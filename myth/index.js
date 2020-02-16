@@ -21600,7 +21600,6 @@ class Progress {
 
         // this.savedProgress = getCheatSave();
         this.savedProgress.puzzle.goods = fixArray(this.savedProgress.puzzle.goods);
-        this.savedProgress.tutorial.stepNumber = 23;
         // this._resetConstructions();
         // this._setResourceByName("tokenCommon", "99999900");
         // this._setResourceByName("gold", "999900");
@@ -22723,7 +22722,6 @@ class Progress {
                     }
                 } else {
                     console.error("Failed to load profile", response.error);
-                    callback(null);//don't commit
                 }
             });
         }
