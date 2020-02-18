@@ -16549,10 +16549,18 @@ class Tutorial {
 
             case "OpenPuzzlesWindow":
             case "ClickOpenBoxItem":
-
-            case "StartTokenAnimation":
-            case "FinishTokenAnimation":
                 this.goToNextStep();
+                break;
+            case "StartTokenAnimation":
+                hudResources.setTokensVisible(true);
+                hudResources.setTokenOverlayDepth('tokenCommon');
+                animManager.setAnimationsTimeScale(0.4);
+                this.goToNextStep();
+                break;
+            case "FinishTokenAnimation":
+                hudResources.setTokenDefaultDepth('tokenCommon');
+                this.goToNextStep();
+                animManager.setAnimationsTimeScale(1);
                 break;
             case "OpenGirlQuestWindow": {
                 if (this._isWindow(WindowType.WinPhotosMainMenu)) {
@@ -19693,6 +19701,7 @@ class AnimationChangeAlpha extends AnimationBase {
 class AnimationWinOpen extends AnimationBase {
     constructor(group, callback) {
         super(group, 0.2, callback);
+        this.ignoreScale = true;
         this.angle = Math.PI * 0.65;
         this.sinAngle = Math.sin(this.angle);
         this.scale = 1;
@@ -20100,6 +20109,7 @@ class AnimationsManager {
     constructor() {
         this.allAnimations = [];
         this.deltaTime = 1.0 / 30.0;
+        this.timeScale = 1;
         setInterval(() => this.playAnimations(), this.deltaTime * 1000);
     }
 
@@ -20229,11 +20239,18 @@ class AnimationsManager {
     }
 
     playAnimations() {
+        const scaledTime = this.deltaTime * this.timeScale;
         for (let i = this.allAnimations.length - 1; i >= 0; i--) {
-            if (this.allAnimations[i].playFrame(this.deltaTime)) {
+            const anim = this.allAnimations[i];
+            const dt = anim.ignoreScale ? this.deltaTime : scaledTime;
+            if (anim.playFrame(dt)) {
                 this.allAnimations.splice(i, 1);
             }
         }
+    }
+
+    setAnimationsTimeScale(scale) {
+        this.timeScale = scale;
     }
 }
 
@@ -21079,25 +21096,25 @@ class Building {
     }
 
     _updateFinalProductionRate() {
-        let seedsBonus = gameInit.progress.getTotalSeedsBonus();
+        let seedsBonus = gameInit.progress.getTotalSeedsBonusMultiplied();
         this.finalProduction = this.info.production.base.multiply(this.getLevel()).multiply(this.bonus_MultiProfit);
 
         if (gameInit.guardManager) {
-            seedsBonus += gameInit.guardManager.getSeedsBonusForWorld(this.world_id);//that doesn't work right
+            // seedsBonus += gameInit.guardManager.getSeedsBonusForWorld(this.world_id);//TODO that doesn't work right
             const guardMultiplier = gameInit.guardManager.getProfitMultiplier(this.world_id);
             // console.log("ADD BONUS " + this.world_id + " > " + gameInit.guardManager.getSeedsBonusForWorld(this.world_id) + " GUARD " + guardMultiplier + " >> " + this.finalProduction);
             if (guardMultiplier > 0)
                 this.finalProduction = this.finalProduction.multiply(guardMultiplier + 100).divide(100);
         }
 
-        this.finalProduction = this.finalProduction.multiply(seedsBonus);
+        this.finalProduction = this.finalProduction.multiply(seedsBonus).divide(100 * RESOURCES_SCALE);
 
         if (this.getLikes() > 0)
             this.finalProduction = this.finalProduction.multiply(100 + this.getLikes() * BONUS_PER_LIKE).divide(100);
     }
 
     getProductionForLevel(level) {
-        const seedsBonus = gameInit.progress.getTotalSeedsBonus();
+        const seedsBonus = gameInit.progress.getTotalSeedsBonusMultiplied();
         return this.info.production.base.multiply(level).multiply(seedsBonus).multiply(this.bonus_MultiProfit);
     }
 
@@ -21312,7 +21329,7 @@ const BoxType = {
 const MUSIC_STATE = "MUSIC_STATE";
 const SOUNDS_STATE = "SOUNDS_STATE";
 const CURRENT_LANGUAGE = "CURRENT_LANGUAGE";
-const GAME_VERSION = "0.9.43";
+const GAME_VERSION = "0.9.44";
 
 console.log("game version: " + GAME_VERSION);
 
@@ -21632,7 +21649,7 @@ class Progress {
         this.onSeedsBonusChanged = new UnnyAction();
         this.onGuardWasChanged = new UnnyAction();
 
-        this._updateTotalSeedsBonus();
+        this._updateTotalSeedsBonusMultiplied();
 
         this.dailyBonusData = new DailyBonus(this.savedProgress.dailyBonus.seed, GameData.getLoginData());
         this.wheelOfFortune = new WheelOfFortune();
@@ -21682,13 +21699,13 @@ class Progress {
             this._resetWorld(i);
     }
 
-    _updateTotalSeedsBonus() {
+    _updateTotalSeedsBonusMultiplied() {
         if (this.general.seeds.compare(0) <= 0)
-            this.general.seedsBonus = bigInt(1);
+            this.general.seedsBonus = bigInt(100 * RESOURCES_SCALE);
         else
-            this.general.seedsBonus = this.general.seeds.multiply(this.savedProgress.profile.seedsStrength).divide(100 * RESOURCES_SCALE).add(1);
+            this.general.seedsBonus = this.general.seeds.multiply(this.savedProgress.profile.seedsStrength).add(100 * RESOURCES_SCALE);
         // console.log("APPLES " + this.savedProgress.general.seedsBonus + " * "+ this.general.seeds + " = " + this.general.seedsBonus);
-        this.onSeedsBonusChanged.callListeners(this.getTotalSeedsBonus());
+        this.onSeedsBonusChanged.callListeners(this.getTotalSeedsBonusMultiplied());
     }
 
     static getTimeNow() {
@@ -21736,7 +21753,7 @@ class Progress {
         return this.isUpgradePurchased('hellprod.offer1') ? 3 : 2;
     }
 
-    getTotalSeedsBonus() {
+    getTotalSeedsBonusMultiplied() {
         return this.general.seedsBonus;
     }
 
@@ -21874,7 +21891,7 @@ class Progress {
 
     increaseBonusPerSeed(count) {
         this.savedProgress.profile.seedsStrength += count;
-        this._updateTotalSeedsBonus();
+        this._updateTotalSeedsBonusMultiplied();
 
         this.saveProgress();
     }
@@ -22400,7 +22417,7 @@ class Progress {
     _seedsWereUpdated() {
         this._setResourceByName("seeds", this.general.seeds.toString());
         this.onResourcesChanges.callListeners(this);
-        this._updateTotalSeedsBonus();
+        this._updateTotalSeedsBonusMultiplied();
     }
 
     _gemsWereUpdated() {
@@ -25024,7 +25041,6 @@ class GameInit{
 
             const loadProgress = () => {
                 Progress.loadProgressFromServer((progress) => {
-                    console.warn("done!");
                     this.progress = new Progress(this, progress, this.gameConfig, useGoblin);
                     if (this.gameConfig)
                         this.playerInfo = new PlayerInfo(this.gameConfig.playerLevels, this.progress);
@@ -25854,7 +25870,7 @@ function LoadFile(engine, name, path, callback, type, secondPath) {
         return;
     }
 
-    const version = 25;
+    const version = 26;
     path += "?v=" + version;
     secondPath += "?v=" + version;
 
@@ -26875,7 +26891,11 @@ class HUDResources {
         if (!this.stars_Visible)
             count++;
 
-        this.tokesGroup.setPosition(0, -this.Distance * count);
+        for (let i in this.tokensBar) {
+            this.tokensBar[i].setPosition(0, -this.Distance * count);
+            this.tokensOffsetY = -this.Distance * count;
+        }
+
         this.tokensButton.setPosition(this.tokensButtonOriginal.x, this.tokensButtonOriginal.y - this.Distance * count);
     }
 
@@ -26988,16 +27008,21 @@ class HUDResources {
 
             this.tokensButtonOriginal = {x: bx, y: y};
 
+            this.tokensBar = {};
             for (let i in this.tokens) {
                 y += Distance * 0.7;
-
                 const token = this.tokens[i];
+
+                const bar = engine.add.container(0, 0);
+                this.tokensBar[token] = bar;
+                this.tokesGroup.add(bar);
+
                 image = engine.add.sprite(x, y, 'HudTokensBack').setOrigin(0, 0.5);
-                this.tokesGroup.add(image);
+                bar.add(image);
                 photoTokensCommon[token] = engine.add.sprite(x + IconOffset, y, GameData.getIconByType(token));
-                this.tokesGroup.add(photoTokensCommon[token]);
+                bar.add(photoTokensCommon[token]);
                 this.photo_tokens[i] = engine.add.text(x + LabelOffset, y + info.labelOffsetY * GlobalScale, null, font).setOrigin(0, 0.5);
-                this.tokesGroup.add(this.photo_tokens[i]);
+                bar.add(this.photo_tokens[i]);
             }
 
             this.setTokensVisible(false, true);
@@ -27009,6 +27034,26 @@ class HUDResources {
     setTokensVisible(visible) {
         this.tokensVisible = visible;
         this.tokesGroup.setVisible(visible);
+    }
+
+    setTokenOverlayDepth(type) {
+        this._setTutFieldsVisible(false);
+        this.group.setDepth(OverlayDepth - 1)
+    }
+
+    _setTutFieldsVisible(visible) {
+        this.tokensBar.tokenRare.setVisible(visible);
+        this.tokensBar.tokenEpic.setVisible(visible);
+        this.gemsContainer.setVisible(this.gems_Visible && visible);
+        this.starsContainer.setVisible(this.stars_Visible && visible);
+    }
+
+    setTokenDefaultDepth() {
+        this._setTutFieldsVisible(true);
+        this.group.setDepth(WinDefaultDepth + 100);
+
+        this.updateStars();
+        this.updateTokens();
     }
 
     /***
@@ -30925,7 +30970,7 @@ class WinAppleDescription extends WinWithPicture {
                 this.totalBonus.setText(LocalizationManager.getLocalizization("Prestige_info_text_2").format(this.gameInit.progress.getBonusPerSeed()));
             } else {
                 this.profitNumber.setText(this.gameInit.progress.getBonusPerSeed() + '%');
-                this.totalNumber.setText(LocalizationManager.getLocalizedNumber(this.gameInit.progress.getTotalSeedsBonus().minus(1).multiply(100 * RESOURCES_SCALE)) + '%');
+                this.totalNumber.setText(LocalizationManager.getLocalizedNumber(this.gameInit.progress.getTotalSeedsBonusMultiplied().minus(100 * RESOURCES_SCALE)) + '%');
             }
         }
     }
@@ -31822,7 +31867,7 @@ class BuildingsGUI extends WinBase{
         }
     }
 
-    _sendFlyingResources(worldsData, buildingId, destination, resName, dontPlaySound) {
+    _sendFlyingResources(worldsData, buildingId, destinationIcon, resName, dontPlaySound, count, offset) {
         const production = worldsData.production;
         if (production.hasOwnProperty(buildingId)) {
             resName = resName || 'PriceIcon';
@@ -31837,15 +31882,28 @@ class BuildingsGUI extends WinBase{
                 y = groupInfo.resources.y;
             }
 
-            const icon = this.engine.add.sprite(x / localScale, y / localScale, resName).setScale(VisualData.ANIMATIONS.flyingResourcesScale).setDepth(OverlayDepth);
             const p = {
-                x: destination.x / localScale,
-                y: destination.y / localScale
+                x: destinationIcon.x / localScale,
+                y: destinationIcon.y / localScale + (offset ? offset.y : 0)
             };
-            animManager.moveToPointSin(icon, p, VisualData.ANIMATIONS.flyingResources, () => {
-                icon.destroy(true);
-                animManager.changeShapeOfSouls(destination);
-            });
+
+            const createOneResounce = () => {
+                const icon = this.engine.add.sprite(x / localScale, y / localScale, resName).setScale(VisualData.ANIMATIONS.flyingResourcesScale).setDepth(OverlayDepth);
+                animManager.moveToPointSin(icon, p, VisualData.ANIMATIONS.flyingResources, () => {
+                    icon.destroy(true);
+                    animManager.changeShapeOfSouls(destinationIcon);
+                });
+            };
+
+            createOneResounce();
+            if (count) {
+                const timer = setInterval(()=>{
+                    createOneResounce();
+                    count--;
+                    if (count <= 0)
+                        clearInterval(timer);
+                }, 300 / animManager.timeScale);
+            }
 
             if (!dontPlaySound)
                 audioManager.playBuildingClick();
@@ -31909,7 +31967,7 @@ class BuildingsGUI extends WinBase{
             if (!worldsData.visible)
                 continue;
 
-            this._sendFlyingResources(worldsData, building.id, photoTokensCommon[tokenType], GameData.getIconByType(tokenType));
+            this._sendFlyingResources(worldsData, building.id, photoTokensCommon[tokenType], GameData.getIconByType(tokenType), false, 7, {y: hudResources.tokensOffsetY || 0});
         }
     }
 

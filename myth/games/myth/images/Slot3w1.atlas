@@ -1,209 +1,209 @@
 
 Slot3w1.png
-size: 1024,1024
+size: 512,512
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 arm_left
-  rotate: false
-  xy: 388, 252
-  size: 107, 138
-  orig: 107, 138
+  rotate: true
+  xy: 63, 80
+  size: 33, 42
+  orig: 33, 42
   offset: 0, 0
   index: -1
 arm_right_a
-  rotate: false
-  xy: 955, 849
-  size: 56, 174
-  orig: 56, 174
+  rotate: true
+  xy: 1, 1
+  size: 17, 53
+  orig: 17, 53
   offset: 0, 0
   index: -1
 arm_right_b
   rotate: false
-  xy: 361, 592
-  size: 221, 232
-  orig: 221, 232
+  xy: 112, 378
+  size: 68, 71
+  orig: 68, 71
   offset: 0, 0
   index: -1
 blue
   rotate: false
-  xy: 361, 825
-  size: 294, 198
-  orig: 294, 198
+  xy: 112, 450
+  size: 90, 61
+  orig: 90, 61
   offset: 0, 0
   index: -1
 body
   rotate: true
-  xy: 683, 367
-  size: 163, 197
-  orig: 163, 197
+  xy: 370, 461
+  size: 50, 60
+  orig: 50, 60
   offset: 0, 0
   index: -1
 face_a
-  rotate: true
-  xy: 488, 396
-  size: 187, 194
-  orig: 187, 194
+  rotate: false
+  xy: 1, 19
+  size: 57, 59
+  orig: 57, 59
   offset: 0, 0
   index: -1
 face_b
-  rotate: true
-  xy: 496, 206
-  size: 189, 172
-  orig: 189, 172
+  rotate: false
+  xy: 431, 458
+  size: 58, 53
+  orig: 58, 53
   offset: 0, 0
   index: -1
 face_c
-  rotate: false
-  xy: 669, 197
-  size: 190, 169
-  orig: 190, 169
+  rotate: true
+  xy: 65, 162
+  size: 58, 52
+  orig: 58, 52
   offset: 0, 0
   index: -1
 flower
-  rotate: true
-  xy: 860, 190
-  size: 171, 154
-  orig: 171, 154
+  rotate: false
+  xy: 65, 114
+  size: 52, 47
+  orig: 52, 47
   offset: 0, 0
   index: -1
 forearm_left
   rotate: false
-  xy: 881, 362
-  size: 51, 168
-  orig: 51, 168
+  xy: 490, 460
+  size: 16, 51
+  orig: 16, 51
   offset: 0, 0
   index: -1
 forearm_right
-  rotate: true
-  xy: 565, 80
-  size: 125, 82
-  orig: 125, 82
+  rotate: false
+  xy: 247, 435
+  size: 38, 25
+  orig: 38, 25
   offset: 0, 0
   index: -1
 hair_1
   rotate: false
-  xy: 648, 71
-  size: 128, 125
-  orig: 128, 125
+  xy: 207, 422
+  size: 39, 38
+  orig: 39, 38
   offset: 0, 0
   index: -1
 hair_2
-  rotate: true
-  xy: 372, 1
-  size: 58, 115
-  orig: 58, 115
+  rotate: false
+  xy: 110, 245
+  size: 18, 35
+  orig: 18, 35
   offset: 0, 0
   index: -1
 hair_3
   rotate: false
-  xy: 1, 10
-  size: 204, 266
-  orig: 204, 266
+  xy: 1, 198
+  size: 63, 82
+  orig: 63, 82
   offset: 0, 0
   index: -1
 hair_4
   rotate: false
-  xy: 1, 590
-  size: 359, 433
-  orig: 359, 433
+  xy: 1, 378
+  size: 110, 133
+  orig: 110, 133
   offset: 0, 0
   index: -1
 hand_left
-  rotate: false
-  xy: 298, 277
-  size: 89, 113
-  orig: 89, 113
+  rotate: true
+  xy: 207, 394
+  size: 27, 35
+  orig: 27, 35
   offset: 0, 0
   index: -1
 hand_right
   rotate: false
-  xy: 924, 108
-  size: 81, 81
-  orig: 81, 81
+  xy: 247, 409
+  size: 25, 25
+  orig: 25, 25
   offset: 0, 0
   index: -1
 head
   rotate: false
-  xy: 1, 277
-  size: 296, 312
-  orig: 296, 312
+  xy: 1, 281
+  size: 91, 96
+  orig: 91, 96
   offset: 0, 0
   index: -1
 leg_2
   rotate: false
-  xy: 656, 860
-  size: 298, 163
-  orig: 298, 163
+  xy: 203, 461
+  size: 91, 50
+  orig: 91, 50
   offset: 0, 0
   index: -1
 leg_down_1
-  rotate: true
-  xy: 730, 531
-  size: 133, 199
-  orig: 133, 199
+  rotate: false
+  xy: 144, 316
+  size: 41, 61
+  orig: 41, 61
   offset: 0, 0
   index: -1
 leg_up_1
   rotate: true
-  xy: 937, 685
-  size: 163, 81
-  orig: 163, 81
+  xy: 181, 399
+  size: 50, 25
+  orig: 50, 25
   offset: 0, 0
   index: -1
 neck
-  rotate: true
-  xy: 488, 11
-  size: 48, 60
-  orig: 48, 60
+  rotate: false
+  xy: 181, 380
+  size: 15, 18
+  orig: 15, 18
   offset: 0, 0
   index: -1
 necklase
-  rotate: false
-  xy: 777, 82
-  size: 55, 114
-  orig: 55, 114
+  rotate: true
+  xy: 93, 281
+  size: 17, 35
+  orig: 17, 35
   offset: 0, 0
   index: -1
 skirt_a
-  rotate: false
-  xy: 583, 584
-  size: 146, 240
-  orig: 146, 240
+  rotate: true
+  xy: 295, 466
+  size: 45, 74
+  orig: 45, 74
   offset: 0, 0
   index: -1
 skirt_b
-  rotate: true
-  xy: 298, 391
-  size: 198, 189
-  orig: 198, 189
+  rotate: false
+  xy: 1, 79
+  size: 61, 58
+  orig: 61, 58
   offset: 0, 0
   index: -1
 skirt_back_b
   rotate: false
-  xy: 206, 20
-  size: 165, 256
-  orig: 165, 256
+  xy: 93, 299
+  size: 50, 78
+  orig: 50, 78
   offset: 0, 0
   index: -1
 skirt_back_c
-  rotate: true
-  xy: 372, 60
-  size: 145, 192
-  orig: 145, 192
+  rotate: false
+  xy: 65, 221
+  size: 44, 59
+  orig: 44, 59
   offset: 0, 0
   index: -1
 skirt_d
   rotate: false
-  xy: 730, 665
-  size: 206, 194
-  orig: 206, 194
+  xy: 1, 138
+  size: 63, 59
+  orig: 63, 59
   offset: 0, 0
   index: -1
 waist
-  rotate: false
-  xy: 833, 84
-  size: 90, 105
-  orig: 90, 105
+  rotate: true
+  xy: 144, 287
+  size: 28, 32
+  orig: 28, 32
   offset: 0, 0
   index: -1
