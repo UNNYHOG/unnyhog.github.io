@@ -20050,7 +20050,7 @@ VisualData.MAP_PARAMS.center = {
 
 const renderType = Phaser.WEBGL;
 
-const remotePluginPath = 'https://unnyhog.github.io/';
+const remotePluginPath = 'https://test-adminka.fra1.cdn.digitaloceanspaces.com/test-some-shit/';//https://unnyhog.github.io/plugins';
 
 let config = {
     type: renderType,
@@ -20090,14 +20090,13 @@ let config = {
                 {
                     type: 'scenePlugin',
                     key: 'SpinePlugin',
-                    // url: remotePluginPath + 'plugins/SpinePlugin.min.js',
-                    url: 'plugins/SpinePlugin.min.js',
+                    url: remotePluginPath + 'SpinePlugin.min.js',
                     sceneKey: 'spine'
                 },
                 {
                     type: 'scenePlugin',
                     key: 'rexuiplugin',
-                    url: remotePluginPath + 'plugins/rexuiplugin.min.js',
+                    url: remotePluginPath + 'rexuiplugin.min.js',
                     sceneKey: 'rexUI'
                 }
             ]
