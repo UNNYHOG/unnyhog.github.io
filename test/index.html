@@ -248,6 +248,15 @@
                     });
                 }
             });
+
+            console.error("play ad!");
+            UnnyNet.Advertising.playRewardedAd({
+                onCompleted: ()=>console.log("***>>>AD: onCompleted"),
+                onNoAds: ()=>console.log("***>>>AD: onNoAds"),
+                onAdBlock: ()=>console.log("***>>>AD: onAdBlock"),
+                onStarted: ()=>console.log("***>>>AD: onStarted"),
+            });
+
             // UnnyNet.UnnyNet.instance.API.authWithNutaku('9053', UnnyNet.SubPlatform.NutakuAndroid,
             //     '5e624f484926451f54c9668f95728b23',
             //     '37b64f6dbe9beb577ebc428c08496921',
