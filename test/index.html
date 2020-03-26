@@ -243,8 +243,8 @@
             UnnyNet.Payments.getProducts((responseData)=>{
                 console.info("!!!", responseData);
                 if (responseData.success) {
-                    UnnyNet.Payments.purchaseProduct(responseData.data[1].item_id, (purchaseData)=>{
-                        console.info("???", purchaseData);
+                    UnnyNet.Payments.purchaseProduct(responseData.data[0].item_id, (purchaseData)=>{
+                        console.info(">>**???", purchaseData);
                     });
                 }
             });
