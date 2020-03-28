@@ -1,0 +1,188 @@
+
+Slot2.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Effects/Splash/Splash_1
+  rotate: false
+  xy: 1, 1
+  size: 50, 56
+  orig: 50, 56
+  offset: 0, 0
+  index: -1
+Effects/Splash/Splash_2
+  rotate: false
+  xy: 52, 1
+  size: 50, 56
+  orig: 50, 56
+  offset: 0, 0
+  index: -1
+Effects/Splash/Splash_3
+  rotate: false
+  xy: 87, 120
+  size: 50, 56
+  orig: 50, 56
+  offset: 0, 0
+  index: -1
+Effects/Splash/Splash_4
+  rotate: false
+  xy: 54, 62
+  size: 50, 56
+  orig: 50, 56
+  offset: 0, 0
+  index: -1
+Effects/Splash/Splash_5
+  rotate: false
+  xy: 105, 63
+  size: 50, 56
+  orig: 50, 56
+  offset: 0, 0
+  index: -1
+Effects/Splash/Splash_6
+  rotate: false
+  xy: 244, 396
+  size: 50, 56
+  orig: 50, 56
+  offset: 0, 0
+  index: -1
+Effects/Splash/Splash_7
+  rotate: true
+  xy: 236, 345
+  size: 50, 56
+  orig: 50, 56
+  offset: 0, 0
+  index: -1
+Effects/Splash/Splash_8
+  rotate: false
+  xy: 222, 288
+  size: 50, 56
+  orig: 50, 56
+  offset: 0, 0
+  index: -1
+Effects/Splash/Splash_9
+  rotate: false
+  xy: 295, 414
+  size: 50, 56
+  orig: 50, 56
+  offset: 0, 0
+  index: -1
+Effects/drops/drops_1
+  rotate: false
+  xy: 36, 218
+  size: 91, 40
+  orig: 91, 40
+  offset: 0, 0
+  index: -1
+Effects/drops/drops_2
+  rotate: false
+  xy: 408, 471
+  size: 91, 40
+  orig: 91, 40
+  offset: 0, 0
+  index: -1
+Effects/drops/drops_3
+  rotate: false
+  xy: 130, 305
+  size: 91, 40
+  orig: 91, 40
+  offset: 0, 0
+  index: -1
+Effects/drops/drops_4
+  rotate: false
+  xy: 130, 264
+  size: 91, 40
+  orig: 91, 40
+  offset: 0, 0
+  index: -1
+Effects/drops/drops_5
+  rotate: false
+  xy: 36, 177
+  size: 91, 40
+  orig: 91, 40
+  offset: 0, 0
+  index: -1
+Face1
+  rotate: false
+  xy: 24, 119
+  size: 62, 57
+  orig: 62, 57
+  offset: 0, 0
+  index: -1
+Face2
+  rotate: false
+  xy: 346, 425
+  size: 49, 45
+  orig: 49, 45
+  offset: 0, 0
+  index: -1
+Fish
+  rotate: false
+  xy: 137, 346
+  size: 98, 50
+  orig: 98, 50
+  offset: 0, 0
+  index: -1
+FishFront
+  rotate: false
+  xy: 269, 471
+  size: 138, 40
+  orig: 138, 40
+  offset: 0, 0
+  index: -1
+FishRear
+  rotate: false
+  xy: 137, 453
+  size: 131, 58
+  orig: 131, 58
+  offset: 0, 0
+  index: -1
+HandFront
+  rotate: false
+  xy: 36, 259
+  size: 93, 87
+  orig: 93, 87
+  offset: 0, 0
+  index: -1
+HandRear
+  rotate: false
+  xy: 137, 397
+  size: 106, 55
+  orig: 106, 55
+  offset: 0, 0
+  index: -1
+Head
+  rotate: false
+  xy: 1, 347
+  size: 135, 164
+  orig: 135, 164
+  offset: 0, 0
+  index: -1
+LegFront
+  rotate: true
+  xy: 24, 58
+  size: 60, 29
+  orig: 60, 29
+  offset: 0, 0
+  index: -1
+LegRear
+  rotate: true
+  xy: 396, 433
+  size: 37, 51
+  orig: 37, 51
+  offset: 0, 0
+  index: -1
+ShadowFish
+  rotate: true
+  xy: 1, 189
+  size: 157, 34
+  orig: 157, 34
+  offset: 0, 0
+  index: -1
+ShadowMan
+  rotate: true
+  xy: 1, 58
+  size: 130, 22
+  orig: 130, 22
+  offset: 0, 0
+  index: -1

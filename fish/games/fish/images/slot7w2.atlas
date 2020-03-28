@@ -1,0 +1,160 @@
+
+slot7w2.png
+size: 1024,64
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+belt1
+  rotate: false
+  xy: 789, 39
+  size: 46, 24
+  orig: 46, 24
+  offset: 0, 0
+  index: -1
+belt2
+  rotate: false
+  xy: 836, 40
+  size: 39, 23
+  orig: 39, 23
+  offset: 0, 0
+  index: -1
+body
+  rotate: true
+  xy: 640, 18
+  size: 45, 51
+  orig: 45, 51
+  offset: 0, 0
+  index: -1
+deerbody
+  rotate: false
+  xy: 380, 19
+  size: 69, 44
+  orig: 69, 44
+  offset: 0, 0
+  index: -1
+effects/slot7_water1_1
+  rotate: false
+  xy: 281, 1
+  size: 26, 18
+  orig: 26, 18
+  offset: 0, 0
+  index: -1
+effects/slot7_water1_2
+  rotate: false
+  xy: 308, 1
+  size: 26, 18
+  orig: 26, 18
+  offset: 0, 0
+  index: -1
+effects/slot7_water1_3
+  rotate: false
+  xy: 335, 1
+  size: 26, 18
+  orig: 26, 18
+  offset: 0, 0
+  index: -1
+effects/slot7_water1_4
+  rotate: false
+  xy: 876, 45
+  size: 26, 18
+  orig: 26, 18
+  offset: 0, 0
+  index: -1
+effects/slot7_water1_5
+  rotate: false
+  xy: 903, 45
+  size: 26, 18
+  orig: 26, 18
+  offset: 0, 0
+  index: -1
+effects/slot7_water1_6
+  rotate: false
+  xy: 930, 45
+  size: 26, 18
+  orig: 26, 18
+  offset: 0, 0
+  index: -1
+effects/slot7_water1_7
+  rotate: false
+  xy: 957, 45
+  size: 26, 18
+  orig: 26, 18
+  offset: 0, 0
+  index: -1
+fish
+  rotate: true
+  xy: 789, 19
+  size: 19, 39
+  orig: 19, 39
+  offset: 0, 0
+  index: -1
+gifts
+  rotate: false
+  xy: 692, 16
+  size: 49, 47
+  orig: 49, 47
+  offset: 0, 0
+  index: -1
+hands
+  rotate: false
+  xy: 511, 28
+  size: 67, 35
+  orig: 67, 35
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 742, 16
+  size: 46, 47
+  orig: 46, 47
+  offset: 0, 0
+  index: -1
+head1
+  rotate: false
+  xy: 579, 21
+  size: 60, 42
+  orig: 60, 42
+  offset: 0, 0
+  index: -1
+head2
+  rotate: false
+  xy: 450, 13
+  size: 60, 50
+  orig: 60, 50
+  offset: 0, 0
+  index: -1
+patch
+  rotate: false
+  xy: 281, 20
+  size: 98, 43
+  orig: 98, 43
+  offset: 0, 0
+  index: -1
+shadowX
+  rotate: false
+  xy: 1, 4
+  size: 167, 59
+  orig: 167, 59
+  offset: 0, 0
+  index: -1
+sled
+  rotate: false
+  xy: 169, 5
+  size: 111, 58
+  orig: 111, 58
+  offset: 0, 0
+  index: -1
+star
+  rotate: false
+  xy: 362, 6
+  size: 12, 13
+  orig: 12, 13
+  offset: 0, 0
+  index: -1
+string4
+  rotate: true
+  xy: 511, 26
+  size: 1, 62
+  orig: 1, 62
+  offset: 0, 0
+  index: -1

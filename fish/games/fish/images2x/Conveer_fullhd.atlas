@@ -1,0 +1,76 @@
+
+Conveer_fullhd.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+04
+  rotate: false
+  xy: 1, 490
+  size: 203, 125
+  orig: 203, 125
+  offset: 0, 0
+  index: -1
+05
+  rotate: false
+  xy: 534, 919
+  size: 198, 162
+  orig: 198, 162
+  offset: 0, 0
+  index: -1
+2p1
+  rotate: false
+  xy: 1, 1082
+  size: 951, 54
+  orig: 951, 54
+  offset: 0, 0
+  index: -1
+2p2
+  rotate: false
+  xy: 1, 1137
+  size: 1096, 54
+  orig: 1096, 54
+  offset: 0, 0
+  index: -1
+Layer 7
+  rotate: false
+  xy: 1, 384
+  size: 73, 105
+  orig: 73, 105
+  offset: 0, 0
+  index: -1
+apparat
+  rotate: false
+  xy: 1, 616
+  size: 404, 292
+  orig: 404, 292
+  offset: 0, 0
+  index: -1
+door
+  rotate: false
+  xy: 406, 709
+  size: 105, 199
+  orig: 105, 199
+  offset: 0, 0
+  index: -1
+lampa
+  rotate: false
+  xy: 1098, 1149
+  size: 94, 42
+  orig: 94, 42
+  offset: 0, 0
+  index: -1
+part
+  rotate: false
+  xy: 1, 909
+  size: 532, 172
+  orig: 532, 172
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 733, 976
+  size: 105, 189
+  orig: 105, 189
+  offset: 0, 0
+  index: -1

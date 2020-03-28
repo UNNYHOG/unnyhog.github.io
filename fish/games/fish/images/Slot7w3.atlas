@@ -1,0 +1,188 @@
+
+Slot7w3.png
+size: 256,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body
+  rotate: false
+  xy: 1, 2
+  size: 75, 41
+  orig: 75, 41
+  offset: 0, 0
+  index: -1
+Claw
+  rotate: true
+  xy: 189, 86
+  size: 41, 50
+  orig: 41, 50
+  offset: 0, 0
+  index: -1
+DeadClaw
+  rotate: true
+  xy: 186, 44
+  size: 41, 48
+  orig: 41, 48
+  offset: 0, 0
+  index: -1
+DeadFish
+  rotate: false
+  xy: 104, 4
+  size: 38, 27
+  orig: 38, 27
+  offset: 0, 0
+  index: -1
+DeadTentacle
+  rotate: false
+  xy: 164, 62
+  size: 21, 39
+  orig: 21, 39
+  offset: 0, 0
+  index: -1
+Effects/slot7_water_1
+  rotate: false
+  xy: 247, 110
+  size: 5, 6
+  orig: 5, 6
+  offset: 0, 0
+  index: -1
+Effects/slot7_water_2
+  rotate: false
+  xy: 240, 88
+  size: 5, 6
+  orig: 5, 6
+  offset: 0, 0
+  index: -1
+Effects/slot7_water_3
+  rotate: false
+  xy: 247, 103
+  size: 5, 6
+  orig: 5, 6
+  offset: 0, 0
+  index: -1
+Effects/slot7_water_4
+  rotate: false
+  xy: 247, 96
+  size: 5, 6
+  orig: 5, 6
+  offset: 0, 0
+  index: -1
+Effects/slot7_water_5
+  rotate: false
+  xy: 235, 79
+  size: 5, 6
+  orig: 5, 6
+  offset: 0, 0
+  index: -1
+Effects/slot7_water_6
+  rotate: false
+  xy: 235, 72
+  size: 5, 6
+  orig: 5, 6
+  offset: 0, 0
+  index: -1
+Effects/slot7_waterup_1
+  rotate: true
+  xy: 153, 65
+  size: 6, 10
+  orig: 6, 10
+  offset: 0, 0
+  index: -1
+Effects/slot7_waterup_2
+  rotate: true
+  xy: 153, 58
+  size: 6, 10
+  orig: 6, 10
+  offset: 0, 0
+  index: -1
+Effects/slot7_waterup_3
+  rotate: false
+  xy: 240, 117
+  size: 6, 10
+  orig: 6, 10
+  offset: 0, 0
+  index: -1
+Effects/slot7_waterup_4
+  rotate: false
+  xy: 77, 33
+  size: 6, 10
+  orig: 6, 10
+  offset: 0, 0
+  index: -1
+Effects/slot7_waterup_5
+  rotate: false
+  xy: 153, 47
+  size: 6, 10
+  orig: 6, 10
+  offset: 0, 0
+  index: -1
+Effects/slot7_waterup_6
+  rotate: false
+  xy: 240, 106
+  size: 6, 10
+  orig: 6, 10
+  offset: 0, 0
+  index: -1
+Effects/slot7_waterup_7
+  rotate: false
+  xy: 247, 117
+  size: 6, 10
+  orig: 6, 10
+  offset: 0, 0
+  index: -1
+Effects/slot7_waterup_8
+  rotate: false
+  xy: 240, 95
+  size: 6, 10
+  orig: 6, 10
+  offset: 0, 0
+  index: -1
+Fish
+  rotate: false
+  xy: 143, 4
+  size: 38, 27
+  orig: 38, 27
+  offset: 0, 0
+  index: -1
+Hole
+  rotate: false
+  xy: 89, 102
+  size: 99, 25
+  orig: 99, 25
+  offset: 0, 0
+  index: -1
+Neck
+  rotate: false
+  xy: 77, 1
+  size: 26, 30
+  orig: 26, 30
+  offset: 0, 0
+  index: -1
+Pile
+  rotate: false
+  xy: 89, 72
+  size: 74, 29
+  orig: 74, 29
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 89, 32
+  size: 76, 12
+  orig: 76, 12
+  offset: 0, 0
+  index: -1
+Tentacle
+  rotate: true
+  xy: 89, 45
+  size: 26, 63
+  orig: 26, 63
+  offset: 0, 0
+  index: -1
+TentacleCurvy
+  rotate: false
+  xy: 1, 44
+  size: 87, 83
+  orig: 87, 83
+  offset: 0, 0
+  index: -1

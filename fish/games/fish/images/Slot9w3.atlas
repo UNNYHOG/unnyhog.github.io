@@ -1,0 +1,230 @@
+
+Slot9w3.png
+size: 256,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body
+  rotate: false
+  xy: 1, 37
+  size: 115, 90
+  orig: 115, 90
+  offset: 0, 0
+  index: -1
+Effects/slot9_fire_1
+  rotate: false
+  xy: 212, 62
+  size: 7, 21
+  orig: 7, 21
+  offset: 0, 0
+  index: -1
+Effects/slot9_fire_2
+  rotate: false
+  xy: 211, 40
+  size: 7, 21
+  orig: 7, 21
+  offset: 0, 0
+  index: -1
+Effects/slot9_fire_3
+  rotate: false
+  xy: 228, 69
+  size: 7, 21
+  orig: 7, 21
+  offset: 0, 0
+  index: -1
+Effects/slot9_fire_4
+  rotate: false
+  xy: 219, 40
+  size: 7, 21
+  orig: 7, 21
+  offset: 0, 0
+  index: -1
+Effects/slot9_fire_5
+  rotate: false
+  xy: 236, 69
+  size: 7, 21
+  orig: 7, 21
+  offset: 0, 0
+  index: -1
+Effects/slot9_fire_6
+  rotate: false
+  xy: 244, 71
+  size: 7, 21
+  orig: 7, 21
+  offset: 0, 0
+  index: -1
+Effects/slot9_fire_7
+  rotate: true
+  xy: 178, 31
+  size: 7, 21
+  orig: 7, 21
+  offset: 0, 0
+  index: -1
+Effects/slot9_fire_8
+  rotate: false
+  xy: 93, 6
+  size: 7, 21
+  orig: 7, 21
+  offset: 0, 0
+  index: -1
+Effects/slot9_water_1
+  rotate: false
+  xy: 57, 13
+  size: 8, 4
+  orig: 8, 4
+  offset: 0, 0
+  index: -1
+Effects/slot9_water_2
+  rotate: false
+  xy: 66, 13
+  size: 8, 4
+  orig: 8, 4
+  offset: 0, 0
+  index: -1
+Effects/slot9_water_3
+  rotate: false
+  xy: 75, 13
+  size: 8, 4
+  orig: 8, 4
+  offset: 0, 0
+  index: -1
+Effects/slot9_water_4
+  rotate: false
+  xy: 84, 13
+  size: 8, 4
+  orig: 8, 4
+  offset: 0, 0
+  index: -1
+Effects/slot9_water_5
+  rotate: false
+  xy: 93, 1
+  size: 8, 4
+  orig: 8, 4
+  offset: 0, 0
+  index: -1
+Fish5
+  rotate: false
+  xy: 16, 1
+  size: 38, 11
+  orig: 38, 11
+  offset: 0, 0
+  index: -1
+Head
+  rotate: true
+  xy: 184, 91
+  size: 36, 52
+  orig: 36, 52
+  offset: 0, 0
+  index: -1
+Jaw
+  rotate: true
+  xy: 16, 13
+  size: 23, 40
+  orig: 23, 40
+  offset: 0, 0
+  index: -1
+Neck
+  rotate: false
+  xy: 117, 42
+  size: 65, 42
+  orig: 65, 42
+  offset: 0, 0
+  index: -1
+Shadow1
+  rotate: false
+  xy: 183, 39
+  size: 24, 5
+  orig: 24, 5
+  offset: 0, 0
+  index: -1
+Shadow2
+  rotate: false
+  xy: 117, 36
+  size: 30, 5
+  orig: 30, 5
+  offset: 0, 0
+  index: -1
+Shadow3
+  rotate: false
+  xy: 148, 36
+  size: 29, 5
+  orig: 29, 5
+  offset: 0, 0
+  index: -1
+Shadow4
+  rotate: false
+  xy: 184, 84
+  size: 33, 6
+  orig: 33, 6
+  offset: 0, 0
+  index: -1
+Shadow5
+  rotate: false
+  xy: 57, 28
+  size: 40, 8
+  orig: 40, 8
+  offset: 0, 0
+  index: -1
+Tail
+  rotate: false
+  xy: 183, 63
+  size: 28, 20
+  orig: 28, 20
+  offset: 0, 0
+  index: -1
+Wing1
+  rotate: false
+  xy: 117, 85
+  size: 66, 42
+  orig: 66, 42
+  offset: 0, 0
+  index: -1
+Wing2
+  rotate: true
+  xy: 237, 93
+  size: 34, 17
+  orig: 34, 17
+  offset: 0, 0
+  index: -1
+fish1
+  rotate: true
+  xy: 220, 68
+  size: 22, 7
+  orig: 22, 7
+  offset: 0, 0
+  index: -1
+fish2
+  rotate: false
+  xy: 183, 54
+  size: 27, 8
+  orig: 27, 8
+  offset: 0, 0
+  index: -1
+fish3
+  rotate: false
+  xy: 183, 45
+  size: 27, 8
+  orig: 27, 8
+  offset: 0, 0
+  index: -1
+fish4
+  rotate: false
+  xy: 57, 18
+  size: 32, 9
+  orig: 32, 9
+  offset: 0, 0
+  index: -1
+fishes
+  rotate: true
+  xy: 1, 1
+  size: 35, 14
+  orig: 35, 14
+  offset: 0, 0
+  index: -1
+shadows
+  rotate: false
+  xy: 55, 1
+  size: 37, 11
+  orig: 37, 11
+  offset: 0, 0
+  index: -1

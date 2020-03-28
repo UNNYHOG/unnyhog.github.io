@@ -1,0 +1,97 @@
+
+Slot5w3.png
+size: 256,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Effects/slot5_water_1
+  rotate: false
+  xy: 46, 21
+  size: 8, 8
+  orig: 8, 8
+  offset: 0, 0
+  index: -1
+Effects/slot5_water_2
+  rotate: false
+  xy: 104, 46
+  size: 8, 8
+  orig: 8, 8
+  offset: 0, 0
+  index: -1
+Effects/slot5_water_3
+  rotate: false
+  xy: 168, 99
+  size: 8, 8
+  orig: 8, 8
+  offset: 0, 0
+  index: -1
+Effects/slot5_water_4
+  rotate: false
+  xy: 213, 118
+  size: 8, 8
+  orig: 8, 8
+  offset: 0, 0
+  index: -1
+Effects/slot5_water_5
+  rotate: false
+  xy: 46, 12
+  size: 8, 8
+  orig: 8, 8
+  offset: 0, 0
+  index: -1
+Effects/slot5_water_6
+  rotate: false
+  xy: 55, 21
+  size: 8, 8
+  orig: 8, 8
+  offset: 0, 0
+  index: -1
+Effects/slot5_water_7
+  rotate: false
+  xy: 104, 37
+  size: 8, 8
+  orig: 8, 8
+  offset: 0, 0
+  index: -1
+Effects/slot5_water_8
+  rotate: false
+  xy: 113, 46
+  size: 8, 8
+  orig: 8, 8
+  offset: 0, 0
+  index: -1
+Fish
+  rotate: false
+  xy: 168, 108
+  size: 44, 18
+  orig: 44, 18
+  offset: 0, 0
+  index: -1
+FishCurvy
+  rotate: true
+  xy: 1, 1
+  size: 28, 44
+  orig: 28, 44
+  offset: 0, 0
+  index: -1
+Hall
+  rotate: false
+  xy: 104, 66
+  size: 63, 60
+  orig: 63, 60
+  offset: 0, 0
+  index: -1
+HallRound
+  rotate: false
+  xy: 1, 30
+  size: 102, 96
+  orig: 102, 96
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 104, 55
+  size: 62, 10
+  orig: 62, 10
+  offset: 0, 0
+  index: -1

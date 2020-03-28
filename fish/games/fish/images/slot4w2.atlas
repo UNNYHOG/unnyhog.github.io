@@ -1,0 +1,209 @@
+
+slot4w2.png
+size: 1024,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Effects/1/slot4_water1_1
+  rotate: false
+  xy: 1, 1
+  size: 67, 31
+  orig: 67, 31
+  offset: 0, 0
+  index: -1
+Effects/1/slot4_water1_2
+  rotate: false
+  xy: 69, 1
+  size: 67, 31
+  orig: 67, 31
+  offset: 0, 0
+  index: -1
+Effects/1/slot4_water1_3
+  rotate: false
+  xy: 137, 1
+  size: 67, 31
+  orig: 67, 31
+  offset: 0, 0
+  index: -1
+Effects/1/slot4_water1_4
+  rotate: false
+  xy: 651, 96
+  size: 67, 31
+  orig: 67, 31
+  offset: 0, 0
+  index: -1
+Effects/1/slot4_water1_5
+  rotate: false
+  xy: 719, 96
+  size: 67, 31
+  orig: 67, 31
+  offset: 0, 0
+  index: -1
+Effects/1/slot4_water1_6
+  rotate: false
+  xy: 787, 96
+  size: 67, 31
+  orig: 67, 31
+  offset: 0, 0
+  index: -1
+Effects/2/slot4_water2_1
+  rotate: false
+  xy: 855, 95
+  size: 65, 32
+  orig: 65, 32
+  offset: 0, 0
+  index: -1
+Effects/2/slot4_water2_2
+  rotate: false
+  xy: 921, 95
+  size: 65, 32
+  orig: 65, 32
+  offset: 0, 0
+  index: -1
+Effects/2/slot4_water2_3
+  rotate: false
+  xy: 291, 44
+  size: 65, 32
+  orig: 65, 32
+  offset: 0, 0
+  index: -1
+Effects/2/slot4_water2_4
+  rotate: false
+  xy: 291, 11
+  size: 65, 32
+  orig: 65, 32
+  offset: 0, 0
+  index: -1
+Effects/2/slot4_water2_5
+  rotate: false
+  xy: 357, 43
+  size: 65, 32
+  orig: 65, 32
+  offset: 0, 0
+  index: -1
+Effects/2/slot4_water2_6
+  rotate: false
+  xy: 357, 10
+  size: 65, 32
+  orig: 65, 32
+  offset: 0, 0
+  index: -1
+Hole
+  rotate: false
+  xy: 177, 76
+  size: 106, 51
+  orig: 106, 51
+  offset: 0, 0
+  index: -1
+Lift_up
+  rotate: true
+  xy: 423, 36
+  size: 39, 27
+  orig: 39, 27
+  offset: 0, 0
+  index: -1
+Ropes
+  rotate: false
+  xy: 284, 77
+  size: 87, 50
+  orig: 87, 50
+  offset: 0, 0
+  index: -1
+RopesGoodt
+  rotate: true
+  xy: 651, 88
+  size: 7, 77
+  orig: 7, 77
+  offset: 0, 0
+  index: -1
+auto
+  rotate: false
+  xy: 445, 77
+  size: 69, 50
+  orig: 69, 50
+  offset: 0, 0
+  index: -1
+eyes
+  rotate: false
+  xy: 583, 77
+  size: 27, 12
+  orig: 27, 12
+  offset: 0, 0
+  index: -1
+eyescloses
+  rotate: false
+  xy: 423, 27
+  size: 27, 8
+  orig: 27, 8
+  offset: 0, 0
+  index: -1
+fish
+  rotate: false
+  xy: 515, 76
+  size: 67, 51
+  orig: 67, 51
+  offset: 0, 0
+  index: -1
+ice2
+  rotate: false
+  xy: 1, 33
+  size: 87, 94
+  orig: 87, 94
+  offset: 0, 0
+  index: -1
+ice4
+  rotate: false
+  xy: 89, 33
+  size: 87, 94
+  orig: 87, 94
+  offset: 0, 0
+  index: -1
+man1
+  rotate: true
+  xy: 177, 35
+  size: 40, 66
+  orig: 40, 66
+  offset: 0, 0
+  index: -1
+man2
+  rotate: true
+  xy: 372, 76
+  size: 51, 72
+  orig: 51, 72
+  offset: 0, 0
+  index: -1
+man3
+  rotate: true
+  xy: 583, 90
+  size: 37, 67
+  orig: 37, 67
+  offset: 0, 0
+  index: -1
+part3
+  rotate: false
+  xy: 205, 1
+  size: 25, 18
+  orig: 25, 18
+  offset: 0, 0
+  index: -1
+prt1
+  rotate: false
+  xy: 244, 20
+  size: 46, 55
+  orig: 46, 55
+  offset: 0, 0
+  index: -1
+shadow3
+  rotate: false
+  xy: 451, 61
+  size: 37, 15
+  orig: 37, 15
+  offset: 0, 0
+  index: -1
+shadowbig
+  rotate: false
+  xy: 987, 112
+  size: 35, 15
+  orig: 35, 15
+  offset: 0, 0
+  index: -1

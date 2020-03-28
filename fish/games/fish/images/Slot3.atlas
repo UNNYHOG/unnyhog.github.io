@@ -1,0 +1,321 @@
+
+Slot3.png
+size: 256,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Boat
+  rotate: false
+  xy: 1, 209
+  size: 126, 46
+  orig: 126, 46
+  offset: 0, 0
+  index: -1
+BoatFront
+  rotate: true
+  xy: 1, 78
+  size: 130, 42
+  orig: 130, 42
+  offset: 0, 0
+  index: -1
+Body
+  rotate: false
+  xy: 75, 149
+  size: 50, 59
+  orig: 50, 59
+  offset: 0, 0
+  index: -1
+Box
+  rotate: false
+  xy: 75, 104
+  size: 49, 44
+  orig: 49, 44
+  offset: 0, 0
+  index: -1
+Effects/WaterBlow/WaterBlow_1
+  rotate: false
+  xy: 144, 15
+  size: 25, 21
+  orig: 25, 21
+  offset: 0, 0
+  index: -1
+Effects/WaterBlow/WaterBlow_2
+  rotate: false
+  xy: 172, 114
+  size: 25, 21
+  orig: 25, 21
+  offset: 0, 0
+  index: -1
+Effects/WaterBlow/WaterBlow_3
+  rotate: true
+  xy: 158, 84
+  size: 25, 21
+  orig: 25, 21
+  offset: 0, 0
+  index: -1
+Effects/WaterBlow/WaterBlow_4
+  rotate: true
+  xy: 180, 88
+  size: 25, 21
+  orig: 25, 21
+  offset: 0, 0
+  index: -1
+Effects/WaterBlow/WaterBlow_5
+  rotate: true
+  xy: 168, 58
+  size: 25, 21
+  orig: 25, 21
+  offset: 0, 0
+  index: -1
+Effects/WaterBlow/WaterBlow_6
+  rotate: false
+  xy: 198, 114
+  size: 25, 21
+  orig: 25, 21
+  offset: 0, 0
+  index: -1
+Effects/WaterBlow/WaterBlow_7
+  rotate: true
+  xy: 202, 88
+  size: 25, 21
+  orig: 25, 21
+  offset: 0, 0
+  index: -1
+Effects/WaterBlow/WaterBlow_8
+  rotate: false
+  xy: 190, 66
+  size: 25, 21
+  orig: 25, 21
+  offset: 0, 0
+  index: -1
+Effects/WaterBlow/WaterBlow_9
+  rotate: true
+  xy: 224, 113
+  size: 25, 21
+  orig: 25, 21
+  offset: 0, 0
+  index: -1
+Effects/WaterExplosion/WaterExplosion_1
+  rotate: false
+  xy: 179, 204
+  size: 34, 33
+  orig: 34, 33
+  offset: 0, 0
+  index: -1
+Effects/WaterExplosion/WaterExplosion_10
+  rotate: false
+  xy: 125, 111
+  size: 34, 33
+  orig: 34, 33
+  offset: 0, 0
+  index: -1
+Effects/WaterExplosion/WaterExplosion_2
+  rotate: false
+  xy: 40, 40
+  size: 34, 33
+  orig: 34, 33
+  offset: 0, 0
+  index: -1
+Effects/WaterExplosion/WaterExplosion_3
+  rotate: false
+  xy: 75, 46
+  size: 34, 33
+  orig: 34, 33
+  offset: 0, 0
+  index: -1
+Effects/WaterExplosion/WaterExplosion_4
+  rotate: false
+  xy: 173, 170
+  size: 34, 33
+  orig: 34, 33
+  offset: 0, 0
+  index: -1
+Effects/WaterExplosion/WaterExplosion_5
+  rotate: false
+  xy: 40, 6
+  size: 34, 33
+  orig: 34, 33
+  offset: 0, 0
+  index: -1
+Effects/WaterExplosion/WaterExplosion_6
+  rotate: false
+  xy: 75, 12
+  size: 34, 33
+  orig: 34, 33
+  offset: 0, 0
+  index: -1
+Effects/WaterExplosion/WaterExplosion_7
+  rotate: true
+  xy: 110, 1
+  size: 34, 33
+  orig: 34, 33
+  offset: 0, 0
+  index: -1
+Effects/WaterExplosion/WaterExplosion_8
+  rotate: false
+  xy: 173, 136
+  size: 34, 33
+  orig: 34, 33
+  offset: 0, 0
+  index: -1
+Effects/WaterExplosion/WaterExplosion_9
+  rotate: true
+  xy: 208, 139
+  size: 34, 33
+  orig: 34, 33
+  offset: 0, 0
+  index: -1
+Face1
+  rotate: false
+  xy: 208, 174
+  size: 21, 28
+  orig: 21, 28
+  offset: 0, 0
+  index: -1
+Face2
+  rotate: true
+  xy: 1, 1
+  size: 21, 33
+  orig: 21, 33
+  offset: 0, 0
+  index: -1
+Fish5
+  rotate: false
+  xy: 179, 238
+  size: 61, 17
+  orig: 61, 17
+  offset: 0, 0
+  index: -1
+Flame
+  rotate: false
+  xy: 190, 47
+  size: 19, 18
+  orig: 19, 18
+  offset: 0, 0
+  index: -1
+HandFront
+  rotate: false
+  xy: 136, 47
+  size: 31, 34
+  orig: 31, 34
+  offset: 0, 0
+  index: -1
+HandRear
+  rotate: false
+  xy: 125, 82
+  size: 32, 28
+  orig: 32, 28
+  offset: 0, 0
+  index: -1
+Head
+  rotate: true
+  xy: 128, 209
+  size: 46, 50
+  orig: 46, 50
+  offset: 0, 0
+  index: -1
+PalmFree
+  rotate: false
+  xy: 224, 92
+  size: 21, 20
+  orig: 21, 20
+  offset: 0, 0
+  index: -1
+PalmTNT
+  rotate: true
+  xy: 75, 80
+  size: 23, 49
+  orig: 23, 49
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: true
+  xy: 44, 74
+  size: 134, 30
+  orig: 134, 30
+  offset: 0, 0
+  index: -1
+Shadow1
+  rotate: false
+  xy: 136, 37
+  size: 37, 9
+  orig: 37, 9
+  offset: 0, 0
+  index: -1
+Shadow2
+  rotate: true
+  xy: 164, 160
+  size: 48, 8
+  orig: 48, 8
+  offset: 0, 0
+  index: -1
+Shadow3
+  rotate: true
+  xy: 233, 191
+  size: 46, 7
+  orig: 46, 7
+  offset: 0, 0
+  index: -1
+Shadow4
+  rotate: true
+  xy: 30, 26
+  size: 51, 9
+  orig: 51, 9
+  offset: 0, 0
+  index: -1
+Shadow5
+  rotate: true
+  xy: 150, 145
+  size: 63, 13
+  orig: 63, 13
+  offset: 0, 0
+  index: -1
+TNTFree
+  rotate: false
+  xy: 126, 154
+  size: 23, 54
+  orig: 23, 54
+  offset: 0, 0
+  index: -1
+TNTFront
+  rotate: true
+  xy: 214, 203
+  size: 34, 18
+  orig: 34, 18
+  offset: 0, 0
+  index: -1
+Veslo
+  rotate: true
+  xy: 1, 23
+  size: 54, 28
+  orig: 54, 28
+  offset: 0, 0
+  index: -1
+fish1
+  rotate: true
+  xy: 160, 110
+  size: 34, 11
+  orig: 34, 11
+  offset: 0, 0
+  index: -1
+fish2
+  rotate: true
+  xy: 110, 36
+  size: 43, 12
+  orig: 43, 12
+  offset: 0, 0
+  index: -1
+fish3
+  rotate: true
+  xy: 123, 36
+  size: 43, 12
+  orig: 43, 12
+  offset: 0, 0
+  index: -1
+fish4
+  rotate: true
+  xy: 241, 205
+  size: 50, 14
+  orig: 50, 14
+  offset: 0, 0
+  index: -1

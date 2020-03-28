@@ -1,0 +1,181 @@
+
+slot6w2.png
+size: 512,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Effects/1/slot6_effect1_1
+  rotate: false
+  xy: 400, 98
+  size: 41, 29
+  orig: 41, 29
+  offset: 0, 0
+  index: -1
+Effects/1/slot6_effect1_2
+  rotate: false
+  xy: 442, 98
+  size: 41, 29
+  orig: 41, 29
+  offset: 0, 0
+  index: -1
+Effects/1/slot6_effect1_3
+  rotate: true
+  xy: 269, 14
+  size: 41, 29
+  orig: 41, 29
+  offset: 0, 0
+  index: -1
+Effects/1/slot6_effect1_4
+  rotate: true
+  xy: 299, 14
+  size: 41, 29
+  orig: 41, 29
+  offset: 0, 0
+  index: -1
+Effects/water/slot6_water1_1
+  rotate: true
+  xy: 240, 39
+  size: 16, 9
+  orig: 16, 9
+  offset: 0, 0
+  index: -1
+Effects/water/slot6_water1_2
+  rotate: true
+  xy: 250, 39
+  size: 16, 9
+  orig: 16, 9
+  offset: 0, 0
+  index: -1
+Effects/water/slot6_water1_3
+  rotate: false
+  xy: 1, 6
+  size: 16, 9
+  orig: 16, 9
+  offset: 0, 0
+  index: -1
+Effects/water/slot6_water1_4
+  rotate: false
+  xy: 118, 47
+  size: 16, 9
+  orig: 16, 9
+  offset: 0, 0
+  index: -1
+Effects/water/slot6_water1_5
+  rotate: false
+  xy: 269, 4
+  size: 16, 9
+  orig: 16, 9
+  offset: 0, 0
+  index: -1
+Effects/water/slot6_water1_6
+  rotate: false
+  xy: 374, 81
+  size: 16, 9
+  orig: 16, 9
+  offset: 0, 0
+  index: -1
+body
+  rotate: false
+  xy: 221, 1
+  size: 47, 37
+  orig: 47, 37
+  offset: 0, 0
+  index: -1
+body2
+  rotate: true
+  xy: 357, 91
+  size: 36, 42
+  orig: 36, 42
+  offset: 0, 0
+  index: -1
+fish
+  rotate: true
+  xy: 278, 56
+  size: 45, 29
+  orig: 45, 29
+  offset: 0, 0
+  index: -1
+fish_small
+  rotate: true
+  xy: 309, 104
+  size: 23, 47
+  orig: 23, 47
+  offset: 0, 0
+  index: -1
+hand
+  rotate: true
+  xy: 69, 16
+  size: 40, 48
+  orig: 40, 48
+  offset: 0, 0
+  index: -1
+hand2
+  rotate: true
+  xy: 338, 61
+  size: 29, 35
+  orig: 29, 35
+  offset: 0, 0
+  index: -1
+hand3
+  rotate: true
+  xy: 170, 1
+  size: 37, 50
+  orig: 37, 50
+  offset: 0, 0
+  index: -1
+hand4
+  rotate: true
+  xy: 1, 16
+  size: 40, 67
+  orig: 40, 67
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 240, 56
+  size: 37, 45
+  orig: 37, 45
+  offset: 0, 0
+  index: -1
+head2
+  rotate: true
+  xy: 118, 1
+  size: 37, 51
+  orig: 37, 51
+  offset: 0, 0
+  index: -1
+sail
+  rotate: false
+  xy: 151, 39
+  size: 88, 88
+  orig: 88, 88
+  offset: 0, 0
+  index: -1
+shadow2
+  rotate: false
+  xy: 240, 102
+  size: 68, 25
+  orig: 68, 25
+  offset: 0, 0
+  index: -1
+shield
+  rotate: true
+  xy: 484, 90
+  size: 37, 26
+  orig: 37, 26
+  offset: 0, 0
+  index: -1
+shipdeck
+  rotate: false
+  xy: 1, 57
+  size: 149, 70
+  orig: 149, 70
+  offset: 0, 0
+  index: -1
+shippart
+  rotate: false
+  xy: 308, 56
+  size: 29, 34
+  orig: 29, 34
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,195 @@
+
+Slot1w3.png
+size: 512,64
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body
+  rotate: false
+  xy: 152, 9
+  size: 53, 49
+  orig: 53, 49
+  offset: 0, 0
+  index: -1
+Effects/LineArt/Leska1
+  rotate: true
+  xy: 334, 47
+  size: 1, 64
+  orig: 1, 64
+  offset: 0, 0
+  index: -1
+Effects/LineArt/Leska3
+  rotate: true
+  xy: 353, 49
+  size: 14, 64
+  orig: 14, 64
+  offset: 0, 0
+  index: -1
+Effects/LineArt/Leska4
+  rotate: true
+  xy: 270, 31
+  size: 19, 63
+  orig: 19, 63
+  offset: 0, 0
+  index: -1
+Effects/LineArt/Leska8
+  rotate: true
+  xy: 418, 45
+  size: 5, 65
+  orig: 5, 65
+  offset: 0, 0
+  index: -1
+Effects/LineArt/Leska9
+  rotate: true
+  xy: 418, 51
+  size: 9, 65
+  orig: 9, 65
+  offset: 0, 0
+  index: -1
+Effects/slot1_water_1
+  rotate: false
+  xy: 66, 10
+  size: 8, 8
+  orig: 8, 8
+  offset: 0, 0
+  index: -1
+Effects/slot1_water_2
+  rotate: false
+  xy: 66, 1
+  size: 8, 8
+  orig: 8, 8
+  offset: 0, 0
+  index: -1
+Effects/slot1_water_3
+  rotate: false
+  xy: 309, 22
+  size: 8, 8
+  orig: 8, 8
+  offset: 0, 0
+  index: -1
+Effects/slot1_water_4
+  rotate: false
+  xy: 75, 10
+  size: 8, 8
+  orig: 8, 8
+  offset: 0, 0
+  index: -1
+Effects/slot1_water_5
+  rotate: false
+  xy: 75, 1
+  size: 8, 8
+  orig: 8, 8
+  offset: 0, 0
+  index: -1
+Effects/slot1_water_6
+  rotate: false
+  xy: 309, 13
+  size: 8, 8
+  orig: 8, 8
+  offset: 0, 0
+  index: -1
+Effects/slot1_water_7
+  rotate: false
+  xy: 309, 4
+  size: 8, 8
+  orig: 8, 8
+  offset: 0, 0
+  index: -1
+Effects/slot1_water_8
+  rotate: false
+  xy: 318, 22
+  size: 8, 8
+  orig: 8, 8
+  offset: 0, 0
+  index: -1
+FrontHand
+  rotate: true
+  xy: 374, 13
+  size: 33, 30
+  orig: 33, 30
+  offset: 0, 0
+  index: -1
+Head1
+  rotate: false
+  xy: 87, 9
+  size: 64, 49
+  orig: 64, 49
+  offset: 0, 0
+  index: -1
+Head2
+  rotate: false
+  xy: 206, 13
+  size: 63, 50
+  orig: 63, 50
+  offset: 0, 0
+  index: -1
+Layer 1
+  rotate: false
+  xy: 1, 1
+  size: 47, 24
+  orig: 47, 24
+  offset: 0, 0
+  index: -1
+LowerBody
+  rotate: false
+  xy: 1, 26
+  size: 85, 37
+  orig: 85, 37
+  offset: 0, 0
+  index: -1
+RearHand
+  rotate: false
+  xy: 49, 1
+  size: 16, 17
+  orig: 16, 17
+  offset: 0, 0
+  index: -1
+Rod
+  rotate: false
+  xy: 87, 59
+  size: 106, 4
+  orig: 106, 4
+  offset: 0, 0
+  index: -1
+ShadowMain
+  rotate: false
+  xy: 270, 51
+  size: 82, 12
+  orig: 82, 12
+  offset: 0, 0
+  index: -1
+ShadowVedro
+  rotate: false
+  xy: 49, 19
+  size: 37, 6
+  orig: 37, 6
+  offset: 0, 0
+  index: -1
+ShadowWater
+  rotate: false
+  xy: 492, 59
+  size: 19, 4
+  orig: 19, 4
+  offset: 0, 0
+  index: -1
+String
+  rotate: false
+  xy: 270, 1
+  size: 38, 29
+  orig: 38, 29
+  offset: 0, 0
+  index: -1
+StringS
+  rotate: true
+  xy: 418, 61
+  size: 2, 73
+  orig: 2, 73
+  offset: 0, 0
+  index: -1
+Vedro
+  rotate: false
+  xy: 334, 13
+  size: 39, 33
+  orig: 39, 33
+  offset: 0, 0
+  index: -1

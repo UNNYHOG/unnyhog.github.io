@@ -1,0 +1,300 @@
+
+slot9.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Effects/blinks/blinks1
+  rotate: false
+  xy: 258, 417
+  size: 21, 14
+  orig: 21, 14
+  offset: 0, 0
+  index: -1
+Effects/blinks/blinks2
+  rotate: true
+  xy: 1, 122
+  size: 21, 14
+  orig: 21, 14
+  offset: 0, 0
+  index: -1
+Effects/blinks/blinks3
+  rotate: true
+  xy: 73, 296
+  size: 21, 14
+  orig: 21, 14
+  offset: 0, 0
+  index: -1
+Effects/blinks/blinks4
+  rotate: false
+  xy: 88, 304
+  size: 21, 14
+  orig: 21, 14
+  offset: 0, 0
+  index: -1
+Effects/blinks/blinks5
+  rotate: false
+  xy: 484, 496
+  size: 21, 14
+  orig: 21, 14
+  offset: 0, 0
+  index: -1
+Effects/blinks/blinks6
+  rotate: false
+  xy: 280, 417
+  size: 21, 14
+  orig: 21, 14
+  offset: 0, 0
+  index: -1
+Effects/blinks/blinks7
+  rotate: true
+  xy: 1, 100
+  size: 21, 14
+  orig: 21, 14
+  offset: 0, 0
+  index: -1
+Effects/blinks/blinks8
+  rotate: true
+  xy: 73, 274
+  size: 21, 14
+  orig: 21, 14
+  offset: 0, 0
+  index: -1
+Effects/blinks/blinks9
+  rotate: true
+  xy: 70, 252
+  size: 21, 14
+  orig: 21, 14
+  offset: 0, 0
+  index: -1
+Effects/lights
+  rotate: false
+  xy: 463, 490
+  size: 20, 20
+  orig: 20, 20
+  offset: 0, 0
+  index: -1
+Effects/waterexplosion/waterexplosion2_1
+  rotate: false
+  xy: 45, 215
+  size: 16, 9
+  orig: 16, 9
+  offset: 0, 0
+  index: -1
+Effects/waterexplosion/waterexplosion2_2
+  rotate: false
+  xy: 366, 439
+  size: 16, 9
+  orig: 16, 9
+  offset: 0, 0
+  index: -1
+Effects/waterexplosion/waterexplosion2_3
+  rotate: false
+  xy: 88, 294
+  size: 16, 9
+  orig: 16, 9
+  offset: 0, 0
+  index: -1
+Effects/waterexplosion/waterexplosion2_4
+  rotate: true
+  xy: 1, 83
+  size: 16, 9
+  orig: 16, 9
+  offset: 0, 0
+  index: -1
+Effects/waterexplosion/waterexplosion2_5
+  rotate: false
+  xy: 383, 439
+  size: 16, 9
+  orig: 16, 9
+  offset: 0, 0
+  index: -1
+Effects/waterexplosion/waterexplosion2_6
+  rotate: false
+  xy: 88, 284
+  size: 16, 9
+  orig: 16, 9
+  offset: 0, 0
+  index: -1
+Effects/waterexplosion/waterexplosion2_7
+  rotate: true
+  xy: 1, 66
+  size: 16, 9
+  orig: 16, 9
+  offset: 0, 0
+  index: -1
+Effects/waterexplosion/waterexplosion2_8
+  rotate: false
+  xy: 400, 439
+  size: 16, 9
+  orig: 16, 9
+  offset: 0, 0
+  index: -1
+Female0
+  rotate: true
+  xy: 130, 376
+  size: 30, 80
+  orig: 30, 80
+  offset: 0, 0
+  index: -1
+Female1
+  rotate: true
+  xy: 341, 480
+  size: 30, 80
+  orig: 30, 80
+  offset: 0, 0
+  index: -1
+Female2
+  rotate: true
+  xy: 130, 345
+  size: 30, 80
+  orig: 30, 80
+  offset: 0, 0
+  index: -1
+FemaleFrontHand1
+  rotate: true
+  xy: 341, 436
+  size: 12, 24
+  orig: 12, 24
+  offset: 0, 0
+  index: -1
+FemaleFrontHand2
+  rotate: false
+  xy: 1, 172
+  size: 21, 36
+  orig: 21, 36
+  offset: 0, 0
+  index: -1
+FemaleRearHand1
+  rotate: false
+  xy: 25, 214
+  size: 19, 34
+  orig: 19, 34
+  offset: 0, 0
+  index: -1
+FemaleRearHand2
+  rotate: false
+  xy: 110, 303
+  size: 10, 15
+  orig: 10, 15
+  offset: 0, 0
+  index: -1
+ManBody0
+  rotate: false
+  xy: 88, 328
+  size: 41, 78
+  orig: 41, 78
+  offset: 0, 0
+  index: -1
+ManBody1
+  rotate: true
+  xy: 341, 449
+  size: 30, 79
+  orig: 30, 79
+  offset: 0, 0
+  index: -1
+ManBody2
+  rotate: false
+  xy: 305, 433
+  size: 35, 77
+  orig: 35, 77
+  offset: 0, 0
+  index: -1
+ManFrontHand1
+  rotate: false
+  xy: 445, 484
+  size: 17, 26
+  orig: 17, 26
+  offset: 0, 0
+  index: -1
+ManFrontHand2
+  rotate: false
+  xy: 422, 484
+  size: 22, 26
+  orig: 22, 26
+  offset: 0, 0
+  index: -1
+ManRearHand1
+  rotate: true
+  xy: 215, 415
+  size: 16, 42
+  orig: 16, 42
+  offset: 0, 0
+  index: -1
+ManRearHand2
+  rotate: false
+  xy: 1, 144
+  size: 18, 27
+  orig: 18, 27
+  offset: 0, 0
+  index: -1
+Shadow1
+  rotate: false
+  xy: 88, 319
+  size: 34, 8
+  orig: 34, 8
+  offset: 0, 0
+  index: -1
+Shadow2
+  rotate: false
+  xy: 130, 336
+  size: 32, 8
+  orig: 32, 8
+  offset: 0, 0
+  index: -1
+Shadow3
+  rotate: true
+  xy: 506, 490
+  size: 20, 5
+  orig: 20, 5
+  offset: 0, 0
+  index: -1
+disco
+  rotate: false
+  xy: 45, 225
+  size: 23, 23
+  orig: 23, 23
+  offset: 0, 0
+  index: -1
+fish
+  rotate: false
+  xy: 25, 249
+  size: 44, 68
+  orig: 44, 68
+  offset: 0, 0
+  index: -1
+fisher1
+  rotate: false
+  xy: 215, 432
+  size: 89, 78
+  orig: 89, 78
+  offset: 0, 0
+  index: -1
+fisher2
+  rotate: false
+  xy: 1, 318
+  size: 86, 88
+  orig: 86, 88
+  offset: 0, 0
+  index: -1
+leska1
+  rotate: false
+  xy: 70, 274
+  size: 2, 43
+  orig: 2, 43
+  offset: 0, 0
+  index: -1
+ship
+  rotate: false
+  xy: 1, 407
+  size: 213, 103
+  orig: 213, 103
+  offset: 0, 0
+  index: -1
+shodow
+  rotate: true
+  xy: 1, 209
+  size: 108, 23
+  orig: 108, 23
+  offset: 0, 0
+  index: -1

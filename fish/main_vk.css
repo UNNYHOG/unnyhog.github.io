@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+}
+.loading-div-parent {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width:100%;
+    height:100%;
+    display: flex;
+    justify-content:center;
+    pointer-events: none;
+}
+
+.relative-pos {
+    position: relative;
+    /*position: fixed;*/
+    /*left: 0;*/
+    /*top: 0;*/
+}
+.loading-img {
+    width: 100%;
+    height: 100%;
+}
+.progress-bar {
+    position: absolute;
+    left: 35%;
+    bottom: 5%;
+    width: 30%;
+    height: 4%;
+}
+
+@font-face {
+    font-family: 'pt_sans_narrowbold';
+    src: url('fonts/2220-webfont.woff2') format('woff2'),
+    url('fonts/2220-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*@font-face {*/
+    /*font-family: 'kid_kosmicregular';*/
+    /*src: url('fonts/kidkosmic-webfont.woff2') format('woff2'),*/
+    /*url('fonts/kidkosmic-webfont.woff') format('woff');*/
+    /*font-weight: normal;*/
+    /*font-style: normal;*/
+/*}*/
+
+.textFitted {
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 100%;
+}
+
+.myp {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    font-family: 'pt_sans_narrowbold', "Arial Rounded MT Bold", sans-serif;
+    /*font-family: 'kid_kosmicregular', "Arial Rounded MT Bold", sans-serif;*/
+    /*font-family: 'pt_sans_narrowbold', "Helvetica Neue", sans-serif;*/
+}
+
+.myp-fit {
+    display: flex !important;
+}
+
+#phaser-app {
+    display: flex;
+    justify-content:center;
+}
+
+#phaser-app {
+    position: relative;
+}
+
+p {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.photo-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    object-fit: contain;
+}
+
+.photo-exit {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 5%;
+}
