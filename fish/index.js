@@ -6447,7 +6447,7 @@ const BoxType = {
 const MUSIC_STATE = "MUSIC_STATE";
 const SOUNDS_STATE = "SOUNDS_STATE";
 const CURRENT_LANGUAGE = "CURRENT_LANGUAGE";
-const GAME_VERSION = "0.9.46";
+const GAME_VERSION = "0.9.48";
 
 console.log("game version: " + GAME_VERSION);
 
@@ -20318,11 +20318,11 @@ const guiManager = new GUIManager(gameInit);
 
 const tutorial = new Tutorial();
 gameInit.create.addListener(tutorial.onCreated.bind(tutorial));
-// if (!VisualData.getGameSettings().no_tutorial) {
-//     eventManager.onAdStarted.addListener(tutorial.onAdStarted.bind(tutorial));
-//     eventManager.onFortuneWheelUsed.addListener(tutorial.onAdStarted.bind(tutorial));
-//     gameInit.loaded.addListener((progress) => tutorial.loaded(progress));
-// }
+if (!VisualData.getGameSettings().no_tutorial) {
+    eventManager.onAdStarted.addListener(tutorial.onAdStarted.bind(tutorial));
+    eventManager.onFortuneWheelUsed.addListener(tutorial.onAdStarted.bind(tutorial));
+    gameInit.loaded.addListener((progress) => tutorial.loaded(progress));
+}
 
 'use strict';
 
