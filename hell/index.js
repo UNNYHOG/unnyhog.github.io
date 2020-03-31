@@ -3138,6 +3138,7 @@ var VisualData = (function() {
             STORE_IMAGES_FOLDER,
             QUEST_ICONS_FOLDER,
             DAILY_ICONS_FOLDER,
+            'Backs'
             // '../Audio/'
         ],
 
