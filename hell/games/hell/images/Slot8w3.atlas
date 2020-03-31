@@ -1,97 +1,251 @@
 
 Slot8w3.png
-size: 512,512
+size: 512,64
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
-Body
+Bee
   rotate: false
-  xy: 1, 402
-  size: 241, 109
-  orig: 241, 109
+  xy: 159, 28
+  size: 15, 17
+  orig: 15, 17
   offset: 0, 0
   index: -1
-Glass
-  rotate: false
-  xy: 1, 261
-  size: 132, 140
-  orig: 132, 140
-  offset: 0, 0
-  index: -1
-GlassBack
-  rotate: false
-  xy: 1, 120
-  size: 132, 140
-  orig: 132, 140
-  offset: 0, 0
-  index: -1
-Pile
+BeeBody
   rotate: true
-  xy: 134, 252
-  size: 149, 58
-  orig: 149, 58
-  offset: 0, 0
-  index: -1
-Shadow
-  rotate: true
-  xy: 134, 99
-  size: 152, 23
-  orig: 152, 23
-  offset: 0, 0
-  index: -1
-Stage1
-  rotate: false
-  xy: 193, 281
-  size: 28, 30
-  orig: 28, 30
-  offset: 0, 0
-  index: -1
-Stage2
-  rotate: false
   xy: 1, 1
+  size: 7, 10
+  orig: 7, 10
+  offset: 0, 0
+  index: -1
+BeeHead
+  rotate: false
+  xy: 12, 2
+  size: 9, 6
+  orig: 9, 6
+  offset: 0, 0
+  index: -1
+BeeLeftWing
+  rotate: false
+  xy: 83, 2
+  size: 5, 9
+  orig: 5, 9
+  offset: 0, 0
+  index: -1
+BeeRightWing
+  rotate: false
+  xy: 175, 36
+  size: 6, 9
+  orig: 6, 9
+  offset: 0, 0
+  index: -1
+FacePain
+  rotate: false
+  xy: 397, 19
+  size: 20, 18
+  orig: 20, 18
+  offset: 0, 0
+  index: -1
+ManChest
+  rotate: false
+  xy: 365, 23
+  size: 31, 11
+  orig: 31, 11
+  offset: 0, 0
+  index: -1
+ManRopes
+  rotate: false
+  xy: 89, 1
+  size: 33, 14
+  orig: 33, 14
+  offset: 0, 0
+  index: -1
+ManShadow
+  rotate: false
+  xy: 1, 38
+  size: 45, 25
+  orig: 45, 25
+  offset: 0, 0
+  index: -1
+Snake1Body
+  rotate: false
+  xy: 365, 35
+  size: 30, 28
+  orig: 30, 28
+  offset: 0, 0
+  index: -1
+Snake1Head
+  rotate: true
+  xy: 418, 20
+  size: 17, 8
+  orig: 17, 8
+  offset: 0, 0
+  index: -1
+Snake1Shadow
+  rotate: false
+  xy: 1, 9
+  size: 42, 28
+  orig: 42, 28
+  offset: 0, 0
+  index: -1
+Snake2Body
+  rotate: false
+  xy: 445, 42
+  size: 23, 21
+  orig: 23, 21
+  offset: 0, 0
+  index: -1
+Snake2Head
+  rotate: false
+  xy: 137, 38
+  size: 12, 7
+  orig: 12, 7
+  offset: 0, 0
+  index: -1
+Snake2Shadow
+  rotate: false
+  xy: 422, 39
+  size: 22, 24
+  orig: 22, 24
+  offset: 0, 0
+  index: -1
+Snake3Body
+  rotate: false
+  xy: 469, 48
+  size: 28, 15
+  orig: 28, 15
+  offset: 0, 0
+  index: -1
+Snake3Head
+  rotate: false
+  xy: 44, 1
+  size: 19, 10
+  orig: 19, 10
+  offset: 0, 0
+  index: -1
+Snake3Shadow
+  rotate: false
+  xy: 137, 46
+  size: 45, 17
+  orig: 45, 17
+  offset: 0, 0
+  index: -1
+Snake4Body
+  rotate: false
+  xy: 222, 43
+  size: 37, 20
+  orig: 37, 20
+  offset: 0, 0
+  index: -1
+Snake4Head
+  rotate: false
+  xy: 159, 18
+  size: 18, 9
+  orig: 18, 9
+  offset: 0, 0
+  index: -1
+Snake4Shadow
+  rotate: false
+  xy: 183, 42
+  size: 38, 21
+  orig: 38, 21
+  offset: 0, 0
+  index: -1
+Snake5Body
+  rotate: false
+  xy: 132, 16
+  size: 26, 21
+  orig: 26, 21
+  offset: 0, 0
+  index: -1
+Snake5Head
+  rotate: false
+  xy: 469, 38
+  size: 19, 9
+  orig: 19, 9
+  offset: 0, 0
+  index: -1
+Snake6
+  rotate: false
+  xy: 123, 1
+  size: 33, 14
+  orig: 33, 14
+  offset: 0, 0
+  index: -1
+Snane5Shadow
+  rotate: false
+  xy: 89, 16
+  size: 42, 21
+  orig: 42, 21
+  offset: 0, 0
+  index: -1
+Spider
+  rotate: true
+  xy: 498, 46
+  size: 17, 11
+  orig: 17, 11
+  offset: 0, 0
+  index: -1
+SpiderBody
+  rotate: false
+  xy: 150, 39
+  size: 8, 6
+  orig: 8, 6
+  offset: 0, 0
+  index: -1
+SpiderHeadLegs
+  rotate: false
+  xy: 64, 1
+  size: 18, 10
+  orig: 18, 10
+  offset: 0, 0
+  index: -1
+body/arab/arab_ManHead
+  rotate: true
+  xy: 260, 31
   size: 32, 34
   orig: 32, 34
   offset: 0, 0
   index: -1
-Stage3
+body/arab/arab_ManLegs
   rotate: false
-  xy: 399, 443
-  size: 56, 24
-  orig: 56, 24
+  xy: 47, 38
+  size: 44, 25
+  orig: 44, 25
   offset: 0, 0
   index: -1
-Stage4
+body/negro/negro_ManHead
   rotate: true
-  xy: 158, 184
-  size: 67, 26
-  orig: 67, 26
+  xy: 295, 31
+  size: 32, 34
+  orig: 32, 34
   offset: 0, 0
   index: -1
-Stage5
+body/negro/negro_ManLegs
+  rotate: false
+  xy: 44, 12
+  size: 44, 25
+  orig: 44, 25
+  offset: 0, 0
+  index: -1
+body/white/white_ManHead
   rotate: true
-  xy: 193, 312
-  size: 89, 42
-  orig: 89, 42
+  xy: 330, 31
+  size: 32, 34
+  orig: 32, 34
   offset: 0, 0
   index: -1
-Stage6
+body/white/white_ManLegs
   rotate: false
-  xy: 399, 468
-  size: 89, 43
-  orig: 89, 43
+  xy: 92, 38
+  size: 44, 25
+  orig: 44, 25
   offset: 0, 0
   index: -1
-Water
+scared
   rotate: false
-  xy: 1, 36
-  size: 132, 83
-  orig: 132, 83
-  offset: 0, 0
-  index: -1
-top
-  rotate: false
-  xy: 243, 398
-  size: 155, 113
-  orig: 155, 113
+  xy: 396, 38
+  size: 25, 25
+  orig: 25, 25
   offset: 0, 0
   index: -1

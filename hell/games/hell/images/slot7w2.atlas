@@ -1,160 +1,188 @@
 
-slot7w2.png
-size: 512,512
+Slot7w2.png
+size: 512,64
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
-belt1
+BodyDown
+  rotate: false
+  xy: 218, 30
+  size: 31, 33
+  orig: 31, 33
+  offset: 0, 0
+  index: -1
+BodyUp
   rotate: true
-  xy: 434, 330
-  size: 92, 49
-  orig: 92, 49
+  xy: 320, 37
+  size: 26, 32
+  orig: 26, 32
   offset: 0, 0
   index: -1
-belt2
-  rotate: false
-  xy: 122, 5
-  size: 79, 46
-  orig: 79, 46
-  offset: 0, 0
-  index: -1
-body
-  rotate: false
-  xy: 224, 291
-  size: 90, 101
-  orig: 90, 101
-  offset: 0, 0
-  index: -1
-deerbody
-  rotate: false
-  xy: 335, 423
-  size: 138, 88
-  orig: 138, 88
-  offset: 0, 0
-  index: -1
-effects/slot7_water1_1
+Coal
   rotate: true
-  xy: 474, 458
-  size: 53, 36
-  orig: 53, 36
+  xy: 353, 33
+  size: 11, 14
+  orig: 11, 14
   offset: 0, 0
   index: -1
-effects/slot7_water1_2
-  rotate: false
-  xy: 235, 145
-  size: 53, 36
-  orig: 53, 36
-  offset: 0, 0
-  index: -1
-effects/slot7_water1_3
-  rotate: false
-  xy: 235, 108
-  size: 53, 36
-  orig: 53, 36
-  offset: 0, 0
-  index: -1
-effects/slot7_water1_4
-  rotate: false
-  xy: 196, 67
-  size: 53, 36
-  orig: 53, 36
-  offset: 0, 0
-  index: -1
-effects/slot7_water1_5
+Face2
   rotate: true
-  xy: 202, 13
-  size: 53, 36
-  orig: 53, 36
+  xy: 368, 31
+  size: 13, 9
+  orig: 13, 9
   offset: 0, 0
   index: -1
-effects/slot7_water1_6
+FrontFoot
+  rotate: false
+  xy: 192, 1
+  size: 11, 6
+  orig: 11, 6
+  offset: 0, 0
+  index: -1
+FrontShoulder
+  rotate: false
+  xy: 441, 49
+  size: 18, 14
+  orig: 18, 14
+  offset: 0, 0
+  index: -1
+GroundLeft
+  rotate: false
+  xy: 1, 4
+  size: 79, 59
+  orig: 79, 59
+  offset: 0, 0
+  index: -1
+GroundRight
+  rotate: false
+  xy: 81, 5
+  size: 74, 58
+  orig: 74, 58
+  offset: 0, 0
+  index: -1
+Legs
+  rotate: false
+  xy: 353, 45
+  size: 24, 18
+  orig: 24, 18
+  offset: 0, 0
+  index: -1
+Pebble
+  rotate: false
+  xy: 378, 40
+  size: 9, 9
+  orig: 9, 9
+  offset: 0, 0
+  index: -1
+RearFoot
+  rotate: false
+  xy: 204, 1
+  size: 11, 6
+  orig: 11, 6
+  offset: 0, 0
+  index: -1
+RearShoulder
   rotate: true
-  xy: 250, 54
-  size: 53, 36
-  orig: 53, 36
+  xy: 460, 50
+  size: 13, 18
+  orig: 13, 18
   offset: 0, 0
   index: -1
-effects/slot7_water1_7
+Shadow
   rotate: false
-  xy: 239, 17
-  size: 53, 36
-  orig: 53, 36
+  xy: 156, 12
+  size: 37, 10
+  orig: 37, 10
   offset: 0, 0
   index: -1
-fish
+Shovel
   rotate: false
-  xy: 196, 104
-  size: 38, 77
-  orig: 38, 77
+  xy: 156, 23
+  size: 61, 40
+  orig: 61, 40
   offset: 0, 0
   index: -1
-gifts
-  rotate: false
-  xy: 335, 329
-  size: 98, 93
-  orig: 98, 93
-  offset: 0, 0
-  index: -1
-hands
+body/arab/white_FrontArmDown
   rotate: true
-  xy: 122, 52
-  size: 135, 70
-  orig: 135, 70
+  xy: 378, 50
+  size: 13, 20
+  orig: 13, 20
   offset: 0, 0
   index: -1
-head
-  rotate: false
-  xy: 198, 182
-  size: 92, 93
-  orig: 92, 93
+body/arab/white_Head
+  rotate: true
+  xy: 218, 1
+  size: 28, 34
+  orig: 28, 34
   offset: 0, 0
   index: -1
-head1
-  rotate: false
-  xy: 1, 1
-  size: 120, 84
-  orig: 120, 84
+body/arab/white_RearArm
+  rotate: true
+  xy: 479, 49
+  size: 14, 15
+  orig: 14, 15
   offset: 0, 0
   index: -1
-head2
+body/arab/white_RearHand
   rotate: false
-  xy: 1, 86
-  size: 120, 101
-  orig: 120, 101
+  xy: 168, 1
+  size: 11, 10
+  orig: 11, 10
   offset: 0, 0
   index: -1
-patch
-  rotate: false
-  xy: 1, 188
-  size: 196, 87
-  orig: 196, 87
+body/negro/white_FrontArmDown
+  rotate: true
+  xy: 399, 50
+  size: 13, 20
+  orig: 13, 20
   offset: 0, 0
   index: -1
-shadowX
-  rotate: false
-  xy: 1, 393
-  size: 333, 118
-  orig: 333, 118
+body/negro/white_Head
+  rotate: true
+  xy: 250, 35
+  size: 28, 34
+  orig: 28, 34
   offset: 0, 0
   index: -1
-sled
-  rotate: false
-  xy: 1, 276
-  size: 222, 116
-  orig: 222, 116
+body/negro/white_RearArm
+  rotate: true
+  xy: 495, 49
+  size: 14, 15
+  orig: 14, 15
   offset: 0, 0
   index: -1
-star
+body/negro/white_RearHand
   rotate: false
-  xy: 474, 432
-  size: 25, 25
-  orig: 25, 25
+  xy: 156, 1
+  size: 11, 10
+  orig: 11, 10
   offset: 0, 0
   index: -1
-string4
+body/white/white_FrontArmDown
+  rotate: true
+  xy: 420, 50
+  size: 13, 20
+  orig: 13, 20
+  offset: 0, 0
+  index: -1
+body/white/white_Head
+  rotate: true
+  xy: 285, 35
+  size: 28, 34
+  orig: 28, 34
+  offset: 0, 0
+  index: -1
+body/white/white_RearArm
+  rotate: true
+  xy: 194, 8
+  size: 14, 15
+  orig: 14, 15
+  offset: 0, 0
+  index: -1
+body/white/white_RearHand
   rotate: false
-  xy: 193, 62
-  size: 2, 125
-  orig: 2, 125
+  xy: 180, 1
+  size: 11, 10
+  orig: 11, 10
   offset: 0, 0
   index: -1

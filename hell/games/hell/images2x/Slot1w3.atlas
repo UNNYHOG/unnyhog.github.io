@@ -1,195 +1,188 @@
 
 Slot1w3.png
-size: 512,512
+size: 1024,128
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
-Body
-  rotate: false
-  xy: 1, 63
-  size: 128, 119
-  orig: 128, 119
-  offset: 0, 0
-  index: -1
-Effects/LineArt/Leska1
+DevilBody
   rotate: true
-  xy: 206, 423
-  size: 1, 153
-  orig: 1, 153
+  xy: 202, 3
+  size: 124, 140
+  orig: 124, 140
   offset: 0, 0
   index: -1
-Effects/LineArt/Leska3
+DevilFrontLeg
+  rotate: false
+  xy: 968, 74
+  size: 41, 53
+  orig: 41, 53
+  offset: 0, 0
+  index: -1
+DevilRearLeg
   rotate: true
-  xy: 156, 388
-  size: 34, 153
-  orig: 34, 153
+  xy: 513, 20
+  size: 33, 51
+  orig: 33, 51
   offset: 0, 0
   index: -1
-Effects/LineArt/Leska4
+DevilTail
+  rotate: false
+  xy: 420, 10
+  size: 28, 17
+  orig: 28, 17
+  offset: 0, 0
+  index: -1
+L_Hand_Low
+  rotate: false
+  xy: 812, 64
+  size: 86, 63
+  orig: 86, 63
+  offset: 0, 0
+  index: -1
+L_Hand_Punch
+  rotate: false
+  xy: 343, 79
+  size: 124, 48
+  orig: 124, 48
+  offset: 0, 0
+  index: -1
+ManSufferingFace
+  rotate: false
+  xy: 343, 1
+  size: 38, 26
+  orig: 38, 26
+  offset: 0, 0
+  index: -1
+Man_Face
+  rotate: false
+  xy: 382, 4
+  size: 37, 23
+  orig: 37, 23
+  offset: 0, 0
+  index: -1
+Man_Place
   rotate: true
-  xy: 206, 425
-  size: 46, 152
-  orig: 46, 152
+  xy: 1, 37
+  size: 90, 200
+  orig: 90, 200
   offset: 0, 0
   index: -1
-Effects/LineArt/Leska8
+R_Hand_Low
+  rotate: false
+  xy: 732, 53
+  size: 79, 74
+  orig: 79, 74
+  offset: 0, 0
+  index: -1
+R_Hand_Punch
+  rotate: false
+  xy: 343, 28
+  size: 115, 50
+  orig: 115, 50
+  offset: 0, 0
+  index: -1
+SlapEffect
+  rotate: false
+  xy: 459, 12
+  size: 53, 41
+  orig: 53, 41
+  offset: 0, 0
+  index: -1
+body/arab/white_ManBody
+  rotate: false
+  xy: 468, 54
+  size: 87, 73
+  orig: 87, 73
+  offset: 0, 0
+  index: -1
+body/arab/white_ManHead
+  rotate: false
+  xy: 899, 70
+  size: 68, 57
+  orig: 68, 57
+  offset: 0, 0
+  index: -1
+body/arab/white_ManLeftLeg
+  rotate: false
+  xy: 694, 20
+  size: 33, 33
+  orig: 33, 33
+  offset: 0, 0
+  index: -1
+body/arab/white_ManRightLeg
+  rotate: false
+  xy: 608, 23
+  size: 42, 30
+  orig: 42, 30
+  offset: 0, 0
+  index: -1
+body/negro/white_ManBody
+  rotate: false
+  xy: 556, 54
+  size: 87, 73
+  orig: 87, 73
+  offset: 0, 0
+  index: -1
+body/negro/white_ManHead
   rotate: true
-  xy: 156, 353
-  size: 12, 155
-  orig: 12, 155
+  xy: 899, 1
+  size: 68, 57
+  orig: 68, 57
   offset: 0, 0
   index: -1
-Effects/LineArt/Leska9
+body/negro/white_ManLeftLeg
+  rotate: false
+  xy: 728, 19
+  size: 33, 33
+  orig: 33, 33
+  offset: 0, 0
+  index: -1
+body/negro/white_ManRightLeg
+  rotate: false
+  xy: 565, 23
+  size: 42, 30
+  orig: 42, 30
+  offset: 0, 0
+  index: -1
+body/white/white_ManBody
+  rotate: false
+  xy: 644, 54
+  size: 87, 73
+  orig: 87, 73
+  offset: 0, 0
+  index: -1
+body/white/white_ManHead
   rotate: true
-  xy: 156, 366
-  size: 21, 155
-  orig: 21, 155
+  xy: 957, 1
+  size: 68, 57
+  orig: 68, 57
   offset: 0, 0
   index: -1
-Effects/slot1_water_1
+body/white/white_ManLeftLeg
   rotate: false
-  xy: 405, 483
-  size: 18, 18
-  orig: 18, 18
+  xy: 762, 19
+  size: 33, 33
+  orig: 33, 33
   offset: 0, 0
   index: -1
-Effects/slot1_water_2
+body/white/white_ManRightLeg
   rotate: false
-  xy: 310, 404
-  size: 18, 18
-  orig: 18, 18
+  xy: 651, 23
+  size: 42, 30
+  orig: 42, 30
   offset: 0, 0
   index: -1
-Effects/slot1_water_3
+shadow_Demon
   rotate: false
-  xy: 154, 185
-  size: 18, 18
-  orig: 18, 18
+  xy: 108, 17
+  size: 70, 19
+  orig: 70, 19
   offset: 0, 0
   index: -1
-Effects/slot1_water_4
+shadow_man
   rotate: false
-  xy: 247, 255
-  size: 18, 18
-  orig: 18, 18
-  offset: 0, 0
-  index: -1
-Effects/slot1_water_5
-  rotate: false
-  xy: 424, 483
-  size: 18, 18
-  orig: 18, 18
-  offset: 0, 0
-  index: -1
-Effects/slot1_water_6
-  rotate: false
-  xy: 329, 404
-  size: 18, 18
-  orig: 18, 18
-  offset: 0, 0
-  index: -1
-Effects/slot1_water_7
-  rotate: false
-  xy: 173, 185
-  size: 18, 18
-  orig: 18, 18
-  offset: 0, 0
-  index: -1
-Effects/slot1_water_8
-  rotate: false
-  xy: 247, 236
-  size: 18, 18
-  orig: 18, 18
-  offset: 0, 0
-  index: -1
-FrontHand
-  rotate: true
-  xy: 252, 274
-  size: 78, 71
-  orig: 78, 71
-  offset: 0, 0
-  index: -1
-Head1
-  rotate: false
-  xy: 1, 304
-  size: 154, 118
-  orig: 154, 118
-  offset: 0, 0
-  index: -1
-Head2
-  rotate: false
-  xy: 1, 183
-  size: 152, 120
-  orig: 152, 120
-  offset: 0, 0
-  index: -1
-Layer 1
-  rotate: false
-  xy: 1, 6
-  size: 114, 56
-  orig: 114, 56
-  offset: 0, 0
-  index: -1
-LowerBody
-  rotate: false
-  xy: 1, 423
-  size: 204, 88
-  orig: 204, 88
-  offset: 0, 0
-  index: -1
-RearHand
-  rotate: false
-  xy: 359, 431
-  size: 38, 40
-  orig: 38, 40
-  offset: 0, 0
-  index: -1
-Rod
-  rotate: false
-  xy: 206, 502
-  size: 255, 9
-  orig: 255, 9
-  offset: 0, 0
-  index: -1
-ShadowMain
-  rotate: false
-  xy: 206, 472
-  size: 198, 29
-  orig: 198, 29
-  offset: 0, 0
-  index: -1
-ShadowVedro
-  rotate: true
-  xy: 130, 93
-  size: 89, 14
-  orig: 89, 14
-  offset: 0, 0
-  index: -1
-ShadowWater
-  rotate: false
-  xy: 462, 502
-  size: 46, 9
-  orig: 46, 9
-  offset: 0, 0
-  index: -1
-String
-  rotate: false
-  xy: 154, 204
-  size: 92, 69
-  orig: 92, 69
-  offset: 0, 0
-  index: -1
-StringS
-  rotate: true
-  xy: 1, 1
-  size: 4, 176
-  orig: 4, 176
-  offset: 0, 0
-  index: -1
-Vedro
-  rotate: false
-  xy: 156, 274
-  size: 95, 78
-  orig: 95, 78
+  xy: 1, 7
+  size: 106, 29
+  orig: 106, 29
   offset: 0, 0
   index: -1

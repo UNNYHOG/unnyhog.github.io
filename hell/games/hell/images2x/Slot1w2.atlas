@@ -1,237 +1,216 @@
 
 Slot1w2.png
-size: 1024,1024
+size: 512,128
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
-Effects/1/Slot1_water_1
+Brick1
   rotate: false
-  xy: 1, 655
-  size: 112, 147
-  orig: 112, 147
+  xy: 150, 64
+  size: 43, 29
+  orig: 43, 29
   offset: 0, 0
   index: -1
-Effects/1/Slot1_water_2
+Brick1Shadow
   rotate: false
-  xy: 205, 876
-  size: 112, 147
-  orig: 112, 147
+  xy: 351, 107
+  size: 52, 20
+  orig: 52, 20
   offset: 0, 0
   index: -1
-Effects/1/Slot1_water_3
+Brick2
   rotate: false
-  xy: 1, 507
-  size: 112, 147
-  orig: 112, 147
+  xy: 404, 101
+  size: 51, 26
+  orig: 51, 26
   offset: 0, 0
   index: -1
-Effects/1/Slot1_water_4
+Brick2Shadow
   rotate: false
-  xy: 318, 876
-  size: 112, 147
-  orig: 112, 147
+  xy: 291, 111
+  size: 59, 16
+  orig: 59, 16
   offset: 0, 0
   index: -1
-Effects/1/Slot1_water_5
+Brick3
   rotate: false
-  xy: 1, 359
-  size: 112, 147
-  orig: 112, 147
+  xy: 104, 64
+  size: 45, 29
+  orig: 45, 29
   offset: 0, 0
   index: -1
-Effects/1/Slot1_water_6
-  rotate: false
-  xy: 431, 876
-  size: 112, 147
-  orig: 112, 147
+Brick3Shadiw
+  rotate: true
+  xy: 217, 1
+  size: 54, 18
+  orig: 54, 18
   offset: 0, 0
   index: -1
-Effects/1/Slot1_water_7
+Brick4
   rotate: false
-  xy: 1, 211
-  size: 112, 147
-  orig: 112, 147
+  xy: 347, 75
+  size: 42, 31
+  orig: 42, 31
   offset: 0, 0
   index: -1
-Effects/1/Slot1_water_8
+Brick4Shadow
   rotate: false
-  xy: 544, 876
-  size: 112, 147
-  orig: 112, 147
+  xy: 456, 106
+  size: 51, 21
+  orig: 51, 21
   offset: 0, 0
   index: -1
-Face1
-  rotate: false
-  xy: 657, 916
-  size: 84, 75
-  orig: 84, 75
+Brick5
+  rotate: true
+  xy: 314, 26
+  size: 41, 32
+  orig: 41, 32
   offset: 0, 0
   index: -1
-Face2
+Brick5Shadow
+  rotate: true
+  xy: 347, 27
+  size: 47, 22
+  orig: 47, 22
+  offset: 0, 0
+  index: -1
+Bricks
+  rotate: false
+  xy: 1, 64
+  size: 102, 63
+  orig: 102, 63
+  offset: 0, 0
+  index: -1
+BricksShadow
+  rotate: false
+  xy: 104, 94
+  size: 113, 33
+  orig: 113, 33
+  offset: 0, 0
+  index: -1
+Effect
+  rotate: false
+  xy: 314, 1
+  size: 16, 7
+  orig: 16, 7
+  offset: 0, 0
+  index: -1
+FaceAfter
+  rotate: false
+  xy: 412, 15
+  size: 31, 27
+  orig: 31, 27
+  offset: 0, 0
+  index: -1
+FaceHit
+  rotate: false
+  xy: 194, 64
+  size: 35, 29
+  orig: 35, 29
+  offset: 0, 0
+  index: -1
+FaceNormal
+  rotate: false
+  xy: 412, 43
+  size: 33, 35
+  orig: 33, 35
+  offset: 0, 0
+  index: -1
+Hit
+  rotate: false
+  xy: 314, 9
+  size: 15, 16
+  orig: 15, 16
+  offset: 0, 0
+  index: -1
+HitBrick
+  rotate: false
+  xy: 305, 68
+  size: 41, 42
+  orig: 41, 42
+  offset: 0, 0
+  index: -1
+Man_Shadow
+  rotate: false
+  xy: 218, 107
+  size: 72, 20
+  orig: 72, 20
+  offset: 0, 0
+  index: -1
+UpperBody
+  rotate: false
+  xy: 230, 56
+  size: 52, 50
+  orig: 52, 50
+  offset: 0, 0
+  index: -1
+body/arab/white_Head
   rotate: false
   xy: 1, 1
-  size: 86, 79
-  orig: 86, 79
+  size: 71, 62
+  orig: 71, 62
   offset: 0, 0
   index: -1
-big fish
+body/arab/white_LeftArm
   rotate: false
-  xy: 1, 803
-  size: 203, 220
-  orig: 203, 220
+  xy: 283, 56
+  size: 21, 50
+  orig: 21, 50
   offset: 0, 0
   index: -1
-body
+body/arab/white_RightArm
+  rotate: false
+  xy: 271, 5
+  size: 20, 50
+  orig: 20, 50
+  offset: 0, 0
+  index: -1
+body/negro/white_Head
+  rotate: false
+  xy: 73, 1
+  size: 71, 62
+  orig: 71, 62
+  offset: 0, 0
+  index: -1
+body/negro/white_LeftArm
+  rotate: false
+  xy: 292, 5
+  size: 21, 50
+  orig: 21, 50
+  offset: 0, 0
+  index: -1
+body/negro/white_RightArm
+  rotate: false
+  xy: 370, 24
+  size: 20, 50
+  orig: 20, 50
+  offset: 0, 0
+  index: -1
+body/white/white_Head
+  rotate: false
+  xy: 145, 1
+  size: 71, 62
+  orig: 71, 62
+  offset: 0, 0
+  index: -1
+body/white/white_LeftArm
   rotate: true
-  xy: 114, 434
-  size: 62, 55
-  orig: 62, 55
+  xy: 390, 79
+  size: 21, 50
+  orig: 21, 50
   offset: 0, 0
   index: -1
-body 2
+body/white/white_RightArm
   rotate: false
-  xy: 114, 376
-  size: 55, 57
-  orig: 55, 57
+  xy: 391, 28
+  size: 20, 50
+  orig: 20, 50
   offset: 0, 0
   index: -1
-bonfire
-  rotate: false
-  xy: 337, 823
-  size: 71, 21
-  orig: 71, 21
-  offset: 0, 0
-  index: -1
-fish 1
+white_LowerBody
   rotate: true
-  xy: 56, 117
-  size: 93, 37
-  orig: 93, 37
-  offset: 0, 0
-  index: -1
-fish 2
-  rotate: true
-  xy: 1, 81
-  size: 129, 54
-  orig: 129, 54
-  offset: 0, 0
-  index: -1
-fish 3
-  rotate: true
-  xy: 114, 497
-  size: 134, 37
-  orig: 134, 37
-  offset: 0, 0
-  index: -1
-flame
-  rotate: false
-  xy: 56, 89
-  size: 24, 27
-  orig: 24, 27
-  offset: 0, 0
-  index: -1
-flame light
-  rotate: true
-  xy: 742, 926
-  size: 65, 63
-  orig: 65, 63
-  offset: 0, 0
-  index: -1
-hole
-  rotate: false
-  xy: 337, 845
-  size: 123, 30
-  orig: 123, 30
-  offset: 0, 0
-  index: -1
-lanceMain
-  rotate: false
-  xy: 114, 632
-  size: 66, 170
-  orig: 66, 170
-  offset: 0, 0
-  index: -1
-lanceMain2
-  rotate: false
-  xy: 181, 687
-  size: 19, 115
-  orig: 19, 115
-  offset: 0, 0
-  index: -1
-left mitten 2
-  rotate: false
-  xy: 461, 852
-  size: 22, 23
-  orig: 22, 23
-  offset: 0, 0
-  index: -1
-lefthand
-  rotate: false
-  xy: 114, 291
-  size: 49, 36
-  orig: 49, 36
-  offset: 0, 0
-  index: -1
-lefthand2
-  rotate: false
-  xy: 114, 253
-  size: 45, 37
-  orig: 45, 37
-  offset: 0, 0
-  index: -1
-legs
-  rotate: false
-  xy: 657, 867
-  size: 64, 48
-  orig: 64, 48
-  offset: 0, 0
-  index: -1
-logs
-  rotate: false
-  xy: 114, 328
-  size: 55, 47
-  orig: 55, 47
-  offset: 0, 0
-  index: -1
-right hand
-  rotate: true
-  xy: 800, 992
-  size: 31, 51
-  orig: 31, 51
-  offset: 0, 0
-  index: -1
-right hand 2
-  rotate: false
-  xy: 806, 946
-  size: 40, 45
-  orig: 40, 45
-  offset: 0, 0
-  index: -1
-right_mitten
-  rotate: false
-  xy: 152, 610
-  size: 24, 21
-  orig: 24, 21
-  offset: 0, 0
-  index: -1
-right_mitten 2
-  rotate: false
-  xy: 409, 824
-  size: 22, 20
-  orig: 22, 20
-  offset: 0, 0
-  index: -1
-shadow
-  rotate: false
-  xy: 205, 818
-  size: 131, 57
-  orig: 131, 57
-  offset: 0, 0
-  index: -1
-shadow2
-  rotate: false
-  xy: 657, 992
-  size: 142, 31
-  orig: 142, 31
+  xy: 236, 3
+  size: 52, 34
+  orig: 52, 34
   offset: 0, 0
   index: -1

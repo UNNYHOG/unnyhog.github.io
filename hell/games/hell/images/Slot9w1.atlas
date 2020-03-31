@@ -1,0 +1,391 @@
+
+Slot9w1.png
+size: 1024,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Demon_Shadow
+  rotate: false
+  xy: 228, 35
+  size: 95, 26
+  orig: 95, 26
+  offset: 0, 0
+  index: -1
+DevilBody
+  rotate: true
+  xy: 113, 30
+  size: 97, 114
+  orig: 97, 114
+  offset: 0, 0
+  index: -1
+DevilEyes
+  rotate: false
+  xy: 588, 95
+  size: 85, 32
+  orig: 85, 32
+  offset: 0, 0
+  index: -1
+DevilFrontArm
+  rotate: false
+  xy: 674, 100
+  size: 73, 27
+  orig: 73, 27
+  offset: 0, 0
+  index: -1
+DevilHead
+  rotate: false
+  xy: 1, 26
+  size: 111, 101
+  orig: 111, 101
+  offset: 0, 0
+  index: -1
+DevilHeadTop
+  rotate: false
+  xy: 228, 62
+  size: 111, 65
+  orig: 111, 65
+  offset: 0, 0
+  index: -1
+DevilJaw
+  rotate: true
+  xy: 340, 58
+  size: 69, 86
+  orig: 69, 86
+  offset: 0, 0
+  index: -1
+DevilJawBack
+  rotate: true
+  xy: 427, 58
+  size: 69, 86
+  orig: 69, 86
+  offset: 0, 0
+  index: -1
+DevilLeftCheek
+  rotate: true
+  xy: 794, 90
+  size: 37, 41
+  orig: 37, 41
+  offset: 0, 0
+  index: -1
+DevilLeftEar
+  rotate: false
+  xy: 418, 41
+  size: 23, 16
+  orig: 23, 16
+  offset: 0, 0
+  index: -1
+DevilMouth
+  rotate: false
+  xy: 1, 5
+  size: 34, 20
+  orig: 34, 20
+  offset: 0, 0
+  index: -1
+DevilRearArm
+  rotate: false
+  xy: 588, 56
+  size: 71, 38
+  orig: 71, 38
+  offset: 0, 0
+  index: -1
+DevilRightCheek
+  rotate: true
+  xy: 748, 95
+  size: 32, 45
+  orig: 32, 45
+  offset: 0, 0
+  index: -1
+DevilRightEar
+  rotate: true
+  xy: 416, 1
+  size: 16, 17
+  orig: 16, 17
+  offset: 0, 0
+  index: -1
+DevilTail
+  rotate: false
+  xy: 397, 1
+  size: 18, 16
+  orig: 18, 16
+  offset: 0, 0
+  index: -1
+MagicFlash/MagicFlash01
+  rotate: false
+  xy: 94, 5
+  size: 20, 20
+  orig: 20, 20
+  offset: 0, 0
+  index: -1
+MagicFlash/MagicFlash02
+  rotate: false
+  xy: 115, 9
+  size: 20, 20
+  orig: 20, 20
+  offset: 0, 0
+  index: -1
+MagicFlash/MagicFlash03
+  rotate: false
+  xy: 136, 9
+  size: 20, 20
+  orig: 20, 20
+  offset: 0, 0
+  index: -1
+MagicFlash/MagicFlash04
+  rotate: false
+  xy: 157, 9
+  size: 20, 20
+  orig: 20, 20
+  offset: 0, 0
+  index: -1
+MagicFlash/MagicFlash05
+  rotate: false
+  xy: 178, 9
+  size: 20, 20
+  orig: 20, 20
+  offset: 0, 0
+  index: -1
+MagicFlash/MagicFlash06
+  rotate: false
+  xy: 199, 9
+  size: 20, 20
+  orig: 20, 20
+  offset: 0, 0
+  index: -1
+MagicFlash/MagicFlash07
+  rotate: false
+  xy: 334, 37
+  size: 20, 20
+  orig: 20, 20
+  offset: 0, 0
+  index: -1
+MagicFlash/MagicFlash08
+  rotate: false
+  xy: 334, 16
+  size: 20, 20
+  orig: 20, 20
+  offset: 0, 0
+  index: -1
+MagicFlash/MagicFlash09
+  rotate: false
+  xy: 355, 37
+  size: 20, 20
+  orig: 20, 20
+  offset: 0, 0
+  index: -1
+MagicFlash/MagicFlash10
+  rotate: false
+  xy: 355, 16
+  size: 20, 20
+  orig: 20, 20
+  offset: 0, 0
+  index: -1
+MagicFlash/MagicFlash11
+  rotate: false
+  xy: 376, 37
+  size: 20, 20
+  orig: 20, 20
+  offset: 0, 0
+  index: -1
+MagicFlash/MagicFlash12
+  rotate: false
+  xy: 376, 16
+  size: 20, 20
+  orig: 20, 20
+  offset: 0, 0
+  index: -1
+MagicFlash/MagicFlash13
+  rotate: false
+  xy: 397, 37
+  size: 20, 20
+  orig: 20, 20
+  offset: 0, 0
+  index: -1
+Man2
+  rotate: true
+  xy: 514, 60
+  size: 67, 73
+  orig: 67, 73
+  offset: 0, 0
+  index: -1
+Man2_Eye
+  rotate: false
+  xy: 397, 18
+  size: 20, 18
+  orig: 20, 18
+  offset: 0, 0
+  index: -1
+Man2_Face
+  rotate: false
+  xy: 943, 104
+  size: 20, 23
+  orig: 20, 23
+  offset: 0, 0
+  index: -1
+ManBody
+  rotate: false
+  xy: 836, 95
+  size: 26, 32
+  orig: 26, 32
+  offset: 0, 0
+  index: -1
+ManFace
+  rotate: false
+  xy: 418, 23
+  size: 20, 17
+  orig: 20, 17
+  offset: 0, 0
+  index: -1
+ManHips
+  rotate: false
+  xy: 442, 49
+  size: 23, 8
+  orig: 23, 8
+  offset: 0, 0
+  index: -1
+ManLeftLeg1
+  rotate: true
+  xy: 660, 56
+  size: 8, 10
+  orig: 8, 10
+  offset: 0, 0
+  index: -1
+ManLeftLeg2
+  rotate: false
+  xy: 354, 4
+  size: 13, 11
+  orig: 13, 11
+  offset: 0, 0
+  index: -1
+ManPupils
+  rotate: false
+  xy: 418, 18
+  size: 9, 4
+  orig: 9, 4
+  offset: 0, 0
+  index: -1
+ManRightLeg1
+  rotate: false
+  xy: 220, 19
+  size: 7, 10
+  orig: 7, 10
+  offset: 0, 0
+  index: -1
+ManRightLeg2
+  rotate: false
+  xy: 368, 4
+  size: 13, 11
+  orig: 13, 11
+  offset: 0, 0
+  index: -1
+Man_Shadow
+  rotate: true
+  xy: 324, 14
+  size: 47, 9
+  orig: 47, 9
+  offset: 0, 0
+  index: -1
+body/arab/arab_ManHead
+  rotate: true
+  xy: 228, 1
+  size: 33, 31
+  orig: 33, 31
+  offset: 0, 0
+  index: -1
+body/arab/arab_ManLeftArm1
+  rotate: true
+  xy: 324, 1
+  size: 12, 29
+  orig: 12, 29
+  offset: 0, 0
+  index: -1
+body/arab/arab_ManLeftArm2
+  rotate: true
+  xy: 65, 7
+  size: 18, 28
+  orig: 18, 28
+  offset: 0, 0
+  index: -1
+body/arab/arab_ManRightArm1
+  rotate: false
+  xy: 660, 65
+  size: 12, 29
+  orig: 12, 29
+  offset: 0, 0
+  index: -1
+body/arab/arab_ManRightArm2
+  rotate: false
+  xy: 863, 99
+  size: 20, 28
+  orig: 20, 28
+  offset: 0, 0
+  index: -1
+body/negro/negro_ManHead
+  rotate: true
+  xy: 260, 1
+  size: 33, 31
+  orig: 33, 31
+  offset: 0, 0
+  index: -1
+body/negro/negro_ManLeftArm1
+  rotate: true
+  xy: 964, 115
+  size: 12, 29
+  orig: 12, 29
+  offset: 0, 0
+  index: -1
+body/negro/negro_ManLeftArm2
+  rotate: false
+  xy: 905, 99
+  size: 18, 28
+  orig: 18, 28
+  offset: 0, 0
+  index: -1
+body/negro/negro_ManRightArm1
+  rotate: true
+  xy: 994, 115
+  size: 12, 29
+  orig: 12, 29
+  offset: 0, 0
+  index: -1
+body/negro/negro_ManRightArm2
+  rotate: true
+  xy: 36, 5
+  size: 20, 28
+  orig: 20, 28
+  offset: 0, 0
+  index: -1
+body/white/white_ManHead
+  rotate: true
+  xy: 292, 1
+  size: 33, 31
+  orig: 33, 31
+  offset: 0, 0
+  index: -1
+body/white/white_ManLeftArm1
+  rotate: true
+  xy: 964, 102
+  size: 12, 29
+  orig: 12, 29
+  offset: 0, 0
+  index: -1
+body/white/white_ManLeftArm2
+  rotate: false
+  xy: 924, 99
+  size: 18, 28
+  orig: 18, 28
+  offset: 0, 0
+  index: -1
+body/white/white_ManRightArm1
+  rotate: true
+  xy: 994, 102
+  size: 12, 29
+  orig: 12, 29
+  offset: 0, 0
+  index: -1
+body/white/white_ManRightArm2
+  rotate: false
+  xy: 884, 99
+  size: 20, 28
+  orig: 20, 28
+  offset: 0, 0
+  index: -1

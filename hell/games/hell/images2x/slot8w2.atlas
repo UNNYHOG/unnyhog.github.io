@@ -1,111 +1,90 @@
 
-slot8w2.png
-size: 512,512
+Slot8w2.png
+size: 1024,256
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
-circle1
-  rotate: true
-  xy: 138, 125
-  size: 185, 33
-  orig: 185, 33
+Ice
+  rotate: false
+  xy: 1, 20
+  size: 258, 225
+  orig: 258, 225
   offset: 0, 0
   index: -1
-circle2
+IceShadow
   rotate: false
-  xy: 302, 394
-  size: 153, 24
-  orig: 153, 24
+  xy: 260, 121
+  size: 284, 124
+  orig: 284, 124
   offset: 0, 0
   index: -1
-effects/slot8_water1_1
+Snow1
   rotate: false
-  xy: 302, 373
-  size: 64, 20
-  orig: 64, 20
+  xy: 308, 110
+  size: 41, 10
+  orig: 41, 10
   offset: 0, 0
   index: -1
-effects/slot8_water1_2
+Snow1Shadow
   rotate: false
-  xy: 1, 65
-  size: 64, 20
-  orig: 64, 20
+  xy: 962, 232
+  size: 52, 13
+  orig: 52, 13
   offset: 0, 0
   index: -1
-effects/slot8_water1_3
+Snow2
   rotate: false
-  xy: 172, 251
-  size: 64, 20
-  orig: 64, 20
+  xy: 260, 56
+  size: 47, 16
+  orig: 47, 16
   offset: 0, 0
   index: -1
-effects/slot8_water1_4
+Snow2Shadow
   rotate: false
-  xy: 302, 352
-  size: 64, 20
-  orig: 64, 20
+  xy: 1, 1
+  size: 59, 18
+  orig: 59, 18
   offset: 0, 0
   index: -1
-effects/slot8_water1_5
+Snow3
   rotate: false
-  xy: 367, 373
-  size: 64, 20
-  orig: 64, 20
+  xy: 61, 8
+  size: 33, 11
+  orig: 33, 11
   offset: 0, 0
   index: -1
-effects/slot8_water1_6
+Snow3Shadow
   rotate: false
-  xy: 1, 44
-  size: 64, 20
-  orig: 64, 20
+  xy: 962, 219
+  size: 32, 12
+  orig: 32, 12
   offset: 0, 0
   index: -1
-effects/slot8_water1_7
+body/arab/white_Body
   rotate: false
-  xy: 172, 230
-  size: 64, 20
-  orig: 64, 20
+  xy: 545, 113
+  size: 138, 132
+  orig: 138, 132
   offset: 0, 0
   index: -1
-fish1
+body/negro/white_Body
   rotate: false
-  xy: 1, 86
-  size: 84, 42
-  orig: 84, 42
+  xy: 684, 113
+  size: 138, 132
+  orig: 138, 132
   offset: 0, 0
   index: -1
-fish2
+body/white/white_Body
   rotate: false
-  xy: 172, 272
-  size: 74, 38
-  orig: 74, 38
+  xy: 823, 113
+  size: 138, 132
+  orig: 138, 132
   offset: 0, 0
   index: -1
-glow
+eyes
   rotate: false
-  xy: 302, 341
-  size: 62, 10
-  orig: 62, 10
-  offset: 0, 0
-  index: -1
-lightpillar
-  rotate: false
-  xy: 1, 129
-  size: 136, 181
-  orig: 136, 181
-  offset: 0, 0
-  index: -1
-lights
-  rotate: false
-  xy: 302, 419
-  size: 173, 55
-  orig: 173, 55
-  offset: 0, 0
-  index: -1
-ufo
-  rotate: false
-  xy: 1, 311
-  size: 300, 163
-  orig: 300, 163
+  xy: 260, 73
+  size: 47, 47
+  orig: 47, 47
   offset: 0, 0
   index: -1

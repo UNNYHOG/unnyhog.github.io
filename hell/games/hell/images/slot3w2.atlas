@@ -1,195 +1,244 @@
 
-slot3w2.png
-size: 512,512
+Slot3w2.png
+size: 1024,32
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
-beacon
+DevilLeft_Shadow
   rotate: false
-  xy: 113, 339
-  size: 16, 15
-  orig: 16, 15
+  xy: 463, 1
+  size: 25, 7
+  orig: 25, 7
   offset: 0, 0
   index: -1
-effects/1/slot3_water_1
+DevilRight_Shadow
+  rotate: false
+  xy: 1, 5
+  size: 25, 7
+  orig: 25, 7
+  offset: 0, 0
+  index: -1
+FirstDevilBody
   rotate: true
-  xy: 1, 1
-  size: 121, 39
-  orig: 121, 39
+  xy: 367, 14
+  size: 17, 54
+  orig: 17, 54
   offset: 0, 0
   index: -1
-effects/1/slot3_water_2
+FirstDevilFeather
+  rotate: false
+  xy: 367, 4
+  size: 22, 9
+  orig: 22, 9
+  offset: 0, 0
+  index: -1
+FirstDevilHead
+  rotate: false
+  xy: 503, 4
+  size: 29, 27
+  orig: 29, 27
+  offset: 0, 0
+  index: -1
+FirstDevilLeftArm
   rotate: true
-  xy: 41, 1
-  size: 121, 39
-  orig: 121, 39
+  xy: 463, 9
+  size: 22, 39
+  orig: 22, 39
   offset: 0, 0
   index: -1
-effects/1/slot3_water_3
+FirstDevilRightArm
+  rotate: false
+  xy: 592, 15
+  size: 30, 16
+  orig: 30, 16
+  offset: 0, 0
+  index: -1
+FirstDevilTail
   rotate: true
-  xy: 99, 209
-  size: 121, 39
-  orig: 121, 39
+  xy: 27, 1
+  size: 11, 10
+  orig: 11, 10
   offset: 0, 0
   index: -1
-effects/1/slot3_water_4
+FirstDevilTailTip
+  rotate: false
+  xy: 643, 6
+  size: 9, 8
+  orig: 9, 8
+  offset: 0, 0
+  index: -1
+ManFace
+  rotate: false
+  xy: 533, 1
+  size: 14, 6
+  orig: 14, 6
+  offset: 0, 0
+  index: -1
+ManMouth
   rotate: true
-  xy: 139, 233
-  size: 121, 39
-  orig: 121, 39
+  xy: 559, 1
+  size: 14, 21
+  orig: 14, 21
   offset: 0, 0
   index: -1
-effects/1/slot3_water_5
+Man_Shadow
+  rotate: false
+  xy: 106, 13
+  size: 65, 18
+  orig: 65, 18
+  offset: 0, 0
+  index: -1
+SecondDevilBody
   rotate: true
-  xy: 81, 1
-  size: 121, 39
-  orig: 121, 39
+  xy: 422, 1
+  size: 30, 40
+  orig: 30, 40
   offset: 0, 0
   index: -1
-effects/1/slot3_water_6
+SecondDevilFeather
   rotate: false
-  xy: 181, 375
-  size: 121, 39
-  orig: 121, 39
+  xy: 581, 1
+  size: 21, 13
+  orig: 21, 13
   offset: 0, 0
   index: -1
-effects/2/slot3_water2_1
+SecondDevilHead
   rotate: false
-  xy: 303, 377
-  size: 112, 37
-  orig: 112, 37
+  xy: 533, 8
+  size: 25, 23
+  orig: 25, 23
   offset: 0, 0
   index: -1
-effects/2/slot3_water2_2
+SecondDevilLeftArm
   rotate: false
-  xy: 181, 337
-  size: 112, 37
-  orig: 112, 37
+  xy: 603, 1
+  size: 21, 13
+  orig: 21, 13
   offset: 0, 0
   index: -1
-effects/2/slot3_water2_3
-  rotate: false
-  xy: 179, 299
-  size: 112, 37
-  orig: 112, 37
-  offset: 0, 0
-  index: -1
-effects/2/slot3_water2_4
-  rotate: false
-  xy: 179, 261
-  size: 112, 37
-  orig: 112, 37
-  offset: 0, 0
-  index: -1
-effects/2/slot3_water2_5
-  rotate: false
-  xy: 179, 223
-  size: 112, 37
-  orig: 112, 37
-  offset: 0, 0
-  index: -1
-effects/2/slot3_water2_6
-  rotate: false
-  xy: 303, 339
-  size: 112, 37
-  orig: 112, 37
-  offset: 0, 0
-  index: -1
-effects/3/slot3_water3_1
-  rotate: false
-  xy: 214, 479
-  size: 133, 31
-  orig: 133, 31
-  offset: 0, 0
-  index: -1
-effects/3/slot3_water3_2
-  rotate: false
-  xy: 214, 447
-  size: 133, 31
-  orig: 133, 31
-  offset: 0, 0
-  index: -1
-effects/3/slot3_water3_3
-  rotate: false
-  xy: 348, 479
-  size: 133, 31
-  orig: 133, 31
-  offset: 0, 0
-  index: -1
-effects/3/slot3_water3_4
-  rotate: false
-  xy: 348, 447
-  size: 133, 31
-  orig: 133, 31
-  offset: 0, 0
-  index: -1
-effects/3/slot3_water3_5
-  rotate: false
-  xy: 214, 415
-  size: 133, 31
-  orig: 133, 31
-  offset: 0, 0
-  index: -1
-effects/3/slot3_water3_6
-  rotate: false
-  xy: 348, 415
-  size: 133, 31
-  orig: 133, 31
-  offset: 0, 0
-  index: -1
-fish
+SecondDevilRightArm
   rotate: true
-  xy: 450, 355
-  size: 59, 35
-  orig: 59, 35
+  xy: 559, 16
+  size: 15, 32
+  orig: 15, 32
   offset: 0, 0
   index: -1
-fishbucket
-  rotate: false
-  xy: 1, 123
-  size: 87, 86
-  orig: 87, 86
-  offset: 0, 0
-  index: -1
-man
-  rotate: false
-  xy: 1, 331
-  size: 111, 179
-  orig: 111, 179
-  offset: 0, 0
-  index: -1
-penghalf
-  rotate: false
-  xy: 113, 355
-  size: 67, 66
-  orig: 67, 66
-  offset: 0, 0
-  index: -1
-penguin1
-  rotate: false
-  xy: 1, 210
-  size: 97, 120
-  orig: 97, 120
-  offset: 0, 0
-  index: -1
-penguinsliding
-  rotate: false
-  xy: 113, 422
-  size: 100, 88
-  orig: 100, 88
-  offset: 0, 0
-  index: -1
-sh1
+body/arab/arab_ManBodyTop
   rotate: true
-  xy: 416, 322
-  size: 92, 33
-  orig: 92, 33
+  xy: 172, 3
+  size: 28, 64
+  orig: 28, 64
   offset: 0, 0
   index: -1
-shadow
+body/arab/arab_ManLeftHand
+  rotate: false
+  xy: 687, 14
+  size: 17, 17
+  orig: 17, 17
+  offset: 0, 0
+  index: -1
+body/arab/arab_ManLeftLeg
+  rotate: false
+  xy: 625, 1
+  size: 17, 13
+  orig: 17, 13
+  offset: 0, 0
+  index: -1
+body/arab/arab_ManRightHand
+  rotate: false
+  xy: 623, 15
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+body/arab/arab_ManRightLeg
+  rotate: false
+  xy: 776, 17
+  size: 14, 14
+  orig: 14, 14
+  offset: 0, 0
+  index: -1
+body/negro/negro_ManBodyTop
   rotate: true
-  xy: 416, 322
-  size: 92, 33
-  orig: 92, 33
+  xy: 237, 3
+  size: 28, 64
+  orig: 28, 64
+  offset: 0, 0
+  index: -1
+body/negro/negro_ManLeftHand
+  rotate: false
+  xy: 705, 14
+  size: 17, 17
+  orig: 17, 17
+  offset: 0, 0
+  index: -1
+body/negro/negro_ManLeftLeg
+  rotate: false
+  xy: 741, 1
+  size: 17, 13
+  orig: 17, 13
+  offset: 0, 0
+  index: -1
+body/negro/negro_ManRightHand
+  rotate: false
+  xy: 640, 15
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+body/negro/negro_ManRightLeg
+  rotate: false
+  xy: 791, 17
+  size: 14, 14
+  orig: 14, 14
+  offset: 0, 0
+  index: -1
+body/white/white_ManBodyTop
+  rotate: true
+  xy: 302, 3
+  size: 28, 64
+  orig: 28, 64
+  offset: 0, 0
+  index: -1
+body/white/white_ManLeftHand
+  rotate: false
+  xy: 723, 14
+  size: 17, 17
+  orig: 17, 17
+  offset: 0, 0
+  index: -1
+body/white/white_ManLeftLeg
+  rotate: false
+  xy: 758, 18
+  size: 17, 13
+  orig: 17, 13
+  offset: 0, 0
+  index: -1
+body/white/white_ManRightHand
+  rotate: false
+  xy: 741, 15
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+body/white/white_ManRightLeg
+  rotate: false
+  xy: 806, 17
+  size: 14, 14
+  orig: 14, 14
+  offset: 0, 0
+  index: -1
+body/white_ManHips
+  rotate: false
+  xy: 657, 14
+  size: 29, 17
+  orig: 29, 17
+  offset: 0, 0
+  index: -1
+stolb
+  rotate: true
+  xy: 1, 13
+  size: 18, 104
+  orig: 18, 104
   offset: 0, 0
   index: -1

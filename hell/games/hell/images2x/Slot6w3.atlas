@@ -1,174 +1,272 @@
 
 Slot6w3.png
-size: 512,512
+size: 1024,256
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
+1
+  rotate: true
+  xy: 95, 1
+  size: 39, 40
+  orig: 39, 40
+  offset: 0, 0
+  index: -1
+1Body
+  rotate: true
+  xy: 1, 6
+  size: 34, 93
+  orig: 34, 93
+  offset: 0, 0
+  index: -1
+1Head
+  rotate: false
+  xy: 667, 37
+  size: 70, 48
+  orig: 70, 48
+  offset: 0, 0
+  index: -1
+1LeftArm
+  rotate: true
+  xy: 1004, 211
+  size: 18, 19
+  orig: 18, 19
+  offset: 0, 0
+  index: -1
+1LeftHand
+  rotate: true
+  xy: 136, 25
+  size: 15, 70
+  orig: 15, 70
+  offset: 0, 0
+  index: -1
+1RightArmDown
+  rotate: true
+  xy: 449, 52
+  size: 11, 26
+  orig: 11, 26
+  offset: 0, 0
+  index: -1
+1RightArmTop
+  rotate: false
+  xy: 842, 23
+  size: 24, 10
+  orig: 24, 10
+  offset: 0, 0
+  index: -1
+1RightHand
+  rotate: true
+  xy: 189, 6
+  size: 18, 14
+  orig: 18, 14
+  offset: 0, 0
+  index: -1
+2
+  rotate: true
+  xy: 985, 70
+  size: 42, 38
+  orig: 42, 38
+  offset: 0, 0
+  index: -1
+2Body
+  rotate: true
+  xy: 226, 9
+  size: 55, 92
+  orig: 55, 92
+  offset: 0, 0
+  index: -1
+2Ear
+  rotate: true
+  xy: 174, 1
+  size: 23, 14
+  orig: 23, 14
+  offset: 0, 0
+  index: -1
+2Head
+  rotate: false
+  xy: 837, 98
+  size: 76, 110
+  orig: 76, 110
+  offset: 0, 0
+  index: -1
+2LeftArmDown
+  rotate: true
+  xy: 136, 2
+  size: 22, 37
+  orig: 22, 37
+  offset: 0, 0
+  index: -1
+2LeftArmTop
+  rotate: true
+  xy: 207, 7
+  size: 33, 18
+  orig: 33, 18
+  offset: 0, 0
+  index: -1
+2LeftHand
+  rotate: true
+  xy: 1004, 230
+  size: 25, 19
+  orig: 25, 19
+  offset: 0, 0
+  index: -1
+2LeftMoustache
+  rotate: false
+  xy: 226, 1
+  size: 13, 7
+  orig: 13, 7
+  offset: 0, 0
+  index: -1
+2RightArm
+  rotate: false
+  xy: 427, 11
+  size: 22, 36
+  orig: 22, 36
+  offset: 0, 0
+  index: -1
+2RightMoustache
+  rotate: false
+  xy: 422, 1
+  size: 17, 9
+  orig: 17, 9
+  offset: 0, 0
+  index: -1
+2Tail
+  rotate: false
+  xy: 842, 34
+  size: 24, 16
+  orig: 24, 16
+  offset: 0, 0
+  index: -1
 Body
-  rotate: false
-  xy: 1, 32
-  size: 106, 195
-  orig: 106, 195
-  offset: 0, 0
-  index: -1
-Effects/slot6_water_1
-  rotate: false
-  xy: 231, 200
-  size: 25, 27
-  orig: 25, 27
-  offset: 0, 0
-  index: -1
-Effects/slot6_water_10
-  rotate: false
-  xy: 152, 96
-  size: 25, 27
-  orig: 25, 27
-  offset: 0, 0
-  index: -1
-Effects/slot6_water_2
-  rotate: false
-  xy: 181, 140
-  size: 25, 27
-  orig: 25, 27
-  offset: 0, 0
-  index: -1
-Effects/slot6_water_3
-  rotate: false
-  xy: 462, 397
-  size: 25, 27
-  orig: 25, 27
-  offset: 0, 0
-  index: -1
-Effects/slot6_water_4
-  rotate: false
-  xy: 126, 96
-  size: 25, 27
-  orig: 25, 27
-  offset: 0, 0
-  index: -1
-Effects/slot6_water_5
   rotate: true
-  xy: 294, 270
-  size: 25, 27
-  orig: 25, 27
+  xy: 914, 113
+  size: 95, 87
+  orig: 95, 87
   offset: 0, 0
   index: -1
-Effects/slot6_water_6
+DevilLeft_Shadow
   rotate: false
-  xy: 266, 241
-  size: 25, 27
-  orig: 25, 27
+  xy: 390, 48
+  size: 58, 16
+  orig: 58, 16
   offset: 0, 0
   index: -1
-Effects/slot6_water_7
+DevilRight_shadow
   rotate: false
-  xy: 231, 172
-  size: 25, 27
-  orig: 25, 27
+  xy: 390, 48
+  size: 58, 16
+  orig: 58, 16
   offset: 0, 0
   index: -1
-Effects/slot6_water_8
+Lamps1
   rotate: false
-  xy: 462, 369
-  size: 25, 27
-  orig: 25, 27
+  xy: 226, 65
+  size: 224, 190
+  orig: 224, 190
   offset: 0, 0
   index: -1
-Effects/slot6_water_9
+Lamps2
   rotate: false
-  xy: 126, 68
-  size: 25, 27
-  orig: 25, 27
+  xy: 451, 64
+  size: 215, 191
+  orig: 215, 191
   offset: 0, 0
   index: -1
-Fish
+LeftFoot
   rotate: false
-  xy: 108, 168
-  size: 122, 59
-  orig: 122, 59
+  xy: 841, 51
+  size: 30, 14
+  orig: 30, 14
   offset: 0, 0
   index: -1
-HandFront
+RightFoot
   rotate: false
-  xy: 108, 124
-  size: 72, 43
-  orig: 72, 43
+  xy: 390, 1
+  size: 31, 14
+  orig: 31, 14
   offset: 0, 0
   index: -1
-HandRear
+back
   rotate: false
-  xy: 266, 269
-  size: 27, 26
-  orig: 27, 26
+  xy: 1, 41
+  size: 224, 214
+  orig: 224, 214
   offset: 0, 0
   index: -1
-Leskas/Leska1
+body/arab/arab_Head
   rotate: false
-  xy: 438, 294
-  size: 1, 217
-  orig: 1, 217
+  xy: 319, 7
+  size: 70, 57
+  orig: 70, 57
   offset: 0, 0
   index: -1
-Leskas/Leska2
+body/arab/arab_LeftHand
   rotate: false
-  xy: 381, 292
-  size: 38, 219
-  orig: 38, 219
+  xy: 878, 67
+  size: 32, 30
+  orig: 32, 30
   offset: 0, 0
   index: -1
-Leskas/Leska3
+body/arab/arab_RightHand
   rotate: false
-  xy: 332, 294
-  size: 48, 217
-  orig: 48, 217
+  xy: 390, 16
+  size: 36, 31
+  orig: 36, 31
   offset: 0, 0
   index: -1
-Leskas/Leska4
+body/negro/negro_Head
   rotate: false
-  xy: 266, 296
-  size: 65, 215
-  orig: 65, 215
+  xy: 738, 28
+  size: 70, 57
+  orig: 70, 57
   offset: 0, 0
   index: -1
-Leskas/Leska8
+body/negro/negro_LeftHand
   rotate: false
-  xy: 420, 292
-  size: 17, 219
-  orig: 17, 219
+  xy: 809, 18
+  size: 32, 30
+  orig: 32, 30
   offset: 0, 0
   index: -1
-Leskas/Leska9
+body/negro/negro_RightHand
   rotate: true
-  xy: 1, 1
-  size: 30, 219
-  orig: 30, 219
+  xy: 809, 49
+  size: 36, 31
+  orig: 36, 31
   offset: 0, 0
   index: -1
-Shadow
-  rotate: true
-  xy: 462, 425
-  size: 86, 25
-  orig: 86, 25
-  offset: 0, 0
-  index: -1
-ShadowShip
-  rotate: true
-  xy: 108, 46
-  size: 77, 17
-  orig: 77, 17
-  offset: 0, 0
-  index: -1
-Ship
+body/white/white_Head
   rotate: false
-  xy: 1, 228
-  size: 264, 283
-  orig: 264, 283
+  xy: 914, 55
+  size: 70, 57
+  orig: 70, 57
   offset: 0, 0
   index: -1
-String
-  rotate: true
-  xy: 440, 367
-  size: 144, 21
-  orig: 144, 21
+body/white/white_LeftHand
+  rotate: false
+  xy: 985, 39
+  size: 32, 30
+  orig: 32, 30
+  offset: 0, 0
+  index: -1
+body/white/white_RightHand
+  rotate: false
+  xy: 841, 66
+  size: 36, 31
+  orig: 36, 31
+  offset: 0, 0
+  index: -1
+circle
+  rotate: false
+  xy: 667, 86
+  size: 169, 169
+  orig: 169, 169
+  offset: 0, 0
+  index: -1
+shadow_Spin
+  rotate: false
+  xy: 837, 209
+  size: 166, 46
+  orig: 166, 46
   offset: 0, 0
   index: -1

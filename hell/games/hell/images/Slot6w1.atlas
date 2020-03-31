@@ -1,0 +1,335 @@
+
+Slot6w1.png
+size: 256,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body
+  rotate: false
+  xy: 103, 223
+  size: 33, 32
+  orig: 33, 32
+  offset: 0, 0
+  index: -1
+BodyFront
+  rotate: false
+  xy: 31, 63
+  size: 12, 15
+  orig: 12, 15
+  offset: 0, 0
+  index: -1
+Face
+  rotate: false
+  xy: 207, 227
+  size: 20, 12
+  orig: 20, 12
+  offset: 0, 0
+  index: -1
+Hips
+  rotate: true
+  xy: 31, 79
+  size: 22, 10
+  orig: 22, 10
+  offset: 0, 0
+  index: -1
+LeftLeg
+  rotate: false
+  xy: 42, 79
+  size: 9, 7
+  orig: 9, 7
+  offset: 0, 0
+  index: -1
+Light
+  rotate: false
+  xy: 1, 37
+  size: 24, 24
+  orig: 24, 24
+  offset: 0, 0
+  index: -1
+Man_Body3
+  rotate: false
+  xy: 1, 166
+  size: 41, 36
+  orig: 41, 36
+  offset: 0, 0
+  index: -1
+Man_Shadow
+  rotate: true
+  xy: 31, 102
+  size: 33, 9
+  orig: 33, 9
+  offset: 0, 0
+  index: -1
+Man_eye1
+  rotate: false
+  xy: 1, 1
+  size: 10, 5
+  orig: 10, 5
+  offset: 0, 0
+  index: -1
+Man_eye3
+  rotate: false
+  xy: 93, 206
+  size: 10, 4
+  orig: 10, 4
+  offset: 0, 0
+  index: -1
+MediumBody
+  rotate: false
+  xy: 1, 136
+  size: 39, 29
+  orig: 39, 29
+  offset: 0, 0
+  index: -1
+MediumHips
+  rotate: true
+  xy: 26, 40
+  size: 21, 6
+  orig: 21, 6
+  offset: 0, 0
+  index: -1
+MediumLeftLeg
+  rotate: false
+  xy: 63, 198
+  size: 9, 8
+  orig: 9, 8
+  offset: 0, 0
+  index: -1
+MediumRightLeg
+  rotate: false
+  xy: 73, 198
+  size: 9, 8
+  orig: 9, 8
+  offset: 0, 0
+  index: -1
+Mouth
+  rotate: true
+  xy: 41, 102
+  size: 12, 13
+  orig: 12, 13
+  offset: 0, 0
+  index: -1
+MouthScared
+  rotate: false
+  xy: 12, 1
+  size: 6, 5
+  orig: 6, 5
+  offset: 0, 0
+  index: -1
+RightLeg
+  rotate: false
+  xy: 33, 40
+  size: 11, 6
+  orig: 11, 6
+  offset: 0, 0
+  index: -1
+SlapEffect
+  rotate: false
+  xy: 1, 19
+  size: 22, 17
+  orig: 22, 17
+  offset: 0, 0
+  index: -1
+Staff1
+  rotate: true
+  xy: 174, 226
+  size: 29, 32
+  orig: 29, 32
+  offset: 0, 0
+  index: -1
+Staff2
+  rotate: false
+  xy: 63, 223
+  size: 39, 32
+  orig: 39, 32
+  offset: 0, 0
+  index: -1
+Staff3
+  rotate: false
+  xy: 1, 203
+  size: 61, 52
+  orig: 61, 52
+  offset: 0, 0
+  index: -1
+body/arab/arab_Head
+  rotate: false
+  xy: 1, 99
+  size: 29, 36
+  orig: 29, 36
+  offset: 0, 0
+  index: -1
+body/arab/arab_LeftArm
+  rotate: false
+  xy: 237, 243
+  size: 18, 12
+  orig: 18, 12
+  offset: 0, 0
+  index: -1
+body/arab/arab_MediumLeftArm
+  rotate: false
+  xy: 33, 47
+  size: 11, 15
+  orig: 11, 15
+  offset: 0, 0
+  index: -1
+body/arab/arab_MediumRightArm
+  rotate: false
+  xy: 41, 130
+  size: 11, 14
+  orig: 11, 14
+  offset: 0, 0
+  index: -1
+body/arab/arab_RightArm
+  rotate: false
+  xy: 41, 115
+  size: 11, 14
+  orig: 11, 14
+  offset: 0, 0
+  index: -1
+body/arab/arab_SmallHead
+  rotate: true
+  xy: 43, 173
+  size: 29, 15
+  orig: 29, 15
+  offset: 0, 0
+  index: -1
+body/arab/arab_SmallLeftArm
+  rotate: true
+  xy: 228, 229
+  size: 10, 8
+  orig: 10, 8
+  offset: 0, 0
+  index: -1
+body/arab/arab_SmallRightArm
+  rotate: false
+  xy: 55, 105
+  size: 10, 10
+  orig: 10, 10
+  offset: 0, 0
+  index: -1
+body/negro/negro_Head
+  rotate: true
+  xy: 137, 226
+  size: 29, 36
+  orig: 29, 36
+  offset: 0, 0
+  index: -1
+body/negro/negro_LeftArm
+  rotate: false
+  xy: 237, 230
+  size: 18, 12
+  orig: 18, 12
+  offset: 0, 0
+  index: -1
+body/negro/negro_MediumLeftArm
+  rotate: true
+  xy: 43, 161
+  size: 11, 15
+  orig: 11, 15
+  offset: 0, 0
+  index: -1
+body/negro/negro_MediumRightArm
+  rotate: false
+  xy: 42, 87
+  size: 11, 14
+  orig: 11, 14
+  offset: 0, 0
+  index: -1
+body/negro/negro_RightArm
+  rotate: false
+  xy: 53, 146
+  size: 11, 14
+  orig: 11, 14
+  offset: 0, 0
+  index: -1
+body/negro/negro_SmallFace
+  rotate: false
+  xy: 93, 211
+  size: 22, 11
+  orig: 22, 11
+  offset: 0, 0
+  index: -1
+body/negro/negro_SmallHead
+  rotate: false
+  xy: 63, 207
+  size: 29, 15
+  orig: 29, 15
+  offset: 0, 0
+  index: -1
+body/negro/negro_SmallLeftArm
+  rotate: true
+  xy: 44, 68
+  size: 10, 8
+  orig: 10, 8
+  offset: 0, 0
+  index: -1
+body/negro/negro_SmallRightArm
+  rotate: false
+  xy: 104, 200
+  size: 10, 10
+  orig: 10, 10
+  offset: 0, 0
+  index: -1
+body/white/white_Head
+  rotate: false
+  xy: 1, 62
+  size: 29, 36
+  orig: 29, 36
+  offset: 0, 0
+  index: -1
+body/white/white_LeftArm
+  rotate: false
+  xy: 116, 210
+  size: 18, 12
+  orig: 18, 12
+  offset: 0, 0
+  index: -1
+body/white/white_MediumLeftArm
+  rotate: false
+  xy: 41, 145
+  size: 11, 15
+  orig: 11, 15
+  offset: 0, 0
+  index: -1
+body/white/white_MediumRightArm
+  rotate: false
+  xy: 53, 131
+  size: 11, 14
+  orig: 11, 14
+  offset: 0, 0
+  index: -1
+body/white/white_RightArm
+  rotate: false
+  xy: 53, 116
+  size: 11, 14
+  orig: 11, 14
+  offset: 0, 0
+  index: -1
+body/white/white_SmallFace
+  rotate: false
+  xy: 1, 7
+  size: 22, 11
+  orig: 22, 11
+  offset: 0, 0
+  index: -1
+body/white/white_SmallHead
+  rotate: false
+  xy: 207, 240
+  size: 29, 15
+  orig: 29, 15
+  offset: 0, 0
+  index: -1
+body/white/white_SmallLeftArm
+  rotate: true
+  xy: 126, 199
+  size: 10, 8
+  orig: 10, 8
+  offset: 0, 0
+  index: -1
+body/white/white_SmallRightArm
+  rotate: false
+  xy: 115, 199
+  size: 10, 10
+  orig: 10, 10
+  offset: 0, 0
+  index: -1

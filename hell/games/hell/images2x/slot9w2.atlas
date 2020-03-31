@@ -1,300 +1,251 @@
 
-slot9w2.png
-size: 1024,1024
+Slot9w2.png
+size: 1024,256
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
-door
+DogBody
   rotate: false
-  xy: 1, 836
-  size: 277, 170
-  orig: 277, 170
+  xy: 212, 152
+  size: 139, 102
+  orig: 139, 102
   offset: 0, 0
   index: -1
-effects/1/slot9_effect_1
+DogChest
+  rotate: false
+  xy: 352, 146
+  size: 125, 108
+  orig: 125, 108
+  offset: 0, 0
+  index: -1
+DogHead
+  rotate: false
+  xy: 586, 175
+  size: 99, 79
+  orig: 99, 79
+  offset: 0, 0
+  index: -1
+DogJaw
+  rotate: false
+  xy: 212, 78
+  size: 74, 37
+  orig: 74, 37
+  offset: 0, 0
+  index: -1
+DogTail
+  rotate: false
+  xy: 934, 150
+  size: 36, 34
+  orig: 36, 34
+  offset: 0, 0
+  index: -1
+Dog_Shadow
+  rotate: false
+  xy: 212, 116
+  size: 126, 35
+  orig: 126, 35
+  offset: 0, 0
+  index: -1
+Fight_1
+  rotate: false
+  xy: 478, 160
+  size: 107, 94
+  orig: 107, 94
+  offset: 0, 0
+  index: -1
+Fight_10
   rotate: true
-  xy: 126, 214
-  size: 50, 29
-  orig: 50, 29
+  xy: 772, 172
+  size: 12, 11
+  orig: 12, 11
   offset: 0, 0
   index: -1
-effects/1/slot9_effect_2
+Fight_11
   rotate: false
-  xy: 414, 848
-  size: 50, 29
-  orig: 50, 29
+  xy: 1, 92
+  size: 210, 162
+  orig: 210, 162
   offset: 0, 0
   index: -1
-effects/1/slot9_effect_3
-  rotate: false
-  xy: 1, 3
-  size: 50, 29
-  orig: 50, 29
-  offset: 0, 0
-  index: -1
-effects/1/slot9_effect_4
+Fight_2
   rotate: true
-  xy: 186, 530
-  size: 50, 29
-  orig: 50, 29
+  xy: 287, 66
+  size: 49, 56
+  orig: 49, 56
   offset: 0, 0
   index: -1
-effects/1/slot9_effect_5
+Fight_3
+  rotate: false
+  xy: 686, 172
+  size: 85, 82
+  orig: 85, 82
+  offset: 0, 0
+  index: -1
+Fight_4
+  rotate: false
+  xy: 586, 136
+  size: 63, 38
+  orig: 63, 38
+  offset: 0, 0
+  index: -1
+Fight_7
   rotate: true
-  xy: 216, 532
-  size: 50, 29
-  orig: 50, 29
+  xy: 190, 13
+  size: 20, 16
+  orig: 20, 16
   offset: 0, 0
   index: -1
-effects/smoke/slot9_smoke2_1
+Fight_8
   rotate: false
-  xy: 165, 445
-  size: 25, 45
-  orig: 25, 45
+  xy: 339, 120
+  size: 28, 25
+  orig: 28, 25
   offset: 0, 0
   index: -1
-effects/smoke/slot9_smoke2_2
+Fight_9
   rotate: false
-  xy: 165, 399
-  size: 25, 45
-  orig: 25, 45
+  xy: 282, 10
+  size: 6, 7
+  orig: 6, 7
   offset: 0, 0
   index: -1
-effects/smoke/slot9_smoke2_3
+Fight_Shadow
   rotate: false
-  xy: 260, 790
-  size: 25, 45
-  orig: 25, 45
+  xy: 1, 34
+  size: 208, 57
+  orig: 208, 57
   offset: 0, 0
   index: -1
-effects/smoke/slot9_smoke2_4
+ManBody
   rotate: false
-  xy: 260, 744
-  size: 25, 45
-  orig: 25, 45
+  xy: 210, 9
+  size: 71, 68
+  orig: 71, 68
   offset: 0, 0
   index: -1
-effects/smoke/slot9_smoke2_5
-  rotate: false
-  xy: 260, 698
-  size: 25, 45
-  orig: 25, 45
-  offset: 0, 0
-  index: -1
-effects/smoke/slot9_smoke2_6
-  rotate: false
-  xy: 596, 888
-  size: 25, 45
-  orig: 25, 45
-  offset: 0, 0
-  index: -1
-effects/smoke/slot9_smoke2_7
-  rotate: false
-  xy: 243, 616
-  size: 25, 45
-  orig: 25, 45
-  offset: 0, 0
-  index: -1
-effects/wat1/slot9_water1_1
+ManLegs
   rotate: true
-  xy: 45, 373
-  size: 105, 39
-  orig: 105, 39
+  xy: 650, 116
+  size: 58, 35
+  orig: 58, 35
   offset: 0, 0
   index: -1
-effects/wat1/slot9_water1_2
-  rotate: true
-  xy: 85, 385
-  size: 105, 39
-  orig: 105, 39
-  offset: 0, 0
-  index: -1
-effects/wat1/slot9_water1_3
-  rotate: true
-  xy: 125, 385
-  size: 105, 39
-  orig: 105, 39
-  offset: 0, 0
-  index: -1
-effects/wat1/slot9_water1_4
-  rotate: true
-  xy: 46, 267
-  size: 105, 39
-  orig: 105, 39
-  offset: 0, 0
-  index: -1
-effects/wat1/slot9_water1_5
-  rotate: true
-  xy: 46, 161
-  size: 105, 39
-  orig: 105, 39
-  offset: 0, 0
-  index: -1
-effects/wat1/slot9_water1_6
-  rotate: true
-  xy: 46, 55
-  size: 105, 39
-  orig: 105, 39
-  offset: 0, 0
-  index: -1
-effects/wat1/slot9_water1_7
-  rotate: true
-  xy: 86, 279
-  size: 105, 39
-  orig: 105, 39
-  offset: 0, 0
-  index: -1
-effects/wat1/slot9_water1_8
-  rotate: true
-  xy: 86, 173
-  size: 105, 39
-  orig: 105, 39
-  offset: 0, 0
-  index: -1
-effects/wat2/slot9_water2_1
+Man_Face
   rotate: false
-  xy: 77, 536
-  size: 108, 44
-  orig: 108, 44
+  xy: 971, 160
+  size: 38, 24
+  orig: 38, 24
   offset: 0, 0
   index: -1
-effects/wat2/slot9_water2_2
-  rotate: false
-  xy: 733, 962
-  size: 108, 44
-  orig: 108, 44
-  offset: 0, 0
-  index: -1
-effects/wat2/slot9_water2_3
-  rotate: false
-  xy: 77, 491
-  size: 108, 44
-  orig: 108, 44
-  offset: 0, 0
-  index: -1
-effects/wat2/slot9_water2_4
-  rotate: false
-  xy: 842, 962
-  size: 108, 44
-  orig: 108, 44
-  offset: 0, 0
-  index: -1
-effects/wat2/slot9_water2_5
+Man_Shadow
   rotate: true
-  xy: 1, 251
-  size: 108, 44
-  orig: 108, 44
+  xy: 994, 185
+  size: 69, 19
+  orig: 69, 19
   offset: 0, 0
   index: -1
-effects/wat2/slot9_water2_6
-  rotate: true
-  xy: 1, 142
-  size: 108, 44
-  orig: 108, 44
-  offset: 0, 0
-  index: -1
-effects/wat2/slot9_water2_7
-  rotate: true
-  xy: 1, 33
-  size: 108, 44
-  orig: 108, 44
-  offset: 0, 0
-  index: -1
-fish
-  rotate: true
-  xy: 207, 583
-  size: 78, 35
-  orig: 78, 35
-  offset: 0, 0
-  index: -1
-fishpile
+body/arab/white_Arms1
   rotate: false
-  xy: 613, 950
-  size: 119, 56
-  orig: 119, 56
+  xy: 830, 144
+  size: 51, 40
+  orig: 51, 40
   offset: 0, 0
   index: -1
-hand
+body/arab/white_Arms2
   rotate: true
-  xy: 472, 881
-  size: 52, 123
-  orig: 52, 123
+  xy: 581, 94
+  size: 41, 52
+  orig: 41, 52
   offset: 0, 0
   index: -1
-hand2
+body/arab/white_ManFrontArm
   rotate: false
-  xy: 951, 959
-  size: 56, 47
-  orig: 56, 47
+  xy: 686, 124
+  size: 60, 47
+  orig: 60, 47
   offset: 0, 0
   index: -1
-hand3
+body/arab/white_ManHead
+  rotate: false
+  xy: 846, 185
+  size: 73, 69
+  orig: 73, 69
+  offset: 0, 0
+  index: -1
+body/arab/white_ManRearArm
+  rotate: false
+  xy: 64, 1
+  size: 62, 32
+  orig: 62, 32
+  offset: 0, 0
+  index: -1
+body/negro/white_Arms1
   rotate: true
-  xy: 126, 323
-  size: 61, 28
-  orig: 61, 28
+  xy: 747, 120
+  size: 51, 40
+  orig: 51, 40
   offset: 0, 0
   index: -1
-hand3_shadow
-  rotate: true
-  xy: 126, 265
-  size: 57, 24
-  orig: 57, 24
-  offset: 0, 0
-  index: -1
-jack
+body/negro/white_Arms2
   rotate: false
-  xy: 1, 479
-  size: 75, 101
-  orig: 75, 101
+  xy: 539, 107
+  size: 41, 52
+  orig: 41, 52
   offset: 0, 0
   index: -1
-rose
+body/negro/white_ManFrontArm
   rotate: false
-  xy: 279, 878
-  size: 192, 128
-  orig: 192, 128
+  xy: 282, 18
+  size: 60, 47
+  orig: 60, 47
   offset: 0, 0
   index: -1
-shadow3
-  rotate: true
-  xy: 1, 360
-  size: 118, 43
-  orig: 118, 43
-  offset: 0, 0
-  index: -1
-shadow4
-  rotate: true
-  xy: 86, 71
-  size: 101, 43
-  orig: 101, 43
-  offset: 0, 0
-  index: -1
-shadow5
+body/negro/white_ManHead
   rotate: false
-  xy: 472, 934
-  size: 140, 72
-  orig: 140, 72
+  xy: 772, 185
+  size: 73, 69
+  orig: 73, 69
   offset: 0, 0
   index: -1
-shadow6
+body/negro/white_ManRearArm
   rotate: false
-  xy: 279, 854
-  size: 134, 23
-  orig: 134, 23
+  xy: 1, 1
+  size: 62, 32
+  orig: 62, 32
   offset: 0, 0
   index: -1
-shadowrose
+body/white/white_Arms1
   rotate: false
-  xy: 1, 581
-  size: 205, 80
-  orig: 205, 80
+  xy: 882, 144
+  size: 51, 40
+  orig: 51, 40
   offset: 0, 0
   index: -1
-ship
+body/white/white_Arms2
   rotate: false
-  xy: 1, 662
-  size: 258, 173
-  orig: 258, 173
+  xy: 788, 132
+  size: 41, 52
+  orig: 41, 52
+  offset: 0, 0
+  index: -1
+body/white/white_ManFrontArm
+  rotate: false
+  xy: 478, 112
+  size: 60, 47
+  orig: 60, 47
+  offset: 0, 0
+  index: -1
+body/white/white_ManHead
+  rotate: false
+  xy: 920, 185
+  size: 73, 69
+  orig: 73, 69
+  offset: 0, 0
+  index: -1
+body/white/white_ManRearArm
+  rotate: false
+  xy: 127, 1
+  size: 62, 32
+  orig: 62, 32
   offset: 0, 0
   index: -1

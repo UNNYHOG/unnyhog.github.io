@@ -1,188 +1,111 @@
 
 Slot7w3.png
-size: 512,512
+size: 1024,256
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
-Body
+Bad
   rotate: false
-  xy: 192, 422
-  size: 164, 89
-  orig: 164, 89
+  xy: 249, 1
+  size: 181, 78
+  orig: 181, 78
   offset: 0, 0
   index: -1
-Claw
+Devil
   rotate: true
-  xy: 192, 331
-  size: 90, 108
-  orig: 90, 108
+  xy: 650, 85
+  size: 92, 127
+  orig: 92, 127
   offset: 0, 0
   index: -1
-DeadClaw
-  rotate: false
-  xy: 122, 225
-  size: 90, 105
-  orig: 90, 105
-  offset: 0, 0
-  index: -1
-DeadFish
-  rotate: false
-  xy: 213, 271
-  size: 84, 59
-  orig: 84, 59
-  offset: 0, 0
-  index: -1
-DeadTentacle
-  rotate: false
-  xy: 1, 29
-  size: 47, 85
-  orig: 47, 85
-  offset: 0, 0
-  index: -1
-Effects/slot7_water_1
-  rotate: false
-  xy: 72, 153
-  size: 12, 14
-  orig: 12, 14
-  offset: 0, 0
-  index: -1
-Effects/slot7_water_2
-  rotate: false
-  xy: 16, 14
-  size: 12, 14
-  orig: 12, 14
-  offset: 0, 0
-  index: -1
-Effects/slot7_water_3
+Love_1
   rotate: true
-  xy: 16, 1
-  size: 12, 14
-  orig: 12, 14
+  xy: 225, 36
+  size: 25, 19
+  orig: 25, 19
   offset: 0, 0
   index: -1
-Effects/slot7_water_4
+Love_2
   rotate: false
-  xy: 29, 14
-  size: 12, 14
-  orig: 12, 14
+  xy: 604, 94
+  size: 34, 25
+  orig: 34, 25
   offset: 0, 0
   index: -1
-Effects/slot7_water_5
+Love_3
+  rotate: false
+  xy: 431, 49
+  size: 38, 30
+  orig: 38, 30
+  offset: 0, 0
+  index: -1
+Scene_Curtin
+  rotate: false
+  xy: 1, 62
+  size: 247, 193
+  orig: 247, 193
+  offset: 0, 0
+  index: -1
+Scene_Curtin_B
+  rotate: false
+  xy: 249, 80
+  size: 223, 175
+  orig: 223, 175
+  offset: 0, 0
+  index: -1
+Scene_Curtin_L
   rotate: true
-  xy: 31, 1
-  size: 12, 14
-  orig: 12, 14
+  xy: 473, 120
+  size: 57, 176
+  orig: 57, 176
   offset: 0, 0
   index: -1
-Effects/slot7_water_6
-  rotate: false
-  xy: 372, 440
-  size: 12, 14
-  orig: 12, 14
-  offset: 0, 0
-  index: -1
-Effects/slot7_waterup_1
-  rotate: false
-  xy: 496, 489
-  size: 14, 22
-  orig: 14, 22
-  offset: 0, 0
-  index: -1
-Effects/slot7_waterup_2
-  rotate: false
-  xy: 57, 145
-  size: 14, 22
-  orig: 14, 22
-  offset: 0, 0
-  index: -1
-Effects/slot7_waterup_3
-  rotate: false
-  xy: 1, 6
-  size: 14, 22
-  orig: 14, 22
-  offset: 0, 0
-  index: -1
-Effects/slot7_waterup_4
-  rotate: false
-  xy: 357, 432
-  size: 14, 22
-  orig: 14, 22
-  offset: 0, 0
-  index: -1
-Effects/slot7_waterup_5
+Scene_Curtin_R
   rotate: true
-  xy: 213, 229
-  size: 14, 22
-  orig: 14, 22
+  xy: 755, 198
+  size: 57, 176
+  orig: 57, 176
   offset: 0, 0
   index: -1
-Effects/slot7_waterup_6
+Scene_Ring
   rotate: false
-  xy: 301, 333
-  size: 14, 22
-  orig: 14, 22
-  offset: 0, 0
-  index: -1
-Effects/slot7_waterup_7
-  rotate: false
-  xy: 496, 466
-  size: 14, 22
-  orig: 14, 22
-  offset: 0, 0
-  index: -1
-Effects/slot7_waterup_8
-  rotate: false
-  xy: 57, 122
-  size: 14, 22
-  orig: 14, 22
-  offset: 0, 0
-  index: -1
-Fish
-  rotate: false
-  xy: 122, 165
-  size: 84, 59
-  orig: 84, 59
-  offset: 0, 0
-  index: -1
-Hole
-  rotate: true
-  xy: 1, 115
-  size: 215, 55
-  orig: 215, 55
-  offset: 0, 0
-  index: -1
-Neck
-  rotate: false
-  xy: 301, 356
-  size: 57, 65
-  orig: 57, 65
-  offset: 0, 0
-  index: -1
-Pile
-  rotate: true
-  xy: 57, 168
-  size: 162, 64
-  orig: 162, 64
+  xy: 1, 4
+  size: 223, 57
+  orig: 223, 57
   offset: 0, 0
   index: -1
 Shadow
   rotate: false
-  xy: 213, 244
-  size: 165, 26
-  orig: 165, 26
+  xy: 473, 178
+  size: 281, 77
+  orig: 281, 77
   offset: 0, 0
   index: -1
-Tentacle
+body/arab/arab_Man
   rotate: true
-  xy: 357, 455
-  size: 56, 138
-  orig: 56, 138
+  xy: 473, 58
+  size: 61, 130
+  orig: 61, 130
   offset: 0, 0
   index: -1
-TentacleCurvy
+body/negro/negro_Man
+  rotate: true
+  xy: 778, 136
+  size: 61, 130
+  orig: 61, 130
+  offset: 0, 0
+  index: -1
+body/white/white_Man
+  rotate: true
+  xy: 778, 74
+  size: 61, 130
+  orig: 61, 130
+  offset: 0, 0
+  index: -1
+scared
   rotate: false
-  xy: 1, 331
-  size: 190, 180
-  orig: 190, 180
+  xy: 932, 200
+  size: 55, 55
+  orig: 55, 55
   offset: 0, 0
   index: -1

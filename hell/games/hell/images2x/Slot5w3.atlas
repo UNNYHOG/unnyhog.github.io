@@ -1,97 +1,160 @@
 
 Slot5w3.png
-size: 512,512
+size: 512,256
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
-Effects/slot5_water_1
+Body
   rotate: false
-  xy: 251, 301
-  size: 20, 21
-  orig: 20, 21
+  xy: 365, 93
+  size: 56, 66
+  orig: 56, 66
   offset: 0, 0
   index: -1
-Effects/slot5_water_2
+Carpet
   rotate: false
-  xy: 322, 409
-  size: 20, 21
-  orig: 20, 21
+  xy: 234, 37
+  size: 61, 32
+  orig: 61, 32
   offset: 0, 0
   index: -1
-Effects/slot5_water_3
+Chains
   rotate: false
-  xy: 1, 1
-  size: 20, 21
-  orig: 20, 21
+  xy: 158, 138
+  size: 134, 103
+  orig: 134, 103
   offset: 0, 0
   index: -1
-Effects/slot5_water_4
+Hips
   rotate: false
-  xy: 157, 65
-  size: 20, 21
-  orig: 20, 21
+  xy: 231, 8
+  size: 45, 28
+  orig: 45, 28
   offset: 0, 0
   index: -1
-Effects/slot5_water_5
+LeftLeg
   rotate: false
-  xy: 202, 173
-  size: 20, 21
-  orig: 20, 21
+  xy: 492, 90
+  size: 19, 30
+  orig: 19, 30
   offset: 0, 0
   index: -1
-Effects/slot5_water_6
-  rotate: false
-  xy: 251, 279
-  size: 20, 21
-  orig: 20, 21
-  offset: 0, 0
-  index: -1
-Effects/slot5_water_7
-  rotate: false
-  xy: 272, 301
-  size: 20, 21
-  orig: 20, 21
-  offset: 0, 0
-  index: -1
-Effects/slot5_water_8
-  rotate: false
-  xy: 322, 387
-  size: 20, 21
-  orig: 20, 21
-  offset: 0, 0
-  index: -1
-Fish
+Lock
   rotate: true
-  xy: 157, 87
-  size: 107, 44
-  orig: 107, 44
+  xy: 296, 50
+  size: 41, 60
+  orig: 41, 60
   offset: 0, 0
   index: -1
-FishCurvy
-  rotate: false
-  xy: 251, 323
-  size: 70, 107
-  orig: 70, 107
+Name
+  rotate: true
+  xy: 449, 177
+  size: 64, 57
+  orig: 64, 57
   offset: 0, 0
   index: -1
-Hall
+Name2
   rotate: false
-  xy: 1, 48
-  size: 155, 146
-  orig: 155, 146
+  xy: 442, 121
+  size: 69, 55
+  orig: 69, 55
   offset: 0, 0
   index: -1
-HallRound
+RightLeg
   rotate: false
-  xy: 1, 195
-  size: 249, 235
-  orig: 249, 235
+  xy: 492, 60
+  size: 19, 29
+  orig: 19, 29
   offset: 0, 0
   index: -1
 Shadow
+  rotate: true
+  xy: 422, 94
+  size: 65, 18
+  orig: 65, 18
+  offset: 0, 0
+  index: -1
+WC
   rotate: false
-  xy: 1, 23
-  size: 151, 24
-  orig: 151, 24
+  xy: 1, 34
+  size: 156, 207
+  orig: 156, 207
+  offset: 0, 0
+  index: -1
+WCShadow
+  rotate: false
+  xy: 293, 193
+  size: 155, 48
+  orig: 155, 48
+  offset: 0, 0
+  index: -1
+body/arab/arab_Head
+  rotate: false
+  xy: 158, 70
+  size: 68, 67
+  orig: 68, 67
+  offset: 0, 0
+  index: -1
+body/arab/arab_LeftArm
+  rotate: true
+  xy: 1, 1
+  size: 32, 75
+  orig: 32, 75
+  offset: 0, 0
+  index: -1
+body/arab/arab_RightArm
+  rotate: true
+  xy: 77, 1
+  size: 32, 72
+  orig: 32, 72
+  offset: 0, 0
+  index: -1
+body/negro/negro_Head
+  rotate: false
+  xy: 227, 70
+  size: 68, 67
+  orig: 68, 67
+  offset: 0, 0
+  index: -1
+body/negro/negro_LeftArm
+  rotate: true
+  xy: 158, 37
+  size: 32, 75
+  orig: 32, 75
+  offset: 0, 0
+  index: -1
+body/negro/negro_RightArm
+  rotate: true
+  xy: 369, 160
+  size: 32, 72
+  orig: 32, 72
+  offset: 0, 0
+  index: -1
+body/white/white_Head
+  rotate: false
+  xy: 296, 92
+  size: 68, 67
+  orig: 68, 67
+  offset: 0, 0
+  index: -1
+body/white/white_LeftArm
+  rotate: true
+  xy: 293, 160
+  size: 32, 75
+  orig: 32, 75
+  offset: 0, 0
+  index: -1
+body/white/white_RightArm
+  rotate: true
+  xy: 158, 4
+  size: 32, 72
+  orig: 32, 72
+  offset: 0, 0
+  index: -1
+scared
+  rotate: false
+  xy: 441, 70
+  size: 50, 50
+  orig: 50, 50
   offset: 0, 0
   index: -1
