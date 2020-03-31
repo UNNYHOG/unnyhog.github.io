@@ -6447,7 +6447,7 @@ const BoxType = {
 const MUSIC_STATE = "MUSIC_STATE";
 const SOUNDS_STATE = "SOUNDS_STATE";
 const CURRENT_LANGUAGE = "CURRENT_LANGUAGE";
-const GAME_VERSION = "0.9.48";
+const GAME_VERSION = "0.9.49";
 
 console.log("game version: " + GAME_VERSION);
 
@@ -10665,8 +10665,10 @@ class AnimatedObject {
     }
 
     setVisible(visible) {
-        this.visible = visible;
-        this.obj.setVisible(visible);
+        if (this.visible !== visible) {
+            this.visible = visible;
+            this.obj.setVisible(visible);
+        }
     }
 
     destroy(param) {
@@ -11029,8 +11031,9 @@ function LoadFile(engine, name, path, callback, type, secondPath) {
     }
 
     const version = VisualData.getGameSettings().art_version || 26;
-    path += "?v=" + version;
-    secondPath += "?v=" + version;
+    const addPath = "?v=" + VisualData.getGameName() + "_" + version;
+    path += addPath;
+    secondPath += addPath;
 
     if (!loadingImages.hasOwnProperty(name)) {
         switch (type) {
@@ -11467,7 +11470,7 @@ class VisualInit {
         }
 
         if (!this.podkova && VisualData.PODKOVA) {
-            PrepareAndCreateObject(VisualData.PODKOVA, null, this.engine, 1, (podkova)=>{
+            PrepareAndCreateObject(VisualData.PODKOVA, null, this.engine, 3000, (podkova)=>{
                 this.podkova = podkova;
                 this.podkova.setVisible(gameInit.progress.canShowGuard());
                 this.podkovaTimer = this.engine.add.container();
@@ -13732,7 +13735,7 @@ class WinPuzzle extends WinWithBrownBack {
             }, 2000);
         } else {
             for (let i in this.scroll)
-                this.scroll[i].table.setVisible(false);
+                this.scroll[i].setVisible(false);
 
             for (let i in this.groups)
                 SetGroupVisible(this.groups[i], visible);
