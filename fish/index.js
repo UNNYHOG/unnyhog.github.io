@@ -799,13 +799,13 @@ function SocialVK() {
                 // Your code here
                 // VK.callMethod("showInviteBox");
 
-                var callbacksResults = document.getElementById('callbacks');
-
-                VK.addCallback('onOrderSuccess', (order_id) => {
-                    _checkPurchases((id)=>{
-                       gameInit.progress.publicConfirmedPayment(id);
-                    });
-                });
+                // var callbacksResults = document.getElementById('callbacks');
+                //
+                // VK.addCallback('onOrderSuccess', (order_id) => {
+                //     _checkPurchases((id)=>{
+                //        gameInit.progress.publicConfirmedPayment(id);
+                //     });
+                // });
             });
             _preloadAd();
         },
@@ -6447,7 +6447,7 @@ const BoxType = {
 const MUSIC_STATE = "MUSIC_STATE";
 const SOUNDS_STATE = "SOUNDS_STATE";
 const CURRENT_LANGUAGE = "CURRENT_LANGUAGE";
-const GAME_VERSION = "0.9.49";
+const GAME_VERSION = "0.9.50";
 
 console.log("game version: " + GAME_VERSION);
 
@@ -6590,10 +6590,8 @@ class PlayerInfo {
 }
 
 class Progress {
-    constructor(gameInit, progress, gameConfig, useGoblin) {
-        this.useGoblin = useGoblin;
+    constructor(gameInit, progress, gameConfig) {
 
-        // gameInit.onBuildingCreated.addListener(this.buildingCreated.bind(this));
         gameInit.onResourcesCollected.addListener(this.resourcesCollected.bind(this));
         gameInit.onBuildingLiked.addListener(this.buildingLiked.bind(this));
         gameInit.update.addListener(this.update.bind(this));
@@ -6601,7 +6599,6 @@ class Progress {
         this.onExperienceChanges = new UnnyAction();
         this.onUpgradePurchased = new UnnyAction();
 
-        //const localProgress = useGoblin ? this.loadProgress() : null;
         const localProgress = this.loadProgress();
         let save = progress;
         let localSaveUsed = false;
@@ -7813,17 +7810,17 @@ class Progress {
         const v = this.savedProgress.profile.savedVersion || 0;
         this.savedProgress.profile.savedVersion = v + 1;
 
-        if (this.useGoblin)
-        {
-            if (socialManager.isAuthorizing()) {
-                console.log("authorizing right now, won't save");
-                return;
-            }
-
-            window.localStorage.setItem("allProgress", JSON.stringify(this.savedProgress));
-            const deltaSave = this._getDeltaSave();
-            this._sendDataToServer(deltaSave);
-        }
+        // if (this.useGoblin)
+        // {
+        //     if (socialManager.isAuthorizing()) {
+        //         console.log("authorizing right now, won't save");
+        //         return;
+        //     }
+        //
+        //     window.localStorage.setItem("allProgress", JSON.stringify(this.savedProgress));
+        //     const deltaSave = this._getDeltaSave();
+        //     this._sendDataToServer(deltaSave);
+        // }
 
         {
             console.log("Saving... " + this.savedProgress.profile.savedVersion);
@@ -7902,33 +7899,49 @@ class Progress {
             });
         }
 
-        if (useGoblin) {
-            if (!gBase.currentAccount)
-                callback(null);
-            else {
-                if (!gBase.currentAccount.haveProfile) {
-                    gBase.profile.create((err) => {
-                        if (err)
-                            gameAnalytics.sendServerError(err, "create");
-                    });
-                    callback(null);
-                } else {
+        const unnyNetProfileWasLoaded = (profile) => {
+            if (!profile && useGoblin) {
+                if (gBase.currentAccount && gBase.currentAccount.haveProfile) {
                     gBase.profile.getp((err) => {
                         if (err)
                             gameAnalytics.sendServerError(err, "getp");
                         const data = gBase.currentProfile.profileData;
                         callback(data);
-
-                        AuthInUnnyNet(null, data && data.profile ? data.profile.savedVersion : 'unknown');
                     });
+                    return;
                 }
             }
-        } else
-            AuthInUnnyNet(callback);
+            callback(profile);
+        };
+
+        // if (useGoblin) {
+        //     if (!gBase.currentAccount)
+        //         callback(null);
+        //     else {
+        //         if (!gBase.currentAccount.haveProfile) {
+        //             gBase.profile.create((err) => {
+        //                 if (err)
+        //                     gameAnalytics.sendServerError(err, "create");
+        //             });
+        //             callback(null);
+        //         } else {
+        //             gBase.profile.getp((err) => {
+        //                 if (err)
+        //                     gameAnalytics.sendServerError(err, "getp");
+        //                 const data = gBase.currentProfile.profileData;
+        //                 callback(data);
+        //
+        //                 AuthInUnnyNet(null, data && data.profile ? data.profile.savedVersion : 'unknown');
+        //             });
+        //         }
+        //     }
+        // } else
+
+        AuthInUnnyNet(unnyNetProfileWasLoaded);
     }
 
     loadProgress() {
-        if (!this.useGoblin)
+        // if (!this.useGoblin)
             return null;
         const value = window.localStorage.getItem("allProgress");
         // console.log("load " + value);
@@ -10203,7 +10216,7 @@ class GameInit {
 
                 const loadProgress = () => {
                     Progress.loadProgressFromServer((progress) => {
-                        this.progress = new Progress(this, progress, this.gameConfig, useGoblin);
+                        this.progress = new Progress(this, progress, this.gameConfig);
                         if (this.gameConfig)
                             this.playerInfo = new PlayerInfo(this.gameConfig.playerLevels, this.progress);
                         if (this.guardManager)
@@ -14530,12 +14543,18 @@ class WinStore extends WinWithLargeBack {
             this.tabWasSwitched(this.tabs[this.selectedTab]);
 
             if (gameInit.progress.canCheckStore()) {
-                UnnyNet.Payments.restorePurchases((responseData)=>{
+                UnnyNet.Payments.restorePurchases((responseData) => {
                     if (responseData.success)
                         gameInit.progress.publicConfirmedPayment(responseData.data.id);
                     else
                         console.error("restorePurchases error: ", responseData);
                 });
+
+                if (socialManager) {
+                    socialManager.checkPurchases((itemId) => {
+                        gameInit.progress.publicConfirmedPayment(itemId);
+                    });
+                }
             }
 
             this.timer = setInterval(()=>{
@@ -16562,7 +16581,8 @@ class WinMain extends WinBase {
         let posY = centerY + RealScreenHeight / 2 - 150 * GlobalScale;
         const delta = width / 4;
 
-        this.createButton('MM_Btn_Login', centerX - delta * 1.5, posY, () => UnnyNet.MainController.open());
+        if (!AllGetParams.no_un_window)
+            this.createButton('MM_Btn_Login', centerX - delta * 1.5, posY, () => this.openUnnyNet());
         this.upgradeButton = this.createButton('MM_Btn_Upgrade', centerX - delta * 0.5, posY, () => this.gui.changeMode(GUIMode.UpgradeBuildings));
         // this.createButton('MM_Btn_Likes', centerX + delta * 0.5, posY, () => this.gui.openNewWindow(WindowType.WinDropPuzzle));
         this.createButton('MM_Btn_Worlds', centerX + delta * 1.5, posY, () => {
@@ -16611,10 +16631,8 @@ class WinMain extends WinBase {
         // posY-= delta;
         this.upgradeButton = this.createButton('MM_Btn_Upgrade', leftButtonsX, posY, () => this.gui.changeMode(GUIMode.UpgradeBuildings));
         posY -= delta;
-        this.createButton('MM_Btn_Login', leftButtonsX, posY, () => {
-            this._onUnnyNetOpened();
-            UnnyNet.MainController.open();
-        });
+        if (!AllGetParams.no_un_window)
+            this.createButton('MM_Btn_Login', leftButtonsX, posY, () => this.openUnnyNet());
 
         posY = centerY - RealScreenHeight / 2 + 150 * GlobalScale;
         let posX = centerX + RealScreenWidth / 2 - 150 * GlobalScale;
@@ -16638,6 +16656,11 @@ class WinMain extends WinBase {
         if (TEST_MODE)
             this.createButton('MM_Btn_Worlds', 500 * GlobalScale, RealScreenHeight - 150 * GlobalScale, () => gameInit.progress.cheatResources());
         this.allButtons.pop();
+    }
+
+    openUnnyNet() {
+        this._onUnnyNetOpened();
+        UnnyNet.MainController.open();
     }
 
     createButtonsMyth() {
@@ -16807,7 +16830,8 @@ class WinMain extends WinBase {
             this.worldbtn_Inverse.setForceInvisible(true);
         }
 
-        this.createButton('QuestsHUDButton', centerX + distance * 2, paddigSmall, () => UnnyNet.MainController.open(), 0.8);
+        if (!AllGetParams.no_un_window)
+            this.createButton('QuestsHUDButton', centerX + distance * 2, paddigSmall, () => this.openUnnyNet(), 0.8);
 
         this._createOffersIfPossible();
 
