@@ -1,0 +1,202 @@
+
+Slot4w3.png
+size: 512,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body
+  rotate: true
+  xy: 80, 74
+  size: 52, 82
+  orig: 52, 82
+  offset: 0, 0
+  index: -1
+Effects/slot4_water_1
+  rotate: false
+  xy: 234, 74
+  size: 16, 11
+  orig: 16, 11
+  offset: 0, 0
+  index: -1
+Effects/slot4_water_2
+  rotate: true
+  xy: 64, 34
+  size: 16, 11
+  orig: 16, 11
+  offset: 0, 0
+  index: -1
+Effects/slot4_water_3
+  rotate: true
+  xy: 399, 80
+  size: 16, 11
+  orig: 16, 11
+  offset: 0, 0
+  index: -1
+Effects/slot4_water_4
+  rotate: false
+  xy: 411, 87
+  size: 16, 11
+  orig: 16, 11
+  offset: 0, 0
+  index: -1
+Effects/slot4_water_5
+  rotate: false
+  xy: 251, 74
+  size: 16, 11
+  orig: 16, 11
+  offset: 0, 0
+  index: -1
+Effects/slot4_water_6
+  rotate: false
+  xy: 239, 62
+  size: 16, 11
+  orig: 16, 11
+  offset: 0, 0
+  index: -1
+Effects/slot4_water_7
+  rotate: true
+  xy: 64, 17
+  size: 16, 11
+  orig: 16, 11
+  offset: 0, 0
+  index: -1
+Effects/slot4_waterup_1
+  rotate: false
+  xy: 1, 1
+  size: 10, 8
+  orig: 10, 8
+  offset: 0, 0
+  index: -1
+Effects/slot4_waterup_2
+  rotate: false
+  xy: 428, 90
+  size: 10, 8
+  orig: 10, 8
+  offset: 0, 0
+  index: -1
+Effects/slot4_waterup_3
+  rotate: false
+  xy: 268, 77
+  size: 10, 8
+  orig: 10, 8
+  offset: 0, 0
+  index: -1
+Effects/slot4_waterup_4
+  rotate: true
+  xy: 279, 75
+  size: 10, 8
+  orig: 10, 8
+  offset: 0, 0
+  index: -1
+Effects/slot4_waterup_5
+  rotate: false
+  xy: 239, 53
+  size: 10, 8
+  orig: 10, 8
+  offset: 0, 0
+  index: -1
+Fish
+  rotate: true
+  xy: 344, 73
+  size: 37, 18
+  orig: 37, 18
+  offset: 0, 0
+  index: -1
+FishShadow
+  rotate: false
+  xy: 80, 54
+  size: 80, 19
+  orig: 80, 19
+  offset: 0, 0
+  index: -1
+Fishes
+  rotate: false
+  xy: 163, 74
+  size: 70, 52
+  orig: 70, 52
+  offset: 0, 0
+  index: -1
+FrontHand
+  rotate: true
+  xy: 485, 109
+  size: 17, 26
+  orig: 17, 26
+  offset: 0, 0
+  index: -1
+LegFront
+  rotate: true
+  xy: 1, 10
+  size: 40, 62
+  orig: 40, 62
+  offset: 0, 0
+  index: -1
+LegRear
+  rotate: true
+  xy: 234, 86
+  size: 40, 53
+  orig: 40, 53
+  offset: 0, 0
+  index: -1
+Legs
+  rotate: true
+  xy: 411, 99
+  size: 27, 39
+  orig: 27, 39
+  offset: 0, 0
+  index: -1
+MainShadow
+  rotate: false
+  xy: 288, 111
+  size: 76, 15
+  orig: 76, 15
+  offset: 0, 0
+  index: -1
+RearHand
+  rotate: false
+  xy: 216, 51
+  size: 22, 22
+  orig: 22, 22
+  offset: 0, 0
+  index: -1
+RoboArm
+  rotate: true
+  xy: 365, 97
+  size: 29, 45
+  orig: 29, 45
+  offset: 0, 0
+  index: -1
+RoboFinger
+  rotate: false
+  xy: 363, 78
+  size: 35, 18
+  orig: 35, 18
+  offset: 0, 0
+  index: -1
+RoboFinger2
+  rotate: false
+  xy: 451, 102
+  size: 33, 24
+  orig: 33, 24
+  offset: 0, 0
+  index: -1
+RoboHand
+  rotate: false
+  xy: 161, 43
+  size: 54, 30
+  orig: 54, 30
+  offset: 0, 0
+  index: -1
+RoboHand2
+  rotate: false
+  xy: 1, 51
+  size: 78, 75
+  orig: 78, 75
+  offset: 0, 0
+  index: -1
+RoboShoulder
+  rotate: true
+  xy: 288, 75
+  size: 35, 55
+  orig: 35, 55
+  offset: 0, 0
+  index: -1

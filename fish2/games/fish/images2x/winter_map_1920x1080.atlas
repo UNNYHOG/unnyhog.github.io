@@ -1,0 +1,111 @@
+
+winter_map_1920x1080.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Fish2
+  rotate: false
+  xy: 250, 560
+  size: 183, 62
+  orig: 183, 62
+  offset: 0, 0
+  index: -1
+Fish3
+  rotate: true
+  xy: 1926, 1867
+  size: 179, 69
+  orig: 179, 69
+  offset: 0, 0
+  index: -1
+bgr
+  rotate: false
+  xy: 2, 964
+  size: 1922, 1082
+  orig: 1922, 1082
+  offset: 0, 0
+  index: -1
+buble1
+  rotate: false
+  xy: 1926, 1774
+  size: 46, 91
+  orig: 46, 91
+  offset: 0, 0
+  index: -1
+buble2
+  rotate: false
+  xy: 1997, 1955
+  size: 46, 91
+  orig: 46, 91
+  offset: 0, 0
+  index: -1
+buble3
+  rotate: true
+  xy: 572, 691
+  size: 80, 161
+  orig: 80, 161
+  offset: 0, 0
+  index: -1
+tree1
+  rotate: false
+  xy: 2, 29
+  size: 191, 486
+  orig: 191, 486
+  offset: 0, 0
+  index: -1
+tree2
+  rotate: true
+  xy: 934, 776
+  size: 186, 241
+  orig: 186, 241
+  offset: 0, 0
+  index: -1
+tree3
+  rotate: false
+  xy: 2, 517
+  size: 246, 445
+  orig: 246, 445
+  offset: 0, 0
+  index: -1
+waterline1
+  rotate: false
+  xy: 1177, 919
+  size: 110, 43
+  orig: 110, 43
+  offset: 0, 0
+  index: -1
+waterline2
+  rotate: false
+  xy: 250, 528
+  size: 80, 30
+  orig: 80, 30
+  offset: 0, 0
+  index: -1
+waterline3
+  rotate: true
+  xy: 195, 373
+  size: 142, 36
+  orig: 142, 36
+  offset: 0, 0
+  index: -1
+waterline4
+  rotate: false
+  xy: 2, 2
+  size: 49, 25
+  orig: 49, 25
+  offset: 0, 0
+  index: -1
+wave_1
+  rotate: false
+  xy: 250, 624
+  size: 320, 338
+  orig: 320, 338
+  offset: 0, 0
+  index: -1
+wave_2
+  rotate: false
+  xy: 572, 773
+  size: 360, 189
+  orig: 360, 189
+  offset: 0, 0
+  index: -1

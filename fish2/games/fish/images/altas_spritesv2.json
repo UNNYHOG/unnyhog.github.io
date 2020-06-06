@@ -1,0 +1,4703 @@
+{
+	"textures": [
+		{
+			"image": "altas_spritesv2.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 1421,
+				"h": 1020
+			},
+			"scale": 0.2975,
+			"frames": [
+				{
+					"filename": "UI/Windows/Puzzles/10.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 322,
+						"h": 418
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 322,
+						"h": 418
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 322,
+						"h": 418
+					}
+				},
+				{
+					"filename": "UI/Windows/FortuneWindow/WheelBack.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 395,
+						"h": 350
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 395,
+						"h": 350
+					},
+					"frame": {
+						"x": 1,
+						"y": 421,
+						"w": 395,
+						"h": 350
+					}
+				},
+				{
+					"filename": "UI/Windows/FortuneWindow/Wheel.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 207,
+						"h": 207
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 207,
+						"h": 207
+					},
+					"frame": {
+						"x": 1,
+						"y": 773,
+						"w": 207,
+						"h": 207
+					}
+				},
+				{
+					"filename": "UI/Windows/Puzzles/PuzzlesBronze.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 36,
+						"h": 37
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 36,
+						"h": 37
+					},
+					"frame": {
+						"x": 1,
+						"y": 982,
+						"w": 36,
+						"h": 37
+					}
+				},
+				{
+					"filename": "UI/Windows/Puzzles/PuzzlesDiamond.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 36,
+						"h": 37
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 36,
+						"h": 37
+					},
+					"frame": {
+						"x": 39,
+						"y": 982,
+						"w": 36,
+						"h": 37
+					}
+				},
+				{
+					"filename": "UI/Windows/Puzzles/PuzzlesGold.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 36,
+						"h": 37
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 36,
+						"h": 37
+					},
+					"frame": {
+						"x": 77,
+						"y": 982,
+						"w": 36,
+						"h": 37
+					}
+				},
+				{
+					"filename": "UI/Windows/Puzzles/PuzzlesOpened.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 36,
+						"h": 37
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 36,
+						"h": 37
+					},
+					"frame": {
+						"x": 115,
+						"y": 982,
+						"w": 36,
+						"h": 37
+					}
+				},
+				{
+					"filename": "UI/Windows/Puzzles/PuzzlesSilver.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 36,
+						"h": 37
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 36,
+						"h": 37
+					},
+					"frame": {
+						"x": 153,
+						"y": 982,
+						"w": 36,
+						"h": 37
+					}
+				},
+				{
+					"filename": "UI/HUD_and_common/PopupThumbsUp.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 37
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 37
+					},
+					"frame": {
+						"x": 191,
+						"y": 982,
+						"w": 32,
+						"h": 37
+					}
+				},
+				{
+					"filename": "UI/Windows/PopUps/factory.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 200,
+						"h": 183
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 200,
+						"h": 183
+					},
+					"frame": {
+						"x": 210,
+						"y": 773,
+						"w": 200,
+						"h": 183
+					}
+				},
+				{
+					"filename": "UI/HUD_and_common/HUD/HudResBack1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 82,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 82,
+						"h": 22
+					},
+					"frame": {
+						"x": 210,
+						"y": 958,
+						"w": 82,
+						"h": 22
+					}
+				},
+				{
+					"filename": "UI/HUD_and_common/HUD/HudResBack2.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 82,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 82,
+						"h": 22
+					},
+					"frame": {
+						"x": 210,
+						"y": 958,
+						"w": 82,
+						"h": 22
+					}
+				},
+				{
+					"filename": "UI/HUD_and_common/HUD/HudResBack3.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 82,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 82,
+						"h": 22
+					},
+					"frame": {
+						"x": 210,
+						"y": 958,
+						"w": 82,
+						"h": 22
+					}
+				},
+				{
+					"filename": "UI/HUD_and_common/HUD/RainTimerBack.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 82,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 82,
+						"h": 22
+					},
+					"frame": {
+						"x": 210,
+						"y": 958,
+						"w": 82,
+						"h": 22
+					}
+				},
+				{
+					"filename": "UI/Windows/LoginBonus/BonusTypes/Box.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 60,
+						"h": 60
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 60,
+						"h": 60
+					},
+					"frame": {
+						"x": 294,
+						"y": 958,
+						"w": 60,
+						"h": 60
+					}
+				},
+				{
+					"filename": "UI/Windows/LoginBonus/BonusTypes/TimeTravel.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 60,
+						"h": 60
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 0,
+						"w": 51,
+						"h": 60
+					},
+					"frame": {
+						"x": 356,
+						"y": 958,
+						"w": 51,
+						"h": 60
+					}
+				},
+				{
+					"filename": "bread/bread_7.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 55,
+						"h": 35
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 55,
+						"h": 35
+					},
+					"frame": {
+						"x": 225,
+						"y": 982,
+						"w": 55,
+						"h": 35
+					}
+				},
+				{
+					"filename": "Backs/BlackPixel.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 10,
+						"h": 10
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 10,
+						"h": 10
+					},
+					"frame": {
+						"x": 282,
+						"y": 982,
+						"w": 10,
+						"h": 10
+					}
+				},
+				{
+					"filename": "Backs/CollectionBack.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 10,
+						"h": 10
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 10,
+						"h": 10
+					},
+					"frame": {
+						"x": 282,
+						"y": 994,
+						"w": 10,
+						"h": 10
+					}
+				},
+				{
+					"filename": "UI/Windows/ChangeLanguage/Arabic.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 60,
+						"h": 61
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 60,
+						"h": 59
+					},
+					"frame": {
+						"x": 409,
+						"y": 958,
+						"w": 60,
+						"h": 59
+					}
+				},
+				{
+					"filename": "UI/Windows/FortuneWindow/Devil.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 148,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 148,
+						"h": 256
+					},
+					"frame": {
+						"x": 325,
+						"y": 1,
+						"w": 148,
+						"h": 256
+					}
+				},
+				{
+					"filename": "UI/Windows/PopUps/x2fish.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 174,
+						"h": 155
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 174,
+						"h": 155
+					},
+					"frame": {
+						"x": 325,
+						"y": 259,
+						"w": 174,
+						"h": 155
+					}
+				},
+				{
+					"filename": "UI/Windows/PopUps/horseshoe.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 146,
+						"h": 178
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 146,
+						"h": 178
+					},
+					"frame": {
+						"x": 475,
+						"y": 1,
+						"w": 146,
+						"h": 178
+					}
+				},
+				{
+					"filename": "UI/Windows/DailyQuests/DailyQuests Icons/OpenBox.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 90,
+						"h": 90
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 6,
+						"w": 90,
+						"h": 76
+					},
+					"frame": {
+						"x": 475,
+						"y": 181,
+						"w": 90,
+						"h": 76
+					}
+				},
+				{
+					"filename": "UI/Windows/PopUps/astronaut.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 165,
+						"h": 172
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 165,
+						"h": 172
+					},
+					"frame": {
+						"x": 398,
+						"y": 416,
+						"w": 165,
+						"h": 172
+					}
+				},
+				{
+					"filename": "UI/Windows/Upgrade/UpgradeItemBack.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 122,
+						"h": 146
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 122,
+						"h": 146
+					},
+					"frame": {
+						"x": 501,
+						"y": 259,
+						"w": 122,
+						"h": 146
+					}
+				},
+				{
+					"filename": "UI/Windows/LoginBonus/Active.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 77,
+						"h": 76
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 77,
+						"h": 76
+					},
+					"frame": {
+						"x": 567,
+						"y": 181,
+						"w": 77,
+						"h": 76
+					}
+				},
+				{
+					"filename": "UI/Windows/Upgrade/DoubleInappCross.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 7
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 7
+					},
+					"frame": {
+						"x": 501,
+						"y": 407,
+						"w": 112,
+						"h": 7
+					}
+				},
+				{
+					"filename": "UI/Windows/PopUps/bread.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 201,
+						"h": 137
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 201,
+						"h": 137
+					},
+					"frame": {
+						"x": 623,
+						"y": 1,
+						"w": 201,
+						"h": 137
+					}
+				},
+				{
+					"filename": "UI/HUD_and_common/adCamIcon.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 35,
+						"h": 39
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 35,
+						"h": 39
+					},
+					"frame": {
+						"x": 623,
+						"y": 140,
+						"w": 35,
+						"h": 39
+					}
+				},
+				{
+					"filename": "UI/Windows/FortuneWindow/Jackpot.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 107,
+						"h": 123
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 107,
+						"h": 123
+					},
+					"frame": {
+						"x": 398,
+						"y": 590,
+						"w": 107,
+						"h": 123
+					}
+				},
+				{
+					"filename": "UI/Windows/Upgrade/Items/MultiProfitGems.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 103,
+						"h": 56
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 103,
+						"h": 56
+					},
+					"frame": {
+						"x": 398,
+						"y": 715,
+						"w": 103,
+						"h": 56
+					}
+				},
+				{
+					"filename": "UI/Windows/GetPuzzlePart/Chest_open.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 131,
+						"h": 121
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 131,
+						"h": 121
+					},
+					"frame": {
+						"x": 412,
+						"y": 773,
+						"w": 131,
+						"h": 121
+					}
+				},
+				{
+					"filename": "UI/HUD_and_common/HUD/HudShovelBtn.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 57,
+						"h": 56
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 56,
+						"h": 55
+					},
+					"frame": {
+						"x": 503,
+						"y": 715,
+						"w": 56,
+						"h": 55
+					}
+				},
+				{
+					"filename": "UI/Windows/ChangeLanguage/Chinese (Simplified).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 60,
+						"h": 61
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 60,
+						"h": 59
+					},
+					"frame": {
+						"x": 412,
+						"y": 896,
+						"w": 60,
+						"h": 59
+					}
+				},
+				{
+					"filename": "UI/Windows/ChangeLanguage/Chinese (Traditional).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 60,
+						"h": 61
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 60,
+						"h": 59
+					},
+					"frame": {
+						"x": 471,
+						"y": 957,
+						"w": 60,
+						"h": 59
+					}
+				},
+				{
+					"filename": "UI/Windows/ChangeLanguage/English.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 60,
+						"h": 61
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 60,
+						"h": 59
+					},
+					"frame": {
+						"x": 474,
+						"y": 896,
+						"w": 60,
+						"h": 59
+					}
+				},
+				{
+					"filename": "UI/Windows/ChangeLanguage/French.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 60,
+						"h": 61
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 60,
+						"h": 59
+					},
+					"frame": {
+						"x": 533,
+						"y": 957,
+						"w": 60,
+						"h": 59
+					}
+				},
+				{
+					"filename": "UI/Windows/ChangeLanguage/German.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 60,
+						"h": 61
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 60,
+						"h": 59
+					},
+					"frame": {
+						"x": 536,
+						"y": 896,
+						"w": 60,
+						"h": 59
+					}
+				},
+				{
+					"filename": "UI/Windows/ChangeLanguage/Italian.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 60,
+						"h": 61
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 60,
+						"h": 59
+					},
+					"frame": {
+						"x": 595,
+						"y": 957,
+						"w": 60,
+						"h": 59
+					}
+				},
+				{
+					"filename": "UI/Windows/DailyQuests/dq_fb_02.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 310,
+						"h": 117
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 310,
+						"h": 117
+					},
+					"frame": {
+						"x": 545,
+						"y": 772,
+						"w": 310,
+						"h": 117
+					}
+				},
+				{
+					"filename": "UI/HUD_and_common/HUD/HudLoginBonusBtn.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 68,
+						"h": 64
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 68,
+						"h": 64
+					},
+					"frame": {
+						"x": 598,
+						"y": 891,
+						"w": 68,
+						"h": 64
+					}
+				},
+				{
+					"filename": "UI/Windows/ChangeLanguage/Japanese.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 60,
+						"h": 61
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 60,
+						"h": 59
+					},
+					"frame": {
+						"x": 657,
+						"y": 957,
+						"w": 60,
+						"h": 59
+					}
+				},
+				{
+					"filename": "UI/Windows/ChangeLanguage/Korean.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 60,
+						"h": 61
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 60,
+						"h": 59
+					},
+					"frame": {
+						"x": 668,
+						"y": 891,
+						"w": 60,
+						"h": 59
+					}
+				},
+				{
+					"filename": "UI/HUD_and_common/HUD/HudLikesBtn.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 67,
+						"h": 72
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 4,
+						"w": 67,
+						"h": 67
+					},
+					"frame": {
+						"x": 719,
+						"y": 952,
+						"w": 67,
+						"h": 67
+					}
+				},
+				{
+					"filename": "UI/Windows/Likes/01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 67,
+						"h": 72
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 4,
+						"w": 67,
+						"h": 67
+					},
+					"frame": {
+						"x": 719,
+						"y": 952,
+						"w": 67,
+						"h": 67
+					}
+				},
+				{
+					"filename": "UI/Windows/ChangeLanguage/Portuguese (Brazil).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 60,
+						"h": 61
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 60,
+						"h": 59
+					},
+					"frame": {
+						"x": 730,
+						"y": 891,
+						"w": 60,
+						"h": 59
+					}
+				},
+				{
+					"filename": "UI/Windows/ChangeLanguage/Malay.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 66,
+						"h": 67
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 66,
+						"h": 67
+					},
+					"frame": {
+						"x": 788,
+						"y": 952,
+						"w": 66,
+						"h": 67
+					}
+				},
+				{
+					"filename": "UI/Windows/ChangeLanguage/Russian.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 60,
+						"h": 61
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 60,
+						"h": 59
+					},
+					"frame": {
+						"x": 792,
+						"y": 891,
+						"w": 60,
+						"h": 59
+					}
+				},
+				{
+					"filename": "UI/Windows/ChangeLanguage/Spanish.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 60,
+						"h": 61
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 60,
+						"h": 59
+					},
+					"frame": {
+						"x": 854,
+						"y": 891,
+						"w": 60,
+						"h": 59
+					}
+				},
+				{
+					"filename": "UI/Windows/ChangeLanguage/Norwegian.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 66,
+						"h": 67
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 66,
+						"h": 67
+					},
+					"frame": {
+						"x": 856,
+						"y": 952,
+						"w": 66,
+						"h": 67
+					}
+				},
+				{
+					"filename": "UI/Windows/DailyQuests/Back.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 309,
+						"h": 116
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 309,
+						"h": 116
+					},
+					"frame": {
+						"x": 507,
+						"y": 590,
+						"w": 309,
+						"h": 116
+					}
+				},
+				{
+					"filename": "UI/Windows/Settings/developers.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 60,
+						"h": 61
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 60,
+						"h": 59
+					},
+					"frame": {
+						"x": 561,
+						"y": 708,
+						"w": 60,
+						"h": 59
+					}
+				},
+				{
+					"filename": "UI/Windows/Settings/facebook.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 60,
+						"h": 61
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 60,
+						"h": 59
+					},
+					"frame": {
+						"x": 623,
+						"y": 708,
+						"w": 60,
+						"h": 59
+					}
+				},
+				{
+					"filename": "UI/Windows/Settings/language.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 60,
+						"h": 61
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 60,
+						"h": 59
+					},
+					"frame": {
+						"x": 685,
+						"y": 708,
+						"w": 60,
+						"h": 59
+					}
+				},
+				{
+					"filename": "UI/Windows/Settings/musicOff.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 60,
+						"h": 61
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 60,
+						"h": 59
+					},
+					"frame": {
+						"x": 747,
+						"y": 708,
+						"w": 60,
+						"h": 59
+					}
+				},
+				{
+					"filename": "UI/Windows/Settings/musicOn.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 60,
+						"h": 61
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 60,
+						"h": 59
+					},
+					"frame": {
+						"x": 809,
+						"y": 708,
+						"w": 60,
+						"h": 59
+					}
+				},
+				{
+					"filename": "UI/Windows/GetPuzzlePart/ChestNormalOpen.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 110,
+						"h": 109
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 110,
+						"h": 109
+					},
+					"frame": {
+						"x": 857,
+						"y": 769,
+						"w": 110,
+						"h": 109
+					}
+				},
+				{
+					"filename": "UI/Windows/DailyQuests/05.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 67,
+						"h": 70
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 67,
+						"h": 70
+					},
+					"frame": {
+						"x": 916,
+						"y": 880,
+						"w": 67,
+						"h": 70
+					}
+				},
+				{
+					"filename": "UI/Windows/ChangeLanguage/Thai.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 66,
+						"h": 67
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 66,
+						"h": 67
+					},
+					"frame": {
+						"x": 924,
+						"y": 952,
+						"w": 66,
+						"h": 67
+					}
+				},
+				{
+					"filename": "UI/Windows/Puzzles/05.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 110,
+						"h": 109
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 110,
+						"h": 109
+					},
+					"frame": {
+						"x": 565,
+						"y": 416,
+						"w": 110,
+						"h": 109
+					}
+				},
+				{
+					"filename": "UI/Windows/Settings/report.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 60,
+						"h": 61
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 60,
+						"h": 59
+					},
+					"frame": {
+						"x": 565,
+						"y": 527,
+						"w": 60,
+						"h": 59
+					}
+				},
+				{
+					"filename": "UI/Windows/Settings/restore.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 60,
+						"h": 61
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 60,
+						"h": 59
+					},
+					"frame": {
+						"x": 627,
+						"y": 527,
+						"w": 60,
+						"h": 59
+					}
+				},
+				{
+					"filename": "UI/Windows/Upgrade/Items/inapp_ads_disabler.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 110,
+						"h": 110
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 110,
+						"h": 108
+					},
+					"frame": {
+						"x": 625,
+						"y": 259,
+						"w": 110,
+						"h": 108
+					}
+				},
+				{
+					"filename": "UI/Windows/Likes/03.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 114,
+						"h": 45
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 114,
+						"h": 45
+					},
+					"frame": {
+						"x": 625,
+						"y": 369,
+						"w": 114,
+						"h": 45
+					}
+				},
+				{
+					"filename": "UI/Windows/LoginBonus/Closed.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 77,
+						"h": 76
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 77,
+						"h": 76
+					},
+					"frame": {
+						"x": 646,
+						"y": 181,
+						"w": 77,
+						"h": 76
+					}
+				},
+				{
+					"filename": "UI/Windows/Likes/04.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 42,
+						"h": 38
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 42,
+						"h": 38
+					},
+					"frame": {
+						"x": 660,
+						"y": 140,
+						"w": 42,
+						"h": 38
+					}
+				},
+				{
+					"filename": "UI/Windows/Puzzles/PuzzleTabIcon.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 36,
+						"h": 38
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 36,
+						"h": 38
+					},
+					"frame": {
+						"x": 704,
+						"y": 140,
+						"w": 36,
+						"h": 38
+					}
+				},
+				{
+					"filename": "UI/Windows/LoginBonus/Opened.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 77,
+						"h": 76
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 77,
+						"h": 76
+					},
+					"frame": {
+						"x": 725,
+						"y": 180,
+						"w": 77,
+						"h": 76
+					}
+				},
+				{
+					"filename": "UI/Windows/DailyQuests/RefreshBtn.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 38,
+						"h": 35
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 37,
+						"h": 35
+					},
+					"frame": {
+						"x": 742,
+						"y": 140,
+						"w": 37,
+						"h": 35
+					}
+				},
+				{
+					"filename": "UI/Windows/LoginBonus/04.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 38,
+						"h": 35
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 37,
+						"h": 35
+					},
+					"frame": {
+						"x": 781,
+						"y": 140,
+						"w": 37,
+						"h": 35
+					}
+				},
+				{
+					"filename": "UI/Windows/Upgrade/Items/InApp5.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 114,
+						"h": 121
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 21,
+						"w": 114,
+						"h": 100
+					},
+					"frame": {
+						"x": 737,
+						"y": 258,
+						"w": 114,
+						"h": 100
+					}
+				},
+				{
+					"filename": "UI/Windows/Upgrade/Items/MultiProfitAll.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 92,
+						"h": 83
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 0,
+						"w": 89,
+						"h": 79
+					},
+					"frame": {
+						"x": 804,
+						"y": 177,
+						"w": 89,
+						"h": 79
+					}
+				},
+				{
+					"filename": "UI/Windows/Puzzles/BoxCounter.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 30,
+						"h": 31
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 30,
+						"h": 31
+					},
+					"frame": {
+						"x": 820,
+						"y": 140,
+						"w": 30,
+						"h": 31
+					}
+				},
+				{
+					"filename": "UI/Windows/Puzzles/PuzzleItem/PuzzleItemFrame.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 98,
+						"h": 98
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 98,
+						"h": 98
+					},
+					"frame": {
+						"x": 677,
+						"y": 416,
+						"w": 98,
+						"h": 98
+					}
+				},
+				{
+					"filename": "Slots/GroundBlocked.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 128,
+						"h": 73
+					},
+					"spriteSourceSize": {
+						"x": 4,
+						"y": 0,
+						"w": 121,
+						"h": 72
+					},
+					"frame": {
+						"x": 689,
+						"y": 516,
+						"w": 121,
+						"h": 72
+					}
+				},
+				{
+					"filename": "UI/HUD_and_common/HUD/HudPuzzlesBtn.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 50,
+						"h": 54
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 50,
+						"h": 54
+					},
+					"frame": {
+						"x": 741,
+						"y": 360,
+						"w": 50,
+						"h": 54
+					}
+				},
+				{
+					"filename": "UI/Windows/Likes/02.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 175,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 175,
+						"h": 96
+					},
+					"frame": {
+						"x": 777,
+						"y": 416,
+						"w": 175,
+						"h": 96
+					}
+				},
+				{
+					"filename": "UI/HUD_and_common/HUD/locWinter.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 68,
+						"h": 74
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 68,
+						"h": 74
+					},
+					"frame": {
+						"x": 812,
+						"y": 514,
+						"w": 68,
+						"h": 74
+					}
+				},
+				{
+					"filename": "bread/bread_3.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 59,
+						"h": 53
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 59,
+						"h": 53
+					},
+					"frame": {
+						"x": 793,
+						"y": 360,
+						"w": 59,
+						"h": 53
+					}
+				},
+				{
+					"filename": "UI/Windows/Puzzles/BoxItemBack.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 97,
+						"h": 95
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 97,
+						"h": 95
+					},
+					"frame": {
+						"x": 853,
+						"y": 258,
+						"w": 97,
+						"h": 95
+					}
+				},
+				{
+					"filename": "UI/Windows/Settings/soundsOff.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 60,
+						"h": 61
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 60,
+						"h": 59
+					},
+					"frame": {
+						"x": 854,
+						"y": 355,
+						"w": 60,
+						"h": 59
+					}
+				},
+				{
+					"filename": "UI/Windows/Settings/soundsOn.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 60,
+						"h": 61
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 60,
+						"h": 59
+					},
+					"frame": {
+						"x": 916,
+						"y": 355,
+						"w": 60,
+						"h": 59
+					}
+				},
+				{
+					"filename": "UI/Windows/Upgrade/Items/InApp3.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 114,
+						"h": 121
+					},
+					"spriteSourceSize": {
+						"x": 18,
+						"y": 8,
+						"w": 78,
+						"h": 95
+					},
+					"frame": {
+						"x": 818,
+						"y": 590,
+						"w": 78,
+						"h": 95
+					}
+				},
+				{
+					"filename": "UI/Windows/Upgrade/Items/Upgrade.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 90,
+						"h": 81
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 90,
+						"h": 80
+					},
+					"frame": {
+						"x": 871,
+						"y": 687,
+						"w": 90,
+						"h": 80
+					}
+				},
+				{
+					"filename": "Slots/Skulls/Gold.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 20,
+						"h": 27
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 8,
+						"w": 20,
+						"h": 19
+					},
+					"frame": {
+						"x": 818,
+						"y": 687,
+						"w": 20,
+						"h": 19
+					}
+				},
+				{
+					"filename": "Effects/glow.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 19,
+						"h": 19
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 19,
+						"h": 19
+					},
+					"frame": {
+						"x": 840,
+						"y": 687,
+						"w": 19,
+						"h": 19
+					}
+				},
+				{
+					"filename": "UI/Windows/Puzzles/PuzzleTabActive.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 47,
+						"h": 75
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 47,
+						"h": 74
+					},
+					"frame": {
+						"x": 882,
+						"y": 514,
+						"w": 47,
+						"h": 74
+					}
+				},
+				{
+					"filename": "UI/Windows/GetPuzzlePart/Chest.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 101,
+						"h": 94
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 101,
+						"h": 94
+					},
+					"frame": {
+						"x": 898,
+						"y": 590,
+						"w": 101,
+						"h": 94
+					}
+				},
+				{
+					"filename": "UI/Windows/Puzzles/OpenedBox.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 133,
+						"h": 83
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 0,
+						"w": 126,
+						"h": 81
+					},
+					"frame": {
+						"x": 963,
+						"y": 686,
+						"w": 126,
+						"h": 81
+					}
+				},
+				{
+					"filename": "Slots/WaterBlocked.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 128,
+						"h": 73
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 127,
+						"h": 73
+					},
+					"frame": {
+						"x": 931,
+						"y": 514,
+						"w": 127,
+						"h": 73
+					}
+				},
+				{
+					"filename": "UI/Windows/GetPuzzlePart/Back/Bronze.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 91,
+						"h": 91
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 91,
+						"h": 91
+					},
+					"frame": {
+						"x": 1001,
+						"y": 589,
+						"w": 91,
+						"h": 91
+					}
+				},
+				{
+					"filename": "UI/Windows/GetPuzzlePart/Back/Gold.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 91,
+						"h": 91
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 91,
+						"h": 91
+					},
+					"frame": {
+						"x": 954,
+						"y": 416,
+						"w": 91,
+						"h": 91
+					}
+				},
+				{
+					"filename": "UI/Windows/GetPuzzlePart/Back/Platinum.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 91,
+						"h": 91
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 91,
+						"h": 91
+					},
+					"frame": {
+						"x": 969,
+						"y": 769,
+						"w": 91,
+						"h": 91
+					}
+				},
+				{
+					"filename": "UI/Windows/Upgrade/Items/InApp4.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 114,
+						"h": 121
+					},
+					"spriteSourceSize": {
+						"x": 6,
+						"y": 23,
+						"w": 102,
+						"h": 88
+					},
+					"frame": {
+						"x": 985,
+						"y": 862,
+						"w": 102,
+						"h": 88
+					}
+				},
+				{
+					"filename": "UI/Windows/GetPuzzlePart/Back/Silver.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 91,
+						"h": 91
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 91,
+						"h": 91
+					},
+					"frame": {
+						"x": 1062,
+						"y": 769,
+						"w": 91,
+						"h": 91
+					}
+				},
+				{
+					"filename": "UI/Windows/Upgrade/Items/AutoClick.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 109,
+						"h": 84
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 109,
+						"h": 84
+					},
+					"frame": {
+						"x": 1091,
+						"y": 682,
+						"w": 109,
+						"h": 84
+					}
+				},
+				{
+					"filename": "UI/Windows/Upgrade/Items/MultiProfitOneSlot.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 90,
+						"h": 66
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 90,
+						"h": 66
+					},
+					"frame": {
+						"x": 992,
+						"y": 952,
+						"w": 90,
+						"h": 66
+					}
+				},
+				{
+					"filename": "UI/Windows/DailyQuests/DailyQuests Icons/NewLevelGold.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 90,
+						"h": 90
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 9,
+						"w": 86,
+						"h": 65
+					},
+					"frame": {
+						"x": 1084,
+						"y": 952,
+						"w": 86,
+						"h": 65
+					}
+				},
+				{
+					"filename": "UI/Windows/DailyQuests/DailyQuests Icons/CollectLastSlot.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 90,
+						"h": 90
+					},
+					"spriteSourceSize": {
+						"x": 18,
+						"y": 2,
+						"w": 55,
+						"h": 86
+					},
+					"frame": {
+						"x": 1089,
+						"y": 862,
+						"w": 55,
+						"h": 86
+					}
+				},
+				{
+					"filename": "UI/Windows/Upgrade/Items/GiftBoxSuper.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 87,
+						"h": 84
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 87,
+						"h": 84
+					},
+					"frame": {
+						"x": 1146,
+						"y": 862,
+						"w": 87,
+						"h": 84
+					}
+				},
+				{
+					"filename": "UI/Windows/Upgrade/Items/SeedProc.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 86,
+						"h": 71
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 86,
+						"h": 71
+					},
+					"frame": {
+						"x": 1172,
+						"y": 948,
+						"w": 86,
+						"h": 71
+					}
+				},
+				{
+					"filename": "UI/Windows/GetPuzzlePart/Back/Simple.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 91,
+						"h": 91
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 91,
+						"h": 91
+					},
+					"frame": {
+						"x": 1155,
+						"y": 768,
+						"w": 91,
+						"h": 91
+					}
+				},
+				{
+					"filename": "UI/Windows/Upgrade/Items/GiftBoxSuper_.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 87,
+						"h": 84
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 87,
+						"h": 84
+					},
+					"frame": {
+						"x": 1235,
+						"y": 861,
+						"w": 87,
+						"h": 84
+					}
+				},
+				{
+					"filename": "Slots/tableUpgrade.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 77,
+						"h": 72
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 77,
+						"h": 72
+					},
+					"frame": {
+						"x": 1260,
+						"y": 947,
+						"w": 77,
+						"h": 72
+					}
+				},
+				{
+					"filename": "UI/Windows/GetPuzzlePart/ChestNormal.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 81,
+						"h": 78
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 81,
+						"h": 78
+					},
+					"frame": {
+						"x": 1339,
+						"y": 1,
+						"w": 81,
+						"h": 78
+					}
+				},
+				{
+					"filename": "UI/Windows/LoginBonus/BonusTypes/SuperBox.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 60,
+						"h": 60
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 60,
+						"h": 57
+					},
+					"frame": {
+						"x": 826,
+						"y": 81,
+						"w": 60,
+						"h": 57
+					}
+				},
+				{
+					"filename": "UI/Windows/FortuneWindow/WheelArrow.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 93,
+						"h": 78
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 93,
+						"h": 78
+					},
+					"frame": {
+						"x": 826,
+						"y": 1,
+						"w": 93,
+						"h": 78
+					}
+				},
+				{
+					"filename": "UI/Windows/DailyQuests/DailyQuests Icons/MacroUpgrades.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 90,
+						"h": 90
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 89,
+						"h": 89
+					},
+					"frame": {
+						"x": 1248,
+						"y": 1,
+						"w": 89,
+						"h": 89
+					}
+				},
+				{
+					"filename": "UI/Windows/Upgrade/ActiveTabBack.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 49,
+						"h": 83
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 49,
+						"h": 83
+					},
+					"frame": {
+						"x": 888,
+						"y": 92,
+						"w": 49,
+						"h": 83
+					}
+				},
+				{
+					"filename": "UI/Windows/Upgrade/InappTabIcon.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 34,
+						"h": 26
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 34,
+						"h": 26
+					},
+					"frame": {
+						"x": 852,
+						"y": 140,
+						"w": 34,
+						"h": 26
+					}
+				},
+				{
+					"filename": "UI/Windows/Upgrade/Items/GemsForVideo.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 76,
+						"h": 89
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 76,
+						"h": 89
+					},
+					"frame": {
+						"x": 921,
+						"y": 1,
+						"w": 76,
+						"h": 89
+					}
+				},
+				{
+					"filename": "UI/HUD_and_common/HUD/HudDailyQuestsBtn.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 76,
+						"h": 80
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 76,
+						"h": 79
+					},
+					"frame": {
+						"x": 895,
+						"y": 177,
+						"w": 76,
+						"h": 79
+					}
+				},
+				{
+					"filename": "UI/Windows/Puzzles/BoxTabIcon.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 81,
+						"h": 78
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 81,
+						"h": 78
+					},
+					"frame": {
+						"x": 1339,
+						"y": 81,
+						"w": 81,
+						"h": 78
+					}
+				},
+				{
+					"filename": "UI/Windows/Upgrade/Items/InApp2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 114,
+						"h": 121
+					},
+					"spriteSourceSize": {
+						"x": 12,
+						"y": 20,
+						"w": 83,
+						"h": 82
+					},
+					"frame": {
+						"x": 939,
+						"y": 92,
+						"w": 83,
+						"h": 82
+					}
+				},
+				{
+					"filename": "UI/Windows/DailyQuests/DailyQuests Icons/Gift.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 90,
+						"h": 90
+					},
+					"spriteSourceSize": {
+						"x": 5,
+						"y": 4,
+						"w": 80,
+						"h": 81
+					},
+					"frame": {
+						"x": 1339,
+						"y": 161,
+						"w": 80,
+						"h": 81
+					}
+				},
+				{
+					"filename": "UI/Windows/DailyQuests/ProgressBar.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 94,
+						"h": 12
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 94,
+						"h": 12
+					},
+					"frame": {
+						"x": 1324,
+						"y": 244,
+						"w": 94,
+						"h": 12
+					}
+				},
+				{
+					"filename": "Slots/tableLike.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 77,
+						"h": 72
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 7,
+						"w": 74,
+						"h": 65
+					},
+					"frame": {
+						"x": 1248,
+						"y": 92,
+						"w": 74,
+						"h": 65
+					}
+				},
+				{
+					"filename": "UI/Windows/Upgrade/Items/TimeTravel8h.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 73,
+						"h": 82
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 73,
+						"h": 82
+					},
+					"frame": {
+						"x": 1024,
+						"y": 159,
+						"w": 73,
+						"h": 82
+					}
+				},
+				{
+					"filename": "UI/Windows/Puzzles/PuzzleItem/Parts/blocked/PuzzleItemLockDL.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 49,
+						"h": 49
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 49,
+						"h": 49
+					},
+					"frame": {
+						"x": 973,
+						"y": 176,
+						"w": 49,
+						"h": 49
+					}
+				},
+				{
+					"filename": "UI/Windows/Puzzles/PuzzleItem/Parts/blocked/PuzzleItemLockDR.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 49,
+						"h": 49
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 49,
+						"h": 49
+					},
+					"frame": {
+						"x": 973,
+						"y": 227,
+						"w": 49,
+						"h": 49
+					}
+				},
+				{
+					"filename": "UI/Windows/Puzzles/11.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 19,
+						"h": 17
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 19,
+						"h": 17
+					},
+					"frame": {
+						"x": 952,
+						"y": 258,
+						"w": 19,
+						"h": 17
+					}
+				},
+				{
+					"filename": "UI/Windows/Upgrade/UpgradeWindowPlus.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 19,
+						"h": 17
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 19,
+						"h": 17
+					},
+					"frame": {
+						"x": 952,
+						"y": 277,
+						"w": 19,
+						"h": 17
+					}
+				},
+				{
+					"filename": "UI/HUD_and_common/HUD/HudTempBtn.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 68,
+						"h": 75
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 68,
+						"h": 75
+					},
+					"frame": {
+						"x": 973,
+						"y": 278,
+						"w": 68,
+						"h": 75
+					}
+				},
+				{
+					"filename": "Slots/likePlus.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 21,
+						"h": 18
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 21,
+						"h": 18
+					},
+					"frame": {
+						"x": 1024,
+						"y": 258,
+						"w": 21,
+						"h": 18
+					}
+				},
+				{
+					"filename": "UI/Windows/Settings/tapticOff.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 60,
+						"h": 61
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 60,
+						"h": 59
+					},
+					"frame": {
+						"x": 978,
+						"y": 355,
+						"w": 60,
+						"h": 59
+					}
+				},
+				{
+					"filename": "UI/Windows/Settings/tapticOn.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 60,
+						"h": 61
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 60,
+						"h": 59
+					},
+					"frame": {
+						"x": 1040,
+						"y": 355,
+						"w": 60,
+						"h": 59
+					}
+				},
+				{
+					"filename": "UI/Windows/Upgrade/ui_headline.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 144,
+						"h": 23
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 144,
+						"h": 23
+					},
+					"frame": {
+						"x": 1102,
+						"y": 1,
+						"w": 144,
+						"h": 23
+					}
+				},
+				{
+					"filename": "UI/HUD_and_common/gold66x74.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 20,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 0,
+						"w": 18,
+						"h": 22
+					},
+					"frame": {
+						"x": 952,
+						"y": 296,
+						"w": 18,
+						"h": 22
+					}
+				},
+				{
+					"filename": "Slots/LockPuzzle.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 18,
+						"h": 17
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 18,
+						"h": 17
+					},
+					"frame": {
+						"x": 952,
+						"y": 320,
+						"w": 18,
+						"h": 17
+					}
+				},
+				{
+					"filename": "UI/Windows/DailyQuests/DailyQuests Icons/CollectCrop.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 90,
+						"h": 90
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 7,
+						"w": 75,
+						"h": 71
+					},
+					"frame": {
+						"x": 1024,
+						"y": 1,
+						"w": 75,
+						"h": 71
+					}
+				},
+				{
+					"filename": "Slots/Skulls/Bronze.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 20,
+						"h": 27
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 11,
+						"w": 20,
+						"h": 16
+					},
+					"frame": {
+						"x": 999,
+						"y": 74,
+						"w": 20,
+						"h": 16
+					}
+				},
+				{
+					"filename": "Slots/Skulls/Silver.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 20,
+						"h": 27
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 11,
+						"w": 20,
+						"h": 16
+					},
+					"frame": {
+						"x": 1021,
+						"y": 74,
+						"w": 20,
+						"h": 16
+					}
+				},
+				{
+					"filename": "UI/Windows/DailyQuests/DailyQuests Icons/FirstSlotUpgrade.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 90,
+						"h": 90
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 12,
+						"w": 75,
+						"h": 65
+					},
+					"frame": {
+						"x": 1024,
+						"y": 92,
+						"w": 75,
+						"h": 65
+					}
+				},
+				{
+					"filename": "UI/Windows/DailyQuests/DailyQuests Icons/BuyBox.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 90,
+						"h": 90
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 4,
+						"w": 73,
+						"h": 84
+					},
+					"frame": {
+						"x": 1248,
+						"y": 159,
+						"w": 73,
+						"h": 84
+					}
+				},
+				{
+					"filename": "UI/Windows/DailyQuests/ProgressFill.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 90,
+						"h": 10
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 90,
+						"h": 10
+					},
+					"frame": {
+						"x": 1024,
+						"y": 245,
+						"w": 90,
+						"h": 10
+					}
+				},
+				{
+					"filename": "UI/Windows/DailyQuests/DailyQuests Icons/SeedsUpgrades.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 84,
+						"h": 86
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 84,
+						"h": 84
+					},
+					"frame": {
+						"x": 1099,
+						"y": 159,
+						"w": 84,
+						"h": 84
+					}
+				},
+				{
+					"filename": "UI/Windows/Upgrade/Items/SuperSeed.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 84,
+						"h": 86
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 84,
+						"h": 84
+					},
+					"frame": {
+						"x": 1099,
+						"y": 159,
+						"w": 84,
+						"h": 84
+					}
+				},
+				{
+					"filename": "UI/Windows/Upgrade/Items/TimeTravel4h.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 73,
+						"h": 82
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 73,
+						"h": 80
+					},
+					"frame": {
+						"x": 1248,
+						"y": 245,
+						"w": 73,
+						"h": 80
+					}
+				},
+				{
+					"filename": "UI/HUD_and_common/HUD/HudSeedIcon.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 35,
+						"h": 26
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 35,
+						"h": 26
+					},
+					"frame": {
+						"x": 1043,
+						"y": 327,
+						"w": 35,
+						"h": 26
+					}
+				},
+				{
+					"filename": "UI/Windows/Puzzles/can.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 35,
+						"h": 26
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 35,
+						"h": 26
+					},
+					"frame": {
+						"x": 1043,
+						"y": 327,
+						"w": 35,
+						"h": 26
+					}
+				},
+				{
+					"filename": "UI/HUD_and_common/HUD/HudBreadBtn.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 70,
+						"h": 68
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 70,
+						"h": 68
+					},
+					"frame": {
+						"x": 1047,
+						"y": 257,
+						"w": 70,
+						"h": 68
+					}
+				},
+				{
+					"filename": "Slots/timeBar.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 84,
+						"h": 10
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 84,
+						"h": 10
+					},
+					"frame": {
+						"x": 1116,
+						"y": 245,
+						"w": 84,
+						"h": 10
+					}
+				},
+				{
+					"filename": "UI/Windows/Upgrade/GemsTabIcon.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 27,
+						"h": 26
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 27,
+						"h": 26
+					},
+					"frame": {
+						"x": 1080,
+						"y": 327,
+						"w": 27,
+						"h": 26
+					}
+				},
+				{
+					"filename": "bread/bread_4.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 60,
+						"h": 51
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 60,
+						"h": 51
+					},
+					"frame": {
+						"x": 1185,
+						"y": 26,
+						"w": 60,
+						"h": 51
+					}
+				},
+				{
+					"filename": "UI/Windows/Upgrade/Items/TimeTravel7d.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 93,
+						"h": 78
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 93,
+						"h": 78
+					},
+					"frame": {
+						"x": 1101,
+						"y": 79,
+						"w": 93,
+						"h": 78
+					}
+				},
+				{
+					"filename": "UI/HUD_and_common/HUD/HUDChangeLocation.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 75,
+						"h": 51
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 75,
+						"h": 51
+					},
+					"frame": {
+						"x": 1101,
+						"y": 26,
+						"w": 75,
+						"h": 51
+					}
+				},
+				{
+					"filename": "UI/Windows/LoginBonus/BonusTypes/Gold.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 60,
+						"h": 60
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 6,
+						"w": 60,
+						"h": 43
+					},
+					"frame": {
+						"x": 1185,
+						"y": 159,
+						"w": 60,
+						"h": 43
+					}
+				},
+				{
+					"filename": "UI/Windows/Puzzles/PuzzleItem/Parts/blocked/PuzzleItemLockUL.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 49,
+						"h": 49
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 49,
+						"h": 49
+					},
+					"frame": {
+						"x": 1196,
+						"y": 79,
+						"w": 49,
+						"h": 49
+					}
+				},
+				{
+					"filename": "UI/HUD_and_common/HUD/HudNotify.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 27,
+						"h": 27
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 27,
+						"h": 27
+					},
+					"frame": {
+						"x": 1196,
+						"y": 130,
+						"w": 27,
+						"h": 27
+					}
+				},
+				{
+					"filename": "Slots/Skulls/Diamond.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 20,
+						"h": 27
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 20,
+						"h": 27
+					},
+					"frame": {
+						"x": 1225,
+						"y": 130,
+						"w": 20,
+						"h": 27
+					}
+				},
+				{
+					"filename": "UI/Windows/Puzzles/PuzzleItem/Parts/bronze/s.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 21,
+						"h": 21
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 21,
+						"h": 21
+					},
+					"frame": {
+						"x": 999,
+						"y": 1,
+						"w": 21,
+						"h": 21
+					}
+				},
+				{
+					"filename": "UI/Windows/Puzzles/PuzzleItem/Parts/diamond/s-copy.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 21,
+						"h": 21
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 21,
+						"h": 21
+					},
+					"frame": {
+						"x": 999,
+						"y": 24,
+						"w": 21,
+						"h": 21
+					}
+				},
+				{
+					"filename": "UI/Windows/Puzzles/PuzzleItem/Parts/diamond/s.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 21,
+						"h": 21
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 21,
+						"h": 21
+					},
+					"frame": {
+						"x": 999,
+						"y": 24,
+						"w": 21,
+						"h": 21
+					}
+				},
+				{
+					"filename": "UI/Windows/Puzzles/PuzzleItem/Parts/gold/s.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 21,
+						"h": 21
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 21,
+						"h": 21
+					},
+					"frame": {
+						"x": 999,
+						"y": 47,
+						"w": 21,
+						"h": 21
+					}
+				},
+				{
+					"filename": "UI/HUD_and_common/HUD/HudGoldIcon.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 42,
+						"h": 25
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 42,
+						"h": 25
+					},
+					"frame": {
+						"x": 1202,
+						"y": 204,
+						"w": 42,
+						"h": 25
+					}
+				},
+				{
+					"filename": "bread/bread_6.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 79,
+						"h": 41
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 79,
+						"h": 41
+					},
+					"frame": {
+						"x": 1339,
+						"y": 258,
+						"w": 79,
+						"h": 41
+					}
+				},
+				{
+					"filename": "bread/bread_2.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 41,
+						"h": 49
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 41,
+						"h": 49
+					},
+					"frame": {
+						"x": 1202,
+						"y": 231,
+						"w": 41,
+						"h": 49
+					}
+				},
+				{
+					"filename": "UI/Windows/Upgrade/DeactiveTabBack.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 41,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 41,
+						"h": 48
+					},
+					"frame": {
+						"x": 1202,
+						"y": 282,
+						"w": 41,
+						"h": 48
+					}
+				},
+				{
+					"filename": "UI/HUD_and_common/Popup.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 91,
+						"h": 27
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 91,
+						"h": 27
+					},
+					"frame": {
+						"x": 1109,
+						"y": 327,
+						"w": 91,
+						"h": 27
+					}
+				},
+				{
+					"filename": "UI/HUD_and_common/HUD/HudSocialBtn.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 70,
+						"h": 68
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 70,
+						"h": 68
+					},
+					"frame": {
+						"x": 1119,
+						"y": 257,
+						"w": 70,
+						"h": 68
+					}
+				},
+				{
+					"filename": "UI/HUD_and_common/slice_PuzzleItemFrame_00.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 93,
+						"h": 42
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 0,
+						"w": 77,
+						"h": 42
+					},
+					"frame": {
+						"x": 1339,
+						"y": 301,
+						"w": 77,
+						"h": 42
+					}
+				},
+				{
+					"filename": "UI/Windows/Upgrade/InappRibbon.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 87,
+						"h": 29
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 87,
+						"h": 29
+					},
+					"frame": {
+						"x": 1248,
+						"y": 327,
+						"w": 87,
+						"h": 29
+					}
+				},
+				{
+					"filename": "UI/Windows/Upgrade/Items/GiftBox.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 83,
+						"h": 80
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 83,
+						"h": 80
+					},
+					"frame": {
+						"x": 1337,
+						"y": 345,
+						"w": 83,
+						"h": 80
+					}
+				},
+				{
+					"filename": "UI/Windows/Puzzles/PuzzleItem/Parts/bronze/l.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 41,
+						"h": 41
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 41,
+						"h": 41
+					},
+					"frame": {
+						"x": 1202,
+						"y": 332,
+						"w": 41,
+						"h": 41
+					}
+				},
+				{
+					"filename": "Slots/timeprogress.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 84,
+						"h": 10
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 84,
+						"h": 10
+					},
+					"frame": {
+						"x": 1248,
+						"y": 358,
+						"w": 84,
+						"h": 10
+					}
+				},
+				{
+					"filename": "UI/Windows/DailyQuests/DailyQuests Icons/Rain.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 90,
+						"h": 90
+					},
+					"spriteSourceSize": {
+						"x": 12,
+						"y": 5,
+						"w": 66,
+						"h": 80
+					},
+					"frame": {
+						"x": 1047,
+						"y": 427,
+						"w": 66,
+						"h": 80
+					}
+				},
+				{
+					"filename": "UI/Windows/FortuneWindow/HUDButton.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 67,
+						"h": 72
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 67,
+						"h": 69
+					},
+					"frame": {
+						"x": 1102,
+						"y": 356,
+						"w": 67,
+						"h": 69
+					}
+				},
+				{
+					"filename": "UI/Windows/Upgrade/Items/TimeTravel24h.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 71,
+						"h": 78
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 71,
+						"h": 78
+					},
+					"frame": {
+						"x": 1060,
+						"y": 509,
+						"w": 71,
+						"h": 78
+					}
+				},
+				{
+					"filename": "UI/Windows/FortuneWindow/ItemFreeSpin.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 29,
+						"h": 29
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 29,
+						"h": 29
+					},
+					"frame": {
+						"x": 1171,
+						"y": 356,
+						"w": 29,
+						"h": 29
+					}
+				},
+				{
+					"filename": "UI/Windows/Upgrade/Items/InApp1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 114,
+						"h": 121
+					},
+					"spriteSourceSize": {
+						"x": 7,
+						"y": 15,
+						"w": 101,
+						"h": 90
+					},
+					"frame": {
+						"x": 1094,
+						"y": 589,
+						"w": 101,
+						"h": 90
+					}
+				},
+				{
+					"filename": "UI/Windows/DailyQuests/DailyQuests Icons/CollectGold.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 90,
+						"h": 90
+					},
+					"spriteSourceSize": {
+						"x": 10,
+						"y": 7,
+						"w": 69,
+						"h": 76
+					},
+					"frame": {
+						"x": 1115,
+						"y": 427,
+						"w": 69,
+						"h": 76
+					}
+				},
+				{
+					"filename": "UI/HUD_and_common/HUD/HudSlotUpgradeBtn.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 68,
+						"h": 76
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 68,
+						"h": 76
+					},
+					"frame": {
+						"x": 1133,
+						"y": 505,
+						"w": 68,
+						"h": 76
+					}
+				},
+				{
+					"filename": "UI/Windows/Upgrade/Items/SpeedUp.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 66,
+						"h": 78
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 0,
+						"w": 65,
+						"h": 76
+					},
+					"frame": {
+						"x": 1186,
+						"y": 427,
+						"w": 65,
+						"h": 76
+					}
+				},
+				{
+					"filename": "UI/HUD_and_common/Buttons/CloseBtn.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 55,
+						"h": 57
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 55,
+						"h": 55
+					},
+					"frame": {
+						"x": 1245,
+						"y": 370,
+						"w": 55,
+						"h": 55
+					}
+				},
+				{
+					"filename": "UI/Windows/Puzzles/PuzzleItem/Parts/diamond/l.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 41,
+						"h": 41
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 41,
+						"h": 41
+					},
+					"frame": {
+						"x": 1202,
+						"y": 375,
+						"w": 41,
+						"h": 41
+					}
+				},
+				{
+					"filename": "UI/HUD_and_common/HUD/HudGemIcon.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 29,
+						"h": 24
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 29,
+						"h": 24
+					},
+					"frame": {
+						"x": 1171,
+						"y": 387,
+						"w": 29,
+						"h": 24
+					}
+				},
+				{
+					"filename": "UI/Windows/Upgrade/SeedsTabIcon.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 33,
+						"h": 28
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 33,
+						"h": 28
+					},
+					"frame": {
+						"x": 1302,
+						"y": 370,
+						"w": 33,
+						"h": 28
+					}
+				},
+				{
+					"filename": "UI/Windows/Upgrade/GoldTabIcon.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 33,
+						"h": 23
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 33,
+						"h": 23
+					},
+					"frame": {
+						"x": 1302,
+						"y": 400,
+						"w": 33,
+						"h": 23
+					}
+				},
+				{
+					"filename": "UI/Windows/FortuneWindow/ItemTimeTravel.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 40
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 40
+					},
+					"frame": {
+						"x": 1302,
+						"y": 425,
+						"w": 32,
+						"h": 40
+					}
+				},
+				{
+					"filename": "UI/Windows/Upgrade/InappLike1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 45,
+						"h": 45
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 45,
+						"h": 45
+					},
+					"frame": {
+						"x": 1253,
+						"y": 427,
+						"w": 45,
+						"h": 45
+					}
+				},
+				{
+					"filename": "Tutorial/Circle.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 76,
+						"h": 76
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 2,
+						"w": 72,
+						"h": 72
+					},
+					"frame": {
+						"x": 1339,
+						"y": 427,
+						"w": 72,
+						"h": 72
+					}
+				},
+				{
+					"filename": "UI/Windows/FortuneWindow/09.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 35,
+						"h": 41
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 35,
+						"h": 41
+					},
+					"frame": {
+						"x": 1300,
+						"y": 467,
+						"w": 35,
+						"h": 41
+					}
+				},
+				{
+					"filename": "UI/Windows/Puzzles/PuzzleItem/Parts/blocked/PuzzleItemLockUR.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 49,
+						"h": 49
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 49,
+						"h": 49
+					},
+					"frame": {
+						"x": 1248,
+						"y": 505,
+						"w": 49,
+						"h": 49
+					}
+				},
+				{
+					"filename": "UI/Windows/Puzzles/PuzzleItem/Parts/bronze/m.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 27,
+						"h": 27
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 27,
+						"h": 27
+					},
+					"frame": {
+						"x": 1253,
+						"y": 474,
+						"w": 27,
+						"h": 27
+					}
+				},
+				{
+					"filename": "UI/Windows/Puzzles/PuzzleItem/Parts/gold/l.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 41,
+						"h": 41
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 41,
+						"h": 41
+					},
+					"frame": {
+						"x": 1203,
+						"y": 505,
+						"w": 41,
+						"h": 41
+					}
+				},
+				{
+					"filename": "UI/Windows/Puzzles/PuzzleItem/Parts/opened/l.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 41,
+						"h": 41
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 41,
+						"h": 41
+					},
+					"frame": {
+						"x": 1203,
+						"y": 548,
+						"w": 41,
+						"h": 41
+					}
+				},
+				{
+					"filename": "UI/Windows/DailyQuests/DailyQuests Icons/Banjo.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 90,
+						"h": 90
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 13,
+						"w": 72,
+						"h": 65
+					},
+					"frame": {
+						"x": 1339,
+						"y": 501,
+						"w": 72,
+						"h": 65
+					}
+				},
+				{
+					"filename": "Tutorial/finger.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 38,
+						"h": 43
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 38,
+						"h": 43
+					},
+					"frame": {
+						"x": 1299,
+						"y": 510,
+						"w": 38,
+						"h": 43
+					}
+				},
+				{
+					"filename": "UI/Windows/Upgrade/InappLike.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 38,
+						"h": 43
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 38,
+						"h": 43
+					},
+					"frame": {
+						"x": 1299,
+						"y": 555,
+						"w": 38,
+						"h": 43
+					}
+				},
+				{
+					"filename": "UI/Windows/LoginBonus/BonusTypes/Crystal.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 60,
+						"h": 60
+					},
+					"spriteSourceSize": {
+						"x": 5,
+						"y": 8,
+						"w": 49,
+						"h": 48
+					},
+					"frame": {
+						"x": 1248,
+						"y": 556,
+						"w": 49,
+						"h": 48
+					}
+				},
+				{
+					"filename": "UI/Windows/LoginBonus/BonusTypes/MegaCrystal.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 60,
+						"h": 60
+					},
+					"spriteSourceSize": {
+						"x": 4,
+						"y": 4,
+						"w": 48,
+						"h": 47
+					},
+					"frame": {
+						"x": 1197,
+						"y": 591,
+						"w": 48,
+						"h": 47
+					}
+				},
+				{
+					"filename": "UI/Windows/Upgrade/ActualTabIcon.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 38,
+						"h": 40
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 38,
+						"h": 40
+					},
+					"frame": {
+						"x": 1197,
+						"y": 640,
+						"w": 38,
+						"h": 40
+					}
+				},
+				{
+					"filename": "Slots/macroProgress.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 71,
+						"h": 9
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 71,
+						"h": 9
+					},
+					"frame": {
+						"x": 1339,
+						"y": 568,
+						"w": 71,
+						"h": 9
+					}
+				},
+				{
+					"filename": "UI/Windows/Settings/RestoreProgress.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 63,
+						"h": 73
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 63,
+						"h": 73
+					},
+					"frame": {
+						"x": 1202,
+						"y": 682,
+						"w": 63,
+						"h": 73
+					}
+				},
+				{
+					"filename": "UI/Windows/Settings/SaveProgress.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 63,
+						"h": 73
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 63,
+						"h": 73
+					},
+					"frame": {
+						"x": 1247,
+						"y": 606,
+						"w": 63,
+						"h": 73
+					}
+				},
+				{
+					"filename": "UI/Windows/Puzzles/PuzzleItem/PuzzleBonusBack.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 68,
+						"h": 25
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 68,
+						"h": 25
+					},
+					"frame": {
+						"x": 1339,
+						"y": 579,
+						"w": 68,
+						"h": 25
+					}
+				},
+				{
+					"filename": "UI/HUD_and_common/PriceGems.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 24,
+						"h": 24
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 24,
+						"h": 24
+					},
+					"frame": {
+						"x": 1312,
+						"y": 600,
+						"w": 24,
+						"h": 24
+					}
+				},
+				{
+					"filename": "UI/Windows/Settings/01.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 68,
+						"h": 25
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 68,
+						"h": 25
+					},
+					"frame": {
+						"x": 1339,
+						"y": 606,
+						"w": 68,
+						"h": 25
+					}
+				},
+				{
+					"filename": "UI/HUD_and_common/PriceSeeds.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 24,
+						"h": 24
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 24,
+						"h": 23
+					},
+					"frame": {
+						"x": 1312,
+						"y": 626,
+						"w": 24,
+						"h": 23
+					}
+				},
+				{
+					"filename": "UI/Windows/ChangeLanguage/Turkish.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 63,
+						"h": 73
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 63,
+						"h": 68
+					},
+					"frame": {
+						"x": 1339,
+						"y": 633,
+						"w": 63,
+						"h": 68
+					}
+				},
+				{
+					"filename": "UI/Windows/Puzzles/PuzzleItem/Parts/opened/s.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 21,
+						"h": 21
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 21,
+						"h": 21
+					},
+					"frame": {
+						"x": 1312,
+						"y": 651,
+						"w": 21,
+						"h": 21
+					}
+				},
+				{
+					"filename": "UI/Windows/Puzzles/PuzzleItem/Parts/platinum/s.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 21,
+						"h": 21
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 21,
+						"h": 21
+					},
+					"frame": {
+						"x": 1312,
+						"y": 674,
+						"w": 21,
+						"h": 21
+					}
+				},
+				{
+					"filename": "UI/Windows/Puzzles/PuzzleItem/Parts/platinum/l.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 41,
+						"h": 41
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 41,
+						"h": 41
+					},
+					"frame": {
+						"x": 1267,
+						"y": 681,
+						"w": 41,
+						"h": 41
+					}
+				},
+				{
+					"filename": "Slots/Lock.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 27,
+						"h": 31
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 27,
+						"h": 31
+					},
+					"frame": {
+						"x": 1310,
+						"y": 697,
+						"w": 27,
+						"h": 31
+					}
+				},
+				{
+					"filename": "UI/Windows/Puzzles/PuzzleItem/Parts/silver/l.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 41,
+						"h": 41
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 41,
+						"h": 41
+					},
+					"frame": {
+						"x": 1267,
+						"y": 724,
+						"w": 41,
+						"h": 41
+					}
+				},
+				{
+					"filename": "UI/Windows/LoginBonus/BonusTypes/SeedStrength.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 60,
+						"h": 60
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 5,
+						"w": 58,
+						"h": 50
+					},
+					"frame": {
+						"x": 1339,
+						"y": 703,
+						"w": 58,
+						"h": 50
+					}
+				},
+				{
+					"filename": "UI/Windows/Puzzles/PuzzleItem/Parts/diamond/m.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 27,
+						"h": 27
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 27,
+						"h": 27
+					},
+					"frame": {
+						"x": 1310,
+						"y": 730,
+						"w": 27,
+						"h": 27
+					}
+				},
+				{
+					"filename": "UI/Windows/Puzzles/PuzzleItem/Parts/silver/s.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 21,
+						"h": 21
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 21,
+						"h": 21
+					},
+					"frame": {
+						"x": 1399,
+						"y": 703,
+						"w": 21,
+						"h": 21
+					}
+				},
+				{
+					"filename": "UI/Windows/LoginBonus/BonusTypes/Seed.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 60,
+						"h": 60
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 7,
+						"w": 57,
+						"h": 49
+					},
+					"frame": {
+						"x": 1339,
+						"y": 755,
+						"w": 57,
+						"h": 49
+					}
+				},
+				{
+					"filename": "UI/Windows/Puzzles/PuzzleItem/Parts/gold/m.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 27,
+						"h": 27
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 27,
+						"h": 27
+					},
+					"frame": {
+						"x": 1310,
+						"y": 759,
+						"w": 27,
+						"h": 27
+					}
+				},
+				{
+					"filename": "UI/HUD_and_common/HUD/locEarth.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 54,
+						"h": 53
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 54,
+						"h": 53
+					},
+					"frame": {
+						"x": 1248,
+						"y": 806,
+						"w": 54,
+						"h": 53
+					}
+				},
+				{
+					"filename": "UI/HUD_and_common/PriceGold.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 30,
+						"h": 30
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 4,
+						"w": 30,
+						"h": 22
+					},
+					"frame": {
+						"x": 1304,
+						"y": 788,
+						"w": 30,
+						"h": 22
+					}
+				},
+				{
+					"filename": "bread/bread_1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 56,
+						"h": 41
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 56,
+						"h": 41
+					},
+					"frame": {
+						"x": 1304,
+						"y": 812,
+						"w": 56,
+						"h": 41
+					}
+				},
+				{
+					"filename": "UI/HUD_and_common/SeetingBtn.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 55,
+						"h": 57
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 55,
+						"h": 57
+					},
+					"frame": {
+						"x": 1362,
+						"y": 806,
+						"w": 55,
+						"h": 57
+					}
+				},
+				{
+					"filename": "UI/Windows/Puzzles/PuzzleItem/Parts/opened/m.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 27,
+						"h": 27
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 27,
+						"h": 27
+					},
+					"frame": {
+						"x": 1324,
+						"y": 855,
+						"w": 27,
+						"h": 27
+					}
+				},
+				{
+					"filename": "UI/Windows/PopUps/CloseBtn.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 55,
+						"h": 57
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 55,
+						"h": 57
+					},
+					"frame": {
+						"x": 1324,
+						"y": 884,
+						"w": 55,
+						"h": 57
+					}
+				},
+				{
+					"filename": "UI/Windows/Puzzles/PuzzleTabDeactive.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 39,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 39,
+						"h": 48
+					},
+					"frame": {
+						"x": 1381,
+						"y": 865,
+						"w": 39,
+						"h": 48
+					}
+				},
+				{
+					"filename": "UI/Windows/Puzzles/PuzzleItem/Parts/platinum/m.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 27,
+						"h": 27
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 27,
+						"h": 27
+					},
+					"frame": {
+						"x": 1248,
+						"y": 767,
+						"w": 27,
+						"h": 27
+					}
+				},
+				{
+					"filename": "UI/Windows/Puzzles/PuzzleItem/Parts/silver/m.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 27,
+						"h": 27
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 27,
+						"h": 27
+					},
+					"frame": {
+						"x": 1381,
+						"y": 915,
+						"w": 27,
+						"h": 27
+					}
+				},
+				{
+					"filename": "UI/HUD_and_common/HUD/SeedsQuestIcon.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 29,
+						"h": 25
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 0,
+						"w": 27,
+						"h": 25
+					},
+					"frame": {
+						"x": 1339,
+						"y": 943,
+						"w": 27,
+						"h": 25
+					}
+				},
+				{
+					"filename": "bread/bread_5.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 53,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 53,
+						"h": 48
+					},
+					"frame": {
+						"x": 1339,
+						"y": 970,
+						"w": 53,
+						"h": 48
+					}
+				},
+				{
+					"filename": "UI/HUD_and_common/HUD/HudPlusButton.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 27,
+						"h": 24
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 27,
+						"h": 24
+					},
+					"frame": {
+						"x": 1368,
+						"y": 944,
+						"w": 27,
+						"h": 24
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:767892b5409c3760244c80ccc8e7ac57:8ad85fadda2b23e8073e8525d6c714a1:face5e8e10d31b519c81bd3d1a19dcc1$"
+	}
+}

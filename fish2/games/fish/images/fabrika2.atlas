@@ -1,0 +1,181 @@
+
+fabrika2.png
+size: 256,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Conveer
+  rotate: false
+  xy: 1, 30
+  size: 46, 34
+  orig: 46, 34
+  offset: 0, 0
+  index: -1
+Door1
+  rotate: false
+  xy: 208, 172
+  size: 12, 38
+  orig: 12, 38
+  offset: 0, 0
+  index: -1
+Door2
+  rotate: false
+  xy: 48, 35
+  size: 15, 29
+  orig: 15, 29
+  offset: 0, 0
+  index: -1
+Door3
+  rotate: true
+  xy: 233, 211
+  size: 14, 22
+  orig: 14, 22
+  offset: 0, 0
+  index: -1
+Factory2
+  rotate: false
+  xy: 1, 120
+  size: 179, 135
+  orig: 179, 135
+  offset: 0, 0
+  index: -1
+MBox
+  rotate: false
+  xy: 103, 103
+  size: 20, 16
+  orig: 20, 16
+  offset: 0, 0
+  index: -1
+Pipes
+  rotate: false
+  xy: 1, 1
+  size: 29, 28
+  orig: 29, 28
+  offset: 0, 0
+  index: -1
+Pipes1
+  rotate: false
+  xy: 81, 79
+  size: 21, 40
+  orig: 21, 40
+  offset: 0, 0
+  index: -1
+Pipes2
+  rotate: false
+  xy: 57, 65
+  size: 23, 54
+  orig: 23, 54
+  offset: 0, 0
+  index: -1
+Plakat
+  rotate: true
+  xy: 233, 226
+  size: 29, 22
+  orig: 29, 22
+  offset: 0, 0
+  index: -1
+Sign1
+  rotate: true
+  xy: 197, 151
+  size: 15, 12
+  orig: 15, 12
+  offset: 0, 0
+  index: -1
+Sign2
+  rotate: true
+  xy: 197, 135
+  size: 15, 14
+  orig: 15, 14
+  offset: 0, 0
+  index: -1
+Stand
+  rotate: false
+  xy: 181, 211
+  size: 51, 44
+  orig: 51, 44
+  offset: 0, 0
+  index: -1
+back1
+  rotate: false
+  xy: 31, 5
+  size: 14, 24
+  orig: 14, 24
+  offset: 0, 0
+  index: -1
+back2
+  rotate: true
+  xy: 221, 194
+  size: 16, 34
+  orig: 16, 34
+  offset: 0, 0
+  index: -1
+back3
+  rotate: false
+  xy: 181, 126
+  size: 15, 40
+  orig: 15, 40
+  offset: 0, 0
+  index: -1
+smoke/smoke_1
+  rotate: false
+  xy: 221, 180
+  size: 22, 13
+  orig: 22, 13
+  offset: 0, 0
+  index: -1
+smoke/smoke_2
+  rotate: true
+  xy: 64, 42
+  size: 22, 13
+  orig: 22, 13
+  offset: 0, 0
+  index: -1
+smoke/smoke_3
+  rotate: true
+  xy: 103, 80
+  size: 22, 13
+  orig: 22, 13
+  offset: 0, 0
+  index: -1
+smoke/smoke_4
+  rotate: false
+  xy: 124, 106
+  size: 22, 13
+  orig: 22, 13
+  offset: 0, 0
+  index: -1
+smoke/smoke_5
+  rotate: false
+  xy: 147, 106
+  size: 22, 13
+  orig: 22, 13
+  offset: 0, 0
+  index: -1
+smoke/smoke_6
+  rotate: false
+  xy: 81, 65
+  size: 22, 13
+  orig: 22, 13
+  offset: 0, 0
+  index: -1
+smoke/smoke_7
+  rotate: false
+  xy: 78, 51
+  size: 22, 13
+  orig: 22, 13
+  offset: 0, 0
+  index: -1
+wall1
+  rotate: false
+  xy: 181, 167
+  size: 26, 43
+  orig: 26, 43
+  offset: 0, 0
+  index: -1
+wall3
+  rotate: false
+  xy: 1, 65
+  size: 55, 54
+  orig: 55, 54
+  offset: 0, 0
+  index: -1
