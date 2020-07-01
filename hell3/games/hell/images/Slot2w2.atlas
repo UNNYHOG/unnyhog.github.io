@@ -1,0 +1,167 @@
+
+Slot2w2.png
+size: 512,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Lava
+  rotate: false
+  xy: 1, 40
+  size: 162, 80
+  orig: 162, 80
+  offset: 0, 0
+  index: -1
+Man1_Face
+  rotate: false
+  xy: 164, 39
+  size: 21, 14
+  orig: 21, 14
+  offset: 0, 0
+  index: -1
+Man1_Hat
+  rotate: false
+  xy: 421, 99
+  size: 35, 21
+  orig: 35, 21
+  offset: 0, 0
+  index: -1
+Man2_Face
+  rotate: true
+  xy: 439, 61
+  size: 15, 19
+  orig: 15, 19
+  offset: 0, 0
+  index: -1
+Man2_Shadow
+  rotate: false
+  xy: 1, 1
+  size: 23, 3
+  orig: 23, 3
+  offset: 0, 0
+  index: -1
+Man3_Eye
+  rotate: false
+  xy: 459, 67
+  size: 17, 13
+  orig: 17, 13
+  offset: 0, 0
+  index: -1
+Man3_Mouth
+  rotate: false
+  xy: 479, 100
+  size: 2, 2
+  orig: 2, 2
+  offset: 0, 0
+  index: -1
+Man3_Shadow
+  rotate: false
+  xy: 199, 55
+  size: 23, 3
+  orig: 23, 3
+  offset: 0, 0
+  index: -1
+body/arab/man1
+  rotate: true
+  xy: 1, 5
+  size: 34, 66
+  orig: 34, 66
+  offset: 0, 0
+  index: -1
+body/arab/man2
+  rotate: false
+  xy: 199, 59
+  size: 36, 61
+  orig: 36, 61
+  offset: 0, 0
+  index: -1
+body/arab/man2hand
+  rotate: false
+  xy: 135, 7
+  size: 17, 32
+  orig: 17, 32
+  offset: 0, 0
+  index: -1
+body/arab/man3
+  rotate: false
+  xy: 310, 60
+  size: 36, 60
+  orig: 36, 60
+  offset: 0, 0
+  index: -1
+body/arab/man3hand
+  rotate: true
+  xy: 490, 101
+  size: 19, 21
+  orig: 19, 21
+  offset: 0, 0
+  index: -1
+body/negro/man1
+  rotate: false
+  xy: 164, 54
+  size: 34, 66
+  orig: 34, 66
+  offset: 0, 0
+  index: -1
+body/negro/man2
+  rotate: false
+  xy: 236, 59
+  size: 36, 61
+  orig: 36, 61
+  offset: 0, 0
+  index: -1
+body/negro/man2hand
+  rotate: false
+  xy: 421, 66
+  size: 17, 32
+  orig: 17, 32
+  offset: 0, 0
+  index: -1
+body/negro/man3
+  rotate: false
+  xy: 347, 60
+  size: 36, 60
+  orig: 36, 60
+  offset: 0, 0
+  index: -1
+body/negro/man3hand
+  rotate: false
+  xy: 439, 77
+  size: 19, 21
+  orig: 19, 21
+  offset: 0, 0
+  index: -1
+body/white/man1
+  rotate: true
+  xy: 68, 5
+  size: 34, 66
+  orig: 34, 66
+  offset: 0, 0
+  index: -1
+body/white/man2
+  rotate: false
+  xy: 273, 59
+  size: 36, 61
+  orig: 36, 61
+  offset: 0, 0
+  index: -1
+body/white/man2hand
+  rotate: true
+  xy: 457, 103
+  size: 17, 32
+  orig: 17, 32
+  offset: 0, 0
+  index: -1
+body/white/man3
+  rotate: false
+  xy: 384, 60
+  size: 36, 60
+  orig: 36, 60
+  offset: 0, 0
+  index: -1
+body/white/man3hand
+  rotate: false
+  xy: 459, 81
+  size: 19, 21
+  orig: 19, 21
+  offset: 0, 0
+  index: -1

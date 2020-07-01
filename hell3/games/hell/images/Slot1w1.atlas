@@ -1,0 +1,230 @@
+
+Slot1w1.png
+size: 512,64
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+DevilBody
+  rotate: true
+  xy: 1, 5
+  size: 12, 29
+  orig: 12, 29
+  offset: 0, 0
+  index: -1
+DevilHead
+  rotate: false
+  xy: 249, 38
+  size: 28, 25
+  orig: 28, 25
+  offset: 0, 0
+  index: -1
+DevilLefttArm
+  rotate: false
+  xy: 278, 44
+  size: 21, 19
+  orig: 21, 19
+  offset: 0, 0
+  index: -1
+DevilRightArmDown
+  rotate: false
+  xy: 42, 1
+  size: 18, 10
+  orig: 18, 10
+  offset: 0, 0
+  index: -1
+DevilRightArmUp
+  rotate: false
+  xy: 300, 45
+  size: 21, 18
+  orig: 21, 18
+  offset: 0, 0
+  index: -1
+DevilStringDown
+  rotate: false
+  xy: 345, 50
+  size: 19, 6
+  orig: 19, 6
+  offset: 0, 0
+  index: -1
+DevilStringsUp
+  rotate: false
+  xy: 213, 17
+  size: 13, 14
+  orig: 13, 14
+  offset: 0, 0
+  index: -1
+DevilTail
+  rotate: false
+  xy: 439, 56
+  size: 11, 7
+  orig: 11, 7
+  offset: 0, 0
+  index: -1
+DevilTailTip
+  rotate: true
+  xy: 42, 12
+  size: 5, 7
+  orig: 5, 7
+  offset: 0, 0
+  index: -1
+Devil_shadow
+  rotate: false
+  xy: 345, 57
+  size: 23, 6
+  orig: 23, 6
+  offset: 0, 0
+  index: -1
+Man_Face1
+  rotate: true
+  xy: 31, 1
+  size: 16, 10
+  orig: 16, 10
+  offset: 0, 0
+  index: -1
+Man_Face2
+  rotate: false
+  xy: 227, 24
+  size: 17, 7
+  orig: 17, 7
+  offset: 0, 0
+  index: -1
+Man_shadow
+  rotate: false
+  xy: 145, 44
+  size: 69, 19
+  orig: 69, 19
+  offset: 0, 0
+  index: -1
+SlapEffect
+  rotate: false
+  xy: 322, 46
+  size: 22, 17
+  orig: 22, 17
+  offset: 0, 0
+  index: -1
+body/arab/arab_ManBottom
+  rotate: true
+  xy: 145, 12
+  size: 31, 33
+  orig: 31, 33
+  offset: 0, 0
+  index: -1
+body/arab/arab_ManTop
+  rotate: false
+  xy: 1, 18
+  size: 47, 45
+  orig: 47, 45
+  offset: 0, 0
+  index: -1
+body/negro/negro_ManBottom
+  rotate: true
+  xy: 179, 12
+  size: 31, 33
+  orig: 31, 33
+  offset: 0, 0
+  index: -1
+body/negro/negro_ManTop
+  rotate: false
+  xy: 49, 18
+  size: 47, 45
+  orig: 47, 45
+  offset: 0, 0
+  index: -1
+body/white/white_ManBottom
+  rotate: true
+  xy: 215, 32
+  size: 31, 33
+  orig: 31, 33
+  offset: 0, 0
+  index: -1
+body/white/white_ManTop
+  rotate: false
+  xy: 97, 18
+  size: 47, 45
+  orig: 47, 45
+  offset: 0, 0
+  index: -1
+effect/Slash1_01
+  rotate: false
+  xy: 369, 57
+  size: 13, 6
+  orig: 13, 6
+  offset: 0, 0
+  index: -1
+effect/Slash1_02
+  rotate: false
+  xy: 369, 57
+  size: 13, 6
+  orig: 13, 6
+  offset: 0, 0
+  index: -1
+effect/Slash1_03
+  rotate: false
+  xy: 365, 50
+  size: 13, 6
+  orig: 13, 6
+  offset: 0, 0
+  index: -1
+effect/Slash1_04
+  rotate: false
+  xy: 227, 17
+  size: 13, 6
+  orig: 13, 6
+  offset: 0, 0
+  index: -1
+effect/Slash1_05
+  rotate: false
+  xy: 383, 57
+  size: 13, 6
+  orig: 13, 6
+  offset: 0, 0
+  index: -1
+effect/Slash1_06
+  rotate: false
+  xy: 379, 50
+  size: 13, 6
+  orig: 13, 6
+  offset: 0, 0
+  index: -1
+effect/Slash1_07
+  rotate: false
+  xy: 397, 57
+  size: 13, 6
+  orig: 13, 6
+  offset: 0, 0
+  index: -1
+effect/Slash1_08
+  rotate: false
+  xy: 393, 50
+  size: 13, 6
+  orig: 13, 6
+  offset: 0, 0
+  index: -1
+effect/Slash1_09
+  rotate: false
+  xy: 411, 57
+  size: 13, 6
+  orig: 13, 6
+  offset: 0, 0
+  index: -1
+effect/Slash1_10
+  rotate: false
+  xy: 407, 50
+  size: 13, 6
+  orig: 13, 6
+  offset: 0, 0
+  index: -1
+effect/Slash1_11
+  rotate: false
+  xy: 425, 57
+  size: 13, 6
+  orig: 13, 6
+  offset: 0, 0
+  index: -1
+effect/Slash1_12
+  rotate: false
+  xy: 421, 50
+  size: 13, 6
+  orig: 13, 6
+  offset: 0, 0
+  index: -1

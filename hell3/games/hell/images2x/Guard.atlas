@@ -1,0 +1,76 @@
+
+Guard.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body
+  rotate: false
+  xy: 176, 119
+  size: 113, 134
+  orig: 113, 134
+  offset: 0, 0
+  index: -1
+Books
+  rotate: false
+  xy: 417, 212
+  size: 61, 41
+  orig: 61, 41
+  offset: 0, 0
+  index: -1
+Head
+  rotate: false
+  xy: 1, 14
+  size: 116, 93
+  orig: 116, 93
+  offset: 0, 0
+  index: -1
+Legs
+  rotate: false
+  xy: 290, 189
+  size: 126, 64
+  orig: 126, 64
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 1, 1
+  size: 46, 12
+  orig: 46, 12
+  offset: 0, 0
+  index: -1
+Table
+  rotate: false
+  xy: 1, 108
+  size: 174, 145
+  orig: 174, 145
+  offset: 0, 0
+  index: -1
+Tail
+  rotate: true
+  xy: 388, 125
+  size: 63, 37
+  orig: 63, 37
+  offset: 0, 0
+  index: -1
+Weapon1
+  rotate: false
+  xy: 118, 7
+  size: 49, 100
+  orig: 49, 100
+  offset: 0, 0
+  index: -1
+Weapon2
+  rotate: true
+  xy: 290, 132
+  size: 56, 97
+  orig: 56, 97
+  offset: 0, 0
+  index: -1
+ref
+  rotate: false
+  xy: 426, 173
+  size: 41, 38
+  orig: 41, 38
+  offset: 0, 0
+  index: -1

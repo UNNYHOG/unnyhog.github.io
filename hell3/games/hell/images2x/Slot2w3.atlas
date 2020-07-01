@@ -1,0 +1,216 @@
+
+Slot2w3.png
+size: 2048,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+DevilBody
+  rotate: true
+  xy: 812, 36
+  size: 91, 118
+  orig: 91, 118
+  offset: 0, 0
+  index: -1
+DevilEar
+  rotate: false
+  xy: 1483, 112
+  size: 18, 15
+  orig: 18, 15
+  offset: 0, 0
+  index: -1
+DevilHead
+  rotate: true
+  xy: 735, 12
+  size: 59, 76
+  orig: 59, 76
+  offset: 0, 0
+  index: -1
+DevilTail
+  rotate: false
+  xy: 1432, 103
+  size: 26, 24
+  orig: 26, 24
+  offset: 0, 0
+  index: -1
+DevilTailTip
+  rotate: false
+  xy: 1459, 105
+  size: 23, 22
+  orig: 23, 22
+  offset: 0, 0
+  index: -1
+Devil_Hand_L
+  rotate: false
+  xy: 931, 49
+  size: 64, 78
+  orig: 64, 78
+  offset: 0, 0
+  index: -1
+Devil_Hand_R
+  rotate: false
+  xy: 996, 54
+  size: 44, 73
+  orig: 44, 73
+  offset: 0, 0
+  index: -1
+DynamiteHandle
+  rotate: false
+  xy: 1088, 103
+  size: 55, 24
+  orig: 55, 24
+  offset: 0, 0
+  index: -1
+DynamiteTube
+  rotate: true
+  xy: 1, 5
+  size: 7, 16
+  orig: 7, 16
+  offset: 0, 0
+  index: -1
+Dynamite_Base
+  rotate: false
+  xy: 1041, 88
+  size: 46, 39
+  orig: 46, 39
+  offset: 0, 0
+  index: -1
+Effect/Electricity01
+  rotate: true
+  xy: 707, 1
+  size: 31, 26
+  orig: 31, 26
+  offset: 0, 0
+  index: -1
+Effect/Electricity02
+  rotate: false
+  xy: 1144, 101
+  size: 31, 26
+  orig: 31, 26
+  offset: 0, 0
+  index: -1
+Effect/Electricity03
+  rotate: false
+  xy: 1176, 101
+  size: 31, 26
+  orig: 31, 26
+  offset: 0, 0
+  index: -1
+Effect/Electricity04
+  rotate: false
+  xy: 1208, 101
+  size: 31, 26
+  orig: 31, 26
+  offset: 0, 0
+  index: -1
+Effect/Electricity05
+  rotate: false
+  xy: 1240, 101
+  size: 31, 26
+  orig: 31, 26
+  offset: 0, 0
+  index: -1
+Effect/Electricity06
+  rotate: false
+  xy: 1272, 101
+  size: 31, 26
+  orig: 31, 26
+  offset: 0, 0
+  index: -1
+Effect/Electricity07
+  rotate: false
+  xy: 1304, 101
+  size: 31, 26
+  orig: 31, 26
+  offset: 0, 0
+  index: -1
+Effect/Electricity08
+  rotate: false
+  xy: 1336, 101
+  size: 31, 26
+  orig: 31, 26
+  offset: 0, 0
+  index: -1
+Effect/Electricity09
+  rotate: false
+  xy: 1368, 101
+  size: 31, 26
+  orig: 31, 26
+  offset: 0, 0
+  index: -1
+Effect/Electricity10
+  rotate: false
+  xy: 1400, 101
+  size: 31, 26
+  orig: 31, 26
+  offset: 0, 0
+  index: -1
+Highlight
+  rotate: false
+  xy: 849, 21
+  size: 30, 14
+  orig: 30, 14
+  offset: 0, 0
+  index: -1
+Man_Face1
+  rotate: false
+  xy: 812, 15
+  size: 36, 20
+  orig: 36, 20
+  offset: 0, 0
+  index: -1
+Man_Face2
+  rotate: false
+  xy: 1041, 61
+  size: 39, 26
+  orig: 39, 26
+  offset: 0, 0
+  index: -1
+Shadow_Devil
+  rotate: false
+  xy: 595, 1
+  size: 111, 31
+  orig: 111, 31
+  offset: 0, 0
+  index: -1
+Shadow_Devil2
+  rotate: false
+  xy: 595, 1
+  size: 111, 31
+  orig: 111, 31
+  offset: 0, 0
+  index: -1
+Shadow_Man
+  rotate: false
+  xy: 595, 33
+  size: 139, 38
+  orig: 139, 38
+  offset: 0, 0
+  index: -1
+body/arab/white_Man
+  rotate: true
+  xy: 1, 13
+  size: 114, 197
+  orig: 114, 197
+  offset: 0, 0
+  index: -1
+body/negro/white_Man
+  rotate: true
+  xy: 199, 13
+  size: 114, 197
+  orig: 114, 197
+  offset: 0, 0
+  index: -1
+body/white/white_Man
+  rotate: true
+  xy: 397, 13
+  size: 114, 197
+  orig: 114, 197
+  offset: 0, 0
+  index: -1
+wire
+  rotate: false
+  xy: 595, 72
+  size: 216, 55
+  orig: 216, 55
+  offset: 0, 0
+  index: -1

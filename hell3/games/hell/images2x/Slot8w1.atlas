@@ -1,0 +1,202 @@
+
+Slot8w1.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Bottle
+  rotate: false
+  xy: 1, 40
+  size: 199, 210
+  orig: 199, 210
+  offset: 0, 0
+  index: -1
+FishBody
+  rotate: true
+  xy: 79, 6
+  size: 33, 38
+  orig: 33, 38
+  offset: 0, 0
+  index: -1
+FishBody1
+  rotate: true
+  xy: 347, 93
+  size: 42, 38
+  orig: 42, 38
+  offset: 0, 0
+  index: -1
+FishEyes
+  rotate: false
+  xy: 479, 242
+  size: 25, 8
+  orig: 25, 8
+  offset: 0, 0
+  index: -1
+FishJaw
+  rotate: false
+  xy: 386, 34
+  size: 30, 23
+  orig: 30, 23
+  offset: 0, 0
+  index: -1
+FishTail
+  rotate: true
+  xy: 1, 2
+  size: 14, 21
+  orig: 14, 21
+  offset: 0, 0
+  index: -1
+ManShadow
+  rotate: false
+  xy: 1, 17
+  size: 77, 22
+  orig: 77, 22
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 201, 194
+  size: 201, 56
+  orig: 201, 56
+  offset: 0, 0
+  index: -1
+WaterSplash/WaterSplash01
+  rotate: false
+  xy: 347, 54
+  size: 38, 38
+  orig: 38, 38
+  offset: 0, 0
+  index: -1
+WaterSplash/WaterSplash02
+  rotate: false
+  xy: 118, 1
+  size: 38, 38
+  orig: 38, 38
+  offset: 0, 0
+  index: -1
+WaterSplash/WaterSplash03
+  rotate: false
+  xy: 157, 1
+  size: 38, 38
+  orig: 38, 38
+  offset: 0, 0
+  index: -1
+WaterSplash/WaterSplash04
+  rotate: false
+  xy: 383, 136
+  size: 38, 38
+  orig: 38, 38
+  offset: 0, 0
+  index: -1
+WaterSplash/WaterSplash05
+  rotate: false
+  xy: 422, 136
+  size: 38, 38
+  orig: 38, 38
+  offset: 0, 0
+  index: -1
+WaterSplash/WaterSplash06
+  rotate: false
+  xy: 386, 97
+  size: 38, 38
+  orig: 38, 38
+  offset: 0, 0
+  index: -1
+WaterSplash/WaterSplash07
+  rotate: false
+  xy: 386, 58
+  size: 38, 38
+  orig: 38, 38
+  offset: 0, 0
+  index: -1
+WaterSplash/WaterSplash08
+  rotate: false
+  xy: 425, 97
+  size: 38, 38
+  orig: 38, 38
+  offset: 0, 0
+  index: -1
+WaterSplash/WaterSplash09
+  rotate: false
+  xy: 425, 58
+  size: 38, 38
+  orig: 38, 38
+  offset: 0, 0
+  index: -1
+WaterSplash/WaterSplash10
+  rotate: false
+  xy: 461, 136
+  size: 38, 38
+  orig: 38, 38
+  offset: 0, 0
+  index: -1
+WaterSplash/WaterSplash11
+  rotate: false
+  xy: 464, 97
+  size: 38, 38
+  orig: 38, 38
+  offset: 0, 0
+  index: -1
+WaterSplash/WaterSplash12
+  rotate: false
+  xy: 464, 58
+  size: 38, 38
+  orig: 38, 38
+  offset: 0, 0
+  index: -1
+WaterSplash/WaterSplash13
+  rotate: false
+  xy: 347, 15
+  size: 38, 38
+  orig: 38, 38
+  offset: 0, 0
+  index: -1
+body/arab/white_ManLowerBody
+  rotate: false
+  xy: 289, 70
+  size: 57, 35
+  orig: 57, 35
+  offset: 0, 0
+  index: -1
+body/arab/white_ManUpperBody
+  rotate: false
+  xy: 201, 106
+  size: 72, 87
+  orig: 72, 87
+  offset: 0, 0
+  index: -1
+body/negro/white_ManLowerBody
+  rotate: true
+  xy: 347, 136
+  size: 57, 35
+  orig: 57, 35
+  offset: 0, 0
+  index: -1
+body/negro/white_ManUpperBody
+  rotate: false
+  xy: 274, 106
+  size: 72, 87
+  orig: 72, 87
+  offset: 0, 0
+  index: -1
+body/white/white_ManLowerBody
+  rotate: false
+  xy: 289, 34
+  size: 57, 35
+  orig: 57, 35
+  offset: 0, 0
+  index: -1
+body/white/white_ManUpperBody
+  rotate: true
+  xy: 201, 33
+  size: 72, 87
+  orig: 72, 87
+  offset: 0, 0
+  index: -1
+scared
+  rotate: false
+  xy: 403, 175
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,111 @@
+
+Slot7w3.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Bad
+  rotate: false
+  xy: 249, 1
+  size: 181, 78
+  orig: 181, 78
+  offset: 0, 0
+  index: -1
+Devil
+  rotate: true
+  xy: 650, 85
+  size: 92, 127
+  orig: 92, 127
+  offset: 0, 0
+  index: -1
+Love_1
+  rotate: true
+  xy: 225, 36
+  size: 25, 19
+  orig: 25, 19
+  offset: 0, 0
+  index: -1
+Love_2
+  rotate: false
+  xy: 604, 94
+  size: 34, 25
+  orig: 34, 25
+  offset: 0, 0
+  index: -1
+Love_3
+  rotate: false
+  xy: 431, 49
+  size: 38, 30
+  orig: 38, 30
+  offset: 0, 0
+  index: -1
+Scene_Curtin
+  rotate: false
+  xy: 1, 62
+  size: 247, 193
+  orig: 247, 193
+  offset: 0, 0
+  index: -1
+Scene_Curtin_B
+  rotate: false
+  xy: 249, 80
+  size: 223, 175
+  orig: 223, 175
+  offset: 0, 0
+  index: -1
+Scene_Curtin_L
+  rotate: true
+  xy: 473, 120
+  size: 57, 176
+  orig: 57, 176
+  offset: 0, 0
+  index: -1
+Scene_Curtin_R
+  rotate: true
+  xy: 755, 198
+  size: 57, 176
+  orig: 57, 176
+  offset: 0, 0
+  index: -1
+Scene_Ring
+  rotate: false
+  xy: 1, 4
+  size: 223, 57
+  orig: 223, 57
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 473, 178
+  size: 281, 77
+  orig: 281, 77
+  offset: 0, 0
+  index: -1
+body/arab/arab_Man
+  rotate: true
+  xy: 473, 58
+  size: 61, 130
+  orig: 61, 130
+  offset: 0, 0
+  index: -1
+body/negro/negro_Man
+  rotate: true
+  xy: 778, 136
+  size: 61, 130
+  orig: 61, 130
+  offset: 0, 0
+  index: -1
+body/white/white_Man
+  rotate: true
+  xy: 778, 74
+  size: 61, 130
+  orig: 61, 130
+  offset: 0, 0
+  index: -1
+scared
+  rotate: false
+  xy: 932, 200
+  size: 55, 55
+  orig: 55, 55
+  offset: 0, 0
+  index: -1

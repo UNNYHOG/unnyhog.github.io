@@ -1,0 +1,188 @@
+
+Slot1w3.png
+size: 512,64
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+DevilBody
+  rotate: true
+  xy: 102, 1
+  size: 62, 70
+  orig: 62, 70
+  offset: 0, 0
+  index: -1
+DevilFrontLeg
+  rotate: true
+  xy: 301, 6
+  size: 20, 27
+  orig: 20, 27
+  offset: 0, 0
+  index: -1
+DevilRearLeg
+  rotate: true
+  xy: 55, 1
+  size: 16, 25
+  orig: 16, 25
+  offset: 0, 0
+  index: -1
+DevilTail
+  rotate: false
+  xy: 460, 25
+  size: 14, 9
+  orig: 14, 9
+  offset: 0, 0
+  index: -1
+L_Hand_Low
+  rotate: false
+  xy: 345, 32
+  size: 43, 31
+  orig: 43, 31
+  offset: 0, 0
+  index: -1
+L_Hand_Punch
+  rotate: false
+  xy: 173, 39
+  size: 62, 24
+  orig: 62, 24
+  offset: 0, 0
+  index: -1
+ManSufferingFace
+  rotate: true
+  xy: 345, 1
+  size: 19, 13
+  orig: 19, 13
+  offset: 0, 0
+  index: -1
+Man_Face
+  rotate: true
+  xy: 359, 1
+  size: 19, 12
+  orig: 19, 12
+  offset: 0, 0
+  index: -1
+Man_Place
+  rotate: true
+  xy: 1, 18
+  size: 45, 100
+  orig: 45, 100
+  offset: 0, 0
+  index: -1
+R_Hand_Low
+  rotate: false
+  xy: 173, 1
+  size: 39, 37
+  orig: 39, 37
+  offset: 0, 0
+  index: -1
+R_Hand_Punch
+  rotate: false
+  xy: 236, 38
+  size: 57, 25
+  orig: 57, 25
+  offset: 0, 0
+  index: -1
+SlapEffect
+  rotate: false
+  xy: 389, 13
+  size: 26, 21
+  orig: 26, 21
+  offset: 0, 0
+  index: -1
+body/arab/white_ManBody
+  rotate: false
+  xy: 213, 1
+  size: 43, 36
+  orig: 43, 36
+  offset: 0, 0
+  index: -1
+body/arab/white_ManHead
+  rotate: false
+  xy: 389, 35
+  size: 34, 28
+  orig: 34, 28
+  offset: 0, 0
+  index: -1
+body/arab/white_ManLeftLeg
+  rotate: true
+  xy: 81, 1
+  size: 16, 17
+  orig: 16, 17
+  offset: 0, 0
+  index: -1
+body/arab/white_ManRightLeg
+  rotate: false
+  xy: 416, 19
+  size: 21, 15
+  orig: 21, 15
+  offset: 0, 0
+  index: -1
+body/negro/white_ManBody
+  rotate: false
+  xy: 257, 1
+  size: 43, 36
+  orig: 43, 36
+  offset: 0, 0
+  index: -1
+body/negro/white_ManHead
+  rotate: false
+  xy: 424, 35
+  size: 34, 28
+  orig: 34, 28
+  offset: 0, 0
+  index: -1
+body/negro/white_ManLeftLeg
+  rotate: true
+  xy: 494, 47
+  size: 16, 17
+  orig: 16, 17
+  offset: 0, 0
+  index: -1
+body/negro/white_ManRightLeg
+  rotate: true
+  xy: 329, 5
+  size: 21, 15
+  orig: 21, 15
+  offset: 0, 0
+  index: -1
+body/white/white_ManBody
+  rotate: false
+  xy: 301, 27
+  size: 43, 36
+  orig: 43, 36
+  offset: 0, 0
+  index: -1
+body/white/white_ManHead
+  rotate: false
+  xy: 459, 35
+  size: 34, 28
+  orig: 34, 28
+  offset: 0, 0
+  index: -1
+body/white/white_ManLeftLeg
+  rotate: true
+  xy: 494, 30
+  size: 16, 17
+  orig: 16, 17
+  offset: 0, 0
+  index: -1
+body/white/white_ManRightLeg
+  rotate: false
+  xy: 438, 19
+  size: 21, 15
+  orig: 21, 15
+  offset: 0, 0
+  index: -1
+shadow_Demon
+  rotate: false
+  xy: 345, 21
+  size: 35, 10
+  orig: 35, 10
+  offset: 0, 0
+  index: -1
+shadow_man
+  rotate: false
+  xy: 1, 2
+  size: 53, 15
+  orig: 53, 15
+  offset: 0, 0
+  index: -1
