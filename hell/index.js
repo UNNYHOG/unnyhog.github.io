@@ -2794,7 +2794,7 @@ var VisualData = (function() {
             oy: 0,
             icon_scale: 0.4
         },
-        art_version: 29,
+        art_version: 31,
         no_offers: true,
 
         WinBanjoPreEnd: {
@@ -5787,7 +5787,7 @@ const BoxType = {
 const MUSIC_STATE = "MUSIC_STATE";
 const SOUNDS_STATE = "SOUNDS_STATE";
 const CURRENT_LANGUAGE = "CURRENT_LANGUAGE";
-const GAME_VERSION = "0.9.61";
+const GAME_VERSION = "0.9.62";
 
 console.log("game version: " + GAME_VERSION);
 
@@ -5843,8 +5843,10 @@ function SetCurrentLanguage(language) {
         guiManager.localize();
     }
     else {
+        const version = VisualData.getGameSettings().art_version || 26;
+        const addPath ="?v=" + VisualData.getGameName() + "_" + version;
         const localization = 'Localization_' + GameSettings.language;
-        LoadFile(gameInit.engine, localization, VisualData.getLocalizationsFolder() + localization + ".json", () => {
+        LoadFile(gameInit.engine, localization, VisualData.getLocalizationsFolder() + localization + ".json" + addPath, () => {
             const json = gameInit.engine.cache.json.get(localization);
             GameSettings.allLanguages[GameSettings.language] = json;
             SetCurrentLanguage(GameSettings.language);
@@ -6071,6 +6073,12 @@ class Progress {
 
             this._getDeltaSave();
         }
+
+        if (AllGetParams.puzzle_test) {
+            for (let i = 10; i <= 27; i++)
+                this.savedProgress.puzzle.goods[i - 1].level = 1;
+        }
+
 
         // this.savedProgress = getCheatSave();
         this.savedProgress.puzzle.goods = fixArray(this.savedProgress.puzzle.goods);
@@ -9382,22 +9390,24 @@ class GameInit {
         const load = engine.load;
         load.setPath(VisualData.getDataFolder());
         const oldSystem = !!CURRENT_ENVIRONMENT.env;
+        const version = VisualData.getGameSettings().art_version || 26;
+        const addPath ="?v=" + VisualData.getGameName() + "_" + version;
         if (oldSystem) {
-            load.json('GoodsData', 'goods_data.json');
-            load.json('SlotsUpgrade', 'slots_upgrade_data.json');
-            load.json('MarketData', 'market_upgrades.json');
-            load.json('BoxData', 'box_data.json');
-            load.json('QuestsData', 'dailyquests_data.json');
-            load.json('LoginData', 'loginbonus_data.json');
+            load.json('GoodsData', 'goods_data.json' + addPath);
+            load.json('SlotsUpgrade', 'slots_upgrade_data.json' + addPath);
+            load.json('MarketData', 'market_upgrades.json' + addPath);
+            load.json('BoxData', 'box_data.json' + addPath);
+            load.json('QuestsData', 'dailyquests_data.json' + addPath);
+            load.json('LoginData', 'loginbonus_data.json' + addPath);
         }
-        load.json('InAppLots', 'in_app_lots.json?v=3');
+        load.json('InAppLots', 'in_app_lots.json' + addPath);
 
         // if (VisualData.getGameSettings().photos)
         //     load.json('PhotoData', 'photo_data.json');
 
         load.setPath(VisualData.getFolderPath());
         const localization = 'Localization_' + GameSettings.language;
-        load.json(localization, VisualData.getLocalizationsFolder() + localization + '.json');
+        load.json(localization, VisualData.getLocalizationsFolder() + localization + '.json' + addPath);
 
         const atlas = VisualData.getAtlasPath();
         if (atlas)
@@ -14128,7 +14138,7 @@ class WinFortuneWheel extends WinWithExit {
             const timer = setInterval(() => {
                 let kill = !this.visible;
                 if (this.buttonLabel.isVisible()) {
-                    this.buttonGems.setPositionX((this.buttonLabel.x + this.buttonLabel.getInnerWidth()));
+                    this.buttonGems.setPositionX((this.buttonLabel.x / localScale + this.buttonLabel.getInnerWidth() / 2));
                     kill = true;
                 }
                 if (kill)
@@ -19589,8 +19599,10 @@ class GUIManager {
     }
 
     localize() {
-        for (let i in this.allWindows)
-            this.allWindows[i].localize();
+        for (let i in this.allWindows) {
+            if (this.allWindows[i].initialized)
+                this.allWindows[i].localize();
+        }
     }
 
     create(engine) {
@@ -20063,7 +20075,7 @@ function prepareTextToHtml(engine) {
     };
     Phaser.GameObjects.Text.prototype.getInnerWidth = function() {
         const width = this.newText && this.newText.childNodes[0] && this.newText.childNodes[0].clientWidth;
-        return (width || this.newText.clientWidth || this.width) * dpi / localScale;
+        return (this.width || width || this.newText.clientWidth || this.width) * dpi / localScale;
     };
     Phaser.GameObjects.Text.prototype.isVisible = newIsVisible;
 
