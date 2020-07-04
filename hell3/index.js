@@ -4060,7 +4060,7 @@ class ButtonWithText extends BasicButton {
                 .setOrigin(0.5, 0.5)
                 .setDepth(WinDefaultDepth + 110);
 
-            if (config.minWidth)
+            if (config.minWidth && (!config.info || !config.info.dont_fit))
                 this.caption.setFitSize(maxWidth, maxHeight);
         }
 
@@ -5787,7 +5787,7 @@ const BoxType = {
 const MUSIC_STATE = "MUSIC_STATE";
 const SOUNDS_STATE = "SOUNDS_STATE";
 const CURRENT_LANGUAGE = "CURRENT_LANGUAGE";
-const GAME_VERSION = "0.9.62";
+const GAME_VERSION = "0.9.63";
 
 console.log("game version: " + GAME_VERSION);
 
@@ -5966,7 +5966,6 @@ class Progress {
             }
         }
 
-        // console.info("SAVE: " + save.profile.tutorialPhase, save);
         if (save && save.profile && save.profile.version >= VisualData.getGameSettings().save_version) {
             this.savedProgress = save;
             this.savedProgress.profile.sessionNumber++;
@@ -6042,7 +6041,7 @@ class Progress {
                 }
             };
 
-            this._resetConstructions();
+            this._resetConstructions(true);
 
             const puzzle = this.savedProgress.puzzle.goods;
             for (let i = 1; i <= 9; i++) {
@@ -6091,7 +6090,7 @@ class Progress {
 
         for (let i = 1; i <= VisualData.getWorldsCount(); i++) {
             if (!this.savedProgress.worlds.hasOwnProperty(i))
-                this._resetWorld(i);
+                this._resetWorld(i, true);
         }
 
         this.supervisor = {};
@@ -6138,7 +6137,7 @@ class Progress {
         return this.savedProgress.profile[name] = value;
     }
 
-    _resetWorld(worldId) {
+    _resetWorld(worldId, fromSave) {
         const oldWorld = this.savedProgress.worlds[worldId];
         const world = this.savedProgress.worlds[worldId] = {};
         const buildings = world['buildings'] = {};
@@ -6159,9 +6158,9 @@ class Progress {
         }
     }
 
-    _resetConstructions() {
+    _resetConstructions(fromSave) {
         for (let i = 1; i <= VisualData.getWorldsCount(); i++)
-            this._resetWorld(i);
+            this._resetWorld(i, fromSave);
     }
 
     _updateTotalSeedsBonusMultiplied() {
@@ -6300,7 +6299,7 @@ class Progress {
 
     canPurchaseUpgrade(data) {
         if (data.hasOwnProperty('slotNumber')) {
-            if (data.slotNumber >= 0 && !this.isBuildingConstructed(1, data.slotNumber + 1))
+            if (data.slotNumber >= 0 && !this.isAnyBuildingConstructed(data.slotNumber + 1))
                 return false;
         }
 
@@ -7089,10 +7088,12 @@ class Progress {
         this.savedProgress.profile.lastHarvestTime = Progress.getTimeNow();
 
         const seeds = this.getSeedsForSoulsCount();
-        this._setResourceByName("gold", "0");
-        this._setResourceByName("goldSpent", "0");
-        this.general.gold = bigInt("0");
-        this.general.resourcesSpent = bigInt("0");
+        if (!dontReset) {
+            this._setResourceByName("gold", "0");
+            this._setResourceByName("goldSpent", "0");
+            this.general.gold = bigInt("0");
+            this.general.resourcesSpent = bigInt("0");
+        }
         const gemsPurchases = {};
         for (let id in this.savedProgress.purchases) {
             const purchase = GameData.getMarketPurchaseById(id);
@@ -7325,6 +7326,13 @@ class Progress {
         return this.savedProgress.worlds[worldId].buildings[buildingId].level;
     }
 
+    isAnyBuildingConstructed(buildingId) {
+        for (let i = 1;i <= VisualData.getWorldsCount(); i++) {
+            if (this.getBuildingLevel(i, buildingId) >= 1)
+                return true;
+        }
+    }
+
     isBuildingConstructed(worldId, buildingId) {
         return this.getBuildingLevel(worldId, buildingId) >= 1;
     }
@@ -7414,6 +7422,7 @@ class Progress {
     }
 
     getFreeSpinsCount() {
+        return 0;
         return this.savedProgress.fortuneWheel.freeSpins;
     }
 
@@ -10635,15 +10644,17 @@ class VisualInit {
             const pos = this.fabrika.getObject();
             const delta = VisualData.getGameSettings().summon_boss.delta_move;
             this.fabrika.setPosition(pos.x / localScale + delta.x, pos.y / localScale + delta.y);
+            this.fabrika.wasMoved = true;
         }
     }
 
     _harvestCompleted() {
         this.fabrika.playIdleLoop();
-        if (VisualData.getGameSettings().summon_boss.delta_move) {
+        if (VisualData.getGameSettings().summon_boss.delta_move && this.fabrika.wasMoved) {
             const pos = this.fabrika.getObject();
             const delta = VisualData.getGameSettings().summon_boss.delta_move;
             this.fabrika.setPosition(pos.x / localScale - delta.x, pos.y / localScale - delta.y);
+            this.fabrika.wasMoved = false;
         }
     }
 
@@ -10902,6 +10913,11 @@ class VisualInit {
     showSuperVisor() {
         if (this.supervisor)
             this.supervisor.setVisible(true);
+    }
+
+    hideSuperVisor() {
+        if (this.supervisor)
+            this.supervisor.setVisible(false);
     }
 
     getGuard() {
@@ -11538,7 +11554,10 @@ class HUDResources {
             'key': 'SeedsQuestIcon',
             'x': x + info.greenButtonOffsetX1 * GlobalScale,
             'y': y,
-        }, () => guiManager.openNewWindow(WindowType.WinResourcesInfo));
+        }, () => {
+            if (this._canOpenWindow())
+                guiManager.openNewWindow(WindowType.WinResourcesInfo)
+        });
 
         y += Distance;
         image = engine.add.sprite(x, y, info.singleImage ? info.singleImage : 'HudResBack2').setOrigin(0, 0.5);
@@ -11554,7 +11573,10 @@ class HUDResources {
             'key': 'HudPlusButton',
             'x': x + info.greenButtonOffsetX1 * GlobalScale,
             'y': y,
-        }, () => guiManager.openGemsStore());
+        }, () => {
+            if (this._canOpenWindow())
+                guiManager.openGemsStore()
+        });
 
         y += Distance;
         image = engine.add.sprite(x, y, info.singleImage ? info.singleImage : 'HudResBack3').setOrigin(0, 0.5);
@@ -11570,7 +11592,10 @@ class HUDResources {
             'key': 'SeedsQuestIcon',
             'x': x + info.greenButtonOffsetX1 * GlobalScale,
             'y': y,
-        }, () => guiManager.openNewWindow(WindowType.WinApples));
+        }, () => {
+            if (this._canOpenWindow())
+                guiManager.openNewWindow(WindowType.WinApples)
+        });
 
         if (VisualData.getGameSettings().photos) {
             y += Distance;
@@ -11612,6 +11637,10 @@ class HUDResources {
         }
 
         this.group.setDepth(WinDefaultDepth + 100);
+    }
+
+    _canOpenWindow() {
+        return !gameInit.progress.isSupervisorActive();
     }
 
     setTokensVisible(visible) {
@@ -12122,6 +12151,7 @@ class WinBase {
             icon: icon,
             font: font,
             textOffsetX: textOffsetX,
+            info: info,
             oldText: info && info.oldText
         }, action)
             .setDepth(WinDefaultDepth + 100);
@@ -14072,7 +14102,9 @@ class WinFortuneWheel extends WinWithExit {
                 this.actionButtonFree = this.actionButton;
                 this.buttonLabelFree = this.buttonLabel;
 
-                this.createActionButton(engine, this.spinWheel.bind(this), btnY, true, 1, 0, 800);
+                this.createActionButton(engine, this.spinWheel.bind(this), btnY, true, 1, 0, 800, null, null, null, 0, {
+                    dont_fit: true
+                });
 
                 this.buttonGems = this.group.create(0, btnY, 'PriceGems').setOrigin(0, 0.5);
 
@@ -16497,6 +16529,9 @@ class WinMain extends WinBase {
     hideAllButtonsForTutorial() {
         super.hideAllButtonsForTutorial();
         this._updateAllNotifications();
+
+        if (!this.superVisorButton)
+            visualGame.hideSuperVisor();
     }
 
     showAllButtonsFromTutorial() {
@@ -16872,7 +16907,7 @@ class BuildingsGUI extends WinBase{
         const groupInfo = {
             resources: text,
             loader: loader,
-            group: visProdGroup,
+            group: visProdGroup
         };
 
         productionGroup[building.id] = groupInfo;
@@ -17020,7 +17055,8 @@ class BuildingsGUI extends WinBase{
             icon: purchaseIcon,
             group: visPurchaseGroup,
             needPuzzle: needPuzzle,
-            button: button
+            button: button,
+            building: building
         };
 
         purchaseGroup[building.id] = purchaseInfo;
@@ -17242,22 +17278,27 @@ class BuildingsGUI extends WinBase{
     localize() {
         super.localize();
 
-        // for (let k in this.worldsData) {
-        //     const worldData = this.worldsData[k];
-        //     const upgradeGroup = worldData.upgrade;
-        //     for (let up in upgradeGroup) {
-        //         const info = upgradeGroup[up];
-        //         this.createPurchaseLabel(info.building, worldData);
-        //         info.group.destroy(true);
-        //
-        //         const prod = worldData.production[up];
-        //         prod.isFast = false;
-        //         prod.loader.setFast(false);
-        //         prod.resources.text = "0";
-        //         SetGroupVisible(prod.group, false);
-        //     }
-        //     worldData.upgrade = {};
-        // }
+        for (let k in this.worldsData) {
+            const worldData = this.worldsData[k];
+            const upgradeGroup = worldData.upgrade;
+            for (let up in upgradeGroup) {
+                const info = upgradeGroup[up];
+                const bLevel = info.building.getLevel();
+
+                const prod = worldData.production[up];
+                prod.isFast = false;
+                prod.loader.setFast(false);
+                prod.resources.setText(bLevel === 0 ? '' : this.getBuildingProducedResources(info.building));
+                SetGroupVisible(prod.group, false);
+            }
+
+            const purchase = worldData.purchase;
+            for (let up in purchase) {
+                const info = purchase[up];
+                this.createPurchaseLabel(info.building, worldData, true);
+                info.group.destroy(true);
+            }
+        }
     }
 
     getBuildingProducedResources(building) {
@@ -19130,6 +19171,7 @@ class GUIManager {
             header: "NoAdTitle",
             description: "NoAdText",
             image: "NoAdAndRatings",
+            scaleImage: 0.8,
             button: GEMS_PRICE_FOR_ADS,
             dontLocalizeButton: true,
             icon: 'PriceGems',
@@ -19140,6 +19182,7 @@ class GUIManager {
             header: "NoAdTitle",
             description: "AdBlock",
             image: "NoAdAndRatings",
+            scaleImage: 0.8,
             button: GEMS_PRICE_FOR_ADS,
             dontLocalizeButton: true,
             icon: 'PriceGems',
@@ -19149,6 +19192,7 @@ class GUIManager {
         this.allWindows[WindowType.WinError] = new WinError(this, gameInit, {
             header: "NoAdTitle",
             description: "AdBlock",
+            scaleImage: 0.6,
             image: "FortuneDevil",
             button: "ButtonOk",
             btn_min_width: 400,
@@ -19303,6 +19347,8 @@ class GUIManager {
     }
 
     showError(info, callback) {
+        if (AllGetParams.no_tutorial)
+            return;
         const win = this.openNewWindow(WindowType.WinError);
         win.setInfo(info, callback);
     }
@@ -19630,6 +19676,12 @@ class GUIManager {
         this.hideTutorialText();
 
         this.createPopup(engine);
+
+        eventManager.onShortSpeedActivated.addListener(()=>{
+            setTimeout(()=>{
+                this.hideTutorialText();
+            }, 100);
+        });
     }
 
     checkForTutorialPhrase() {
@@ -19730,7 +19782,7 @@ const guiManager = new GUIManager(gameInit);
 
 const tutorial = new Tutorial();
 gameInit.create.addListener(tutorial.onCreated.bind(tutorial));
-if (!VisualData.getGameSettings().no_tutorial) {
+if (!VisualData.getGameSettings().no_tutorial && !AllGetParams.no_tutorial) {
     eventManager.onAdStarted.addListener(tutorial.onAdStarted.bind(tutorial));
     eventManager.onFortuneWheelUsed.addListener(tutorial.onAdStarted.bind(tutorial));
     gameInit.loaded.addListener((progress) => tutorial.loaded(progress));
@@ -20075,7 +20127,7 @@ function prepareTextToHtml(engine) {
     };
     Phaser.GameObjects.Text.prototype.getInnerWidth = function() {
         const width = this.newText && this.newText.childNodes[0] && this.newText.childNodes[0].clientWidth;
-        return (this.width || width || this.newText.clientWidth || this.width) * dpi / localScale;
+        return (width || this.newText.clientWidth || this.width) * dpi / localScale;
     };
     Phaser.GameObjects.Text.prototype.isVisible = newIsVisible;
 
