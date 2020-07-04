@@ -5787,7 +5787,7 @@ const BoxType = {
 const MUSIC_STATE = "MUSIC_STATE";
 const SOUNDS_STATE = "SOUNDS_STATE";
 const CURRENT_LANGUAGE = "CURRENT_LANGUAGE";
-const GAME_VERSION = "0.9.63";
+const GAME_VERSION = "0.9.64";
 
 console.log("game version: " + GAME_VERSION);
 
@@ -14085,6 +14085,12 @@ class WinFortuneWheel extends WinWithExit {
                 this.arrowAnimation = null;
             }
         }
+
+        if (this.gemsTimer) {
+            clearInterval(this.gemsTimer);
+            this.gemsTimer = null;
+        }
+
         if (visible) {
             if (this.loaded) {
                 //Refresh gold
@@ -14167,15 +14173,11 @@ class WinFortuneWheel extends WinWithExit {
             }
 
             this._updateButtonLocalization();
-            const timer = setInterval(() => {
-                let kill = !this.visible;
+            this.gemsTimer = setInterval(() => {
                 if (this.buttonLabel.isVisible()) {
                     this.buttonGems.setPositionX((this.buttonLabel.x / localScale + this.buttonLabel.getInnerWidth() / 2));
-                    kill = true;
                 }
-                if (kill)
-                    clearInterval(timer);
-            }, 210);
+            }, 33);
         }
     }
 
