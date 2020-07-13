@@ -353,7 +353,8 @@
     "smallIcon": "BadBed_icon",
     "icon": "BadBed_puzzle",
     "drop": "BadBed_drop",
-    "puzzleType": "Super"
+    "puzzleType": "Super",
+    "createPrice": "1900000000000000000"
   },
   {
     "id": 22,
@@ -370,7 +371,7 @@
     "icon": "Bottle_puzzle",
     "drop": "Bottle_drop",
     "puzzleType": "Basic",
-    "createPrice": "1900000000000000000"
+    "createPrice": "70000000000000000"
   },
   {
     "id": 23,

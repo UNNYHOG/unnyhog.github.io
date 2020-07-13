@@ -2794,7 +2794,7 @@ var VisualData = (function() {
             oy: 0,
             icon_scale: 0.4
         },
-        art_version: 31,
+        art_version: 32,
         no_offers: true,
 
         WinBanjoPreEnd: {
@@ -5787,7 +5787,7 @@ const BoxType = {
 const MUSIC_STATE = "MUSIC_STATE";
 const SOUNDS_STATE = "SOUNDS_STATE";
 const CURRENT_LANGUAGE = "CURRENT_LANGUAGE";
-const GAME_VERSION = "0.9.64";
+const GAME_VERSION = "0.9.65";
 
 console.log("game version: " + GAME_VERSION);
 
@@ -7422,7 +7422,6 @@ class Progress {
     }
 
     getFreeSpinsCount() {
-        return 0;
         return this.savedProgress.fortuneWheel.freeSpins;
     }
 
