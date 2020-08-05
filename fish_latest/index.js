@@ -1670,6 +1670,13 @@ const GAME_ENVIRONMENTS = {
         environment: UnnyNet.Environment.Production,
     },
 
+    'hell_ok_prod': {
+        env: 'dev',//used for old dict
+        un_game_id: "819ced8f-14c6-478d-85d2-0fa616f79fa5",
+        un_key: "MDYxMWIyNGEtYjdhZS00",
+        environment: UnnyNet.Environment.Production,
+    },
+
     'hell_fb_dev': {
         env: 'dev',//used for old dict
         un_game_id: "819ced8f-14c6-478d-85d2-0fa616f79fa5",
@@ -1678,8 +1685,8 @@ const GAME_ENVIRONMENTS = {
     }
 };
 
-const DEFAULT_PLATFORM = "vk";
-const DEFAULT_ENVIRONMENT = "fish_vk_dev";
+const DEFAULT_PLATFORM = "ok";
+const DEFAULT_ENVIRONMENT = "fish_ok_dev";
 
 let AllGetParams = null;
 function parseGetParams() {
@@ -6458,7 +6465,7 @@ const BoxType = {
 const MUSIC_STATE = "MUSIC_STATE";
 const SOUNDS_STATE = "SOUNDS_STATE";
 const CURRENT_LANGUAGE = "CURRENT_LANGUAGE";
-const GAME_VERSION = "0.9.65";
+const GAME_VERSION = "0.9.66";
 
 console.log("game version: " + GAME_VERSION);
 

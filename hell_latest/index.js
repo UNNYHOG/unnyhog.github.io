@@ -1685,8 +1685,8 @@ const GAME_ENVIRONMENTS = {
     }
 };
 
-const DEFAULT_PLATFORM = "vk";
-const DEFAULT_ENVIRONMENT = "hell_vk_dev";
+const DEFAULT_PLATFORM = "ok";
+const DEFAULT_ENVIRONMENT = "hell_ok_dev";
 
 let AllGetParams = null;
 function parseGetParams() {
@@ -5805,7 +5805,7 @@ const BoxType = {
 const MUSIC_STATE = "MUSIC_STATE";
 const SOUNDS_STATE = "SOUNDS_STATE";
 const CURRENT_LANGUAGE = "CURRENT_LANGUAGE";
-const GAME_VERSION = "0.9.65";
+const GAME_VERSION = "0.9.66";
 
 console.log("game version: " + GAME_VERSION);
 
