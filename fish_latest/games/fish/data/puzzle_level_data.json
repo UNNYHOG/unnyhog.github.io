@@ -1,0 +1,38 @@
+[
+	{
+		"id": 0,
+		"type": "Blocked",
+		"puzzlesCount": 0,
+		"goldMultiplier": 0,
+	},
+	{
+		"id": 1,
+		"type": "Simple",
+		"puzzlesCount": 4,
+		"goldMultiplier": 1,
+	},
+	{
+		"id": 2,
+		"type": "Bronze",
+		"puzzlesCount": 4,
+		"goldMultiplier": 2,
+	},
+	{
+		"id": 3,
+		"type": "Silver",
+		"puzzlesCount": 9,
+		"goldMultiplier": 6,
+	},
+	{
+		"id": 4,
+		"type": "Gold",
+		"puzzlesCount": 9,
+		"goldMultiplier": 26,
+	},
+	{
+		"id": 5,
+		"type": "Platinum",
+		"puzzlesCount": 16,
+		"goldMultiplier": 126,
+	}
+]

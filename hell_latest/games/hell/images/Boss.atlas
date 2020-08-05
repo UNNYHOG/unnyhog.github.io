@@ -1,0 +1,104 @@
+
+Boss.png
+size: 512,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+SatanBag
+  rotate: true
+  xy: 152, 20
+  size: 107, 110
+  orig: 107, 110
+  offset: 0, 0
+  index: -1
+SatanBeard
+  rotate: false
+  xy: 40, 22
+  size: 22, 9
+  orig: 22, 9
+  offset: 0, 0
+  index: -1
+SatanHead
+  rotate: false
+  xy: 1, 32
+  size: 150, 95
+  orig: 150, 95
+  offset: 0, 0
+  index: -1
+SatanLeftArm
+  rotate: true
+  xy: 332, 65
+  size: 62, 84
+  orig: 62, 84
+  offset: 0, 0
+  index: -1
+SatanLeftEar
+  rotate: false
+  xy: 1, 7
+  size: 38, 24
+  orig: 38, 24
+  offset: 0, 0
+  index: -1
+SatanLeftEye
+  rotate: true
+  xy: 494, 95
+  size: 32, 13
+  orig: 32, 13
+  offset: 0, 0
+  index: -1
+SatanLeftHand
+  rotate: false
+  xy: 332, 21
+  size: 55, 43
+  orig: 55, 43
+  offset: 0, 0
+  index: -1
+SatanLeftMoustache
+  rotate: false
+  xy: 370, 12
+  size: 15, 8
+  orig: 15, 8
+  offset: 0, 0
+  index: -1
+SatanMouth
+  rotate: false
+  xy: 263, 11
+  size: 67, 36
+  orig: 67, 36
+  offset: 0, 0
+  index: -1
+SatanRightArm
+  rotate: false
+  xy: 263, 48
+  size: 68, 79
+  orig: 68, 79
+  offset: 0, 0
+  index: -1
+SatanRightEar
+  rotate: false
+  xy: 331, 1
+  size: 38, 19
+  orig: 38, 19
+  offset: 0, 0
+  index: -1
+SatanRightEye
+  rotate: false
+  xy: 388, 52
+  size: 27, 12
+  orig: 27, 12
+  offset: 0, 0
+  index: -1
+SatanRightHand
+  rotate: true
+  xy: 417, 67
+  size: 60, 76
+  orig: 60, 76
+  offset: 0, 0
+  index: -1
+SatanRightMoustache
+  rotate: true
+  xy: 494, 80
+  size: 14, 7
+  orig: 14, 7
+  offset: 0, 0
+  index: -1

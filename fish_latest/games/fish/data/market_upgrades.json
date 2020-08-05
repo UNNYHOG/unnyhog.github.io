@@ -1,0 +1,811 @@
+[
+	{
+		"id": 1,
+		"priceType": "Gems",
+		"priceGems": 550,
+		"upgradeType": "MultiProfit",
+		"parameter": 2,
+		"slotNumber": -1,
+		"repeatable": false
+	},
+	{
+		"id": 2,
+		"priceType": "Gems",
+		"priceGems": 350,
+		"upgradeType": "SuperSeed",
+		"parameter": 3,
+		"slotNumber": -1,
+		"repeatable": false
+	},
+	{
+		"id": 3,
+		"priceType": "Gems",
+		"priceGems": 50,
+		"upgradeType": "TimeTravel",
+		"parameter": 14400,
+		"slotNumber": -1,
+		"repeatable": false
+	},
+	{
+		"id": 4,
+		"priceType": "Gems",
+		"priceGems": 300,
+		"upgradeType": "TimeTravel",
+		"parameter": 86400,
+		"slotNumber": -1,
+		"repeatable": false
+	},
+	{
+		"id": 5,
+		"priceType": "Gems",
+		"priceGems": 1200,
+		"upgradeType": "TimeTravel",
+		"parameter": 604800,
+		"slotNumber": -1,
+		"repeatable": false
+	},
+
+
+	{
+		"id": 6,
+		"priceType": "Seeds",
+		"price": "10",
+		"priceGems": 0,
+		"upgradeType": "MultiProfit",
+		"parameter": 3,
+		"slotNumber": -1,
+		"repeatable": false
+	},
+	{
+		"id": 7,
+		"priceType": "Seeds",
+		"price": "100",
+		"priceGems": 0,
+		"upgradeType": "SeedProc",
+		"parameter": 2,
+		"slotNumber": -1,
+		"repeatable": false
+	},
+	{
+		"id": 8,
+		"priceType": "Seeds",
+		"price": "1000",
+		"priceGems": 0,
+		"upgradeType": "SeedProc",
+		"parameter": 2,
+		"slotNumber": -1,
+		"repeatable": false
+	},
+	{
+		"id": 9,
+		"priceType": "Seeds",
+		"price": "10000",
+		"priceGems": 0,
+		"upgradeType": "MultiProfit",
+		"parameter": 3,
+		"slotNumber": -1,
+		"repeatable": false
+	},
+	{
+		"id": 10,
+		"priceType": "Seeds",
+		"price": "100000",
+		"priceGems": 0,
+		"upgradeType": "MultiProfit",
+		"parameter": 4,
+		"slotNumber": -1,
+		"repeatable": false
+	},
+	{
+		"id": 11,
+		"priceType": "Seeds",
+		"price": "1000000",
+		"priceGems": 0,
+		"upgradeType": "MultiProfit",
+		"parameter": 2,
+		"slotNumber": -1,
+		"repeatable": false
+	},
+	{
+		"id": 12,
+		"priceType": "Seeds",
+		"price": "10000000",
+		"priceGems": 0,
+		"upgradeType": "MultiProfit",
+		"parameter": 5,
+		"slotNumber": -1,
+		"repeatable": false
+	},
+	{
+		"id": 13,
+		"priceType": "Seeds",
+		"price": "25000000",
+		"priceGems": 0,
+		"upgradeType": "MultiProfit",
+		"parameter": 3,
+		"slotNumber": 4,
+		"repeatable": true
+	},
+	{
+		"id": 14,
+		"priceType": "Seeds",
+		"price": "25000000",
+		"priceGems": 0,
+		"upgradeType": "MultiProfit",
+		"parameter": 3,
+		"slotNumber": 3,
+		"repeatable": true
+	},
+	{
+		"id": 15,
+		"priceType": "Seeds",
+		"price": "25000000",
+		"priceGems": 0,
+		"upgradeType": "MultiProfit",
+		"parameter": 3,
+		"slotNumber": 2,
+		"repeatable": true
+	},
+	{
+		"id": 16,
+		"priceType": "Seeds",
+		"price": "25000000",
+		"priceGems": 0,
+		"upgradeType": "MultiProfit",
+		"parameter": 3,
+		"slotNumber": 1,
+		"repeatable": true
+	},
+	{
+		"id": 17,
+		"priceType": "Seeds",
+		"price": "100000000",
+		"priceGems": 0,
+		"upgradeType": "SeedProc",
+		"parameter": 2,
+		"slotNumber": -1,
+		"repeatable": true
+	},
+	{
+		"id": 18,
+		"priceType": "Seeds",
+		"price": "250000000",
+		"priceGems": 0,
+		"upgradeType": "Upgrade",
+		"parameter": 50,
+		"slotNumber": 4,
+		"repeatable": true
+	},
+	{
+		"id": 19,
+		"priceType": "Seeds",
+		"price": "250000000",
+		"priceGems": 0,
+		"upgradeType": "Upgrade",
+		"parameter": 50,
+		"slotNumber": 3,
+		"repeatable": true
+	},
+	{
+		"id": 20,
+		"priceType": "Seeds",
+		"price": "250000000",
+		"priceGems": 0,
+		"upgradeType": "Upgrade",
+		"parameter": 50,
+		"slotNumber": 2,
+		"repeatable": true
+	},
+	{
+		"id": 21,
+		"priceType": "Seeds",
+		"price": "250000000",
+		"priceGems": 0,
+		"upgradeType": "Upgrade",
+		"parameter": 50,
+		"slotNumber": 1,
+		"repeatable": true
+	},
+	{
+		"id": 22,
+		"priceType": "Seeds",
+		"price": "1000000000",
+		"priceGems": 0,
+		"upgradeType": "MultiProfit",
+		"parameter": 3,
+		"slotNumber": -1,
+		"repeatable": true
+	},
+
+
+	{
+		"id": 23,
+		"priceType": "Gold",
+		"price": "1000",
+		"priceGems": 0,
+		"upgradeType": "AutoClick",
+		"parameter": 0,
+		"slotNumber": 0,
+		"repeatable": false
+	},
+	{
+		"id": 24,
+		"priceType": "Gold",
+		"price": "12000",
+		"priceGems": 0,
+		"upgradeType": "AutoClick",
+		"parameter": 0,
+		"slotNumber": 1,
+		"repeatable": false
+	},
+	{
+		"id": 25,
+		"priceType": "Gold",
+		"price": "50000",
+		"priceGems": 0,
+		"upgradeType": "SpeedUp",
+		"parameter": 2,
+		"slotNumber": -1,
+		"repeatable": false
+	},
+	{
+		"id": 26,
+		"priceType": "Gold",
+		"price": "72000",
+		"priceGems": 0,
+		"upgradeType": "AutoClick",
+		"parameter": 0,
+		"slotNumber": 2,
+		"repeatable": false
+	},
+	{
+		"id": 27,
+		"priceType": "Gold",
+		"price": "250000",
+		"priceGems": 0,
+		"upgradeType": "MultiProfit",
+		"parameter": 3,
+		"slotNumber": -1,
+		"repeatable": false
+	},
+	{
+		"id": 28,
+		"priceType": "Gold",
+		"price": "500000",
+		"priceGems": 0,
+		"upgradeType": "AutoClick",
+		"parameter": 0,
+		"slotNumber": 3,
+		"repeatable": false
+	},
+	{
+		"id": 29,
+		"priceType": "Gold",
+		"price": "500000",
+		"priceGems": 0,
+		"upgradeType": "MultiProfit",
+		"parameter": 3,
+		"slotNumber": 1,
+		"repeatable": false
+	},
+	{
+		"id": 30,
+		"priceType": "Gold",
+		"price": "750000",
+		"priceGems": 0,
+		"upgradeType": "MultiProfit",
+		"parameter": 3,
+		"slotNumber": 2,
+		"repeatable": false
+	},
+	{
+		"id": 31,
+		"priceType": "Gold",
+		"price": "2500000",
+		"priceGems": 0,
+		"upgradeType": "MultiProfit",
+		"parameter": 3,
+		"slotNumber": 3,
+		"repeatable": false
+	},
+	{
+		"id": 32,
+		"priceType": "Gold",
+		"price": "50000000",
+		"priceGems": 0,
+		"upgradeType": "SpeedUp",
+		"parameter": 2,
+		"slotNumber": -1,
+		"repeatable": false
+	},
+	{
+		"id": 33,
+		"priceType": "Gold",
+		"price": "210000000",
+		"priceGems": 0,
+		"upgradeType": "AutoClick",
+		"parameter": 0,
+		"slotNumber": 4,
+		"repeatable": false
+	},
+	{
+		"id": 34,
+		"priceType": "Gold",
+		"price": "1050000000",
+		"priceGems": 0,
+		"upgradeType": "MultiProfit",
+		"parameter": 3,
+		"slotNumber": 4,
+		"repeatable": false
+	},
+	{
+		"id": 35,
+		"priceType": "Gold",
+		"price": "31000000000",
+		"priceGems": 0,
+		"upgradeType": "AutoClick",
+		"parameter": 0,
+		"slotNumber": 5,
+		"repeatable": false
+	},
+	{
+		"id": 36,
+		"priceType": "Gold",
+		"price": "50000000000",
+		"priceGems": 0,
+		"upgradeType": "MultiProfit",
+		"parameter": 2,
+		"slotNumber": -1,
+		"repeatable": false
+	},
+	{
+		"id": 37,
+		"priceType": "Gold",
+		"price": "157000000000",
+		"priceGems": 0,
+		"upgradeType": "MultiProfit",
+		"parameter": 3,
+		"slotNumber": 5,
+		"repeatable": false
+	},
+	{
+		"id": 38,
+		"priceType": "Gold",
+		"price": "19900000000000",
+		"priceGems": 0,
+		"upgradeType": "AutoClick",
+		"parameter": 3,
+		"slotNumber": 6,
+		"repeatable": false
+	},
+	{
+		"id": 39,
+		"priceType": "Gold",
+		"price": "50000000000000",
+		"priceGems": 0,
+		"upgradeType": "SpeedUp",
+		"parameter": 2,
+		"slotNumber": -1,
+		"repeatable": false
+	},
+	{
+		"id": 40,
+		"priceType": "Gold",
+		"price": "99500000000000",
+		"priceGems": 0,
+		"upgradeType": "MultiProfit",
+		"parameter": 3,
+		"slotNumber": 6,
+		"repeatable": false
+	},
+	{
+		"id": 41,
+		"priceType": "Gold",
+		"price": "2500000000000000",
+		"priceGems": 0,
+		"upgradeType": "MultiProfit",
+		"parameter": 3,
+		"slotNumber": 0,
+		"repeatable": false
+	},
+	{
+		"id": 42,
+		"priceType": "Gold",
+		"price": "5000000000000000",
+		"priceGems": 0,
+		"upgradeType": "MultiProfit",
+		"parameter": 3,
+		"slotNumber": 1,
+		"repeatable": false
+	},
+	{
+		"id": 43,
+		"priceType": "Gold",
+		"price": "7500000000000000",
+		"priceGems": 0,
+		"upgradeType": "MultiProfit",
+		"parameter": 3,
+		"slotNumber": 2,
+		"repeatable": false
+	},
+	{
+		"id": 44,
+		"priceType": "Gold",
+		"price": "25000000000000000",
+		"priceGems": 0,
+		"upgradeType": "MultiProfit",
+		"parameter": 3,
+		"slotNumber": 3,
+		"repeatable": false
+	},
+	{
+		"id": 45,
+		"priceType": "Gold",
+		"price": "50000000000000000",
+		"priceGems": 0,
+		"upgradeType": "MultiProfit",
+		"parameter": 2,
+		"slotNumber": -1,
+		"repeatable": false
+	},
+	{
+		"id": 46,
+		"priceType": "Gold",
+		"price": "700000000000000000",
+		"priceGems": 0,
+		"upgradeType": "AutoClick",
+		"parameter": 0,
+		"slotNumber": 7,
+		"repeatable": false
+	},
+	{
+		"id": 47,
+		"priceType": "Gold",
+		"price": "2500000000000000000",
+		"priceGems": 0,
+		"upgradeType": "MultiProfit",
+		"parameter": 3,
+		"slotNumber": 0,
+		"repeatable": false
+	},
+	{
+		"id": 48,
+		"priceType": "Gold",
+		"price": "3500000000000000000",
+		"priceGems": 0,
+		"upgradeType": "MultiProfit",
+		"parameter": 3,
+		"slotNumber": 6,
+		"repeatable": false
+	},
+	{
+		"id": 49,
+		"priceType": "Gold",
+		"price": "5000000000000000000",
+		"priceGems": 0,
+		"upgradeType": "MultiProfit",
+		"parameter": 3,
+		"slotNumber": 1,
+		"repeatable": false
+	},
+	{
+		"id": 50,
+		"priceType": "Gold",
+		"price": "7500000000000000000",
+		"priceGems": 0,
+		"upgradeType": "MultiProfit",
+		"parameter": 3,
+		"slotNumber": 2,
+		"repeatable": false
+	},
+	{
+		"id": 51,
+		"priceType": "Gold",
+		"price": "10500000000000000000",
+		"priceGems": 0,
+		"upgradeType": "MultiProfit",
+		"parameter": 3,
+		"slotNumber": 4,
+		"repeatable": false
+	},
+	{
+		"id": 52,
+		"priceType": "Gold",
+		"price": "25000000000000000000",
+		"priceGems": 0,
+		"upgradeType": "MultiProfit",
+		"parameter": 3,
+		"slotNumber": 3,
+		"repeatable": false
+	},
+	{
+		"id": 53,
+		"priceType": "Gold",
+		"price": "35000000000000000000",
+		"priceGems": 0,
+		"upgradeType": "AutoClick",
+		"parameter": 0,
+		"slotNumber": 8,
+		"repeatable": false
+	},
+	{
+		"id": 54,
+		"priceType": "Gold",
+		"price": "50000000000000000000",
+		"priceGems": 0,
+		"upgradeType": "SeedProc",
+		"parameter": 1,
+		"slotNumber": -1,
+		"repeatable": false
+	},
+	{
+		"id": 55,
+		"priceType": "Gold",
+		"price": "1570000000000000000000",
+		"priceGems": 0,
+		"upgradeType": "MultiProfit",
+		"parameter": 3,
+		"slotNumber": 5,
+		"repeatable": false
+	},
+	{
+		"id": 56,
+		"priceType": "Gold",
+		"price": "2500000000000000000000",
+		"priceGems": 0,
+		"upgradeType": "MultiProfit",
+		"parameter": 3,
+		"slotNumber": 0,
+		"repeatable": false
+	},
+	{
+		"id": 57,
+		"priceType": "Gold",
+		"price": "5000000000000000000000",
+		"priceGems": 0,
+		"upgradeType": "MultiProfit",
+		"parameter": 3,
+		"slotNumber": 1,
+		"repeatable": false
+	},
+	{
+		"id": 58,
+		"priceType": "Gold",
+		"price": "7500000000000000000000",
+		"priceGems": 0,
+		"upgradeType": "MultiProfit",
+		"parameter": 3,
+		"slotNumber": 2,
+		"repeatable": false
+	},
+	{
+		"id": 59,
+		"priceType": "Gold",
+		"price": "7500000000000000000000",
+		"priceGems": 0,
+		"upgradeType": "MultiProfit",
+		"parameter": 3,
+		"slotNumber": 7,
+		"repeatable": false
+	},
+	{
+		"id": 60,
+		"priceType": "Gold",
+		"price": "10500000000000000000000",
+		"priceGems": 0,
+		"upgradeType": "MultiProfit",
+		"parameter": 3,
+		"slotNumber": 4,
+		"repeatable": false
+	},
+	{
+		"id": 61,
+		"priceType": "Gold",
+		"price": "50000000000000000000000",
+		"priceGems": 0,
+		"upgradeType": "MultiProfit",
+		"parameter": 3,
+		"slotNumber": 3,
+		"repeatable": false
+	},
+	{
+		"id": 62,
+		"priceType": "Gold",
+		"price": "25000000000000000000000",
+		"priceGems": 0,
+		"upgradeType": "MultiProfit",
+		"parameter": 2,
+		"slotNumber": -1,
+		"repeatable": false
+	},
+	{
+		"id": 63,
+		"priceType": "Gold",
+		"price": "1000000000000000000000000",
+		"priceGems": 0,
+		"upgradeType": "MultiProfit",
+		"parameter": 3,
+		"slotNumber": 6,
+		"repeatable": false
+	},
+	{
+		"id": 64,
+		"priceType": "Gold",
+		"price": "1570000000000000000000000",
+		"priceGems": 0,
+		"upgradeType": "MultiProfit",
+		"parameter": 3,
+		"slotNumber": 5,
+		"repeatable": false
+	},
+	{
+		"id": 65,
+		"priceType": "Gold",
+		"price": "2500000000000000000000000",
+		"priceGems": 0,
+		"upgradeType": "MultiProfit",
+		"parameter": 3,
+		"slotNumber": 0,
+		"repeatable": false
+	},
+	{
+		"id": 66,
+		"priceType": "Gold",
+		"price": "5000000000000000000000000",
+		"priceGems": 0,
+		"upgradeType": "MultiProfit",
+		"parameter": 3,
+		"slotNumber": 1,
+		"repeatable": false
+	},
+	{
+		"id": 67,
+		"priceType": "Gold",
+		"price": "7500000000000000000000000",
+		"priceGems": 0,
+		"upgradeType": "MultiProfit",
+		"parameter": 3,
+		"slotNumber": 2,
+		"repeatable": false
+	},
+	{
+		"id": 68,
+		"priceType": "Gold",
+		"price": "10500000000000000000000000",
+		"priceGems": 0,
+		"upgradeType": "MultiProfit",
+		"parameter": 3,
+		"slotNumber": 4,
+		"repeatable": false
+	},
+	{
+		"id": 69,
+		"priceType": "Gold",
+		"price": "25500000000000000000000000",
+		"priceGems": 0,
+		"upgradeType": "MultiProfit",
+		"parameter": 3,
+		"slotNumber": 3,
+		"repeatable": false
+	},
+	{
+		"id": 70,
+		"priceType": "Gold",
+		"price": "35000000000000000000000000",
+		"priceGems": 0,
+		"upgradeType": "MultiProfit",
+		"parameter": 3,
+		"slotNumber": 7,
+		"repeatable": false
+	},
+	{
+		"id": 71,
+		"priceType": "Gold",
+		"price": "50000000000000000000000000",
+		"priceGems": 0,
+		"upgradeType": "SeedProc",
+		"parameter": 2,
+		"slotNumber": -1,
+		"repeatable": false
+	},
+	{
+		"id": 72,
+		"priceType": "Gold",
+		"price": "1000000000000000000000000000",
+		"priceGems": 0,
+		"upgradeType": "MultiProfit",
+		"parameter": 3,
+		"slotNumber": 6,
+		"repeatable": true
+	},
+	{
+		"id": 73,
+		"priceType": "Gold",
+		"price": "1570000000000000000000000000",
+		"priceGems": 0,
+		"upgradeType": "MultiProfit",
+		"parameter": 3,
+		"slotNumber": 5,
+		"repeatable": true
+	},
+	{
+		"id": 74,
+		"priceType": "Gold",
+		"price": "2500000000000000000000000000",
+		"priceGems": 0,
+		"upgradeType": "MultiProfit",
+		"parameter": 3,
+		"slotNumber": 0,
+		"repeatable": true
+	},
+	{
+		"id": 75,
+		"priceType": "Gold",
+		"price": "5000000000000000000000000000",
+		"priceGems": 0,
+		"upgradeType": "MultiProfit",
+		"parameter": 3,
+		"slotNumber": 1,
+		"repeatable": true
+	},
+	{
+		"id": 76,
+		"priceType": "Gold",
+		"price": "7500000000000000000000000000",
+		"priceGems": 0,
+		"upgradeType": "MultiProfit",
+		"parameter": 3,
+		"slotNumber": 2,
+		"repeatable": true
+	},
+	{
+		"id": 77,
+		"priceType": "Gold",
+		"price": "10500000000000000000000000000",
+		"priceGems": 0,
+		"upgradeType": "MultiProfit",
+		"parameter": 3,
+		"slotNumber": 4,
+		"repeatable": true
+	},
+	{
+		"id": 78,
+		"priceType": "Gold",
+		"price": "25500000000000000000000000000",
+		"priceGems": 0,
+		"upgradeType": "MultiProfit",
+		"parameter": 3,
+		"slotNumber": 3,
+		"repeatable": true
+	},
+	{
+		"id": 79,
+		"priceType": "Gold",
+		"price": "35000000000000000000000000000",
+		"priceGems": 0,
+		"upgradeType": "MultiProfit",
+		"parameter": 3,
+		"slotNumber": 7,
+		"repeatable": true
+	},
+	{
+		"id": 80,
+		"priceType": "Gold",
+		"price": "50000000000000000000000000000",
+		"priceGems": 0,
+		"upgradeType": "MultiProfit",
+		"parameter": 2,
+		"slotNumber": -1,
+		"repeatable": true
+	},
+	{
+		"id": 81,
+		"priceType": "Gold",
+		"price": "500000000000000000000000000000",
+		"priceGems": 0,
+		"upgradeType": "MultiProfit",
+		"parameter": 3,
+		"slotNumber": 8,
+		"repeatable": true
+	}
+]

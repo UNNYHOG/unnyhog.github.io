@@ -1,0 +1,279 @@
+
+Slot4w1.png
+size: 512,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Devil_Body
+  rotate: true
+  xy: 1, 47
+  size: 80, 141
+  orig: 80, 141
+  offset: 0, 0
+  index: -1
+Devil_L_Hand
+  rotate: false
+  xy: 470, 92
+  size: 39, 35
+  orig: 39, 35
+  offset: 0, 0
+  index: -1
+Devil_R_Hand
+  rotate: true
+  xy: 367, 1
+  size: 18, 15
+  orig: 18, 15
+  offset: 0, 0
+  index: -1
+Devil_Shadow
+  rotate: false
+  xy: 409, 65
+  size: 57, 12
+  orig: 57, 12
+  offset: 0, 0
+  index: -1
+Man_Body
+  rotate: false
+  xy: 409, 78
+  size: 60, 49
+  orig: 60, 49
+  offset: 0, 0
+  index: -1
+Man_Shadow
+  rotate: false
+  xy: 335, 56
+  size: 68, 17
+  orig: 68, 17
+  offset: 0, 0
+  index: -1
+arab/Man_Eye
+  rotate: false
+  xy: 317, 1
+  size: 17, 7
+  orig: 17, 7
+  offset: 0, 0
+  index: -1
+negro/Man_Eye
+  rotate: false
+  xy: 317, 1
+  size: 17, 7
+  orig: 17, 7
+  offset: 0, 0
+  index: -1
+white/Man_Eye
+  rotate: false
+  xy: 317, 1
+  size: 17, 7
+  orig: 17, 7
+  offset: 0, 0
+  index: -1
+arab/Man_Eye2
+  rotate: false
+  xy: 335, 1
+  size: 15, 7
+  orig: 15, 7
+  offset: 0, 0
+  index: -1
+negro/Man_Eye2
+  rotate: false
+  xy: 335, 1
+  size: 15, 7
+  orig: 15, 7
+  offset: 0, 0
+  index: -1
+white/Man_Eye2
+  rotate: false
+  xy: 335, 1
+  size: 15, 7
+  orig: 15, 7
+  offset: 0, 0
+  index: -1
+arab/Man_Face
+  rotate: false
+  xy: 370, 20
+  size: 39, 35
+  orig: 39, 35
+  offset: 0, 0
+  index: -1
+white/Man_Face
+  rotate: false
+  xy: 370, 20
+  size: 39, 35
+  orig: 39, 35
+  offset: 0, 0
+  index: -1
+arab/Man_Face2
+  rotate: false
+  xy: 321, 32
+  size: 48, 23
+  orig: 48, 23
+  offset: 0, 0
+  index: -1
+negro/Man_Face2
+  rotate: false
+  xy: 321, 32
+  size: 48, 23
+  orig: 48, 23
+  offset: 0, 0
+  index: -1
+white/Man_Face2
+  rotate: false
+  xy: 321, 32
+  size: 48, 23
+  orig: 48, 23
+  offset: 0, 0
+  index: -1
+arab/Man_Head
+  rotate: false
+  xy: 143, 58
+  size: 63, 69
+  orig: 63, 69
+  offset: 0, 0
+  index: -1
+arab/Man_Head_Down
+  rotate: false
+  xy: 199, 1
+  size: 46, 27
+  orig: 46, 27
+  offset: 0, 0
+  index: -1
+arab/Man_Head_S
+  rotate: false
+  xy: 293, 7
+  size: 23, 28
+  orig: 23, 28
+  offset: 0, 0
+  index: -1
+arab/Man_Head_Up
+  rotate: false
+  xy: 1, 1
+  size: 65, 45
+  orig: 65, 45
+  offset: 0, 0
+  index: -1
+arab/Man_L_Hand
+  rotate: true
+  xy: 355, 12
+  size: 19, 11
+  orig: 19, 11
+  offset: 0, 0
+  index: -1
+arab/Man_R_Hand
+  rotate: false
+  xy: 470, 69
+  size: 37, 22
+  orig: 37, 22
+  offset: 0, 0
+  index: -1
+corn_1
+  rotate: false
+  xy: 199, 29
+  size: 61, 28
+  orig: 61, 28
+  offset: 0, 0
+  index: -1
+corn_2
+  rotate: false
+  xy: 261, 36
+  size: 59, 21
+  orig: 59, 21
+  offset: 0, 0
+  index: -1
+drel
+  rotate: false
+  xy: 335, 74
+  size: 73, 53
+  orig: 73, 53
+  offset: 0, 0
+  index: -1
+negro/Man_Face
+  rotate: false
+  xy: 410, 29
+  size: 39, 35
+  orig: 39, 35
+  offset: 0, 0
+  index: -1
+negro/Man_Head
+  rotate: false
+  xy: 207, 58
+  size: 63, 69
+  orig: 63, 69
+  offset: 0, 0
+  index: -1
+negro/Man_Head_Down
+  rotate: false
+  xy: 246, 1
+  size: 46, 27
+  orig: 46, 27
+  offset: 0, 0
+  index: -1
+negro/Man_Head_S
+  rotate: false
+  xy: 450, 36
+  size: 23, 28
+  orig: 23, 28
+  offset: 0, 0
+  index: -1
+negro/Man_Head_Up
+  rotate: false
+  xy: 67, 1
+  size: 65, 45
+  orig: 65, 45
+  offset: 0, 0
+  index: -1
+negro/Man_L_Hand
+  rotate: false
+  xy: 383, 8
+  size: 19, 11
+  orig: 19, 11
+  offset: 0, 0
+  index: -1
+negro/Man_R_Hand
+  rotate: false
+  xy: 317, 9
+  size: 37, 22
+  orig: 37, 22
+  offset: 0, 0
+  index: -1
+white/Man_Head
+  rotate: false
+  xy: 271, 58
+  size: 63, 69
+  orig: 63, 69
+  offset: 0, 0
+  index: -1
+white/Man_Head_Down
+  rotate: false
+  xy: 410, 1
+  size: 46, 27
+  orig: 46, 27
+  offset: 0, 0
+  index: -1
+white/Man_Head_S
+  rotate: false
+  xy: 457, 7
+  size: 23, 28
+  orig: 23, 28
+  offset: 0, 0
+  index: -1
+white/Man_Head_Up
+  rotate: false
+  xy: 133, 1
+  size: 65, 45
+  orig: 65, 45
+  offset: 0, 0
+  index: -1
+white/Man_L_Hand
+  rotate: false
+  xy: 481, 34
+  size: 19, 11
+  orig: 19, 11
+  offset: 0, 0
+  index: -1
+white/Man_R_Hand
+  rotate: false
+  xy: 474, 46
+  size: 37, 22
+  orig: 37, 22
+  offset: 0, 0
+  index: -1

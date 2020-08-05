@@ -1,0 +1,174 @@
+
+Slot6w3.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body
+  rotate: false
+  xy: 1, 32
+  size: 106, 195
+  orig: 106, 195
+  offset: 0, 0
+  index: -1
+Effects/slot6_water_1
+  rotate: false
+  xy: 231, 200
+  size: 25, 27
+  orig: 25, 27
+  offset: 0, 0
+  index: -1
+Effects/slot6_water_10
+  rotate: false
+  xy: 152, 96
+  size: 25, 27
+  orig: 25, 27
+  offset: 0, 0
+  index: -1
+Effects/slot6_water_2
+  rotate: false
+  xy: 181, 140
+  size: 25, 27
+  orig: 25, 27
+  offset: 0, 0
+  index: -1
+Effects/slot6_water_3
+  rotate: false
+  xy: 462, 397
+  size: 25, 27
+  orig: 25, 27
+  offset: 0, 0
+  index: -1
+Effects/slot6_water_4
+  rotate: false
+  xy: 126, 96
+  size: 25, 27
+  orig: 25, 27
+  offset: 0, 0
+  index: -1
+Effects/slot6_water_5
+  rotate: true
+  xy: 294, 270
+  size: 25, 27
+  orig: 25, 27
+  offset: 0, 0
+  index: -1
+Effects/slot6_water_6
+  rotate: false
+  xy: 266, 241
+  size: 25, 27
+  orig: 25, 27
+  offset: 0, 0
+  index: -1
+Effects/slot6_water_7
+  rotate: false
+  xy: 231, 172
+  size: 25, 27
+  orig: 25, 27
+  offset: 0, 0
+  index: -1
+Effects/slot6_water_8
+  rotate: false
+  xy: 462, 369
+  size: 25, 27
+  orig: 25, 27
+  offset: 0, 0
+  index: -1
+Effects/slot6_water_9
+  rotate: false
+  xy: 126, 68
+  size: 25, 27
+  orig: 25, 27
+  offset: 0, 0
+  index: -1
+Fish
+  rotate: false
+  xy: 108, 168
+  size: 122, 59
+  orig: 122, 59
+  offset: 0, 0
+  index: -1
+HandFront
+  rotate: false
+  xy: 108, 124
+  size: 72, 43
+  orig: 72, 43
+  offset: 0, 0
+  index: -1
+HandRear
+  rotate: false
+  xy: 266, 269
+  size: 27, 26
+  orig: 27, 26
+  offset: 0, 0
+  index: -1
+Leskas/Leska1
+  rotate: false
+  xy: 438, 294
+  size: 1, 217
+  orig: 1, 217
+  offset: 0, 0
+  index: -1
+Leskas/Leska2
+  rotate: false
+  xy: 381, 292
+  size: 38, 219
+  orig: 38, 219
+  offset: 0, 0
+  index: -1
+Leskas/Leska3
+  rotate: false
+  xy: 332, 294
+  size: 48, 217
+  orig: 48, 217
+  offset: 0, 0
+  index: -1
+Leskas/Leska4
+  rotate: false
+  xy: 266, 296
+  size: 65, 215
+  orig: 65, 215
+  offset: 0, 0
+  index: -1
+Leskas/Leska8
+  rotate: false
+  xy: 420, 292
+  size: 17, 219
+  orig: 17, 219
+  offset: 0, 0
+  index: -1
+Leskas/Leska9
+  rotate: true
+  xy: 1, 1
+  size: 30, 219
+  orig: 30, 219
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: true
+  xy: 462, 425
+  size: 86, 25
+  orig: 86, 25
+  offset: 0, 0
+  index: -1
+ShadowShip
+  rotate: true
+  xy: 108, 46
+  size: 77, 17
+  orig: 77, 17
+  offset: 0, 0
+  index: -1
+Ship
+  rotate: false
+  xy: 1, 228
+  size: 264, 283
+  orig: 264, 283
+  offset: 0, 0
+  index: -1
+String
+  rotate: true
+  xy: 440, 367
+  size: 144, 21
+  orig: 144, 21
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,111 @@
+
+slot8w2.png
+size: 256,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+circle1
+  rotate: false
+  xy: 152, 38
+  size: 93, 17
+  orig: 93, 17
+  offset: 0, 0
+  index: -1
+circle2
+  rotate: false
+  xy: 1, 1
+  size: 77, 12
+  orig: 77, 12
+  offset: 0, 0
+  index: -1
+effects/slot8_water1_1
+  rotate: true
+  xy: 244, 92
+  size: 32, 10
+  orig: 32, 10
+  offset: 0, 0
+  index: -1
+effects/slot8_water1_2
+  rotate: true
+  xy: 244, 59
+  size: 32, 10
+  orig: 32, 10
+  offset: 0, 0
+  index: -1
+effects/slot8_water1_3
+  rotate: true
+  xy: 131, 10
+  size: 32, 10
+  orig: 32, 10
+  offset: 0, 0
+  index: -1
+effects/slot8_water1_4
+  rotate: false
+  xy: 148, 27
+  size: 32, 10
+  orig: 32, 10
+  offset: 0, 0
+  index: -1
+effects/slot8_water1_5
+  rotate: false
+  xy: 148, 16
+  size: 32, 10
+  orig: 32, 10
+  offset: 0, 0
+  index: -1
+effects/slot8_water1_6
+  rotate: false
+  xy: 181, 27
+  size: 32, 10
+  orig: 32, 10
+  offset: 0, 0
+  index: -1
+effects/slot8_water1_7
+  rotate: false
+  xy: 181, 16
+  size: 32, 10
+  orig: 32, 10
+  offset: 0, 0
+  index: -1
+fish1
+  rotate: false
+  xy: 88, 21
+  size: 42, 21
+  orig: 42, 21
+  offset: 0, 0
+  index: -1
+fish2
+  rotate: false
+  xy: 88, 1
+  size: 37, 19
+  orig: 37, 19
+  offset: 0, 0
+  index: -1
+glow
+  rotate: true
+  xy: 142, 11
+  size: 31, 5
+  orig: 31, 5
+  offset: 0, 0
+  index: -1
+lightpillar
+  rotate: true
+  xy: 152, 56
+  size: 68, 91
+  orig: 68, 91
+  offset: 0, 0
+  index: -1
+lights
+  rotate: false
+  xy: 1, 14
+  size: 86, 28
+  orig: 86, 28
+  offset: 0, 0
+  index: -1
+ufo
+  rotate: false
+  xy: 1, 43
+  size: 150, 81
+  orig: 150, 81
+  offset: 0, 0
+  index: -1

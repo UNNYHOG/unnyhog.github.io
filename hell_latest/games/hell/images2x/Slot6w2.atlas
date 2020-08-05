@@ -1,0 +1,391 @@
+
+Slot6w2.png
+size: 1024,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+LeftDevilArms
+  rotate: true
+  xy: 276, 78
+  size: 49, 123
+  orig: 49, 123
+  offset: 0, 0
+  index: -1
+LeftDevilBody
+  rotate: true
+  xy: 1, 47
+  size: 80, 143
+  orig: 80, 143
+  offset: 0, 0
+  index: -1
+LeftDevilHat
+  rotate: false
+  xy: 301, 6
+  size: 38, 49
+  orig: 38, 49
+  offset: 0, 0
+  index: -1
+LeftDevilTail
+  rotate: false
+  xy: 741, 40
+  size: 19, 22
+  orig: 19, 22
+  offset: 0, 0
+  index: -1
+ManBalloon
+  rotate: true
+  xy: 741, 63
+  size: 64, 83
+  orig: 64, 83
+  offset: 0, 0
+  index: -1
+ManFeet
+  rotate: false
+  xy: 977, 104
+  size: 32, 23
+  orig: 32, 23
+  offset: 0, 0
+  index: -1
+ManHat
+  rotate: false
+  xy: 340, 1
+  size: 32, 43
+  orig: 32, 43
+  offset: 0, 0
+  index: -1
+ManLegs
+  rotate: true
+  xy: 340, 45
+  size: 32, 56
+  orig: 32, 56
+  offset: 0, 0
+  index: -1
+ManRope
+  rotate: true
+  xy: 134, 10
+  size: 28, 49
+  orig: 28, 49
+  offset: 0, 0
+  index: -1
+Man_Face
+  rotate: true
+  xy: 273, 1
+  size: 54, 27
+  orig: 54, 27
+  offset: 0, 0
+  index: -1
+RightDevilArms
+  rotate: true
+  xy: 400, 57
+  size: 70, 100
+  orig: 70, 100
+  offset: 0, 0
+  index: -1
+RightDevilBody
+  rotate: true
+  xy: 145, 61
+  size: 66, 130
+  orig: 66, 130
+  offset: 0, 0
+  index: -1
+RightDevilHat
+  rotate: false
+  xy: 963, 52
+  size: 33, 51
+  orig: 33, 51
+  offset: 0, 0
+  index: -1
+RightDevilTail
+  rotate: false
+  xy: 761, 43
+  size: 18, 19
+  orig: 18, 19
+  offset: 0, 0
+  index: -1
+Shadow_Demon_L
+  rotate: false
+  xy: 894, 104
+  size: 82, 23
+  orig: 82, 23
+  offset: 0, 0
+  index: -1
+Shadow_Demon_R
+  rotate: false
+  xy: 894, 104
+  size: 82, 23
+  orig: 82, 23
+  offset: 0, 0
+  index: -1
+Shadow_Man
+  rotate: false
+  xy: 1, 19
+  size: 100, 27
+  orig: 100, 27
+  offset: 0, 0
+  index: -1
+Slash/Slash1_01
+  rotate: false
+  xy: 1, 3
+  size: 31, 15
+  orig: 31, 15
+  offset: 0, 0
+  index: -1
+Slash/Slash1_02
+  rotate: false
+  xy: 1, 3
+  size: 31, 15
+  orig: 31, 15
+  offset: 0, 0
+  index: -1
+Slash/Slash1_03
+  rotate: true
+  xy: 248, 7
+  size: 31, 15
+  orig: 31, 15
+  offset: 0, 0
+  index: -1
+Slash/Slash1_04
+  rotate: false
+  xy: 629, 42
+  size: 31, 15
+  orig: 31, 15
+  offset: 0, 0
+  index: -1
+Slash/Slash1_05
+  rotate: false
+  xy: 33, 3
+  size: 31, 15
+  orig: 31, 15
+  offset: 0, 0
+  index: -1
+Slash/Slash1_06
+  rotate: false
+  xy: 661, 42
+  size: 31, 15
+  orig: 31, 15
+  offset: 0, 0
+  index: -1
+Slash/Slash1_07
+  rotate: false
+  xy: 629, 26
+  size: 31, 15
+  orig: 31, 15
+  offset: 0, 0
+  index: -1
+Slash/Slash1_08
+  rotate: false
+  xy: 65, 3
+  size: 31, 15
+  orig: 31, 15
+  offset: 0, 0
+  index: -1
+Slash/Slash1_09
+  rotate: false
+  xy: 693, 42
+  size: 31, 15
+  orig: 31, 15
+  offset: 0, 0
+  index: -1
+Slash/Slash1_10
+  rotate: false
+  xy: 661, 26
+  size: 31, 15
+  orig: 31, 15
+  offset: 0, 0
+  index: -1
+Slash/Slash1_11
+  rotate: false
+  xy: 693, 26
+  size: 31, 15
+  orig: 31, 15
+  offset: 0, 0
+  index: -1
+Slash/Slash1_12
+  rotate: true
+  xy: 725, 26
+  size: 31, 15
+  orig: 31, 15
+  offset: 0, 0
+  index: -1
+Slash/SlashHit_01
+  rotate: false
+  xy: 102, 15
+  size: 31, 31
+  orig: 31, 31
+  offset: 0, 0
+  index: -1
+Slash/SlashHit_02
+  rotate: false
+  xy: 184, 7
+  size: 31, 31
+  orig: 31, 31
+  offset: 0, 0
+  index: -1
+Slash/SlashHit_03
+  rotate: false
+  xy: 216, 7
+  size: 31, 31
+  orig: 31, 31
+  offset: 0, 0
+  index: -1
+Slash/SlashHit_04
+  rotate: false
+  xy: 373, 13
+  size: 31, 31
+  orig: 31, 31
+  offset: 0, 0
+  index: -1
+Slash/SlashHit_05
+  rotate: false
+  xy: 405, 25
+  size: 31, 31
+  orig: 31, 31
+  offset: 0, 0
+  index: -1
+Slash/SlashHit_06
+  rotate: false
+  xy: 437, 25
+  size: 31, 31
+  orig: 31, 31
+  offset: 0, 0
+  index: -1
+Slash/SlashHit_07
+  rotate: false
+  xy: 469, 25
+  size: 31, 31
+  orig: 31, 31
+  offset: 0, 0
+  index: -1
+Slash/SlashHit_08
+  rotate: false
+  xy: 469, 25
+  size: 31, 31
+  orig: 31, 31
+  offset: 0, 0
+  index: -1
+Slash/slash3_01
+  rotate: false
+  xy: 501, 26
+  size: 31, 31
+  orig: 31, 31
+  offset: 0, 0
+  index: -1
+Slash/slash3_02
+  rotate: false
+  xy: 501, 26
+  size: 31, 31
+  orig: 31, 31
+  offset: 0, 0
+  index: -1
+Slash/slash3_03
+  rotate: false
+  xy: 501, 26
+  size: 31, 31
+  orig: 31, 31
+  offset: 0, 0
+  index: -1
+Slash/slash3_04
+  rotate: false
+  xy: 533, 26
+  size: 31, 31
+  orig: 31, 31
+  offset: 0, 0
+  index: -1
+Slash/slash3_05
+  rotate: false
+  xy: 533, 26
+  size: 31, 31
+  orig: 31, 31
+  offset: 0, 0
+  index: -1
+Slash/slash3_06
+  rotate: false
+  xy: 565, 26
+  size: 31, 31
+  orig: 31, 31
+  offset: 0, 0
+  index: -1
+Slash/slash3_07
+  rotate: false
+  xy: 565, 26
+  size: 31, 31
+  orig: 31, 31
+  offset: 0, 0
+  index: -1
+Slash/slash3_08
+  rotate: false
+  xy: 597, 26
+  size: 31, 31
+  orig: 31, 31
+  offset: 0, 0
+  index: -1
+body/arab/white_ManFrontArm
+  rotate: true
+  xy: 894, 75
+  size: 28, 68
+  orig: 28, 68
+  offset: 0, 0
+  index: -1
+body/arab/white_ManHead
+  rotate: false
+  xy: 501, 58
+  size: 79, 69
+  orig: 79, 69
+  offset: 0, 0
+  index: -1
+body/arab/white_ManRearArm
+  rotate: true
+  xy: 276, 56
+  size: 21, 63
+  orig: 21, 63
+  offset: 0, 0
+  index: -1
+body/negro/white_ManFrontArm
+  rotate: true
+  xy: 825, 49
+  size: 28, 68
+  orig: 28, 68
+  offset: 0, 0
+  index: -1
+body/negro/white_ManHead
+  rotate: false
+  xy: 581, 58
+  size: 79, 69
+  orig: 79, 69
+  offset: 0, 0
+  index: -1
+body/negro/white_ManRearArm
+  rotate: true
+  xy: 145, 39
+  size: 21, 63
+  orig: 21, 63
+  offset: 0, 0
+  index: -1
+body/white/white_ManFrontArm
+  rotate: true
+  xy: 894, 46
+  size: 28, 68
+  orig: 28, 68
+  offset: 0, 0
+  index: -1
+body/white/white_ManHead
+  rotate: false
+  xy: 661, 58
+  size: 79, 69
+  orig: 79, 69
+  offset: 0, 0
+  index: -1
+body/white/white_ManRearArm
+  rotate: true
+  xy: 209, 39
+  size: 21, 63
+  orig: 21, 63
+  offset: 0, 0
+  index: -1
+white_ManBody
+  rotate: false
+  xy: 825, 78
+  size: 68, 49
+  orig: 68, 49
+  offset: 0, 0
+  index: -1

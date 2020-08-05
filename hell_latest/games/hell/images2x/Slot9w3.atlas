@@ -1,0 +1,370 @@
+
+Slot9w3.png
+size: 2048,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Devil
+  rotate: true
+  xy: 433, 22
+  size: 105, 126
+  orig: 105, 126
+  offset: 0, 0
+  index: -1
+DevilL_Hand
+  rotate: false
+  xy: 1246, 73
+  size: 64, 54
+  orig: 64, 54
+  offset: 0, 0
+  index: -1
+Devil_Hat
+  rotate: false
+  xy: 870, 64
+  size: 104, 63
+  orig: 104, 63
+  offset: 0, 0
+  index: -1
+Devil_R_Hand
+  rotate: true
+  xy: 675, 44
+  size: 83, 99
+  orig: 83, 99
+  offset: 0, 0
+  index: -1
+Devil_Shadow
+  rotate: false
+  xy: 1, 14
+  size: 67, 18
+  orig: 67, 18
+  offset: 0, 0
+  index: -1
+Man_Shadow
+  rotate: false
+  xy: 1, 14
+  size: 67, 18
+  orig: 67, 18
+  offset: 0, 0
+  index: -1
+Devil_Tail
+  rotate: true
+  xy: 560, 22
+  size: 30, 39
+  orig: 30, 39
+  offset: 0, 0
+  index: -1
+Devil_mouth1
+  rotate: false
+  xy: 1441, 75
+  size: 25, 23
+  orig: 25, 23
+  offset: 0, 0
+  index: -1
+Devil_mouth2
+  rotate: false
+  xy: 1760, 103
+  size: 23, 24
+  orig: 23, 24
+  offset: 0, 0
+  index: -1
+Devil_mouth3
+  rotate: true
+  xy: 1, 1
+  size: 12, 14
+  orig: 12, 14
+  offset: 0, 0
+  index: -1
+Obj1
+  rotate: true
+  xy: 975, 53
+  size: 74, 91
+  orig: 74, 91
+  offset: 0, 0
+  index: -1
+Obj2
+  rotate: false
+  xy: 1067, 60
+  size: 88, 67
+  orig: 88, 67
+  offset: 0, 0
+  index: -1
+Obj3
+  rotate: true
+  xy: 1311, 86
+  size: 41, 73
+  orig: 41, 73
+  offset: 0, 0
+  index: -1
+Obj4
+  rotate: false
+  xy: 1156, 64
+  size: 89, 63
+  orig: 89, 63
+  offset: 0, 0
+  index: -1
+Obj5
+  rotate: true
+  xy: 560, 53
+  size: 74, 114
+  orig: 74, 114
+  offset: 0, 0
+  index: -1
+Obj6
+  rotate: false
+  xy: 775, 35
+  size: 94, 92
+  orig: 94, 92
+  offset: 0, 0
+  index: -1
+body/arab/arab_man
+  rotate: true
+  xy: 1, 33
+  size: 94, 143
+  orig: 94, 143
+  offset: 0, 0
+  index: -1
+body/negro/negro_man
+  rotate: true
+  xy: 145, 33
+  size: 94, 143
+  orig: 94, 143
+  offset: 0, 0
+  index: -1
+body/white/white_man
+  rotate: true
+  xy: 289, 33
+  size: 94, 143
+  orig: 94, 143
+  offset: 0, 0
+  index: -1
+effects/FocusEffect_01
+  rotate: false
+  xy: 870, 35
+  size: 28, 28
+  orig: 28, 28
+  offset: 0, 0
+  index: -1
+effects/FocusEffect_02
+  rotate: false
+  xy: 1441, 99
+  size: 28, 28
+  orig: 28, 28
+  offset: 0, 0
+  index: -1
+effects/FocusEffect_03
+  rotate: false
+  xy: 600, 24
+  size: 28, 28
+  orig: 28, 28
+  offset: 0, 0
+  index: -1
+effects/FocusEffect_04
+  rotate: false
+  xy: 899, 35
+  size: 28, 28
+  orig: 28, 28
+  offset: 0, 0
+  index: -1
+effects/FocusEffect_05
+  rotate: false
+  xy: 1470, 99
+  size: 28, 28
+  orig: 28, 28
+  offset: 0, 0
+  index: -1
+effects/FocusEffect_06
+  rotate: false
+  xy: 629, 24
+  size: 28, 28
+  orig: 28, 28
+  offset: 0, 0
+  index: -1
+effects/FocusEffect_07
+  rotate: false
+  xy: 928, 35
+  size: 28, 28
+  orig: 28, 28
+  offset: 0, 0
+  index: -1
+effects/FocusEffect_08
+  rotate: false
+  xy: 1499, 99
+  size: 28, 28
+  orig: 28, 28
+  offset: 0, 0
+  index: -1
+effects/FocusEffect_09
+  rotate: false
+  xy: 1528, 99
+  size: 28, 28
+  orig: 28, 28
+  offset: 0, 0
+  index: -1
+effects/FocusEffect_10
+  rotate: false
+  xy: 1557, 99
+  size: 28, 28
+  orig: 28, 28
+  offset: 0, 0
+  index: -1
+effects/FocusEffect_11
+  rotate: false
+  xy: 1586, 99
+  size: 28, 28
+  orig: 28, 28
+  offset: 0, 0
+  index: -1
+effects/FocusEffect_12
+  rotate: false
+  xy: 1615, 99
+  size: 28, 28
+  orig: 28, 28
+  offset: 0, 0
+  index: -1
+effects/FocusEffect_13
+  rotate: false
+  xy: 1644, 99
+  size: 28, 28
+  orig: 28, 28
+  offset: 0, 0
+  index: -1
+effects/FocusEffect_14
+  rotate: false
+  xy: 1673, 99
+  size: 28, 28
+  orig: 28, 28
+  offset: 0, 0
+  index: -1
+effects/FocusEffect_15
+  rotate: false
+  xy: 1702, 99
+  size: 28, 28
+  orig: 28, 28
+  offset: 0, 0
+  index: -1
+effects/FocusEffect_16
+  rotate: false
+  xy: 1731, 99
+  size: 28, 28
+  orig: 28, 28
+  offset: 0, 0
+  index: -1
+effects/Focus_01
+  rotate: true
+  xy: 658, 24
+  size: 28, 14
+  orig: 28, 14
+  offset: 0, 0
+  index: -1
+effects/Focus_02
+  rotate: true
+  xy: 957, 35
+  size: 28, 14
+  orig: 28, 14
+  offset: 0, 0
+  index: -1
+effects/Focus_03
+  rotate: false
+  xy: 1467, 84
+  size: 28, 14
+  orig: 28, 14
+  offset: 0, 0
+  index: -1
+effects/Focus_04
+  rotate: false
+  xy: 1784, 113
+  size: 28, 14
+  orig: 28, 14
+  offset: 0, 0
+  index: -1
+effects/Focus_05
+  rotate: false
+  xy: 98, 18
+  size: 28, 14
+  orig: 28, 14
+  offset: 0, 0
+  index: -1
+effects/Focus_06
+  rotate: false
+  xy: 1496, 84
+  size: 28, 14
+  orig: 28, 14
+  offset: 0, 0
+  index: -1
+effects/Focus_07
+  rotate: false
+  xy: 1813, 113
+  size: 28, 14
+  orig: 28, 14
+  offset: 0, 0
+  index: -1
+effects/Focus_08
+  rotate: false
+  xy: 127, 18
+  size: 28, 14
+  orig: 28, 14
+  offset: 0, 0
+  index: -1
+effects/Focus_09
+  rotate: false
+  xy: 1525, 84
+  size: 28, 14
+  orig: 28, 14
+  offset: 0, 0
+  index: -1
+effects/Focus_10
+  rotate: false
+  xy: 1842, 113
+  size: 28, 14
+  orig: 28, 14
+  offset: 0, 0
+  index: -1
+effects/Focus_11
+  rotate: false
+  xy: 156, 18
+  size: 28, 14
+  orig: 28, 14
+  offset: 0, 0
+  index: -1
+effects/Focus_12
+  rotate: false
+  xy: 1554, 84
+  size: 28, 14
+  orig: 28, 14
+  offset: 0, 0
+  index: -1
+effects/Focus_13
+  rotate: false
+  xy: 1871, 113
+  size: 28, 14
+  orig: 28, 14
+  offset: 0, 0
+  index: -1
+effects/Focus_14
+  rotate: false
+  xy: 185, 18
+  size: 28, 14
+  orig: 28, 14
+  offset: 0, 0
+  index: -1
+effects/Focus_15
+  rotate: false
+  xy: 1583, 84
+  size: 28, 14
+  orig: 28, 14
+  offset: 0, 0
+  index: -1
+effects/Focus_16
+  rotate: false
+  xy: 69, 18
+  size: 28, 14
+  orig: 28, 14
+  offset: 0, 0
+  index: -1
+grumpy
+  rotate: false
+  xy: 1385, 72
+  size: 55, 55
+  orig: 55, 55
+  offset: 0, 0
+  index: -1

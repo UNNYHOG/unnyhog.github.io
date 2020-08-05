@@ -1,0 +1,37 @@
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Google Analytics -->
+    <!--<script>-->
+        <!--window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;-->
+        <!--ga('create', 'UA-141786068-2', 'auto');-->
+        <!--ga('send', 'pageview');-->
+    <!--</script>-->
+    <!--<script async src='https://www.google-analytics.com/analytics.js'></script>-->
+    <script src="https://gbase-public-static.ams3.cdn.digitaloceanspaces.com/gbase-html5-latest-min.js"></script>
+    <!-- End Google Analytics -->
+</head>
+<body><link rel="stylesheet" href="./main.css"><link rel="stylesheet" href="./style_vk.css"><div id="phaser-app">
+
+    </div><div class="loading-div-parent">
+        <div id="labels-div" class="relative-pos"></div>
+    </div><div class="loading-div-parent">
+    <div id="loading-div" class="relative-pos">
+        <script>
+            const parent = document.getElementById('loading-div');
+            const remotePath = "./";
+            function addImage(path, className, id) {
+                const img = document.createElement('img');
+                img.src = remotePath + path;
+                img.className = className;
+                if (id)
+                    img.id = id;
+                parent.appendChild(img);
+            }
+            const gameNamePath = "games/fish/";
+            addImage(gameNamePath + "LoadingSplash.jpg", "loading-img");
+            addImage(gameNamePath + "ProgressBar.png", "progress-bar");
+            addImage(gameNamePath + "ProgressBarFill.png", "progress-bar test", "progress-fill");
+        </script>
+    </div>
+</div><script src="index.js"></script></body>

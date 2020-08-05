@@ -1,0 +1,125 @@
+
+Slot2w3.png
+size: 256,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Arm
+  rotate: true
+  xy: 228, 43
+  size: 24, 17
+  orig: 24, 17
+  offset: 0, 0
+  index: -1
+Body
+  rotate: false
+  xy: 117, 39
+  size: 58, 84
+  orig: 58, 84
+  offset: 0, 0
+  index: -1
+Effects/slot2_water_1
+  rotate: false
+  xy: 242, 115
+  size: 6, 8
+  orig: 6, 8
+  offset: 0, 0
+  index: -1
+Effects/slot2_water_2
+  rotate: false
+  xy: 249, 115
+  size: 6, 8
+  orig: 6, 8
+  offset: 0, 0
+  index: -1
+Effects/slot2_water_3
+  rotate: false
+  xy: 110, 27
+  size: 6, 8
+  orig: 6, 8
+  offset: 0, 0
+  index: -1
+Effects/slot2_water_4
+  rotate: false
+  xy: 117, 30
+  size: 6, 8
+  orig: 6, 8
+  offset: 0, 0
+  index: -1
+Effects/slot2_water_5
+  rotate: false
+  xy: 242, 106
+  size: 6, 8
+  orig: 6, 8
+  offset: 0, 0
+  index: -1
+Effects/slot2_water_6
+  rotate: false
+  xy: 249, 106
+  size: 6, 8
+  orig: 6, 8
+  offset: 0, 0
+  index: -1
+Effects/slot2_water_7
+  rotate: false
+  xy: 110, 18
+  size: 6, 8
+  orig: 6, 8
+  offset: 0, 0
+  index: -1
+Fish
+  rotate: true
+  xy: 58, 10
+  size: 25, 51
+  orig: 25, 51
+  offset: 0, 0
+  index: -1
+HandClosed
+  rotate: false
+  xy: 204, 46
+  size: 23, 21
+  orig: 23, 21
+  offset: 0, 0
+  index: -1
+HandOpen
+  rotate: false
+  xy: 176, 43
+  size: 27, 24
+  orig: 27, 24
+  offset: 0, 0
+  index: -1
+Head
+  rotate: false
+  xy: 58, 36
+  size: 58, 87
+  orig: 58, 87
+  offset: 0, 0
+  index: -1
+MainShadow
+  rotate: false
+  xy: 1, 1
+  size: 30, 5
+  orig: 30, 5
+  offset: 0, 0
+  index: -1
+Pile
+  rotate: false
+  xy: 176, 92
+  size: 65, 31
+  orig: 65, 31
+  offset: 0, 0
+  index: -1
+PileShadow
+  rotate: false
+  xy: 176, 68
+  size: 71, 23
+  orig: 71, 23
+  offset: 0, 0
+  index: -1
+RearHand
+  rotate: false
+  xy: 1, 7
+  size: 56, 116
+  orig: 56, 116
+  offset: 0, 0
+  index: -1

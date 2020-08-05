@@ -1,0 +1,258 @@
+
+Slot4w2.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Bat1_Body
+  rotate: true
+  xy: 753, 128
+  size: 14, 28
+  orig: 14, 28
+  offset: 0, 0
+  index: -1
+Bat1_L_Wing
+  rotate: false
+  xy: 412, 72
+  size: 36, 29
+  orig: 36, 29
+  offset: 0, 0
+  index: -1
+Bat1_R_Wing
+  rotate: false
+  xy: 448, 118
+  size: 44, 24
+  orig: 44, 24
+  offset: 0, 0
+  index: -1
+Bat2_Body
+  rotate: false
+  xy: 372, 53
+  size: 9, 20
+  orig: 9, 20
+  offset: 0, 0
+  index: -1
+Bat2_L_Wing
+  rotate: false
+  xy: 657, 125
+  size: 30, 17
+  orig: 30, 17
+  offset: 0, 0
+  index: -1
+Bat2_R_Wing
+  rotate: true
+  xy: 175, 59
+  size: 26, 20
+  orig: 26, 20
+  offset: 0, 0
+  index: -1
+Bat3_Body
+  rotate: true
+  xy: 782, 131
+  size: 11, 22
+  orig: 11, 22
+  offset: 0, 0
+  index: -1
+Bat3_L_Wing
+  rotate: false
+  xy: 629, 119
+  size: 27, 23
+  orig: 27, 23
+  offset: 0, 0
+  index: -1
+Bat3_R_Wing
+  rotate: false
+  xy: 114, 36
+  size: 34, 19
+  orig: 34, 19
+  offset: 0, 0
+  index: -1
+Boss/SatanHead
+  rotate: false
+  xy: 412, 143
+  size: 177, 112
+  orig: 177, 112
+  offset: 0, 0
+  index: -1
+Boss/SatanLeftEar
+  rotate: true
+  xy: 383, 75
+  size: 45, 28
+  orig: 45, 28
+  offset: 0, 0
+  index: -1
+Boss/SatanLeftEye
+  rotate: false
+  xy: 448, 102
+  size: 38, 15
+  orig: 38, 15
+  offset: 0, 0
+  index: -1
+Boss/SatanLeftMoustache
+  rotate: false
+  xy: 805, 133
+  size: 17, 9
+  orig: 17, 9
+  offset: 0, 0
+  index: -1
+Boss/SatanMouth
+  rotate: false
+  xy: 329, 121
+  size: 79, 42
+  orig: 79, 42
+  offset: 0, 0
+  index: -1
+Boss/SatanRightEar
+  rotate: false
+  xy: 493, 120
+  size: 45, 22
+  orig: 45, 22
+  offset: 0, 0
+  index: -1
+Boss/SatanRightEye
+  rotate: false
+  xy: 688, 128
+  size: 32, 14
+  orig: 32, 14
+  offset: 0, 0
+  index: -1
+Boss/SatanRightMoustache
+  rotate: false
+  xy: 823, 133
+  size: 17, 9
+  orig: 17, 9
+  offset: 0, 0
+  index: -1
+Could_Base
+  rotate: false
+  xy: 196, 39
+  size: 132, 124
+  orig: 132, 124
+  offset: 0, 0
+  index: -1
+Hat
+  rotate: false
+  xy: 329, 74
+  size: 53, 46
+  orig: 53, 46
+  offset: 0, 0
+  index: -1
+Man_Face
+  rotate: false
+  xy: 570, 115
+  size: 29, 27
+  orig: 29, 27
+  offset: 0, 0
+  index: -1
+Monst_Body
+  rotate: false
+  xy: 1, 1
+  size: 61, 84
+  orig: 61, 84
+  offset: 0, 0
+  index: -1
+Monst_L_Hand
+  rotate: true
+  xy: 114, 56
+  size: 29, 60
+  orig: 29, 60
+  offset: 0, 0
+  index: -1
+Monst_R_Hand
+  rotate: true
+  xy: 63, 1
+  size: 32, 61
+  orig: 32, 61
+  offset: 0, 0
+  index: -1
+Monstr_Eye
+  rotate: false
+  xy: 721, 127
+  size: 31, 15
+  orig: 31, 15
+  offset: 0, 0
+  index: -1
+Monstr_Lips
+  rotate: true
+  xy: 449, 71
+  size: 30, 31
+  orig: 30, 31
+  offset: 0, 0
+  index: -1
+Skull_1
+  rotate: true
+  xy: 329, 36
+  size: 37, 42
+  orig: 37, 42
+  offset: 0, 0
+  index: -1
+Skull_2
+  rotate: false
+  xy: 539, 113
+  size: 30, 29
+  orig: 30, 29
+  offset: 0, 0
+  index: -1
+Skull_3
+  rotate: false
+  xy: 412, 102
+  size: 35, 40
+  orig: 35, 40
+  offset: 0, 0
+  index: -1
+Skull_4
+  rotate: false
+  xy: 600, 115
+  size: 28, 27
+  orig: 28, 27
+  offset: 0, 0
+  index: -1
+Skull_C
+  rotate: false
+  xy: 63, 34
+  size: 50, 51
+  orig: 50, 51
+  offset: 0, 0
+  index: -1
+Sofa
+  rotate: false
+  xy: 1, 86
+  size: 194, 169
+  orig: 194, 169
+  offset: 0, 0
+  index: -1
+Sofa_Shadow
+  rotate: false
+  xy: 196, 164
+  size: 215, 91
+  orig: 215, 91
+  offset: 0, 0
+  index: -1
+body/arab/arab_man
+  rotate: false
+  xy: 590, 143
+  size: 141, 112
+  orig: 141, 112
+  offset: 0, 0
+  index: -1
+body/negro/negro_man
+  rotate: false
+  xy: 732, 143
+  size: 141, 112
+  orig: 141, 112
+  offset: 0, 0
+  index: -1
+body/white/white_man
+  rotate: false
+  xy: 874, 143
+  size: 141, 112
+  orig: 141, 112
+  offset: 0, 0
+  index: -1
+ftrwe
+  rotate: false
+  xy: 149, 38
+  size: 26, 17
+  orig: 26, 17
+  offset: 0, 0
+  index: -1

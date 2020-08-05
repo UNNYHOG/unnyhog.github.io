@@ -1,0 +1,174 @@
+
+Slot3w1.png
+size: 128,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+DevilArm
+  rotate: false
+  xy: 99, 108
+  size: 26, 19
+  orig: 26, 19
+  offset: 0, 0
+  index: -1
+DevilBody
+  rotate: false
+  xy: 1, 1
+  size: 26, 61
+  orig: 26, 61
+  offset: 0, 0
+  index: -1
+DevilFace
+  rotate: false
+  xy: 37, 56
+  size: 18, 7
+  orig: 18, 7
+  offset: 0, 0
+  index: -1
+DevilHand
+  rotate: true
+  xy: 98, 60
+  size: 15, 17
+  orig: 15, 17
+  offset: 0, 0
+  index: -1
+DevilShadow
+  rotate: true
+  xy: 28, 1
+  size: 25, 7
+  orig: 25, 7
+  offset: 0, 0
+  index: -1
+DevilTail
+  rotate: false
+  xy: 117, 83
+  size: 10, 11
+  orig: 10, 11
+  offset: 0, 0
+  index: -1
+Glass
+  rotate: false
+  xy: 1, 63
+  size: 35, 64
+  orig: 35, 64
+  offset: 0, 0
+  index: -1
+GlassShadow
+  rotate: true
+  xy: 28, 27
+  size: 35, 7
+  orig: 35, 7
+  offset: 0, 0
+  index: -1
+ManBody
+  rotate: false
+  xy: 68, 70
+  size: 22, 25
+  orig: 22, 25
+  offset: 0, 0
+  index: -1
+ManHips
+  rotate: false
+  xy: 68, 54
+  size: 22, 15
+  orig: 22, 15
+  offset: 0, 0
+  index: -1
+ManPupils
+  rotate: false
+  xy: 36, 1
+  size: 12, 3
+  orig: 12, 3
+  offset: 0, 0
+  index: -1
+ManShadow
+  rotate: false
+  xy: 99, 99
+  size: 28, 8
+  orig: 28, 8
+  offset: 0, 0
+  index: -1
+Man_Face
+  rotate: false
+  xy: 98, 76
+  size: 18, 18
+  orig: 18, 18
+  offset: 0, 0
+  index: -1
+body/arab/arab_ManHead
+  rotate: false
+  xy: 37, 96
+  size: 30, 31
+  orig: 30, 31
+  offset: 0, 0
+  index: -1
+body/arab/arab_ManLeftArm
+  rotate: false
+  xy: 54, 38
+  size: 12, 17
+  orig: 12, 17
+  offset: 0, 0
+  index: -1
+body/arab/arab_ManRightArm
+  rotate: false
+  xy: 36, 39
+  size: 17, 16
+  orig: 17, 16
+  offset: 0, 0
+  index: -1
+body/negro/negro_ManHead
+  rotate: false
+  xy: 37, 64
+  size: 30, 31
+  orig: 30, 31
+  offset: 0, 0
+  index: -1
+body/negro/negro_ManLeftArm
+  rotate: false
+  xy: 54, 20
+  size: 12, 17
+  orig: 12, 17
+  offset: 0, 0
+  index: -1
+body/negro/negro_ManRightArm
+  rotate: false
+  xy: 36, 22
+  size: 17, 16
+  orig: 17, 16
+  offset: 0, 0
+  index: -1
+body/white/white_ManHead
+  rotate: false
+  xy: 68, 96
+  size: 30, 31
+  orig: 30, 31
+  offset: 0, 0
+  index: -1
+body/white/white_ManLeftArm
+  rotate: false
+  xy: 67, 36
+  size: 12, 17
+  orig: 12, 17
+  offset: 0, 0
+  index: -1
+body/white/white_ManRightArm
+  rotate: false
+  xy: 36, 5
+  size: 17, 16
+  orig: 17, 16
+  offset: 0, 0
+  index: -1
+scrathes1
+  rotate: true
+  xy: 99, 95
+  size: 3, 21
+  orig: 3, 21
+  offset: 0, 0
+  index: -1
+scrathes3
+  rotate: false
+  xy: 91, 64
+  size: 6, 31
+  orig: 6, 31
+  offset: 0, 0
+  index: -1

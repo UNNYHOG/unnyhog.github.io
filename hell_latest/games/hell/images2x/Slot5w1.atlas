@@ -1,0 +1,195 @@
+
+Slot5w1.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body
+  rotate: false
+  xy: 355, 400
+  size: 45, 53
+  orig: 45, 53
+  offset: 0, 0
+  index: -1
+Border
+  rotate: false
+  xy: 172, 220
+  size: 11, 97
+  orig: 11, 97
+  offset: 0, 0
+  index: -1
+Circle
+  rotate: false
+  xy: 1, 318
+  size: 203, 192
+  orig: 203, 192
+  offset: 0, 0
+  index: -1
+F_leg
+  rotate: false
+  xy: 62, 54
+  size: 40, 31
+  orig: 40, 31
+  offset: 0, 0
+  index: -1
+Leg_B1
+  rotate: false
+  xy: 1, 3
+  size: 39, 21
+  orig: 39, 21
+  offset: 0, 0
+  index: -1
+Leg_B2
+  rotate: false
+  xy: 262, 362
+  size: 31, 28
+  orig: 31, 28
+  offset: 0, 0
+  index: -1
+Leg_B3
+  rotate: true
+  xy: 109, 86
+  size: 22, 36
+  orig: 22, 36
+  offset: 0, 0
+  index: -1
+WheelBottom
+  rotate: true
+  xy: 109, 168
+  size: 149, 62
+  orig: 149, 62
+  offset: 0, 0
+  index: -1
+WheelTop
+  rotate: false
+  xy: 205, 391
+  size: 149, 62
+  orig: 149, 62
+  offset: 0, 0
+  index: -1
+body/arab/Arm
+  rotate: false
+  xy: 184, 284
+  size: 18, 33
+  orig: 18, 33
+  offset: 0, 0
+  index: -1
+body/arab/Arm2
+  rotate: false
+  xy: 184, 284
+  size: 18, 33
+  orig: 18, 33
+  offset: 0, 0
+  index: -1
+body/arab/FrontHand
+  rotate: false
+  xy: 294, 373
+  size: 21, 17
+  orig: 21, 17
+  offset: 0, 0
+  index: -1
+body/arab/Head
+  rotate: true
+  xy: 453, 454
+  size: 56, 58
+  orig: 56, 58
+  offset: 0, 0
+  index: -1
+body/arab/RearHand
+  rotate: false
+  xy: 103, 65
+  size: 21, 20
+  orig: 21, 20
+  offset: 0, 0
+  index: -1
+body/negro/Arm
+  rotate: false
+  xy: 401, 420
+  size: 18, 33
+  orig: 18, 33
+  offset: 0, 0
+  index: -1
+body/negro/Arm2
+  rotate: false
+  xy: 401, 420
+  size: 18, 33
+  orig: 18, 33
+  offset: 0, 0
+  index: -1
+body/negro/FrontHand
+  rotate: true
+  xy: 146, 87
+  size: 21, 17
+  orig: 21, 17
+  offset: 0, 0
+  index: -1
+body/negro/Head
+  rotate: false
+  xy: 109, 109
+  size: 56, 58
+  orig: 56, 58
+  offset: 0, 0
+  index: -1
+body/negro/RearHand
+  rotate: true
+  xy: 41, 3
+  size: 21, 20
+  orig: 21, 20
+  offset: 0, 0
+  index: -1
+body/white/Arm
+  rotate: true
+  xy: 62, 35
+  size: 18, 33
+  orig: 18, 33
+  offset: 0, 0
+  index: -1
+body/white/Arm2
+  rotate: true
+  xy: 62, 35
+  size: 18, 33
+  orig: 18, 33
+  offset: 0, 0
+  index: -1
+body/white/FrontHand
+  rotate: true
+  xy: 184, 262
+  size: 21, 17
+  orig: 21, 17
+  offset: 0, 0
+  index: -1
+body/white/Head
+  rotate: false
+  xy: 205, 332
+  size: 56, 58
+  orig: 56, 58
+  offset: 0, 0
+  index: -1
+body/white/RearHand
+  rotate: false
+  xy: 262, 341
+  size: 21, 20
+  orig: 21, 20
+  offset: 0, 0
+  index: -1
+cycle_base
+  rotate: true
+  xy: 1, 86
+  size: 231, 107
+  orig: 231, 107
+  offset: 0, 0
+  index: -1
+cycle_shadow
+  rotate: false
+  xy: 205, 454
+  size: 247, 56
+  orig: 247, 56
+  offset: 0, 0
+  index: -1
+tired
+  rotate: false
+  xy: 1, 25
+  size: 60, 60
+  orig: 60, 60
+  offset: 0, 0
+  index: -1

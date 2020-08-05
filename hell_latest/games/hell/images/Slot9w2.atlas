@@ -1,0 +1,251 @@
+
+Slot9w2.png
+size: 512,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+DogBody
+  rotate: false
+  xy: 107, 76
+  size: 70, 51
+  orig: 70, 51
+  offset: 0, 0
+  index: -1
+DogChest
+  rotate: false
+  xy: 178, 73
+  size: 62, 54
+  orig: 62, 54
+  offset: 0, 0
+  index: -1
+DogHead
+  rotate: false
+  xy: 295, 88
+  size: 50, 39
+  orig: 50, 39
+  offset: 0, 0
+  index: -1
+DogJaw
+  rotate: false
+  xy: 107, 38
+  size: 37, 19
+  orig: 37, 19
+  offset: 0, 0
+  index: -1
+DogTail
+  rotate: false
+  xy: 327, 70
+  size: 18, 17
+  orig: 18, 17
+  offset: 0, 0
+  index: -1
+Dog_Shadow
+  rotate: false
+  xy: 107, 58
+  size: 63, 17
+  orig: 63, 17
+  offset: 0, 0
+  index: -1
+Fight_1
+  rotate: false
+  xy: 241, 80
+  size: 53, 47
+  orig: 53, 47
+  offset: 0, 0
+  index: -1
+Fight_10
+  rotate: false
+  xy: 241, 73
+  size: 6, 6
+  orig: 6, 6
+  offset: 0, 0
+  index: -1
+Fight_11
+  rotate: false
+  xy: 1, 46
+  size: 105, 81
+  orig: 105, 81
+  offset: 0, 0
+  index: -1
+Fight_2
+  rotate: false
+  xy: 145, 29
+  size: 25, 28
+  orig: 25, 28
+  offset: 0, 0
+  index: -1
+Fight_3
+  rotate: false
+  xy: 346, 86
+  size: 43, 41
+  orig: 43, 41
+  offset: 0, 0
+  index: -1
+Fight_4
+  rotate: false
+  xy: 171, 29
+  size: 31, 19
+  orig: 31, 19
+  offset: 0, 0
+  index: -1
+Fight_7
+  rotate: false
+  xy: 233, 32
+  size: 10, 8
+  orig: 10, 8
+  offset: 0, 0
+  index: -1
+Fight_8
+  rotate: true
+  xy: 36, 1
+  size: 14, 13
+  orig: 14, 13
+  offset: 0, 0
+  index: -1
+Fight_9
+  rotate: false
+  xy: 142, 1
+  size: 3, 3
+  orig: 3, 3
+  offset: 0, 0
+  index: -1
+Fight_Shadow
+  rotate: false
+  xy: 1, 16
+  size: 104, 29
+  orig: 104, 29
+  offset: 0, 0
+  index: -1
+ManBody
+  rotate: false
+  xy: 106, 3
+  size: 35, 34
+  orig: 35, 34
+  offset: 0, 0
+  index: -1
+ManLegs
+  rotate: false
+  xy: 203, 31
+  size: 29, 17
+  orig: 29, 17
+  offset: 0, 0
+  index: -1
+Man_Face
+  rotate: false
+  xy: 326, 57
+  size: 19, 12
+  orig: 19, 12
+  offset: 0, 0
+  index: -1
+Man_Shadow
+  rotate: false
+  xy: 1, 6
+  size: 34, 9
+  orig: 34, 9
+  offset: 0, 0
+  index: -1
+body/arab/white_Arms1
+  rotate: false
+  xy: 346, 65
+  size: 26, 20
+  orig: 26, 20
+  offset: 0, 0
+  index: -1
+body/arab/white_Arms2
+  rotate: false
+  xy: 250, 53
+  size: 21, 26
+  orig: 21, 26
+  offset: 0, 0
+  index: -1
+body/arab/white_ManFrontArm
+  rotate: false
+  xy: 171, 49
+  size: 30, 23
+  orig: 30, 23
+  offset: 0, 0
+  index: -1
+body/arab/white_ManHead
+  rotate: false
+  xy: 428, 93
+  size: 37, 34
+  orig: 37, 34
+  offset: 0, 0
+  index: -1
+body/arab/white_ManRearArm
+  rotate: true
+  xy: 233, 41
+  size: 31, 16
+  orig: 31, 16
+  offset: 0, 0
+  index: -1
+body/negro/white_Arms1
+  rotate: false
+  xy: 250, 32
+  size: 26, 20
+  orig: 26, 20
+  offset: 0, 0
+  index: -1
+body/negro/white_Arms2
+  rotate: true
+  xy: 173, 7
+  size: 21, 26
+  orig: 21, 26
+  offset: 0, 0
+  index: -1
+body/negro/white_ManFrontArm
+  rotate: false
+  xy: 142, 5
+  size: 30, 23
+  orig: 30, 23
+  offset: 0, 0
+  index: -1
+body/negro/white_ManHead
+  rotate: false
+  xy: 390, 93
+  size: 37, 34
+  orig: 37, 34
+  offset: 0, 0
+  index: -1
+body/negro/white_ManRearArm
+  rotate: false
+  xy: 295, 71
+  size: 31, 16
+  orig: 31, 16
+  offset: 0, 0
+  index: -1
+body/white/white_Arms1
+  rotate: false
+  xy: 277, 32
+  size: 26, 20
+  orig: 26, 20
+  offset: 0, 0
+  index: -1
+body/white/white_Arms2
+  rotate: false
+  xy: 272, 53
+  size: 21, 26
+  orig: 21, 26
+  offset: 0, 0
+  index: -1
+body/white/white_ManFrontArm
+  rotate: false
+  xy: 202, 49
+  size: 30, 23
+  orig: 30, 23
+  offset: 0, 0
+  index: -1
+body/white/white_ManHead
+  rotate: false
+  xy: 466, 93
+  size: 37, 34
+  orig: 37, 34
+  offset: 0, 0
+  index: -1
+body/white/white_ManRearArm
+  rotate: false
+  xy: 294, 54
+  size: 31, 16
+  orig: 31, 16
+  offset: 0, 0
+  index: -1

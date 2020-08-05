@@ -1,0 +1,90 @@
+
+Slot8w2.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Ice
+  rotate: false
+  xy: 1, 20
+  size: 258, 225
+  orig: 258, 225
+  offset: 0, 0
+  index: -1
+IceShadow
+  rotate: false
+  xy: 260, 121
+  size: 284, 124
+  orig: 284, 124
+  offset: 0, 0
+  index: -1
+Snow1
+  rotate: false
+  xy: 308, 110
+  size: 41, 10
+  orig: 41, 10
+  offset: 0, 0
+  index: -1
+Snow1Shadow
+  rotate: false
+  xy: 962, 232
+  size: 52, 13
+  orig: 52, 13
+  offset: 0, 0
+  index: -1
+Snow2
+  rotate: false
+  xy: 260, 56
+  size: 47, 16
+  orig: 47, 16
+  offset: 0, 0
+  index: -1
+Snow2Shadow
+  rotate: false
+  xy: 1, 1
+  size: 59, 18
+  orig: 59, 18
+  offset: 0, 0
+  index: -1
+Snow3
+  rotate: false
+  xy: 61, 8
+  size: 33, 11
+  orig: 33, 11
+  offset: 0, 0
+  index: -1
+Snow3Shadow
+  rotate: false
+  xy: 962, 219
+  size: 32, 12
+  orig: 32, 12
+  offset: 0, 0
+  index: -1
+body/arab/white_Body
+  rotate: false
+  xy: 545, 113
+  size: 138, 132
+  orig: 138, 132
+  offset: 0, 0
+  index: -1
+body/negro/white_Body
+  rotate: false
+  xy: 684, 113
+  size: 138, 132
+  orig: 138, 132
+  offset: 0, 0
+  index: -1
+body/white/white_Body
+  rotate: false
+  xy: 823, 113
+  size: 138, 132
+  orig: 138, 132
+  offset: 0, 0
+  index: -1
+eyes
+  rotate: false
+  xy: 260, 73
+  size: 47, 47
+  orig: 47, 47
+  offset: 0, 0
+  index: -1

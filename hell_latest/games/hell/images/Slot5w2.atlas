@@ -1,0 +1,181 @@
+
+Slot5w2.png
+size: 256,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Bed_Shadow
+  rotate: false
+  xy: 1, 18
+  size: 83, 41
+  orig: 83, 41
+  offset: 0, 0
+  index: -1
+Clock
+  rotate: false
+  xy: 138, 20
+  size: 40, 39
+  orig: 40, 39
+  offset: 0, 0
+  index: -1
+Clock_Shadow
+  rotate: false
+  xy: 1, 3
+  size: 51, 14
+  orig: 51, 14
+  offset: 0, 0
+  index: -1
+Devil
+  rotate: true
+  xy: 85, 28
+  size: 31, 52
+  orig: 31, 52
+  offset: 0, 0
+  index: -1
+DevilHead
+  rotate: true
+  xy: 85, 1
+  size: 26, 21
+  orig: 26, 21
+  offset: 0, 0
+  index: -1
+Devil_Hand
+  rotate: false
+  xy: 107, 17
+  size: 23, 10
+  orig: 23, 10
+  offset: 0, 0
+  index: -1
+Devil_Shadow
+  rotate: true
+  xy: 244, 90
+  size: 37, 10
+  orig: 37, 10
+  offset: 0, 0
+  index: -1
+L_Ring
+  rotate: false
+  xy: 179, 39
+  size: 19, 20
+  orig: 19, 20
+  offset: 0, 0
+  index: -1
+Man_face
+  rotate: true
+  xy: 107, 1
+  size: 15, 14
+  orig: 15, 14
+  offset: 0, 0
+  index: -1
+R_Ring
+  rotate: false
+  xy: 53, 3
+  size: 19, 14
+  orig: 19, 14
+  offset: 0, 0
+  index: -1
+body/arab/arab_L_eye_Down
+  rotate: true
+  xy: 131, 11
+  size: 7, 4
+  orig: 7, 4
+  offset: 0, 0
+  index: -1
+body/arab/arab_L_eye_Up
+  rotate: false
+  xy: 199, 54
+  size: 8, 5
+  orig: 8, 5
+  offset: 0, 0
+  index: -1
+body/arab/arab_R_eye_Down.png
+  rotate: false
+  xy: 244, 78
+  size: 8, 4
+  orig: 8, 4
+  offset: 0, 0
+  index: -1
+body/arab/arab_R_eye_Up.png
+  rotate: true
+  xy: 131, 19
+  size: 8, 6
+  orig: 8, 6
+  offset: 0, 0
+  index: -1
+body/arab/white_man
+  rotate: false
+  xy: 1, 60
+  size: 80, 67
+  orig: 80, 67
+  offset: 0, 0
+  index: -1
+body/negro/negro_L_eye_Down
+  rotate: false
+  xy: 199, 49
+  size: 7, 4
+  orig: 7, 4
+  offset: 0, 0
+  index: -1
+body/negro/negro_L_eye_Up
+  rotate: false
+  xy: 122, 11
+  size: 8, 5
+  orig: 8, 5
+  offset: 0, 0
+  index: -1
+body/negro/negro_R_eye_Down.png
+  rotate: false
+  xy: 179, 27
+  size: 8, 4
+  orig: 8, 4
+  offset: 0, 0
+  index: -1
+body/negro/negro_R_eye_Up.png
+  rotate: false
+  xy: 244, 83
+  size: 8, 6
+  orig: 8, 6
+  offset: 0, 0
+  index: -1
+body/negro/negro_man
+  rotate: false
+  xy: 82, 60
+  size: 80, 67
+  orig: 80, 67
+  offset: 0, 0
+  index: -1
+body/white/white_L_eye_Down
+  rotate: false
+  xy: 208, 55
+  size: 7, 4
+  orig: 7, 4
+  offset: 0, 0
+  index: -1
+body/white/white_L_eye_Up
+  rotate: false
+  xy: 73, 12
+  size: 8, 5
+  orig: 8, 5
+  offset: 0, 0
+  index: -1
+body/white/white_R_eye_Down
+  rotate: false
+  xy: 188, 34
+  size: 8, 4
+  orig: 8, 4
+  offset: 0, 0
+  index: -1
+body/white/white_R_eye_Up
+  rotate: false
+  xy: 179, 32
+  size: 8, 6
+  orig: 8, 6
+  offset: 0, 0
+  index: -1
+man
+  rotate: false
+  xy: 163, 60
+  size: 80, 67
+  orig: 80, 67
+  offset: 0, 0
+  index: -1

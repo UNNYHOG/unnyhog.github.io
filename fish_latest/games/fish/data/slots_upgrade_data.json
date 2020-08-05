@@ -1,0 +1,27 @@
+[
+	{
+		"upgradeType": "SpeedUp",
+		"requiredLevel": 25,
+		"parameter": 2
+	},
+	{
+		"upgradeType": "SpeedUp",
+		"requiredLevel": 50,
+		"parameter": 2
+	},
+	{
+		"upgradeType": "SpeedUp",
+		"requiredLevel": 100,
+		"parameter": 2
+	},
+	{
+		"upgradeType": "SpeedUp",
+		"requiredLevel": 200,
+		"parameter": 2
+	},
+	{
+		"upgradeType": "MultiProfit",
+		"requiredLevel": 300,
+		"parameter": 3
+	}
+]
