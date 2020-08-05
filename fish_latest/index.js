@@ -1095,7 +1095,7 @@ function SocialOK() {
                 // );
             }
 
-            _preloadAd();
+            // _preloadAd();
         },
 
         openLikes() {
@@ -1236,7 +1236,7 @@ function SocialFB() {
     return {
         initFB: function (appId) {
             app_id = appId;
-            this.createGBase();
+            // this.createGBase();
         },
 
         setAllGetParams(prms) {
@@ -1682,6 +1682,27 @@ const GAME_ENVIRONMENTS = {
         un_game_id: "819ced8f-14c6-478d-85d2-0fa616f79fa5",
         un_key: "MDYxMWIyNGEtYjdhZS00",
         environment: UnnyNet.Environment.Development,
+    },
+
+    'hell_fb_prod': {
+        env: 'dev',//used for old dict
+        un_game_id: "819ced8f-14c6-478d-85d2-0fa616f79fa5",
+        un_key: "MDYxMWIyNGEtYjdhZS00",
+        environment: UnnyNet.Environment.Production,
+    },
+
+    'fish_fb_dev': {
+        env: 'dev',//used for old dict
+        un_game_id: "5c02bb6d-3afb-4ca5-8f91-ce69d2c5a28d",
+        un_key: "MTRhZjU5NTUtMzdmNS00",
+        environment: UnnyNet.Environment.Development,
+    },
+
+    'fish_fb_prod': {
+        env: 'dev',//used for old dict
+        un_game_id: "5c02bb6d-3afb-4ca5-8f91-ce69d2c5a28d",
+        un_key: "MTRhZjU5NTUtMzdmNS00",
+        environment: UnnyNet.Environment.Production,
     }
 };
 
@@ -1730,7 +1751,7 @@ const TEST_MODE = AllGetParams.test_mode;
 const DEBUG_MODE = AllGetParams.debug_mode;
 const LIGHT_VERSION = AllGetParams.light_version;
 
-{
+function InitOldSocialManager() {
     switch (AllGetParams.game_platform) {
         case "vk":
             socialManager = new SocialVK();
@@ -1763,31 +1784,38 @@ const LIGHT_VERSION = AllGetParams.light_version;
             };
             break;
     }
-}
 
-socialManager.createGBase = function() {
-    if (CURRENT_ENVIRONMENT.hmac)
-        gBase = new Gbase.GbaseApi(CURRENT_ENVIRONMENT.name, CURRENT_ENVIRONMENT.env, CURRENT_ENVIRONMENT.hmac, CURRENT_ENVIRONMENT.platform, CURRENT_ENVIRONMENT.version);
-};
+    socialManager.createGBase = function () {
+        if (CURRENT_ENVIRONMENT.hmac)
+            gBase = new Gbase.GbaseApi(CURRENT_ENVIRONMENT.name, CURRENT_ENVIRONMENT.env, CURRENT_ENVIRONMENT.hmac, CURRENT_ENVIRONMENT.platform, CURRENT_ENVIRONMENT.version);
+    };
 
-socialManager.reconnect = function (callback) {
-    this.createGBase();
-    this.authorize(()=> {
-        gBase.profile.getp((err) => {
-            if (err)
-                gameAnalytics.sendServerError(err, "getp");
-            else
-                callback();
+    socialManager.reconnect = function (callback) {
+        this.createGBase();
+        this.authorize(() => {
+            gBase.profile.getp((err) => {
+                if (err)
+                    gameAnalytics.sendServerError(err, "getp");
+                else
+                    callback();
+            });
         });
-    });
-};
+    };
 
-socialManager.checkAuthStatus = function(err, callback) {
-    if (err.code == 310 && !socialManager.isAuthorizing()) {
-        console.log("Re-auth");
-        socialManager.reconnect(callback);
+    socialManager.checkAuthStatus = function (err, callback) {
+        if (err.code == 310 && !socialManager.isAuthorizing()) {
+            console.log("Re-auth");
+            socialManager.reconnect(callback);
+        }
+    };
+
+    socialManager.setAllGetParams(parseGetParams());
+    try {
+        socialManager.initialize(VisualData.getGameSettings());
+    } catch (e) {
+        console.error(e);
     }
-};
+}
 
 const TutPhases = {
     BuildSlot1: 0,
@@ -3082,7 +3110,7 @@ var VisualData = (function() {
 
     const GameSettings = {
         save_version: 8,
-        fb_app_id: 2077329288999958,//hz
+        fb_app_id: 2102417846485785,//hz
         vk_app_id: 7123740,//6955719,
         photos: false,
         likes: {
@@ -6465,7 +6493,7 @@ const BoxType = {
 const MUSIC_STATE = "MUSIC_STATE";
 const SOUNDS_STATE = "SOUNDS_STATE";
 const CURRENT_LANGUAGE = "CURRENT_LANGUAGE";
-const GAME_VERSION = "0.9.66";
+const GAME_VERSION = "0.9.67";
 
 console.log("game version: " + GAME_VERSION);
 
@@ -10172,13 +10200,6 @@ class GameInit {
             const json = cache.json.get(localization);
             GameSettings.allLanguages[GameSettings.language] = json;
             LocalizationManager.initWithJson(json);
-
-            socialManager.setAllGetParams(parseGetParams());
-            try {
-                socialManager.initialize(VisualData.getGameSettings());
-            } catch (e) {
-                console.error(e);
-            }
         }
 
         let platform;
@@ -10274,6 +10295,8 @@ class GameInit {
                         hideCallback();
                     }, useGoblin);
                 };
+
+                InitOldSocialManager();
 
                 if (useGoblin) {
                     socialManager.authorize(() => {
