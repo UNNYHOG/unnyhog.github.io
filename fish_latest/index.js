@@ -1022,77 +1022,77 @@ function SocialOK() {
                 var rParams = FAPI.Util.getRequestParameters();
                 console.info("rParams", rParams);
                 authData = rParams;
-                FAPI.init(rParams["api_server"], rParams["apiconnection"],
-                    /*
-                    * Первый параметр:
-                    * функция, которая будет вызвана после успешной инициализации.
-                    */
-                    function () {
-                        window.API_callback = function (method, result, data) {
-                            console.warn("method " + method + " > " + result + " data = ", data);
-                            switch (method) {
-                                case "postMediatopic":
-                                    if (result === "ok") {
-                                        if (callbackPostMessage) {
-                                            callbackPostMessage();
-                                            callbackPostMessage = null;
-                                        }
-                                    }
-                                    break;
-                                case "showInvite":
-                                    if (result === "ok" && data) {
-                                        const ids = data.split(",");
-                                        if (ids && ids.length > 0)
-                                            gameInit.likedSuccessfull(ids);
-                                    }
-                                    break;
-                                case "showPayment":
-                                    if (result === "ok") {
-                                        _checkPurchases((id) => {
-                                            gameInit.progress.publicConfirmedPayment(id);
-                                        });
-                                    }
-                                    break;
-                                case "prepareMidroll":
-                                    switch (data) {
-                                        case "ready":
-                                            if (callbackAdIsReady)
-                                                callbackAdIsReady();
-                                            break;
-                                        case "in_use":
-                                            if (callbackAdStarted)
-                                                callbackAdStarted();
-                                            break;
-                                        default:
-                                            if (callbackOnNoAds)
-                                                callbackOnNoAds();
-                                            break;
-                                    }
-                                    break;
-                                case "showMidroll":
-                                    if (result === "ok") {
-                                        switch (data) {
-                                            case "complete":
-                                                if (callbackAdCompleted)
-                                                    callbackAdCompleted();
-                                                break;
-                                        }
-                                    } else {
-                                        if (callbackOnNoAds)
-                                            callbackOnNoAds();
-                                    }
-                                    break;
-                            }
-                        }
-                    },
-                    /*
-                    * Второй параметр:
-                    * функция, которая будет вызвана, если инициализация не удалась.
-                    */
-                    function (error) {
-                        alert("Ошибка инициализации");
-                    }
-                );
+                // FAPI.init(rParams["api_server"], rParams["apiconnection"],
+                //     /*
+                //     * Первый параметр:
+                //     * функция, которая будет вызвана после успешной инициализации.
+                //     */
+                //     function () {
+                //         window.API_callback = function (method, result, data) {
+                //             console.warn("method " + method + " > " + result + " data = ", data);
+                //             switch (method) {
+                //                 case "postMediatopic":
+                //                     if (result === "ok") {
+                //                         if (callbackPostMessage) {
+                //                             callbackPostMessage();
+                //                             callbackPostMessage = null;
+                //                         }
+                //                     }
+                //                     break;
+                //                 case "showInvite":
+                //                     if (result === "ok" && data) {
+                //                         const ids = data.split(",");
+                //                         if (ids && ids.length > 0)
+                //                             gameInit.likedSuccessfull(ids);
+                //                     }
+                //                     break;
+                //                 case "showPayment":
+                //                     if (result === "ok") {
+                //                         _checkPurchases((id) => {
+                //                             gameInit.progress.publicConfirmedPayment(id);
+                //                         });
+                //                     }
+                //                     break;
+                //                 case "prepareMidroll":
+                //                     switch (data) {
+                //                         case "ready":
+                //                             if (callbackAdIsReady)
+                //                                 callbackAdIsReady();
+                //                             break;
+                //                         case "in_use":
+                //                             if (callbackAdStarted)
+                //                                 callbackAdStarted();
+                //                             break;
+                //                         default:
+                //                             if (callbackOnNoAds)
+                //                                 callbackOnNoAds();
+                //                             break;
+                //                     }
+                //                     break;
+                //                 case "showMidroll":
+                //                     if (result === "ok") {
+                //                         switch (data) {
+                //                             case "complete":
+                //                                 if (callbackAdCompleted)
+                //                                     callbackAdCompleted();
+                //                                 break;
+                //                         }
+                //                     } else {
+                //                         if (callbackOnNoAds)
+                //                             callbackOnNoAds();
+                //                     }
+                //                     break;
+                //             }
+                //         }
+                //     },
+                //     /*
+                //     * Второй параметр:
+                //     * функция, которая будет вызвана, если инициализация не удалась.
+                //     */
+                //     function (error) {
+                //         alert("Ошибка инициализации");
+                //     }
+                // );
             }
 
             _preloadAd();
