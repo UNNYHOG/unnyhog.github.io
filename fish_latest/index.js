@@ -6493,7 +6493,7 @@ const BoxType = {
 const MUSIC_STATE = "MUSIC_STATE";
 const SOUNDS_STATE = "SOUNDS_STATE";
 const CURRENT_LANGUAGE = "CURRENT_LANGUAGE";
-const GAME_VERSION = "0.9.68";
+const GAME_VERSION = "0.9.69";
 
 console.log("game version: " + GAME_VERSION);
 
@@ -10229,8 +10229,8 @@ class GameInit {
             default_channel: "0",
             open_animation: UnnyNet.ViewOpenDirection.RIGHT_TO_LEFT,
             //platform: UnnyNet.Platform.NUTAKU,
-            //platform: UnnyNet.Platform.ODNOKLASSNIKI,
-            platform: UnnyNet.Platform.FACEBOOK,
+            platform: UnnyNet.Platform.ODNOKLASSNIKI,
+            // platform: UnnyNet.Platform.FACEBOOK,
             environment: UnnyNet.Environment.Development,
             debug: true,
             lite_version: true, //shows if webview should be turned off
