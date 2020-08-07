@@ -5833,7 +5833,7 @@ const BoxType = {
 const MUSIC_STATE = "MUSIC_STATE";
 const SOUNDS_STATE = "SOUNDS_STATE";
 const CURRENT_LANGUAGE = "CURRENT_LANGUAGE";
-const GAME_VERSION = "0.9.67";
+const GAME_VERSION = "0.9.70";
 
 console.log("game version: " + GAME_VERSION);
 

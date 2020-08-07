@@ -6493,7 +6493,7 @@ const BoxType = {
 const MUSIC_STATE = "MUSIC_STATE";
 const SOUNDS_STATE = "SOUNDS_STATE";
 const CURRENT_LANGUAGE = "CURRENT_LANGUAGE";
-const GAME_VERSION = "0.9.69";
+const GAME_VERSION = "0.9.70";
 
 console.log("game version: " + GAME_VERSION);
 
@@ -10222,36 +10222,18 @@ class GameInit {
         }
 
         UnnyNet.MainController.init({
-            // game_id: "819ced8f-14c6-478d-85d2-0fa616f79fa5",//hell
-            game_id: "5c02bb6d-3afb-4ca5-8f91-ce69d2c5a28d",//fish
-            //game_id: "f6d3e8d9-e41b-4fde-bdf0-d30df9092672",//myst
-            public_key: "YTNkYmQxZjktNTk0Ny00",
+            game_id: CURRENT_ENVIRONMENT.un_game_id,
+            public_key: CURRENT_ENVIRONMENT.un_key,
             default_channel: "0",
             open_animation: UnnyNet.ViewOpenDirection.RIGHT_TO_LEFT,
-            //platform: UnnyNet.Platform.NUTAKU,
-            platform: UnnyNet.Platform.ODNOKLASSNIKI,
-            // platform: UnnyNet.Platform.FACEBOOK,
-            environment: UnnyNet.Environment.Development,
-            debug: true,
-            lite_version: true, //shows if webview should be turned off
-            // fb_app_id: 758844231303769,//hell temporary.. it should be downloaded from the game settings
-            fb_app_id: 2102417846485785,//fish temporary.. it should be downloaded from the game settings
-            callback: (status)=> {
-                console.info("UnnyNet is Ready", status);
-
-        // UnnyNet.MainController.init({
-        //     game_id: CURRENT_ENVIRONMENT.un_game_id,
-        //     public_key: CURRENT_ENVIRONMENT.un_key,
-        //     default_channel: "0",
-        //     open_animation: UnnyNet.ViewOpenDirection.RIGHT_TO_LEFT,
-        //     game_login: false,
-        //     platform: platform,
-        //     load_dictionaries: !oldSystem,
-        //     debug: DEBUG_MODE,
-        //     lite_version: LIGHT_VERSION,
-        //     environment: CURRENT_ENVIRONMENT.environment,
-        //     fb_app_id: VisualData.getGameSettings().fb_app_id,//TODO it's temporary here
-        //     callback: (status) => {
+            game_login: false,
+            platform: platform,
+            load_dictionaries: !oldSystem,
+            debug: DEBUG_MODE,
+            lite_version: LIGHT_VERSION,
+            environment: CURRENT_ENVIRONMENT.environment,
+            fb_app_id: VisualData.getGameSettings().fb_app_id,//TODO it's temporary here
+            callback: (status) => {
                 console.info("INIT STATUS ", status);
 
                 UnnyNet.MainController.setFrame({
