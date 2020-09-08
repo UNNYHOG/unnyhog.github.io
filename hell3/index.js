@@ -972,6 +972,7 @@ function SocialOK() {
     function _checkPurchases(consumeCallback, offset) {
         const request_limit = 20;
         offset = offset || 0;
+        if (gBase)
         gBase.social.okListPurchases(offset, request_limit, (err, response) => {
             console.info("list  err ", err);
             console.info("response ", response);
@@ -5833,7 +5834,7 @@ const BoxType = {
 const MUSIC_STATE = "MUSIC_STATE";
 const SOUNDS_STATE = "SOUNDS_STATE";
 const CURRENT_LANGUAGE = "CURRENT_LANGUAGE";
-const GAME_VERSION = "0.9.71";
+const GAME_VERSION = "0.9.72";
 
 console.log("game version: " + GAME_VERSION);
 
