@@ -2864,6 +2864,10 @@ var VisualData = (function() {
                 x: -200,
                 y: 50,
             }
+        },
+
+        InApps: {
+            bought_image_scale: 0.6
         }
     };
 
@@ -5834,7 +5838,7 @@ const BoxType = {
 const MUSIC_STATE = "MUSIC_STATE";
 const SOUNDS_STATE = "SOUNDS_STATE";
 const CURRENT_LANGUAGE = "CURRENT_LANGUAGE";
-const GAME_VERSION = "0.9.72";
+const GAME_VERSION = "0.9.73";
 
 console.log("game version: " + GAME_VERSION);
 
@@ -19140,6 +19144,8 @@ class GUIManager {
         this.onCreate = new UnnyAction();
         this.guiMode = GUIMode.Normal;
 
+        const settings = VisualData.getGameSettings();
+
         this.allWindows = [];
         this.allWindows[WindowType.WinMain] = new WinMain(this, gameInit);
         this.allWindows[WindowType.WinConstruct] = new WinConstruct(this, gameInit);
@@ -19260,7 +19266,7 @@ class GUIManager {
             no_exit: true,
             imageX: 100,
             imageY: 70,
-            scaleImage: 0.9
+            scaleImage: settings.InApps && settings.InApps.bought_image_scale || 0.9
         });
 
         this.allWindows[WindowType.WinNotEnoughGems] = new WinNotEnoughGems(this, gameInit, {
