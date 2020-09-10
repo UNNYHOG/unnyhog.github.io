@@ -14567,7 +14567,7 @@ class WinQuests extends WinWithBrownBack {
 
         this.group.add(this.header);
 
-        this.timerText = engine.add.text(300 * GlobalScale, RealScreenHeight - 100 * GlobalScale, null, DefaultFont)
+        this.timerText = engine.add.text(30 * GlobalScale, RealScreenHeight - 100 * GlobalScale, null, DefaultFont)
             .setOrigin(0, 0.5)
             .setDepth(WinDefaultDepth + 1);
         this.group.add(this.timerText);
