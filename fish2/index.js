@@ -6486,7 +6486,7 @@ const BoxType = {
 const MUSIC_STATE = "MUSIC_STATE";
 const SOUNDS_STATE = "SOUNDS_STATE";
 const CURRENT_LANGUAGE = "CURRENT_LANGUAGE";
-const GAME_VERSION = "0.9.75";
+const GAME_VERSION = "0.9.76";
 
 console.log("game version: " + GAME_VERSION);
 
@@ -7144,9 +7144,10 @@ class Progress {
             UnnyNet.Payments.purchaseProduct(id, (responseData)=>{
                 if (responseData.success) {
                     const items = responseData.data.items;
+                    console.log('items', items);
                     if (items) {
                         for (let item of items)
-                            gameInit.progress.publicConfirmedPayment(item);
+                            gameInit.progress.publicConfirmedPayment({id: item});
                     }
                 }
                 else {
@@ -14683,7 +14684,7 @@ class WinStore extends WinWithLargeBack {
                         const items = responseData.data.items;
                         if (items) {
                             for (let item of items)
-                                gameInit.progress.publicConfirmedPayment(item);
+                                gameInit.progress.publicConfirmedPayment({id: item});
                         }
                     }
                     else
