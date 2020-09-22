@@ -1625,7 +1625,7 @@ const GAME_ENVIRONMENTS_HELL = {
 };
 
 const DEFAULT_NO_ADS = {
-    defaultPrice: 5
+    defaultPrice: 30
 };
 
 const GAME_ENVIRONMENTS = {
@@ -6470,9 +6470,9 @@ const GuardDurationHours = 4;
 const SpinsResporeTime = 8 * 3600 * 1000;
 const AdsAvailableToWatchADay = 5;
 const MAX_PUZZLE_LEVEL = 5;
-const JACKPOT_SIZE = 5;
-const JACKPOT_INCREASE = 2;
-const GEMS_PRICE_FOR_WHEEL_SPIN = 5;
+const JACKPOT_SIZE = CURRENT_ENVIRONMENT.no_ads ? 20 : 5;
+const JACKPOT_INCREASE = CURRENT_ENVIRONMENT.no_ads ? 10 : 2;
+const GEMS_PRICE_FOR_WHEEL_SPIN = CURRENT_ENVIRONMENT.no_ads ? 20 : 5;
 const LIKES_RESET_TIMER = 3 * 24 * 3600 * 1000;
 
 const BoxType = {
@@ -7147,7 +7147,7 @@ class Progress {
                     console.log('items', items);
                     if (items) {
                         for (let item of items)
-                            gameInit.progress.publicConfirmedPayment({id: item});
+                            gameInit.progress.publicConfirmedPayment(item);
                     }
                 }
                 else {
@@ -7168,6 +7168,7 @@ class Progress {
 
     publicConfirmedPayment(id) {
         const data = GameData.getMarketPurchaseById(id);
+        console.log("publicConfirmedPayment " + id, data);
         if (data && data.gems) {
             const win = guiManager.openNewWindow(WindowType.WinInAppBought);
             if (win)
@@ -8454,6 +8455,8 @@ let GameData = (function () {
         },
 
         getMarketPurchaseById(id) {
+            console.log("MARKET_DATA", MARKET_DATA);
+            console.log("IN_APP_OFFERS", IN_APP_OFFERS);
             return MARKET_DATA.hasOwnProperty(id) ? MARKET_DATA[id] : IN_APP_OFFERS[id];
         },
 
@@ -9690,6 +9693,7 @@ class WheelTimeTravel extends WheelPrizeBase {
 class WheelOfFortune
 {
     constructor() {
+
         this.bonuses = [
             new WheelTimeTravel({
                 chance: 10,
@@ -9712,7 +9716,7 @@ class WheelOfFortune
             }),
             new WheelGems({
                 chance: 12,
-                parameter: 5 * RESOURCES_SCALE,
+                parameter: GEMS_PRICE_FOR_WHEEL_SPIN * 2 * RESOURCES_SCALE,
                 bonusType: 'Gems'
             }),
             new WheelResources({
@@ -14684,7 +14688,7 @@ class WinStore extends WinWithLargeBack {
                         const items = responseData.data.items;
                         if (items) {
                             for (let item of items)
-                                gameInit.progress.publicConfirmedPayment({id: item});
+                                gameInit.progress.publicConfirmedPayment(item);
                         }
                     }
                     else
@@ -20059,7 +20063,7 @@ class GUIManager {
             const price = CURRENT_ENVIRONMENT.no_ads.defaultPrice;
             obj = Object.assign(obj, {
                 button: price,
-                btn_min_width: 300,
+                btn_min_width: 400,
                 dontLocalizeButton: true,
                 icon: 'PriceGems',
                 action: () => {
@@ -20097,7 +20101,7 @@ class GUIManager {
             const price = CURRENT_ENVIRONMENT.no_ads.defaultPrice;
             obj = Object.assign(obj, {
                 button: price,
-                btn_min_width: 300,
+                btn_min_width: 400,
                 dontLocalizeButton: true,
                 icon: 'PriceGems',
                 action: () => {
