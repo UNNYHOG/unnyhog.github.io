@@ -5839,7 +5839,7 @@ const BoxType = {
 const MUSIC_STATE = "MUSIC_STATE";
 const SOUNDS_STATE = "SOUNDS_STATE";
 const CURRENT_LANGUAGE = "CURRENT_LANGUAGE";
-const GAME_VERSION = "0.9.80";
+const GAME_VERSION = "0.9.81";
 
 console.log("game version: " + GAME_VERSION);
 
@@ -19394,14 +19394,14 @@ class GUIManager {
 
 
         this.onWindowOpened = new UnnyAction();
-        // eventManager.onOfflineCollected.addListener((time, resources)=>{
-        //     if (time > 3600000 && resources.compare(0) > 0 && gameInit.progress.isTutorialCompleted()) {
-        //         setTimeout(() => {
-        //             const win = this.openNewWindow(WindowType.WinWelcomeBack);
-        //             win.setOfflineCollect(resources);
-        //         }, 1000);
-        //     }
-        // })
+        eventManager.onOfflineCollected.addListener((time, resources)=>{
+            if (time > 3600000 && resources.compare(0) > 0 && gameInit.progress.isTutorialCompleted()) {
+                setTimeout(() => {
+                    const win = this.openNewWindow(WindowType.WinWelcomeBack);
+                    win.setOfflineCollect(resources);
+                }, 1000);
+            }
+        });
     }
 
     _createGuardInfo() {
