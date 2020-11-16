@@ -2844,7 +2844,7 @@ var VisualData = (function() {
 
     const GameSettings = {
         save_version: 8,
-        fb_app_id: 758844231303769,//hz
+        fb_app_id: 2014591125463662,//hz
         vk_app_id: 7267803,
         photos: false,
         show_best: false,
@@ -2856,8 +2856,9 @@ var VisualData = (function() {
             oy: 0,
             icon_scale: 0.4
         },
-        art_version: 33,
+        art_version: 34,
         no_offers: true,
+        no_apples_info_img: true,
 
         WinBanjoPreEnd: {
             imageX: 0,
@@ -5853,7 +5854,7 @@ const BoxType = {
 const MUSIC_STATE = "MUSIC_STATE";
 const SOUNDS_STATE = "SOUNDS_STATE";
 const CURRENT_LANGUAGE = "CURRENT_LANGUAGE";
-const GAME_VERSION = "0.9.82";
+const GAME_VERSION = "0.9.83";
 
 console.log("game version: " + GAME_VERSION);
 
@@ -19351,7 +19352,7 @@ class GUIManager {
 
         this.allWindows[WindowType.WinResourcesInfo] = new WinWithPicture(this, gameInit, {
             getDescription: () => this._getResourcesInfoDescription(),
-            image: VisualData.IsVertical() ? null : "FortuneDevil",
+            image: VisualData.IsVertical() || settings.no_apples_info_img ? null : "FortuneDevil",
             button: "ButtonOk",
             imageX: 0,
             imageY: -10,
